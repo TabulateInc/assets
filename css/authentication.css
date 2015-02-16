@@ -1,0 +1,49 @@
+/*$container-desktop: (870px + $grid-gutter-width);*/
+/*$container-md: $container-desktop;*/
+/*$container-lg: $container-desktop;*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif; }
+
+.form-control {
+  border-color: #ccc; }
+
+p {
+  font-family: 'Open Sans', sans-serif !important; }
+
+.logo {
+  margin: 5px auto;
+  height: 40px; }
+
+.form-auth {
+  padding: 20px 30px; }
+
+.form-auth-heading {
+  font-size: 24.5px;
+  text-align: center; }
+
+.form-auth-subheader {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 20px; }
+
+.container {
+  margin-top: 50px;
+  max-width: 400px; }
+  @media (min-width: 768px) {
+    .container {
+      margin-top: 100px; } }
+
+input {
+  font-size: 15px;
+  margin: 15px auto; }
+
+::-moz-placeholder,
+:-ms-input-placeholder,
+::-webkit-input-placeholder {
+  font-family: 'Open Sans', sans-serif !important; }
+
+@media screen and (max-height: 580px) {
+  .content {
+    margin-top: 15px; } }
+
+/*# sourceMappingURL=authentication.css.map */

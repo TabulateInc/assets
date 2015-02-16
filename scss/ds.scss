@@ -1,0 +1,52 @@
+@import "partials/_bootstrap-variables";
+
+$default-border: 1px solid #ddd;
+$empty-border: 1px solid transparent;
+
+table {
+}
+
+
+th,td{
+    padding:8px;
+}
+td.editable {
+    padding: 0!important;
+    border: $default-border;
+
+    // show left border
+    /*&:nth-child(2) {*/
+        /*border-left: $default-border;*/
+    /*}*/
+    // show left border
+    input {
+        background-color: transparent;
+        border: 0;
+        box-sizing: border-box;
+        outline: 0 !important;
+        padding: 8px;
+        text-align: right;
+        width: 100%;
+
+        &:focus {
+            outline: 2px solid $brand-primary !important;
+        }
+    }
+}
+
+.empty-footer {
+    height: 0!important;
+    padding: 0!important;
+    margin: 0!important;
+}
+
+.break-td{
+    height:35px;
+}
+
+
+.category-head{
+    background-color:#f5f5f5;
+    border-top:$default-border;
+    border-bottom:$default-border;
+}

@@ -1,0 +1,98 @@
+@import "partials/_bootstrap-variables";
+
+$alert-danger-bg: #f2dede !important;
+$alert-danger-border: #eed3d7;  // doesnt work !important") is not a color for `darken')
+$alert-danger-text: #b94a48;
+
+@import "partials/_bootstrap";
+@import "partials/_layout";
+
+
+.alert-danger,
+.more-info {
+    text-align:center;
+    padding:10px;
+    font-size: 11px;
+}
+
+.alert-danger {
+    font-size: 12px;
+    border-color: #eed3d7;
+}
+
+.alert-success {
+  width: 200px !important;
+  text-align: center !important;
+  border: 1px solid #468847 !important;
+  margin: 0 auto !important;
+  position: fixed;
+  top: 61px;
+  left: 0;
+  right: 0;
+  z-index: 500000;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+
+.margin-top-md {
+  margin-top: 36px;
+}
+.margin-top-sm {
+  margin-top: 12px;
+}
+
+.modal-dialog {
+  padding-top: 51px;
+}
+
+
+.week-dropdown {
+  text-align: left;
+  position:relative;
+  padding: 3px 20px 4px 20px;
+
+  .caret {
+    position: absolute;
+    right: 10px;
+    top: 47%;
+  }
+}
+
+.control-left {
+  padding-left: 5px !important;
+}
+
+.control-right {
+  padding-right: 5px !important;
+}
+
+@media (max-width: 768px){
+  .control-left {
+    padding-left: 0 !important;
+  }
+
+  .control-right {
+    padding-right: 0 !important;
+  }
+}
+
+.contol-buttons-margin {
+  margin-right: 5px;
+}
+
+.date-selector{
+    margin-top:20px;
+    padding:4px 0px;
+    width:100%;
+    border-top: 1px solid $table-border-color;
+    border-bottom: 1px solid $table-border-color;
+    button.week-changer{
+        font-size:10px;
+    }
+}
+.datepicker {
+  tr:last-child {
+    display: none;
+  }
+}

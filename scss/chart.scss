@@ -1,0 +1,56 @@
+@import "../../bower_components/bootstrap-sass/lib/_variables.scss";
+@import "partials/_bootstrap-variables";
+
+$chart-margin:75px;
+$container-desktop: (870px + $grid-gutter-width);
+$container-md: $container-desktop;
+$container-lg: $container-desktop;
+
+.container {
+    @media (min-width: $screen-md-min) {
+        width: $container-md;
+    }
+    @media (min-width: $screen-lg-min) {
+        width: $container-lg;
+    }
+}
+
+
+/*Remove the vertical gridlines from the vertical charts and the horizontal gridlines from the horizontal charts*/
+.nv-x .tick line {
+    display: none;
+}
+
+.chart{
+    @media (min-width:$screen-sm-min){
+      margin-left: -1*$chart-margin;
+    }
+    margin-top:20px;
+    margin-bottom:30px;
+}
+
+.charts-control{
+    padding:40px 0px 60px;
+    .dropdown{
+        float:left;
+        padding-right:10px;
+    }
+
+}
+
+h5{
+    text-transform:uppercase;
+    font-weight:bold;
+    letter-spacing:1px;
+    @media (min-width:$screen-sm-min){
+        margin-left:$chart-margin;
+    }
+}
+
+.chart-description{
+    font-size:12px;
+    @media (min-width:$screen-sm-min){
+        margin-left:$chart-margin;
+    }
+}
+

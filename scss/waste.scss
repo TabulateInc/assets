@@ -1,0 +1,94 @@
+@import "../../bower_components/bootstrap-sass/lib/_variables.scss";
+@import "partials/_bootstrap-variables";
+@import "partials/_datepicker";
+
+
+$container-lg: (1070px + $grid-gutter-width);
+$container-md: (970px + $grid-gutter-width);
+$form-font-color: #434A54; // hardimported from bootflat
+
+
+.container {
+    @media (min-width: $screen-md-min) {
+        width: $container-md;
+    }
+    @media (min-width: $screen-lg-min) {
+        width: $container-lg;
+    }
+}
+
+.waste-items {
+    margin-top: 35px;
+}
+
+.waste-items-list {
+    @media (max-width:$screen-sm-min){
+        font-size:12px;
+    }
+    .waste-item {
+        border-bottom: 1px solid $table-border-color;
+        cursor: pointer;
+        padding-top:5px;
+        padding-bottom:5px;
+    &:hover {
+        background: $table-bg-hover;
+    }
+}
+}
+
+
+
+.add-icon{
+    >.glyphicon{
+        position:absolute;
+        padding:12px 15px;
+        right:10px;
+    }
+}
+
+
+.form-info{
+    padding:10px 0px 10px 15px;
+    @media (min-width:$screen-md-min){
+        padding-left:5px;
+    }
+
+}
+.add-new-item .form-info{
+    padding-right:12px;
+    @media (min-width:$screen-sm-min){
+        padding-right:20px!important;
+    }
+
+}
+
+.calendar-input{
+    background:transparent!important;
+    &:hover{
+        cursor:pointer;
+    }
+}
+
+@media (min-width:$screen-sm-min){
+    .units-input{
+        padding-left: 0px;
+        padding-right: 5px;
+        width: 140%;
+        position:relative;
+        left:-20%;
+        /*hack*/
+    }
+    .calendar-input{
+        padding-left:5px;
+        padding-right:5px;
+    }
+}
+
+.form-header{
+    font-weight:bold;
+    .form-info{
+        padding-top:0px;
+        padding-bottom:2px;
+    }
+
+}

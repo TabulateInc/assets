@@ -1,0 +1,42 @@
+/*$container-desktop: (870px + $grid-gutter-width);*/
+/*$container-md: $container-desktop;*/
+/*$container-lg: $container-desktop;*/
+@media (min-width: 992px) {
+  .container {
+    width: 900px; } }
+@media (min-width: 1200px) {
+  .container {
+    width: 900px; } }
+
+/*Remove the vertical gridlines from the vertical charts and the horizontal gridlines from the horizontal charts*/
+.nv-x .tick line {
+  display: none; }
+
+.chart {
+  margin-top: 20px;
+  margin-bottom: 30px; }
+  @media (min-width: 768px) {
+    .chart {
+      margin-left: -75px; } }
+
+.charts-control {
+  padding: 40px 0px 60px; }
+  .charts-control .dropdown {
+    float: left;
+    padding-right: 10px; }
+
+h5 {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px; }
+  @media (min-width: 768px) {
+    h5 {
+      margin-left: 75px; } }
+
+.chart-description {
+  font-size: 12px; }
+  @media (min-width: 768px) {
+    .chart-description {
+      margin-left: 75px; } }
+
+/*# sourceMappingURL=chart.css.map */

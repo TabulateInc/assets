@@ -1,0 +1,41 @@
+.dst-categories {
+  p,
+  strong {
+    word-wrap: break-word;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  &__category {
+    line-height: 33px;
+  }
+
+  &__subcategory {
+      line-height:30px;
+  }
+
+  &__add-cat {
+    margin-top: 30px;
+  }
+
+  input {
+    font-size: 95% !important;
+  }
+}
+
+.inline-table__row:hover{
+.dst-categories__add {
+    display: inline-block;
+    visibility:visible;
+}
+}
+.b-inventory-table {
+  border-top: 2px solid #ddd;
+}
+
+.add-control .checkbox__margined{
+    position:relative;
+    top:2px;
+}

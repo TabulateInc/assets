@@ -1,0 +1,139 @@
+@import "../../bower_components/bootstrap-sass/lib/_variables.scss";
+@import "partials/_bootstrap-variables";
+@import "partials/_datepicker";
+
+
+.inline-table {
+  &__row {
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    padding: 8px;
+
+    &:hover {
+      background-color: $table-bg-hover;
+
+      .b-delete-icon{
+        display: inline-block;
+        visibility:visible;
+      }
+    }
+  }
+
+  .add-control {
+    @media (min-width:$screen-sm-min) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.no-margin {
+  margin: 0!important;
+}
+
+.add-edit.edit,
+.__edit {
+  border: 2px solid $brand-primary;
+  border-radius: 4px;
+  margin-bottom: -1px;
+  margin-top: -1px;
+  padding: 2px;
+  .checkbox__margined{
+      margin-top:12px!important;
+  }
+}
+
+
+[class*="col-"] {
+    padding-right:0px;
+    &:first-child{
+        padding-left:0px;
+    }
+}
+
+.sorticonwrapper {
+    display: inline-block;
+    width: 13px;
+    height:20px;
+    vertical-align:middle;
+}
+.sorticon {
+    font-size: 9px;
+    float:left;
+    &:first-child {
+        margin-left: 0.7px;
+    }
+}
+
+.edit-details {
+    margin-top:20px;
+    position:relative;
+    display:table;
+    content: " ";
+    width:100%;
+    &__btn {
+        z-index:10;
+        @media (min-width:$screen-sm-min){
+            position: absolute;
+            bottom: -35px;
+            left:50%;
+            border-radius: 0 0 4px 4px;
+            border-top:none;
+            border-color: $brand-primary !important;
+            border-width: 2px;
+        }
+        @media (max-width:$screen-sm-min){
+            width:100%;
+            margin: 10px 0;
+        }
+    }
+    @media (max-width:$screen-sm-min){
+        margin-bottom: 10px;
+    }
+}
+
+.pull-right-sm {
+    @media (min-width:$screen-sm-min){
+        float:right!important;
+    }
+
+}
+
+
+.nav-xs {
+    @media (max-width:$screen-xs-min){
+        > li {
+            width: 100%;
+        }
+    }
+}
+
+.no-padding-left-xs {
+    @media (max-width:$screen-xs-min){
+        padding-left:0;
+    }
+}
+
+
+// Custom styles
+
+
+
+.checkbox__margined {
+  @media (min-width:$screen-xs-min+1){
+    height: 15px!important;
+  }
+  margin: 5px 5px 0px 15px!important;
+}
+
+
+.checkbox-caption-left {
+  line-height: 39px;
+  padding: 0 5px;
+}
+
+.hidden-xs-inline {
+  @media (max-width:$screen-xs-min){
+    display: none !important;
+  }
+}
+

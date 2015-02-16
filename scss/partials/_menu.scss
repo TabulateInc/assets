@@ -1,0 +1,16 @@
+.navbar-brand{
+    height:50px;
+    width:50px;
+    img {
+        margin: -3px 0 0 0;
+    }
+}
+.btn-shaded{
+    background-color:#4c4c4c;
+    border-color:#5c5c5c;
+    color:#8c8c8c;
+    .caret{
+        border-top-color:#8c8c8c;
+        border-bottom-color:#8c8c8c;
+    }
+}

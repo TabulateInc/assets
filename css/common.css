@@ -7232,6 +7232,11 @@ h5 {
 .caret-left {
   border-right: 5px solid; }
 
+.header {
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+  padding: 8px 8px 8px 0px; }
+
 .alert-danger,
 .more-info {
   text-align: center;

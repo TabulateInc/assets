@@ -1,0 +1,31 @@
+.b-basicinfo {
+    padding-left: 0;
+}
+
+.checkbox--notop {
+    margin-left: 5px;
+}
+
+.checkbox--notop + .checkbox--notop {
+    margin-top:0;
+}
+
+.b-allchecker {
+    min-height:45px;
+}
+
+
+.b-buttons {
+    margin-top: 30px;
+}
+
+.pointer-hover:hover {
+    cursor:pointer;
+}
+
+.table tr:hover {
+  .b-delete-icon {
+    display: inline-block;
+    visibility: visible;
+  }
+}

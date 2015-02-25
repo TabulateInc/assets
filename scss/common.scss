@@ -17,7 +17,7 @@ $alert-danger-text: #b94a48;
 
 .alert-danger {
     font-size: 12px;
-    border-color: #eed3d7;
+    border-color: $alert-danger-border;
 }
 
 .alert-success {
@@ -47,16 +47,26 @@ $alert-danger-text: #b94a48;
 }
 
 
-.week-dropdown {
+.week-dropdown,
+.account-dropdown {
   text-align: left;
   position:relative;
-  padding: 3px 20px 4px 20px;
 
   .caret {
     position: absolute;
     right: 10px;
     top: 47%;
   }
+}
+
+.week-dropdown {
+  padding: 3px 20px 4px 20px;
+}
+
+.account-dropdown {
+	max-width: 221px;
+	padding: 4px 10px 4px 5px;
+    margin-right: 10px;
 }
 
 .control-left {
@@ -82,17 +92,44 @@ $alert-danger-text: #b94a48;
 }
 
 .date-selector{
-    margin-top:20px;
+    margin-top: 4px;
     padding:4px 0px;
     width:100%;
     border-top: 1px solid $table-border-color;
     border-bottom: 1px solid $table-border-color;
-    button.week-changer{
+    button.week-changer {
         font-size:10px;
+        @media (max-width: 768px){
+          display: none;
+        }
+    }
+    .week-dropdown,
+    .dropdown-menu {
+      width: 160px !important;
     }
 }
+
 .datepicker {
   tr:last-child {
     display: none;
   }
+}
+
+select.btn{
+  text-align:left;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  position:relative;
+    padding-right:8px;
+    background:url(../img/arrowdown.png) no-repeat right 8px center white;
+
+  &:active,
+  &:focus{
+    background:url(../img/arrowdown.png) no-repeat right 8px center white;
+    color:black;
+    border-radius:2px;
+  }
+    option{
+        text-align:left;
+    }
 }

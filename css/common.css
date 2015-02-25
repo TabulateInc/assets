@@ -7269,14 +7269,23 @@ h5 {
 .modal-dialog {
   padding-top: 51px; }
 
-.week-dropdown {
+.week-dropdown,
+.account-dropdown {
   text-align: left;
-  position: relative;
-  padding: 3px 20px 4px 20px; }
-  .week-dropdown .caret {
+  position: relative; }
+  .week-dropdown .caret,
+  .account-dropdown .caret {
     position: absolute;
     right: 10px;
     top: 47%; }
+
+.week-dropdown {
+  padding: 3px 20px 4px 20px; }
+
+.account-dropdown {
+  max-width: 221px;
+  padding: 4px 10px 4px 5px;
+  margin-right: 10px; }
 
 .control-left {
   padding-left: 5px !important; }
@@ -7294,15 +7303,35 @@ h5 {
   margin-right: 5px; }
 
 .date-selector {
-  margin-top: 20px;
+  margin-top: 4px;
   padding: 4px 0px;
   width: 100%;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd; }
   .date-selector button.week-changer {
     font-size: 10px; }
+    @media (max-width: 768px) {
+      .date-selector button.week-changer {
+        display: none; } }
+  .date-selector .week-dropdown,
+  .date-selector .dropdown-menu {
+    width: 160px !important; }
 
 .datepicker tr:last-child {
   display: none; }
+
+select.btn {
+  text-align: left;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  padding-right: 8px;
+  background: url(../img/arrowdown.png) no-repeat right 8px center white; }
+  select.btn:active, select.btn:focus {
+    background: url(../img/arrowdown.png) no-repeat right 8px center white;
+    color: black;
+    border-radius: 2px; }
+  select.btn option {
+    text-align: left; }
 
 /*# sourceMappingURL=common.css.map */

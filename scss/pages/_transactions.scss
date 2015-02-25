@@ -1,0 +1,89 @@
+.sorticonwrapper {
+  display: inline-block;
+  width: 13px;
+  height:20px;
+  vertical-align:middle;
+}
+
+.sorticon {
+  font-size: 9px;
+  float:left;
+  &:first-child {
+    margin-left: 0.7px;
+  }
+}
+
+.edit-details {
+  margin-top:20px;
+  position:relative;
+  display:table;
+  content: " ";
+  width:100%;
+  &__btn {
+    z-index:10;
+    @media (min-width:$screen-sm-min){
+      position: absolute;
+      bottom: -35px;
+      left: calc(50% - 33px);
+      border-radius: 0 0 4px 4px;
+      border-top:none;
+      border-color: $brand-primary !important;
+      border-width: 2px;
+    }
+    @media (max-width:$screen-sm-min){
+      width:100%;
+      margin: 10px 0;
+    }
+  }
+  @media (max-width:$screen-sm-min){
+    margin-bottom: 10px;
+  }
+}
+
+.nav-xs {
+  margin-bottom: 0;
+  @media (max-width:$screen-xs-min) {
+    display: block !important;
+    font-size: 12px;
+  }
+  @media (min-width:$screen-xs-min) {
+    min-width: 325px;
+  }
+}
+
+.add-transaction {
+  display: inline-block;
+  margin-top: 23px;
+}
+
+.height-md {
+  height: 40px;
+}
+
+.add-edit-transaction {
+  .ng-invalid {
+    border-width: 2px !important;
+    border-color: $alert-danger-text !important;
+  }
+
+  @media (min-width:$screen-xs-min) {
+    .add-control {
+      padding-right: 10px;
+    }
+  }
+}
+
+.transactions-page {
+  svg:not(:root) {
+    overflow: visible !important;
+  }
+}
+
+.similar{
+  &__body .waste-items-list {
+    margin-top: 23px;
+  }
+  &__header {
+    padding-top: 9px;
+  }
+}

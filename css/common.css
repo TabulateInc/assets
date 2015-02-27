@@ -3723,12 +3723,12 @@ a.thumbnail.active {
 
 .alert-info {
   background-color: #d9edf7;
-  border-color: #bce8f1;
-  color: #3a87ad; }
+  border-color: #d9edf7;
+  color: #4993c6; }
   .alert-info hr {
-    border-top-color: #a6e1ec; }
+    border-top-color: #c4e3f3; }
   .alert-info .alert-link {
-    color: #2d6987; }
+    color: #3479a8; }
 
 .alert-warning {
   background-color: #fcf8e3;
@@ -7247,6 +7247,13 @@ h5 {
   font-size: 12px;
   border-color: #eed3d7; }
 
+.alert-info {
+  color: #4993c6 !important;
+  background-color: #d9edf7 !important;
+  padding: 15px 10px !important;
+  font-size: 11px;
+  margin: 14px auto; }
+
 .alert-success {
   width: 200px !important;
   text-align: center !important;
@@ -7265,6 +7272,10 @@ h5 {
 
 .margin-top-sm {
   margin-top: 12px; }
+
+@media (max-width: 768px) {
+  .margin-top-sm-xs {
+    margin-top: 12px; } }
 
 .modal-dialog {
   padding-top: 51px; }

@@ -24,7 +24,7 @@
     @media (min-width:$screen-sm-min){
       position: absolute;
       bottom: -35px;
-      left: calc(50% - 33px);
+      left: calc(50% - 45px);
       border-radius: 0 0 4px 4px;
       border-top:none;
       border-color: $brand-primary !important;
@@ -65,12 +65,6 @@
     border-width: 2px !important;
     border-color: $alert-danger-text !important;
   }
-
-  @media (min-width:$screen-xs-min) {
-    .add-control {
-      padding-right: 10px;
-    }
-  }
 }
 
 .transactions-page {
@@ -87,3 +81,20 @@
     padding-top: 9px;
   }
 }
+
+.add-transaction-modal .modal-dialog {
+  width: auto !important;
+  max-width: 860px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.active-row {
+  background-color: $table-bg-hover;
+}
+
+.overflow-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+};

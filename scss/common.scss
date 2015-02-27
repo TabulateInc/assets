@@ -4,6 +4,10 @@ $alert-danger-bg: #f2dede !important;
 $alert-danger-border: #eed3d7;  // doesnt work !important") is not a color for `darken')
 $alert-danger-text: #b94a48;
 
+$alert-info-bg: #d9edf7;
+$alert-info-border: $alert-info-bg;  // doesnt work !important") is not a color for `darken')
+$alert-info-text: #4993c6;
+
 @import "partials/_bootstrap";
 @import "partials/_layout";
 
@@ -18,6 +22,14 @@ $alert-danger-text: #b94a48;
 .alert-danger {
     font-size: 12px;
     border-color: $alert-danger-border;
+}
+
+.alert-info {
+  color: $alert-info-text !important;
+  background-color: $alert-info-bg !important;
+  padding: 15px 10px !important;
+  font-size: 11px;
+  margin: 14px auto;
 }
 
 .alert-success {
@@ -42,10 +54,15 @@ $alert-danger-text: #b94a48;
   margin-top: 12px;
 }
 
+.margin-top-sm-xs {
+  @media (max-width:$screen-sm-min){
+    margin-top: 12px;
+  }
+}
+
 .modal-dialog {
   padding-top: 51px;
 }
-
 
 .week-dropdown,
 .account-dropdown {

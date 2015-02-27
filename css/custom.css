@@ -96,9 +96,7 @@ td.editable {
     margin-left: 0.7px; }
 
 .edit-details {
-  margin-top: 20px;
   position: relative;
-  display: table;
   content: " ";
   width: 100%; }
   .edit-details__btn {

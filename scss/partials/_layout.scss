@@ -87,6 +87,9 @@ h6,
   border-color: $form-disabled-color;
   background-color: $form-disabled-color;
 }
+.over{
+    z-index:1;
+}
 .below{
     z-index:-1;
 }

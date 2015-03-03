@@ -7144,6 +7144,9 @@ h6,
   border-color: #E6E9ED;
   background-color: #E6E9ED; }
 
+.over {
+  z-index: 1; }
+
 .below {
   z-index: -1; }
 

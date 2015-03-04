@@ -96,9 +96,11 @@ h6,
 .no-padding-left{
     padding-left:0px;
 }
+
 .no-padding-right{
-    padding-right:0px;
+    padding-right: 0 !important;
 }
+
 @media (max-width:$screen-sm-min){
     .no-padding-left-xs{
         padding-left:0px;

@@ -80,7 +80,7 @@
   }
 }
 
-.add-transaction-modal .modal-dialog {
+.wide-modal .modal-dialog {
   width: auto !important;
   max-width: 860px;
   padding-left: 0;
@@ -91,8 +91,24 @@
   background-color: $table-bg-hover;
 }
 
+
 .overflow-ellipsis {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 };
+
+.show-ellipsed:hover {
+  .overflow-ellipsis {
+    overflow: inherit;
+    white-space: pre-line;
+    text-overflow: clip;
+    word-wrap: break-word;
+  }
+}
+
+.text-right-sm {
+  @media (min-width:$screen-sm-min) {
+    text-align: right;
+  }
+}

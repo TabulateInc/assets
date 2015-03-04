@@ -147,7 +147,7 @@ td.editable {
 .similar__header {
   padding-top: 9px; }
 
-.add-transaction-modal .modal-dialog {
+.wide-modal .modal-dialog {
   width: auto !important;
   max-width: 860px;
   padding-left: 0;
@@ -160,6 +160,16 @@ td.editable {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis; }
+
+.show-ellipsed:hover .overflow-ellipsis {
+  overflow: inherit;
+  white-space: pre-line;
+  text-overflow: clip;
+  word-wrap: break-word; }
+
+@media (min-width: 768px) {
+  .text-right-sm {
+    text-align: right; } }
 
 .inline-table__row {
   border-bottom: 1px solid #ddd;

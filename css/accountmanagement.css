@@ -7154,7 +7154,7 @@ h6,
   padding-left: 0px; }
 
 .no-padding-right {
-  padding-right: 0px; }
+  padding-right: 0 !important; }
 
 @media (max-width: 768px) {
   .no-padding-left-xs {

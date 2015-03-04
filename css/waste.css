@@ -29,7 +29,7 @@
 
 @media (max-width: 768px) {
   .waste-items-list {
-    font-size: 12px; } }
+    font-size: 11px; } }
 .waste-items-list .waste-item {
   border-bottom: 1px solid #ddd;
   cursor: pointer;

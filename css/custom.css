@@ -171,6 +171,11 @@ td.editable {
   .text-right-sm {
     text-align: right; } }
 
+.sticky-top {
+  position: fixed;
+  top: 51px;
+  right: 20px; }
+
 .inline-table__row {
   border-bottom: 1px solid #ddd;
   cursor: pointer;

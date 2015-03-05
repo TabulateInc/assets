@@ -109,7 +109,8 @@ td.editable {
         border-radius: 0 0 4px 4px;
         border-top: none;
         border-color: #6699cc !important;
-        border-width: 2px; } }
+        border-width: 2px;
+        height: 33px; } }
     @media (max-width: 768px) {
       .edit-details__btn {
         width: 100%;
@@ -175,6 +176,11 @@ td.editable {
   position: fixed;
   top: 51px;
   right: 20px; }
+
+.same-update-icon {
+  color: #5cb85c;
+  position: absolute;
+  right: -25px; }
 
 .inline-table__row {
   border-bottom: 1px solid #ddd;

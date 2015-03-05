@@ -27,6 +27,7 @@
       border-top:none;
       border-color: $brand-primary !important;
       border-width: 2px;
+      height: 33px;
     }
     @media (max-width:$screen-sm-min){
       width:100%;
@@ -117,4 +118,10 @@
   position: fixed;
   top: 51px;
   right: 20px;
+}
+
+.same-update-icon {
+  color: $brand-success;
+  position: absolute;
+  right: -25px;
 }

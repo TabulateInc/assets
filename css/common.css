@@ -7337,7 +7337,8 @@ select.btn {
   -webkit-appearance: none;
   -moz-appearance: none;
   position: relative;
-  padding-right: 8px;
+  padding-right: 15px;
+  padding-bottom: 3px;
   background: url(../img/arrowdown.png) no-repeat right 8px center white; }
   select.btn:active, select.btn:focus {
     background: url(../img/arrowdown.png) no-repeat right 8px center white;

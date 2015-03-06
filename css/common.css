@@ -7212,7 +7212,8 @@ input[type=number] {
 h5 {
   margin-top: 30px;
   font-size: 15px;
-  color: #6699cc; }
+  color: #6699cc;
+  text-transform: uppercase; }
 
 .top-buffer {
   margin-top: 20px; }
@@ -7239,6 +7240,9 @@ h5 {
   font-weight: bold;
   border-bottom: 2px solid #ddd;
   padding: 8px 8px 8px 0px; }
+
+.container-constrained {
+  max-width: 950px; }
 
 .alert-danger,
 .more-info {

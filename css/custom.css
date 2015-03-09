@@ -83,6 +83,28 @@ td.editable {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd; }
 
+.dst-categories {
+  border-top: 2px solid #ddd; }
+  .dst-categories p,
+  .dst-categories strong {
+    word-wrap: break-word; }
+  .dst-categories p {
+    margin-bottom: 0; }
+  .dst-categories__category {
+    line-height: 33px; }
+  .dst-categories__subcategory {
+    line-height: 30px; }
+  .dst-categories__add-cat {
+    margin-top: 30px; }
+  .dst-categories input {
+    font-size: 95% !important; }
+  .dst-categories .inline-table__row:hover .dst-categories__add {
+    display: inline-block;
+    visibility: visible; }
+  .dst-categories .add-control .checkbox__margined {
+    position: relative;
+    top: 2px; }
+
 .sorticonwrapper {
   display: inline-block;
   width: 13px;

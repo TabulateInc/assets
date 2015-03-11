@@ -7169,7 +7169,8 @@ a.control, a.control:hover {
     height: 40px; }
   @media (max-width: 768px) {
     .add-control {
-      padding-left: 0px; }
+      padding-left: 0px;
+      padding-right: 0px; }
       .add-control input[type=date] {
         width: 290px; } }
 

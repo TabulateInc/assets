@@ -85,20 +85,20 @@ $alert-info-text: #4993c6;
 }
 
 .control-left {
-  padding-left: 5px !important;
+  padding-left: 5px;
 }
 
 .control-right {
-  padding-right: 5px !important;
+  padding-right: 5px;
 }
 
 @media (max-width: 768px){
   .control-left {
-    padding-left: 0 !important;
+    padding-left: 0;
   }
 
   .control-right {
-    padding-right: 0 !important;
+    padding-right: 0px;
   }
 }
 
@@ -147,5 +147,19 @@ select.btn{
   }
     option{
         text-align:left;
+    }
+}
+.control-buttons>div{
+    padding-left:2px;
+    padding-right:2px;
+    &:first-child{
+        padding-left:0px;
+    }
+    &:last-child{
+        padding-right:0px;
+    }
+    button{
+        width:100%;
+        /*padding:2px;*/
     }
 }

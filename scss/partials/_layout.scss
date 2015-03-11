@@ -119,6 +119,7 @@ a.control, a.control:hover{
     }
     @media (max-width:$screen-sm-min){
         padding-left:0px;
+        padding-right:0px;
 
         input[type=date] {
             width:290px;

@@ -7164,6 +7164,7 @@ a.control, a.control:hover {
 
 .add-control {
   padding-left: 0px;
+  padding-right: 5px;
   margin-bottom: 10px; }
   .add-control button, .add-control input, .add-control div.form-control, .add-control select {
     height: 40px; }
@@ -7250,7 +7251,8 @@ h5 {
 
 .nav-tabs {
   background: transparent;
-  border-bottom: 1px solid #bbb; }
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 20px; }
   .nav-tabs > li {
     border: none; }
     .nav-tabs > li:first-child a {
@@ -7340,21 +7342,6 @@ h5 {
 
 .account-dropdown {
   padding: 3px 10px 2px 5px; }
-
-.control-left {
-  padding-left: 5px; }
-
-.control-right {
-  padding-right: 5px; }
-
-@media (max-width: 768px) {
-  .control-left {
-    padding-left: 0; }
-
-  .control-right {
-    padding-right: 0px; } }
-.contol-buttons-margin {
-  margin-right: 5px; }
 
 .date-selector {
   margin-top: 4px;

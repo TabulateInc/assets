@@ -113,6 +113,7 @@ a.control, a.control:hover{
 
 .add-control{
     padding-left:0px;
+    padding-right:5px;
     margin-bottom:10px;
     button, input, div.form-control, select{
         height:40px;
@@ -215,6 +216,7 @@ $border:1px solid #bbb;
 .nav-tabs{
     background:transparent;
     border-bottom: $border;
+    margin-bottom:20px;
     >li{
         border:none;
         &:first-child a{

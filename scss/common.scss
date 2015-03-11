@@ -84,27 +84,6 @@ $alert-info-text: #4993c6;
 	padding: 3px 10px 2px 5px;
 }
 
-.control-left {
-  padding-left: 5px;
-}
-
-.control-right {
-  padding-right: 5px;
-}
-
-@media (max-width: 768px){
-  .control-left {
-    padding-left: 0;
-  }
-
-  .control-right {
-    padding-right: 0px;
-  }
-}
-
-.contol-buttons-margin {
-  margin-right: 5px;
-}
 
 .date-selector{
     margin-top: 4px;

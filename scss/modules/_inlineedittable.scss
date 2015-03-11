@@ -23,7 +23,7 @@
     }
   }
 
-  [class*="col-"] {
+  [class*="col-"], td {
       padding-right:0px;
       &:first-child{
           padding-left:0px;

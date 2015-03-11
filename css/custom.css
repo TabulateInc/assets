@@ -221,9 +221,9 @@ td.editable {
 @media (min-width: 768px) {
   .inline-table .add-control {
     margin-bottom: 0; } }
-.inline-table [class*="col-"] {
+.inline-table [class*="col-"], .inline-table td {
   padding-right: 0px; }
-  .inline-table [class*="col-"]:first-child {
+  .inline-table [class*="col-"]:first-child, .inline-table td:first-child {
     padding-left: 0px; }
 
 .no-margin {

@@ -7303,10 +7303,8 @@ h5 {
   font-size: 11px;
   margin: 14px auto; }
 
-.alert-success {
-  width: 200px !important;
+.alert-success, .alert-danger {
   text-align: center !important;
-  border: 1px solid #468847 !important;
   margin: 0 auto !important;
   position: fixed;
   top: 61px;
@@ -7315,6 +7313,14 @@ h5 {
   z-index: 500000;
   padding: 10px 20px;
   border-radius: 4px; }
+
+.alert-danger {
+  border: 1px solid red !important;
+  max-width: 400px; }
+
+.alert-success {
+  border: 1px solid #468847 !important;
+  width: 200px !important; }
 
 .margin-top-md {
   margin-top: 36px; }

@@ -7338,7 +7338,8 @@ h5 {
 .week-dropdown,
 .account-dropdown {
   text-align: left;
-  position: relative; }
+  position: relative;
+  height: 29px; }
   .week-dropdown .caret,
   .account-dropdown .caret {
     position: absolute;

@@ -207,3 +207,52 @@ h5{
 .container-constrained-700{
     max-width:700;
 }
+
+$brand-border:1px solid $brand-primary;
+$border:1px solid #bbb;
+
+.nav-tabs{
+    background:transparent;
+    border-bottom: $border;
+    >li{
+        border:none;
+        &:first-child a{
+            border-left:$brand-border;
+            border-top-left-radius:4px;
+            &.active{
+                border-left:$border;
+            }
+        }
+        &:last-child a{
+            border-top-right-radius:4px;
+            border-right:$brand-border;
+            &.active{
+                border-right:$border;
+            }
+        }
+        &.active>a{
+            border:$border;
+            border-bottom:1px solid white;
+            transform:scaleX(1.1);
+            z-index:1;
+            color:black;
+            &:hover, &:focus{
+                border:$border;
+                border-bottom:1px solid white;
+            }
+        }
+        >a{
+            border:$brand-border;
+            color:$brand-primary;
+            border-bottom:1px solid transparent;
+            border-left:1px solid transparent;
+
+            position:relative;
+            top:1px;
+            &:hover, &:focus{
+                border:$border;
+            }
+        }
+    }
+}
+

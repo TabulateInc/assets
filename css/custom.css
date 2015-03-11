@@ -37,7 +37,7 @@
   cursor: pointer; }
 
 .table tr:hover .b-delete-icon {
-  display: inline-block;
+  display: inline;
   visibility: visible; }
 
 .checkbox__margined {

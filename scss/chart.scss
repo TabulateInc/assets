@@ -53,4 +53,21 @@ h5{
         margin-left:$chart-margin;
     }
 }
-
+#transactionsChart ul {
+  list-style-type: none;
+  padding-left: 15px;
+}
+#transactionsChart .legendItem .value {
+  position: absolute;
+  right: 0;
+}
+#transactionsChart .legendItem .colored {
+  display: inline-block;
+  width: 7px;
+  height: 18px;
+  padding-top: 3px;
+  margin-right: 10px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}

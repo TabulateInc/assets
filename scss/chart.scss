@@ -6,14 +6,6 @@ $container-desktop: (870px + $grid-gutter-width);
 $container-md: $container-desktop;
 $container-lg: $container-desktop;
 
-.container {
-    @media (min-width: $screen-md-min) {
-        width: $container-md;
-    }
-    @media (min-width: $screen-lg-min) {
-        width: $container-lg;
-    }
-}
 
 
 /*Remove the vertical gridlines from the vertical charts and the horizontal gridlines from the horizontal charts*/

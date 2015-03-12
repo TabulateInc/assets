@@ -1,13 +1,6 @@
 /*$container-desktop: (870px + $grid-gutter-width);*/
 /*$container-md: $container-desktop;*/
 /*$container-lg: $container-desktop;*/
-@media (min-width: 992px) {
-  .container {
-    width: 900px; } }
-@media (min-width: 1200px) {
-  .container {
-    width: 900px; } }
-
 /*Remove the vertical gridlines from the vertical charts and the horizontal gridlines from the horizontal charts*/
 .nv-x .tick line {
   display: none; }

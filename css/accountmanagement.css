@@ -7219,6 +7219,9 @@ h5 {
   h5:first-child {
     margin-top: 10px; }
 
+h6 {
+  font-weight: bold; }
+
 .top-buffer {
   margin-top: 20px; }
 

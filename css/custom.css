@@ -211,9 +211,18 @@ td.editable {
   right: -25px; }
 
 .inline-table__row {
+  clear: both;
+  float: none;
   border-bottom: 1px solid #ddd;
   cursor: pointer;
   padding: 8px 8px 8px 0px; }
+  .inline-table__row:before {
+    content: " ";
+    display: table; }
+  .inline-table__row:after {
+    content: " ";
+    display: table;
+    clear: both; }
   .inline-table__row:first-child {
     border-top: 1px solid #ddd; }
   .inline-table__row:hover {

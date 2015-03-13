@@ -1,5 +1,17 @@
 .inline-table {
+
   &__row {
+      clear:both;
+      float:none;
+      &:before {
+          content: " ";
+          display: table;
+      }
+      &:after {
+          content: " ";
+          display: table;
+          clear:both;
+      }
     border-bottom: 1px solid #ddd;
       &:first-child{
         border-top: 1px solid #ddd;

@@ -167,6 +167,9 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance:textfield;
 }
+h3{
+    font-size:23px;
+}
 h5{
     margin-top:30px;
     &:first-child{
@@ -222,12 +225,14 @@ $border:1px solid #bbb;
 .nav-tabs{
     background:transparent;
     border-bottom: $border;
+    margin-top:20px;
     margin-bottom:20px;
     >li{
         border:none;
         &:first-child a{
             border-left:$brand-border;
             border-top-left-radius:4px;
+            transform-origin: bottom left;
             &.active{
                 border-left:$border;
             }
@@ -242,7 +247,7 @@ $border:1px solid #bbb;
         &.active>a{
             border:$border;
             border-bottom:1px solid white;
-            transform:scaleX(1.1);
+            transform:scaleX(1.06);
             z-index:1;
             color:black;
             &:hover, &:focus{

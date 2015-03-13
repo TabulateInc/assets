@@ -7211,6 +7211,9 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield; }
 
+h3 {
+  font-size: 23px; }
+
 h5 {
   margin-top: 30px;
   font-size: 15px;
@@ -7257,12 +7260,14 @@ h6 {
 .nav-tabs {
   background: transparent;
   border-bottom: 1px solid #bbb;
+  margin-top: 20px;
   margin-bottom: 20px; }
   .nav-tabs > li {
     border: none; }
     .nav-tabs > li:first-child a {
       border-left: 1px solid #6699cc;
-      border-top-left-radius: 4px; }
+      border-top-left-radius: 4px;
+      transform-origin: bottom left; }
       .nav-tabs > li:first-child a.active {
         border-left: 1px solid #bbb; }
     .nav-tabs > li:last-child a {
@@ -7273,7 +7278,7 @@ h6 {
     .nav-tabs > li.active > a {
       border: 1px solid #bbb;
       border-bottom: 1px solid white;
-      transform: scaleX(1.1);
+      transform: scaleX(1.06);
       z-index: 1;
       color: black; }
       .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {

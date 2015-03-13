@@ -7279,8 +7279,7 @@ h6 {
       border: 1px solid #bbb;
       border-bottom: 1px solid white;
       transform: scaleX(1.06);
-      z-index: 1;
-      color: black; }
+      z-index: 1; }
       .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
         border: 1px solid #bbb;
         border-bottom: 1px solid white; }

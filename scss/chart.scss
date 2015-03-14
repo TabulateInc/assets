@@ -60,3 +60,37 @@ h5{
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
+
+.bar {
+  fill: steelblue;
+  fill-opacity: 0.8;
+}
+.bar:hover {
+  fill-opacity: 1;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis path {
+  display: none;
+}
+.y.axis line {
+  stroke:none;
+}
+.x.axis line {
+  stroke:none;
+}
+.first line {
+  stroke: #000;
+  stroke-width: 1px;
+}
+.axis .minor line {
+  stroke: #e5e5e5;
+}
+.axis .tick text {
+  text-anchor: end;
+}

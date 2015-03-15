@@ -40,9 +40,6 @@
   display: inline;
   visibility: visible; }
 
-.inline-block {
-  display: inline-block; }
-
 .checkbox__margined {
   margin: 5px 5px 0px 15px !important; }
   @media (min-width: 481px) {
@@ -216,6 +213,10 @@ td.editable {
   color: #5cb85c;
   position: absolute;
   right: -25px; }
+
+.financial__btn {
+  margin-top: 8px;
+  margin-left: 5px; }
 
 .inline-table__row {
   clear: both;

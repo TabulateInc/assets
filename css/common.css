@@ -7293,6 +7293,9 @@ h6 {
       .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
         border: 1px solid #bbb; }
 
+a:hover {
+  cursor: pointer; }
+
 .alert-danger,
 .more-info {
   text-align: center;

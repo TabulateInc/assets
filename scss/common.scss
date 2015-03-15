@@ -12,6 +12,10 @@ $alert-info-text: #4993c6;
 @import "partials/_layout";
 
 
+a:hover {
+  cursor: pointer;
+}
+
 .alert-danger,
 .more-info {
     text-align:center;

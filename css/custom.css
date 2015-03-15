@@ -40,6 +40,9 @@
   display: inline;
   visibility: visible; }
 
+.inline-block {
+  display: inline-block; }
+
 .checkbox__margined {
   margin: 5px 5px 0px 15px !important; }
   @media (min-width: 481px) {

@@ -7175,7 +7175,7 @@ a.control, a.control:hover {
       .add-control input[type=date] {
         width: 290px; } }
 
-.btn.savebtn {
+.savebtn {
   width: 100%;
   text-align: center;
   text-decoration: none; }
@@ -7408,5 +7408,8 @@ select.btn {
 
 .inline-block {
   display: inline-block; }
+
+.primary-text {
+  color: #6699cc; }
 
 /*# sourceMappingURL=common.css.map */

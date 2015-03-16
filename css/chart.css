@@ -18,13 +18,9 @@
     float: left;
     padding-right: 10px; }
 
-h5 {
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px; }
-  @media (min-width: 768px) {
-    h5 {
-      margin-left: 75px; } }
+@media (min-width: 768px) {
+  h5 {
+    margin-left: 75px; } }
 
 .chart-description {
   font-size: 12px; }

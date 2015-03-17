@@ -168,7 +168,7 @@ td.editable {
 
 .add-edit-transaction .ng-invalid {
   border-width: 2px !important;
-  border-color: #b94a48 !important; }
+  border-color: #a94442 !important; }
 
 .transactions-page svg:not(:root) {
   overflow: visible !important; }

@@ -270,3 +270,17 @@ $border:1px solid #bbb;
     }
 }
 
+
+.nav-glyph{
+    display:inline-block;
+    font-size:1.5em;
+    margin-right:0.5em;
+    margin-left:5px;
+    &.active{
+        color:$brand-primary;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+}
+

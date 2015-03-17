@@ -11,7 +11,7 @@ $modal-backdrop-bg:          transparentize($middle-gray-color, 0.2);
 $panel-shadow:               none;
 $panel-default-border:       $middle-gray-color;
 
-@import "../../bower_components/bootstrap-sass/lib/bootstrap";
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 //Disable flat theme by removing next line
 @import "../../bower_components/Bootflat/bootflat/scss/bootflat.scss";
 /*@import "../../bower_components/bootstrap-table/src/bootstrap-table.css";*/

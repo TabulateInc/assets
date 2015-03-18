@@ -1,7 +1,6 @@
-.report-table {
-  width: 100%; }
-  .report-table td {
-    padding-left: 15px; }
+.report-table td {
+  padding: 2px 1px 3px 25px;
+  min-width: 100px; }
 
 .total-column {
   padding-left: 30px;

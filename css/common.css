@@ -8022,7 +8022,7 @@ a:hover {
   padding: 3px 10px 2px 5px; }
 
 .date-selector {
-  margin-top: 14px;
+  margin-top: 4px;
   padding: 4px 0px;
   width: 100%;
   border-top: 1px solid #ddd;
@@ -8035,6 +8035,12 @@ a:hover {
   .date-selector .week-dropdown,
   .date-selector .dropdown-menu {
     width: 160px !important; }
+  .date-selector > div {
+    margin: 5px 10px 5px 0px;
+    padding: 0px; }
+    @media (max-width: 768px) {
+      .date-selector > div {
+        margin-right: 0px; } }
 
 .datepicker tr:last-child {
   display: none; }

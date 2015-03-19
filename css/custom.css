@@ -57,15 +57,16 @@
 .middle-ineditable {
   line-height: 40px; }
 
+td {
+  padding: 3px 8px; }
+
 td.editable {
-  padding: 0 !important;
   border: 1px solid #ddd; }
   td.editable input {
     background-color: transparent;
     border: 0;
     box-sizing: border-box;
     outline: 0 !important;
-    padding: 8px;
     text-align: right;
     width: 100%; }
     td.editable input:focus {

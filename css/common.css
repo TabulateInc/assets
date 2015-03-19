@@ -8031,7 +8031,8 @@ a:hover {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd; }
   .date-selector button.week-changer {
-    font-size: 10px; }
+    font-size: 10px;
+    height: 29px; }
     @media (max-width: 768px) {
       .date-selector button.week-changer {
         display: none; } }

@@ -7955,6 +7955,14 @@ h6 {
   .nav-glyph:hover {
     cursor: pointer; }
 
+.datepicker td, .datepicker th {
+  padding: 1px; }
+
+.calendar-input {
+  background: transparent !important; }
+  .calendar-input:hover {
+    cursor: pointer; }
+
 a:hover {
   cursor: pointer; }
 

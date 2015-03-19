@@ -57,7 +57,7 @@
 .middle-ineditable {
   line-height: 40px; }
 
-td {
+.summary-table td {
   padding: 3px 8px; }
 
 td.editable {
@@ -244,7 +244,7 @@ td.editable {
 .custom-selector__option {
   cursor: pointer;
   display: block;
-  padding: 0 2px 1px 14px;
+  padding: 2px 0px 1px 10px;
   min-height: 1.2em; }
   .custom-selector__option:hover {
     color: white;
@@ -253,9 +253,11 @@ td.editable {
   width: 250px !important; }
 .custom-selector .add-icon > .glyphicon {
   position: absolute;
-  padding: 12px 5px;
-  right: 15px;
-  z-index: 800; }
+  padding: 13px 5px;
+  right: 15px; }
+.custom-selector .calendar-holder {
+  padding-left: 10px;
+  padding-right: 0px; }
 
 .inline-table__row {
   clear: both;

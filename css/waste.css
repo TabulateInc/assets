@@ -55,11 +55,6 @@
     .add-new-item .form-info {
       padding-right: 20px !important; } }
 
-.calendar-input {
-  background: transparent !important; }
-  .calendar-input:hover {
-    cursor: pointer; }
-
 @media (min-width: 768px) {
   .units-input {
     padding-left: 0px;

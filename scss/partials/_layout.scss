@@ -288,3 +288,17 @@ $border:1px solid #bbb;
     }
 }
 
+
+.datepicker{
+    td, th{
+        padding:1px;
+    }
+}
+
+
+.calendar-input{
+    background:transparent!important;
+    &:hover{
+        cursor:pointer;
+    }
+}

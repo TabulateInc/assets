@@ -62,12 +62,6 @@ $form-font-color: #434A54; // hardimported from bootflat
 
 }
 
-.calendar-input{
-    background:transparent!important;
-    &:hover{
-        cursor:pointer;
-    }
-}
 
 @media (min-width:$screen-sm-min){
     .units-input{

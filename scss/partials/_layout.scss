@@ -223,13 +223,17 @@ h6{
 $brand-border:1px solid $brand-primary;
 $border:1px solid #bbb;
 
+.nav-holder{
+    height:82px;
+    overflow-x:auto;
+}
 .nav-tabs{
+    min-width:480px;// modified by js
     background:transparent;
     border-bottom: $border;
     margin-top:20px;
     margin-bottom:20px;
     >li{
-        border:none;
         &:first-child a{
             border-left:$brand-border;
             border-top-left-radius:4px;

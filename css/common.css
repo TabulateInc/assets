@@ -7906,41 +7906,44 @@ h6 {
 .container-constrained-700 {
   max-width: 700; }
 
+.nav-holder {
+  height: 82px;
+  overflow-x: auto; }
+
 .nav-tabs {
+  min-width: 480px;
   background: transparent;
   border-bottom: 1px solid #bbb;
   margin-top: 20px;
   margin-bottom: 20px; }
-  .nav-tabs > li {
-    border: none; }
-    .nav-tabs > li:first-child a {
-      border-left: 1px solid #6699cc;
-      border-top-left-radius: 4px;
-      transform-origin: bottom left; }
-      .nav-tabs > li:first-child a.active {
-        border-left: 1px solid #bbb; }
-    .nav-tabs > li:last-child a {
-      border-top-right-radius: 4px;
-      border-right: 1px solid #6699cc; }
-      .nav-tabs > li:last-child a.active {
-        border-right: 1px solid #bbb; }
-    .nav-tabs > li.active > a {
+  .nav-tabs > li:first-child a {
+    border-left: 1px solid #6699cc;
+    border-top-left-radius: 4px;
+    transform-origin: bottom left; }
+    .nav-tabs > li:first-child a.active {
+      border-left: 1px solid #bbb; }
+  .nav-tabs > li:last-child a {
+    border-top-right-radius: 4px;
+    border-right: 1px solid #6699cc; }
+    .nav-tabs > li:last-child a.active {
+      border-right: 1px solid #bbb; }
+  .nav-tabs > li.active > a {
+    border: 1px solid #bbb;
+    border-bottom: 1px solid white;
+    transform: scaleX(1.06);
+    z-index: 1; }
+    .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       border: 1px solid #bbb;
-      border-bottom: 1px solid white;
-      transform: scaleX(1.06);
-      z-index: 1; }
-      .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-        border: 1px solid #bbb;
-        border-bottom: 1px solid white; }
-    .nav-tabs > li > a {
-      border: 1px solid #6699cc;
-      color: #6699cc;
-      border-bottom: 1px solid transparent;
-      border-left: 1px solid transparent;
-      position: relative;
-      top: 1px; }
-      .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
-        border: 1px solid #bbb; }
+      border-bottom: 1px solid white; }
+  .nav-tabs > li > a {
+    border: 1px solid #6699cc;
+    color: #6699cc;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    position: relative;
+    top: 1px; }
+    .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+      border: 1px solid #bbb; }
 
 .nav-glyph {
   display: inline-block;

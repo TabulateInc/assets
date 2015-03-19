@@ -1,0 +1,57 @@
+.custom-selector {
+
+  &__btn {
+    background: url(../img/arrowdown.png) no-repeat right 8px center white;
+    line-height: 2.0;
+    padding-bottom: 3px;
+    padding-right: 15px;
+    position: relative;
+    text-align: left;
+    width: 200px;
+    margin-right: 10px;
+
+    &:active,
+    &:focus {
+      background: url(../img/arrowdown.png) no-repeat right 8px center white;
+      color: black;
+      border-radius: 2px;
+    }
+  }
+
+  &__options {
+    border: 1px solid #AAB2BD;
+    box-shadow: 0 1px 1px #AAB2BD;
+    position: absolute;
+    z-index: 900;
+    background-color: white;
+    width: 100%;
+    width: 200px;
+    padding-bottom: 5px;
+  }
+
+  &__option {
+    cursor: pointer;
+    display: block;
+    padding: 0 2px 1px 14px;
+    min-height: 1.2em;
+
+    &:hover {
+      color: white;
+      background-color: $brand-primary;
+    }
+  }
+
+  .datepicker {
+    width: 250px !important
+  }
+
+  .add-icon{
+    >.glyphicon{
+      position: absolute;
+      padding: 12px 5px;
+      right: 15px;
+      z-index: 800;
+    }
+  }
+}
+

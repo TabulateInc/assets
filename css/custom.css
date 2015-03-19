@@ -218,6 +218,44 @@ td.editable {
   margin-top: 8px;
   margin-left: 5px; }
 
+.custom-selector__btn {
+  background: url(../img/arrowdown.png) no-repeat right 8px center white;
+  line-height: 2.0;
+  padding-bottom: 3px;
+  padding-right: 15px;
+  position: relative;
+  text-align: left;
+  width: 200px;
+  margin-right: 10px; }
+  .custom-selector__btn:active, .custom-selector__btn:focus {
+    background: url(../img/arrowdown.png) no-repeat right 8px center white;
+    color: black;
+    border-radius: 2px; }
+.custom-selector__options {
+  border: 1px solid #AAB2BD;
+  box-shadow: 0 1px 1px #AAB2BD;
+  position: absolute;
+  z-index: 900;
+  background-color: white;
+  width: 100%;
+  width: 200px;
+  padding-bottom: 5px; }
+.custom-selector__option {
+  cursor: pointer;
+  display: block;
+  padding: 0 2px 1px 14px;
+  min-height: 1.2em; }
+  .custom-selector__option:hover {
+    color: white;
+    background-color: #6699cc; }
+.custom-selector .datepicker {
+  width: 250px !important; }
+.custom-selector .add-icon > .glyphicon {
+  position: absolute;
+  padding: 12px 5px;
+  right: 15px;
+  z-index: 800; }
+
 .inline-table__row {
   clear: both;
   float: none;

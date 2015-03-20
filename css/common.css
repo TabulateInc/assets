@@ -7905,6 +7905,9 @@ h6 {
 
 .container-constrained-700 {
   max-width: 700; }
+  @media (min-width: 768px) {
+    .container-constrained-700 {
+      width: 700px; } }
 
 .nav-holder {
   height: 82px;
@@ -8091,5 +8094,8 @@ select.btn {
 
 .editable {
   border-bottom: 1px solid #ddd; }
+
+.margin-left-sm {
+  margin-left: 12px; }
 
 /*# sourceMappingURL=common.css.map */

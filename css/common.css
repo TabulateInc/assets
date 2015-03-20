@@ -8089,4 +8089,7 @@ select.btn {
 .primary-text {
   color: #6699cc; }
 
+.editable {
+  border-bottom: 1px solid #ddd; }
+
 /*# sourceMappingURL=common.css.map */

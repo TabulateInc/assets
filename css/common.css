@@ -7911,7 +7911,8 @@ h6 {
 
 .nav-holder {
   height: 82px;
-  overflow-x: auto; }
+  overflow-x: auto;
+  overflow-y: hidden; }
 
 .nav-tabs {
   min-width: 480px;

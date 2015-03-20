@@ -305,3 +305,10 @@ $border:1px solid #bbb;
         cursor:pointer;
     }
 }
+
+.alert-danger.inline-alert{
+    position:static;
+    border:none;
+    border-radius:0px;
+    max-width:auto;
+}

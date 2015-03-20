@@ -7966,6 +7966,12 @@ h6 {
   .calendar-input:hover {
     cursor: pointer; }
 
+.alert-danger.inline-alert {
+  position: static;
+  border: none;
+  border-radius: 0px;
+  max-width: auto; }
+
 a:hover {
   cursor: pointer; }
 
@@ -7998,8 +8004,7 @@ a:hover {
   border-radius: 4px; }
 
 .alert-danger {
-  border: 1px solid red;
-  max-width: 400px; }
+  border: 1px solid red; }
 
 .alert-success {
   border: 1px solid #468847 !important;

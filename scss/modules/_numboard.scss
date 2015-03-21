@@ -1,0 +1,28 @@
+.numboard {
+  &__input {
+    margin: 50px 0;
+  }
+  &__actions {
+    margin: 25px 0;
+  }
+  &__keyboard {
+    .btn {
+      border-radius: 0 !important;
+      border-top: none;
+      border-left: none;
+    }
+    .btn-group .btn-group {
+      &:last-child .btn {
+        border-right: none;
+      }
+    }
+    .btn-group-justified {
+      &:last-child .btn {
+        border-bottom: none;
+      }
+    }
+  }
+  &__wrapper {
+    margin: 10px;
+  }
+}

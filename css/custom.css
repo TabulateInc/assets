@@ -316,4 +316,19 @@ td.editable {
   .waste-item.warning:hover {
     background-color: #f0ad4e !important; }
 
+.numboard__input {
+  margin: 50px 0; }
+.numboard__actions {
+  margin: 25px 0; }
+.numboard__keyboard .btn {
+  border-radius: 0 !important;
+  border-top: none;
+  border-left: none; }
+.numboard__keyboard .btn-group .btn-group:last-child .btn {
+  border-right: none; }
+.numboard__keyboard .btn-group-justified:last-child .btn {
+  border-bottom: none; }
+.numboard__wrapper {
+  margin: 10px; }
+
 /*# sourceMappingURL=custom.css.map */

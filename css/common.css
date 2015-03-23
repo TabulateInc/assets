@@ -7800,7 +7800,7 @@ h6,
   z-index: -1; }
 
 .no-padding-left {
-  padding-left: 0px !important; }
+  padding-left: 0 !important; }
 
 .no-padding-right {
   padding-right: 0 !important; }
@@ -8103,5 +8103,10 @@ select.btn {
 
 .margin-left-sm {
   margin-left: 12px; }
+
+.back-btn {
+  display: inline-block;
+  padding: 0 12px;
+  font-weight: 600; }
 
 /*# sourceMappingURL=common.css.map */

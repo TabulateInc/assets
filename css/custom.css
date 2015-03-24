@@ -219,6 +219,10 @@ td.editable {
   margin-top: 8px;
   margin-left: 5px; }
 
+.institutions-list {
+  max-height: 400px;
+  overflow-y: auto; }
+
 .custom-selector__btn {
   background: url(../img/arrowdown.png) no-repeat right 8px center white;
   line-height: 2.0;

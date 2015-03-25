@@ -55,9 +55,6 @@
 #transactionsChart .legendItem.total {
   font-weight: bold; }
 
-#transactionsChart .legendItem.total .value {
-  text-decoration: overline; }
-
 .bar {
   fill: steelblue;
   fill-opacity: 0.8; }

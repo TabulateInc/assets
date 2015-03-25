@@ -213,6 +213,11 @@ h6{
     padding: 8px 8px 8px 0px;
 }
 
+.table-head{
+    border-bottom:2px solid $table-border-color;
+}
+
+
 .container-constrained-950{
     max-width:950px;
 }

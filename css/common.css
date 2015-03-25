@@ -7900,6 +7900,9 @@ h6 {
   border-bottom: 2px solid #ddd;
   padding: 8px 8px 8px 0px; }
 
+.table-head {
+  border-bottom: 2px solid #ddd; }
+
 .container-constrained-950 {
   max-width: 950px; }
 

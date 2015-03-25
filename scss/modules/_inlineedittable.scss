@@ -1,26 +1,31 @@
 .inline-table {
 
   &__row {
-      clear:both;
-      float:none;
-      &div:before {
-          content: " ";
-          display: table;
-      }
-      &:after {
-          content: " ";
-          display: table;
-          clear:both;
-      }
     border-bottom: 1px solid #ddd;
-      &:first-child{
-        border-top: 1px solid #ddd;
-      }
     cursor: pointer;
     padding: 8px 8px 8px 0px;
+    clear:both;
+    float:none;
+    &div:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        content: " ";
+        display: table;
+        clear:both;
+    }
+    &:first-child {
+      border-top: 1px solid #ddd;
+    }
 
     &:hover {
       background-color: $table-bg-hover;
+
+      .btn-add {
+        display: inline-block;
+        visibility:visible;
+      }
 
       .b-delete-icon{
         display: inline-block;

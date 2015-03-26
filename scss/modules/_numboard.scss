@@ -10,6 +10,14 @@
       border-radius: 0 !important;
       border-top: none;
       border-left: none;
+      line-height: 2;
+      font-size: 16px;
+      &--dot {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 0;
+        padding: 17px 0 28px;
+      }
     }
     .btn-group .btn-group {
       &:last-child .btn {
@@ -25,4 +33,20 @@
   &__wrapper {
     margin: 10px;
   }
+}
+
+.glyphicons-delete {
+  background:url(../img/glyphicons-257-delete.png) no-repeat center center transparent;
+}
+
+.btn-gray {
+  background-color: $gray-lighter;
+  color: #000;
+}
+
+.push-bottom {
+  position: fixed;
+  bottom: 12px;
+  right: 0;
+  left: 0;
 }

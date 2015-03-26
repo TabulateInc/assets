@@ -18,6 +18,9 @@
     &:first-child {
       border-top: 1px solid #ddd;
     }
+   .b-delete-icon{
+      display: inline-block;
+    }
 
     &:hover {
       background-color: $table-bg-hover;

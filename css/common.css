@@ -8104,16 +8104,25 @@ select.btn {
 .editable {
   border-bottom: 1px solid #ddd; }
 
-.margin-left-sm {
-  margin-left: 12px; }
-
 .back-btn {
   display: inline-block;
   padding: 0 12px;
   font-weight: 600; }
 
+.margin-left-sm {
+  margin-left: 12px; }
+
+.height-md {
+  height: 40px; }
+
 .height-lg {
   height: 60px; }
+
+.line-height-sm {
+  line-height: 33px; }
+
+.line-height-md {
+  line-height: 40px; }
 
 .line-height-lg {
   line-height: 42px; }

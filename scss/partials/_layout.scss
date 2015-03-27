@@ -318,3 +318,8 @@ $border:1px solid #bbb;
     border-radius:0px;
     max-width:auto;
 }
+
+/*fix boostrap shit*/
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: 0px; }

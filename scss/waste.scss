@@ -19,6 +19,12 @@ $form-font-color: #434A54; // hardimported from bootflat
 
 .waste-items {
     margin-top: 35px;
+    &__row {
+        padding-left: 10px;
+        @media (max-width:$screen-sm-min){
+            padding-left:0 !important;
+        }
+    }
 }
 
 .waste-items-list {
@@ -30,10 +36,10 @@ $form-font-color: #434A54; // hardimported from bootflat
         cursor: pointer;
         padding-top:5px;
         padding-bottom:5px;
-    &:hover {
-        background: $table-bg-hover;
+        &:hover {
+            background: $table-bg-hover;
+        }
     }
-}
 }
 
 
@@ -70,6 +76,8 @@ $form-font-color: #434A54; // hardimported from bootflat
         width: 140%;
         position:relative;
         left:-20%;
+        margin-left: 12px;
+        z-index: 1;
         /*hack*/
     }
     .calendar-input{

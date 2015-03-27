@@ -26,6 +26,11 @@
 
 .waste-items {
   margin-top: 35px; }
+  .waste-items__row {
+    padding-left: 10px; }
+    @media (max-width: 768px) {
+      .waste-items__row {
+        padding-left: 0 !important; } }
 
 @media (max-width: 768px) {
   .waste-items-list {
@@ -62,6 +67,8 @@
     width: 140%;
     position: relative;
     left: -20%;
+    margin-left: 12px;
+    z-index: 1;
     /*hack*/ }
 
   .calendar-input {

@@ -414,9 +414,9 @@ td.editable {
     background-color: #f0ad4e !important; }
 
 .numboard__input {
-  margin: 50px 0; }
+  margin: 35px 0; }
 .numboard__actions {
-  margin: 25px 0; }
+  margin: 15px 0; }
 .numboard__keyboard .btn {
   border-radius: 0 !important;
   border-top: none;
@@ -433,7 +433,11 @@ td.editable {
 .numboard__keyboard .btn-group-justified:last-child .btn {
   border-bottom: none; }
 .numboard__wrapper {
-  margin: 10px; }
+  padding: 10px;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  background-color: #fff; }
 
 .glyphicons-delete {
   background: url(../img/glyphicons-257-delete.png) no-repeat center center transparent; }

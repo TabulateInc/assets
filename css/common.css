@@ -7794,7 +7794,8 @@ h6,
   background-color: #E6E9ED; }
 
 .over {
-  z-index: 1; }
+  z-index: 1;
+  position: relative; }
 
 .below {
   z-index: -1; }

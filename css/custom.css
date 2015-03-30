@@ -318,7 +318,7 @@ td.editable {
   padding-right: 15px;
   position: relative;
   text-align: left;
-  width: 200px;
+  /*width: 200px;*/
   margin-right: 10px; }
   .custom-selector__btn:active, .custom-selector__btn:focus {
     background: url(../img/arrowdown.png) no-repeat right 8px center white;
@@ -330,8 +330,7 @@ td.editable {
   position: absolute;
   z-index: 900;
   background-color: white;
-  width: 100%;
-  width: 200px;
+  width: 274px;
   padding-bottom: 5px; }
 .custom-selector__option {
   cursor: pointer;

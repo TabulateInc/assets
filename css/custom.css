@@ -350,6 +350,15 @@ td.editable {
   padding-left: 10px;
   padding-right: 0px; }
 
+.item-details-form .alert-danger {
+  position: relative;
+  top: 0;
+  margin-right: 5px !important;
+  margin-bottom: 10px !important; }
+  @media (max-width: 768px) {
+    .item-details-form .alert-danger {
+      margin-right: 0 !important; } }
+
 .inline-table__row {
   border-bottom: 1px solid #ddd;
   cursor: pointer;

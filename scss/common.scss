@@ -215,3 +215,9 @@ select.btn{
   line-height: 33px;
   font-weight: 400;
 }
+
+
+@media (max-width: $screen-xs-min) {
+  @include make-grid(xxs);
+}
+

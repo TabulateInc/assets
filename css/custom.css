@@ -183,7 +183,8 @@ td.editable {
   border-bottom: 1px solid #ddd; }
 
 .dst-categories {
-  border-top: 2px solid #ddd; }
+  border-top: 2px solid #ddd;
+  margin-top: 24px; }
   .dst-categories p,
   .dst-categories strong {
     word-wrap: break-word; }
@@ -335,8 +336,9 @@ td.editable {
 .custom-selector__option {
   cursor: pointer;
   display: block;
-  padding: 2px 0px 1px 10px;
-  min-height: 1.2em; }
+  padding: 5px 0 5px 10px;
+  min-height: 1.2em;
+  border-bottom: 1px solid #eeeeee; }
   .custom-selector__option:hover {
     color: white;
     background-color: #6699cc; }
@@ -347,8 +349,7 @@ td.editable {
   padding: 13px 5px;
   right: 15px; }
 .custom-selector .calendar-holder {
-  padding-left: 10px;
-  padding-right: 0px; }
+  padding: 5px 0 5px 10px; }
 
 .item-details-form .alert-danger {
   position: relative;

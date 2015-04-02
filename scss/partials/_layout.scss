@@ -236,6 +236,20 @@ $border:1px solid #bbb;
     height:82px;
     overflow-x:auto;
     overflow-y:hidden;
+    li {
+        border-left: none;
+    }
+    .btn-primary {
+        color: #fff !important;
+        border-color: $brand-primary !important;
+        &:hover {
+            color: $brand-primary !important;
+        }
+        &:visited {
+            color: #fff !important;
+            background-color: $brand-primary !important;
+        }
+    }
 }
 .nav-tabs{
     min-width:480px;// modified by js

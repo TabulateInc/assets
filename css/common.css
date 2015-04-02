@@ -7917,6 +7917,16 @@ h6 {
   height: 82px;
   overflow-x: auto;
   overflow-y: hidden; }
+  .nav-holder li {
+    border-left: none; }
+  .nav-holder .btn-primary {
+    color: #fff !important;
+    border-color: #6699cc !important; }
+    .nav-holder .btn-primary:hover {
+      color: #6699cc !important; }
+    .nav-holder .btn-primary:visited {
+      color: #fff !important;
+      background-color: #6699cc !important; }
 
 .nav-tabs {
   min-width: 480px;

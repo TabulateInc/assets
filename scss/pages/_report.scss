@@ -31,8 +31,9 @@
   &__option {
     cursor: pointer;
     display: block;
-    padding: 2px 0px 1px 10px;
+    padding: 5px 0 5px 10px;
     min-height: 1.2em;
+    border-bottom: 1px solid $gray-lighter;
 
     &:hover {
       color: white;
@@ -51,9 +52,8 @@
       right: 15px;
     }
   }
-  .calendar-holder{
-      padding-left:10px;
-      padding-right:0px;
+  .calendar-holder {
+      padding: 5px 0 5px 10px;
   }
 }
 

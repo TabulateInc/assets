@@ -1,0 +1,11 @@
+.item-details-form {
+  .alert-danger {
+    position: relative;
+    top: 0;
+    margin-right:5px !important;
+    margin-bottom: 10px !important;
+    @media (max-width:$screen-sm-min){
+      margin-right: 0 !important;
+    }
+  }
+}

@@ -216,6 +216,9 @@ select.btn{
   font-weight: 400;
 }
 
+.pointer-hover:hover {
+    cursor:pointer;
+}
 
 @media (max-width: $screen-xs-min) {
   @include make-grid(xxs);

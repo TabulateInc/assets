@@ -331,12 +331,12 @@ td.editable {
   position: absolute;
   z-index: 900;
   background-color: white;
-  width: 274px;
+  width: 300px;
   padding-bottom: 5px; }
 .custom-selector__option {
   cursor: pointer;
   display: block;
-  padding: 5px 0 5px 10px;
+  padding: 5px 5px 5px 10px;
   min-height: 1.2em;
   border-bottom: 1px solid #eeeeee; }
   .custom-selector__option:hover {
@@ -349,7 +349,12 @@ td.editable {
   padding: 13px 5px;
   right: 15px; }
 .custom-selector .calendar-holder {
-  padding: 5px 0 5px 10px; }
+  padding: 5px 5px 5px 10px; }
+  .custom-selector .calendar-holder__item {
+    padding-left: 0;
+    padding-right: 5px; }
+  .custom-selector .calendar-holder .calendar-input {
+    padding-left: 6px; }
 
 .item-details-form .alert-danger {
   position: relative;

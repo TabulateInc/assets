@@ -24,14 +24,14 @@
     position: absolute;
     z-index: 900;
     background-color: white;
-    width: 274px;
+    width: 300px;
     padding-bottom: 5px;
   }
 
   &__option {
     cursor: pointer;
     display: block;
-    padding: 5px 0 5px 10px;
+    padding: 5px 5px 5px 10px;
     min-height: 1.2em;
     border-bottom: 1px solid $gray-lighter;
 
@@ -53,7 +53,14 @@
     }
   }
   .calendar-holder {
-      padding: 5px 0 5px 10px;
+      padding: 5px 5px 5px 10px;
+      &__item {
+        padding-left: 0;
+        padding-right: 5px;
+      }
+      .calendar-input {
+        padding-left: 6px;
+      }
   }
 }
 

@@ -7918,15 +7918,22 @@ h6 {
   overflow-x: auto;
   overflow-y: hidden; }
   .nav-holder li {
-    border-left: none; }
-  .nav-holder .btn-primary {
-    color: #fff !important;
-    border-color: #6699cc !important; }
-    .nav-holder .btn-primary:hover {
-      color: #6699cc !important; }
-    .nav-holder .btn-primary:visited {
-      color: #fff !important;
-      background-color: #6699cc !important; }
+    border-left-width: 0 !important; }
+    .nav-holder li.active a {
+      color: #6699cc;
+      border-left-width: 1px !important; }
+      .nav-holder li.active a:hover {
+        color: #6699cc !important; }
+      .nav-holder li.active a:visited {
+        color: #6699cc !important; }
+    .nav-holder li:first-child a {
+      border-left-width: 1px !important; }
+  .nav-holder a {
+    color: #555555 !important;
+    border-top-color: #bbb !important;
+    border-right-color: #bbb !important;
+    border-left-color: #bbb !important;
+    border-left-width: 0 !important; }
 
 .nav-tabs {
   min-width: 480px;

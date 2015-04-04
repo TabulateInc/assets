@@ -237,18 +237,31 @@ $border:1px solid #bbb;
     overflow-x:auto;
     overflow-y:hidden;
     li {
-        border-left: none;
+        border-left-width: 0 !important;
+        &.active {
+            a {
+                color: $brand-primary;
+                border-left-width: 1px !important;
+                &:hover {
+                    color: $brand-primary !important;
+                }
+                &:visited {
+                    color: $brand-primary !important;
+                }
+            }
+        }
+        &:first-child {
+            a {
+                border-left-width: 1px !important;
+            }
+        }
     }
-    .btn-primary {
-        color: #fff !important;
-        border-color: $brand-primary !important;
-        &:hover {
-            color: $brand-primary !important;
-        }
-        &:visited {
-            color: #fff !important;
-            background-color: $brand-primary !important;
-        }
+    a {
+        color: $gray !important;
+        border-top-color: #bbb !important;
+        border-right-color: #bbb !important;
+        border-left-color: #bbb !important;
+        border-left-width: 0 !important;
     }
 }
 .nav-tabs{

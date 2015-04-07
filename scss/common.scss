@@ -242,3 +242,17 @@ select.btn{
 @media (max-width: $screen-xs-min) {
   @include make-grid(xxs);
 }
+
+.glyphicon-folder-plus {
+  height: 30px;
+  width: 33px;
+  background: url(../img/glyphicons-146-folder-plus.png) no-repeat center center transparent;
+  background-size: 24px 22px;
+}
+
+.glyphicon-file-plus {
+  height: 30px;
+  width: 33px;
+  background: url(../img/glyphicons-359-file-import.png) no-repeat center center transparent;
+  background-size: 18px 22px;
+}

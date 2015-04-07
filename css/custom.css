@@ -408,6 +408,9 @@ td.editable {
   .add-edit.edit .checkbox__margined,
   .__edit .checkbox__margined {
     margin-top: 12px !important; }
+  .add-edit.edit.drop,
+  .__edit.drop {
+    padding: 8px; }
 
 @media (max-width: 480px) {
   .no-padding-left-xs {

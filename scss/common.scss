@@ -9,7 +9,7 @@ $alert-info-border: $alert-info-bg;  // doesnt work !important") is not a color 
 $alert-info-text: #4993c6;
 
 $breadcrumb-padding-horizontal: 0;
-$breadcrumb-bg:                 #fff !important;
+$breadcrumb-bg: #fff !important;
 
 @import "partials/_bootstrap";
 @import "partials/_layout";
@@ -255,4 +255,26 @@ select.btn{
   width: 33px;
   background: url(../img/glyphicons-359-file-import.png) no-repeat center center transparent;
   background-size: 18px 22px;
+}
+
+.b-file-input {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  &:hover {
+    cursor: pointer !important;
+  }
+  input, a {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    &:hover {
+      cursor: pointer !important;
+    }
+  }
+  input {
+    opacity: 0;
+  }
 }

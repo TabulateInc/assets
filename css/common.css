@@ -8341,4 +8341,21 @@ select.btn {
   background: url(../img/glyphicons-359-file-import.png) no-repeat center center transparent;
   background-size: 18px 22px; }
 
+.b-file-input {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px; }
+  .b-file-input:hover {
+    cursor: pointer !important; }
+  .b-file-input input, .b-file-input a {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute; }
+    .b-file-input input:hover, .b-file-input a:hover {
+      cursor: pointer !important; }
+  .b-file-input input {
+    opacity: 0; }
+
 /*# sourceMappingURL=common.css.map */

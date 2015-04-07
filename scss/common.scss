@@ -8,8 +8,27 @@ $alert-info-bg: #d9edf7;
 $alert-info-border: $alert-info-bg;  // doesnt work !important") is not a color for `darken')
 $alert-info-text: #4993c6;
 
+$breadcrumb-padding-horizontal: 0;
+$breadcrumb-bg:                 #fff !important;
+
 @import "partials/_bootstrap";
 @import "partials/_layout";
+
+
+.breadcrumb {
+  li {
+    font-weight: 300;
+    font-size: 17px;
+    float: left;
+    &:before {
+      content: none !important;
+    }
+  }
+  .glyphicon-menu-right {
+    font-size: 13px;
+    color: $gray-light;
+  }
+}
 
 
 a:hover {
@@ -223,4 +242,3 @@ select.btn{
 @media (max-width: $screen-xs-min) {
   @include make-grid(xxs);
 }
-

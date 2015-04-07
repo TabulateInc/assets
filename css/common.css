@@ -3975,10 +3975,10 @@ tbody.collapse.in {
       color: #444; }
 
 .breadcrumb {
-  padding: 8px 15px;
+  padding: 8px 0;
   margin-bottom: 20px;
   list-style: none;
-  background-color: #f5f5f5;
+  background-color: #fff !important;
   border-radius: 2px; }
   .breadcrumb > li {
     display: inline-block; }
@@ -7998,6 +7998,16 @@ h6 {
 .radio + .radio,
 .checkbox + .checkbox {
   margin-top: 0px; }
+
+.breadcrumb li {
+  font-weight: 300;
+  font-size: 17px;
+  float: left; }
+  .breadcrumb li:before {
+    content: none !important; }
+.breadcrumb .glyphicon-menu-right {
+  font-size: 13px;
+  color: #777777; }
 
 a:hover {
   cursor: pointer; }

@@ -8351,17 +8351,21 @@ select.btn {
   display: inline-block;
   position: relative;
   width: 30px;
-  height: 30px; }
-  .b-file-input:hover {
-    cursor: pointer !important; }
-  .b-file-input input, .b-file-input a {
+  height: 30px;
+  overflow: hidden;
+  cursor: pointer; }
+  .b-file-input input, .b-file-input label {
     width: 100%;
     height: 100%;
     left: 0;
+    right: 0;
     position: absolute; }
-    .b-file-input input:hover, .b-file-input a:hover {
-      cursor: pointer !important; }
   .b-file-input input {
-    opacity: 0; }
+    visibility: hidden;
+    transform: scale(20);
+    letter-spacing: 10em;
+    /* IE 9 fix */
+    -ms-transform: scale(20);
+    /* IE 9 fix */ }
 
 /*# sourceMappingURL=common.css.map */

@@ -113,13 +113,19 @@ a:hover {
 	padding: 3px 10px 2px 5px;
 }
 
-
-.date-selector{
+.report-filter{
     margin-top: 4px;
+    margin-bottom:16px;
     padding:4px 0px;
     width:100%;
     border-top: 1px solid $table-border-color;
     border-bottom: 1px solid $table-border-color;
+    .add-control{
+        margin-bottom:0px;
+    }
+}
+
+.date-selector{
     button.week-changer {
         font-size:10px;
         height:29px;
@@ -132,13 +138,13 @@ a:hover {
       width: 160px !important;
     }
 
-    >div{
-        margin:5px 10px 5px 0px;
-        @media (max-width: 768px){
-            margin-right:0px;
-        }
-        padding:0px;
-    }
+    /*>div{*/
+        /*margin:5px 10px 5px 0px;*/
+        /*@media (max-width: 768px){*/
+            /*margin-right:0px;*/
+        /*}*/
+        /*padding:0px;*/
+    /*}*/
 }
 
 .datepicker {

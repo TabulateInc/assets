@@ -203,6 +203,13 @@ td.editable {
     position: relative;
     top: 2px; }
 
+.b-files-table .inline-table__row {
+  line-height: 2.5em; }
+.b-files-table .glyphicon-folder-close {
+  font-size: 2em;
+  position: relative;
+  vertical-align: middle; }
+
 .sorticonwrapper {
   display: inline-block;
   width: 13px;

@@ -205,9 +205,36 @@ td.editable {
 
 .b-files-table .inline-table__row {
   line-height: 2.5em; }
-.b-files-table .glyphicon-folder-close {
-  font-size: 2em;
-  position: relative;
+.b-files-table .progress {
+  margin-bottom: 0;
+  vertical-align: middle;
+  display: inline-block;
+  width: 100%; }
+
+.icon-folder-plus {
+  height: 30px;
+  width: 33px;
+  background: url(../img/add-folder.png) no-repeat center center transparent;
+  background-size: 22px 20px; }
+
+.icon-file-plus {
+  height: 30px;
+  width: 33px;
+  background: url(../img/add-file.png) no-repeat center center transparent;
+  background-size: 19px 20px; }
+
+.icon-folder {
+  height: 47px;
+  width: 48px;
+  background: url(../img/folder.png) no-repeat top center transparent;
+  background-size: 48px 43px;
+  vertical-align: middle; }
+
+.icon-file {
+  height: 47px;
+  width: 48px;
+  background: url(../img/file.png) no-repeat center center transparent;
+  background-size: 24px 29px;
   vertical-align: middle; }
 
 .sorticonwrapper {

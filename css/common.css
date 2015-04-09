@@ -8333,18 +8333,6 @@ select.btn {
 
   .col-xxs-offset-12 {
     margin-left: 100%; } }
-.glyphicon-folder-plus {
-  height: 30px;
-  width: 33px;
-  background: url(../img/add-folder.png) no-repeat center center transparent;
-  background-size: 22px 20px; }
-
-.glyphicon-file-plus {
-  height: 30px;
-  width: 33px;
-  background: url(../img/add-file.png) no-repeat center center transparent;
-  background-size: 19px 20px; }
-
 .b-file-input {
   display: inline-block;
   position: relative;

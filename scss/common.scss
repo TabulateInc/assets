@@ -270,3 +270,8 @@ select.btn{
     -ms-transform: scale(20); /* IE 9 fix */
   }
 }
+
+.half-height {
+    max-height: 50vh;
+    overflow: scroll;
+}

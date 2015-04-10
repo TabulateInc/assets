@@ -8087,21 +8087,23 @@ a:hover {
   .content-filter .add-control {
     margin-bottom: 0px; }
 
-.date-selector button.week-changer {
-  font-size: 10px;
-  height: 29px; }
-  @media (max-width: 768px) {
-    .date-selector button.week-changer {
-      display: none; } }
-.date-selector .week-dropdown,
-.date-selector .dropdown-menu {
-  width: 160px !important; }
-.date-selector > div {
-  margin: 5px 10px 5px 0px;
-  padding: 0px; }
-  @media (max-width: 768px) {
-    .date-selector > div {
-      margin-right: 0px; } }
+.date-selector {
+  /*>div{*/
+  /*margin:5px 10px 5px 0px;*/
+  /*@media (max-width: 768px){*/
+  /*margin-right:0px;*/
+  /*}*/
+  /*padding:0px;*/
+  /*}*/ }
+  .date-selector button.week-changer {
+    font-size: 10px;
+    height: 29px; }
+    @media (max-width: 768px) {
+      .date-selector button.week-changer {
+        display: none; } }
+  .date-selector .week-dropdown,
+  .date-selector .dropdown-menu {
+    width: 160px !important; }
 
 .datepicker tr:last-child {
   display: none; }

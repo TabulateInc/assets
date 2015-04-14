@@ -275,3 +275,7 @@ select.btn{
     max-height: 50vh;
     overflow: scroll;
 }
+
+select::-ms-expand {
+    display: none;
+}

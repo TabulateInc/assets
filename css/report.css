@@ -8,10 +8,11 @@
   padding-left: 30px;
   min-width: 100px; }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
   .container {
     /*margin-left:50px;*/
     /*margin-right:50px;*/
-    width: 100%; } }
+    width: 1300px;
+    padding-left: 115px; } }
 
 /*# sourceMappingURL=report.css.map */

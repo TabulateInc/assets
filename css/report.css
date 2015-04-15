@@ -8,11 +8,13 @@
   padding-left: 30px;
   min-width: 100px; }
 
-@media (min-width: 1200px) {
+@media (min-width: 1450px) {
   .container {
-    /*margin-left:50px;*/
-    /*margin-right:50px;*/
     width: 1300px;
     padding-left: 115px; } }
+@media (min-width: 1200px) and (max-width: 1449px) {
+  .container {
+    width: 1166px;
+    padding-left: 48px; } }
 
 /*# sourceMappingURL=report.css.map */

@@ -1,29 +1,70 @@
-@-webkit-keyframes ld {
-  0%   { transform: rotate(0deg) scale(1); }
-  50%  { transform: rotate(180deg) scale(1.1); }
-  100% { transform: rotate(360deg) scale(1); }
-}
-@-moz-keyframes ld {
-  0%   { transform: rotate(0deg) scale(1); }
-  50%  { transform: rotate(180deg) scale(1.1); }
-  100% { transform: rotate(360deg) scale(1); }
-}
-@-o-keyframes ld {
-  0%   { transform: rotate(0deg) scale(1); }
-  50%  { transform: rotate(180deg) scale(1.1); }
-  100% { transform: rotate(360deg) scale(1); }
-}
-@keyframes ld {
-  0%   { transform: rotate(0deg) scale(1); }
-  50%  { transform: rotate(180deg) scale(1.1); }
-  100% { transform: rotate(360deg) scale(1); }
+@mixin make-keyframes($name) {
+
+  @-ms-keyframes #{$name} {
+    @content
+  }
+
+  @-webkit-keyframes #{$name} {
+    @content
+  }
+
+  @-moz-keyframes #{$name} {
+    @content
+  }
+
+  @-o-keyframes #{$name} {
+    @content
+  }
+
+  @keyframes #{$name} {
+    @content
+  }
+
 }
 
+@include make-keyframes(ld) {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// $browser-prefixes: 
+// @mixin make-animation {
+//   @each $prefix in 
+// }
+
 .m-progress {
-    top: 0;
-    position: relative;
-    opacity: .8;
-    color: transparent;
+  top: 0;
+  position: relative;
+  opacity: .8;
+  color: transparent;
+
+  &:before {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-animation: ld 1s linear infinite;
+    -moz-animation:    ld 1s linear infinite;
+    -o-animation:      ld 1s linear infinite;
+    animation:         ld 1s linear infinite;
+    color: #333333;
+  }
+  &.btn-default:before {
+    margin-top: -9px;
+    margin-left: -7px;
+  }
+
+  &.btn-primary:before {
+    color: #fff;
+    margin-top: -9px;
+    margin-left: -7px;
+  }
+
+  &.progress-inline:before {
+    margin-top: -7px;
+    margin-left: -7px;
+  }
 }
 
 .m-progress:hover,
@@ -35,26 +76,6 @@
     box-shadow: none;
 }
 
-.m-progress:before {
-    $icon-width: 14px;
-    $icon-height: 18px;
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -$icon-height/2;
-    margin-left: -$icon-width/2;
-    width: $icon-width;
-    height: $icon-height;
-    -webkit-animation: ld 1s linear infinite;
-    -moz-animation:    ld 1s linear infinite;
-    -o-animation:      ld 1s linear infinite;
-    animation:         ld 1s linear infinite;
-}
-
-.btn-default.m-progress:before {
-  color: #333333;
-}
 
 // .btn-lg.m-progress:before {
 //     margin-top: -16px;

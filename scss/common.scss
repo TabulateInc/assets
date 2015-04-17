@@ -279,3 +279,19 @@ select.btn{
 select::-ms-expand {
     display: none;
 }
+
+.pull-left-sm {
+  @media (min-width: $screen-sm-min) {
+    float: left;
+  }
+}
+
+.aside-body {
+  @media (min-width: $screen-xs-min) {
+    min-width: 350px;
+  }
+}
+
+.aside-header {
+  background-color: $gray !important;
+}

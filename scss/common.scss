@@ -293,5 +293,9 @@ select::-ms-expand {
 }
 
 .aside-header {
-  background-color: $gray !important;
+  background-color: #fff !important;
+}
+
+.aside-title {
+  color: $gray;
 }

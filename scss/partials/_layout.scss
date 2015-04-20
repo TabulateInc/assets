@@ -45,6 +45,12 @@ body {
         display:none;
     }
 }
+.visible-xs-inline{
+    @media (min-width:$screen-xs-min){
+        display:inline-block;
+    }
+}
+
 
 h1,
 h2,

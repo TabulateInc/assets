@@ -93,6 +93,7 @@ a:hover {
 }
 
 .week-dropdown,
+.day-dropdown,
 .account-dropdown {
   text-align: left;
   position:relative;
@@ -130,12 +131,17 @@ a:hover {
         font-size:10px;
         height:29px;
         @media (max-width: 768px){
-          display: none;
+          .hide-buttons{
+              display: none;
+          }
         }
     }
     .week-dropdown,
     .dropdown-menu {
       width: 160px !important;
+    }
+    .day-dropdown{
+        width: 120px !important;
     }
 
     /*>div{*/

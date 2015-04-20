@@ -1,5 +1,8 @@
 .inline-table {
 
+  &__top {
+    border-top: 1px solid #ddd;
+  }
   &__row {
     border-bottom: 1px solid #ddd;
     cursor: pointer;
@@ -14,9 +17,6 @@
         content: " ";
         display: table;
         clear:both;
-    }
-    &:first-child {
-      border-top: 1px solid #ddd;
     }
    .b-delete-icon{
       display: inline-block;

@@ -294,6 +294,11 @@ select::-ms-expand {
 
 .aside-header {
   background-color: #fff !important;
+  .close {
+    color: rgb(0,0,0) !important;
+    opacity: .2 !important;
+    padding-top: 8px !important;
+  }
 }
 
 .aside-title {

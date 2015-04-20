@@ -131,7 +131,7 @@ a:hover {
         font-size:10px;
         height:29px;
         @media (max-width: 768px){
-          .hide-buttons{
+          &.hide-buttons{
               display: none;
           }
         }

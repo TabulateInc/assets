@@ -8109,7 +8109,7 @@ a:hover {
     font-size: 10px;
     height: 29px; }
     @media (max-width: 768px) {
-      .date-selector button.week-changer .hide-buttons {
+      .date-selector button.week-changer.hide-buttons {
         display: none; } }
   .date-selector .week-dropdown,
   .date-selector .dropdown-menu {

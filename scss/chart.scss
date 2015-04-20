@@ -24,6 +24,9 @@ $chart-margin:75px;
         float:left;
         padding-right:10px;
     }
+    .input-group {
+      display: block;
+    }
 
 }
 
@@ -225,14 +228,5 @@ h5{
 }
 
 .text-center--indent {
-  text-indent: 29px;
-  @media (min-width: $screen-sm-min) {
-    text-indent: 65px;
-  }
-  @media (min-width: $screen-md-min) {
-    text-indent: 90px;
-  }
-  @media (min-width: $screen-lg-min) {
-    text-indent: 115px;
-  }
+  text-indent: calc(50% - 15px);
 }

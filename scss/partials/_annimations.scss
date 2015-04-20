@@ -40,6 +40,9 @@
   color: transparent;
 
   &:before {
+    content: '';
+    width:18px;
+    height:18px;
     display: inline-block;
     position: absolute;
     top: 50%;
@@ -49,6 +52,7 @@
     -o-animation:      ld 1s linear infinite;
     animation:         ld 1s linear infinite;
     color: #333333;
+    background: url(../img/progress_black.svg) no-repeat center center transparent;
   }
   &.btn-default:before {
     margin-top: -9px;
@@ -59,6 +63,7 @@
     color: #fff;
     margin-top: -9px;
     margin-left: -7px;
+    background: url(../img/progress_white.svg) no-repeat center center transparent;
   }
 
   &.progress-inline:before {

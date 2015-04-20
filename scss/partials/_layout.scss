@@ -239,6 +239,7 @@ $border:1px solid #bbb;
     li {
         border-left-width: 0 !important;
         &.active {
+            margin-left: -1px !important;
             a {
                 color: $brand-primary;
                 border-left-width: 1px !important;
@@ -253,6 +254,9 @@ $border:1px solid #bbb;
         &:first-child {
             a {
                 border-left-width: 1px !important;
+            }
+            &.active {
+                margin-left: 0 !important;
             }
         }
     }

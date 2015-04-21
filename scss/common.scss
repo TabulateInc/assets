@@ -327,3 +327,23 @@ select::-ms-expand {
         width: (1070px + $grid-gutter-width);
     }
 }
+
+.btn-grey {
+  background-color: $gray-lighter !important;
+}
+
+.btn-fake {
+  @extend .btn-default;
+  top: 1px;
+}
+
+.units-input {
+  height: 34px;
+  overflow: hidden;
+  .btn {
+    @media (max-width:$screen-sm-min){
+      padding-left: 6px;
+      padding-right:6px;
+    }
+  }
+}

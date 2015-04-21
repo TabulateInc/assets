@@ -21,8 +21,13 @@
 }
 
 
-.summary-table td{
-    padding:3px 8px;
+.summary-table{
+    @media (max-width:$screen-sm-min){
+        width:100%;
+    }
+    td{
+        padding:3px 8px;
+    }
 }
 td.editable {
   border: 1px solid #ddd;

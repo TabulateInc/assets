@@ -5,7 +5,9 @@
     td{
         padding: 2px 1px 3px 25px;
         min-width:100px;
-
+    }
+    td, th,b{
+        white-space:nowrap;
     }
 }
 .total-column{

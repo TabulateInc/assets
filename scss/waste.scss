@@ -3,19 +3,8 @@
 @import "partials/_datepicker";
 
 
-$container-lg: (1070px + $grid-gutter-width);
-$container-md: (970px + $grid-gutter-width);
 $form-font-color: #434A54; // hardimported from bootflat
 
-
-.container {
-    @media (min-width: $screen-md-min) {
-        width: $container-md;
-    }
-    @media (min-width: $screen-lg-min) {
-        width: $container-lg;
-    }
-}
 
 .waste-items {
     margin-top: 35px;

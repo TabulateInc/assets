@@ -1,41 +1,70 @@
 .numboard {
+  height: calc(100% - 50px);
+
   &__input {
     margin: 35px 0;
   }
+
   &__actions {
     margin: 15px 0;
   }
+
   &__keyboard {
+    height: calc(100% - 63px);
+
+    &__wrapper {
+      height: calc(100% - 95px);
+    }
+
     .btn {
+      line-height: 2;
+      font-size: 16px;
+      height: 100%;
+      position: absolute;
+      top: 0;
       border-radius: 0 !important;
       border-top: none;
       border-left: none;
-      line-height: 2;
-      font-size: 16px;
+
       &--dot {
         font-size: 18px;
         font-weight: 600;
         line-height: 0;
-        padding: 17px 0 28px;
       }
     }
+
+    > .btn-group {
+      height: 25%;
+    }
+
     .btn-group .btn-group {
       &:last-child .btn {
         border-right: none;
       }
     }
+
     .btn-group-justified {
       &:last-child .btn {
         border-bottom: none;
       }
     }
   }
+
   &__wrapper {
     padding: 10px;
     position: fixed;
     z-index: 10000;
     top: 0;
     background-color: #fff;
+    height: 100%;
+
+    @media (orientation: landscape) {
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
   }
 }
 

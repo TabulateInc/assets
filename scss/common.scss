@@ -337,9 +337,7 @@ select::-ms-expand {
   top: 1px;
 }
 
-.units-input {
-  height: 34px;
-  overflow: hidden;
+.item-units-input {
   .btn {
     @media (max-width:$screen-sm-min){
       padding-left: 6px;

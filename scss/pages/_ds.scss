@@ -21,8 +21,13 @@
 }
 
 
-.summary-table td{
-    padding:3px 8px;
+.summary-table{
+    @media (max-width:$screen-sm-min){
+        width:100%;
+    }
+    td,th{
+        padding:3px 8px;
+    }
 }
 td.editable {
   border: 1px solid #ddd;
@@ -31,7 +36,7 @@ td.editable {
     border: 0;
     box-sizing: border-box;
     outline: 0 !important;
-    text-align: right;
+    /*text-align: right;*/
     width: 100%;
     &:focus {
       outline: 2px solid #6699cc !important;

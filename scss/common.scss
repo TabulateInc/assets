@@ -335,13 +335,19 @@ select::-ms-expand {
 .btn-fake {
   @extend .btn-default;
   top: 1px;
+  max-width: 82px;
+  @media (max-width:$screen-sm-min){
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+    max-width: 42px;
+  }
 }
 
 .item-units-input {
   .btn {
     @media (max-width:$screen-sm-min){
       padding-left: 6px;
-      padding-right:6px;
+      padding-right: 6px;
     }
   }
 }

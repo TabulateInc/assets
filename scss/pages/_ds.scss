@@ -29,9 +29,11 @@
         padding:3px 8px;
     }
 }
-td.editable {
+
+.editable {
   border: 1px solid #ddd;
-  input {
+  input,
+  &__input {
     background-color: transparent;
     border: 0;
     box-sizing: border-box;

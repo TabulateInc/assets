@@ -331,10 +331,16 @@ select::-ms-expand {
   @extend .btn-default;
   top: 1px;
   max-width: 82px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   @media (max-width:$screen-sm-min){
     padding-left: 3px !important;
     padding-right: 3px !important;
     max-width: 42px;
+  }
+  &:hover {
+    background-color: #fff;
+    color: rgb(0,0,0)
   }
 }
 
@@ -348,6 +354,14 @@ select::-ms-expand {
 }
 
 .item-units-input {
+
+  .glyphicon-plus:hover,
+  .glyphicon-plus:focus,
+  .glyphicon-minus:hover,
+  .glyphicon-minus:focus {
+    color: rgb(0,0,0);
+  }
+
   .btn {
     @media (max-width:$screen-sm-min){
       padding-left: 6px;

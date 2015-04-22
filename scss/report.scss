@@ -9,6 +9,12 @@
     td, th,b{
         white-space:nowrap;
     }
+    &.expanded{
+        /*im ugly and i know it*/
+        /*adding a border to emulate padding when table goes wider than the screen*/
+        border-right:40px solid transparent;
+        border-collapse: separate;
+    }
 }
 .total-column{
     padding-left:30px;

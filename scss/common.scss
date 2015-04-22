@@ -338,6 +338,15 @@ select::-ms-expand {
   }
 }
 
+.btn-link--bordered {
+  border: 1px solid $brand-primary;
+  &:hover {
+    border: 2px solid $brand-primary;
+    text-decoration: none !important;
+    margin: -1px;
+  }
+}
+
 .item-units-input {
   .btn {
     @media (max-width:$screen-sm-min){

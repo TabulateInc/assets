@@ -15,6 +15,7 @@ $breadcrumb-bg: #fff !important;
 @import "partials/_layout";
 
 
+
 .breadcrumb {
   li {
     font-weight: 300;
@@ -154,12 +155,6 @@ a:hover {
         /*}*/
         /*padding:0px;*/
     /*}*/
-}
-
-.datepicker {
-  tr:last-child {
-    display: none;
-  }
 }
 
 select.btn{

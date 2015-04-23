@@ -3,13 +3,12 @@
 
   &__btn {
     background: url(../img/arrowdown.png) no-repeat right 8px center white;
+    position: relative;
+    text-align: left;
+
     line-height: 2.0;
     padding-bottom: 3px;
     padding-right: 15px;
-    position: relative;
-    text-align: left;
-    /*width: 200px;*/
-    margin-right: 10px;
 
     &:active,
     &:focus {
@@ -70,5 +69,12 @@
         padding-left: 6px;
       }
   }
+}
+.content-filter{
+    .custom-selector__btn{
+        line-height:1.5;
+        padding:3px 20px 4px 12px;
+        height:29px!important;
+    }
 }
 

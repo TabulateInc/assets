@@ -25,13 +25,14 @@
     @media (max-width:$screen-sm-min){
         width:100%;
     }
-    td,th{
+    td{
         padding:3px 8px;
     }
 }
 
 .editable {
   border: 1px solid #ddd;
+  
   input,
   &__input {
     background-color: transparent;

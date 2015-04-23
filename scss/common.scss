@@ -334,8 +334,7 @@ select::-ms-expand {
   padding-top: 5px;
   padding-bottom: 5px;
   @media (max-width:$screen-sm-min){
-    padding-left: 3px !important;
-    padding-right: 3px !important;
+    padding: 6px 3px !important;
     max-width: 42px;
   }
   &:hover {

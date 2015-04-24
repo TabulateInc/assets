@@ -338,7 +338,7 @@ select::-ms-expand {
 .btn-fake {
   @extend .btn-default;
   top: 1px;
-  max-width: 82px;
+  max-width: 72px;
   padding-top: 5px;
   padding-bottom: 5px;
   @media (max-width:$screen-sm-min){
@@ -356,7 +356,7 @@ select::-ms-expand {
   &:hover {
     border: 1px solid $brand-primary;
     text-decoration: none !important;
-    // background-color: #fff;
+    background-color: #fff;
   }
 }
 

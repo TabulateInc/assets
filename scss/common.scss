@@ -338,12 +338,12 @@ select::-ms-expand {
 .btn-fake {
   @extend .btn-default;
   top: 1px;
-  max-width: 72px;
+  width: 72px;
   padding-top: 5px;
   padding-bottom: 5px;
   @media (max-width:$screen-sm-min){
     padding: 6px 3px !important;
-    max-width: 42px;
+    width: 42px;
   }
   &:hover {
     background-color: #fff;

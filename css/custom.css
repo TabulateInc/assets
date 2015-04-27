@@ -204,9 +204,14 @@
       display: none; }
   .dst-categories input {
     font-size: 95% !important; }
+  .dst-categories .add-control label {
+    padding-top: 10px; }
   .dst-categories .add-control .checkbox__margined {
     position: relative;
-    top: 2px; }
+    top: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: auto; }
 
 .b-files-table .inline-table__row {
   line-height: 2.5em; }

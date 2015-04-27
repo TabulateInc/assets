@@ -33,9 +33,16 @@
   input {
     font-size: 95% !important;
   }
+  .add-control label{
+      padding-top:10px;
+  }
 
   .add-control .checkbox__margined {
       position:relative;
       top:2px;
+      margin-left:5px;
+      margin-right:5px;
+      height:auto;
   }
+
 }

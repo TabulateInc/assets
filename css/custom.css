@@ -133,12 +133,13 @@
   display: inline;
   visibility: visible; }
 
-.checkbox__margined {
-  margin: 5px 5px 0px 15px !important; }
-  @media (min-width: 481px) {
-    .checkbox__margined {
-      height: 15px !important; } }
-
+/*wtf is that?*/
+/*.checkbox__margined {*/
+/*@media (min-width:$screen-xs-min+1){*/
+/*height: 15px!important;*/
+/*}*/
+/*margin: 5px 5px 0px 15px!important;*/
+/*}*/
 .checkbox-caption-left {
   line-height: 39px;
   padding: 0 5px; }
@@ -205,7 +206,7 @@
   .dst-categories input {
     font-size: 95% !important; }
   .dst-categories .add-control label {
-    padding-top: 10px; }
+    margin-bottom: 0px; }
   .dst-categories .add-control .checkbox__margined {
     position: relative;
     top: 2px;

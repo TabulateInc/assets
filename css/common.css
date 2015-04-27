@@ -8416,20 +8416,29 @@ select::-ms-expand {
 
 .btn-fake {
   top: 1px;
-  max-width: 82px; }
+  width: 72px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
   @media (max-width: 768px) {
     .btn-fake {
-      padding-left: 3px !important;
-      padding-right: 3px !important;
-      max-width: 42px; } }
+      padding: 6px 3px !important;
+      width: 42px; } }
+  .btn-fake:hover {
+    background-color: #fff;
+    color: black; }
 
 .btn-link--bordered {
   border: 1px solid #6699cc; }
   .btn-link--bordered:hover {
-    border: 2px solid #6699cc;
+    border: 1px solid #6699cc;
     text-decoration: none !important;
-    margin: -1px; }
+    background-color: #fff; }
 
+.item-units-input .glyphicon-plus:hover,
+.item-units-input .glyphicon-plus:focus,
+.item-units-input .glyphicon-minus:hover,
+.item-units-input .glyphicon-minus:focus {
+  color: black; }
 @media (max-width: 768px) {
   .item-units-input .btn {
     padding-left: 6px;

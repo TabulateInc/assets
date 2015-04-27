@@ -1,4 +1,49 @@
-h1,h2,h3,h4,h5,h6{font-family:"Open Sans",sans-serif}.form-control{border-color:#ccc}p{font-family:'Open Sans', sans-serif !important}.logo{margin:5px auto;height:40px}.form-auth{padding:20px 30px}.form-auth-heading{font-size:24.5px;text-align:center}.form-auth-subheader{text-align:center;font-size:12px;margin-bottom:20px}.container{margin-top:50px;max-width:400px}@media (min-width: 768px){.container{margin-top:100px}}input{font-size:15px;margin:15px auto}::-moz-placeholder,:-ms-input-placeholder,::-webkit-input-placeholder{font-family:'Open Sans', sans-serif !important}@media screen and (max-height: 580px){.content{margin-top:15px}}
+/*$container-desktop: (870px + $grid-gutter-width);*/
+/*$container-md: $container-desktop;*/
+/*$container-lg: $container-desktop;*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif; }
 
+.form-control {
+  border-color: #ccc; }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBT0EsaUJBQXVCLENBQ3BCLFdBQVcsQ0FMUyxzQkFBVyxDQVFsQyxhQUFjLENBQ1YsWUFBWSxDQVJGLElBQUksQ0FXbEIsQ0FBRSxDQUNFLFdBQVcsQ0FBQyxrQ0FBa0MsQ0FHbEQsS0FBTSxDQUNGLE1BQU0sQ0FBQyxRQUFRLENBQ2YsTUFBTSxDQUFDLElBQUksQ0FHZixVQUFVLENBQ04sT0FBTyxDQUFDLFNBQVMsQ0FHckIsa0JBQW1CLENBQ2YsU0FBUyxDQUFFLE1BQU0sQ0FDakIsVUFBVSxDQUFDLE1BQU0sQ0FHckIsb0JBQXFCLENBQ2pCLFVBQVUsQ0FBRSxNQUFNLENBQ2xCLFNBQVMsQ0FBRSxJQUFJLENBQ2YsYUFBYSxDQUFDLElBQUksQ0FHdEIsVUFBVyxDQUVQLFVBQVUsQ0FBQyxJQUFJLENBSWYsU0FBUyxDQUFDLEtBQUssQ0FIZix5QkFBaUMsQ0FIckMsVUFBVyxDQUlILFVBQVUsQ0FBQyxLQUFLLEVBS3hCLEtBQU0sQ0FDRixTQUFTLENBQUUsSUFBSSxDQUNmLE1BQU0sQ0FBQyxTQUFTLENBSXBCLHFFQUU0QixDQUMxQixXQUFXLENBQUMsa0NBQWtDLENBR2hELHFDQUFzQyxDQUNsQyxRQUFTLENBQ0wsVUFBVSxDQUFFLElBQUkiLCJzb3VyY2VzIjpbImF1dGhlbnRpY2F0aW9uLnNjc3MiXSwibmFtZXMiOltdLCJmaWxlIjoiYXV0aGVudGljYXRpb24uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCBcIi4uLy4uL2Jvd2VyX2NvbXBvbmVudHMvYm9vdHN0cmFwLXNhc3MvYXNzZXRzL3N0eWxlc2hlZXRzL2Jvb3RzdHJhcC9fdmFyaWFibGVzLnNjc3NcIjtcbkBpbXBvcnQgXCJwYXJ0aWFscy9fYm9vdHN0cmFwLXZhcmlhYmxlc1wiO1xuXG4kaGVhZGluZ3MtZm9udC1mYW1pbHk6ICdPcGVuIFNhbnMnLCBzYW5zLXNlcmlmO1xuJGZvcm0tbm9ybWFsOiAjY2NjO1xuXG5cbmgxLCBoMiwgaDMsIGg0LCBoNSwgaDYge1xuICAgZm9udC1mYW1pbHk6ICRoZWFkaW5ncy1mb250LWZhbWlseTtcbn1cblxuLmZvcm0tY29udHJvbCB7XG4gICAgYm9yZGVyLWNvbG9yOiAkZm9ybS1ub3JtYWw7XG59XG5cbnAge1xuICAgIGZvbnQtZmFtaWx5OidPcGVuIFNhbnMnLCBzYW5zLXNlcmlmICFpbXBvcnRhbnQ7XG59XG5cbi5sb2dvIHtcbiAgICBtYXJnaW46NXB4IGF1dG87XG4gICAgaGVpZ2h0OjQwcHg7XG59XG5cbi5mb3JtLWF1dGh7XG4gICAgcGFkZGluZzoyMHB4IDMwcHg7XG59XG5cbi5mb3JtLWF1dGgtaGVhZGluZyB7XG4gICAgZm9udC1zaXplOiAyNC41cHg7XG4gICAgdGV4dC1hbGlnbjpjZW50ZXI7XG59XG5cbi5mb3JtLWF1dGgtc3ViaGVhZGVyIHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgZm9udC1zaXplOiAxMnB4O1xuICAgIG1hcmdpbi1ib3R0b206MjBweDtcbn1cblxuLmNvbnRhaW5lciB7XG5cbiAgICBtYXJnaW4tdG9wOjUwcHg7XG4gICAgQG1lZGlhIChtaW4td2lkdGg6JHNjcmVlbi1zbS1taW4pe1xuICAgICAgICBtYXJnaW4tdG9wOjEwMHB4O1xuICAgIH1cbiAgICBtYXgtd2lkdGg6NDAwcHg7XG59XG5cbmlucHV0IHtcbiAgICBmb250LXNpemU6IDE1cHg7XG4gICAgbWFyZ2luOjE1cHggYXV0bztcbn1cblxuXG46Oi1tb3otcGxhY2Vob2xkZXIsXG46LW1zLWlucHV0LXBsYWNlaG9sZGVyLFxuOjotd2Via2l0LWlucHV0LXBsYWNlaG9sZGVyIHtcbiAgZm9udC1mYW1pbHk6J09wZW4gU2FucycsIHNhbnMtc2VyaWYgIWltcG9ydGFudDtcbn1cblxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC1oZWlnaHQ6IDU4MHB4KSB7XG4gICAgLmNvbnRlbnQge1xuICAgICAgICBtYXJnaW4tdG9wOiAxNXB4O1xuICAgIH1cbn1cbiJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ== */
+p {
+  font-family: 'Open Sans', sans-serif !important; }
+
+.logo {
+  margin: 5px auto;
+  height: 40px; }
+
+.form-auth {
+  padding: 20px 30px; }
+
+.form-auth-heading {
+  font-size: 24.5px;
+  text-align: center; }
+
+.form-auth-subheader {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 20px; }
+
+.container {
+  margin-top: 50px;
+  max-width: 400px; }
+  @media (min-width: 768px) {
+    .container {
+      margin-top: 100px; } }
+
+input {
+  font-size: 15px;
+  margin: 15px auto; }
+
+::-moz-placeholder,
+:-ms-input-placeholder,
+::-webkit-input-placeholder {
+  font-family: 'Open Sans', sans-serif !important; }
+
+@media screen and (max-height: 580px) {
+  .content {
+    margin-top: 15px; } }
+
+/*# sourceMappingURL=authentication.css.map */

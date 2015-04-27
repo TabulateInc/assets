@@ -1,23 +1,49 @@
+$landscape-height-max: 420px;
+
+$numboard-input-margin-min: 25px;
+$numboard-input-margin-max: 35px;
+$numboard-input-height: 25px;  // hardcoded
+
+$action-buttons-margin: 15px;
+$action-buttons-height: 33px;  // hardcoded
+
 .numboard {
   height: calc(100% - 50px);
 
+  &__wrapper {
+    padding: 10px;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    background-color: #fff;
+    height: 100%;
+  }
+
   &__input {
-    margin: 35px 0;
+    margin: $numboard-input-margin-max 0;
+    @media (max-height: $landscape-height-max) {
+      margin-top: $numboard-input-margin-min;
+      margin-bottom: $numboard-input-margin-min;
+    }
   }
 
   &__actions {
-    margin: 15px 0;
+    margin: $action-buttons-margin 0;
   }
 
   &__keyboard {
-    height: calc(100% - 63px);
+    height: calc(100% - #{$action-buttons-margin*2 + $action-buttons-height});
+    min-height: 120px;
 
     &__wrapper {
-      height: calc(100% - 95px);
+      height: calc(100% - #{$numboard-input-margin-max*2 + $numboard-input-height});
+      @media (max-height: $landscape-height-max) {
+        height: calc(100% - #{$numboard-input-margin-min*2 + $numboard-input-height});
+      }
     }
 
     .btn {
-      line-height: 2;
+      line-height: 0;
       font-size: 16px;
       height: 100%;
       position: absolute;
@@ -47,23 +73,6 @@
       &:last-child .btn {
         border-bottom: none;
       }
-    }
-  }
-
-  &__wrapper {
-    padding: 10px;
-    position: fixed;
-    z-index: 10000;
-    top: 0;
-    background-color: #fff;
-    height: 100%;
-
-    @media (orientation: landscape) {
-      -webkit-transform: rotate(-90deg);
-      -moz-transform: rotate(-90deg);
-      -o-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-      transform: rotate(-90deg);
     }
   }
 }

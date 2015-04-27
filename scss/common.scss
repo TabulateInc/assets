@@ -338,24 +338,37 @@ select::-ms-expand {
 .btn-fake {
   @extend .btn-default;
   top: 1px;
-  max-width: 82px;
+  width: 72px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   @media (max-width:$screen-sm-min){
-    padding-left: 3px !important;
-    padding-right: 3px !important;
-    max-width: 42px;
+    padding: 6px 3px !important;
+    width: 42px;
+  }
+  &:hover {
+    background-color: #fff;
+    color: rgb(0,0,0)
   }
 }
 
 .btn-link--bordered {
   border: 1px solid $brand-primary;
   &:hover {
-    border: 2px solid $brand-primary;
+    border: 1px solid $brand-primary;
     text-decoration: none !important;
-    margin: -1px;
+    background-color: #fff;
   }
 }
 
 .item-units-input {
+
+  .glyphicon-plus:hover,
+  .glyphicon-plus:focus,
+  .glyphicon-minus:hover,
+  .glyphicon-minus:focus {
+    color: rgb(0,0,0);
+  }
+
   .btn {
     @media (max-width:$screen-sm-min){
       padding-left: 6px;

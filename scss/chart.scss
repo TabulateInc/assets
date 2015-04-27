@@ -230,3 +230,9 @@ h5{
 .text-center--indent {
   text-indent: calc(50% - 15px);
 }
+
+@-moz-document url-prefix() {
+  .text-center--indent {
+     text-indent: calc(25% - 12px) !important;
+  }
+}

@@ -147,6 +147,12 @@ a:hover {
               display: none;
           }
         }
+        &:focus,
+        &:active,
+        &.active,
+        &.disabled:hover {
+          color: $gray !important;
+        }
     }
     .week-dropdown,
     .dropdown-menu {

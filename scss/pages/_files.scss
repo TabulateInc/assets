@@ -9,6 +9,7 @@
     display: inline-block;
     width: 100%;
   }
+
 }
 
 .icon-folder-plus {
@@ -39,4 +40,27 @@
   background: url(../img/file.png) no-repeat top center transparent;
   background-size: 24px 28px;
   vertical-align: middle;
+}
+
+.toggle {
+  .handle-sm {
+    display: inline-block;
+    top: 5px;
+    height: 20px;
+    width: 30px;
+    &:after,
+    &:before {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  input[type="checkbox"]:checked {
+    & + .handle-sm:before {
+      width: 28px;
+    }
+    & + .handle-sm:after {
+      left: 10px;
+    }
+  }
 }

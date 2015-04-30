@@ -382,3 +382,12 @@ select::-ms-expand {
     }
   }
 }
+
+.expand-wrapper {
+  .header {
+    font-weight: normal;
+  }
+  .content-filter {
+    height: 39px;
+  }
+}

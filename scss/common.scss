@@ -14,7 +14,12 @@ $breadcrumb-bg: #fff !important;
 @import "partials/_bootstrap";
 @import "partials/_layout";
 
-
+.navbar-nav .open .dropdown-menu > li > a {
+  @media (max-width: 767px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
 
 .breadcrumb {
   li {

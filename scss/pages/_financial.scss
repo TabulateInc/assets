@@ -1,6 +1,9 @@
 .financial__btn {
 	margin-top: 8px;
 	margin-left: 5px;
+	&.spinner {
+		width: 133px;
+	}
 }
 
 .institutions-list{

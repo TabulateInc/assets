@@ -33,90 +33,48 @@
 //   @each $prefix in 
 // }
 
-.m-progress {
-  top: 0;
-  position: relative;
-  opacity: .8;
-  color: transparent;
+.spinner {
+  display: inline-block;
+  line-height: 1.1em;
 
-  &:before {
-    content: '';
-    width:18px;
-    height:18px;
+  fill: #444;
+  stroke: #69717d;
+
+  &__wrapper {
+    vertical-align: middle;
+    height: 100%;
     display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-animation: ld 1s linear infinite;
-    -moz-animation:    ld 1s linear infinite;
-    -o-animation:      ld 1s linear infinite;
-    animation:         ld 1s linear infinite;
-    color: #333333;
-    background: url(../img/progress_black.svg) no-repeat center center transparent;
-  }
-  &.btn-default:before {
-    margin-top: -9px;
-    margin-left: -7px;
   }
 
-  &.btn-primary:before {
-    color: #fff;
-    margin-top: -9px;
-    margin-left: -7px;
-    background: url(../img/progress_white.svg) no-repeat center center transparent;
+  svg {
+    width: 25px;
+    height: 100%;
   }
 
-  &.progress-inline:before {
-    margin-top: -7px;
-    margin-left: -7px;
+  &--inline {
+    svg {
+      width: 16px;
+    }
   }
-}
 
-.m-progress:hover,
-.m-progress:active,
-.m-progress:focus {
-    cursor: default;
-    color: transparent;
-    outline: none !important;
-    box-shadow: none;
-}
+  &--center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 
+  &.btn-primary {
+    fill: lighten(#444, 90%);
+    stroke: lighten(#444, 90%);
+  }
 
-// .btn-lg.m-progress:before {
-//     margin-top: -16px;
-//     margin-left: -16px;
-    
-//     width: 32px;
-//     height: 32px;
-// }
-
-// .btn-sm.m-progress:before {
-//     margin-top: -9px;
-//     margin-left: -9px;
-    
-//     width: 18px;
-//     height: 18px;
-// }
-
-// .btn-xs.m-progress:before {
-//     margin-top: -7px;
-//     margin-left: -7px;
-    
-//     width: 14px;
-//     height: 14px;
-// }
-
-// .progress-inline:before{
-//     margin-top:-7px;
-//     margin-bottom:-7px;
-//     width:12px;
-//     height: 12px;
-//     border: 1px solid #333;
-//     border-top-color: transparent;
-//     border-bottom-color: transparent;
-// }
-
-.text-right.progress-inline:before{
-  top: 10px;
-  left: 85%;
+  &:hover,
+  &:active,
+  &:focus {
+      cursor: default;
+      color: transparent;
+      outline: none !important;
+      box-shadow: none;
+  }
 }

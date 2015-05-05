@@ -163,6 +163,11 @@ a:hover {
     .dropdown-menu {
       width: 160px !important;
     }
+    .week-dropdown {
+      @media (max-width: $screen-sm-min) {
+        width: 140px !important;
+      }
+    }
     .day-dropdown{
         width: 120px !important;
     }
@@ -399,4 +404,41 @@ select::-ms-expand {
 
 .transactions-sidebar{
   padding-left: 50px !important;
+}
+
+.icon-circle {
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  font-size: 9px;
+  height: 17px;
+  width: 17px;
+  line-height: 15px;
+  vertical-align: top;
+
+  &::before {
+    padding-left: 3px;
+  }
+
+  &--default {
+    background-color: lighten($gray-base, 68%);
+    border-color: lighten($gray-base, 68%);
+    color: #fff;
+  }
+
+  &--primary {
+    background-color: #3398ea;
+    border-color: #3398ea;
+    color: #fff;
+  }
+
+  &--danger {
+    display: inline-block;
+    padding-left: 4px;
+    padding-top: 1px;
+    font-size: 11px;
+
+    border-color: $alert-danger-border;
+    background-color: $alert-danger-bg;
+    color: $alert-danger-text;
+  }
 }

@@ -24,3 +24,9 @@
 select.btn-xs{
     height:22px;
 }
+
+.overview__chart_control{
+  @media (max-width:$screen-sm-min){
+      margin-top:5px;
+  }
+}

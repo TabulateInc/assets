@@ -443,11 +443,19 @@ select::-ms-expand {
 .icon-checkmark {
   font-size: 26px;
   line-height: 1em;
-  margin-top: 0;
+  margin-top: 5px;
   margin-left: -4px;
   display: inline-block;
+  &::before {
+    vertical-align: top;
+  }
 }
 
+@-moz-document url-prefix() {
+  .icon-checkmark {
+    margin-top: 0;
+  }
+}
 
 .add-item-link {
   display: inline-block;

@@ -448,20 +448,11 @@ select::-ms-expand {
 }
 
 .icon-checkmark {
-  font-size: 26px;
-  line-height: 1em;
-  margin-top: 5px;
-  margin-left: -4px;
+  width: 20px;
+  height: 20px;
+  background: url(../img/checkmark.svg) no-repeat right -2px center;
   display: inline-block;
-  &::before {
-    vertical-align: top;
-  }
-}
-
-@-moz-document url-prefix() {
-  .icon-checkmark {
-    margin-top: 0;
-  }
+  background-size: 26px;
 }
 
 .add-item-link {

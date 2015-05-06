@@ -94,6 +94,13 @@ a:hover {
   }
 }
 
+.pull-right-sm{
+  @media (min-width:$screen-sm-min){
+      float:right;
+  }
+
+}
+
 .modal-dialog {
   padding-top: 51px;
 }

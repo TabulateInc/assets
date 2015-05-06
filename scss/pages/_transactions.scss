@@ -55,6 +55,9 @@
     border-width: 2px !important;
     border-color: $alert-danger-text !important;
   }
+  .glyphicon-calendar {
+    right: 0 !important;
+  }
 }
 
 .transactions-page {
@@ -145,3 +148,25 @@ $approve-transaction-width: 30px;
   margin-left: $approve-transaction-width;
 }
 
+
+.inline-table__row--transactions {
+  padding: 0 !important;
+  > div {
+    padding: 8px 0;
+  }
+  
+  &.transaction-in-edit {
+    > div {
+      padding: 0 !important;
+    }
+    &:hover {
+      background-color: #fff !important;
+    }
+    .status-holder {
+      height: 48px;
+    }
+    .icon-circle {
+      margin-top: 8px;
+    }
+  }
+}

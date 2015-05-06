@@ -426,8 +426,8 @@ select::-ms-expand {
   }
 
   &--primary {
-    background-color: $ios-checked;
-    border-color: $ios-checked;
+    background-color: $brand-primary;
+    border-color: $brand-primary;
   }
 
   &--danger {

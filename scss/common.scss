@@ -414,38 +414,43 @@ select::-ms-expand {
 }
 
 .icon-circle {
+  $ios-checked: #007AFF;
+  $ios-unchecked: #C7C7CC;
+  $ios-notification: #FF3B30;
+
+  display: inline-block;
   border: 1px solid #ddd;
   border-radius: 50%;
-  font-size: 9px;
-  height: 17px;
-  width: 17px;
-  line-height: 15px;
+  height: 20px;
+  width: 20px;
+  line-height: 19px;
   vertical-align: top;
-
-  &::before {
-    padding-left: 3px;
-  }
+  color: #fff;
 
   &--default {
-    background-color: lighten($gray-base, 68%);
-    border-color: lighten($gray-base, 68%);
-    color: #fff;
+    background-color: $ios-unchecked;
+    border-color: $ios-unchecked;
   }
 
   &--primary {
-    background-color: #3398ea;
-    border-color: #3398ea;
-    color: #fff;
+    background-color: $ios-checked;
+    border-color: $ios-checked;
   }
 
   &--danger {
-    display: inline-block;
-    padding-left: 4px;
-    padding-top: 1px;
-    font-size: 11px;
+    border-color: $ios-notification;
+    background-color: $ios-notification;
 
-    border-color: $alert-danger-border;
-    background-color: $alert-danger-bg;
-    color: $alert-danger-text;
+    display: inline-block;
+    text-align: center;
+    font-size: 13px;
   }
+}
+
+.icon-checkmark {
+  font-size: 26px;
+  line-height: 1em;
+  margin-top: 0;
+  margin-left: -4px;
+  display: inline-block;
 }

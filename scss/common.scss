@@ -421,38 +421,72 @@ select::-ms-expand {
   display: inline-block;
   border: 1px solid #ddd;
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
-  line-height: 19px;
   vertical-align: top;
   color: #fff;
+  background-color: #fff;
+
+  height: 18px;
+  width: 18px;
+  line-height: 17px;
+
+  @media (max-width:$screen-sm-min) {
+    height: 15px;
+    width: 15px;
+    line-height: 14px;
+    margin-top: 2px;
+  }
 
   &--default {
-    background-color: $ios-unchecked;
     border-color: $ios-unchecked;
   }
 
   &--primary {
-    background-color: $brand-primary;
     border-color: $brand-primary;
   }
 
   &--danger {
     border-color: $ios-notification;
-    background-color: $ios-notification;
-
+    color: $ios-notification;
     display: inline-block;
     text-align: center;
-    font-size: 13px;
+    font-size: 11px;
+    
+    @media (max-width:$screen-sm-min) {
+      font-size: 9px;
+    }
+
+    &.notify {
+      background-color: $ios-notification;
+      color: #fff;
+    }
+  }
+
+  &--notify {
+    border-color: $ios-notification;
+    display: inline-block;
+    text-align: center;
+    font-size: 11px;
   }
 }
 
 .icon-checkmark {
-  width: 20px;
-  height: 20px;
-  background: url(../img/checkmark.svg) no-repeat right -2px center;
+  width: 18px;
+  height: 18px;
   display: inline-block;
-  background-size: 26px;
+
+  @media (max-width:$screen-sm-min) {
+    height: 15px;
+    width: 15px;
+  }
+
+  &--active {
+    background: url(../img/checkmark--active.svg) no-repeat right -1px center;
+    background-size: 22px;
+
+    @media (max-width:$screen-sm-min) {
+      background-size: 19px;
+    }
+  }
 }
 
 .add-item-link {

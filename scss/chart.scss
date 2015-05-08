@@ -42,6 +42,22 @@ h5{
         margin-left:$chart-margin;
     }
 }
+
+#transactionsChartHolder {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+#transactionsChartHolder svg{
+    width: 300px;
+    display: inline-block;
+}
+#transactionsChartHolder ul{
+    position: relative;
+    width: 200px;
+    display: inline-block;
+}
+
 #transactionsChart ul {
   list-style-type: none;
   padding-left: 15px;

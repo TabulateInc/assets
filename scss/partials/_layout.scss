@@ -7,7 +7,7 @@
     }
 }
 .row-lg {
-    @media (min-width:$screen-sm-max){
+    @media (min-width:$screen-md-min){
       @include make-row();
     }
     clear:both;
@@ -31,22 +31,22 @@ body {
 }
 
 .hidden-xs-inline{
-    @media (max-width:$screen-sm-min){
+    @media (max-width:$screen-xs-max){
         display:none;
     }
 }
 .hidden-sm-inline{
-    @media (max-width:$screen-md-min){
+    @media (max-width:$screen-sm-max){
         display:none;
     }
 }
 .hidden-md-inline{
-    @media (max-width:$screen-lg-min){
+    @media (max-width:$screen-md-max){
         display:none;
     }
 }
 .visible-xs-inline-block{
-    @media (min-width:$screen-xs-max){
+    @media (min-width:$screen-sm-min){
         display:inline-block;
     }
 }
@@ -108,7 +108,7 @@ h6,
     padding-right: 0 !important;
 }
 
-@media (max-width:$screen-sm-min){
+@media (max-width:$screen-xs-max){
     .no-padding-left-xs{
         padding-left:0px;
     }
@@ -125,7 +125,7 @@ a.control, a.control:hover{
     button, input, div.form-control, select{
         height:40px;
     }
-    @media (max-width:$screen-sm-min){
+    @media (max-width:$screen-xs-max){
         padding-left:0px;
         padding-right:0px;
 

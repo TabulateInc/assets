@@ -23,7 +23,7 @@
 
 
 .summary-table{
-    @media (max-width:$screen-sm-min){
+    @media (max-width:$screen-xs-max){
         width:100%;
     }
     th,td{

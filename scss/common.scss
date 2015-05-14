@@ -15,7 +15,7 @@ $breadcrumb-bg: #fff !important;
 @import "partials/_layout";
 
 .navbar-nav .open .dropdown-menu > li > a {
-  @media (max-width: 767px) {
+  @media (max-width: $screen-xs-max) {
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -81,24 +81,36 @@ a:hover {
 }
 
 
-.margin-top-md {
-  margin-top: 36px;
-}
-.margin-top-sm {
-  margin-top: 12px;
-}
+.margin-top {
+  $margin-normal: 12px;
+  $margin-max: 36px;
 
-.margin-top-sm-xs {
-  @media (max-width:$screen-sm-min){
-    margin-top: 12px;
+  &-md {
+    margin-top: $margin-max;
+  }
+
+  &-sm {
+    margin-top: $margin-normal;
+
+    &-xs {
+      @media (max-width:$screen-xs-max){
+        margin-top: $margin-normal;
+      }
+    }
+
+    &-sm {
+      @media (max-width:$screen-sm-max){
+        margin-top: $margin-normal;
+      }
+    }
   }
 }
+
 
 .pull-right-sm{
   @media (min-width:$screen-sm-min){
       float:right;
   }
-
 }
 
 .modal-dialog {
@@ -154,7 +166,7 @@ a:hover {
     button.week-changer {
         font-size:10px;
         height:29px;
-        @media (max-width: 768px){
+        @media (max-width: $screen-xs-max){
           &.hide-buttons{
               display: none;
           }
@@ -171,7 +183,7 @@ a:hover {
       width: 160px !important;
     }
     .week-dropdown {
-      @media (max-width: $screen-sm-min) {
+      @media (max-width: $screen-xs-max) {
         width: 140px !important;
       }
     }
@@ -364,7 +376,7 @@ select::-ms-expand {
   width: 72px;
   padding-top: 5px;
   padding-bottom: 5px;
-  @media (max-width:$screen-sm-min){
+  @media (max-width:$screen-xs-max){
     padding: 6px 3px !important;
     width: 42px;
   }
@@ -393,7 +405,7 @@ select::-ms-expand {
   }
 
   .btn {
-    @media (max-width:$screen-sm-min){
+    @media (max-width:$screen-xs-max){
       padding-left: 6px;
       padding-right: 6px;
     }
@@ -429,7 +441,7 @@ select::-ms-expand {
   width: 18px;
   line-height: 17px;
 
-  @media (max-width:$screen-sm-min) {
+  @media (max-width:$screen-xs-max) {
     height: 15px;
     width: 15px;
     line-height: 14px;
@@ -451,7 +463,7 @@ select::-ms-expand {
     text-align: center;
     font-size: 11px;
     
-    @media (max-width:$screen-sm-min) {
+    @media (max-width:$screen-xs-max) {
       font-size: 9px;
     }
 
@@ -474,7 +486,7 @@ select::-ms-expand {
   height: 18px;
   display: inline-block;
 
-  @media (max-width:$screen-sm-min) {
+  @media (max-width:$screen-xs-max) {
     height: 15px;
     width: 15px;
   }
@@ -483,7 +495,7 @@ select::-ms-expand {
     background: url(../img/checkmark--active.svg) no-repeat right -1px center;
     background-size: 22px;
 
-    @media (max-width:$screen-sm-min) {
+    @media (max-width:$screen-xs-max) {
       background-size: 19px;
     }
   }

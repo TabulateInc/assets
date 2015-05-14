@@ -9,7 +9,7 @@ $form-font-color: #434A54; // hardimported from bootflat
 .waste-items {
     &__row {
         padding-left: 10px;
-        @media (max-width:$screen-sm-min){
+        @media (max-width:$screen-xs-max){
             padding-left:0 !important;
         }
     }
@@ -23,7 +23,7 @@ $form-font-color: #434A54; // hardimported from bootflat
 }
 
 .waste-items-list {
-    @media (max-width:$screen-sm-min){
+    @media (max-width:$screen-xs-max){
         font-size:11px;
     }
 
@@ -34,7 +34,7 @@ $form-font-color: #434A54; // hardimported from bootflat
         line-height: 30px;
         cursor: pointer;
         display: inline-block;
-        @media (max-width: $screen-sm-min) {
+        @media (max-width: $screen-xs-max) {
             right: -15px;
             line-height: 26px;
         }

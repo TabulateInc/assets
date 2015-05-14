@@ -26,7 +26,7 @@ select.btn-xs{
 }
 
 .overview__chart_control{
-  @media (max-width:$screen-sm-min){
+  @media (max-width:$screen-xs-max){
       margin-top:5px;
   }
 }

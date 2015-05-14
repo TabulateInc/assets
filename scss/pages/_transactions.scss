@@ -1,15 +1,12 @@
-.sorticonwrapper {
-  display: inline-block;
-  width: 13px;
-  height:20px;
-  vertical-align:middle;
-}
-
 .sorticon {
   font-size: 9px;
-  float:left;
-  &:first-child {
-    margin-left: 0.7px;
+  top: 4px;
+  right: -10px;
+  position: absolute;
+
+  &__wrapper {
+    font-size: 13px;
+    position: relative;
   }
 }
 
@@ -150,7 +147,7 @@ $approve-transaction-width: 30px;
 
 
 .inline-table__row--transactions {
-  padding: 0 !important;
+  padding: 0 8px 0 0 !important;
   > div {
     padding: 8px 0;
   }

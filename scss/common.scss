@@ -358,6 +358,7 @@ select::-ms-expand {
 
 
 .container.container-md {
+    $screen-md-min: 992px;
     @media (min-width: $screen-md-min) {
         width: (970px + $grid-gutter-width);
     }

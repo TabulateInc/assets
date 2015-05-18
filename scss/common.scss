@@ -122,6 +122,11 @@ a:hover {
   }
 }
 
+.hidden-sm-min {
+  @media (max-width: $screen-sm-min) {
+    display: none !important;
+  }
+}
 
 .pull-right-sm{
   @media (min-width:$screen-sm-min){
@@ -372,6 +377,10 @@ select::-ms-expand {
   color: #333 !important;
 }
 
+.rtl {
+  direction: rtl;
+}
+
 
 .container.container-md {
     $screen-md-min: 992px;
@@ -393,6 +402,7 @@ select::-ms-expand {
   width: 72px;
   padding-top: 5px;
   padding-bottom: 5px;
+  overflow: hidden;
   @media (max-width:$screen-xs-max){
     padding: 6px 3px !important;
     width: 42px;

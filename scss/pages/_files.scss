@@ -3,6 +3,10 @@
     line-height: 2.5em;
   }
 
+  .add-control {
+    margin-bottom: 0;
+  }
+
   .progress {
     margin-bottom: 0;
     vertical-align: middle;
@@ -27,19 +31,37 @@
 }
 
 .icon-folder {
-  height: 32px;
-  width: 36px;
   background: url(../img/folder.png) no-repeat top center transparent;
-  background-size: 30px 28px;
   vertical-align: middle;
+
+  @media (min-width: $screen-xs-max) {
+    height: 32px;
+    width: 36px;
+    background-size: 30px 28px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    height: 24px;
+    width: 27px;
+    background-size: 23px 21px;
+  }
 }
 
 .icon-file {
-  height: 32px;
-  width: 36px;
   background: url(../img/file.png) no-repeat top center transparent;
-  background-size: 24px 28px;
   vertical-align: middle;
+
+  @media (min-width: $screen-xs-max) {
+    height: 32px;
+    width: 36px;
+    background-size: 24px 28px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    height: 24px;
+    width: 27px;
+    background-size: 16px 21px;
+  }
 }
 
 .toggle {

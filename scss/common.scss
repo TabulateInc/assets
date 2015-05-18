@@ -24,15 +24,31 @@ $breadcrumb-bg: #fff !important;
 .breadcrumb {
   li {
     font-weight: 300;
-    font-size: 17px;
     float: left;
+
     &:before {
       content: none !important;
     }
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 17px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 14px;
+    }
   }
+
   .glyphicon-menu-right {
-    font-size: 13px;
     color: $gray-light;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 10px;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 13px;
+    }
   }
 }
 

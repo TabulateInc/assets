@@ -65,6 +65,17 @@ input {
 }
 
 .btn--auth {
-    width: 80px;
+    position: relative;
     height: 33px;
+
+    .spinner__wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    &.spinner {
+        color: transparent;
+    }
 }

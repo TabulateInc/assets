@@ -2,6 +2,11 @@
     margin-top: 8px;
     margin-left: 5px;
     width: 133px;
+
+    @media (max-width: $screen-xs-min) {
+    	width: 50%;
+    	margin-left: 0;
+    }
 }
 
 .institutions-list{

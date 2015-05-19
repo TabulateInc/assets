@@ -33,16 +33,19 @@
   input {
     font-size: 95% !important;
   }
-  .add-control label{
-      margin-bottom:0px;
-  }
 
-  .add-control .checkbox__margined {
+  .add-control {
+    label {
+      margin-bottom: 0;
+    }
+
+    .checkbox {
       position:relative;
-      top:2px;
-      margin-left:5px;
-      margin-right:5px;
+      top:0;
       height:auto;
+      display: inline-block;
+      margin: 0;
+    }
   }
 
 }

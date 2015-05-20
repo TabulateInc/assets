@@ -26,11 +26,22 @@ select.btn-xs{
 }
 
 .overview__chart_control{
-  @media (max-width:$screen-xs-max){
+  @media (max-width: #{$screen-xs-min - 1}){
       margin-top:5px;
+      float: none !important;
+  }
+
+  .btn-group {
+    margin-left: 0 !important;
   }
 }
 
 .overview__table_header th{
     border-top:none!important;
+}
+
+.panel-body {
+  svg:not(:root) {
+    overflow: visible;
+  }
 }

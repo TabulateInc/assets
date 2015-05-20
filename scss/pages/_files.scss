@@ -13,50 +13,50 @@
 }
 
 .icon-folder-plus {
-  height: 30px;
-  width: 33px;
-  background: url(../img/add-folder.png) no-repeat center center transparent;
-  background-size: 22px 20px;
+  height: 32px;
+  width: 32px;
+  background: url(../img/folder1+.svg) no-repeat center center transparent;
+  background-size: 24px 24px;
 }
 
 .icon-file-plus {
-  height: 30px;
-  width: 33px;
-  background: url(../img/add-file.png) no-repeat center center transparent;
-  background-size: 19px 20px;
+  height: 32px;
+  width: 32px;
+  background: url(../img/file1+.svg) no-repeat center center transparent;
+  background-size: 24px 24px;
 }
 
 .icon-folder {
-  background: url(../img/folder.png) no-repeat top center transparent;
+  background: url(../img/folder1.svg) no-repeat top center transparent;
   vertical-align: middle;
 
   @media (min-width: $screen-xs-max) {
     height: 32px;
     width: 36px;
-    background-size: 30px 28px;
+    background-size: 32px 32px;
   }
 
   @media (max-width: $screen-xs-max) {
     height: 24px;
     width: 27px;
-    background-size: 23px 21px;
+    background-size: 22px 22px;
   }
 }
 
 .icon-file {
-  background: url(../img/file.png) no-repeat top center transparent;
+  background: url(../img/file1.svg) no-repeat top center transparent;
   vertical-align: middle;
 
   @media (min-width: $screen-xs-max) {
     height: 32px;
     width: 36px;
-    background-size: 24px 28px;
+    background-size: 32px 32px;
   }
 
   @media (max-width: $screen-xs-max) {
     height: 24px;
     width: 27px;
-    background-size: 16px 21px;
+    background-size: 22px 22px;
   }
 }
 

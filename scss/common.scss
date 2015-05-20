@@ -468,72 +468,66 @@ select::-ms-expand {
   $ios-notification: #FF3B30;
 
   display: inline-block;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  vertical-align: top;
-  color: #fff;
-  background-color: #fff;
-
-  height: 18px;
   width: 18px;
-  line-height: 17px;
+  height: 18px;
 
   @media (max-width:$screen-xs-max) {
     height: 15px;
     width: 15px;
-    line-height: 14px;
-    margin-top: 2px;
   }
 
-  &--default {
-    border-color: $ios-unchecked;
-  }
+  &--unchecked svg {
+    fill: $ios-unchecked;
+    width: 22px;
+    height: 22px;
 
-  &--primary {
-    border-color: $brand-primary;
-  }
-
-  &--danger {
-    border-color: $ios-notification;
-    color: $ios-notification;
-    display: inline-block;
-    text-align: center;
-    font-size: 11px;
-    
     @media (max-width:$screen-xs-max) {
-      font-size: 9px;
-    }
-
-    &.notify {
-      background-color: $ios-notification;
-      color: #fff;
+      width: 19px;
+      height: 19px;
     }
   }
+
+  &--checked svg {
+    fill: $brand-primary;
+    width: 22px;
+    height: 22px;
+
+    @media (max-width:$screen-xs-max) {
+      width: 19px;
+      height: 19px;
+    }
+  }
+
+  &--info svg {
+    fill: $ios-notification;
+    width: 18px;
+    height: 18px;
+    margin: 2px;
+
+    @media (max-width:$screen-xs-max) {
+      width: 15px;
+      height: 15px;
+    }
+
+    circle {
+      stroke: $ios-notification;
+    }
+  }
+
 
   &--notify {
-    border-color: $ios-notification;
-    display: inline-block;
+    border: 1px solid $ios-notification;
+    background-color: $ios-notification;
+    color: #fff;
+    border-radius: 50%;
+    vertical-align: top;
+    line-height: 17px;
     text-align: center;
-    font-size: 11px;
-  }
-}
-
-.icon-checkmark {
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-
-  @media (max-width:$screen-xs-max) {
-    height: 15px;
-    width: 15px;
-  }
-
-  &--active {
-    background: url(../img/checkmark--active.svg) no-repeat right -1px center;
-    background-size: 22px;
-
+    font-size: 10px;
+    
     @media (max-width:$screen-xs-max) {
-      background-size: 19px;
+      font-size: 8px;
+      line-height: 1.7em;
     }
   }
 }
@@ -547,3 +541,13 @@ select::-ms-expand {
   visibility: visible;
 }
 
+.as-table {
+  display: table;
+  width: 100%;
+  &__cell {
+    display: table-cell;
+  }
+  &--inherit {
+    table-layout: fixed;
+  }
+}

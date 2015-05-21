@@ -132,6 +132,10 @@ a:hover {
   }
 }
 
+.margin-bottom-input {
+  margin-bottom: 10px !important;
+}
+
 .hidden-sm-min {
   @media (max-width: $screen-sm-min) {
     display: none !important;

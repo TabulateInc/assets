@@ -368,6 +368,13 @@ select::-ms-expand {
   }
 }
 
+
+@media (max-width: 991px) {
+  .aside {
+    min-width: 290px !important;
+  }
+}
+
 .aside-body {
   @media (min-width: $screen-xs-min) {
     min-width: 350px;

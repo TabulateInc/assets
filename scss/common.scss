@@ -582,7 +582,7 @@ select::-ms-expand {
     }
 }
 
-.touch {
+.no-touch {
   .visible-hover {
     visibility: hidden;
 
@@ -594,7 +594,7 @@ select::-ms-expand {
   }
 }
 
-.no-touch {
+.touch {
   .visible-touch {
     visibility: visible;
   }

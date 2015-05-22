@@ -575,12 +575,31 @@ select::-ms-expand {
     width:100%;
     clear:both;
     margin-top:30px;
-    b{
+    b {
         display:block;
         font-size:18px;
         text-align:center;
     }
+}
 
+.touch {
+  .visible-hover {
+    visibility: hidden;
 
+    &__wrapper:hover {
+      .visible-hover {
+        visibility: visible;
+      }
+    }
+  }
+}
 
+.no-touch {
+  .visible-touch {
+    visibility: visible;
+  }
+
+  .b-delete-icon {
+    visibility: visible;
+  }
 }

@@ -570,3 +570,17 @@ select::-ms-expand {
 .overflow-scroll {
   overflow: scroll;
 }
+
+.nodata{
+    width:100%;
+    clear:both;
+    margin-top:30px;
+    b{
+        display:block;
+        font-size:18px;
+        text-align:center;
+    }
+
+
+
+}

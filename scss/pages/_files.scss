@@ -1,3 +1,5 @@
+$blue-light: #e3f2ff;
+
 .b-files-table {
   .inline-table__row {
     line-height: 2.5em;
@@ -8,6 +10,28 @@
     vertical-align: middle;
     display: inline-block;
     width: 100%;
+  }
+
+  .popover {
+    background-color: #fff;
+    border-color: $gray-lighter;
+    color: $gray-darker;
+    padding: 0;
+    min-width: 100px;
+
+    &-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &-btn {
+      padding-left: 10px;
+      padding-right: 10px;
+      &:hover {
+        cursor: pointer;
+        background-color: $blue-light;
+      }
+    }
   }
 
 }
@@ -133,7 +157,7 @@
 
 .tree {
   $open-tree-icon-width: 20px;
-  padding: $open-tree-icon-width 0;
+  padding: $open-tree-icon-width $open-tree-icon-width $open-tree-icon-width 0;
   border: 1px solid $gray-lighter;
   background-color: #fff;
 
@@ -160,7 +184,7 @@
     }
 
     &--highlighted {
-      background-color: #e3f2ff;
+      background-color: $blue-light;
     }
   }
 }

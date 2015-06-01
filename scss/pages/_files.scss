@@ -41,6 +41,12 @@
     width: 27px;
     background-size: 22px 22px;
   }
+
+  &--small {
+    height: 24px;
+    width: 20px;
+    background-size: 20px 20px;
+  }
 }
 
 .icon-file {
@@ -122,5 +128,52 @@
     & + .handle-sm:after {
       left: 10px;
     }
+  }
+}
+
+.tree {
+  $open-tree-icon-width: 20px;
+  padding: $open-tree-icon-width 0;
+  border: 1px solid $gray-lighter;
+  background-color: #fff;
+
+  &__item {
+    padding-left: $open-tree-icon-width;
+
+    &__icon {
+      font-size: 7px;
+      height: 11px;
+      width: $open-tree-icon-width;
+      padding: 0 5px;
+      vertical-align: middle;
+      cursor: pointer;
+      
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &__name {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &--highlighted {
+      background-color: #e3f2ff;
+    }
+  }
+}
+
+.row__icon-left {
+  $icon-left-width: 23px;
+  position: absolute;
+  width: $icon-left-width;
+  height: 35px;
+  left: 0;
+
+  &__wrapper {
+    position: relative;
+    padding-left: $icon-left-width;
   }
 }

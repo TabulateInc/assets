@@ -1,3 +1,6 @@
+$padding-sm: 7px;
+$margin-normal: 12px;
+
 .inline-table {
 
   &__top {
@@ -9,6 +12,7 @@
     padding: 8px 8px 8px 0px;
     clear:both;
     float:none;
+
     &div:before {
         content: " ";
         display: table;
@@ -29,6 +33,21 @@
         display: inline-block;
         visibility:visible;
       }
+    }
+  }
+
+  &__input {
+    $row-column-padding: 15px;
+
+    padding-left: $padding-sm;
+
+    @media (max-width: $screen-sm-max) {
+      margin-top: $margin-normal;
+      padding-left:0;
+    }
+
+    input, select {
+      padding-left: $row-column-padding - $padding-sm - 1px;
     }
   }
 
@@ -62,15 +81,12 @@
   }
 }
 
+.padding-right-sm {
+  padding-right: $padding-sm !important;
+}
 
 .no-padding-left-xs {
     @media (max-width:$screen-xs-min){
-        padding-left:0;
-    }
-}
-
-.no-padding-left-md {
-    @media (max-width:$screen-sm-max){
         padding-left:0;
     }
 }

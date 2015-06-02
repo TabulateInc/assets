@@ -15,6 +15,10 @@ $breadcrumb-bg: #fff !important;
 @import "partials/_layout";
 
 
+$margin-normal: 12px;
+$margin-max: 36px;
+
+
 .panel-heading,
 .panel-footer {
   @media (max-width: $screen-xs-max) {
@@ -108,8 +112,6 @@ a:hover {
 
 
 .margin-top {
-  $margin-normal: 12px;
-  $margin-max: 36px;
 
   &-md {
     margin-top: $margin-max;

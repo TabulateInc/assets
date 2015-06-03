@@ -36,12 +36,15 @@
 .spinner-container{
     position:relative;
     }
+
 .spinner {
   display: inline-block;
   line-height: 1.1em;
 
   fill: #444;
   stroke: #69717d;
+
+  // TODO: refactor start
 
   &__wrapper {
     vertical-align: middle;
@@ -82,6 +85,26 @@
   &.btn-primary {
     fill: lighten(#444, 90%);
     stroke: lighten(#444, 90%);
+  }
+
+  // TODO: refactor stop
+
+  &--small {
+    width: 16px;
+    height: 100%;
+  }
+
+  &--over {
+    position: absolute;
+    top: 0;
+    vertical-align: middle;
+    &.spinner--small {
+      left: calc(50% - 8px);
+    }
+  }
+
+  &--below {
+    color: transparent;
   }
 
   &:hover,

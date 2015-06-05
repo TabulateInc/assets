@@ -26,6 +26,7 @@
 .ds-cell {
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
+  min-width: 60px;
 }
 
 .editable {
@@ -37,6 +38,7 @@
     border: 0;
     box-sizing: border-box;
     outline: 0 !important;
+    padding: 1px;
     text-align: right;
     width: 100%;
     &:focus {
@@ -59,5 +61,6 @@
   border-bottom: 1px solid #ddd; }
 
 .calculated-value{
-    padding-right:1px;
+  display: inline-block;
+  padding-right:1px;
 }

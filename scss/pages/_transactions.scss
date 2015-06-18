@@ -49,8 +49,8 @@
 
 .add-edit-transaction {
   .ng-invalid {
-    border-width: 2px !important;
-    border-color: $alert-danger-text !important;
+    border-width: 1px !important;
+    border-color: #FF3B30 !important;  // $message-danger !important;
   }
   .glyphicon-calendar {
     right: 0 !important;

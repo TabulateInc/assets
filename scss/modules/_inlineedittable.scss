@@ -12,6 +12,7 @@ $margin-normal: 12px;
     padding: 8px 8px 8px 0px;
     clear:both;
     float:none;
+    position: relative;
 
     &div:before {
         content: " ";

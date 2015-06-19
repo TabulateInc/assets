@@ -8,6 +8,10 @@ $alert-info-bg: #d9edf7;
 $alert-info-border: $alert-info-bg;  // doesnt work !important") is not a color for `darken')
 $alert-info-text: #4993c6;
 
+$alert-success-bg: #e8f7ed;
+$alert-success-border: #30b661;
+$alert-success-text: #1BA84E;
+
 $breadcrumb-padding-horizontal: 0;
 $breadcrumb-bg: #fff !important;
 
@@ -106,7 +110,8 @@ a:hover {
   border: 1px solid red;
 }
 .alert-success{
-  border: 1px solid #468847 !important;
+  background-color: $alert-success-bg !important;
+  border: 1px solid $alert-success-border !important;
   width: 200px !important;
 }
 

@@ -27,7 +27,8 @@ $margin-normal: 12px;
       display: inline-block;
     }
 
-    &:hover {
+    &:hover,
+    &.as-hovered {
       background-color: $table-bg-hover;
 
       .b-delete-icon{

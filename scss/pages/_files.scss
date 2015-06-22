@@ -3,6 +3,11 @@ $blue-light: #e3f2ff;
 .b-files-table {
   .inline-table__row {
     line-height: 2.5em;
+    cursor: default;
+  }
+
+  .drag-drop {
+    cursor: pointer;
   }
 
   .progress {
@@ -37,17 +42,18 @@ $blue-light: #e3f2ff;
 }
 
 .icon-folder-plus {
-  height: 32px;
-  width: 32px;
   background: url(../img/folder1+.svg) no-repeat center center transparent;
-  background-size: 24px 24px;
 }
 
 .icon-file-plus {
+  background: url(../img/file1+.svg) no-repeat center center transparent;
+}
+
+.icon-folder-plus,
+.icon-file-plus {
   height: 32px;
   width: 32px;
-  background: url(../img/file1+.svg) no-repeat center center transparent;
-  background-size: 24px 24px;
+  background-size: 24px 24px !important;
 }
 
 .icon-folder {
@@ -205,5 +211,20 @@ $blue-light: #e3f2ff;
 .share-modal {
   .icon-circle {
     padding-top: 2px;
+  }
+}
+
+.header-options {
+  height: 19px;
+
+  &__item {
+    font-weight: normal;
+    font-size: 13px;
+    display: inline-block;
+    padding-right: 10px;
+  }
+
+  .glyphicon-pencil {
+    font-size: 13px;
   }
 }

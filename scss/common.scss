@@ -598,7 +598,8 @@ select::-ms-expand {
   .visible-hover {
     visibility: hidden;
 
-    &__wrapper:hover {
+    &__wrapper:hover,
+    &__wrapper.as-hovered {
       .visible-hover {
         visibility: visible;
       }

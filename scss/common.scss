@@ -21,6 +21,8 @@ $breadcrumb-bg: #fff !important;
 
 $margin-normal: 12px;
 $margin-max: 36px;
+$line-height-sm: 33px;
+$line-height-md: 40px;
 
 
 .panel-heading,
@@ -250,6 +252,21 @@ a:hover {
     /*}*/
 }
 
+.label-right {
+  cursor: pointer;
+  line-height: $line-height-md;
+  margin: 0;
+  padding-left: 10px;
+  vertical-align: top;
+}
+
+.checkbox-left {
+  display: inline-block;
+  float: left;
+  margin-top: 0 !important;
+  width: auto;
+}
+
 select.btn{
   text-align:left;
   -webkit-appearance:none;
@@ -319,11 +336,11 @@ select.btn{
 }
 
 .line-height-sm {
-  line-height: 33px;
+  line-height: $line-height-sm;
 }
 
 .line-height-md {
-  line-height: 40px;
+  line-height: $line-height-md;
 }
 
 .line-height-lg {

@@ -75,16 +75,10 @@ a:hover {
   cursor: pointer;
 }
 
-.alert-danger,
 .more-info {
     text-align:center;
     padding:10px;
     font-size: 11px;
-}
-
-.alert-danger {
-    font-size: 12px;
-    border-color: $alert-danger-border;
 }
 
 .alert-info {
@@ -95,7 +89,8 @@ a:hover {
   margin: 14px auto;
 }
 
-.alert-success, .alert-danger {
+.alert-success,
+.alert-danger {
   text-align: center !important;
   margin: 0 auto !important;
   position: fixed;
@@ -106,13 +101,16 @@ a:hover {
   padding: 10px 20px;
   border-radius: 4px;
 }
-.alert-danger{
-  border: 1px solid red;
-}
+
 .alert-success{
   background-color: $alert-success-bg !important;
   border: 1px solid $alert-success-border !important;
   width: 200px !important;
+}
+
+.alert-danger {
+  font-size: 12px;
+  border: 1px solid $alert-danger-border;
 }
 
 

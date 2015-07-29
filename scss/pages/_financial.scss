@@ -4,8 +4,7 @@
     width: 133px;
 
     @media (max-width: $screen-xs-min) {
-    	width: 50%;
-    	margin-left: 0;
+    	width: calc(50% - 5px);
     }
 }
 

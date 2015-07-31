@@ -1,15 +1,17 @@
 .financial__btn {
     margin-top: 8px;
-    margin-left: 5px;
     width: 133px;
 
     @media (max-width: $screen-xs-min) {
-    	width: calc(50% - 5px);
+        width: 49%;
+    }
 
-      &:last-of-type {
-        width: 50%;
-        margin-left: 0;
-      }
+    &--add {
+        margin-left: 5px;
+
+        @media (max-width: $screen-xs-min) {
+            margin-left: 2%;
+        }
     }
 }
 

@@ -17,6 +17,7 @@ $breadcrumb-bg: #fff !important;
 
 @import "partials/_bootstrap";
 @import "partials/_layout";
+@import "partials/_perfect-scroll";
 
 
 $margin-normal: 12px;
@@ -628,18 +629,6 @@ select::-ms-expand {
 
   .b-delete-icon {
     visibility: visible;
-  }
-}
-
-.ps-scrollbar-x-rail {
-  left: 180px !important;
-  top: 50px !important;
-  display: block !important;
-  opacity: 0.6 !important;
-  background-color: #eee !important;
-
-  .ps-scrollbar-x {
-    background-color: #999 !important;
   }
 }
 

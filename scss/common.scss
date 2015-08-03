@@ -25,6 +25,12 @@ $line-height-sm: 33px;
 $line-height-md: 40px;
 
 
+$space-left: 480px;
+.nav-space-left {
+  max-width: $space-left / 2;
+}
+
+
 .panel-heading,
 .panel-footer {
   @media (max-width: $screen-xs-max) {

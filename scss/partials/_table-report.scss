@@ -1,13 +1,15 @@
+$fix-column-width: 180px;
+
 .fix-first-column {
   position: absolute !important;
-  width: 181px !important;
+  width: $fix-column-width + 1 !important;      //+1 fix white line that separate first column and data
   left: 0;
   top: auto;
 }
 
 .table-overflow-wrapper {
-  width: calc(100% - 180px);
-  margin-left: 180px;
+  width: calc(100% - #{$fix-column-width});
+  margin-left: $fix-column-width;
   overflow-x: scroll;
   overflow-y: visible;
 
@@ -29,7 +31,7 @@
 }
 
 .ps-scrollbar-x-rail {
-  left: 180px !important;
+  left: $fix-column-width !important;
   top: 50px !important;
   display: block !important;
   opacity: 0.6 !important;

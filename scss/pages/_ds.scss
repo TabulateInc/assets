@@ -14,7 +14,8 @@
 }
 
 
-.summary-table{
+table.summary-table{
+    border-collapse: collapse;
     @media (max-width:$screen-xs-max){
         width:100%;
     }
@@ -26,7 +27,7 @@
 .ds-cell {
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
-  min-width: 60px;
+  min-width: 95px;
 }
 
 .editable {
@@ -58,7 +59,12 @@
 .category-head {
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd; 
+  
+  &.fix-first-column {
+    height: 28px !important; //make bottom border on the same line with other columns
+  }
+}
 
 .calculated-value{
   display: inline-block;

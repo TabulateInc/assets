@@ -28,16 +28,16 @@ $fix-column-width: 180px;
       background-color: #f5f5f5;
     }
   }
-}
 
-.ps-scrollbar-x-rail {
-  left: $fix-column-width !important;
-  top: 50px !important;
-  display: block !important;
-  opacity: 0.6 !important;
-  background-color: #eee !important;
+  .ps-scrollbar-x-rail {
+    left: $fix-column-width !important;
+    top: 50px !important;
+    display: block !important;
+    opacity: 0.6 !important;
+    background-color: #eee !important;
 
-  .ps-scrollbar-x {
-    background-color: #999 !important;
+    .ps-scrollbar-x {
+      background-color: #999 !important;
+    }
   }
 }

@@ -1,8 +1,6 @@
-$fix-column-width: 180px;
-
 .fix-first-column {
   position: absolute !important;
-  width: $fix-column-width + 1 !important;      //+1 fix white line that separate first column and data
+  width: $fix-column-width !important; 
   left: 0;
   top: auto;
 }
@@ -32,12 +30,15 @@ $fix-column-width: 180px;
   .ps-scrollbar-x-rail {
     left: $fix-column-width !important;
     top: 50px !important;
-    display: block !important;
-    opacity: 0.6 !important;
-    background-color: #eee !important;
-
-    .ps-scrollbar-x {
-      background-color: #999 !important;
-    }
   }
 }
+
+.ps-scrollbar-x-rail {
+  display: block !important;
+  opacity: 0.6 !important;
+  background-color: #eee !important;
+
+  .ps-scrollbar-x {
+    background-color: #999 !important;
+  }
+} 

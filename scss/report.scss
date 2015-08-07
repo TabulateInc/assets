@@ -1,3 +1,5 @@
+@import "variables";
+
 .report-table{
     thead{
         border-bottom:1px solid #ddd;
@@ -14,6 +16,9 @@
         /*adding a border to emulate padding when table goes wider than the screen*/
         border-right:40px solid transparent;
         border-collapse: separate;
+    }
+    .fix-first-column {
+      width: $fix-column-width + 1 !important;      //+1 fix white line that separate first column and data
     }
 }
 .total-column{

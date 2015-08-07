@@ -22,6 +22,11 @@ table.summary-table{
     th,td{
         padding:3px 8px;
     }
+    .category-head.fix-first-column {
+        width: 100% !important;
+        height: 28px !important; //fix bottom border
+        z-index: 1;   //fix hidding of bottom border when next row is hovered
+    }
 }
 
 .ds-cell {
@@ -60,10 +65,6 @@ table.summary-table{
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd; 
-  
-  &.fix-first-column {
-    height: 28px !important; //make bottom border on the same line with other columns
-  }
 }
 
 .calculated-value{

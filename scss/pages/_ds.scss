@@ -20,6 +20,7 @@ table.summary-table{
         width:100%;
     }
     th,td{
+        min-width: 95px;
         padding:3px 8px;
     }
     .category-head.fix-first-column {

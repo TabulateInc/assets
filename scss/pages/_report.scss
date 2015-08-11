@@ -77,33 +77,3 @@
         height:29px!important;
     }
 }
-
-.fix-first-column {
-  position: absolute !important;
-  width: 180px !important;
-  left: 0;
-  top: auto;
-}
-
-.table-overflow-wrapper {
-  width: calc(100% - 180px);
-  margin-left: 180px;
-  overflow-x: scroll;
-  overflow-y: visible;
-
-  table {
-    border-collapse: separate;
-    // width: 100%;
-  }
-
-  td {
-    height: 27px;
-    vertical-align: middle;
-  }
-
-  .table-hover>tbody>tr:hover {
-    td {
-      background-color: #f5f5f5;
-    }
-  }
-}

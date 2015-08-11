@@ -195,19 +195,6 @@ $blue-light: #e3f2ff;
   }
 }
 
-.row__icon-left {
-  $icon-left-width: 23px;
-  position: absolute;
-  width: $icon-left-width;
-  height: 35px;
-  left: 0;
-
-  &__wrapper {
-    position: relative;
-    padding-left: $icon-left-width;
-  }
-}
-
 .share-modal {
   .icon-circle {
     padding-top: 2px;
@@ -222,6 +209,7 @@ $blue-light: #e3f2ff;
     font-size: 13px;
     display: inline-block;
     padding-right: 10px;
+    min-width: 37px;
   }
 
   .glyphicon-pencil {

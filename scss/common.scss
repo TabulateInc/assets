@@ -1,4 +1,5 @@
 @import "partials/_bootstrap-variables";
+@import "variables";
 
 $alert-danger-bg: #f2dede !important;
 $alert-danger-border: #eed3d7;  // doesnt work !important") is not a color for `darken')
@@ -17,6 +18,7 @@ $breadcrumb-bg: #fff !important;
 
 @import "partials/_bootstrap";
 @import "partials/_layout";
+@import "partials/_table-report";
 
 
 $margin-normal: 12px;
@@ -27,6 +29,12 @@ $line-height-md: 40px;
 .bold {
   font-weight: bold;
 }
+
+$space-left: 480px;
+.nav-space-left {
+  max-width: $space-left / 2;
+}
+
 
 .panel-heading,
 .panel-footer {
@@ -354,8 +362,6 @@ select.btn{
 }
 
 .custom-label {
-  float: left;
-  padding-left: 10px;
   line-height: 33px;
   font-weight: 400;
 }
@@ -636,22 +642,43 @@ select::-ms-expand {
   }
 }
 
-.ps-scrollbar-x-rail {
-  left: 180px !important;
-  top: 50px !important;
-  display: block !important;
-  opacity: 0.6 !important;
-  background-color: #eee !important;
-
-  .ps-scrollbar-x {
-    background-color: #999 !important;
-  }
-}
-
 .as-flex {
   display: flex;
 }
 
 .is-relative {
   position: relative;
+}
+
+select.padding-left-xs option,
+.padding-left-xs {
+  padding-left: 6px !important;
+}
+
+.sticky-top {
+    //TODO this is hack, sorry
+  position: fixed;
+  top: 51px;
+
+  &--transactions {
+    left: 65%;
+    width: 34%;
+    max-width:364px;
+  }
+
+  &--files {
+    background-color: #fff;
+    z-index: 1;
+    padding-left: 0;
+
+    @media (min-width: $screen-sm-min) {
+      padding-right: 30px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      left: 15px;
+      right: 15px;
+      padding-right: 0;
+    }
+  }
 }

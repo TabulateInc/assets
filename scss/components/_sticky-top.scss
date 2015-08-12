@@ -1,0 +1,27 @@
+.sticky-top {
+    //TODO this is hack, sorry
+  position: fixed;
+  top: 51px;
+
+  &--transactions {
+    left: 65%;
+    width: 34%;
+    max-width:364px;
+  }
+
+  &--files {
+    background-color: #fff;
+    z-index: 1;
+    padding-left: 0;
+
+    @media (min-width: $screen-sm-min) {
+      padding-right: 30px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      left: 15px;
+      right: 15px;
+      padding-right: 0;
+    }
+  }
+}

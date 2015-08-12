@@ -1,5 +1,5 @@
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
-@import "partials/_bootstrap-variables";
+@import 'variables';
+@import 'bootstrap/variables';
 
 $headings-font-family: 'Open Sans', sans-serif;
 $form-normal: #ccc;

@@ -1,19 +1,25 @@
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
-@import "partials/_bootstrap-variables";
-@import "partials/_datepicker";
-@import "partials/_annimations";
-@import "variables";
+@import 'variables';
+@import 'bootstrap/variables';
 
-@import "pages/_overview";
-@import "pages/_stores";
-@import "pages/_ds";
-@import "pages/_dstemplate";
-@import "pages/_files";
-@import "pages/_transactions";
-@import "pages/_financial";
-@import "pages/_report";
-@import "pages/_menu";
-@import "pages/_inventory";
+@import 'components/menu';
+@import 'partials/layout';
+@import 'common';
 
-@import "modules/_inlineedittable";
-@import "modules/_numboard";
+@import 'components/datepicker';
+@import 'components/spinner';
+@import 'components/sticky-top';
+@import 'components/table-report';
+
+@import 'pages/overview';
+@import 'pages/stores';
+@import 'pages/ds';
+@import 'pages/dstemplate';
+@import 'pages/files';
+@import 'pages/transactions';
+@import 'pages/financial';
+@import 'pages/report';
+@import 'pages/inventory';
+
+@import 'components/inlineedittable';
+@import 'components/numboard';
+@import 'pages/menu';

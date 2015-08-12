@@ -1,10 +1,6 @@
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
-@import "partials/_bootstrap-variables";
-@import "partials/_datepicker";
-
-
-$form-font-color: #434A54; // hardimported from bootflat
-
+@import 'variables';
+@import 'bootstrap/variables';
+@import 'components/datepicker';
 
 .waste-items {
     &__row {

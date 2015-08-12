@@ -1,37 +1,11 @@
-@import "partials/_bootstrap-variables";
-@import "variables";
-
-$alert-danger-bg: #f2dede !important;
-$alert-danger-border: #eed3d7;  // doesnt work !important") is not a color for `darken')
-$alert-danger-text: #b94a48;
-
-$alert-info-bg: #d9edf7;
-$alert-info-border: $alert-info-bg;  // doesnt work !important") is not a color for `darken')
-$alert-info-text: #4993c6;
-
-$alert-success-bg: #e8f7ed;
-$alert-success-border: #30b661;
-$alert-success-text: #1BA84E;
-
-$breadcrumb-padding-horizontal: 0;
-$breadcrumb-bg: #fff !important;
-
-@import "partials/_bootstrap";
-@import "partials/_layout";
-@import "partials/_table-report";
-
-
-$margin-normal: 12px;
-$margin-max: 36px;
-$line-height-sm: 33px;
-$line-height-md: 40px;
-
-
 $space-left: 480px;
 .nav-space-left {
   max-width: $space-left / 2;
 }
 
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
 
 .panel-heading,
 .panel-footer {
@@ -90,39 +64,6 @@ a:hover {
     padding:10px;
     font-size: 11px;
 }
-
-.alert-info {
-  color: $alert-info-text !important;
-  background-color: $alert-info-bg !important;
-  padding: 15px 10px !important;
-  font-size: 11px;
-  margin: 14px auto;
-}
-
-.alert-success,
-.alert-danger {
-  text-align: center !important;
-  margin: 0 auto !important;
-  position: fixed;
-  top: 61px;
-  left: 0;
-  right: 0;
-  z-index: 500000;
-  padding: 10px 20px;
-  border-radius: 4px;
-}
-
-.alert-success{
-  background-color: $alert-success-bg !important;
-  border: 1px solid $alert-success-border !important;
-  width: 200px !important;
-}
-
-.alert-danger {
-  font-size: 12px;
-  border: 1px solid $alert-danger-border;
-}
-
 
 .margin-top {
 
@@ -465,23 +406,6 @@ select::-ms-expand {
   background-color: $gray-lighter !important;
 }
 
-.btn-fake {
-  @extend .btn-default;
-  top: 1px;
-  width: 72px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow: hidden;
-  @media (max-width:$screen-xs-max){
-    padding: 6px 3px !important;
-    width: 42px;
-  }
-  &:hover {
-    background-color: #fff;
-    color: rgb(0,0,0)
-  }
-}
-
 .btn-link--bordered {
   border: 1px solid $brand-primary;
   &:hover {
@@ -520,77 +444,6 @@ select::-ms-expand {
 
 .transactions-sidebar{
   padding-left: 50px !important;
-}
-
-.icon-circle {
-  $ios-checked: #007AFF;
-  $ios-unchecked: #C7C7CC;
-  $ios-notification: #FF3B30;
-
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-
-  @media (max-width:$screen-xs-max) {
-    height: 15px;
-    width: 15px;
-  }
-
-  &--unchecked svg {
-    fill: $ios-unchecked;
-    width: 22px;
-    height: 22px;
-    vertical-align: middle;
-
-    @media (max-width:$screen-xs-max) {
-      width: 19px;
-      height: 19px;
-    }
-  }
-
-  &--checked svg {
-    fill: $brand-primary;
-    width: 22px;
-    height: 22px;
-
-    @media (max-width:$screen-xs-max) {
-      width: 19px;
-      height: 19px;
-    }
-  }
-
-  &--info svg {
-    fill: $ios-notification;
-    width: 18px;
-    height: 18px;
-    margin: 2px;
-
-    @media (max-width:$screen-xs-max) {
-      width: 15px;
-      height: 15px;
-    }
-
-    circle {
-      stroke: $ios-notification;
-    }
-  }
-
-
-  &--notify {
-    border: 1px solid $ios-notification;
-    background-color: $ios-notification;
-    color: #fff;
-    border-radius: 50%;
-    vertical-align: top;
-    line-height: 17px;
-    text-align: center;
-    font-size: 10px;
-    
-    @media (max-width:$screen-xs-max) {
-      font-size: 8px;
-      line-height: 1.7em;
-    }
-  }
 }
 
 .add-item-link {
@@ -658,32 +511,4 @@ select::-ms-expand {
 select.padding-left-xs option,
 .padding-left-xs {
   padding-left: 6px !important;
-}
-
-.sticky-top {
-    //TODO this is hack, sorry
-  position: fixed;
-  top: 51px;
-
-  &--transactions {
-    left: 65%;
-    width: 34%;
-    max-width:364px;
-  }
-
-  &--files {
-    background-color: #fff;
-    z-index: 1;
-    padding-left: 0;
-
-    @media (min-width: $screen-sm-min) {
-      padding-right: 30px;
-    }
-
-    @media (max-width: $screen-xs-max) {
-      left: 15px;
-      right: 15px;
-      padding-right: 0;
-    }
-  }
 }

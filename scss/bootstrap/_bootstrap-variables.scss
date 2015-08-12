@@ -22,11 +22,11 @@
 // $gray-lighter:           lighten($gray-base, 93.5%) // #eee
 
 // $brand-primary:         darken(#428bca, 6.5%)
- $brand-primary:          #6699cc ;
- $brand-saturated:         #5C89B7;
- $button-primary:       $brand-primary;
- $button-primary-hover:  $brand-saturated;
- $pill-background-color : $brand-primary;
+$brand-primary:          #6699cc;
+$brand-saturated:         #5C89B7;
+$button-primary:       $brand-primary;
+$button-primary-hover:  $brand-saturated;
+$pill-background-color : $brand-primary;
 $link-font-color : $brand-primary;
 $link-font-color-hover:$brand-saturated;
 // $brand-success:         #5cb85c
@@ -613,11 +613,11 @@ $modal-title-padding:          15px 30px;
 // $modal-content-fallback-border-color:          #999
 
 //** Modal backdrop background color
-// $modal-backdrop-bg:           #000
+$modal-backdrop-bg:           transparentize($middle-gray-color, 0.2);
 //** Modal backdrop opacity
 // $modal-backdrop-opacity:      .5
 //** Modal header border color
-$modal-header-border-color:   #e5e5e5
+$modal-header-border-color:   $border-gray-color;
 //** Modal footer border color
 // $modal-footer-border-color:   $modal-header-border-color
 
@@ -634,21 +634,21 @@ $modal-header-border-color:   #e5e5e5
 // $alert-border-radius:         $border-radius-base
 // $alert-link-font-weight:      bold
 
-// $alert-success-bg:            $state-success-bg
-// $alert-success-text:          $state-success-text
-// $alert-success-border:        $state-success-border
+$alert-success-bg:               #e8f7ed;  // $state-success-bg
+$alert-success-text:             #1ba84e;  // $state-success-text
+$alert-success-border:           #30b661;  // $state-success-border
 
-// $alert-info-bg:               $state-info-bg
-// $alert-info-text:             $state-info-text
-// $alert-info-border:           $state-info-border
+$alert-info-bg:                  #d9edf7;  // $state-info-bg
+$alert-info-text:                #4993c6;  // $state-info-text
+$alert-info-border:              $alert-info-bg;  // $state-info-border
 
 // $alert-warning-bg:            $state-warning-bg
 // $alert-warning-text:          $state-warning-text
 // $alert-warning-border:        $state-warning-border
 
-// $alert-danger-bg:             $state-danger-bg
-// $alert-danger-text:           $state-danger-text
-// $alert-danger-border:         $state-danger-border
+$alert-danger-bg:                #f2dede !important;  // $state-danger-bg
+$alert-danger-text:              #b94a48;  // $state-danger-text
+$alert-danger-border:            #eed3d7;  // $state-danger-border // doesnt work !important") is not a color for `darken')
 
 
 //== Progress bars
@@ -798,9 +798,9 @@ $modal-header-border-color:   #e5e5e5
 //##
 
 // $breadcrumb-padding-vertical:   8px
-// $breadcrumb-padding-horizontal: 15px
+$breadcrumb-padding-horizontal: 0; // 15px
 //** Breadcrumb background color
-// $breadcrumb-bg:                 #f5f5f5
+$breadcrumb-bg:                 #fff !important;  // #f5f5f5
 //** Breadcrumb text color
 // $breadcrumb-color:              #ccc
 //** Text color of current page in the breadcrumb

@@ -1,41 +1,6 @@
-@mixin make-keyframes($name) {
-
-  @-ms-keyframes #{$name} {
-    @content
-  }
-
-  @-webkit-keyframes #{$name} {
-    @content
-  }
-
-  @-moz-keyframes #{$name} {
-    @content
-  }
-
-  @-o-keyframes #{$name} {
-    @content
-  }
-
-  @keyframes #{$name} {
-    @content
-  }
-
-}
-
-@include make-keyframes(ld) {
-  0%   { transform: rotate(0deg); }
-  50%  { transform: rotate(180deg); }
-  100% { transform: rotate(360deg); }
-}
-
-// $browser-prefixes: 
-// @mixin make-animation {
-//   @each $prefix in 
-// }
-
 .spinner-container{
-    position:relative;
-    }
+  position:relative;
+}
 
 .spinner {
   display: inline-block;

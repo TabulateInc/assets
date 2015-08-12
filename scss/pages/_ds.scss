@@ -36,7 +36,7 @@ table.summary-table{
 }
 
 .editable {
-  border: 1px solid #ddd;
+  border: 1px solid $table-border-color;
   
   input,
   &__input {

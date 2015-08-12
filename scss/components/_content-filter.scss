@@ -1,0 +1,59 @@
+.content-filter {
+    margin-top: 4px;
+    margin-bottom:16px;
+    padding:4px 0px;
+    width:100%;
+    border-top: 1px solid $table-border-color;
+    border-bottom: 1px solid $table-border-color;
+    .add-control{
+        margin-bottom:0px;
+    }
+    .filter-control{
+        height:29px;
+    }
+    .glyphicon-menu-left {
+      font-size: 12px;
+    }
+    select{
+        padding:3px 15px 4px 10px;
+        height:29px;
+    }
+}
+
+.date-selector{
+    button.week-changer {
+        font-size:10px;
+        height:29px;
+        @media (max-width: $screen-xs-max){
+          &.hide-buttons{
+              display: none;
+          }
+        }
+        &:focus,
+        &:active,
+        &.active,
+        &.disabled:hover {
+          color: $gray !important;
+        }
+    }
+    .week-dropdown,
+    .dropdown-menu {
+      width: 160px !important;
+    }
+    .week-dropdown {
+      @media (max-width: $screen-xs-max) {
+        width: 140px !important;
+      }
+    }
+    .day-dropdown{
+        width: 120px !important;
+    }
+
+    /*>div{*/
+        /*margin:5px 10px 5px 0px;*/
+        /*@media (max-width: 768px){*/
+            /*margin-right:0px;*/
+        /*}*/
+        /*padding:0px;*/
+    /*}*/
+}

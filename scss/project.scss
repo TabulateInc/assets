@@ -1,14 +1,22 @@
 @import 'variables';
 @import 'bootstrap/variables';
 
-@import 'components/menu';
-@import 'partials/layout';
-@import 'common';
+@import 'third-parties';
 
+@import 'common';
+@import 'states';
+
+@import 'components/menu';
+@import 'components/content-filter';
+@import 'components/misc';
+@import 'components/navigation';
+@import 'components/week-selector';
 @import 'components/datepicker';
 @import 'components/spinner';
 @import 'components/sticky-top';
 @import 'components/table-report';
+@import 'components/inlineedittable';
+@import 'components/numboard';
 
 @import 'pages/overview';
 @import 'pages/stores';
@@ -19,7 +27,7 @@
 @import 'pages/financial';
 @import 'pages/report';
 @import 'pages/inventory';
-
-@import 'components/inlineedittable';
-@import 'components/numboard';
 @import 'pages/menu';
+
+// hacks
+@import 'shame';

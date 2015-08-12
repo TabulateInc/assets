@@ -5,3 +5,21 @@
     }
   }
 }
+
+.item-units-input {
+
+  .glyphicon-plus:hover,
+  .glyphicon-plus:focus,
+  .glyphicon-minus:hover,
+  .glyphicon-minus:focus {
+    color: rgb(0,0,0);
+  }
+
+  .btn {
+    height: 33px;
+    @media (max-width:$screen-xs-max){
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  }
+}

@@ -1,6 +1,12 @@
 $padding-sm: 7px;
 $margin-normal: 12px;
 
+.header {
+  font-weight:bold;
+  border-bottom:2px solid $table-border-color;
+  padding: 8px 8px 8px 0px;
+}
+
 .inline-table {
 
   &__top {

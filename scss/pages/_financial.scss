@@ -19,3 +19,11 @@
     max-height:400px;
     overflow-y:auto;
 }
+
+.table-head {
+    border-bottom:2px solid $table-border-color;
+}
+
+.primary-text {
+  color: $brand-primary;
+}

@@ -79,3 +79,15 @@ input {
         color: transparent;
     }
 }
+
+.more-info {
+  text-align:center;
+  padding:10px;
+  font-size: 11px;
+}
+
+.half-height {
+  max-height: 50vh;
+  overflow: scroll;
+}
+

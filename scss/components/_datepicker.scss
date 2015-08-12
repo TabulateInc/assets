@@ -50,5 +50,19 @@
     td, th{
         padding:1px;
     }
-
 }
+
+.calendar-input {
+    background: transparent !important;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.datepicker {
+    td, th {
+        padding:1px;
+    }
+}
+

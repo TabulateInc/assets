@@ -1,5 +1,11 @@
+@import 'variables';
+@import 'bootstrap/variables';
+
 $blue-light: #e3f2ff;
 
+
+// Table
+// -----------------
 .b-files-table {
   .inline-table__row {
     line-height: 2.5em;
@@ -38,15 +44,17 @@ $blue-light: #e3f2ff;
       }
     }
   }
-
 }
 
+
+// Icons
+// -----------------
 .icon-folder-plus {
-  background: url(../img/folder1+.svg) no-repeat center center transparent;
+  background: url(#{$images-path}/folder1+.svg) no-repeat center center transparent;
 }
 
 .icon-file-plus {
-  background: url(../img/file1+.svg) no-repeat center center transparent;
+  background: url(#{$images-path}/file1+.svg) no-repeat center center transparent;
 }
 
 .icon-folder-plus,
@@ -57,7 +65,7 @@ $blue-light: #e3f2ff;
 }
 
 .icon-folder {
-  background: url(../img/folder1.svg) no-repeat top center transparent;
+  background: url(#{$images-path}/folder1.svg) no-repeat top center transparent;
   vertical-align: middle;
 
   @media (min-width: $screen-xs-max) {
@@ -80,7 +88,7 @@ $blue-light: #e3f2ff;
 }
 
 .icon-file {
-  background: url(../img/file1.svg) no-repeat top center transparent;
+  background: url(#{$images-path}/file1.svg) no-repeat top center transparent;
   vertical-align: middle;
 
   @media (min-width: $screen-xs-max) {
@@ -96,6 +104,9 @@ $blue-light: #e3f2ff;
   }
 }
 
+
+// Breadcrumbs
+// -----------------
 .breadcrumb {
   .dropdown-menu {
     background-color: #fff;
@@ -138,29 +149,9 @@ $blue-light: #e3f2ff;
   }
 }
 
-.toggle {
-  .handle-sm {
-    display: inline-block;
-    top: 5px;
-    height: 20px;
-    width: 30px;
-    &:after,
-    &:before {
-      height: 18px;
-      width: 18px;
-    }
-  }
 
-  input[type="checkbox"]:checked {
-    & + .handle-sm:before {
-      width: 28px;
-    }
-    & + .handle-sm:after {
-      left: 10px;
-    }
-  }
-}
-
+// Move modal
+// -----------------
 .tree {
   $open-tree-icon-width: 20px;
   padding: $open-tree-icon-width $open-tree-icon-width $open-tree-icon-width 0;
@@ -195,12 +186,9 @@ $blue-light: #e3f2ff;
   }
 }
 
-.share-modal {
-  .icon-circle {
-    padding-top: 2px;
-  }
-}
 
+// Header when item picked
+// -----------------
 .header-options {
   height: 19px;
 
@@ -217,6 +205,8 @@ $blue-light: #e3f2ff;
   }
 }
 
+// Right click
+// -----------------
 .popover-btn {
   span:first-child {
     margin-top: 8px;
@@ -247,8 +237,4 @@ $blue-light: #e3f2ff;
     letter-spacing: 10em;     /* IE 9 fix */
     -ms-transform: scale(20); /* IE 9 fix */
   }
-}
-
-.text-black--force {
-  color: #333 !important;
 }

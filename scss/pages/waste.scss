@@ -2,19 +2,10 @@
 @import 'bootstrap/variables';
 @import 'components/datepicker';
 
-.waste-items {
-    &__row {
-        padding-left: 10px;
-        @media (max-width:$screen-xs-max){
-            padding-left:0 !important;
-        }
-    }
-}
-
 .modal {
     .b-delete-icon {
         display: inline-block;
-        visibility:visible;
+        visibility: visible;
     }
 }
 
@@ -41,16 +32,6 @@
         }
     }
 
-    .show-delete-icon{
-        position: relative;
-        &:hover {
-            .b-delete-icon {
-                display: inline-block;
-                visibility:visible;
-            }
-        }
-    }
-
     .waste-item {
         border-bottom: 1px solid $table-border-color;
         cursor: pointer;
@@ -62,9 +43,7 @@
     }
 }
 
-
-
-.add-icon{
+.add-icon {
     position: relative;
     >.glyphicon{
         position:absolute;
@@ -73,39 +52,18 @@
     }
 }
 
-
-.form-info{
-    padding:10px 0px 10px 15px;
-    @media (min-width:$screen-md-min){
-        padding-left:5px;
-    }
-}
-
-
 @media (min-width:$screen-sm-min){
-    .units-input{
-        padding-left: 0px;
-        padding-right: 5px;
-        width: 140%;
-        position:relative;
-        left:-20%;
-        margin-left: 12px;
-        z-index: 1;
-        /*hack*/
-    }
-    .calendar-input{
+    .calendar-input {
         padding-left:5px;
         padding-right:5px;
     }
-    .calendar-read-padding {
-        padding-left: 5px !important;
-    }
 }
 
-.form-header{
-    font-weight:bold;
-    .form-info{
-        padding-top:0px;
-        padding-bottom:2px;
+
+// This is ok
+.form-info {
+    padding: 10px 0px 10px 15px;
+    @media (min-width:$screen-md-min){
+        padding-left:5px;
     }
 }

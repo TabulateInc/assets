@@ -1,9 +1,8 @@
+@import 'variables';
+@import 'bootstrap/variables';
+
 .overview__header{
     margin-left:15px;
-}
-
-.black{
-    color:#434A54!important;
 }
 
 .overview__panel{
@@ -14,7 +13,6 @@
     font-size:34px;
     padding:15px 0px;
 }
-
  
 .overview__week_item {
     margin-top:6px;

@@ -1,3 +1,6 @@
+@import 'variables';
+@import 'bootstrap/variables';
+
 .financial__btn {
     margin-top: 8px;
     width: 133px;
@@ -22,8 +25,4 @@
 
 .table-head {
     border-bottom:2px solid $table-border-color;
-}
-
-.primary-text {
-  color: $brand-primary;
 }

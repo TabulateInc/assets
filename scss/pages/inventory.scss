@@ -1,3 +1,6 @@
+@import 'variables';
+@import 'bootstrap/variables';
+
 .update-prices-modal {
   @media (max-width: 420px) {
     .datepicker {

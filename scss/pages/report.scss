@@ -1,8 +1,40 @@
+@import 'variables';
+@import 'bootstrap/variables';
+
+.report-table{
+    thead{
+        border-bottom:1px solid #ddd;
+    }
+    td{
+        padding: 2px 1px 3px 25px;
+        min-width:100px;
+    }
+    td, th,b{
+        white-space:nowrap;
+    }
+    &.expanded{
+        /*im ugly and i know it*/
+        /*adding a border to emulate padding when table goes wider than the screen*/
+        border-right:40px solid transparent;
+        border-collapse: separate;
+    }
+    .fix-first-column {
+      width: $fix-column-width + 1 !important;      //+1 fix white line that separate first column and data
+    }
+}
+.total-column{
+    padding-left:30px;
+    min-width:100px;
+}
+
+// Report Date Selector
+// -----------------------
+
 .custom-selector {
   position: relative;
 
   &__btn {
-    background: url(../img/arrowdown.png) no-repeat right 8px center white;
+    background: url(#{$images-path}/arrowdown.png) no-repeat right 8px center white;
     position: relative;
     text-align: left;
 
@@ -12,7 +44,7 @@
 
     &:active,
     &:focus {
-      background: url(../img/arrowdown.png) no-repeat right 8px center white;
+      background: url(#{$images-path}/arrowdown.png) no-repeat right 8px center white;
       color: black;
       border-radius: 2px;
     }
@@ -70,10 +102,11 @@
       }
   }
 }
-.content-filter{
-    .custom-selector__btn{
-        line-height:1.5;
-        padding:3px 20px 4px 12px;
-        height:29px!important;
-    }
+
+.content-filter {
+  .custom-selector__btn{
+    line-height:1.5;
+    padding:3px 20px 4px 12px;
+    height:29px!important;
+  }
 }

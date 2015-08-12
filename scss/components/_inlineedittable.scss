@@ -119,3 +119,13 @@ $margin-normal: 12px;
     }
   }
 }
+
+// Update Icon
+// ----------------------------
+// visible to the right after inline edit
+.same-update-icon {
+  color: $brand-success;
+  position: absolute;
+  right: -25px;
+}
+

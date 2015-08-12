@@ -15,19 +15,11 @@
 @import 'components/spinner';
 @import 'components/sticky-top';
 @import 'components/table-report';
+@import 'components/table-fix-column';
 @import 'components/inlineedittable';
 @import 'components/numboard';
-
-@import 'pages/overview';
-@import 'pages/stores';
-@import 'pages/ds';
-@import 'pages/dstemplate';
-@import 'pages/files';
-@import 'pages/transactions';
-@import 'pages/financial';
-@import 'pages/report';
-@import 'pages/inventory';
-@import 'pages/menu';
+@import 'components/delete-item';
+@import 'components/ordered-header';
 
 // hacks
 @import 'shame';

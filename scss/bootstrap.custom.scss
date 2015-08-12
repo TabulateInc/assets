@@ -155,6 +155,17 @@ $border:1px solid #bbb;
   }
 }
 
+.nav-xs {
+  margin-bottom: 0;
+  @media (max-width:$screen-xs-min) {
+    display: block !important;
+    font-size: 12px;
+  }
+  @media (min-width:$screen-xs-min) {
+    min-width: 325px;
+  }
+}
+
 .btn-fake {
   @extend .btn-default;
   top: 1px;
@@ -241,11 +252,11 @@ select.btn{
   position:relative;
     padding-right:15px;
     padding-bottom:3px;
-    background:url(../img/arrowdown.png) no-repeat right 8px center white;
+    background:url(#{$images-path}/arrowdown.png) no-repeat right 8px center white;
 
   &:active,
   &:focus{
-    background:url(../img/arrowdown.png) no-repeat right 8px center white;
+    background:url(#{$images-path}/arrowdown.png) no-repeat right 8px center white;
     color:black;
     border-radius:2px;
   }

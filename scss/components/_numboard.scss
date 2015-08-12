@@ -78,7 +78,7 @@ $action-buttons-height: 33px;  // hardcoded
 }
 
 .glyphicons-delete {
-  background:url(../img/glyphicons-257-delete.png) no-repeat center center transparent;
+  background:url(#{$images-path}/glyphicons-257-delete.png) no-repeat center center transparent;
 }
 
 .btn-grey {

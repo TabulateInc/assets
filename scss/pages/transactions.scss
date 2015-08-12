@@ -1,14 +1,5 @@
-.sorticon {
-  font-size: 9px;
-  top: 4px;
-  right: -10px;
-  position: absolute;
-
-  &__wrapper {
-    font-size: 13px;
-    position: relative;
-  }
-}
+@import 'variables';
+@import 'bootstrap/variables';
 
 .edit-details {
   position:relative;
@@ -36,17 +27,6 @@
   }
 }
 
-.nav-xs {
-  margin-bottom: 0;
-  @media (max-width:$screen-xs-min) {
-    display: block !important;
-    font-size: 12px;
-  }
-  @media (min-width:$screen-xs-min) {
-    min-width: 325px;
-  }
-}
-
 .add-edit-transaction {
   .ng-invalid {
     border-width: 1px !important;
@@ -63,7 +43,7 @@
   }
 }
 
-.similar{
+.similar {
   &__body .transactions-list {
     margin-top: 23px;
   }
@@ -83,13 +63,6 @@
   background-color: $table-bg-hover;
 }
 
-
-.overflow-ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-};
-
 .show-ellipsed:hover {
   .overflow-ellipsis {
     overflow: inherit;
@@ -99,43 +72,8 @@
   }
 }
 
-.text-right-sm {
-  @media (min-width:$screen-sm-min) {
-    text-align: right;
-  }
-}
-
-.same-update-icon {
-  color: $brand-success;
-  position: absolute;
-  right: -25px;
-}
-
 .alert-danger.margin-top-sm {
   margin-top: 12px !important;
-}
-
-$approve-transaction-width: 30px;
-.approve-transaction {
-  vertical-align: top;
-  width: 30px;
-}
-
-.subrow--xs {
-  margin-left: $approve-transaction-width;
-}
-
-
-.status-holder {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-top: 5px;
-  margin-bottom: 8px;
-  height: 22px;
-
-  @media (max-width: $screen-sm-max) {
-    margin-top: 8px;    
-  }
 }
 
 .inline-table__row--transactions {
@@ -157,9 +95,18 @@ $approve-transaction-width: 30px;
   }
 }
 
-.no-outline {
-  &:focus {
-    outline: none !important;
+// Transaction Status
+// ----------------------
+
+.status-holder {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  height: 22px;
+
+  @media (max-width: $screen-sm-max) {
+    margin-top: 8px;    
   }
 }
 
@@ -234,3 +181,8 @@ $approve-transaction-width: 30px;
   }
 }
 
+@media (min-width:$screen-sm-min) {
+    .calendar-read-padding {
+        padding-left: 5px !important;
+    }
+}

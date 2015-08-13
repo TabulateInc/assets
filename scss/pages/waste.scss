@@ -1,6 +1,6 @@
-@import 'variables';
-@import 'bootstrap/variables';
-@import 'components/datepicker';
+@import '../project/variables';
+@import '../bootstrap/variables';
+@import '../project/components/datepicker';
 
 .modal {
     .b-delete-icon {

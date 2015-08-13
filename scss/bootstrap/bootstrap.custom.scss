@@ -1,9 +1,9 @@
+@import '../project/variables';
 @import 'variables';
-@import 'bootstrap/variables';
 
-@import '../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+@import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
 //Disable flat theme by removing next line
-@import '../../bower_components/Bootflat/bootflat/scss/bootflat';
+@import '../../../bower_components/Bootflat/bootflat/scss/bootflat';
 /*@import "../../bower_components/bootstrap-table/src/bootstrap-table.css";*/
 
 .container.container-md {

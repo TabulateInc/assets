@@ -42,24 +42,6 @@
     stroke: lighten(#444, 90%);
   }
 
-  &--small {
-    width: 16px;
-    height: 100%;
-  }
-
-  &--over {
-    position: absolute;
-    top: 0;
-    vertical-align: middle;
-    &.spinner--small {
-      left: calc(50% - 8px);
-    }
-  }
-
-  &--below {
-    color: transparent;
-  }
-
   &:hover,
   &:active,
   &:focus {

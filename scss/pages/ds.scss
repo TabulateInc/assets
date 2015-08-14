@@ -24,6 +24,10 @@ table.summary-table {
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   min-width: 95px;
+
+  &.editable {
+    border: 1px solid $table-border-color;
+  }
 }
 
 .calculated-value{

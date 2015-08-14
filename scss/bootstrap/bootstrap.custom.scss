@@ -1,0 +1,267 @@
+@import '../project/variables';
+@import 'variables';
+
+@import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+//Disable flat theme by removing next line
+@import '../../../bower_components/Bootflat/bootflat/scss/bootflat';
+/*@import "../../bower_components/bootstrap-table/src/bootstrap-table.css";*/
+
+.container.container-md {
+    $screen-md-min: 992px;
+    @media (min-width: $screen-md-min) {
+        width: (970px + $grid-gutter-width);
+    }
+    @media (min-width: $screen-lg-min) {
+        width: (1070px + $grid-gutter-width);
+    }
+}
+
+.panel {
+    border: 1px solid $panel-default-border;
+}
+
+.panel-heading,
+.panel-footer {
+  @media (max-width: $screen-xs-max) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+.modal-dialog {
+  padding-top: 51px;
+}
+
+.modal {
+    &-content {
+        border: 1px solid $border-gray-color;
+        @include box-shadow(none);
+    }
+    &-header {
+        border-bottom: 1px solid $border-gray-color;
+        min-height: 15px*$modal-title-line-height;    // fixes scss (15px 30px+1.321) style error
+    }
+    &-body {
+        padding: $modal-inner-padding;
+        background-color: $gray-lighter-custom;
+    }
+    &-footer {
+        // background-color:
+        margin-top: 0;
+        padding: 0 30px 15px;
+        background-color: $gray-lighter-custom;
+        @include radius($type: border-radius, $value: 0 0 4px 4px);
+        .btn {
+            border-radius: 4px;
+        }
+    }
+}
+
+.alert-info {
+  color: $alert-info-text !important;
+  background-color: $alert-info-bg !important;
+  padding: 15px 10px !important;
+  font-size: 11px;
+  margin: 14px auto;
+}
+
+.alert-success,
+.alert-danger {
+  text-align: center !important;
+  margin: 0 auto !important;
+  position: fixed;
+  top: 61px;
+  left: 0;
+  right: 0;
+  z-index: 500000;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.alert-success {
+  background-color: $alert-success-bg !important;
+  border: 1px solid $alert-success-border !important;
+  width: 200px !important;
+}
+
+.alert-danger {
+  font-size: 12px;
+  border: 1px solid $alert-danger-border;
+
+  &.inline-alert{
+    position:static;
+    border:none;
+    border-radius:0px;
+    max-width:auto;
+  }
+}
+
+
+$brand-border:1px solid $brand-primary;
+$border:1px solid #bbb;
+
+.nav-tabs{
+    min-width:480px;// modified by js
+    background:transparent;
+    border-bottom: $border;
+    margin-top:20px;
+    margin-bottom:20px;
+    >li{
+        &:first-child a{
+            border-left:$brand-border;
+            border-top-left-radius:4px;
+            transform-origin: bottom left;
+            &.active{
+                border-left:$border;
+            }
+        }
+        &:last-child a{
+            border-top-right-radius:4px;
+            border-right:$brand-border;
+            &.active{
+                border-right:$border;
+            }
+        }
+        &.active>a{
+            border:$border;
+            border-bottom:1px solid white;
+            transform:scaleX(1.06);
+            z-index:1;
+            &:hover, &:focus{
+                border:$border;
+                border-bottom:1px solid white;
+            }
+        }
+        >a{
+            border:$brand-border;
+            color:$brand-primary;
+            border-bottom:1px solid transparent;
+            border-left:1px solid transparent;
+
+            position:relative;
+            top:1px;
+            &:hover, &:focus{
+                border:$border;
+            }
+        }
+    }
+}
+
+.navbar-nav .open .dropdown-menu > li > a {
+  @media (max-width: $screen-xs-max) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.nav-xs {
+  margin-bottom: 0;
+  @media (max-width:$screen-xs-min) {
+    display: block !important;
+    font-size: 12px;
+  }
+  @media (min-width:$screen-xs-min) {
+    min-width: 325px;
+  }
+}
+
+.btn-fake {
+  @extend .btn-default;
+  top: 1px;
+  width: 72px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  @media (max-width:$screen-xs-max){
+    padding: 6px 3px !important;
+    width: 42px;
+  }
+  &:hover {
+    background-color: #fff;
+    color: rgb(0,0,0)
+  }
+}
+
+.form-control[readonly] {
+    background-color: white;
+}
+
+.form-control[disabled] {
+  border-color: $form-disabled-color;
+  background-color: $form-disabled-color;
+}
+
+.dropdown-menu {
+    overflow-x:hidden;
+    height:auto;
+    max-height:300px;
+}
+
+.dropdown.caretright  button{
+    text-align:left;
+    position:relative;
+    .caret {
+        position:absolute;
+        top:47%;
+        right:15px;
+    }
+}
+
+/*fix boostrap shit*/
+.radio + .radio,
+.checkbox + .checkbox {
+  margin-top: 0px;
+}
+
+.breadcrumb {
+  li {
+    font-weight: 300;
+    float: left;
+
+    &:before {
+      content: none !important;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 17px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 14px;
+    }
+  }
+
+  .glyphicon-menu-right {
+    color: $gray-light;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 10px;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 13px;
+    }
+  }
+}
+
+select.btn{
+  text-align:left;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  position:relative;
+    padding-right:15px;
+    padding-bottom:3px;
+    background:url(#{$images-path}/arrowdown.png) no-repeat right 8px center white;
+
+  &:active,
+  &:focus{
+    background:url(#{$images-path}/arrowdown.png) no-repeat right 8px center white;
+    color:black;
+    border-radius:2px;
+  }
+    option{
+        text-align:left;
+    }
+}
+

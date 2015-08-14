@@ -1,0 +1,131 @@
+$padding-sm: 7px;
+$margin-normal: 12px;
+
+.header {
+  font-weight:bold;
+  border-bottom:2px solid $table-border-color;
+  padding: 8px 8px 8px 0px;
+}
+
+.inline-table {
+
+  &__top {
+    border-top: 1px solid #ddd;
+  }
+  &__row {
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    padding: 8px 8px 8px 0px;
+    clear:both;
+    float:none;
+    position: relative;
+
+    &div:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        content: " ";
+        display: table;
+        clear:both;
+    }
+   .b-delete-icon{
+      display: inline-block;
+    }
+
+    &:hover,
+    &.as-hovered {
+      background-color: $table-bg-hover;
+
+      .b-delete-icon{
+        display: inline-block;
+        visibility:visible;
+      }
+    }
+  }
+
+  &__input {
+    $row-column-padding: 15px;
+
+    padding-left: $padding-sm;
+
+    @media (max-width: $screen-sm-max) {
+      margin-top: $margin-normal;
+      padding-left:0;
+    }
+
+    input, select {
+      padding-left: $row-column-padding - $padding-sm - 1px;
+    }
+  }
+
+  .add-control {
+    @media (min-width:$screen-sm-min) {
+      margin-bottom: 0;
+    }
+  }
+
+  [class*="col-"], td {
+      padding-right:0px;
+      &:first-child{
+          padding-left:0px;
+      }
+  }
+}
+
+.no-margin {
+  margin: 0!important;
+}
+
+.add-edit.edit,
+.__edit {
+  border: 2px solid $brand-primary !important;
+  border-radius: 4px;
+  margin-bottom: -1px;
+  margin-top: -1px;
+  padding: 2px;
+  &.drop {
+    padding: 8px;
+  }
+}
+
+.padding-right-sm {
+  padding-right: $padding-sm !important;
+}
+
+.no-padding-left-xs {
+    @media (max-width:$screen-xs-min){
+        padding-left:0;
+    }
+}
+
+.waste-item {
+
+  &.active {
+    background-color: $brand-primary;
+    color: #fff;
+
+    &:hover {
+      background-color: $brand-primary !important;
+      color: #fff;
+    }
+  }
+
+  &.warning {
+    background-color: $brand-warning;
+
+    &:hover {
+      background-color: $brand-warning !important;
+    }
+  }
+}
+
+// Update Icon
+// ----------------------------
+// visible to the right after inline edit
+.same-update-icon {
+  color: $brand-success;
+  position: absolute;
+  right: -25px;
+}
+

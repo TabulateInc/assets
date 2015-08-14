@@ -1,0 +1,54 @@
+$space-left: 480px;
+.nav-space-left {
+  max-width: $space-left / 2;
+}
+
+.nav-holder {
+    height:82px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    li {
+        border-left-width: 0 !important;
+        &.active {
+            margin-left: -1px !important;
+            a {
+                color: $brand-primary;
+                border-left-width: 1px !important;
+                &:hover {
+                    color: $brand-primary !important;
+                }
+                &:visited {
+                    color: $brand-primary !important;
+                }
+            }
+        }
+        &:first-child {
+            a {
+                border-left-width: 1px !important;
+            }
+            &.active {
+                margin-left: 0 !important;
+            }
+        }
+    }
+    a {
+        color: $gray !important;
+        border-top-color: #bbb !important;
+        border-right-color: #bbb !important;
+        border-left-color: #bbb !important;
+        border-left-width: 0 !important;
+    }
+}
+
+.nav-glyph {
+    display:inline-block;
+    font-size:1.5em;
+    margin-right:0.5em;
+    margin-left:5px;
+    &.active {
+        color:$brand-primary;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+}

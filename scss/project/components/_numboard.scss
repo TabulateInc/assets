@@ -1,0 +1,93 @@
+$landscape-height-max: 420px;
+
+$numboard-input-margin-min: 25px;
+$numboard-input-margin-max: 35px;
+$numboard-input-height: 25px;  // hardcoded
+
+$action-buttons-margin: 15px;
+$action-buttons-height: 33px;  // hardcoded
+
+.numboard {
+  height: calc(100% - 50px);
+
+  &__wrapper {
+    padding: 10px;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    background-color: #fff;
+    height: 100%;
+  }
+
+  &__input {
+    margin: $numboard-input-margin-max 0;
+    @media (max-height: $landscape-height-max) {
+      margin-top: $numboard-input-margin-min;
+      margin-bottom: $numboard-input-margin-min;
+    }
+  }
+
+  &__actions {
+    margin: $action-buttons-margin 0;
+  }
+
+  &__keyboard {
+    height: calc(100% - #{$action-buttons-margin*2 + $action-buttons-height});
+    min-height: 120px;
+
+    &__wrapper {
+      height: calc(100% - #{$numboard-input-margin-max*2 + $numboard-input-height});
+      @media (max-height: $landscape-height-max) {
+        height: calc(100% - #{$numboard-input-margin-min*2 + $numboard-input-height});
+      }
+    }
+
+    .btn {
+      line-height: 0;
+      font-size: 16px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      border-radius: 0 !important;
+      border-top: none;
+      border-left: none;
+
+      &--dot {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 0;
+      }
+    }
+
+    > .btn-group {
+      height: 25%;
+    }
+
+    .btn-group .btn-group {
+      &:last-child .btn {
+        border-right: none;
+      }
+    }
+
+    .btn-group-justified {
+      &:last-child .btn {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.glyphicons-delete {
+  background:url(#{$images-path}/glyphicons-257-delete.png) no-repeat center center transparent;
+}
+
+.btn-grey {
+  color: #000;
+}
+
+.push-bottom {
+  position: fixed;
+  bottom: 12px;
+  right: 0;
+  left: 0;
+}

@@ -1,0 +1,407 @@
+// Here go all the custom styles that are not related to any component
+
+// TOC:
+// * Scaffolding
+// * Display & Positioning
+// * Box (height, padding, margin, borders, outline)
+// * Text
+// * Inputs
+// * Buttons
+// * Grid
+// * Misc
+
+
+// Scaffolding
+// --------------------------------------------------
+
+body {
+  padding-top: 50px;
+  padding-bottom:100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+h3 {
+  font-size:23px;
+}
+
+h5 {
+  font-size: 15px;
+  color: $brand-primary;
+  text-transform: uppercase;
+  margin-top: 30px;
+
+  &:first-child {
+    margin-top:10px;
+  }
+}
+
+
+label {
+  font-weight:normal;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  /*margin: 0; [> <-- Apparently some margin are still there even though it's hidden <]*/
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+// Display & Positioning
+// -----------------------------
+
+.visible-xs-inline-block{
+  @media (min-width:$screen-sm-min){
+    display:inline-block;
+  }
+}
+
+.hidden-sm-min {
+  @media (max-width: $screen-sm-min) {
+    display: none !important;
+  }
+}
+
+.display-block{
+  display:block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.as-table {
+  display: table;
+  width: 100%;
+  &__cell {
+    display: table-cell;
+  }
+  &--inherit {
+    table-layout: fixed;
+  }
+}
+
+.as-flex {
+  display: flex;
+}
+
+.is-relative {
+  position: relative;
+}
+
+.pull-left-sm {
+  @media (min-width: $screen-sm-min) {
+    float: left;
+  }
+}
+
+.over {
+  z-index:1;
+  position: relative;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.u-abs-centered {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+// Box
+// -----------------------------
+
+.height-sm {
+  height: 27px;
+}
+
+.height-md {
+  height: 40px;
+}
+
+.height-lg {
+  height: 60px;
+}
+
+.no-padding-left {
+  padding-left: 0 !important;
+}
+
+.no-padding-right {
+  padding-right: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+@media (max-width:$screen-xs-max){
+  .no-padding-left-xs {
+    padding-left:0px;
+  }
+}
+
+select.padding-left-xs option,
+.padding-left-xs {
+  padding-left: 6px !important;
+}
+
+.margin-top {
+
+  &-md {
+    margin-top: $margin-max;
+  }
+
+  &-sm {
+    margin-top: $margin-normal;
+
+    &-xs {
+      @media (max-width:$screen-xs-max){
+        margin-top: $margin-normal;
+      }
+    }
+
+    &-sm {
+      @media (max-width:$screen-sm-max){
+        margin-top: $margin-normal;
+      }
+    }
+  }
+}
+
+.margin-bottom-sm {
+  margin-bottom: $margin-normal !important;
+}
+
+.margin-bottom-input {
+  margin-bottom: 10px !important;
+}
+
+.bottom-buffer{
+  margin-bottom:20px;
+}
+
+.margin-left-sm {
+  margin-left: 12px;
+}
+
+.no-outline {
+  &:focus {
+    outline: none !important;
+  }
+}
+
+// Text
+// --------------------------
+
+.bold {
+  font-weight:bold;
+}
+
+.text-black--force {
+  color: #333 !important;
+}
+
+.black{
+    color:#434A54!important;
+}
+
+.primary-text {
+  color: $brand-primary;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.line-height-sm {
+  line-height: $line-height-sm;
+}
+
+.line-height-md {
+  line-height: $line-height-md;
+}
+
+.line-height-lg {
+  line-height: 42px;
+}
+
+// Inputs
+// --------------------------
+.add-control{
+    padding-left:0px;
+    padding-right:5px;
+    margin-bottom:10px;
+    button, input, div.form-control, select{
+        height:40px;
+    }
+    @media (max-width:$screen-xs-max){
+        padding-left:0px;
+        padding-right:0px;
+
+        input[type=date] {
+            width:290px;
+        }
+    }
+}
+
+.input-disabled {
+  background-color: $gray-lighter;
+}
+
+.input-error {
+  background-color: $alert-danger-bg;
+}
+
+.editable {  
+  input {
+    background-color: transparent;
+    border: 0;
+    box-sizing: border-box;
+    outline: 0 !important;
+    padding: 1px;
+    text-align: right;
+    width: 100%;
+
+    &:focus {
+      outline: 2px solid #6699cc !important;
+    }
+  }
+}
+
+// Buttons
+// --------------------------
+.back-btn {
+  display: inline-block;
+  padding: 0 12px;
+  font-weight: 600;
+}
+
+.btn-grey {
+  background-color: $gray-lighter !important;
+}
+
+.btn-link--bordered {
+  border: 1px solid $brand-primary;
+  &:hover {
+    border: 1px solid $brand-primary;
+    text-decoration: none !important;
+    background-color: #fff;
+  }
+}
+
+.savebtn {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.control-buttons > div {
+  padding-left: 2px;
+  padding-right: 2px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  button {
+    width: 100%;
+    // padding:2px;
+  }
+}
+
+.add-item-link {
+  display: inline-block;
+  margin-top: 23px;
+}
+
+// Grid
+// --------------------------
+@media (max-width: $screen-xs-min) {
+  @include make-grid(xxs);
+}
+
+
+// Misc
+// --------------------------
+
+.clearfix {
+  clear: both;
+  float: none;
+}
+
+.overflow-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+};
+
+.rtl {
+  direction: rtl;
+}
+
+.pointer-hover:hover {
+  cursor:pointer;
+}
+
+.container-constrained-950 {
+  max-width:950px;
+}
+
+.container-constrained-700 {
+  max-width:700;
+  @media (min-width:$screen-sm-min) {
+    width: 700px;
+  }
+}
+
+.custom-label {
+  line-height: 33px;
+  font-weight: 400;
+}

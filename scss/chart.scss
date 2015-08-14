@@ -1,5 +1,5 @@
-@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
-@import "partials/_bootstrap-variables";
+@import 'project/variables';
+@import 'bootstrap/variables';
 
 $chart-margin:75px;
 

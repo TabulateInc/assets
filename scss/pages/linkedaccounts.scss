@@ -1,0 +1,28 @@
+@import '../project/variables';
+@import '../bootstrap/variables';
+
+.financial__btn {
+    margin-top: 8px;
+    width: 133px;
+
+    @media (max-width: $screen-xs-min) {
+        width: 49%;
+    }
+
+    &--add {
+        margin-left: 5px;
+
+        @media (max-width: $screen-xs-min) {
+            margin-left: 2%;
+        }
+    }
+}
+
+.institutions-list{
+    max-height:400px;
+    overflow-y:auto;
+}
+
+.table-head {
+    border-bottom:2px solid $table-border-color;
+}

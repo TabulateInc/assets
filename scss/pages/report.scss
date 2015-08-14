@@ -1,0 +1,112 @@
+@import '../project/variables';
+@import '../bootstrap/variables';
+
+.report-table{
+    thead{
+        border-bottom:1px solid #ddd;
+    }
+    td{
+        padding: 2px 1px 3px 25px;
+        min-width:100px;
+    }
+    td, th,b{
+        white-space:nowrap;
+    }
+    &.expanded{
+        /*im ugly and i know it*/
+        /*adding a border to emulate padding when table goes wider than the screen*/
+        border-right:40px solid transparent;
+        border-collapse: separate;
+    }
+    .fix-first-column {
+      width: $fix-column-width + 1 !important;      //+1 fix white line that separate first column and data
+    }
+}
+.total-column{
+    padding-left:30px;
+    min-width:100px;
+}
+
+// Report Date Selector
+// -----------------------
+
+.custom-selector {
+  position: relative;
+
+  &__btn {
+    background: url(#{$images-path}/arrowdown.png) no-repeat right 8px center white;
+    position: relative;
+    text-align: left;
+
+    line-height: 2.0;
+    padding-bottom: 3px;
+    padding-right: 15px;
+
+    &:active,
+    &:focus {
+      background: url(#{$images-path}/arrowdown.png) no-repeat right 8px center white;
+      color: black;
+      border-radius: 2px;
+    }
+  }
+
+  &__options {
+    border: 1px solid #AAB2BD;
+    box-shadow: 0 1px 1px #AAB2BD;
+    position: absolute;
+    z-index: 900;
+    background-color: white;
+    width: 300px;
+    min-width: 100%;
+    padding-bottom: 5px;
+    @media (max-width: $screen-xs-min) {
+      width: 100%;
+    }
+  }
+
+  &__option {
+    cursor: pointer;
+    display: block;
+    padding: 5px 5px 5px 10px;
+    min-height: 1.2em;
+    border-bottom: 1px solid $gray-lighter;
+
+    &:hover {
+      color: white;
+      background-color: $brand-primary;
+    }
+  }
+
+  .datepicker {
+    width: 250px !important
+  }
+
+  .add-icon{
+    >.glyphicon{
+      position: absolute;
+      padding: 13px 5px;
+      right: 15px;
+    }
+  }
+  .calendar-holder {
+      padding: 5px 5px 5px 10px;
+      &__item {
+        padding-left: 0;
+        padding-right: 5px;
+        @media (max-width: $screen-xs-min) {
+          margin-bottom: 10px;
+        }
+      }
+      .calendar-input {
+        padding-left: 6px;
+      }
+  }
+}
+
+.content-filter {
+  .custom-selector__btn{
+    line-height:1.5;
+    padding:3px 20px 4px 12px;
+    height:29px!important;
+  }
+}

@@ -1,0 +1,53 @@
+.spinner {
+  display: inline-block;
+  line-height: 1.1em;
+
+  fill: #444;
+  stroke: #69717d;
+
+  // TODO: refactor start
+
+  &__wrapper {
+    vertical-align: middle;
+    height: 100%;
+    display: inline-block;
+  }
+
+  svg {
+    width: 25px;
+    height: 100%;
+  }
+ 
+  &--inline {
+    svg {
+      width: 16px;
+    }
+  }
+
+  // TODO: refactor stop
+
+  &--center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  &--chart {
+    width: 75px;
+  }
+
+  &.btn-primary {
+    fill: lighten(#444, 90%);
+    stroke: lighten(#444, 90%);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+      cursor: default;
+      color: transparent;
+      outline: none !important;
+      box-shadow: none;
+  }
+}

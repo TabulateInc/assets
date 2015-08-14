@@ -1,0 +1,23 @@
+.btn-spinner {
+  position: relative;
+
+  &.is-in-progress {
+    color: transparent;
+  }
+
+  svg {
+    width: 25px;
+    height: 100%;
+    margin: auto;
+  }
+
+  &.btn-primary svg {
+    fill: lighten(#444, 90%);
+    stroke: lighten(#444, 90%);  
+  }
+
+  &.btn-default svg {
+    fill: #444;
+    stroke: #69717d;
+  }
+}

@@ -9,6 +9,12 @@ $margin-normal: 12px;
 
 .inline-table {
 
+  &.--sm-at-xs
+    @media (max-width:$screen-xs-max){
+       font-size:11px;
+    }
+  }
+
   &__top {
     border-top: 1px solid #ddd;
   }

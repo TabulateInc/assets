@@ -1,7 +1,14 @@
 
 .table tr:hover {
   .b-delete-icon {
-    display:inline;
+    display: inline;
     visibility: visible;
   }
+}
+
+.modal {
+    .b-delete-icon {
+        display: inline-block;
+        visibility: visible;
+    }
 }

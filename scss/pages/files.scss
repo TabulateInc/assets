@@ -214,12 +214,8 @@ $blue-light: #e3f2ff;
 // Right click
 // -----------------
 .popover-btn {
-  span:first-child {
+  .glyphicon {
     margin-top: 8px;
-  }
-
-  .b-delete-icon {
-    text-align: left;
   }
 }
 

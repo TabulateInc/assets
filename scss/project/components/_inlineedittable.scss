@@ -9,7 +9,7 @@ $margin-normal: 12px;
 
 .inline-table {
 
-  &.--sm-at-xs
+  &.--sm-at-xs {
     @media (max-width:$screen-xs-max){
        font-size:11px;
     }
@@ -18,12 +18,13 @@ $margin-normal: 12px;
   &__top {
     border-top: 1px solid #ddd;
   }
+
   &__row {
     border-bottom: 1px solid #ddd;
     cursor: pointer;
     padding: 8px 8px 8px 0px;
     clear:both;
-    float:none;
+    float: none;
     position: relative;
 
     &div:before {
@@ -35,18 +36,10 @@ $margin-normal: 12px;
         display: table;
         clear:both;
     }
-   .b-delete-icon{
-      display: inline-block;
-    }
 
     &:hover,
     &.as-hovered {
       background-color: $table-bg-hover;
-
-      .b-delete-icon{
-        display: inline-block;
-        visibility:visible;
-      }
     }
   }
 

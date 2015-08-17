@@ -1,14 +1,18 @@
+.b-delete-icon {
+  display: inline-block;
+}
 
-.table tr:hover {
+.inline-table__row:hover,
+.inline-table__row.as-hovered,
+.modal {
   .b-delete-icon {
-    display: inline;
+    display: inline-block;
     visibility: visible;
   }
 }
 
-.modal {
-    .b-delete-icon {
-        display: inline-block;
-        visibility: visible;
-    }
+.touch {
+  .b-delete-icon {
+    visibility: visible;
+  }
 }

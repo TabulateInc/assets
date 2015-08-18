@@ -10,6 +10,10 @@ $blue-light: #e3f2ff;
   .inline-table__row {
     line-height: 2.5em;
     cursor: default;
+
+    &.--edit.drop {
+      padding: 8px;
+    }
   }
 
   .drag-drop {

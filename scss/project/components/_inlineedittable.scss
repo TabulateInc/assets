@@ -1,6 +1,3 @@
-$padding-sm: 7px;
-$margin-normal: 12px;
-
 .header {
   font-weight:bold;
   border-bottom:2px solid $table-border-color;
@@ -23,23 +20,19 @@ $margin-normal: 12px;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
     padding: 8px 8px 8px 0px;
-    clear:both;
-    float: none;
     position: relative;
-
-    &div:before {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        content: " ";
-        display: table;
-        clear:both;
-    }
 
     &:hover,
     &.as-hovered {
       background-color: $table-bg-hover;
+    }
+
+    &.--edit {
+      border: 2px solid $brand-primary !important;
+      border-radius: 4px;
+      margin-bottom: -1px;
+      margin-top: -1px;
+      padding: 2px;
     }
   }
 
@@ -64,6 +57,7 @@ $margin-normal: 12px;
     }
   }
 
+  // aaaa, we should remove it someday
   [class*="col-"], td {
       padding-right:0px;
       &:first-child{
@@ -72,51 +66,10 @@ $margin-normal: 12px;
   }
 }
 
-.no-margin {
-  margin: 0!important;
-}
-
-.add-edit.edit,
-.__edit {
-  border: 2px solid $brand-primary !important;
-  border-radius: 4px;
-  margin-bottom: -1px;
-  margin-top: -1px;
-  padding: 2px;
-  &.drop {
-    padding: 8px;
-  }
-}
-
-.padding-right-sm {
-  padding-right: $padding-sm !important;
-}
-
-.no-padding-left-xs {
-    @media (max-width:$screen-xs-min){
-        padding-left:0;
-    }
-}
-
-.waste-item {
-
-  &.active {
-    background-color: $brand-primary;
-    color: #fff;
-
-    &:hover {
-      background-color: $brand-primary !important;
-      color: #fff;
-    }
-  }
-
-  &.warning {
-    background-color: $brand-warning;
-
-    &:hover {
-      background-color: $brand-warning !important;
-    }
-  }
+div.inline-table__row {
+  @include clearfix();
+  clear: both;
+  float: none;
 }
 
 // Update Icon

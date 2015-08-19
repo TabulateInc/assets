@@ -7,7 +7,7 @@
         border-bottom:1px solid $table-border-color;
     }
     td{
-        padding: 2px 1px 3px 25px;
+        padding: $report-table-cell-padding;
         min-width:100px;
     }
     td, th,b{
@@ -23,9 +23,10 @@
       width: $fix-column-width + 1 !important;      //+1 fix white line that separate first column and data
     }
 }
-.total-column{
-    padding-left:30px;
-    min-width:100px;
+
+.total-column {
+    padding-left: $report-table-cell-padding-left;
+    min-width: 100px;
 }
 
 // Report Date Selector

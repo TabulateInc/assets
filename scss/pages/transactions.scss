@@ -11,7 +11,7 @@
 
     @media (min-width:$screen-md-min){
       position: absolute;
-      line-height: 40px;
+      line-height: $line-height-md;
       width: 20px;
       top: 0;
       right: -20px;
@@ -39,6 +39,7 @@
 
 .similar {
   &__body .transactions-list {
+    // make borders fit the left table
     margin-top: 23px;
   }
   &__header {

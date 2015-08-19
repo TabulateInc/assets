@@ -24,8 +24,8 @@
 .panel-heading,
 .panel-footer {
   @media (max-width: $screen-xs-max) {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: $padding-small-horizontal;
+    padding-right: $padding-small-horizontal;
   }
 }
 

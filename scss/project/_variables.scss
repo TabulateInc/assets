@@ -1,17 +1,18 @@
 // Paths
 $images-path: /assets/img;
 
+// Screen
 $screen-xxs-max: 479px;  // $screen-xs-min - 1;
 
 // Colors
 $middle-gray-color:          #ccc;
 $gray-lighter-custom:        lighten($middle-gray-color, 18%);
 $white: #fff;
-$blue-light: #e3f2ff;
-
-$ios-checked: #007AFF;  // on transactions page
-$ios-unchecked: #C7C7CC;
-$ios-notification: #FF3B30;
+$black: rgb(0,0,0);
+$blue-light: #e3f2ff;  // dropbox blue on files page
+$ios-checked: #007aff;  // on transactions page
+$ios-unchecked: #c7c7cc;
+$ios-notification: #ff3b30;
 
 // typography
 $font-size-xs: 11px;
@@ -28,13 +29,13 @@ $padding-md: 15px;
 $padding-vertical-lg: 20px;
 $padding-horizontal-lg: 30px;
 
-
 $margin-xs: 4px;
 $margin-normal: 12px;
 $margin-md: 20px;
 $margin-max: 36px;
 
 $border-gray-color:          $middle-gray-color;
+$border-radius-default:      4px;
 
 $line-height-sm: 33px;
 $line-height-md: 40px;
@@ -45,19 +46,16 @@ $container-md-width-lg: 1070px;
 $container-constrained-sm: 750px;
 $container-constrained-md: 950px;
 
-$border-radius-default: 4px;
 
 // Elements
 // ------------------------------
-$input-in-control-height: 40px;
+$input-in-control-height: $height-md;
 $input-in-control-padding-right: 5px;
+
 $select-btn-inner-padding: 6px 15px 3px 12px;
+$bootstrap-btn-height: 33px;
 
 $btn-border-radius: $border-radius-default;
-
-$page-title-font-size: 23px;
-$page-title-margin-top: 30px;
-$section-title-font-size: 15px;
 
 
 // Components
@@ -65,10 +63,10 @@ $section-title-font-size: 15px;
 $main-navigation-height:     50px;
 $main-nav-links-padding-sm: 10px;
 
-$fix-column-width:           180px;
-$sorticon-size: 9px;
-$sorticon-margin: 4px;
-$drag-icon-size: 20px;
+$page-title-font-size: 23px;
+$page-title-margin-top: 30px;
+$section-title-font-size: 15px;
+
 
 // numboard
 $landscape-height-max: 420px;
@@ -94,12 +92,12 @@ $subnav-margin-vertical: $margin-md;
 
 // modals
 $modal-border-radius: $border-radius-default;
-$modal-footer-horizontal-padding: 30px;
-$modal-footer-bottom-padding: 15px;
+$modal-footer-horizontal-padding: $padding-horizontal-lg;
+$modal-footer-bottom-padding: $padding-md;
 
 // alert
 $alert-border-radius: $border-radius-default;
-$alert-success-width: 200px;
+$alert-success-width: 200px;  // top message
 $alert-from-top: $margin-normal;
 $alert-margin-vertical: 10px;
 $alert-margin-horizontal: $margin-md;
@@ -110,14 +108,30 @@ $items-table-padding: 8px;
 $items-table-row-padding: $items-table-padding $items-table-padding $items-table-padding 0;
 $items-table-edit-border-width: 2px;
 
+// data table
+$data-table-cell-height: $height-sm; 
+$fix-column-width: 180px;
+
+// content filter
 $content-filter-height: 29px;
 $content-filter-padding: 4px;
 
-// data table
-$data-table-cell-height: 27px; 
+// Misc
+$sorticon-size: 9px;
+$sorticon-margin: 4px;
+$drag-icon-size: 20px;
+
 
 // Pages
 // ----------
 
 // Files
 $open-tree-icon-width: 20px;
+
+// reports
+$report-table-cell-padding-left: 25px;
+$report-table-cell-padding: 2px 1px 3px $report-table-cell-padding-left;
+
+// ds
+$ds-table-cell-padding: 3px 8px;
+$ds-table-cell-min-width: 95px;  // to fit $xxx,xxx.xx

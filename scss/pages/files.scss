@@ -10,7 +10,7 @@
     cursor: default;
 
     &.--edit.drop {
-      padding: 8px;
+      padding: $items-table-padding;
     }
   }
 
@@ -38,8 +38,8 @@
     }
 
     &-btn {
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-left: $padding-small-horizontal;
+      padding-right: $padding-small-horizontal;
       &:hover {
         cursor: pointer;
         background-color: $blue-light;

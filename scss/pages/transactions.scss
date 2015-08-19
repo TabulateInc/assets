@@ -27,16 +27,6 @@
   }
 }
 
-.add-edit-transaction {
-  .ng-invalid {
-    border-width: 1px !important;
-    border-color: #FF3B30 !important;  // $message-danger !important;
-  }
-  .glyphicon-calendar {
-    right: 0 !important;
-  }
-}
-
 .transactions-page {
   svg:not(:root) {
     overflow: visible !important;
@@ -76,22 +66,57 @@
   margin-top: 12px !important;
 }
 
-.inline-table__row--transactions {
-  padding: 0 !important;
-  > div {
-    padding: 8px 0;
-  }
-  
-  &.transaction-in-edit {
+.items-table__row {
+  &--transactions {
+    padding: 0 !important;
+
     > div {
-      padding: 0 !important;
+      padding: 8px 0;
     }
+
+    // hack to make consistent wisth for transactions list
+    @media (max-width: $screen-md-max) {
+      > .col-xs-11 {
+        height: 59px;
+      }
+    }
+  }
+
+  &.transaction-in-edit {
     padding-top: 5px !important;
     padding-bottom: 5px !important;
     background-color: #fff !important;
+
     &:hover {
       background-color: #fff !important;
     }
+
+    > div {
+      padding: 0 !important;
+    }
+  }
+
+  // merge transactions
+  // ----------------------
+  &.active {
+    background-color: $brand-primary;
+    color: #fff;
+
+    &:hover {
+      background-color: $brand-primary !important;
+      color: #fff;
+    }
+  }
+}
+
+.add-edit-transaction {
+  .ng-invalid {
+    border-width: 1px !important;
+    border-color: #FF3B30 !important;  // $message-danger !important;
+  }
+
+  .glyphicon-calendar {
+    right: 0 !important;
   }
 }
 

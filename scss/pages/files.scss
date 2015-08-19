@@ -7,9 +7,13 @@ $blue-light: #e3f2ff;
 // Table
 // -----------------
 .b-files-table {
-  .inline-table__row {
+  .items-table__row {
     line-height: 2.5em;
     cursor: default;
+
+    &.--edit.drop {
+      padding: 8px;
+    }
   }
 
   .drag-drop {
@@ -197,7 +201,13 @@ $blue-light: #e3f2ff;
     font-size: 13px;
     display: inline-block;
     padding-right: 10px;
-    min-width: 37px;
+    min-width: 40px;
+    vertical-align: middle;
+
+    @media (max-width: $screen-xs-max) {
+      min-width: 28px;
+      max-width: 100px;
+    }
   }
 
   .glyphicon-pencil {
@@ -208,12 +218,8 @@ $blue-light: #e3f2ff;
 // Right click
 // -----------------
 .popover-btn {
-  span:first-child {
+  .glyphicon {
     margin-top: 8px;
-  }
-
-  .b-delete-icon {
-    text-align: left;
   }
 }
 

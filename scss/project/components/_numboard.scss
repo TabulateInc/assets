@@ -8,14 +8,14 @@ $action-buttons-margin: 15px;
 $action-buttons-height: 33px;  // hardcoded
 
 .numboard {
-  height: calc(100% - 50px);
+  height: calc(100% - $main-navigation-height);
 
   &__wrapper {
     padding: 10px;
     position: fixed;
     z-index: 10000;
     top: 0;
-    background-color: #fff;
+    background-color: $white;
     height: 100%;
   }
 
@@ -78,16 +78,6 @@ $action-buttons-height: 33px;  // hardcoded
 }
 
 .glyphicons-delete {
-  background:url(#{$images-path}/glyphicons-257-delete.png) no-repeat center center transparent;
+  background: url(#{$images-path}/glyphicons-257-delete.png) no-repeat center center transparent;
 }
 
-.btn-grey {
-  color: #000;
-}
-
-.push-bottom {
-  position: fixed;
-  bottom: 12px;
-  right: 0;
-  left: 0;
-}

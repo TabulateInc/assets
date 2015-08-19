@@ -5,13 +5,9 @@
     margin-left:15px;
 }
 
-.overview__panel{
-
-}
-
-.overview__counter{
-    font-size:34px;
-    padding:15px 0px;
+.overview__counter {
+    font-size: $font-size-xlg;
+    padding: $padding-md 0;
 }
  
 .overview__week_item {
@@ -24,7 +20,7 @@ select.btn-xs{
 }
 
 .overview__chart_control{
-  @media (max-width: #{$screen-xs-min - 1}){
+  @media (max-width: $screen-xxs-max) {
       margin-top:5px;
       float: none !important;
   }

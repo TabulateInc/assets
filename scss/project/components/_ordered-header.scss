@@ -1,11 +1,11 @@
 .sorticon {
-  font-size: 9px;
-  top: 4px;
-  right: -10px;
+  font-size: $sorticon-size;
+  top: $sorticon-margin;
+  right: -#{$sorticon-size} - 1;
   position: absolute;
 
   &__wrapper {
-    font-size: 13px;
+    font-size: $sorticon-size + $sorticon-margin;
     position: relative;
   }
 }

@@ -3,6 +3,9 @@
 
 
 // Angular Strap
+// =======================
+
+// Aside
 // -----------------------
 
 @media (max-width: 991px) {
@@ -18,10 +21,10 @@
 }
 
 .aside-header {
-  background-color: #fff !important;
+  background-color: $white !important;
 
   .close {
-    color: rgb(0,0,0) !important;
+    color: $gray-base !important;
     opacity: .2 !important;
     padding-top: 8px !important;
   }
@@ -29,4 +32,64 @@
 
 .aside-title {
   color: $gray;
+}
+
+
+// Datepicker
+// -----------------------
+
+.datepicker.dropdown-menu {
+    width: 250px;
+    height: 290px !important;
+    background-color: $white;
+    border: 1px solid $gray-lighter;
+
+    button {
+        outline: none;
+        border: 1px solid;
+        border-color: $white !important;
+    }
+
+    .dow {
+        color: $text-muted;
+        font-weight: 400;
+    }
+
+    .btn-link {
+        border: 1px solid;
+        border-color: $white !important;
+        &:hover {
+            background-color: $white;
+            border: 1px solid $brand-primary;
+            border-color: $brand-primary !important;
+        }
+    }
+
+    tbody {
+        height: 180px;
+        button {
+            padding: 6px;
+        }
+    }
+
+    .btn-grey {
+        &:hover {
+            color: $brand-primary;
+            border: 1px solid $brand-primary !important;
+        }
+    }
+
+    .btn-primary {
+        color: $white;
+    }
+    
+    td, th {
+        padding:1px;
+    }
+}
+
+.datepicker {
+    td, th {
+        padding:1px;
+    }
 }

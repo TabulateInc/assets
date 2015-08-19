@@ -1,11 +1,11 @@
 .category-head {
-  background-color: #f5f5f5;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd; 
+  background-color: $table-bg-hover;
+  border-top: 1px solid $table-border-color;
+  border-bottom: 1px solid $table-border-color; 
 }
 
 .break-td {
-  height: 35px;
+  height: $margin-max;
 }
 
 .empty-footer {

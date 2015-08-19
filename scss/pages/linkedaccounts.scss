@@ -2,9 +2,6 @@
 @import '../bootstrap/variables';
 
 .financial__btn {
-    margin-top: 8px;
-    width: 133px;
-
     @media (max-width: $screen-xs-min) {
         width: 49%;
     }

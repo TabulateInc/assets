@@ -5,18 +5,18 @@
   text-align: center;
   line-height: 1.1em;
 
-  fill: #444;
-  stroke: #69717d;
+  fill: $spinner-dark-color;
+  stroke: $spinner-dark-stroke-color;
  
   &.--xs {
-    width: 16px;
+    width: $spinner-xs;
   }
  
   &.--sm {
-    width: 25px;
+    width: $spinner-sm;
   }
 
   &.--md {
-    width: 75px;
+    width: $spinner-md;
   }
 }

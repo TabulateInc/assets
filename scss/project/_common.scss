@@ -15,8 +15,8 @@
 // --------------------------------------------------
 
 body {
-  padding-top: 50px;
-  padding-bottom:100px;
+  padding-top: $main-navigation-height;
+  padding-bottom: 100px;
 }
 
 h1,
@@ -37,21 +37,22 @@ h6,
   color: inherit;
 }
 
+// page title
 h3 {
-  font-size:23px;
+  font-size: $page-title-font-size;
 }
 
+// section blue title
 h5 {
-  font-size: 15px;
+  font-size: $section-title-font-size;
   color: $brand-primary;
   text-transform: uppercase;
-  margin-top: 30px;
+  margin-top: $page-title-margin-top;
 
   &:first-child {
-    margin-top:10px;
+    margin-top: $margin-normal;
   }
 }
-
 
 label {
   font-weight:normal;
@@ -79,32 +80,23 @@ select::-ms-expand {
 // Display & Positioning
 // -----------------------------
 
-.visible-xs-inline-block{
-  @media (min-width:$screen-sm-min){
-    display:inline-block;
-  }
-}
-
-.hidden-sm-min {
-  @media (max-width: $screen-sm-min) {
-    display: none !important;
-  }
-}
-
-.display-block{
-  display:block;
-}
 
 .inline-block {
   display: inline-block;
 }
 
+.as-block {
+  display: block;
+}
+
 .as-table {
   display: table;
   width: 100%;
+
   &__cell {
     display: table-cell;
   }
+
   &--inherit {
     table-layout: fixed;
   }
@@ -112,6 +104,18 @@ select::-ms-expand {
 
 .as-flex {
   display: flex;
+}
+
+.visible-xs-inline-block {
+  @media (min-width:$screen-sm-min) {
+    display: inline-block;
+  }
+}
+
+.hidden-sm-min {
+  @media (max-width: $screen-sm-min) {
+    display: none !important;
+  }
 }
 
 .is-relative {
@@ -146,38 +150,46 @@ select::-ms-expand {
 // -----------------------------
 
 .height-sm {
-  height: 27px;
+  height: $height-sm;
 }
 
 .height-md {
-  height: 40px;
+  height: $height-md;
 }
 
 .height-lg {
-  height: 60px;
-}
-
-.no-padding-left {
-  padding-left: 0 !important;
-}
-
-.no-padding-right {
-  padding-right: 0 !important;
+  height: $height-lg;
 }
 
 .no-padding {
   padding: 0 !important;
+
+  &-left {
+    padding-left: 0 !important;
+
+    &-xs {
+      @media (max-width:$screen-xs-min){
+        padding-left:0;
+      }
+    }
+  }
+
+  &-right {
+    padding-right: 0 !important;
+  }
 }
 
-@media (max-width:$screen-xs-max){
-  .no-padding-left-xs {
-    padding-left:0px;
-  }
+.padding-right-sm {
+  padding-right: $padding-sm !important;
 }
 
 select.padding-left-xs option,
 .padding-left-xs {
   padding-left: 6px !important;
+}
+
+.no-margin {
+  margin: 0!important;
 }
 
 .margin-top {
@@ -203,20 +215,18 @@ select.padding-left-xs option,
   }
 }
 
-.margin-bottom-sm {
-  margin-bottom: $margin-normal !important;
-}
+.margin-bottom {
+  &-sm {
+    margin-bottom: $margin-normal !important;
+  }
 
-.margin-bottom-input {
-  margin-bottom: 10px !important;
-}
-
-.bottom-buffer{
-  margin-bottom:20px;
+  &-md {
+    margin-bottom: $margin-md;
+  }
 }
 
 .margin-left-sm {
-  margin-left: 12px;
+  margin-left: $margin-normal;
 }
 
 .no-outline {
@@ -232,12 +242,8 @@ select.padding-left-xs option,
   font-weight:bold;
 }
 
-.text-black--force {
-  color: #333 !important;
-}
-
-.black{
-    color:#434A54!important;
+.text-dark {
+  color: $darkgray-dark !important;
 }
 
 .primary-text {
@@ -265,26 +271,27 @@ select.padding-left-xs option,
 }
 
 .line-height-lg {
-  line-height: 42px;
+  line-height: $line-height-lg;
 }
 
 // Inputs
 // --------------------------
-.add-control{
-    padding-left:0px;
-    padding-right:5px;
-    margin-bottom:10px;
-    button, input, div.form-control, select{
-        height:40px;
-    }
-    @media (max-width:$screen-xs-max){
-        padding-left:0px;
-        padding-right:0px;
+.add-control {
+  padding-left: 0;
+  padding-right: $input-in-control-padding-right;
+  margin-bottom: $margin-normal;
 
-        input[type=date] {
-            width:290px;
-        }
-    }
+  button,
+  input,
+  div.form-control,
+  select {
+    height: $input-in-control-height;
+  }
+
+  @media (max-width: $screen-xs-max){
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .input-disabled {
@@ -306,7 +313,7 @@ select.padding-left-xs option,
     width: 100%;
 
     &:focus {
-      outline: 2px solid #6699cc !important;
+      outline: 2px solid $brand-primary !important;
     }
   }
 }
@@ -323,12 +330,15 @@ select.padding-left-xs option,
   background-color: $gray-lighter !important;
 }
 
-.btn-link--bordered {
-  border: 1px solid $brand-primary;
+.btn-ghost-primary {
+  $border: 1px solid $brand-primary;
+
+  border: $border;
+
   &:hover {
-    border: 1px solid $brand-primary;
+    border: $border;
     text-decoration: none !important;
-    background-color: #fff;
+    background-color: $white;
   }
 }
 
@@ -354,11 +364,6 @@ select.padding-left-xs option,
     width: 100%;
     // padding:2px;
   }
-}
-
-.add-item-link {
-  display: inline-block;
-  margin-top: 23px;
 }
 
 // Grid
@@ -390,18 +395,19 @@ select.padding-left-xs option,
   cursor:pointer;
 }
 
-.container-constrained-950 {
-  max-width:950px;
-}
+.container-constrained-sm {
+  max-width: $container-constrained-sm;
 
-.container-constrained-700 {
-  max-width:700;
   @media (min-width:$screen-sm-min) {
-    width: 700px;
+    width: $container-constrained-sm;
   }
 }
 
+.container-constrained-md {
+  max-width: $container-constrained-md;
+}
+
 .custom-label {
-  line-height: 33px;
+  line-height: $line-height-sm;
   font-weight: 400;
 }

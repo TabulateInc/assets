@@ -1,18 +1,123 @@
 // Paths
 $images-path: /assets/img;
 
+$screen-xxs-max: 479px;  // $screen-xs-min - 1;
+
 // Colors
 $middle-gray-color:          #ccc;
 $gray-lighter-custom:        lighten($middle-gray-color, 18%);
+$white: #fff;
+$blue-light: #e3f2ff;
 
-$border-gray-color:          $middle-gray-color;
-$fix-column-width:           180px;
+$ios-checked: #007AFF;  // on transactions page
+$ios-unchecked: #C7C7CC;
+$ios-notification: #FF3B30;
 
-$margin-normal: 12px;
-$margin-max: 36px;
+// typography
+$font-size-xs: 11px;
+$font-size-md: 16px;
+$font-size-xlg: 36px;
+
+// Box
+$height-sm: 27px;
+$height-md: 40px;
+$height-lg: 60px;
 
 $padding-sm: 7px;
+$padding-md: 15px;
+$padding-vertical-lg: 20px;
+$padding-horizontal-lg: 30px;
+
+
+$margin-xs: 4px;
 $margin-normal: 12px;
+$margin-md: 20px;
+$margin-max: 36px;
+
+$border-gray-color:          $middle-gray-color;
 
 $line-height-sm: 33px;
 $line-height-md: 40px;
+$line-height-lg: 42px;
+
+$container-md-width-md: 970px;
+$container-md-width-lg: 1070px;
+$container-constrained-sm: 750px;
+$container-constrained-md: 950px;
+
+$border-radius-default: 4px;
+
+// Elements
+// ------------------------------
+$input-in-control-height: 40px;
+$input-in-control-padding-right: 5px;
+$select-btn-inner-padding: 6px 15px 3px 12px;
+
+$btn-border-radius: $border-radius-default;
+
+$page-title-font-size: 23px;
+$page-title-margin-top: 30px;
+$section-title-font-size: 15px;
+
+
+// Components
+// ------------------------------
+$main-navigation-height:     50px;
+$main-nav-links-padding-sm: 10px;
+
+$fix-column-width:           180px;
+$sorticon-size: 9px;
+$sorticon-margin: 4px;
+$drag-icon-size: 20px;
+
+// numboard
+$landscape-height-max: 420px;
+$numboard-input-margin-min: 25px;
+$numboard-input-margin-max: 35px;
+$numboard-input-height: 25px;  // hardcoded
+$action-buttons-margin: 15px;
+$action-buttons-height: 33px;  // hardcoded
+
+// spinner
+$spinner-xs: 16px;
+$spinner-sm: 25px;
+$spinner-md: 75px;
+$spinner-dark-color: #444;
+$spinner-light-color: lighten($spinner-dark-color, 90%);
+$spinner-dark-stroke-color: #69717d;
+
+// subnav
+$subnav-border-radius: $border-radius-default;
+$subnav-border-color: #bbb;
+$subnav-height: 82px;
+$subnav-margin-vertical: $margin-md;
+
+// modals
+$modal-border-radius: $border-radius-default;
+$modal-footer-horizontal-padding: 30px;
+$modal-footer-bottom-padding: 15px;
+
+// alert
+$alert-border-radius: $border-radius-default;
+$alert-success-width: 200px;
+$alert-from-top: $margin-normal;
+$alert-margin-vertical: 10px;
+$alert-margin-horizontal: $margin-md;
+$alert-info-padding: $padding-md 10px; // $padding-small-horizontal in bootstrap
+
+// items table
+$items-table-padding: 8px;
+$items-table-row-padding: $items-table-padding $items-table-padding $items-table-padding 0;
+$items-table-edit-border-width: 2px;
+
+$content-filter-height: 29px;
+$content-filter-padding: 4px;
+
+// data table
+$data-table-cell-height: 27px; 
+
+// Pages
+// ----------
+
+// Files
+$open-tree-icon-width: 20px;

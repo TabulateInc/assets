@@ -1,52 +1,66 @@
 .content-filter {
-    margin-top: 4px;
-    margin-bottom:16px;
-    padding:4px 0px;
-    width:100%;
-    border-top: 1px solid $table-border-color;
-    border-bottom: 1px solid $table-border-color;
-    
-    .add-control {
-        margin-bottom:0px;
+  margin-top: $margin-xs;
+  margin-bottom: $margin-normal;
+  padding: $content-filter-padding 0;
+  width: 100%;
+  border-top: 1px solid $table-border-color;
+  border-bottom: 1px solid $table-border-color;
+
+  &.expand-wrapper {
+    a {
+      height: $content-filter-height !important;
     }
-    .filter-control {
-        height:29px;
+  }
+
+  .add-control {
+    margin-bottom: 0;
+  }
+
+  .filter-control {
+    height: $content-filter-height;
+  }
+
+  .glyphicon-menu-left {
+    font-size: 12px;
+  }
+
+  select {
+    // centers text inside
+    height: $content-filter-height;
+    padding: 3px 15px 4px 10px;
+  }
+
+  .week-dropdown,
+  .dropdown-menu {
+    width: 160px !important;
+  }
+
+  .week-dropdown {
+    @media (max-width: $screen-xs-max) {
+      width: 140px !important;
     }
-    .glyphicon-menu-left {
-      font-size: 12px;
-    }
-    select{
-        padding:3px 15px 4px 10px;
-        height:29px;
-    }
+  }
+
+  .day-dropdown{
+      width: 120px !important;
+  }
 }
 
-.date-selector{
-    button.week-changer {
-        font-size:10px;
-        height:29px;
-        @media (max-width: $screen-xs-max){
-          &.hide-buttons{
-              display: none;
-          }
-        }
-        &:focus,
-        &:active,
-        &.active,
-        &.disabled:hover {
-          color: $gray !important;
-        }
-    }
-    .week-dropdown,
-    .dropdown-menu {
-      width: 160px !important;
-    }
-    .week-dropdown {
-      @media (max-width: $screen-xs-max) {
-        width: 140px !important;
-      }
-    }
-    .day-dropdown{
-        width: 120px !important;
-    }
+.week-dropdown,
+.day-dropdown,
+.account-dropdown {
+  text-align: left;
+  position: relative;
+  height: $content-filter-height;
+
+  .caret {
+    position: absolute;
+    right: 10px;
+    top: 47%;
+  }
+}
+
+.above-filter-link {
+  display: inline-block;
+  margin-top: $margin-normal;
 }

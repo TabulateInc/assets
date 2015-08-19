@@ -1,33 +1,6 @@
-.week-dropdown,
-.day-dropdown,
-.account-dropdown {
-  text-align: left;
-  position:relative;
-  height:29px;
-
-  .caret {
-    position: absolute;
-    right: 10px;
-    top: 47%;
-  }
-}
-
-.account-dropdown {
-  padding: 3px 10px 2px 5px;
-}
-
 .drag-drop {
   display: inline-block;
-  min-width: 20px;
-}
-
-.expand-wrapper {
-  .header {
-    font-weight: normal;
-  }
-  .content-filter {
-    height: 39px;
-  }
+  min-width: $drag-icon-size;
 }
 
 .transactions-sidebar {
@@ -41,7 +14,7 @@
 
   b {
     display: block;
-    font-size: 18px;
+    font-size: $font-size-large;
     text-align: center;
   }
 }

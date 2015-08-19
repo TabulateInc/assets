@@ -1,6 +1,8 @@
+$week-caret-size: 5px;
+
 .caret-right, .caret-left {
-    border-bottom: 5px solid transparent;
-    border-top: 5px solid transparent;
+    border-bottom: $week-caret-size solid transparent;
+    border-top: $week-caret-size solid transparent;
     display: inline-block;
     height: 0;
     vertical-align: top;
@@ -9,13 +11,26 @@
 }
 
 .caret-right{
-    border-left: 5px solid;
+    border-left: $week-caret-size solid;
 }
 
 .caret-left{
-    border-right: 5px solid;
+    border-right: $week-caret-size solid;
 }
 
-.week-dropdown {
-  padding: 3px 20px 4px 20px;
+button.week-changer {
+    font-size:10px;
+    height: $content-filter-height;
+
+    @media (max-width: $screen-xs-max){
+      &.hide-buttons{
+          display: none;
+      }
+    }
+    &:focus,
+    &:active,
+    &.active,
+    &.disabled:hover {
+      color: $gray !important;
+    }
 }

@@ -1,18 +1,22 @@
-.navbar-brand{
-    height:50px;
-    width:50px;
+.navbar-brand {
+    height: $main-navigation-height;
+    width: $main-navigation-height;
+
     img {
-        margin: -3px 0 0 0;
+        margin: -3px 0 0;
     }
 }
-.navbar-right{
-    margin-right:0px;
+
+.navbar-right {
+    margin-right: 0;
 }
-.btn-shaded{
+
+.btn-shaded {
     background-color:#4c4c4c;
     border-color:#5c5c5c;
     color:#8c8c8c;
-    .caret{
+
+    .caret {
         border-top-color:#8c8c8c;
         border-bottom-color:#8c8c8c;
     }

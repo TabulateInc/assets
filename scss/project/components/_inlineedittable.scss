@@ -1,25 +1,25 @@
 .header {
   font-weight:bold;
   border-bottom:2px solid $table-border-color;
-  padding: 8px 8px 8px 0px;
+  padding: $items-table-row-padding;
 }
 
 .items-table {
 
   &.--sm-at-xs {
     @media (max-width:$screen-xs-max){
-       font-size:11px;
+       font-size: $font-size-xs;
     }
   }
 
   &__top {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid $table-border-color;
   }
 
   &__row {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $table-border-color;
     cursor: pointer;
-    padding: 8px 8px 8px 0px;
+    padding: $items-table-row-padding;
     position: relative;
 
     &:hover,
@@ -28,8 +28,8 @@
     }
 
     &.--edit {
-      border: 2px solid $brand-primary !important;
-      border-radius: 4px;
+      border: $items-table-edit-border-width solid $brand-primary !important;
+      border-radius: $border-radius-default;
       margin-bottom: -1px;
       margin-top: -1px;
       padding: 2px;

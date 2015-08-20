@@ -261,3 +261,13 @@ select.btn{
     color: $gray-base;
   }
 }
+
+.has-error {              // fixes the issue with select element which already has border with !important color
+  select.form-control {
+    border-color: $grapefruit-dark !important;
+
+    &:focus {
+      border-color: $grapefruit-dark !important;
+    }
+  }
+}

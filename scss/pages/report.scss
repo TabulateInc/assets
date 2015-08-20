@@ -6,8 +6,13 @@
         border-bottom:1px solid #ddd;
     }
     td{
-        padding: 2px 1px 3px 25px;
+        padding: 2px 1px 3px 22px;
         min-width:100px;
+
+        @media (max-width: $screen-md-max) {
+          padding-left: 3px;
+          min-width: 98px;
+        }
     }
     td, th,b{
         white-space:nowrap;

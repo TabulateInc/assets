@@ -110,7 +110,7 @@ $items-table-edit-border-width: 2px;
 
 // data table
 $data-table-cell-height: $height-sm; 
-$fix-column-width: 180px;
+$fix-column-width: 177px;
 
 // content filter
 $content-filter-height: 29px;
@@ -129,8 +129,7 @@ $drag-icon-size: 20px;
 $open-tree-icon-width: 20px;
 
 // reports
-$report-table-cell-padding-left: 25px;
-$report-table-cell-padding: 2px 1px 3px $report-table-cell-padding-left;
+$report-table-cell-padding: 2px 1px 3px 22px;
 
 // ds
 $ds-table-cell-padding: 3px 8px;

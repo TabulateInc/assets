@@ -2,14 +2,28 @@
 @import '../project/utils';
 @import '../bootstrap/variables';
 
+%report-table-column {
+  // should fit $xxx,xxx.xx and do not overflow container
+  // on medium and large screens
+  padding-left: 22px;
+  min-width: 100px;
+
+  @media (max-width: $screen-md-max) {
+    padding-left: 3px;
+    min-width: 98px;
+  }
+}
+
 .report-table{
     thead{
         border-bottom:1px solid $table-border-color;
     }
+
     td{
-        padding: $report-table-cell-padding;
-        min-width:100px;
+      padding: $report-table-cell-padding;
+      @extend %report-table-column;
     }
+
     td, th,b{
         white-space:nowrap;
     }
@@ -25,8 +39,7 @@
 }
 
 .total-column {
-    padding-left: $report-table-cell-padding-left;
-    min-width: 100px;
+  @extend %report-table-column;
 }
 
 // Report Date Selector

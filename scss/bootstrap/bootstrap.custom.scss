@@ -170,6 +170,10 @@ $border:1px solid $subnav-border-color;
   }
 }
 
+.navbar-btn {
+    margin-left: 15px;  // nav link padding left
+}
+
 .form-control[readonly] {
     background-color: $white;
 }

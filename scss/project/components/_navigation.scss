@@ -1,6 +1,8 @@
-$space-left: 480px;
-.nav-space-left {
-  max-width: $space-left / 2;
+@media (min-width: $screen-md-min) {
+    $space-left: 460px;
+    .nav-space-left {
+      max-width: $space-left / 2;
+    }
 }
 
 .nav-holder {

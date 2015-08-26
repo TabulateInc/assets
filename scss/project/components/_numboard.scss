@@ -1,5 +1,5 @@
 .numboard {
-  height: calc(100% - $main-navigation-height);
+  height: calc(100% - #{$main-navigation-height});
 
   &__wrapper {
     padding: 10px;

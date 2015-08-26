@@ -58,7 +58,8 @@ label {
   font-weight:normal;
 }
 
-input {
+input[type="text"],
+input[type="number"] {
   -webkit-appearance: none;
 }
 
@@ -215,6 +216,11 @@ select.padding-left-xs option,
       @media (max-width:$screen-sm-max){
         margin-top: $margin-normal;
       }
+
+    }
+
+    &.alert-danger {
+      margin-top: $margin-normal !important;
     }
   }
 }

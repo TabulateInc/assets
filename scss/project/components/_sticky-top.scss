@@ -1,7 +1,7 @@
 .sticky-top {
     //TODO this is hack, sorry
   position: fixed;
-  top: 51px;
+  top: $main-navigation-height + 1;
 
   &--transactions {
     left: 65%;
@@ -10,7 +10,7 @@
   }
 
   &--files {
-    background-color: #fff;
+    background-color: $white;
     z-index: 1;
     padding-left: 0;
 

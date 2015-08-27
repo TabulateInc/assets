@@ -6,18 +6,18 @@
   }
 
   svg {
-    width: 25px;
+    width: $spinner-sm;
     height: 100%;
     margin: auto;
   }
 
   &.btn-primary svg {
-    fill: lighten(#444, 90%);
-    stroke: lighten(#444, 90%);  
+    fill: $spinner-light-color;
+    stroke: $spinner-light-color;  
   }
 
   &.btn-default svg {
-    fill: #444;
-    stroke: #69717d;
+    fill: $spinner-dark-color;
+    stroke: $spinner-dark-stroke-color;
   }
 }

@@ -1,6 +1,7 @@
 @import '../project/variables';
 @import '../bootstrap/variables';
 
+
 table.summary-table {
   border-collapse: collapse;
 
@@ -9,13 +10,13 @@ table.summary-table {
   }
 
   th,td {
-    min-width: 95px;
-    padding:3px 8px;
+    min-width: $ds-table-cell-min-width;
+    padding: $ds-table-cell-padding;
   }
 
   .category-head.fix-first-column {
     width: 100% !important;
-    height: 28px !important; //fix bottom border
+    height: $data-table-cell-height + 1 !important; //fix bottom border
     z-index: 1;   //fix hidding of bottom border when next row is hovered
   }
 }
@@ -23,7 +24,7 @@ table.summary-table {
 .ds-cell {
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
-  min-width: 95px;
+  min-width: $ds-table-cell-min-width;
 
   &.editable {
     border: 1px solid $table-border-color;

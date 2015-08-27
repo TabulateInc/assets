@@ -1,10 +1,12 @@
-$space-left: 480px;
-.nav-space-left {
-  max-width: $space-left / 2;
+@media (min-width: $screen-md-min) {
+    $space-left: 460px;
+    .nav-space-left {
+      max-width: $space-left / 2;
+    }
 }
 
 .nav-holder {
-    height:82px;
+    height: $subnav-height;
     overflow-x:auto;
     overflow-y:hidden;
     li {
@@ -33,9 +35,9 @@ $space-left: 480px;
     }
     a {
         color: $gray !important;
-        border-top-color: #bbb !important;
-        border-right-color: #bbb !important;
-        border-left-color: #bbb !important;
+        border-top-color: $subnav-border-color !important;
+        border-right-color: $subnav-border-color !important;
+        border-left-color: $subnav-border-color !important;
         border-left-width: 0 !important;
     }
 }

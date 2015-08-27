@@ -3,8 +3,6 @@
 
 // Daily Summary
 .dst-categories {
-  border-top: 2px solid #ddd;
-  margin-top: 24px;
 
   p,
   strong {
@@ -15,23 +13,17 @@
     margin-bottom: 0;
   }
 
+  &__category {
+    line-height: $line-height-sm;
+  }
+
   &__subcategory {
-      line-height: 30px;
+    line-height: $line-height-sm*.9; // make slightly smaller than category line height
   }
 
-  &__add-cat {
-    margin-top: 30px;
-  }
-
-  &__empty {
-    height: 40px;
-    &:last-child {
-      display: none;
-    }
-  }
-
-  input {
-    font-size: 95% !important;
+  input,
+  select {
+    font-size: 100% !important; // set font size the same as in wrapper element
   }
 
   .add-control {
@@ -47,7 +39,6 @@
       margin: 0;
     }
   }
-
 }
 
 
@@ -56,8 +47,9 @@
   .alert-danger {
     position: relative;
     top: 0;
-    margin-right:5px !important;
-    margin-bottom: 10px !important;
+    margin-right: $input-in-control-padding-right !important;
+    margin-bottom: $margin-normal !important;
+
     @media (max-width:$screen-xs-max){
       margin-right: 0 !important;
     }

@@ -1,0 +1,17 @@
+
+$arrow-down: url(#{$images-path}/arrowdown.png) no-repeat right 8px center $white;
+
+@mixin custom-selector() {
+  background: $arrow-down;
+  position: relative;
+  padding-bottom: 3px;
+  padding-right: $padding-md;
+  text-align: left;
+
+  &:active,
+  &:focus {
+    background: $arrow-down;
+    color: $black;
+    border-radius: 2px;
+  }
+}

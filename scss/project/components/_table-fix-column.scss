@@ -17,13 +17,13 @@
   }
 
   td {
-    height: 27px;
+    height: $data-table-cell-height;
     vertical-align: middle;
   }
 
   .table-hover>tbody>tr:hover {
     td {
-      background-color: #f5f5f5;
+      background-color: $table-bg-hover;
     }
   }
 
@@ -36,7 +36,7 @@
 .ps-scrollbar-x-rail {
   display: block !important;
   opacity: 0.6 !important;
-  background-color: #eee !important;
+  background-color: $gray-lighter !important;
 
   .ps-scrollbar-x {
     background-color: #999 !important;

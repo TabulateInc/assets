@@ -1,4 +1,5 @@
 @import '../project/variables';
+@import '../project/utils';
 @import 'variables';
 
 @import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
@@ -9,10 +10,10 @@
 .container.container-md {
     $screen-md-min: 992px;
     @media (min-width: $screen-md-min) {
-        width: (970px + $grid-gutter-width);
+        width: ($container-md-width-md + $grid-gutter-width);
     }
     @media (min-width: $screen-lg-min) {
-        width: (1070px + $grid-gutter-width);
+        width: ($container-md-width-lg + $grid-gutter-width);
     }
 }
 
@@ -23,14 +24,13 @@
 .panel-heading,
 .panel-footer {
   @media (max-width: $screen-xs-max) {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: $padding-small-horizontal;
+    padding-right: $padding-small-horizontal;
   }
 }
 
-
 .modal-dialog {
-  padding-top: 51px;
+  padding-top: $main-navigation-height + 1;
 }
 
 .modal {
@@ -38,22 +38,26 @@
         border: 1px solid $border-gray-color;
         @include box-shadow(none);
     }
+
     &-header {
         border-bottom: 1px solid $border-gray-color;
         min-height: 15px*$modal-title-line-height;    // fixes scss (15px 30px+1.321) style error
     }
+
     &-body {
         padding: $modal-inner-padding;
         background-color: $gray-lighter-custom;
     }
+
     &-footer {
         // background-color:
         margin-top: 0;
-        padding: 0 30px 15px;
+        padding: 0 $modal-footer-horizontal-padding $modal-footer-bottom-padding;
         background-color: $gray-lighter-custom;
-        @include radius($type: border-radius, $value: 0 0 4px 4px);
+        @include radius($type: border-radius, $value: 0 0 #{$modal-border-radius} #{$modal-border-radius});
+
         .btn {
-            border-radius: 4px;
+            border-radius: $btn-border-radius;
         }
     }
 }
@@ -61,9 +65,9 @@
 .alert-info {
   color: $alert-info-text !important;
   background-color: $alert-info-bg !important;
-  padding: 15px 10px !important;
-  font-size: 11px;
-  margin: 14px auto;
+  padding: $alert-info-padding !important;
+  font-size: $font-size-small;
+  margin: $margin-normal auto;
 }
 
 .alert-success,
@@ -71,22 +75,22 @@
   text-align: center !important;
   margin: 0 auto !important;
   position: fixed;
-  top: 61px;
+  top: $main-navigation-height + $alert-from-top;
   left: 0;
   right: 0;
   z-index: 500000;
-  padding: 10px 20px;
-  border-radius: 4px;
+  padding: $alert-margin-vertical $alert-margin-horizontal;
+  border-radius: $alert-border-radius;
 }
 
 .alert-success {
   background-color: $alert-success-bg !important;
   border: 1px solid $alert-success-border !important;
-  width: 200px !important;
+  width: $alert-success-width !important;
 }
 
 .alert-danger {
-  font-size: 12px;
+  font-size: $font-size-small;
   border: 1px solid $alert-danger-border;
 
   &.inline-alert{
@@ -99,25 +103,25 @@
 
 
 $brand-border:1px solid $brand-primary;
-$border:1px solid #bbb;
+$border:1px solid $subnav-border-color;
 
 .nav-tabs{
     min-width:480px;// modified by js
     background:transparent;
     border-bottom: $border;
-    margin-top:20px;
-    margin-bottom:20px;
+    margin-top: $subnav-margin-vertical;
+    margin-bottom: $subnav-margin-vertical;
     >li{
         &:first-child a{
             border-left:$brand-border;
-            border-top-left-radius:4px;
+            border-top-left-radius:$subnav-border-radius;
             transform-origin: bottom left;
             &.active{
                 border-left:$border;
             }
         }
         &:last-child a{
-            border-top-right-radius:4px;
+            border-top-right-radius:$subnav-border-radius;
             border-right:$brand-border;
             &.active{
                 border-right:$border;
@@ -125,12 +129,12 @@ $border:1px solid #bbb;
         }
         &.active>a{
             border:$border;
-            border-bottom:1px solid white;
+            border-bottom:1px solid $white;
             transform:scaleX(1.06);
             z-index:1;
             &:hover, &:focus{
                 border:$border;
-                border-bottom:1px solid white;
+                border-bottom:1px solid $white;
             }
         }
         >a{
@@ -149,9 +153,9 @@ $border:1px solid #bbb;
 }
 
 .navbar-nav .open .dropdown-menu > li > a {
-  @media (max-width: $screen-xs-max) {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  @media (max-width: $screen-sm-max) {
+    padding-top: $main-nav-links-padding-sm;
+    padding-bottom: $main-nav-links-padding-sm;
   }
 }
 
@@ -159,32 +163,19 @@ $border:1px solid #bbb;
   margin-bottom: 0;
   @media (max-width:$screen-xs-min) {
     display: block !important;
-    font-size: 12px;
+    font-size: $font-size-small;
   }
   @media (min-width:$screen-xs-min) {
     min-width: 325px;
   }
 }
 
-.btn-fake {
-  @extend .btn-default;
-  top: 1px;
-  width: 72px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow: hidden;
-  @media (max-width:$screen-xs-max){
-    padding: 6px 3px !important;
-    width: 42px;
-  }
-  &:hover {
-    background-color: #fff;
-    color: rgb(0,0,0)
-  }
+.navbar-btn {
+    margin-left: 15px;  // nav link padding left
 }
 
 .form-control[readonly] {
-    background-color: white;
+    background-color: $white;
 }
 
 .form-control[disabled] {
@@ -195,7 +186,7 @@ $border:1px solid #bbb;
 .dropdown-menu {
     overflow-x:hidden;
     height:auto;
-    max-height:300px;
+    max-height:300px;  // no idea why
 }
 
 .dropdown.caretright  button{
@@ -224,11 +215,11 @@ $border:1px solid #bbb;
     }
 
     @media (min-width: $screen-sm-min) {
-      font-size: 17px;
+      font-size: $font-size-md;
     }
 
     @media (max-width: $screen-xs-max) {
-      font-size: 14px;
+      font-size: $font-size-base;
     }
   }
 
@@ -246,22 +237,41 @@ $border:1px solid #bbb;
 }
 
 select.btn{
-  text-align:left;
   -webkit-appearance:none;
   -moz-appearance:none;
-  position:relative;
-    padding-right:15px;
-    padding-bottom:3px;
-    background:url(#{$images-path}/arrowdown.png) no-repeat right 8px center white;
 
-  &:active,
-  &:focus{
-    background:url(#{$images-path}/arrowdown.png) no-repeat right 8px center white;
-    color:black;
-    border-radius:2px;
+  @include custom-selector();
+
+  option{
+      text-align:left;
   }
-    option{
-        text-align:left;
-    }
 }
 
+// For inventory page
+.btn-fake {
+  // button that looks like an input
+  @extend .btn-default;
+  top: 1px;
+  width: 72px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  @media (max-width:$screen-xs-max){
+    padding: 6px 3px !important;
+    width: 42px;
+  }
+  &:hover {
+    background-color: $white;
+    color: $gray-base;
+  }
+}
+
+.has-error {              // fixes the issue with select element which already has border with !important color
+  select.form-control {
+    border-color: $grapefruit-dark !important;
+
+    &:focus {
+      border-color: $grapefruit-dark !important;
+    }
+  }
+}

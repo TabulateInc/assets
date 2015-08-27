@@ -1,18 +1,136 @@
 // Paths
 $images-path: /assets/img;
 
+// Screen
+$screen-xxs-max: 479px;  // $screen-xs-min - 1;
+
 // Colors
 $middle-gray-color:          #ccc;
 $gray-lighter-custom:        lighten($middle-gray-color, 18%);
+$white: #fff;
+$black: rgb(0,0,0);
+$blue-light: #e3f2ff;  // dropbox blue on files page
+$ios-checked: #007aff;  // on transactions page
+$ios-unchecked: #c7c7cc;
+$ios-notification: #ff3b30;
 
-$border-gray-color:          $middle-gray-color;
-$fix-column-width:           180px;
+// typography
+$font-size-xs: 11px;
+$font-size-md: 16px;
+$font-size-xlg: 36px;
 
-$margin-normal: 12px;
-$margin-max: 36px;
+// Box
+$height-sm: 27px;
+$height-md: 40px;
+$height-lg: 60px;
 
 $padding-sm: 7px;
+$padding-md: 15px;
+$padding-vertical-lg: 20px;
+$padding-horizontal-lg: 30px;
+
+$margin-xs: 4px;
 $margin-normal: 12px;
+$margin-md: 20px;
+$margin-max: 36px;
+
+$border-gray-color:          $middle-gray-color;
+$border-radius-default:      4px;
 
 $line-height-sm: 33px;
 $line-height-md: 40px;
+$line-height-lg: 42px;
+
+$container-md-width-md: 970px;
+$container-md-width-lg: 1070px;
+$container-constrained-sm: 750px;
+$container-constrained-md: 950px;
+
+
+// Elements
+// ------------------------------
+$input-in-control-height: $height-md;
+$input-in-control-padding-right: 5px;
+
+$select-btn-inner-padding: 6px 15px 3px 12px;
+$bootstrap-btn-height: 33px;
+
+$btn-border-radius: $border-radius-default;
+
+
+// Components
+// ------------------------------
+$main-navigation-height:     50px;
+$main-nav-links-padding-sm: 10px;
+
+$page-title-font-size: 23px;
+$page-title-margin-top: 30px;
+$section-title-font-size: 15px;
+
+
+// numboard
+$landscape-height-max: 420px;
+$numboard-input-margin-min: 25px;
+$numboard-input-margin-max: 35px;
+$numboard-input-height: 25px;  // hardcoded
+$action-buttons-margin: 15px;
+$action-buttons-height: 33px;  // hardcoded
+
+// spinner
+$spinner-xs: 16px;
+$spinner-sm: 25px;
+$spinner-md: 75px;
+$spinner-dark-color: #444;
+$spinner-light-color: lighten($spinner-dark-color, 90%);
+$spinner-dark-stroke-color: #69717d;
+
+// subnav
+$subnav-border-radius: $border-radius-default;
+$subnav-border-color: #bbb;
+$subnav-height: 82px;
+$subnav-margin-vertical: $margin-md;
+
+// modals
+$modal-border-radius: $border-radius-default;
+$modal-footer-horizontal-padding: $padding-horizontal-lg;
+$modal-footer-bottom-padding: $padding-md;
+
+// alert
+$alert-border-radius: $border-radius-default;
+$alert-success-width: 200px;  // top message
+$alert-from-top: $margin-normal;
+$alert-margin-vertical: 10px;
+$alert-margin-horizontal: $margin-md;
+$alert-info-padding: $padding-md 10px; // $padding-small-horizontal in bootstrap
+
+// items table
+$items-table-padding: 8px;
+$items-table-row-padding: $items-table-padding $items-table-padding $items-table-padding 0;
+$items-table-edit-border-width: 2px;
+
+// data table
+$data-table-cell-height: $height-sm; 
+$fix-column-width: 177px;
+
+// content filter
+$content-filter-height: 29px;
+$content-filter-padding: 4px;
+
+// Misc
+$sorticon-size: 9px;
+$sorticon-margin: 4px;
+$drag-icon-size: 20px;
+
+
+// Pages
+// ----------
+
+// Files
+$open-tree-icon-width: 20px;
+
+// reports
+$report-table-cell-padding: 2px 1px 3px 22px;
+
+// ds
+$ds-table-cell-padding: 3px 8px;
+$ds-table-cell-min-width: 95px;  // to fit $xxx,xxx.xx

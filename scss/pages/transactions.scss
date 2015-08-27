@@ -5,11 +5,13 @@
   position:relative;
   content: " ";
   width:100%;
+
   &__btn {
     z-index:10;
+
     @media (min-width:$screen-md-min){
       position: absolute;
-      line-height: 40px;
+      line-height: $line-height-md;
       width: 20px;
       top: 0;
       right: -20px;
@@ -17,13 +19,15 @@
       font-size: 9px;
       color: $brand-primary;
     }
+
     @media (max-width:$screen-sm-max){
       width:100%;
-      margin: 10px 0;
+      margin: $margin-normal 0;
     }
   }
+  
   @media (max-width:$screen-sm-max){
-    margin-bottom: 10px;
+    margin-bottom: $margin-normal;
   }
 }
 
@@ -35,6 +39,7 @@
 
 .similar {
   &__body .transactions-list {
+    // make borders fit the left table
     margin-top: 23px;
   }
   &__header {
@@ -62,22 +67,18 @@
   }
 }
 
-.alert-danger.margin-top-sm {
-  margin-top: 12px !important;
-}
-
 .items-table__row {
   &--transactions {
     padding: 0 !important;
 
     > div {
-      padding: 8px 0;
+      padding: $items-table-padding 0;
     }
 
     // hack to make consistent wisth for transactions list
     @media (max-width: $screen-md-max) {
       > .col-xs-11 {
-        height: 59px;
+        height: $height-lg - 1;
       }
     }
   }
@@ -85,10 +86,10 @@
   &.transaction-in-edit {
     padding-top: 5px !important;
     padding-bottom: 5px !important;
-    background-color: #fff !important;
+    background-color: $white !important;
 
     &:hover {
-      background-color: #fff !important;
+      background-color: $white !important;
     }
 
     > div {
@@ -100,11 +101,11 @@
   // ----------------------
   &.active {
     background-color: $brand-primary;
-    color: #fff;
+    color: $white;
 
     &:hover {
       background-color: $brand-primary !important;
-      color: #fff;
+      color: $white;
     }
   }
 }
@@ -112,7 +113,7 @@
 .add-edit-transaction {
   .ng-invalid {
     border-width: 1px !important;
-    border-color: #FF3B30 !important;  // $message-danger !important;
+    border-color: $ios-notification !important;  // $message-danger !important;
   }
 
   .glyphicon-calendar {
@@ -136,10 +137,6 @@
 }
 
 .icon-circle {
-  $ios-checked: #007AFF;
-  $ios-unchecked: #C7C7CC;
-  $ios-notification: #FF3B30;
-
   display: inline-block;
   width: 18px;
   height: 18px;
@@ -192,7 +189,7 @@
   &--notify {
     border: 1px solid $ios-notification;
     background-color: $ios-notification;
-    color: #fff;
+    color: $white;
     border-radius: 50%;
     vertical-align: top;
     line-height: 17px;

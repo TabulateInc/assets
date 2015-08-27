@@ -4,7 +4,7 @@
 .update-prices-modal {
   @media (max-width: 420px) {
     .datepicker {
-      left: -91px !important;
+      left: -91px !important;  // fixes ang strap js positioning issue
     }
   }
 }
@@ -15,11 +15,11 @@
   .glyphicon-plus:focus,
   .glyphicon-minus:hover,
   .glyphicon-minus:focus {
-    color: rgb(0,0,0);
+    color: $black;
   }
 
   .btn {
-    height: 33px;
+    height: $bootstrap-btn-height;
     @media (max-width:$screen-xs-max){
       padding-left: 6px;
       padding-right: 6px;

@@ -1,60 +1,9 @@
-/*
- * Datepicker element
- */
-
-.datepicker.dropdown-menu {
-    width: 250px;
-    height: 290px !important;
-    background-color: #fff;
-    border: 1px solid $gray-lighter;
-
-    button {
-        outline: none;
-        border: 1px solid;
-        border-color: #fff !important;
-    }
-
-    .dow {
-        color: $text-muted;
-        font-weight: 400;
-    }
-
-    .btn-link {
-        border: 1px solid;
-        border-color: #fff !important;
-        &:hover {
-            background-color: #fff;
-            border: 1px solid $brand-primary;
-            border-color: $brand-primary !important;
-        }
-    }
-
-    tbody {
-        height: 180px;
-        button {
-            padding: 6px;
-        }
-    }
-
-    .btn-grey {
-        &:hover {
-            color: $brand-primary;
-            border: 1px solid $brand-primary !important;
-        }
-    }
-
-    .btn-primary {
-        color: #fff;
-    }
-    
-    td, th{
-        padding:1px;
-    }
-}
+// Other styles in _third-parties (angular strap)
 
 .add-icon {
     position: relative;
-    >.glyphicon{
+
+    > .glyphicon {
         position:absolute;
         padding: 12px 15px;
         right:10px;
@@ -73,10 +22,3 @@
         padding-right: 5px;
     }
 }
-
-.datepicker {
-    td, th {
-        padding:1px;
-    }
-}
-

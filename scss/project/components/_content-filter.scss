@@ -12,6 +12,11 @@
     }
   }
 
+  &__above {
+    padding-top: $margin-normal;
+    min-height: $font-size-base*$line-height-large + $margin-normal;
+  }
+
   .add-control {
     margin-bottom: 0;
   }

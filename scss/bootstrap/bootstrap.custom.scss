@@ -206,20 +206,17 @@ $border:1px solid $subnav-border-color;
 }
 
 .breadcrumb {
+  margin-bottom: 0;
+  display: inline-block;
+  float: left;
+
   li {
     font-weight: 300;
     float: left;
+    font-size: $font-size-base;
 
     &:before {
       content: none !important;
-    }
-
-    @media (min-width: $screen-sm-min) {
-      font-size: $font-size-md;
-    }
-
-    @media (max-width: $screen-xs-max) {
-      font-size: $font-size-base;
     }
   }
 

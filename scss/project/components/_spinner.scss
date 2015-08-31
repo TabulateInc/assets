@@ -8,15 +8,15 @@
   fill: $spinner-dark-color;
   stroke: $spinner-dark-stroke-color;
  
-  &.--xs {
+  &.mod-xs {
     width: $spinner-xs;
   }
  
-  &.--sm {
+  &.mod-sm {
     width: $spinner-sm;
   }
 
-  &.--md {
+  &.mod-md{
     width: $spinner-md;
   }
 }

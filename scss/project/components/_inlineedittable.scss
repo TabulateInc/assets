@@ -6,7 +6,7 @@
 
 .items-table {
 
-  &.--sm-at-xs {
+  &.mod-sm-at-xs {
     @media (max-width:$screen-xs-max){
        font-size: $font-size-xs;
     }
@@ -35,7 +35,7 @@
       }
     }
 
-    &.--edit {
+    &.mod-edit {
       border: $items-table-edit-border-width solid $brand-primary !important;
       border-radius: $border-radius-default;
       margin-bottom: -1px;

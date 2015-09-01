@@ -27,6 +27,14 @@
       background-color: $table-bg-hover;
     }
 
+    &.mod-no-hover {
+      cursor: default;
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+
     &.--edit {
       border: $items-table-edit-border-width solid $brand-primary !important;
       border-radius: $border-radius-default;

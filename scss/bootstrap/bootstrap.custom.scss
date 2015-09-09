@@ -231,7 +231,39 @@ $border:1px solid $subnav-border-color;
       font-size: 13px;
     }
   }
+
+  .dropdown-menu {
+    background-color: $white;
+
+    a {
+      padding-left: 5px;
+      color: $gray-darker;
+      font-weight: 300;
+      
+      &:hover,
+      &:focus {
+        background-color: $gray-lighter !important;
+        color: $gray-darker !important;
+      }
+
+      @media (min-width: $screen-sm-min) {
+        font-size: $font-size-base;
+      }
+    }
+
+    .glyphicon {
+      margin-right: 5px;
+    }
+  }
+
+  .dropdown-link {
+    display: block;
+    float: none;
+    font-size: $font-size-base;
+  }
 }
+
+
 
 select.btn{
   -webkit-appearance:none;

@@ -73,7 +73,8 @@
     }
 
     .btn-grey {
-        &:hover {
+        &:hover,
+        &.mod-hover {
             color: $brand-primary;
             border: 1px solid $brand-primary !important;
         }

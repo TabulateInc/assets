@@ -281,11 +281,11 @@ select.btn{
   // button that looks like an input
   @extend .btn-default;
   top: 1px;
-  width: 72px;
+  width: 80px;  // to acomodate x,xxx.xx
   padding-top: 5px;
   padding-bottom: 5px;
   overflow: hidden;
-  @media (max-width:$screen-xs-max){
+  @media (max-width:$screen-xxs-max - 1){
     padding: 6px 3px !important;
     width: 42px;
   }

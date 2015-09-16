@@ -9,6 +9,10 @@ table.summary-table {
     width:100%;
   }
 
+  .active-row {
+    background-color: $table-bg-hover;
+  }
+
   th,td {
     min-width: $ds-table-cell-min-width;
     padding: $ds-table-cell-padding;

@@ -25,7 +25,7 @@
       margin: $margin-normal 0;
     }
   }
-  
+
   @media (max-width:$screen-sm-max){
     margin-bottom: $margin-normal;
   }
@@ -52,10 +52,6 @@
   max-width: 860px;
   padding-left: 0;
   padding-right: 0;
-}
-
-.active-row {
-  background-color: $table-bg-hover;
 }
 
 .show-ellipsed:hover {
@@ -132,7 +128,7 @@
   height: 22px;
 
   @media (max-width: $screen-sm-max) {
-    margin-top: 8px;    
+    margin-top: 8px;
   }
 }
 
@@ -195,7 +191,7 @@
     line-height: 17px;
     text-align: center;
     font-size: 10px;
-    
+
     @media (max-width:$screen-xs-max) {
       font-size: 8px;
       line-height: 1.7em;

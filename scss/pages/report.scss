@@ -106,6 +106,20 @@
 }
 
 .content-filter {
+  .aside {
+    left: 0px;
+
+    .add-control {
+      .form-control {
+        height: 40px!important;
+        margin-bottom: 10px;
+      }
+    }
+
+    .custom-selector__btn{
+      line-height:2.1;
+    }
+  }
   .custom-selector__btn{
     line-height:1.5;
     // centers inside
@@ -115,12 +129,15 @@
   .icon-export {
     width: 24px;
     height: 29px;
-    margin-left: 15px;
+    position: absolute;
+    right: 0;
+    top: 5px;
   }
   .icon-pdf {
     background: url(#{$images-path}/icon-pdf.png) no-repeat;
   }
   .icon-excel {
-    background: url(#{$images-path}/icon-excel.png) no-repeat;    
+    background: url(#{$images-path}/icon-excel.png) no-repeat;
+    right: 29px;
   }
 }

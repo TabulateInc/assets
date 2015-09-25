@@ -196,7 +196,9 @@
     
     @media (max-width:$screen-xs-max) {
       font-size: 8px;
-      line-height: 1.7em;
+      line-height: 2em;
+      width: 18px;
+      height: 18px;
     }
   }
 }

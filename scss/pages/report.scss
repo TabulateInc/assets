@@ -14,28 +14,38 @@
   }
 }
 
-.report-table{
-    thead{
-        border-bottom:1px solid $table-border-color;
+.report-table {
+    thead {
+      border-bottom: 1px solid $table-border-color;
     }
 
-    td{
+    td {
       padding: $report-table-cell-padding;
       @extend %report-table-column;
     }
 
-    td, th,b{
-        white-space:nowrap;
+    td, th, b {
+      white-space: nowrap;
     }
+
+    // transactions table only
     &.expanded{
         /*im ugly and i know it*/
         /*adding a border to emulate padding when table goes wider than the screen*/
         border-right:40px solid transparent;
         border-collapse: separate;
     }
+
     .fix-first-column {
       width: $fix-column-width + 1 !important;      //+1 fix white line that separate first column and data
     }
+}
+
+
+.table-overflow-wrapper {
+  .ps-scrollbar-x-rail {
+    top: 50px !important;
+  }
 }
 
 .total-column {

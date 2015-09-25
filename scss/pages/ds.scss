@@ -35,3 +35,9 @@ table.summary-table {
   display: inline-block;
   padding-right:1px;
 }
+
+.table-overflow-wrapper {
+  .ps-scrollbar-x-rail {
+    top: 3px !important;
+  }
+}

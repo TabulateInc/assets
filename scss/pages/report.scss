@@ -136,18 +136,16 @@
     padding: 3px 20px 4px 12px;
     height: $content-filter-height!important;
   }
+
   .icon-export {
-    width: 24px;
-    height: 29px;
     position: absolute;
-    right: 0;
     top: 5px;
   }
+
   .icon-pdf {
-    background: url(#{$images-path}/icon-pdf.png) no-repeat;
+    right: 0;
   }
   .icon-excel {
-    background: url(#{$images-path}/icon-excel.png) no-repeat;
     right: 29px;
   }
 }

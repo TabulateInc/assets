@@ -1,0 +1,25 @@
+@import '../project/variables';
+@import '../bootstrap/variables';
+
+.content-filter__item {
+  vertical-align: middle;
+  display: inline-block;
+
+  &.mod-all-space-left {
+    $space-used: 131px;
+    @media (min-width: $screen-xs-min) {
+      width: calc(100% - #{$space-used});
+    }
+    @media (max-width: $screen-xxs-max) {
+      margin-top: $margin-xs;
+    }
+  }
+
+  select {
+    height: 34px;
+  }
+
+  @media (max-width: $screen-xxs-max) {
+    display: block;
+  }
+}

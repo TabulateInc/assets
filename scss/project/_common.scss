@@ -321,6 +321,10 @@ select.padding-left-xs option,
   background-color: $alert-danger-bg;
 }
 
+.input-inactive {
+  background-color: lighten($gray-base, 97.5%);
+}
+
 .editable {  
   input {
     background-color: transparent;

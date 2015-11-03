@@ -1,26 +1,38 @@
 @import '../project/variables';
 @import '../bootstrap/variables';
 
-.content-filter__item {
-  vertical-align: middle;
-  display: inline-block;
-
-  &.mod-all-space-left {
-    $space-used: 131px;
-    @media (min-width: $screen-xs-min) {
-      width: calc(100% - #{$space-used});
-    }
-    @media (max-width: $screen-xxs-max) {
-      margin-top: $margin-xs;
-    }
-  }
-
+.content-filter {
   select {
     height: 34px;
   }
+}
 
-  @media (max-width: $screen-xxs-max) {
-    display: block;
+.two-column-layout {
+
+  &__item {
+    $first-column-width: 127px;
+    vertical-align: middle;
+    display: inline-block;
+
+    @media (max-width: $screen-xxs-max) {
+      display: block;
+    }
+
+    &.is-first {
+      @media (min-width: $screen-xs-min) {
+        width: $first-column-width;
+      }
+    }
+
+    &.is-last {
+      @media (min-width: $screen-xs-min) {
+        width: calc(100% - #{$first-column-width + $content-filter-padding});
+      }
+
+      @media (max-width: $screen-xxs-max) {
+        margin-top: $margin-xs;
+      }
+    }
   }
 }
 

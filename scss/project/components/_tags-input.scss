@@ -21,4 +21,11 @@ tags-input {
   .remove-button {
     color: $brand-primary !important;
   }
+
+  &.has-search-icon {
+    input.input {
+      background: url(#{$images-path}/magnifying-glass16.svg) no-repeat 5px center transparent;
+      background-size: 12px;
+    }
+  }
 }

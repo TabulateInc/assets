@@ -137,15 +137,13 @@
     height: $content-filter-height!important;
   }
 
-  .icon-export {
-    position: absolute;
-    top: 5px;
+  .am-slide-left {
+    vertical-align: middle;
+    display: inline-block;
   }
 
-  .icon-pdf {
-    right: 0;
-  }
-  .icon-excel {
-    right: 29px;
+  .btn {
+    height: 29px;
+    vertical-align: middle;
   }
 }

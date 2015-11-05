@@ -45,3 +45,21 @@ add-edit-bill .glyphicon-calendar {
   right: 8px;
   top: 1px;
 }
+
+.text-left-xxs {
+  @media (max-width: $screen-xxs-max) {
+    text-align: left;
+  }
+}
+
+.hidden-xxs {
+  @media (max-width: $screen-xxs-max) {
+    display: none;
+  }
+}
+
+.visible-xxs {
+  @media (min-width: $screen-xs-min) {
+    display: none;
+  }
+}

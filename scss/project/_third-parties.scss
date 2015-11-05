@@ -99,10 +99,6 @@
     background-color: $white !important;
     border: 1px solid rgba(0, 0, 0, 0.175) !important;
 
-    .no-matches {
-        color: $white !important;
-    }
-
     a {
         color: $gray !important;
         background-color: $white !important;
@@ -110,6 +106,11 @@
         &:hover {
             color: $white !important;
             background-color: $brand-primary !important;
+
+            &.no-matches {
+                color: $gray !important;
+                background-color: $white !important;
+            }
         }
     }
 

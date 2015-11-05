@@ -36,6 +36,12 @@
   }
 }
 
-.glyphicon-calendar {
+add-edit-bill .glyphicon-calendar {
   top: 17px;
+}
+
+.items-table__row__over {
+  position: absolute;
+  right: 8px;
+  top: 1px;
 }

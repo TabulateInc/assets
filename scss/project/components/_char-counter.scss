@@ -1,0 +1,11 @@
+.char-counter {
+  position: absolute; 
+  top: 2px; 
+  right: 13px;
+  font-size: $font-size-small;
+  line-height: 1;
+
+  &.text-red {
+    color: red;
+  }
+}

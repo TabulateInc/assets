@@ -1,3 +1,5 @@
+@import '../utils';
+
 .navbar-brand {
     height: $main-navigation-height;
     width: $main-navigation-height;
@@ -16,18 +18,31 @@
     border-color: $navbar-inverse-color;  // #5c5c5c;
     color: $navbar-inverse-color;
 
-    .caret {
-        border-top-color: $navbar-inverse-color;
-        border-bottom-color: $navbar-inverse-color;
-    }
-
-    &:hover,
-    &:focus {
+    &:hover {
+        background-color: $brand-saturated;
         color: $white;
-
-        .caret {
-            border-top-color: $white;
-            border-bottom-color: $white;
-        }
     }
+    &:focus {
+        background-color: transparent;
+        color: $navbar-inverse-color;
+    }
+
+    @at-root select#{&} {
+        background: $arrow-down-gray;
+
+        &:hover {
+            background: $arrow-down-white;
+            background-color: $brand-saturated;
+            color: $white;
+        }
+        &:focus {
+            background: $arrow-down-gray;
+            color: $navbar-inverse-color;
+            border-color: $navbar-inverse-color;
+        }
+        option {
+            background: $white;
+            color: $black;
+        }
+    }        
 }

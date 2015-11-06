@@ -1,5 +1,10 @@
+@import 'data-uri-images';
 
-$arrow-down: url(#{$images-path}/arrowdown.png) no-repeat right 8px center $white;
+$arrow-possition: no-repeat right 8px center;
+
+$arrow-down: $img-arrow-down $arrow-possition $white;
+$arrow-down-gray: $img-arrow-down-gray $arrow-possition transparent;
+$arrow-down-white: $img-arrow-down-white $arrow-possition transparent;
 
 @mixin custom-selector() {
   background: $arrow-down;

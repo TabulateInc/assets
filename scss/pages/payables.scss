@@ -46,6 +46,22 @@ add-edit-bill .glyphicon-calendar {
   top: 1px;
 }
 
+.margin-right-sm {
+  margin-right: $padding-sm !important;
+}
+
+.add-control {
+  @media (max-width: $screen-xs-max) {
+    padding-right: $padding-sm;
+  }
+}
+
+.form-control.mod-read-only-block {
+  height: auto;
+  width: auto;
+  margin-right: $padding-sm;
+}
+
 .text-left-xxs {
   @media (max-width: $screen-xxs-max) {
     text-align: left;

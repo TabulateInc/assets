@@ -1,0 +1,28 @@
+.breadcrumb {
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  li {
+    @media (min-width: $screen-sm-min) {
+      font-size: $font-size-md;
+    }
+  }
+
+  .icon-folder {
+    @media (min-width: $screen-sm-min) {
+      margin-top: -5px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      margin-top: -3px;
+    }
+  }
+
+  .dropdown-menu {
+    a {
+      @media (min-width: $screen-sm-min) {
+        font-size: $font-size-md;
+      }
+    }
+  }
+}

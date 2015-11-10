@@ -12,17 +12,6 @@
     }
   }
 
-  &__above {
-    min-height: $font-size-base*$line-height-large + $margin-normal;
-
-    & > a {
-      @media (min-width: $screen-sm-min) {
-        font-size: $font-size-md;
-      }
-      padding: 8px 0;
-    }
-  }
-
   .add-control {
     margin-bottom: 0;
   }

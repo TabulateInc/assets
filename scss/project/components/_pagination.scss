@@ -1,0 +1,14 @@
+.pagination {
+  .btn {
+    border-radius: 0 !important;
+  }
+
+  @media (max-width: $screen-xxs-max) {
+    font-size: 12px;
+
+    .btn {
+      font-size: 12px;
+      padding: 4px 6px;
+    }
+  }
+}

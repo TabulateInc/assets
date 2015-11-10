@@ -1,0 +1,31 @@
+tags-input {
+  .host {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    border: 1px solid $mediumgray-dark !important;
+    border-radius: $input-border-radius;
+    color: $darkgray-dark !important;
+  }
+
+  .tags {
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .tags .tag-item {
+    color: $brand-primary !important;
+    border-color: $brand-primary !important;
+    background: transparent !important;
+  }
+
+  .remove-button {
+    color: $brand-primary !important;
+  }
+
+  &.has-search-icon {
+    input.input {
+      background: url(#{$images-path}/magnifying-glass16.svg) no-repeat 5px center transparent;
+      background-size: 12px;
+    }
+  }
+}

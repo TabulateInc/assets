@@ -1,5 +1,6 @@
 @import 'variables';
 @import '../bootstrap/variables';
+@import 'utils';
 
 @import 'third-parties';
 
@@ -21,6 +22,8 @@
 @import 'components/delete-item';
 @import 'components/ordered-header';
 @import 'components/button-spinner';
+@import 'components/tags-input';
+@import 'components/pagination';
 @import 'components/char-counter';
 @import 'components/breadcrumbs';
 

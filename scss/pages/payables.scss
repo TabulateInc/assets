@@ -1,0 +1,41 @@
+@import '../project/variables';
+@import '../bootstrap/variables';
+
+.content-filter {
+  select {
+    height: 34px;
+  }
+}
+
+.two-column-layout {
+
+  &__item {
+    $first-column-width: 127px;
+    vertical-align: middle;
+    display: inline-block;
+
+    @media (max-width: $screen-xxs-max) {
+      display: block;
+    }
+
+    &.is-first {
+      @media (min-width: $screen-xs-min) {
+        width: $first-column-width;
+      }
+    }
+
+    &.is-last {
+      @media (min-width: $screen-xs-min) {
+        width: calc(100% - #{$first-column-width + $content-filter-padding});
+      }
+
+      @media (max-width: $screen-xxs-max) {
+        margin-top: $margin-xs;
+      }
+    }
+  }
+}
+
+.glyphicon-calendar {
+  top: 17px;
+}

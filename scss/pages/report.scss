@@ -136,18 +136,14 @@
     padding: 3px 20px 4px 12px;
     height: $content-filter-height!important;
   }
-  .icon-export {
-    width: 24px;
+
+  .am-slide-left {
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  .btn {
     height: 29px;
-    position: absolute;
-    right: 0;
-    top: 5px;
-  }
-  .icon-pdf {
-    background: url(#{$images-path}/icon-pdf.png) no-repeat;
-  }
-  .icon-excel {
-    background: url(#{$images-path}/icon-excel.png) no-repeat;
-    right: 29px;
+    vertical-align: middle;
   }
 }

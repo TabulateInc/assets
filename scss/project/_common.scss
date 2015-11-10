@@ -151,6 +151,11 @@ select::-ms-expand {
   width: 100%;
 }
 
+.v-middle {
+  vertical-align: middle;
+  position: relative;
+}
+
 // Box
 // -----------------------------
 
@@ -260,6 +265,10 @@ select.padding-left-xs option,
   color: $brand-primary;
 }
 
+.danger-text {
+  color: $brand-danger;
+}
+
 .text-lowercase {
   text-transform: lowercase;
 }
@@ -310,6 +319,10 @@ select.padding-left-xs option,
 
 .input-error {
   background-color: $alert-danger-bg;
+}
+
+.input-inactive {
+  background-color: lighten($gray-base, 97.5%);
 }
 
 .editable {  

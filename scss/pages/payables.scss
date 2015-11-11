@@ -2,6 +2,7 @@
 @import '../bootstrap/variables';
 
 .content-filter {
+
   select {
     height: 34px;
   }
@@ -11,9 +12,10 @@
 
   &__item {
     $first-column-width: 127px;
-    vertical-align: middle;
+
     display: inline-block;
 
+    vertical-align: middle;
     @media (max-width: $screen-xxs-max) {
       display: block;
     }
@@ -28,7 +30,6 @@
       @media (min-width: $screen-xs-min) {
         width: calc(100% - #{$first-column-width + $content-filter-padding});
       }
-
       @media (max-width: $screen-xxs-max) {
         margin-top: $margin-xs;
       }
@@ -42,8 +43,8 @@ add-edit-bill .glyphicon-calendar {
 
 .items-table__row__over {
   position: absolute;
-  right: 8px;
   top: 1px;
+  right: 8px;
 }
 
 .margin-right-sm {
@@ -57,8 +58,8 @@ add-edit-bill .glyphicon-calendar {
 }
 
 .form-control.mod-read-only-block {
-  height: auto;
   width: auto;
+  height: auto;
   margin-right: $padding-sm;
 }
 

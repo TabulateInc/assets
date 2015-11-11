@@ -113,5 +113,9 @@
             }
         }
     }
+    li.active a {
+        color: $white !important;
+        background-color: $brand-primary !important;
+    }
 
 }

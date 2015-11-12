@@ -1,10 +1,28 @@
 @import '../project/variables';
 @import '../bootstrap/variables';
 
-.content-filter {
 
-  select {
-    height: 34px;
+.content-filter {
+  $search-input-height: 34px;
+
+  .as-search-height {
+    height: $search-input-height;
+  }
+
+  .add-icon > .glyphicon {
+    $padding-vertical: $search-input-height - 15;
+    padding-top: $padding-vertical / 2;
+    padding-bottom: $padding-vertical / 2;
+  }
+}
+
+.breadcrumb {
+  @media (max-width: $screen-sm-min) {
+    padding-top: 3px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    padding-top: 7px;
   }
 }
 
@@ -48,7 +66,13 @@ add-edit-bill .glyphicon-calendar {
 }
 
 .margin-right-sm {
-  margin-right: $padding-sm !important;
+  margin-right: $margin-xs !important;
+}
+
+.margin-top-xs-xs {
+  @media (max-width: $screen-xs-max) {
+    margin-top: $margin-xs;
+  }
 }
 
 .add-control {

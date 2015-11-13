@@ -16,20 +16,11 @@
   }
 }
 
-.breadcrumb {
-  @media (max-width: $screen-sm-min) {
-    padding-top: 3px;
-  }
-
-  @media (max-width: $screen-xs-max) {
-    padding-top: 7px;
-  }
-}
-
 .two-column-layout {
 
   &__item {
     $first-column-width: 127px;
+    $first-column-width--small: 20px;
 
     display: inline-block;
 
@@ -41,12 +32,20 @@
     &.is-first {
       @media (min-width: $screen-xs-min) {
         width: $first-column-width;
+
+        &.mod-small {
+          width: $first-column-width--small;
+        }
       }
     }
 
     &.is-last {
       @media (min-width: $screen-xs-min) {
         width: calc(100% - #{$first-column-width + $content-filter-padding});
+
+        &.mod-small {
+          width: calc(100% - #{$first-column-width--small + $content-filter-padding});
+        }
       }
       @media (max-width: $screen-xxs-max) {
         margin-top: $margin-xs;
@@ -84,7 +83,7 @@ add-edit-bill .glyphicon-calendar {
 .form-control.mod-read-only-block {
   width: auto;
   height: auto;
-  margin-right: $padding-sm;
+  margin-right: $margin-xs;
 }
 
 .text-left-xxs {

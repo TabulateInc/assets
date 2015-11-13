@@ -32,6 +32,10 @@ table.summary-table {
 
   &.editable {
     border: 1px solid $table-border-color;
+
+    .has-error {
+      outline: 2px solid red !important;
+    }
   }
 }
 

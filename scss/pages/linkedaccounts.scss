@@ -25,8 +25,13 @@
 }
 
 .modal-iframe {
+    .modal-dialog {
+        min-width: 751px;
+    }
+
     .modal-body {
         padding: 0;
+        min-height: 500px;
     }
 
     iframe {
@@ -34,6 +39,11 @@
         border: none;
         padding: 0;
         margin: 0;
-        min-height: 400px;
+        min-height: 500px;
     }
+}
+
+.wizardADAClose,
+.y12btn_secondary.y12btn_small input {
+    display: none !important;
 }

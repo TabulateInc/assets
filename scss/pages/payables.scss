@@ -1,9 +1,18 @@
 @import '../project/variables';
 @import '../bootstrap/variables';
 
+
 .content-filter {
-  select {
-    height: 34px;
+  $search-input-height: 34px;
+
+  .as-search-height {
+    height: $search-input-height;
+  }
+
+  .add-icon > .glyphicon {
+    $padding-vertical: $search-input-height - 15;
+    padding-top: $padding-vertical / 2;
+    padding-bottom: $padding-vertical / 2;
   }
 }
 
@@ -11,9 +20,11 @@
 
   &__item {
     $first-column-width: 127px;
-    vertical-align: middle;
+    $first-column-width--small: 20px;
+
     display: inline-block;
 
+    vertical-align: middle;
     @media (max-width: $screen-xxs-max) {
       display: block;
     }
@@ -21,14 +32,23 @@
     &.is-first {
       @media (min-width: $screen-xs-min) {
         width: $first-column-width;
+        float: left;
+        margin-right: $margin-xs;
+
+        &.mod-small {
+          width: $first-column-width--small;
+        }
       }
     }
 
     &.is-last {
       @media (min-width: $screen-xs-min) {
-        width: calc(100% - #{$first-column-width + $content-filter-padding});
-      }
+        width: calc(100% - #{$first-column-width + $margin-xs});
 
+        &.mod-small {
+          width: calc(100% - #{$first-column-width--small + $margin-xs});
+        }
+      }
       @media (max-width: $screen-xxs-max) {
         margin-top: $margin-xs;
       }
@@ -42,12 +62,18 @@ add-edit-bill .glyphicon-calendar {
 
 .items-table__row__over {
   position: absolute;
-  right: 8px;
   top: 1px;
+  right: 8px;
 }
 
 .margin-right-sm {
-  margin-right: $padding-sm !important;
+  margin-right: $margin-xs !important;
+}
+
+.margin-top-xs-xs {
+  @media (max-width: $screen-xs-max) {
+    margin-top: $margin-xs;
+  }
 }
 
 .add-control {
@@ -57,9 +83,9 @@ add-edit-bill .glyphicon-calendar {
 }
 
 .form-control.mod-read-only-block {
-  height: auto;
   width: auto;
-  margin-right: $padding-sm;
+  height: auto;
+  margin-right: $margin-xs;
 }
 
 .text-left-xxs {
@@ -78,4 +104,8 @@ add-edit-bill .glyphicon-calendar {
   @media (min-width: $screen-xs-min) {
     display: none;
   }
+}
+
+state-picker .col-sm-4 {
+  width: 100% !important;  // temp hack, while add / edit vendor page is not confirmed
 }

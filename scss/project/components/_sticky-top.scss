@@ -2,12 +2,6 @@
   position: fixed;
   top: $main-navigation-height + 1;
 
-  &--transactions {
-    left: 65%;
-    width: 34%;
-    max-width:364px;
-  }
-
   &--files {
     background-color: $white;
     z-index: 1;

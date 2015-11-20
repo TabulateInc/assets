@@ -83,7 +83,7 @@
     .btn-primary {
         color: $white;
     }
-    
+
     td, th {
         padding:1px;
     }
@@ -118,4 +118,8 @@
         background-color: $brand-primary !important;
     }
 
+}
+
+[ng-cloak] {
+  display: none;
 }

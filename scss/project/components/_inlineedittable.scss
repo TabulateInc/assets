@@ -47,7 +47,7 @@
   &__input {
     $row-column-padding: 15px;
 
-    padding-left: $padding-sm;
+    padding-left: $padding-sm !important;
 
     @media (max-width: $screen-sm-max) {
       margin-top: $margin-normal;

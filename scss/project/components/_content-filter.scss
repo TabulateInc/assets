@@ -58,6 +58,10 @@
     right: 10px;
     top: 47%;
   }
+
+  @media (max-width: $screen-xxs-max) {
+    max-width: 133px;
+  }
 }
 
 .above-filter-link {

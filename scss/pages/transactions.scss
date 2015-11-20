@@ -1,6 +1,13 @@
 @import '../project/variables';
 @import '../bootstrap/variables';
 
+$details-status-width: 15px;
+
+
+.header {
+  padding-right: $details-status-width;
+}
+
 .edit-details {
   position:relative;
   content: " ";
@@ -14,10 +21,9 @@
       line-height: $line-height-md;
       width: 20px;
       top: 0;
-      right: -20px;
+      right: -$details-status-width;
       padding-left: 10px;
-      font-size: 9px;
-      color: $brand-primary;
+      font-size: 14px;
     }
 
     @media (max-width:$screen-sm-max){
@@ -65,14 +71,16 @@
 
 .items-table__row {
   &--transactions {
-    padding: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-right: $details-status-width !important;
 
     > div {
       padding: $items-table-padding 0;
     }
 
     // hack to make consistent wisth for transactions list
-    @media (max-width: $screen-md-max) {
+    @media (max-width: $screen-xs-max) {
       > .col-xs-11 {
         height: $height-lg - 1;
       }
@@ -127,7 +135,7 @@
   margin-bottom: 8px;
   height: 22px;
 
-  @media (max-width: $screen-sm-max) {
+  @media (max-width: $screen-xs-max) {
     margin-top: 8px;
   }
 }
@@ -193,7 +201,7 @@
     font-size: 10px;
     width: 21px;
     height: 21px;
-    
+
     @media (max-width:$screen-xs-max) {
       font-size: 8px;
       line-height: 2em;

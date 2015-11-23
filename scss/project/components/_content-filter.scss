@@ -30,19 +30,16 @@
     padding: 3px 15px 4px 10px;
   }
 
-  .week-dropdown,
-  .dropdown-menu {
-    width: 160px !important;
-  }
-
   .week-dropdown {
+    width: 160px !important;
+
     @media (max-width: $screen-xs-max) {
       width: 140px !important;
     }
   }
 
-  .day-dropdown{
-      width: 120px !important;
+  .day-dropdown {
+    width: 120px !important;
   }
 }
 
@@ -62,9 +59,4 @@
   @media (max-width: $screen-xxs-max) {
     max-width: 133px;
   }
-}
-
-.above-filter-link {
-  display: inline-block;
-  margin-top: $margin-normal;
 }

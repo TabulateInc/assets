@@ -160,7 +160,7 @@ select::-ms-expand {
 // -----------------------------
 
 .height-sm {
-  height: $height-sm;
+  height: $height-sm !important;
 }
 
 .height-md {
@@ -227,6 +227,10 @@ select.padding-left-xs option,
     &.alert-danger {
       margin-top: $margin-normal !important;
     }
+  }
+
+  &-xs {
+    margin-top: $margin-xs;
   }
 }
 

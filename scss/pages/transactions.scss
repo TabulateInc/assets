@@ -115,7 +115,8 @@ $details-status-width: 15px;
 }
 
 .add-edit-transaction {
-  .ng-invalid {
+  .ng-invalid,
+  .ng-invalid .host {
     border-width: 1px !important;
     border-color: $ios-notification !important;  // $message-danger !important;
   }
@@ -209,6 +210,20 @@ $details-status-width: 15px;
       height: 18px;
     }
   }
+}
+
+.tags {
+  min-height: 38px !important;
+}
+
+.input {
+  height: 36px !important;
+  margin: 0 !important;
+}
+
+.tag-item {
+  height: 32px !important;
+  line-height: 30px !important;
 }
 
 @media (min-width:$screen-sm-min) {

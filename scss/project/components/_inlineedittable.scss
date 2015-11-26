@@ -42,6 +42,10 @@
       margin-top: -1px;
       padding: 2px;
     }
+
+    &.borderless {
+      border: 0 !important;
+    }
   }
 
   &__input {

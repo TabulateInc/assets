@@ -49,9 +49,9 @@
 
     padding-left: $padding-sm !important;
 
-    @media (max-width: $screen-sm-max) {
+    @media (max-width: $screen-xs-max) {
       margin-top: $margin-normal;
-      padding-left:0;
+      padding-left:0 !important;
     }
 
     input, select {

@@ -16,7 +16,7 @@ $details-status-width: 15px;
   &__btn {
     z-index:10;
 
-    @media (min-width:$screen-md-min){
+    @media (min-width:$screen-sm-min){
       position: absolute;
       line-height: $line-height-md;
       width: 20px;
@@ -26,13 +26,13 @@ $details-status-width: 15px;
       font-size: 14px;
     }
 
-    @media (max-width:$screen-sm-max){
+    @media (max-width:$screen-xs-max){
       width:100%;
       margin: $margin-normal 0;
     }
   }
 
-  @media (max-width:$screen-sm-max){
+  @media (max-width:$screen-xs-max){
     margin-bottom: $margin-normal;
   }
 }
@@ -114,7 +114,8 @@ $details-status-width: 15px;
   }
 }
 
-.add-edit-transaction {
+.add-edit-transaction,
+.modal-split {
   .ng-invalid,
   .ng-invalid .host {
     border-width: 1px !important;

@@ -182,6 +182,12 @@ select::-ms-expand {
         padding-left:0;
       }
     }
+
+    &-sm {
+      @media (max-width:$screen-sm-min){
+        padding-left:0;
+      }
+    }
   }
 
   &-right {
@@ -215,13 +221,6 @@ select.padding-left-xs option,
       @media (max-width:$screen-xs-max){
         margin-top: $margin-normal;
       }
-    }
-
-    &-sm {
-      @media (max-width:$screen-sm-max){
-        margin-top: $margin-normal;
-      }
-
     }
 
     &.alert-danger {
@@ -325,7 +324,7 @@ select.padding-left-xs option,
   background-color: lighten($gray-base, 97.5%);
 }
 
-.editable {  
+.editable {
   input {
     background-color: transparent;
     border: 0;

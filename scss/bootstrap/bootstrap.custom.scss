@@ -62,6 +62,13 @@
     }
 }
 
+.wide-modal .modal-dialog {
+  width: auto !important;
+  max-width: 860px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .alert-info {
   color: $alert-info-text !important;
   background-color: $alert-info-bg !important;
@@ -239,7 +246,7 @@ $border:1px solid $subnav-border-color;
       padding-left: 5px;
       color: $gray-darker;
       font-weight: 300;
-      
+
       &:hover,
       &:focus {
         background-color: $gray-lighter !important;

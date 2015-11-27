@@ -53,13 +53,6 @@ $details-status-width: 15px;
   }
 }
 
-.wide-modal .modal-dialog {
-  width: auto !important;
-  max-width: 860px;
-  padding-left: 0;
-  padding-right: 0;
-}
-
 .show-ellipsed:hover {
   .overflow-ellipsis {
     overflow: inherit;
@@ -190,7 +183,6 @@ $details-status-width: 15px;
       stroke: $ios-notification;
     }
   }
-
 
   &--notify {
     border: 1px solid $ios-notification;

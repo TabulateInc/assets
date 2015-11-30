@@ -118,6 +118,11 @@
         background-color: $brand-primary !important;
     }
 
+    &__group-header {
+        padding-left: 20px;
+        font-weight: 600;
+        cursor: default;
+    }
 }
 
 [ng-cloak] {

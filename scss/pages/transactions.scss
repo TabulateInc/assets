@@ -205,6 +205,17 @@ $details-status-width: 15px;
   }
 }
 
+@media (min-width:$screen-sm-min) {
+    .calendar-read-padding {
+        padding-left: 5px !important;
+    }
+}
+
+/*
+  This is ng-tags-input classes
+  that need customization
+  they will not work without important
+*/
 .tags {
   min-height: 38px !important;
 }
@@ -217,10 +228,4 @@ $details-status-width: 15px;
 .tag-item {
   height: 32px !important;
   line-height: 30px !important;
-}
-
-@media (min-width:$screen-sm-min) {
-    .calendar-read-padding {
-        padding-left: 5px !important;
-    }
 }

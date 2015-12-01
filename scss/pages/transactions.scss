@@ -110,7 +110,7 @@ $details-status-width: 15px;
 .add-edit-transaction,
 .modal-split {
   .ng-invalid,
-  .ng-invalid .host {
+  tags-input.ng-invalid .host {
     border-width: 1px !important;
     border-color: $ios-notification !important;  // $message-danger !important;
   }

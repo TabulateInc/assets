@@ -143,7 +143,9 @@
   }
 
   .btn {
-    height: 29px;
-    vertical-align: middle;
+    &.mod-export {
+      height: 29px;
+      vertical-align: middle;
+    }
   }
 }

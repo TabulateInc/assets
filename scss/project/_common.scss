@@ -296,6 +296,10 @@ select.padding-left-xs option,
   line-height: $line-height-lg;
 }
 
+.break-word {
+  word-wrap: break-word;
+}
+
 // Inputs
 // --------------------------
 .add-control {

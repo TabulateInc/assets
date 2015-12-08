@@ -1,0 +1,56 @@
+// Icons
+// -----------------
+.icon-folder-plus {
+  background: url(#{$images-path}/folder1+.svg) no-repeat center center transparent;
+}
+
+.icon-file-plus {
+  background: url(#{$images-path}/file1+.svg) no-repeat center center transparent;
+}
+
+.icon-folder-plus,
+.icon-file-plus {
+  height: 32px;
+  width: 32px;
+  background-size: 24px 24px !important;
+}
+
+.icon-folder {
+  background: url(#{$images-path}/folder1.svg) no-repeat top center transparent;
+  vertical-align: middle;
+
+  @media (min-width: $screen-xs-max) {
+    height: 32px;
+    width: 36px;
+    background-size: 32px 32px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    height: 24px;
+    width: 27px;
+    background-size: 22px 22px;
+  }
+
+  &--small {
+    height: 24px;
+    width: 20px;
+    background-size: 20px 20px;
+  }
+}
+
+.icon-file {
+  background: url(#{$images-path}/file1.svg) no-repeat top center transparent;
+  vertical-align: middle;
+
+  @media (min-width: $screen-xs-max) {
+    height: 32px;
+    width: 36px;
+    background-size: 32px 32px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    height: 24px;
+    width: 27px;
+    background-size: 22px 22px;
+  }
+}

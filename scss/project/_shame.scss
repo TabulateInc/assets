@@ -38,3 +38,11 @@
    // }
 
 // Hides element while data is loading
+
+.add-control.mod-fix-padding {
+  // we have a padding hell on transactions page
+  // need to refactor markup
+  @media (min-width: $screen-sm-min) {
+    padding-left: 15px !important;  // yes, Anton, very important, check comment above
+  }
+}

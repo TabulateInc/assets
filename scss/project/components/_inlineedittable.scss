@@ -63,6 +63,13 @@
     }
   }
 
+  &__btn {
+    &.mod-no-spaces {
+      margin-top: -$padding-base-vertical;
+      margin-bottom: -$padding-base-vertical;
+    }
+  }
+
   .add-control {
     @media (min-width:$screen-sm-min) {
       margin-bottom: 0;

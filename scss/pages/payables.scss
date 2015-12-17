@@ -2,60 +2,6 @@
 @import '../bootstrap/variables';
 
 
-.content-filter {
-  $search-input-height: 34px;
-
-  .as-search-height {
-    height: $search-input-height;
-  }
-
-  .add-icon > .glyphicon {
-    $padding-vertical: $search-input-height - 15;
-    padding-top: $padding-vertical / 2;
-    padding-bottom: $padding-vertical / 2;
-  }
-}
-
-.two-column-layout {
-
-  &__item {
-    $first-column-width: 127px;
-    $first-column-width--small: 20px;
-
-    display: inline-block;
-
-    vertical-align: middle;
-    @media (max-width: $screen-xxs-max) {
-      display: block;
-    }
-
-    &.is-first {
-      @media (min-width: $screen-xs-min) {
-        width: $first-column-width;
-        float: left;
-        margin-right: $margin-xs;
-
-        &.mod-small {
-          width: $first-column-width--small;
-        }
-      }
-    }
-
-    &.is-last {
-      @media (min-width: $screen-xs-min) {
-        width: calc(100% - #{$first-column-width + $margin-xs});
-
-        &.mod-small {
-          width: calc(100% - #{$first-column-width--small + $margin-xs});
-        }
-      }
-      @media (max-width: $screen-xxs-max) {
-        margin-top: $margin-xs;
-      }
-    }
-  }
-}
-
 add-edit-bill .glyphicon-calendar {
   top: 17px;
 }

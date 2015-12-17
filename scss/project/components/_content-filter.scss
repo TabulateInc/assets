@@ -6,6 +6,20 @@
   border-top: 1px solid $table-border-color;
   border-bottom: 1px solid $table-border-color;
 
+  &.mod-date-and-tags {
+    $search-input-height: 34px;
+
+    .as-search-height {
+      height: $search-input-height;
+    }
+
+    .add-icon > .glyphicon {
+      $padding-vertical: $search-input-height - 15;
+      padding-top: $padding-vertical / 2;
+      padding-bottom: $padding-vertical / 2;
+    }
+  }
+
   &.expand-wrapper {
     a {
       height: $content-filter-height !important;

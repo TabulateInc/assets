@@ -1,0 +1,45 @@
+@import '../project/variables';
+@import '../bootstrap/variables';
+
+.stacked-inputs-row {
+  position: relative;
+
+  border-bottom: 1px solid $table-border-color;
+  border-left: 1px solid $table-border-color;
+
+  input {
+    height: $height-md;
+
+    border: none !important;
+    border-right: 1px solid $table-border-color !important;
+  }
+
+  &.mod-inactive {
+
+    input,
+    div {
+      background-color: lighten($gray-base, 97.5%);
+    }
+  }
+}
+
+.header.mod-journal {
+  padding-right: 0;
+
+  border-bottom-width: 1px;
+}
+
+.padding-horizontal-base {
+  padding-right: $padding-base-horizontal;
+  padding-left: $padding-base-horizontal;
+}
+
+.border-right {
+  border-right: 1px solid $table-border-color;
+}
+
+drag-drop.visible .drag-drop {
+  visibility: visible;
+
+  padding-left: 5px;
+}

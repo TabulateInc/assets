@@ -39,13 +39,13 @@
 // -----------------------
 
 .datepicker.dropdown-menu {
-    width: 250px;
-    height: 290px !important;
+    width: 195px !important;
+    height: 245px !important;
     background-color: $white;
     border: 1px solid $gray-lighter;
 
     button {
-        height: $height-md;
+        height: 33px;
         outline: none;
         border: 1px solid;
         border-color: $white !important;
@@ -57,6 +57,8 @@
     }
 
     .btn-link {
+        padding-left: 8px;
+        padding-right: 8px;
         border: 1px solid;
         border-color: $white !important;
         &:hover {
@@ -67,13 +69,14 @@
     }
 
     tbody {
-        height: 180px;
+        height: 135px;
         button {
             padding: 6px;
         }
     }
 
     .btn-grey {
+        padding: 0;
         &:hover,
         &.mod-hover {
             color: $brand-primary;
@@ -82,6 +85,7 @@
     }
 
     .btn-primary {
+        padding: 0;
         color: $white;
     }
 

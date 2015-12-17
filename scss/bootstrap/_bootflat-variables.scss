@@ -41,7 +41,7 @@
 // $pinkrose-light:              #EC87C0 !default;
 
 $lightgray-dark:              #E6E9ED !default;
-// $lightgray-light:             #F5F7FA !default;
+$lightgray-light:             #F5F7FA !default;
 
 // $mediumgray-dark:             #AAB2BD !default;
 // $mediumgray-light:            #CCD1D9 !default;
@@ -54,5 +54,5 @@ $lightgray-dark:              #E6E9ED !default;
 //------------------------------------------------------
 $panel-shadow:               none;
 $panel-default-border:       $middle-gray-color;   // hardimported from bootflat
-$form-disabled-color:        $lightgray-dark !default;
+$form-disabled-color:        $lightgray-light !default;
 $form-font-color:            #434A54;   // hardimported from bootflat

@@ -46,6 +46,13 @@
     &.mod-borderless {
       border: 0 !important;
     }
+
+    &__over {
+      position: absolute;
+      top: 1px;
+      right: 8px;
+    }
+
   }
 
   &__input {

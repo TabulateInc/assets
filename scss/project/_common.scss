@@ -243,6 +243,10 @@ select.padding-left-xs option,
   }
 }
 
+.margin-left-xs {
+  margin-left: $margin-xs;
+}
+
 .margin-left-sm {
   margin-left: $margin-normal;
 }

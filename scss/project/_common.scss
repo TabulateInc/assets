@@ -268,6 +268,10 @@ select.padding-left-xs option,
   color: $darkgray-dark !important;
 }
 
+.text-placeholder {
+  color: $input-color-placeholder;
+}
+
 .primary-text {
   color: $brand-primary;
 }

@@ -111,6 +111,7 @@ $items-table-edit-border-width: 2px;
 // data table
 $data-table-cell-height: $height-sm; 
 $fix-column-width: 177px;
+$fix-column-width-lg: 299px;
 
 // content filter
 $content-filter-height: 29px;
@@ -133,4 +134,4 @@ $report-table-cell-padding: 2px 1px 3px 22px;
 
 // ds
 $ds-table-cell-padding: 3px 8px;
-$ds-table-cell-min-width: 95px;  // to fit $xxx,xxx.xx
+$ds-table-cell-min-width: 100px;  // to fit $xxx,xxx.xx

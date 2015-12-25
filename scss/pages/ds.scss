@@ -52,6 +52,16 @@ table.summary-table {
 }
 
 .table-overflow-wrapper {
+
+  @media (min-width: $screen-lg-min) {
+    width: calc(100% - #{$fix-column-width-lg});
+    margin-left: $fix-column-width-lg;
+
+    .fix-first-column {
+      width: $fix-column-width-lg !important;
+    }
+  }
+
   .ps-scrollbar-x-rail {
     top: 3px !important;
   }

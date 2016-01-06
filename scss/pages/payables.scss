@@ -46,6 +46,10 @@ add-edit-bill .glyphicon-calendar {
   }
 }
 
+.remove-detail-btn {
+  position: absolute;
+}
+
 state-picker .col-sm-4 {
   width: 100% !important;  // temp hack, while add / edit vendor page is not confirmed
 }

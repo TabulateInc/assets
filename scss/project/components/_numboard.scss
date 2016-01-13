@@ -2,7 +2,7 @@
   height: calc(100% - #{$main-navigation-height});
 
   @media (orientation: landscape) {
-    height: 100%;
+    height: calc(100% - #{$numboard-title-height-landscape});
   }
 
   &__wrapper {
@@ -16,19 +16,14 @@
 
   &__title {
     @media (orientation: landscape) {
-      position: absolute;
-      right: $numboard-wrapper-padding;
-      top: 0;
-      width: calc(100% - #{$numboard-wrapper-padding*2});
-      text-align: right;
+      margin: $numboard-title-margin-landscape 0;
     }
   }
 
   &__input {
-    margin: $numboard-input-margin-max 0;
-    @media (max-height: $landscape-height-max) {
-      margin-top: $numboard-input-margin-min;
-      margin-bottom: $numboard-input-margin-min;
+    margin: $numboard-input-margin 0;
+    @media (orientation: landscape) {
+      margin: $numboard-input-margin-landscape 0;
     }
   }
 
@@ -45,9 +40,9 @@
     }
 
     &__wrapper {
-      height: calc(100% - #{$numboard-input-margin-max*2 + $numboard-input-height});
-      @media (max-height: $landscape-height-max) {
-        height: calc(100% - #{$numboard-input-margin-min*2 + $numboard-input-height});
+      height: calc(100% - #{$numboard-input-margin*2 + $numboard-input-height});
+      @media (orientation: landscape) {
+        height: calc(100% - #{$numboard-input-margin-landscape*2 + $numboard-input-height});
       }
     }
 

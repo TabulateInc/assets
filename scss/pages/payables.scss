@@ -50,6 +50,10 @@ add-edit-bill .glyphicon-calendar {
   position: absolute;
 }
 
+.has-error .form-control[disabled] {
+  border-color: $grapefruit-dark;
+}
+
 state-picker .col-sm-4 {
   width: 100% !important;  // temp hack, while add / edit vendor page is not confirmed
 }

@@ -1,0 +1,64 @@
+$font-size-panel: 15px;
+$gray-panel: #7b8994;
+
+.custom-panel {
+  border: 1px solid $middle-gray-color;
+  border-radius: $border-radius-large;
+  box-shadow: none;
+  margin: 0;
+  padding: 25px $padding-md;
+
+  &:hover {
+    border-color: $brand-primary;
+  }
+
+  &__header {
+    font-size: $font-size-panel;
+    font-weight: $font-weight-sm;
+    margin-bottom: $margin-sm;
+  }
+
+  &__description {
+    font-weight: $font-weight-xs;
+    color: $gray-panel;
+  }
+
+  &__action {
+    margin-top: $margin-sm - 6px;  // button padding-top
+    font-size: $font-size-panel;
+    font-weight: $font-weight-sm;
+
+    .glyphicon {
+      font-size: $font-size-panel - 3;
+    }
+  }
+}
+
+.report-panel-group {
+  @include clearfix();
+  list-style: none;
+  padding: 0;
+
+  &__item {
+    vertical-align: baseline;
+    margin-bottom: $margin-md;
+    padding: 0;
+
+    @media (min-width: $screen-sm-min) {
+      &:nth-child(even) {
+        padding-left: $margin-md / 2;
+      }
+
+      &:nth-child(odd) {
+        padding-right: $margin-md / 2;
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    // overflow issue fix
+    .custom-panel__description {
+      min-height: 38px;
+    }
+  }
+}

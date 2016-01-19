@@ -19,6 +19,10 @@ $font-size-xs: 11px;
 $font-size-md: 16px;
 $font-size-xlg: 36px;
 
+$font-weight-xs: 300;
+$font-weight-sm: 400;
+$font-weight-md: 500;
+
 // Box
 $height-sm: 27px;
 $height-md: 40px;
@@ -30,7 +34,8 @@ $padding-vertical-lg: 20px;
 $padding-horizontal-lg: 30px;
 
 $margin-xs: 4px;
-$margin-normal: 12px;
+$margin-sm: 12px;
+$margin-normal: $margin-sm;  // deprecated, use $margin-sm instead
 $margin-md: 20px;
 $margin-max: 36px;
 
@@ -111,7 +116,7 @@ $items-table-row-padding: $items-table-padding $items-table-padding $items-table
 $items-table-edit-border-width: 2px;
 
 // data table
-$data-table-cell-height: $height-sm; 
+$data-table-cell-height: $height-sm;
 $fix-column-width: 177px;
 $fix-column-width-lg: 299px;
 

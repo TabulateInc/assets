@@ -10,11 +10,12 @@ $gray-panel: #7b8994;
 
   &:hover {
     border-color: $brand-primary;
+    cursor: pointer;
   }
 
   &__header {
     font-size: $font-size-panel;
-    font-weight: $font-weight-sm;
+    font-weight: $font-weight-lg;
     margin-bottom: $margin-sm;
   }
 
@@ -26,10 +27,10 @@ $gray-panel: #7b8994;
   &__action {
     margin-top: $margin-sm - 6px;  // button padding-top
     font-size: $font-size-panel;
-    font-weight: $font-weight-sm;
+    font-weight: $font-weight-lg;
 
     .glyphicon {
-      font-size: $font-size-panel - 3;
+      font-size: $font-size-panel - 4;
     }
   }
 }
@@ -55,10 +56,17 @@ $gray-panel: #7b8994;
     }
   }
 
+  // custom panel is link only here
+  .custom-panel {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
     // overflow issue fix
     .custom-panel__description {
-      min-height: 38px;
+      min-height: 40px;
     }
   }
 }

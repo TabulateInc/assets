@@ -104,12 +104,6 @@
       line-height:2.1;
     }
   }
-  .custom-selector__btn{
-    line-height:1.5;
-    // centers inside
-    padding: 3px 20px 4px 12px;
-    height: $content-filter-height!important;
-  }
 
   .am-slide-left {
     vertical-align: middle;
@@ -122,4 +116,12 @@
       vertical-align: middle;
     }
   }
+}
+
+.custom-selector__btn,
+.report-variant-selector {
+  line-height:1.5;
+  // centers inside
+  padding: 3px 20px 4px 12px;
+  height: $content-filter-height!important;
 }

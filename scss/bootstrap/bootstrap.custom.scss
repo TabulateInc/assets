@@ -185,9 +185,10 @@ $border:1px solid $subnav-border-color;
     background-color: $white;
 }
 
-.form-control[disabled] {
-  border-color: $form-disabled-color;
-  background-color: $form-disabled-color;
+.form-control[disabled],
+fieldset[disabled] .form-control {
+  border-color: $form-disabled-color !important;
+  background-color: $form-disabled-color !important;
 }
 
 .dropdown-menu {

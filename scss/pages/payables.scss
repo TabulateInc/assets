@@ -57,3 +57,32 @@ add-edit-bill .glyphicon-calendar {
 state-picker .col-sm-4 {
   width: 100% !important;  // temp hack, while add / edit vendor page is not confirmed
 }
+
+.btn-group-justified {
+  .btn-primary {
+    border-color: $brand-primary !important;
+  }
+
+  .btn-default {
+    color: $brand-primary;
+    border-color: $brand-primary !important;
+  }
+}
+
+actions-selector {
+  .custom-selector {
+    .glyphicon {
+      font-size: 20px;
+    }
+
+    &__options {
+      right: 0;
+      width: 260px;
+      padding-bottom: 0;
+    }
+
+    &__btn {
+      text-align: center
+    }
+  }
+}

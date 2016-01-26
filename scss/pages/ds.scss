@@ -20,7 +20,6 @@ table.summary-table {
 
   .category-head.fix-first-column {
     width: 100% !important;
-    height: $data-table-cell-height + 1 !important; //fix bottom border
     z-index: 1;   //fix hidding of bottom border when next row is hovered
   }
 }

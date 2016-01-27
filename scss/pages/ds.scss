@@ -20,12 +20,12 @@ table.summary-table {
 
   .category-head.fix-first-column {
     width: 100% !important;
+    height: $data-table-cell-height + 1 !important; //fix bottom border
     z-index: 1;   //fix hidding of bottom border when next row is hovered
   }
 }
 
 .ds-cell {
-  position: relative;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   min-width: $ds-table-cell-min-width;
@@ -42,6 +42,12 @@ table.summary-table {
       left: auto !important;
       right: 6px;
     }
+  }
+  .is-relative {
+    height: 20px;
+  }
+  .spinner {
+    width: 15px;
   }
 }
 

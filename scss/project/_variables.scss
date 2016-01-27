@@ -117,7 +117,7 @@ $items-table-row-padding: $items-table-padding $items-table-padding $items-table
 $items-table-edit-border-width: 2px;
 
 // data table
-$data-table-cell-height: 28px;
+$data-table-cell-height: $height-sm;
 $fix-column-width: 177px;
 $fix-column-width-lg: 299px;
 

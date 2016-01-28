@@ -146,6 +146,23 @@
   height: 350px;
 }
 
+.panel-table-subheader {
+  border-bottom: 2px solid $darkgray-dark;
+  margin-bottom: 2px;
+}
+
+td {
+  &.mod-positive {
+    background-color: $alert-success-bg;
+    color: $alert-success-text;
+  }
+
+  &.mod-negative {
+    background-color: $alert-danger-bg;
+    color: $alert-danger-text;
+  }
+}
+
 .centrify-content {
   display: block;
   text-align: center;

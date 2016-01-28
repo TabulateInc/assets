@@ -274,6 +274,10 @@ fieldset[disabled] .form-control {
 
 
 select.btn{
+  &:focus {
+    border-color: $brand-primary !important;
+  }
+
   -webkit-appearance:none;
   -moz-appearance:none;
 

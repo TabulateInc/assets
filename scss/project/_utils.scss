@@ -19,4 +19,7 @@ $arrow-down-white: $img-arrow-down-white $arrow-possition transparent;
     color: $black;
     border-radius: 2px;
   }
+  &.as-focused {
+    border-color: $brand-primary !important;
+  }
 }

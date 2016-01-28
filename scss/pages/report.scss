@@ -42,12 +42,15 @@
 
     &.mod-panel {
       width: 100%;
-      padding: 10px 10px 10px 0;
 
       .fix-first-column {
         padding-left: 15px;  // report panel padding
       }
     }
+}
+
+.panel-content {
+  padding: 10px 10px 10px 0;
 }
 
 .panel-heading {

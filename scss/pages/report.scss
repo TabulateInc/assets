@@ -39,6 +39,20 @@
     .fix-first-column {
       width: $fix-column-width + 1 !important;      //+1 fix white line that separate first column and data
     }
+
+    &.mod-panel {
+      width: 100%;
+      padding: 10px 10px 10px 0;
+
+      .fix-first-column {
+        padding-left: 15px;  // report panel padding
+      }
+    }
+}
+
+.panel-heading {
+  background-color: $lightgray-dark;
+  border-bottom-color: $lightgray-dark;
 }
 
 
@@ -124,4 +138,15 @@
   // centers inside
   padding: 3px 20px 4px 12px;
   height: $content-filter-height!important;
+}
+
+.panel-pie-chart {
+  display: inline-block;
+  width: 280px;
+  height: 350px;
+}
+
+.centrify-content {
+  display: block;
+  text-align: center;
 }

@@ -172,3 +172,83 @@ td {
   display: block;
   text-align: center;
 }
+
+/*
+  Print Weekly Snapshot
+
+  WARNING!
+
+  colors must be important for print
+*/
+
+.is-visible-print {
+  display: none;
+}
+
+@media print {
+  $panel-width: 28cm;
+
+  .is-visible-print {
+    display: block;
+  }
+
+  .page-brake {
+    page-break-after: always;
+  }
+
+  // hide stuff
+  menu-nav,
+  h3,
+  .breadcrumb,
+  .content-filter {
+    display: none;
+  }
+
+  body {
+    font-size: 10;
+  }
+
+  // fix table overflow
+  .panel {
+    width: $panel-width;
+  }
+
+  // fix colors
+  .panel {
+    border-color: $panel-default-border !important;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .panel-heading {
+    background-color: $lightgray-dark !important;
+    border-bottom-color: $lightgray-dark !important;
+    -webkit-print-color-adjust: exact;
+  }
+
+  td {
+    &.mod-positive {
+      background-color: $alert-success-bg !important;
+      color: $alert-success-text !important;
+    }
+
+    &.mod-negative {
+      background-color: $alert-danger-bg !important;
+      color: $alert-danger-text !important;
+    }
+  }
+
+  // fix svg width
+  .panel-pie-chart {
+    width: $panel-width / 4;
+  }
+
+  side-by-side-averages svg {
+    width: $panel-width;
+  }
+
+  horizontal-bar div {
+    width: $panel-width / 2 - 1 !important;
+    display: inline-block !important;
+  }
+}
+

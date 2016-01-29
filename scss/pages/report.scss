@@ -44,7 +44,8 @@
       width: 100%;
 
       .fix-first-column {
-        padding-left: 15px;  // report panel padding
+        width: $fix-column-width + 1 + $panel-body-padding !important;
+        padding-left: $panel-body-padding;  // report panel padding
       }
     }
 }

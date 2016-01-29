@@ -26,7 +26,6 @@ table.summary-table {
 }
 
 .ds-cell {
-  position: relative;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   min-width: $ds-table-cell-min-width;
@@ -38,11 +37,18 @@ table.summary-table {
       outline: 2px solid red !important;
     }
 
+    .input-wrapper {
+      height: 20px;
+    }
+
     .tooltip {
       white-space: nowrap;
       left: auto !important;
       right: 6px;
     }
+  }
+  .spinner {
+    width: 15px;
   }
 }
 

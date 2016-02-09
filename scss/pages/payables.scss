@@ -2,8 +2,14 @@
 @import '../bootstrap/variables';
 
 
-add-edit-bill .glyphicon-calendar {
-  top: 17px;
+add-edit-bill {
+  .glyphicon-calendar {
+    top: 17px;
+  }
+
+  pay-bill button {
+    height: $height-md;
+  }
 }
 
 .margin-right-sm {
@@ -85,4 +91,8 @@ actions-selector {
       text-align: center
     }
   }
+}
+
+.modal.mod-over-alert {
+  z-index: $alert-z-index + 1;
 }

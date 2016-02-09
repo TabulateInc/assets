@@ -85,7 +85,7 @@
   top: $main-navigation-height + $alert-from-top;
   left: 0;
   right: 0;
-  z-index: 500000;
+  z-index: $alert-z-index;
   padding: $alert-margin-vertical $alert-margin-horizontal;
   border-radius: $alert-border-radius;
 }

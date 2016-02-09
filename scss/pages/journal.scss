@@ -21,6 +21,10 @@
       background-color: lighten($gray-base, 97.5%);
     }
   }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .header.mod-journal {

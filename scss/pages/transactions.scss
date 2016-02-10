@@ -212,21 +212,14 @@ $details-status-width: 15px;
     }
 }
 
-/*
-  This is ng-tags-input classes
-  that need customization
-  they will not work without important
-*/
-.tags {
-  min-height: 38px !important;
-}
-
-.input {
-  height: 36px !important;
-  margin: 0 !important;
-}
-
-.tag-item {
-  height: 32px !important;
-  line-height: 30px !important;
+tags-input {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    min-width: 185px;
+  }
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    min-width: 435px;
+  }
+  @media (min-width: $screen-lg-min) {
+    min-width: 535px;
+  }
 }

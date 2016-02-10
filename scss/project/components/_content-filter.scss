@@ -55,6 +55,31 @@
   .day-dropdown {
     width: 120px !important;
   }
+
+  // third-party, so everything is important here
+  tags-input.mod-xs {
+    $content-height: $content-filter-height - 8;
+
+    min-height: $content-filter-height;
+
+    .input {
+      height: $content-height !important;
+    }
+
+    .tag-item {
+      height: $content-height !important;
+      line-height: $content-height - 1 !important;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      width: 100%;
+      display: block;
+      margin-left: 0;
+      padding-right: 7px;
+      margin-top: $margin-xs;
+    }
+  }
+
 }
 
 .week-dropdown,
@@ -73,4 +98,8 @@
   @media (max-width: $screen-xxs-max) {
     max-width: 133px;
   }
+}
+
+.account-dropdown {
+  max-width: 200px;
 }

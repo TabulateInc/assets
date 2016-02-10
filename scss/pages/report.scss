@@ -71,25 +71,9 @@
 }
 
 .content-filter {
-
   // third-party, so everything is important here
-  tags-input {
+  tags-input.mod-xs {
     min-width: 200px;
-
-    @media (min-width: $screen-sm-min) {
-      $content-height: $content-filter-height - 8;
-
-      min-height: $content-filter-height;
-
-      .input {
-        height: $content-height !important;
-      }
-
-      .tag-item {
-        height: $content-height !important;
-        line-height: $content-height - 1 !important;
-      }
-    }
 
     @media (max-width: $screen-xs-max) {
       $content-height: $height-md - 8;

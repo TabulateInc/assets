@@ -16,12 +16,6 @@ add-edit-bill {
   margin-right: $margin-xs !important;
 }
 
-.margin-top-xs-xs {
-  @media (max-width: $screen-xs-max) {
-    margin-top: $margin-xs;
-  }
-}
-
 .add-control {
   @media (max-width: $screen-xs-max) {
     padding-right: $padding-sm;

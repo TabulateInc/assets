@@ -1,0 +1,40 @@
+@import '../project/variables';
+@import '../project/utils';
+@import '../bootstrap/variables';
+
+.toggle.mod-sm {
+  $toggle-height: 24px;
+  $circle-size: $toggle-height - 4px;
+
+  height: $toggle-height;
+
+  .handle {
+    width: $toggle-height*1.5;
+    height: $toggle-height / 2;
+    border-radius: 19px;
+    margin-top: 6px;
+
+    &:after,
+    &:before {
+      width: $circle-size;
+      border-radius: $circle-size;
+    }
+
+    &:after {
+      height: $circle-size;
+      margin-top: -6px;
+    }
+
+    &:before {
+      height: $circle-size / 2;
+    }
+  }
+
+  input[type="checkbox"]:checked + .handle:before {
+    width: $circle-size*1.5;
+  }
+
+  input[type="checkbox"]:checked + .handle:after {
+    left: 15px;
+  }
+}

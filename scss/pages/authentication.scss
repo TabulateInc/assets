@@ -25,12 +25,6 @@ p {
     border: none;
 }
 
-.form-auth-subheader {
-    text-align: center;
-    font-size: $font-size-small;
-    margin-bottom: $margin-md;
-}
-
 .container {
     margin-top: 15px;
     @media (min-width:$screen-sm-min){
@@ -55,16 +49,17 @@ p {
     font-size: 13px;
     color: #515151;
     margin-bottom: 10px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
+.form-group {
+  margin-bottom: 5px;
+}
+
 .form-control {
-  width: 49%;
-  display: inline-block;
-  @media only screen and (max-device-width: 600px) {
-    width: 100%;
-    display: block;
-  }
   padding: 20px;
   border-color: #d3d8db;
   border-radius: 10px;
@@ -72,18 +67,25 @@ p {
   font-size: 15px;
   color: #515151;
   margin: 5px auto;
+  box-shadow: none;
 
   &:active {
     border-color: #57a6db;
   }
 }
 
-.forgot-pass {
+.additional-info {
   a {
     font-weight: 400;
     font-size: 15px;
   }
-  margin-bottom: 14px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  clear: both;
+}
+
+.form-group + .btn {
+  margin-top: 32px;
 }
 
 .btn {
@@ -121,3 +123,15 @@ p {
   max-height: 50vh;
   overflow: scroll;
 }
+
+@mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+  }
+  #{$list} {
+    padding-left:  5px;
+    padding-right: 5px;
+  }
+}
+
+@include make-grid-columns();

@@ -1,14 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import '../project/variables';
 @import '../bootstrap/variables';
 
 $headings-font-family: 'Open Sans', sans-serif;
 
-h1, h2, h3, h4, h5, h6 {
-   font-family: $headings-font-family;
+body {
+  padding: 0;
 }
 
-.form-control {
-    border-color: $middle-gray-color;
+h1, h2, h3, h4, h5, h6 {
+   font-family: $headings-font-family;
 }
 
 p {
@@ -16,13 +17,12 @@ p {
 }
 
 .logo {
-    $logo-height: 40px;
-    margin: ($main-navigation-height - $logo-height)/2 auto;
-    height: $logo-height;
+  margin: 80px auto;
+  height: 100px;
 }
 
 .form-auth {
-    padding: $padding-vertical-lg $padding-horizontal-lg;
+    border: none;
 }
 
 .form-auth-subheader {
@@ -32,17 +32,72 @@ p {
 }
 
 .container {
-    margin-top: 35px;
+    margin-top: 15px;
     @media (min-width:$screen-sm-min){
-        margin-top:100px;
+
     }
-    max-width:400px;
+    max-width:700px;
 }
 
-input {
-    margin:15px auto;
+.title {
+  border-bottom:solid 1px #e8ebed;
+  margin-bottom: 45px;
+
+  &__title {
+    font-weight: 400;
+    font-size: 32px;
+    color: #4c5557;
+    margin-bottom: 5px;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 13px;
+    color: #515151;
+    margin-bottom: 10px;
+  }
 }
 
+.form-control {
+  width: 49%;
+  display: inline-block;
+  @media only screen and (max-device-width: 600px) {
+    width: 100%;
+    display: block;
+  }
+  padding: 20px;
+  border-color: #d3d8db;
+  border-radius: 10px;
+  font-family: $headings-font-family;
+  font-size: 15px;
+  color: #515151;
+  margin: 5px auto;
+
+  &:active {
+    border-color: #57a6db;
+  }
+}
+
+.forgot-pass {
+  a {
+    font-weight: 400;
+    font-size: 15px;
+  }
+  margin-bottom: 14px;
+}
+
+.btn {
+  padding:18px 45px 18px;
+  border-radius: 30px;
+  font-family: $headings-font-family;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.btn-primary {
+  color:#fff;
+  background-color:#57a6db;
+}
 
 ::-moz-placeholder,
 :-ms-input-placeholder,

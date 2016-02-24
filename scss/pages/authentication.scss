@@ -18,7 +18,7 @@ p {
 
 .logo {
   margin: 80px auto;
-  height: 100px;
+  height: 80px;
 }
 
 .form-auth {
@@ -26,11 +26,10 @@ p {
 }
 
 .container {
-    margin-top: 15px;
     @media (min-width:$screen-sm-min){
 
     }
-    max-width:700px;
+    max-width:750px;
 }
 
 .title {
@@ -42,14 +41,15 @@ p {
     font-size: 32px;
     color: #4c5557;
     margin-bottom: 5px;
+    margin-top: -5px;
   }
 
   &__subtitle {
     font-weight: 400;
-    font-size: 13px;
+    font-size: 16px;
     color: #515151;
-    margin-bottom: 10px;
-    max-width: 450px;
+    margin-bottom: 35px;
+    max-width: 560px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -59,9 +59,13 @@ p {
   margin-bottom: 5px;
 }
 
+$form-controll-side-padding: 20px;
+$form-controll-border-width: 1px;
+
 .form-control {
-  padding: 20px;
-  border-color: #d3d8db;
+  height: 60px;
+  padding: 18px $form-controll-side-padding;
+  border: #d3d8db solid $form-controll-border-width;
   border-radius: 10px;
   font-family: $headings-font-family;
   font-size: 15px;
@@ -69,10 +73,12 @@ p {
   margin: 5px auto;
   box-shadow: none;
 
-  &:active {
+  &:focus {
     border-color: #57a6db;
   }
 }
+
+$col-side-paddings: 5px;
 
 .additional-info {
   a {
@@ -82,6 +88,14 @@ p {
   margin-top: 4px;
   margin-bottom: 10px;
   clear: both;
+
+  &.mod-input-left-border-aligned {
+    padding-left: $col-side-paddings;
+  }
+
+  &.mod-input-text-start-aligned {
+    padding-left: $form-controll-side-padding + $form-controll-border-width + $col-side-paddings;
+  }
 }
 
 .form-group + .btn {
@@ -113,12 +127,6 @@ p {
     }
 }
 
-.more-info {
-  text-align:center;
-  padding: $padding-large-vertical;
-  font-size: $font-size-xs;
-}
-
 .half-height {
   max-height: 50vh;
   overflow: scroll;
@@ -129,8 +137,8 @@ p {
     $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
   }
   #{$list} {
-    padding-left:  5px;
-    padding-right: 5px;
+    padding-left:  $col-side-paddings;
+    padding-right: $col-side-paddings;
   }
 }
 

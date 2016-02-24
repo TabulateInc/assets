@@ -8,7 +8,17 @@
 
   &.mod-sm-at-xs {
     @media (max-width:$screen-xs-max){
-       font-size: $font-size-xs;
+      font-size: $font-size-xs;
+
+      .sorticon {
+        font-size: 6px;
+        top: 5px;
+        right: -6px;
+
+        &__wrapper {
+          font-size: $font-size-xs - 1;
+        }
+      }
     }
   }
 

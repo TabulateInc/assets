@@ -1,0 +1,27 @@
+@import '../project/variables';
+@import '../project/utils';
+@import '../bootstrap/variables';
+
+.border-top-xs {
+  border-top: 1px solid $black;
+}
+
+accounting-settings {
+  .custom-selector__options {
+    right: 0;
+  }
+}
+
+.btn.mod-report-content-filter {
+  line-height: 13px;
+
+  height: $content-filter-height;
+}
+
+.journal-report {
+  overflow: scroll;
+
+  .items-table {
+    min-width: 560px;
+  }
+}

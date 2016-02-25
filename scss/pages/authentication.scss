@@ -73,8 +73,29 @@ $form-controll-border-width: 1px;
   margin: 5px auto;
   box-shadow: none;
 
+  -moz-animation-name: slideDown;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-duration: 0.2s;
+
+  -webkit-animation-name: slideDown;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-duration: 0.2s;
+
+  animation-name: slideDown;
+  animation-iteration-count: 1;
+  animation-duration: 0.2s;
+
   &:focus {
     border-color: #57a6db;
+  }
+}
+
+@include keyframes(slideDown) {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 60%;
   }
 }
 

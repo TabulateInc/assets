@@ -203,7 +203,8 @@ td {
   menu-nav,
   h3,
   .breadcrumb,
-  .content-filter {
+  .content-filter,
+  a[href]:after {
     display: none;
   }
 

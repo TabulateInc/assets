@@ -66,6 +66,10 @@ table.summary-table {
     .fix-first-column {
       width: $fix-column-width-lg !important;
     }
+
+    .ps-scrollbar-x-rail {
+      left: $fix-column-width-lg !important;
+    }
   }
 
   .ps-scrollbar-x-rail {

@@ -96,3 +96,18 @@ actions-selector, settings-selector {
 .modal.mod-over-alert {
   z-index: $alert-z-index + 1;
 }
+
+.content-filter.mod-date-and-tags-and-settings {
+  @media (max-width: $screen-xs-max) {
+    settings-selector .custom-selector__btn {
+      padding-right: 0;
+      padding-left: 0;
+      background: none;
+
+      &:hover,
+      &:focus {
+        background: $mediumgray-light;
+      }
+    }
+  }
+}

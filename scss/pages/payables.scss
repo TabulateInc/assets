@@ -97,17 +97,15 @@ actions-selector, settings-selector {
   z-index: $alert-z-index + 1;
 }
 
-.content-filter.mod-date-and-tags-and-settings {
+settings-selector .custom-selector__btn {
   @media (max-width: $screen-xs-max) {
-    settings-selector .custom-selector__btn {
-      padding-right: 0;
-      padding-left: 0;
-      background: none;
+    padding-right: 0;
+    padding-left: 0;
+    background: none;
 
-      &:hover,
-      &:focus {
-        background: $mediumgray-light;
-      }
+    &:hover,
+    &:focus {
+      background: $mediumgray-light;
     }
   }
 }

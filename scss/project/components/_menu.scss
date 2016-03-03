@@ -1,48 +1,324 @@
 @import '../utils';
 
-.navbar-brand {
-    height: $main-navigation-height;
-    width: $main-navigation-height;
+$color-primary: #57a6db;
+$gray-border: #ebebeb;
+$gray-background: #f3f6f8;
+$gray-text: #c4c9cc;
+$font-size-sm: 12px;
 
-    img {
-        margin: -3px 0 0;
-    }
+$nav-link-height: 19px;
+$nav-link-padding-vertical: ($main-navigation-height - $nav-link-height - 1) / 2;  // -1 for border
+$nav-link-padding-horizontal: 25px;
+$nav-link-padding-horizontal-sm: 20px;
+$subnav-link-padding-vertical: 6px; // aside
+$subnav-link-padding-left-xs: 50px; // aside
+$nav-link-glyphicon-size: 14px;
+$subnav-link-padding-xs: 10px;
+
+$animation-duration: .6s;
+
+@function make-click-color($color) {
+  @return transparentize(darken($color, 10%), .5);
 }
 
-.navbar-right {
-    margin-right: 0;
+%nav-link {
+  color: $gray-text;
+  transition: all $animation-duration;
+
+  &:hover,
+  &:focus {
+    @extend %nav-link-active;
+  }
+
+  // center glyphicon between link and left border
+  .glyphicon {
+    font-size: $nav-link-glyphicon-size;
+    margin-left: -$nav-link-glyphicon-size/2;
+    width: $nav-link-padding-horizontal + $nav-link-glyphicon-size/2;
+    height: $nav-link-height;
+    vertical-align: middle;
+    text-align: left;
+
+    // @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    //   width: $nav-link-padding-horizontal-sm + $nav-link-glyphicon-size/2;
+    // }
+  }
+
+  // click animation
+  &.mod-click {
+    color: make-click-color($white);
+  }
+
+  // click animation again
+  &::after {
+    background: make-click-color($color-primary);
+  }
 }
 
-.btn-shaded {
-    background-color: transparent;
-    border-color: $navbar-inverse-color;  // #5c5c5c;
-    color: $navbar-inverse-color;
+%nav-link-active {
+  color: $white;
+  background-color: $color-primary;
+}
 
-    &:hover {
-        background-color: $brand-saturated;
-        color: $white;
+%nav-wrapper {
+  background-color: $gray-background;
+  font-size: $font-size-sm;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.navbar-header {
+  @extend %nav-wrapper;
+  float: none;
+  border-bottom: 1px solid $gray-border;
+
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 0;
+    border-bottom: none;
+    background-color: transparentize($white, .25);
+  }
+}
+
+.navbar-nav {
+  margin: 0 !important; // fixed bootstrap
+
+  // link wrapper
+  > li {
+    border-right: 1px solid $gray-border;
+
+    @media (max-width: $screen-xs-max) {
+      border-right: none;
     }
-    &:focus {
+
+    &:last-child {
+      border-right: none;
+    }
+
+    // links
+    > a {
+      @extend %nav-link;
+
+      &.mod-has-active,
+      &.mod-active {
+        @media (min-width: $screen-sm-min) {
+          border-bottom: 3px solid $color-primary;
+        }
+      }
+
+      &.mod-active {
+        @media (max-width: $screen-xs-max) {
+          border-right: 3px solid $color-primary;
+        }
+      }
+
+      line-height: $nav-link-height !important;
+
+      @media (min-width: $screen-sm-min) {
+        padding: $nav-link-padding-vertical $nav-link-padding-horizontal;
+        height: $nav-link-height + $nav-link-padding-vertical*2 !important;
+      }
+
+      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        // not enough space for stores selector
+        padding-left: $nav-link-padding-horizontal-sm;
+        padding-right: $nav-link-padding-horizontal-sm;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        padding: $subnav-link-padding-vertical $nav-link-padding-horizontal;
+      }
+    }
+  }
+
+  .open {
+    > a:hover {
+      @extend %nav-link-active;
+    }
+
+    > a,
+    > a:focus {
+      @extend %nav-link-active;
+      @media (max-width: $screen-xs-max) {
         background-color: transparent;
-        color: $navbar-inverse-color;
+        color: $gray-text;
+      }
+    }
+  }
+}
+
+// subnav
+.navbar {
+
+  // wrapper style and animation
+  .dropdown-menu {
+    @extend %nav-wrapper;
+
+    max-height: 0;
+    opacity: 0;
+    display: block;
+    overflow: hidden;
+    transition: all $animation-duration;
+
+    @media (max-width: $screen-xs-max) {
+      max-height: none;
+      opacity: 1;
+      position: static;
+      float: none;
+      box-shadow: none;
+      margin: 0;
+      padding-top: $subnav-link-padding-xs;
+      padding-bottom: $subnav-link-padding-xs;
     }
 
-    @at-root select#{&} {
-        background: $arrow-down-gray;
+    // links
+    > li > a {
+      @extend %nav-link;
 
-        &:hover {
-            background: $arrow-down-white;
-            background-color: $brand-saturated;
-            color: $white;
+      &.mod-active {
+        @media (max-width: $screen-xs-max) {
+          border-right: 3px solid $color-primary;
         }
-        &:focus {
-            background: $arrow-down-gray;
-            color: $navbar-inverse-color;
-            border-color: $navbar-inverse-color;
-        }
-        option {
-            background: $white;
-            color: $black;
-        }
-    }        
+      }
+
+      padding-top: $subnav-link-padding-vertical !important;
+      padding-bottom: $subnav-link-padding-vertical !important;
+      line-height: $nav-link-height !important;
+
+      @media (max-width: $screen-xs-max) {
+        padding-left: $subnav-link-padding-left-xs !important;
+      }
+    }
+  }
+
+  // animation
+  .dropdown:hover .dropdown-menu,
+  .dropdown.open .dropdown-menu {
+    max-height: 300px;
+    opacity: 1;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    border: none;
+
+    // no carets on mobile
+    .caret {
+      display: none;
+    }
+  }
+}
+
+.no-border {
+  border: none !important;
+}
+
+// store button
+select.btn-shaded {
+  @extend %nav-link;
+  $height: $nav-link-height*2;
+
+  border-color: $gray-border;
+  height: $height;
+  background-image: none !important;
+  background-color: transparent;
+
+  @media (min-width: $screen-sm-min) {
+    margin-top: ($main-navigation-height - $height - 1) / 2;
+    margin-bottom: ($main-navigation-height - $height - 1) / 2;
+    max-width: 110px;  // otherwise store will go to the second row
+  }
+
+  @media (max-width: $screen-xs-max) {
+    margin-top: ($main-navigation-height-mobile - $height - 1) / 2;
+    margin-bottom: ($main-navigation-height-mobile - $height - 1) / 2;
+    margin-left: $subnav-link-padding-left-xs;
+  }
+
+  // caret for select that can change color and does not break animation
+  + .caret {
+    position: absolute;
+    top: $main-navigation-height / 2;
+    right: 5px;
+    color: $gray-text;
+  }
+
+  &:hover,
+  &:focus {
+    + .caret {
+      color: $white;
+    }
+  }
+
+  option {
+    background: $white;
+    color: $black;
+  }
+}
+
+// mobile specific styles
+@media (max-width: $screen-xs-max) {
+  .navbar-right {
+
+    .dropdown-menu > li {
+      > a,
+      > a:hover {
+        padding-left: $nav-link-padding-horizontal !important;
+      }
+    }
+  }
+
+  /*
+    visible on xs only
+  */
+  .navbar-title {
+    $font-size: 19px;
+    $padding-vertical: ($main-navigation-height-mobile - $font-size) / 2;
+    $toggle-button-size: 46px;
+
+    font-size: $font-size;
+    margin: 0;
+    padding: $padding-vertical $toggle-button-size $padding-vertical 0;
+    text-align: center;
+    text-transform: capitalize;
+    line-height: .9;
+  }
+
+  .navbar-toggle {
+    $icon-height: 14px;
+    $button-padding: ($main-navigation-height-mobile - $icon-height) / 2;
+    $button-size: $button-padding*2 + $icon-height;
+
+    padding: $button-padding;  // testing
+    margin: 0;
+    border: none;
+    float: left;
+
+    .icon-bar {
+      background-color: $gray-text;
+    }
+
+    // click animation
+    &[animate-click]::after {
+      $size: $button-size;  // testing
+      width: $size;
+      height: $size;
+      top: 50%;
+      left: 50%;
+      margin-top: -$size / 2;
+      margin-left: -$size / 2;
+      border-radius: 50%;
+      background: make-click-color($white);
+    }
+  }
+}
+
+.aside.mod-navbar {
+  background-color: $gray-background;
+
+  .aside-dialog {
+    background-color: $gray-background;
+
+    .aside-body {
+      padding: 0;
+    }
+  }
 }

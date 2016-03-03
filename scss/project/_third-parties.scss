@@ -8,8 +8,14 @@
 // Aside
 // -----------------------
 
-@media (max-width: 991px) {
-  .aside {
+.aside {
+  &.am-slide-left {
+    vertical-align: middle;
+    display: inline-block;
+    left: 0;
+  }
+
+  @media (max-width: 991px) {
     min-width: 290px !important;
   }
 }
@@ -33,7 +39,6 @@
 .aside-title {
   color: $gray;
 }
-
 
 // Datepicker
 // -----------------------

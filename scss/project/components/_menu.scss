@@ -162,7 +162,10 @@ $animation-duration: .6s;
 
       float: none;
 
-      max-height: none;
+      // fix safari mobile transition
+      transition: max-height 0s;
+      max-height: none !important;
+
       margin: 0;
       padding-top: $subnav-link-padding-xs;
       padding-bottom: $subnav-link-padding-xs;

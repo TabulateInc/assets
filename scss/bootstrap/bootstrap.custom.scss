@@ -2,10 +2,9 @@
 @import '../project/utils';
 @import 'variables';
 
-@import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
-//Disable flat theme by removing next line
-@import '../../../bower_components/Bootflat/bootflat/scss/bootflat';
-/*@import "../../bower_components/bootstrap-table/src/bootstrap-table.css";*/
+@import 'bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'Bootflat/bootflat/scss/bootflat';
+@import 'bootstrap-additions/bootstrap-additions';
 
 .container.container-md {
     $screen-md-min: 992px;

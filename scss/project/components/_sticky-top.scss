@@ -1,6 +1,12 @@
 .sticky-top {
   position: fixed;
-  top: $main-navigation-height + 1;
+  @media (min-width: $screen-sm-min) {
+    top: $main-navigation-height + 1;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    top: $main-navigation-height-mobile + 1;
+  }
 
   &--files {
     background-color: $white;

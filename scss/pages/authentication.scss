@@ -1,48 +1,201 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import '../project/variables';
 @import '../bootstrap/variables';
 
-$headings-font-family: 'Open Sans', sans-serif;
+$btn-primary-bg: #57a6db;
+$btn-primary-color: #fff;
+$desktop-to-mobile: .5;
+$desktop-to-mobile-sm: .75;
 
-h1, h2, h3, h4, h5, h6 {
-   font-family: $headings-font-family;
-}
-
-.form-control {
-    border-color: $middle-gray-color;
-}
-
-p {
-    font-family: $headings-font-family !important;
+body {
+  padding: 0;
 }
 
 .logo {
-    $logo-height: 40px;
-    margin: ($main-navigation-height - $logo-height)/2 auto;
-    height: $logo-height;
+  height: 80px;
+  margin: 80px auto;
+
+  @media (min-width:$screen-xs-min) and (max-width:$screen-xs-max) {
+    height: .75*80px;
+    margin: .5*80px auto;
+  }
+
+  @media (max-width:$screen-xxs-max) {
+    height: $desktop-to-mobile*80px;
+    margin: .25*80px auto $desktop-to-mobile*80px;
+  }
 }
 
 .form-auth {
-    padding: $padding-vertical-lg $padding-horizontal-lg;
-}
-
-.form-auth-subheader {
-    text-align: center;
-    font-size: $font-size-small;
-    margin-bottom: $margin-md;
+  border: 0;
 }
 
 .container {
-    margin-top: 35px;
-    @media (min-width:$screen-sm-min){
-        margin-top:100px;
+  max-width: 750px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.title {
+  margin-bottom: 45px;
+
+  border-bottom: solid 1px #e8ebed;
+
+  @media (max-width:$screen-xs-max) {
+    margin-bottom: $desktop-to-mobile*45px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 400;
+
+    margin-top: -5px;
+    margin-bottom: 5px;
+
+    color: #4c5557;
+
+    @media (min-width:$screen-xs-min) and (max-width:$screen-xs-max) {
+      font-size: .9*32px;
     }
-    max-width:400px;
+
+    @media (max-width:$screen-xxs-max) {
+      font-size: $desktop-to-mobile-sm*32px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+
+    max-width: 560px;
+    margin-right: auto;
+    margin-bottom: 35px;
+    margin-left: auto;
+
+    color: #515151;
+
+    @media (min-width:$screen-xs-min) and (max-width:$screen-xs-max) {
+      font-size: .9*16px;
+    }
+
+    @media (max-width:$screen-xxs-max) {
+      font-size: $desktop-to-mobile-sm*16px;
+    }
+
+    @media (max-width:$screen-xs-max) {
+      margin-bottom: $desktop-to-mobile*35px;
+    }
+  }
 }
 
-input {
-    margin:15px auto;
+.form-group {
+  margin-bottom: 5px;
 }
 
+$form-controll-side-padding: 20px;
+$form-controll-border-width: 1px;
+
+.form-control {
+  @include animation-name(slideDown);
+  @include animation-iteration-count(1);
+  @include animation-duration(.2s);
+
+  font-size: 15px;
+
+  height: 60px;
+  margin: 5px auto;
+  padding: 18px $form-controll-side-padding;
+
+  color: #515151;
+  border: #d3d8db solid $form-controll-border-width;
+  border-radius: 10px;
+  box-shadow: none;
+
+  &:focus {
+    border-color: $btn-primary-bg;
+  }
+
+  @media (max-width:$screen-xs-max) {
+    border-radius: $desktop-to-mobile-sm*10px;
+    font-size: $desktop-to-mobile-sm*15px;
+    height: $desktop-to-mobile-sm*60px;
+    padding: $desktop-to-mobile-sm*18px $desktop-to-mobile-sm*$form-controll-side-padding;
+  }
+}
+
+@keyframes slideDown {
+
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 60%;
+  }
+}
+
+$col-side-paddings: 5px;
+
+.additional-info {
+  clear: both;
+
+  margin-top: 4px;
+  margin-bottom: 10px;
+
+  a {
+    font-size: 15px;
+    font-weight: 400;
+
+    @media (max-width:$screen-xs-max) {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width:$screen-xs-max) {
+    font-size: 12px;
+  }
+
+  &.mod-input-left-border-aligned {
+    padding-left: $col-side-paddings;
+  }
+
+  &.mod-input-text-start-aligned {
+    padding-left: $form-controll-side-padding + $form-controll-border-width + $col-side-paddings;
+    @media (max-width:$screen-xs-max) {
+      padding-left: $desktop-to-mobile-sm*$form-controll-side-padding + $form-controll-border-width + $col-side-paddings;
+    }
+  }
+}
+
+.form-group + .btn {
+  margin-top: 32px;
+
+  @media (max-width:$screen-xs-max) {
+    margin-top: $desktop-to-mobile*32px;
+  }
+
+}
+
+.btn {
+  font-size: 14px;
+  font-weight: 400;
+
+  padding: 18px 45px;
+
+  border-radius: 30px;
+
+  @media (max-width:$screen-xs-max) {
+    font-size: 12px;
+    padding: .7*18px .7*45px;
+    border-radius: .7*30px;
+  }
+}
+
+.btn-primary {
+  color: $btn-primary-color !important;
+  background-color: $btn-primary-bg !important;
+  border-color: $btn-primary-bg !important;
+}
 
 ::-moz-placeholder,
 :-ms-input-placeholder,
@@ -50,19 +203,20 @@ input {
   font-family: $headings-font-family !important;
 }
 
-@media screen and (max-height: 580px) {
-    .content {
-        margin-top: 15px;
-    }
-}
-
-.more-info {
-  text-align:center;
-  padding: $padding-large-vertical;
-  font-size: $font-size-xs;
-}
-
 .half-height {
-  max-height: 50vh;
   overflow: scroll;
+
+  max-height: 50vh;
 }
+
+@mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+  }
+  #{$list} {
+    padding-left:  $col-side-paddings;
+    padding-right: $col-side-paddings;
+  }
+}
+
+@include make-grid-columns();

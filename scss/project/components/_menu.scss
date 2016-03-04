@@ -324,6 +324,12 @@ select.btn-shaded {
 .aside.mod-navbar {
   background-color: $gray-background;
 
+  .close {
+    float: left;
+    padding: 10px 14px;
+    margin-left: 5px;
+  }
+
   .aside-dialog {
     background-color: $gray-background;
 

@@ -48,9 +48,6 @@ $animation-duration: .6s;
 
     text-align: left;
     vertical-align: middle;
-    // @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    //   width: $nav-link-padding-horizontal-sm + $nav-link-glyphicon-size/2;
-    // }
   }
   // click animation
   &.mod-click {
@@ -62,9 +59,13 @@ $animation-duration: .6s;
   }
 }
 
-%nav-link-active {
+@mixin nav-link-active() {
   color: $white;
   background-color: $color-primary;
+}
+
+%nav-link-active {
+  @include nav-link-active();
 }
 
 .navbar-header {
@@ -98,18 +99,16 @@ $animation-duration: .6s;
 
       line-height: $nav-link-height;
 
-      &.mod-has-active,
       &.mod-active {
+        @extend %nav-link-active;
+      }
+
+      &.mod-has-active {
         @media (min-width: $screen-sm-min) {
-          border-bottom: 3px solid $color-primary;
+          @include nav-link-active();
         }
       }
 
-      &.mod-active {
-        @media (max-width: $screen-xs-max) {
-          border-right: 3px solid $color-primary;
-        }
-      }
       @media (min-width: $screen-sm-min) {
         height: $nav-link-height + $nav-link-padding-vertical*2;
         padding: $nav-link-padding-vertical $nav-link-padding-horizontal;
@@ -184,7 +183,7 @@ $animation-duration: .6s;
 
       &.mod-active {
         @media (max-width: $screen-xs-max) {
-          border-right: 3px solid $color-primary;
+          @include nav-link-active();
         }
       }
       @media (max-width: $screen-xs-max) {

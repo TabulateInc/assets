@@ -21,6 +21,13 @@ $animation-duration: .6s;
   @return transparentize(darken($color, 10%), .5);
 }
 
+%nav-wrapper {
+  background-color: $gray-background;
+  font-size: $font-size-sm;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 %nav-link {
   color: $gray-text;
   transition: all $animation-duration;
@@ -60,13 +67,6 @@ $animation-duration: .6s;
   background-color: $color-primary;
 }
 
-%nav-wrapper {
-  background-color: $gray-background;
-  font-size: $font-size-sm;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
 .navbar-header {
   @extend %nav-wrapper;
   float: none;
@@ -80,8 +80,6 @@ $animation-duration: .6s;
 }
 
 .navbar-nav {
-  margin: 0 !important; // fixed bootstrap
-
   // link wrapper
   > li {
     border-right: 1px solid $gray-border;
@@ -111,11 +109,11 @@ $animation-duration: .6s;
         }
       }
 
-      line-height: $nav-link-height !important;
+      line-height: $nav-link-height;
 
       @media (min-width: $screen-sm-min) {
         padding: $nav-link-padding-vertical $nav-link-padding-horizontal;
-        height: $nav-link-height + $nav-link-padding-vertical*2 !important;
+        height: $nav-link-height + $nav-link-padding-vertical*2;
       }
 
       @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
@@ -130,13 +128,13 @@ $animation-duration: .6s;
     }
   }
 
-  .open {
-    > a:hover {
+  .open > a {
+    &:hover {
       @extend %nav-link-active;
     }
 
-    > a,
-    > a:focus {
+    &,
+    &:focus {
       @extend %nav-link-active;
       @media (max-width: $screen-xs-max) {
         background-color: transparent;
@@ -158,6 +156,7 @@ $animation-duration: .6s;
     display: block;
     overflow: hidden;
     transition: all $animation-duration;
+    padding: 0;
 
     @media (max-width: $screen-xs-max) {
       max-height: none;
@@ -166,6 +165,7 @@ $animation-duration: .6s;
       float: none;
       box-shadow: none;
       margin: 0;
+
       padding-top: $subnav-link-padding-xs;
       padding-bottom: $subnav-link-padding-xs;
     }
@@ -180,12 +180,12 @@ $animation-duration: .6s;
         }
       }
 
-      padding-top: $subnav-link-padding-vertical !important;
-      padding-bottom: $subnav-link-padding-vertical !important;
-      line-height: $nav-link-height !important;
+      padding-top: $subnav-link-padding-vertical;
+      padding-bottom: $subnav-link-padding-vertical;
+      line-height: $nav-link-height;
 
       @media (max-width: $screen-xs-max) {
-        padding-left: $subnav-link-padding-left-xs !important;
+        padding-left: $subnav-link-padding-left-xs;
       }
     }
   }
@@ -258,10 +258,10 @@ select.btn-shaded {
 @media (max-width: $screen-xs-max) {
   .navbar-right {
 
-    .dropdown-menu > li {
-      > a,
-      > a:hover {
-        padding-left: $nav-link-padding-horizontal !important;
+    .dropdown-menu > li > a {
+      &,
+      &:hover {
+        padding-left: $nav-link-padding-horizontal;
       }
     }
   }

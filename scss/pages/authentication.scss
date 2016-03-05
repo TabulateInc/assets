@@ -192,9 +192,8 @@ $col-side-paddings: 5px;
 }
 
 .btn-primary {
-  color: $btn-primary-color !important;
-  background-color: $btn-primary-bg !important;
-  border-color: $btn-primary-bg !important;
+  background-color: $btn-primary-bg;
+  border-color: $btn-primary-bg;
 }
 
 ::-moz-placeholder,

@@ -2,10 +2,9 @@
 @import '../project/utils';
 @import 'variables';
 
-@import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
-//Disable flat theme by removing next line
-@import '../../../bower_components/Bootflat/bootflat/scss/bootflat';
-/*@import "../../bower_components/bootstrap-table/src/bootstrap-table.css";*/
+@import 'bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'Bootflat/bootflat/scss/bootflat';
+@import 'bootstrap-additions/bootstrap-additions';
 
 .container.container-md {
     $screen-md-min: 992px;
@@ -30,7 +29,13 @@
 }
 
 .modal-dialog {
-  padding-top: $main-navigation-height + 1;
+  @media (min-width: $screen-sm-min) {
+    padding-top: $main-navigation-height + 1;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    padding-top: $main-navigation-height-mobile + 1;
+  }
 }
 
 .modal {
@@ -82,12 +87,19 @@
   text-align: center !important;
   margin: 0 auto !important;
   position: fixed;
-  top: $main-navigation-height + $alert-from-top;
   left: 0;
   right: 0;
   z-index: $alert-z-index;
   padding: $alert-margin-vertical $alert-margin-horizontal;
   border-radius: $alert-border-radius;
+
+  @media (min-width: $screen-sm-min) {
+    top: $main-navigation-height + $alert-from-top;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    top: $main-navigation-height-mobile + $alert-from-top;
+  }
 }
 
 .alert-success {
@@ -159,13 +171,6 @@ $border:1px solid $subnav-border-color;
     }
 }
 
-.navbar-nav .open .dropdown-menu > li > a {
-  @media (max-width: $screen-sm-max) {
-    padding-top: $main-nav-links-padding-sm;
-    padding-bottom: $main-nav-links-padding-sm;
-  }
-}
-
 .nav-xs {
   margin-bottom: 0;
   @media (max-width:$screen-xs-min) {
@@ -175,10 +180,6 @@ $border:1px solid $subnav-border-color;
   @media (min-width:$screen-xs-min) {
     min-width: 325px;
   }
-}
-
-.navbar-btn {
-    margin-left: 15px;  // nav link padding left
 }
 
 .form-control[readonly] {

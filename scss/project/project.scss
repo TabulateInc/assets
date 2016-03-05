@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,300italic);
+
 @import 'variables';
 @import '../bootstrap/variables';
 @import 'utils';
@@ -30,6 +32,7 @@
 @import 'components/two-column-layout';
 @import 'components/date-range-selector';
 @import 'components/panel';
+@import 'components/animate-click';
 
 // hacks
 @import 'shame';

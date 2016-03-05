@@ -6,7 +6,7 @@
   border-top: 1px solid $table-border-color;
   border-bottom: 1px solid $table-border-color;
 
-  &.mod-date-and-tags {
+  &.mod-date-and-tags, &.mod-date-and-tags-and-settings {
     $search-input-height: 34px;
 
     .as-search-height {
@@ -17,6 +17,13 @@
       $padding-vertical: $search-input-height - 15;
       padding-top: $padding-vertical / 2;
       padding-bottom: $padding-vertical / 2;
+    }
+  }
+
+  &.mod-date-and-tags-and-settings {
+    tags-input {
+      padding-left: 0;
+      padding-right: 4px;
     }
   }
 

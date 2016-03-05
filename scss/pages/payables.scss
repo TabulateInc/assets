@@ -6,10 +6,6 @@ add-edit-bill {
   .glyphicon-calendar {
     top: 17px;
   }
-
-  pay-bill button {
-    height: $height-md;
-  }
 }
 
 .margin-right-sm {
@@ -69,7 +65,7 @@ state-picker .col-sm-4 {
   }
 }
 
-actions-selector {
+actions-selector, settings-selector {
   .custom-selector {
     .glyphicon {
       font-size: 20px;
@@ -89,4 +85,17 @@ actions-selector {
 
 .modal.mod-over-alert {
   z-index: $alert-z-index + 1;
+}
+
+settings-selector .custom-selector__btn {
+  @media (max-width: $screen-xs-max) {
+    padding-right: 0;
+    padding-left: 0;
+    background: none;
+
+    &:hover,
+    &:focus {
+      background: $mediumgray-light;
+    }
+  }
 }

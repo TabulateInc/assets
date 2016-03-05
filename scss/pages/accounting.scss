@@ -6,6 +6,10 @@
   border-top: 1px solid $black;
 }
 
+.border-bottom-xs {
+  border-bottom: 1px solid $black;
+}
+
 accounting-settings {
   .custom-selector__options {
     right: 0;
@@ -23,5 +27,15 @@ accounting-settings {
 
   .items-table {
     min-width: 560px;
+  }
+}
+
+.calendar-input.mod-content-filter {
+  height: 29px;
+  max-width: 150px;
+
+  ~ .glyphicon {
+    padding: 7px !important;
+    right: 5px !important;
   }
 }

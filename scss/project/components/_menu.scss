@@ -3,7 +3,7 @@
 $color-primary: #57a6db;
 $gray-border: #ebebeb;
 $gray-background: #f3f6f8;
-$gray-text: #c4c9cc;
+$gray-text: #9ba3a9;
 
 $font-size-sm: 12px;
 $nav-link-height: 19px;
@@ -30,9 +30,10 @@ $animation-duration: .6s;
 }
 
 %nav-link {
-  transition: all $animation-duration;
+  transition: background $animation-duration, color $animation-duration, opacity $animation-duration;
 
   color: $gray-text;
+  background-color: transparent;
 
   &:hover,
   &:focus {
@@ -149,27 +150,23 @@ $animation-duration: .6s;
 
     display: block;
     overflow: hidden;
+    margin: 0;
 
-    max-height: 0;
-    padding: 0;
+    @media (min-width: $screen-sm-min) {
+      max-height: 0;
+      padding: 0;
+      opacity: 0;
+      transition: max-height $animation-duration, padding $animation-duration, opacity $animation-duration;
+    }
 
-    transition: all $animation-duration;
-
-    opacity: 0;
     @media (max-width: $screen-xs-max) {
-      position: static;
-
-      float: none;
-
-      // fix safari mobile transition
-      transition: max-height 0s;
       max-height: none !important;
-
-      margin: 0;
       padding-top: $subnav-link-padding-xs;
       padding-bottom: $subnav-link-padding-xs;
-
       opacity: 1;
+
+      position: static;
+      float: none;
       box-shadow: none;
     }
     // links
@@ -186,9 +183,15 @@ $animation-duration: .6s;
           @include nav-link-active();
         }
       }
+
+      @media (min-width: $screen-sm-min) {
+        transition-property: none;
+      }
+
       @media (max-width: $screen-xs-max) {
         padding-left: $subnav-link-padding-left-xs;
       }
+
     }
   }
   // animation

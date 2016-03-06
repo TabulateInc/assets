@@ -7,13 +7,12 @@
 @import 'bootstrap-additions/bootstrap-additions';
 
 .container.container-md {
-    $screen-md-min: 992px;
-    @media (min-width: $screen-md-min) {
-        width: ($container-md-width-md + $grid-gutter-width);
-    }
-    @media (min-width: $screen-lg-min) {
-        width: ($container-md-width-lg + $grid-gutter-width);
-    }
+  @media (min-width: $container-md-width-md) and (max-width: $container-md-width-lg - 1) {
+    width: $container-md-width-md;
+  }
+  @media (min-width: $container-md-width-lg) {
+    width: $container-md-width-lg;
+  }
 }
 
 .panel {

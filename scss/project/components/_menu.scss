@@ -325,6 +325,7 @@ select.btn-shaded {
 
 .aside.mod-navbar {
   background-color: $gray-background;
+  overflow-y: scroll;
 
   .close {
     float: left;
@@ -337,7 +338,6 @@ select.btn-shaded {
 
     .aside-body {
       padding: 0;
-      overflow-y: scroll;
     }
   }
 }

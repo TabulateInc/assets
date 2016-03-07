@@ -335,11 +335,11 @@ select.btn-shaded {
   .aside-dialog {
     background-color: $gray-background;
     height: 100vh;
-    overflow-y: scroll;
     -webkit-overflow-scrolling: auto;
 
     .aside-body {
       padding: 0;
+      height: 725px;
     }
   }
 }

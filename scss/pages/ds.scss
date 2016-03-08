@@ -58,6 +58,21 @@ table.summary-table {
 }
 
 .table-overflow-wrapper {
+  $fix-column-width: 165px;
+  $fix-column-width-lg: 269px;
+
+  @media (max-width: $screen-md-max) {
+    width: calc(100% - #{$fix-column-width});
+    margin-left: $fix-column-width;
+
+    .fix-first-column {
+      width: $fix-column-width !important;
+    }
+
+    .ps-scrollbar-x-rail {
+      left: $fix-column-width !important;
+    }
+  }
 
   @media (min-width: $screen-lg-min) {
     width: calc(100% - #{$fix-column-width-lg});

@@ -1,4 +1,6 @@
 @import 'data-uri-images';
+@import 'variables';
+@import '../bootstrap/variables';
 
 $arrow-possition: no-repeat right 8px center;
 
@@ -21,5 +23,20 @@ $arrow-down-white: $img-arrow-down-white $arrow-possition transparent;
   }
   &.is-focused {
     border-color: $brand-primary !important;
+  }
+}
+
+%btn-ghost-primary {
+  $color: $brand-primary;
+  $border: 1px solid $color;
+
+  background-color: transparent;
+  border: $border;
+  color: $color;
+
+  &:hover, &:focus, &:active, &.active {
+    background-color: $white;
+    border: $border;
+    color: $color;
   }
 }

@@ -47,8 +47,8 @@ $line-height-sm: 33px;
 $line-height-md: 40px;
 $line-height-lg: 42px;
 
-$container-md-width-md: 970px;
-$container-md-width-lg: 1070px;
+$container-md-width-md: 1000px;
+$container-md-width-lg: 1100px;
 $container-constrained-sm: 750px;
 $container-constrained-md: 950px;
 
@@ -68,6 +68,8 @@ $btn-border-radius: $border-radius-default;
 // ------------------------------
 $main-navigation-height: 50px;
 $main-navigation-height-mobile: 40px;
+$main-navigation-to-content: 30px;
+$main-navigation-to-content-mobile: 15px;
 
 $page-title-font-size: 23px;
 $page-title-margin-top: 30px;
@@ -120,7 +122,6 @@ $items-table-edit-border-width: 2px;
 // data table
 $data-table-cell-height: $height-sm;
 $fix-column-width: 177px;
-$fix-column-width-lg: 299px;
 
 // content filter
 $content-filter-height: 29px;

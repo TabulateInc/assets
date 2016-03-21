@@ -30,7 +30,7 @@ $animation-duration: .6s;
 }
 
 %nav-link {
-  transition: background $animation-duration, color $animation-duration, opacity $animation-duration;
+  // transition: background $animation-duration, color $animation-duration, opacity $animation-duration;
 
   color: $gray-text;
   background-color: transparent;
@@ -156,7 +156,7 @@ $animation-duration: .6s;
       max-height: 0;
       padding: 0;
       opacity: 0;
-      transition: max-height $animation-duration, padding $animation-duration, opacity $animation-duration;
+      // transition: max-height $animation-duration, padding $animation-duration, opacity $animation-duration;
     }
 
     @media (max-width: $screen-xs-max) {

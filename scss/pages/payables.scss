@@ -1,5 +1,6 @@
 @import '../project/variables';
 @import '../bootstrap/variables';
+@import '../project/utils';
 
 
 add-edit-bill {
@@ -103,5 +104,16 @@ settings-selector .custom-selector__btn {
     &:focus {
       background: $mediumgray-light;
     }
+  }
+}
+
+.items-table__row__over {
+  button {
+    @extend %btn-ghost-primary;
+    background-color: $table-bg-hover;
+  }
+
+  apply-transaction button {
+    float: right;
   }
 }

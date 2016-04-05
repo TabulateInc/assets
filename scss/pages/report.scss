@@ -233,7 +233,7 @@ td {
 
   td {
     &.mod-positive {
-      background-color: $alert-danger-bg !important;
+      background-color: $state-danger-bg !important;
       color: $alert-danger-text !important;
     }
 
@@ -257,4 +257,3 @@ td {
     display: inline-block !important;
   }
 }
-

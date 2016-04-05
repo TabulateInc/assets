@@ -147,6 +147,15 @@
     }
 }
 
+
+// Ng Annimate + Angular Strap
+// =======================
+
+.modal-backdrop.am-fade.ng-leave,
+.aside-backdrop.am-fade.ng-leave {
+  animation-delay: 0;
+}
+
 [ng-cloak] {
   display: none;
 }

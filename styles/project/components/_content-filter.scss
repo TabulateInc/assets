@@ -108,5 +108,7 @@
 }
 
 .account-dropdown {
-  max-width: 200px;
+  @media (min-width: $screen-xs-min) {
+    max-width: 200px;
+  }
 }

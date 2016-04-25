@@ -1,0 +1,28 @@
+settings-selector {
+  .custom-selector {
+    .glyphicon {
+      font-size: 20px;
+    }
+
+    &__options {
+      right: 0;
+      width: 260px;
+      padding-bottom: 0;
+    }
+
+    &__btn {
+      text-align: center;
+
+      @media (max-width: $screen-xs-max) {
+        padding-right: 0;
+        padding-left: 0;
+        background: none;
+
+        &:hover,
+        &:focus {
+          background: $mediumgray-light;
+        }
+      }
+    }
+  }
+}

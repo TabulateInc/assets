@@ -9,7 +9,6 @@
 
   input {
     height: $height-md;
-
     border: none !important;
     border-right: 1px solid $table-border-color !important;
   }
@@ -22,6 +21,24 @@
     }
   }
 }
+
+.stacked-inputs-block { //for mobile view
+  position: relative;
+  border-bottom: 1px solid $table-border-color;
+
+  input, select {
+    height: $height-md;
+    border: none !important;
+  }
+
+  &.mod-inactive {
+    background-color: lighten($gray-base, 97.5%);
+    input, select, div {
+      background-color: lighten($gray-base, 97.5%);
+    }
+  }
+}
+
 
 .header.mod-journal {
   padding-right: 0;

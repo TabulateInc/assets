@@ -3,27 +3,6 @@
 
 .stacked-inputs-row {
   position: relative;
-
-  border-bottom: 1px solid $table-border-color;
-  border-left: 1px solid $table-border-color;
-
-  input {
-    height: $height-md;
-    border: none !important;
-    border-right: 1px solid $table-border-color !important;
-  }
-
-  &.mod-inactive {
-
-    input,
-    div {
-      background-color: lighten($gray-base, 97.5%);
-    }
-  }
-}
-
-.stacked-inputs-block {
-  position: relative;
   border-bottom: 1px solid $table-border-color;
 
   input, select {
@@ -31,6 +10,12 @@
     border: none !important;
   }
 
+  &.mod-desktop {
+    border-left: 1px solid $table-border-color;
+    input {
+      border-right: 1px solid $table-border-color !important;
+    }
+  }
   &.mod-inactive {
     background-color: lighten($gray-base, 97.5%);
     input, select, div {
@@ -38,6 +23,7 @@
     }
   }
 }
+
 
 .header.mod-journal {
   padding-right: 0;

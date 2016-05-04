@@ -59,32 +59,33 @@ table.summary-table {
   padding-right:1px;
 }
 
+@mixin table-overflow-wrapper($width) {
+  width: calc(100% - #{$width});
+  margin-left: $fix-column-width;
+
+  .fix-first-column {
+    width: $width !important;
+  }
+
+  .ps-scrollbar-x-rail {
+    left: $width !important;
+  }
+
+  .sticky-top--ds {
+    max-width: $container-max-width - $grid-gutter-width - $width;
+    width: calc(100% - #{$width + $grid-gutter-width});
+  }
+
+}
+
 .table-overflow-wrapper {
 
   @media (max-width: $screen-md-max) {
-    width: calc(100% - #{$fix-column-width});
-    margin-left: $fix-column-width;
-
-    .fix-first-column {
-      width: $fix-column-width !important;
-    }
-
-    .ps-scrollbar-x-rail {
-      left: $fix-column-width !important;
-    }
+    @include table-overflow-wrapper($fix-column-width);
   }
 
   @media (min-width: $screen-lg-min) {
-    width: calc(100% - #{$fix-column-width-lg});
-    margin-left: $fix-column-width-lg;
-
-    .fix-first-column {
-      width: $fix-column-width-lg !important;
-    }
-
-    .ps-scrollbar-x-rail {
-      left: $fix-column-width-lg !important;
-    }
+    @include table-overflow-wrapper($fix-column-width-lg);
   }
 
   .ps-scrollbar-x-rail {

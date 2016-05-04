@@ -66,41 +66,8 @@ state-picker .col-sm-4 {
   }
 }
 
-actions-selector, settings-selector, sort-selector {
-  .custom-selector {
-    .glyphicon {
-      font-size: 20px;
-    }
-
-    &__options {
-      right: 0;
-      width: 260px;
-      padding-bottom: 0;
-    }
-
-    &__btn {
-      text-align: center
-    }
-  }
-}
-
 .modal.mod-over-alert {
   z-index: $alert-z-index + 1;
-}
-
-settings-selector, sort-selector {
-  .custom-selector__btn {
-    @media (max-width: $screen-xs-max) {
-      padding-right: 0;
-      padding-left: 0;
-      background: none;
-
-      &:hover,
-      &:focus {
-        background: $mediumgray-light;
-      }
-    }
-  }
 }
 
 .items-table__row__over {

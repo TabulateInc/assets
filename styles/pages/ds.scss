@@ -99,20 +99,4 @@ table.summary-table {
   @media (max-width: $screen-sm-min) {  // yes, ipad portrait as well
     margin-right: $grid-gutter-width/2;
   }
-
-  @media (min-width: $screen-sm-min + 1) and (max-width: $container-md-width-md - 1) {
-    width: $container-constrained-sm - $fix-column-width - $grid-gutter-width;
-  }
-
-  @media (min-width: $container-md-width-md) and (max-width: $container-md-width-lg - 1) {
-    width: $container-md-width-md - $fix-column-width - $grid-gutter-width;
-  }
-
-  @media (min-width: $container-md-width-lg) and (max-width: $screen-lg-min) {
-    width: $container-md-width-lg - $fix-column-width - $grid-gutter-width;
-  }
-
-  @media (min-width: $screen-lg-min) {
-    width: $container-md-width-lg - $fix-column-width-lg - $grid-gutter-width;
-  }
 }

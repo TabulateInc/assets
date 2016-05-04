@@ -416,18 +416,6 @@ select.padding-left-xs option,
   cursor:pointer;
 }
 
-.container-constrained-sm {
-  max-width: $container-constrained-sm;
-
-  @media (min-width:$screen-sm-min) {
-    width: $container-constrained-sm;
-  }
-}
-
-.container-constrained-md {
-  max-width: $container-constrained-md;
-}
-
 .custom-label {
   line-height: $line-height-sm;
   font-weight: 400;

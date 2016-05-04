@@ -61,7 +61,7 @@ table.summary-table {
 
 @mixin table-overflow-wrapper($width) {
   width: calc(100% - #{$width});
-  margin-left: $fix-column-width;
+  margin-left: $width;
 
   .fix-first-column {
     width: $width !important;

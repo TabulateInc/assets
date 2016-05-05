@@ -64,6 +64,10 @@
   .ps-scrollbar-x-rail {
     top: 50px !important;
   }
+
+  &.mod-adaptive  .ps-scrollbar-x-rail {
+    top: 3px !important;
+  }
 }
 
 .total-column {

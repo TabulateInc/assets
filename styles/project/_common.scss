@@ -220,6 +220,12 @@ select.padding-left-xs option,
   &-xs {
     margin-top: $margin-xs;
 
+    &-xxs {
+      @media (max-width: $screen-xs-min) {
+        margin-top: $margin-xs;
+      }
+    }
+
     &-xs {
       @media (max-width: $screen-xs-max) {
         margin-top: $margin-xs;

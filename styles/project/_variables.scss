@@ -7,6 +7,8 @@ $screen-xxs-max: 479px;  // $screen-xs-min - 1;
 // Colors
 $middle-gray-color:          #ccc;
 $gray-lighter-custom:        lighten($middle-gray-color, 18%);
+$gray-background: #f3f6f8;
+$gray-border: #ebebeb;
 $white: #fff;
 $black: rgb(0,0,0);
 $blue-light: #e3f2ff;  // dropbox blue on files page

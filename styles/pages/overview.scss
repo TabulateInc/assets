@@ -7,6 +7,23 @@
 @import '../project/variables';
 @import '../bootstrap/variables';
 
+@mixin gray-background {
+  background-color: $gray-background;
+  border-color: $gray-background;
+}
+
+.panel-default {
+  > .panel-heading { @include gray-background; }
+}
+
+.overview__panel {
+  .panel-footer { @include gray-background; }
+}
+
+.container-fluid {
+  &.overview { max-width: $container-max-width + 270px; }
+}
+
 .overview__header{
     margin-left:15px;
 }
@@ -15,7 +32,7 @@
     font-size: $font-size-xlg;
     padding: $padding-md 0;
 }
- 
+
 .overview__week_item {
     margin-top:6px;
 }

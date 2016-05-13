@@ -72,10 +72,6 @@ $details-status-width: 15px;
       padding: $items-table-padding 0;
     }
 
-    &:hover .icon-circle--expand.hidden {
-        display: inline-block !important;
-    }
-
     // hack to make consistent wisth for transactions list
     @media (max-width: $screen-xs-max) {
       > .col-xs-11 {

@@ -6,8 +6,8 @@
   border-top: 1px solid $black;
 }
 
-.border-top-double-xs {
-  border-top: 1px double $black;
+.border-bottom-double {
+  border-bottom: double;
 }
 
 .border-bottom-xs {
@@ -15,9 +15,8 @@
 }
 
 .btn.mod-report-content-filter {
-  line-height: 13px;
-
   height: $content-filter-height;
+  line-height: 13px;
 }
 
 .journal-report {
@@ -57,14 +56,19 @@
   }
 
   &.mod-aside-filters {
-    date-range-selector {
-      .custom-selector__btn {
-        height: 34px !important;
-      }
+    date-range-selector .custom-selector__btn,
+    select {
+      height: 34px !important;
+    }
+
+    select {
+      width: 100%;
+      max-width: 100%;
     }
 
     account-filter,
     date-range-selector,
+    select,
     .calendar-input {
       display: block;
       margin-bottom: 15px;

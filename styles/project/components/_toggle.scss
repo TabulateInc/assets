@@ -1,0 +1,108 @@
+
+@mixin toggle-custom-height ($custom-height) {
+  $toggle-checkbox-opacity:               0 !default;
+
+  $toggle-transition-value:               all .25s ease-in-out !default;
+
+  $toggle-on-background-color:    $button-primary !default;
+  $toggle-off-background-color:   #cad9e8 !default;
+
+  $toggle-height:         $custom-height !default;
+  $toggle-width:          $toggle-height * 2 !default;
+  $toggle-radius:         $toggle-width !default;
+
+  $circle-size:           $toggle-height * .8;
+  $circle-font-size:      $toggle-height * .5;
+  $circle-top:            $toggle-height * .08;
+  $circle-left-off:       $circle-size   * .15;
+  $circle-left-on:        $toggle-width  - $circle-size * 1.15;
+
+  width: $toggle-width;
+  height: $toggle-height;
+
+  &:after {
+    // character X
+    content: "\2716";
+    padding-left: $circle-left-on + $circle-size * .2;
+    padding-top: $circle-top * 1.5;
+    position: absolute;
+    display: inline;
+    font-size: $circle-font-size;
+    color: $white;
+  }
+
+  & input[type="checkbox"],
+  & input[type="radio"] {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    text-indent: -100000px;
+    @include opacity($opacity: $toggle-checkbox-opacity, $filter: true);
+  }
+
+  & .handle {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline;
+    width: 100%;
+    height: 100%;
+    @include radius($value: $toggle-radius);
+
+    &:before,
+    &:after {
+      display: inline;
+      position: absolute;
+    }
+
+    &:before {
+      //checked character [V]
+      content: "\2714";
+      padding-left: $circle-left-off * 4;
+      padding-top: $circle-top * 1.5;
+      font-size: $circle-font-size;
+      color: $toggle-off-background-color;
+
+      // toogle background
+      width: $toggle-width;
+      height: $toggle-height;
+      @include radius($value: $toggle-radius);
+      background-color: $toggle-off-background-color;
+    }
+
+    &:after {
+    // toogle circle
+      content: "";
+      font-size: $circle-font-size;
+      top: $circle-top;
+      left: $circle-left-off;
+
+      width: $circle-size;
+      height: $circle-size;
+      @include radius($value: 100%);
+      @include transition($toggle-transition-value);
+        background-color: $white;
+      }
+  }
+
+  & input[type="checkbox"]:disabled +  .handle,
+  & input[type="radio"]:disabled    +  .handle,
+  & input[type="checkbox"]:disabled +  .handle:before,
+  & input[type="radio"]:disabled    +  .handle:before {
+    @include opacity($opacity: 60, $filter: true);
+  }
+
+  & input[type="checkbox"]:checked + .handle:before,
+  & input[type="radio"]:checked + .handle:before {
+    color: $white;
+    background-color: $toggle-on-background-color;
+  }
+
+  & input[type="checkbox"]:checked + .handle:after,
+  & input[type="radio"]:checked + .handle:after {
+     left: $circle-left-on;
+  }
+}
+
+.toggle { @include toggle-custom-height(24px);}

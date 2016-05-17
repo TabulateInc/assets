@@ -6,13 +6,8 @@
 @import 'Bootflat/bootflat/scss/bootflat';
 @import 'bootstrap-additions/bootstrap-additions';
 
-.container.container-md {
-  @media (min-width: $container-md-width-md) and (max-width: $container-md-width-lg - 1) {
-    width: $container-md-width-md;
-  }
-  @media (min-width: $container-md-width-lg) {
-    width: $container-md-width-lg;
-  }
+.container-fluid {
+  max-width: $container-max-width;
 }
 
 .panel {

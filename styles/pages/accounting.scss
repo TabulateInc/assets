@@ -6,20 +6,17 @@
   border-top: 1px solid $black;
 }
 
+.border-bottom-double {
+  border-bottom: double;
+}
+
 .border-bottom-xs {
   border-bottom: 1px solid $black;
 }
 
-accounting-settings {
-  .custom-selector__options {
-    right: 0;
-  }
-}
-
 .btn.mod-report-content-filter {
-  line-height: 13px;
-
   height: $content-filter-height;
+  line-height: 13px;
 }
 
 .journal-report {
@@ -37,5 +34,44 @@ accounting-settings {
   ~ .glyphicon {
     padding: 7px !important;
     right: 5px !important;
+  }
+}
+
+.am-slide-right.mod-fix-right {
+  right: 0;
+}
+
+.filters-group {
+  &.mod-row-filters {
+    date-range-selector {
+      float: left;
+      padding-right: $padding-sm;
+    }
+
+    account-filter {
+      float: left;
+      width: 50%;
+      padding: 0;
+    }
+  }
+
+  &.mod-aside-filters {
+    date-range-selector .custom-selector__btn,
+    select {
+      height: 34px !important;
+    }
+
+    select {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    account-filter,
+    date-range-selector,
+    select,
+    .calendar-input {
+      display: block;
+      margin-bottom: 15px;
+    }
   }
 }

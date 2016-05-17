@@ -1,19 +1,28 @@
+@mixin table-overflow-wrapper($width) {
+  width: calc(100% - #{$width});
+  margin-left: $width;
+
+  .fix-first-column {
+    width: $width !important;
+  }
+
+  .ps-scrollbar-x-rail {
+    left: $width !important;
+  }
+}
+
 .fix-first-column {
   position: absolute !important;
-  width: $fix-column-width !important; 
   left: 0;
   top: auto;
 }
 
 .table-overflow-wrapper {
-  width: calc(100% - #{$fix-column-width});
-  margin-left: $fix-column-width;
   overflow-x: scroll;
   overflow-y: visible;
 
   table {
     border-collapse: separate;
-    // width: 100%;
   }
 
   td {
@@ -27,8 +36,16 @@
     }
   }
 
-  .ps-scrollbar-x-rail {
-    left: $fix-column-width !important;
+  @include table-overflow-wrapper($fix-column-width);
+
+  &.mod-adaptive {
+    @media (max-width: $screen-md-max) {
+      @include table-overflow-wrapper($fix-column-width-sm);
+    }
+
+    @media (min-width: $screen-lg-min) {
+      @include table-overflow-wrapper($fix-column-width-lg);
+    }
   }
 }
 
@@ -40,4 +57,4 @@
   .ps-scrollbar-x {
     background-color: #999 !important;
   }
-} 
+}

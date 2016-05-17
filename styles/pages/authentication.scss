@@ -15,14 +15,9 @@ body {
   height: 80px;
   margin: 80px auto;
 
-  @media (min-width:$screen-xs-min) and (max-width:$screen-xs-max) {
+  @media (max-width:$screen-xs-max) {
     height: .75*80px;
     margin: .5*80px auto;
-  }
-
-  @media (max-width:$screen-xxs-max) {
-    height: $desktop-to-mobile*80px;
-    margin: .25*80px auto $desktop-to-mobile*80px;
   }
 }
 
@@ -30,7 +25,7 @@ body {
   border: 0;
 }
 
-.container {
+.container-fluid {
   max-width: 750px;
   padding-right: 10px;
   padding-left: 10px;

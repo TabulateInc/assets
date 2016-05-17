@@ -55,14 +55,17 @@
 }
 
 .panel-heading {
-  background-color: $lightgray-dark;
-  border-bottom-color: $lightgray-dark;
+  background-color: $gray-background;
+  border-bottom-color: $gray-border;
 }
-
 
 .table-overflow-wrapper {
   .ps-scrollbar-x-rail {
     top: 50px !important;
+  }
+
+  &.mod-adaptive  .ps-scrollbar-x-rail {
+    top: 3px !important;
   }
 }
 
@@ -79,8 +82,7 @@
     }
   }
 
-  tags-input.mod-xs {
-
+  tags-input.mod-transactions-report {
     @media (min-width: $screen-lg-min) {
       min-width: 200px;
       max-width: 378px;
@@ -100,7 +102,6 @@
 
       max-width: 320px;
       margin-bottom: 10px;
-      padding-right: 0;
       min-height: $height-md;
 
       .input {
@@ -226,8 +227,8 @@ td {
   }
 
   .panel-heading {
-    background-color: $lightgray-dark !important;
-    border-bottom-color: $lightgray-dark !important;
+    background-color: $gray-background !important;
+    border-bottom-color: $gray-border !important;
     -webkit-print-color-adjust: exact;
   }
 
@@ -246,10 +247,6 @@ td {
   // fix svg width
   .panel-pie-chart {
     width: 8cm;
-  }
-
-  side-by-side-averages svg {
-    width: $panel-width;
   }
 
   horizontal-bar div {

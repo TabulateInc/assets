@@ -1,5 +1,0 @@
-@import '../project/variables';
-@import '../bootstrap/variables';
-@import '../project/components/toggle';
-
-.toggle.mod-sm { @include toggle-custom-height(20px);}

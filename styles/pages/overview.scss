@@ -7,37 +7,50 @@
 @import '../project/variables';
 @import '../bootstrap/variables';
 
-.overview__header{
-    margin-left:15px;
-}
 
-.overview__counter {
+.overview {
+
+  .panel-default > .panel-heading,
+  &__panel .panel-footer {
+    border-color: $gray-border;
+    background-color: $gray-background;
+  }
+
+  &__header {
+    margin-left: 15px;
+  }
+
+  &__counter {
     font-size: $font-size-xlg;
     padding: $padding-md 0;
-}
- 
-.overview__week_item {
-    margin-top:6px;
-}
+  }
 
+  &__week_item {
+    margin-top: 6px;
+  }
 
-select.btn-xs{
-    height:22px;
-}
-
-.overview__chart_control{
-  @media (max-width: $screen-xxs-max) {
-      margin-top:5px;
+  &__chart_control {
+    @media (max-width: $screen-xxs-max) {
       float: none !important;
+      margin-top: 5px;
+    }
+
+    .btn-group {
+      margin-left: 0 !important;
+    }
   }
 
-  .btn-group {
-    margin-left: 0 !important;
+  &__table_header th {
+    border-top: none !important;
+  }
+
+  &.container-fluid {
+    max-width: 1600px;
   }
 }
 
-.overview__table_header th{
-    border-top:none!important;
+select.btn-xs {
+    height:22px;
 }
 
 .panel-body {

@@ -8,17 +8,26 @@
   input, select {
     height: $height-md;
     border: none !important;
+
+    &.ng-dirty.has-error {
+      border: 1px solid $grapefruit-dark !important;
+    }
   }
 
   &.mod-desktop {
     border-left: 1px solid $table-border-color;
+
     input {
       border-right: 1px solid $table-border-color !important;
     }
   }
+
   &.mod-inactive {
     background-color: lighten($gray-base, 97.5%);
-    input, select, div {
+
+    input,
+    select,
+    div {
       background-color: lighten($gray-base, 97.5%);
     }
   }

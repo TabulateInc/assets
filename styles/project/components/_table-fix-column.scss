@@ -15,6 +15,7 @@
   position: absolute !important;
   left: 0;
   top: auto;
+  text-align: left;
 }
 
 .table-overflow-wrapper {
@@ -47,6 +48,12 @@
       @include table-overflow-wrapper($fix-column-width-lg);
     }
   }
+}
+
+.table-centrify {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
 }
 
 .ps-scrollbar-x-rail {

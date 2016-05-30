@@ -2,11 +2,12 @@
 @import '../project/utils';
 @import '../bootstrap/variables';
 
-.border-top-xs {
+.border-top-xs,
+td.mod-bordered {
   border-top: 1px solid $black;
 }
 
-.border-bottom-double {
+td.mod-bordered-group {
   border-bottom: double;
 }
 

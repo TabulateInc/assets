@@ -177,6 +177,13 @@ td {
   text-align: center;
 }
 
+page-state {
+  @media (max-width: $screen-xs-max) {
+    position: absolute;
+    z-index: 1;
+  }
+}
+
 /*
   Print Weekly Snapshot
 

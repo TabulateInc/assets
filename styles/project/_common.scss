@@ -74,7 +74,6 @@ select::-ms-expand {
 // Display & Positioning
 // -----------------------------
 
-
 .inline-block {
   display: inline-block;
 }
@@ -229,6 +228,10 @@ select.padding-left-xs option,
 }
 
 .margin-bottom {
+  &-xs {
+    margin-bottom: $margin-xs;
+  }
+
   &-sm {
     margin-bottom: $margin-normal !important;
   }

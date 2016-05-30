@@ -172,6 +172,12 @@ select::-ms-expand {
       }
     }
 
+    &-xs-max {
+      @media (max-width: $screen-xs-max) {
+        padding-left: 0;
+      }
+    }
+
     &-sm {
       @media (max-width:$screen-sm-min){
         padding-left:0;

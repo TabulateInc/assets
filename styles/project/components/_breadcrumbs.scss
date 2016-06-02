@@ -6,7 +6,7 @@
   .btn-link,
   .dropdown-menu a {
     @media (min-width: $screen-sm-min) {
-     font-size: $font-size-md;
+     font-size: $font-size-md !important;
    }
   }
 

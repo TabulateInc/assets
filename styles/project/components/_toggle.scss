@@ -61,7 +61,7 @@ $toggle-off-background-color:   #cad9e8 !default;
   // common attributes;
   &:after {
     // character X
-    content: "\2716";
+    content: "\2715";
     position: absolute;
     display: inline;
     color: $white;
@@ -93,7 +93,7 @@ $toggle-off-background-color:   #cad9e8 !default;
 
     &:before {
       //checked character [V]
-      content: "\2714";
+      content: "\2713";
       color: $toggle-off-background-color;
 
       // toogle background

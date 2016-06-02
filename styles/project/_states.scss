@@ -1,4 +1,4 @@
-.no-touch {
+@mixin as-no-touch {
   .visible-hover {
     visibility: hidden;
 
@@ -11,6 +11,10 @@
   }
 }
 
+.no-touch {
+  @include as-no-touch;
+}
+
 .touch {
   .visible-touch {
     visibility: visible;
@@ -18,5 +22,11 @@
 
   .is-invisible-touch {
     visibility: hidden;
+  }
+
+  &-md {
+    @media (min-width: $screen-md-min) {
+      @include as-no-touch;
+    }
   }
 }

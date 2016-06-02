@@ -21,4 +21,14 @@
         padding-left: 5px;
         padding-right: 5px;
     }
+
+  &.mod-content-filter {
+    height: 29px;
+    max-width: 120px;
+
+    ~ .glyphicon {
+      padding: 7px !important;
+      right: 5px !important;
+    }
+  }
 }

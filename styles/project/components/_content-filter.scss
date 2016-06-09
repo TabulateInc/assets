@@ -88,6 +88,14 @@
     }
   }
 
+  date-range-selector {
+    .custom-selector__btn {
+      height: $content-filter-height;
+      padding-bottom: 5px;
+      padding-top: 4px;
+    }
+  }
+
 }
 
 .week-dropdown,

@@ -1,3 +1,5 @@
+@import 'tags-input';
+
 .content-filter {
   margin-top: $margin-xs;
   margin-bottom: $margin-normal;
@@ -64,28 +66,8 @@
     width: 120px !important;
   }
 
-  // third-party, so everything is important here
   tags-input.mod-xs {
-    $content-height: $content-filter-height - 8;
-
-    min-height: $content-filter-height;
-
-    .input {
-      height: $content-height !important;
-    }
-
-    .tag-item {
-      height: $content-height !important;
-      line-height: $content-height - 1 !important;
-    }
-
-    @media (max-width: $screen-xs-max) {
-      width: 100%;
-      display: block;
-      margin-left: 0;
-      padding-right: 0;
-      margin-top: $margin-xs;
-    }
+    @include tags-input-size($content-filter-height - 8);
   }
 
   date-range-selector {
@@ -95,7 +77,6 @@
       padding-top: 4px;
     }
   }
-
 }
 
 .week-dropdown,

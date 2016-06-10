@@ -1,0 +1,47 @@
+@import 'tags-input';
+@import '../bootstrap/variables';
+
+.aside.mod-mobile-filter {
+  width: 90%;
+
+  .content-filter {
+    margin: 0;
+    border: 0;
+  }
+
+  select,
+  date-range-selector,
+  tags-input {
+    width: 100%;
+    display: block;
+    margin: 0 0 $margin-sm;
+    height: $height-md;
+    max-width: 568px;
+  }
+
+  .custom-selector__btn {
+    height: $height-md;
+    line-height: $height-sm;
+  }
+
+  tags-input.mod-xs {
+    @include tags-input-size($height-md - 8);
+  }
+}
+
+$icon-btn-padding: 10px;
+.icon-btn {
+  padding: $icon-btn-padding;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.icon-btn.mod-mobile-filter {
+  $icon-height: 14px;
+  $btn-height: $icon-btn-padding*2 + $icon-height;
+
+  position: fixed;
+  top: ($main-navigation-height-mobile - $btn-height) / 2;  // extra margin
+  right: ($grid-gutter-width / 2);
+  z-index: 2000;
+}

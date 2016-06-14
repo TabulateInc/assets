@@ -27,7 +27,7 @@ $table-view-cell-right-padding: 40px;
     position: relative;
   }
 
-  &__header-resize-handle, &__row-border {
+  &__header-resize-handle.mod-resizable, &__row-border {
     display: inline-block;
     position: absolute;
     right: 0;
@@ -38,7 +38,7 @@ $table-view-cell-right-padding: 40px;
     border-right: solid 1px $table-border-color;
   }
 
-  &__header-resize-handle {
+  &__header-resize-handle.mod-resizable {
     cursor: ew-resize;
   }
 

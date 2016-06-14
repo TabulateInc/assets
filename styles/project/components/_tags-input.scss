@@ -29,3 +29,25 @@ tags-input {
     }
   }
 }
+
+// third-party, so everything is important here
+@mixin tags-input-size($content-height) {
+  min-height: $content-filter-height;
+
+  .input {
+    height: $content-height !important;
+  }
+
+  .tag-item {
+    height: $content-height !important;
+    line-height: $content-height - 1 !important;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    width: 100%;
+    display: block;
+    margin-left: 0;
+    padding-right: 0;
+    margin-top: $margin-xs;
+  }
+}

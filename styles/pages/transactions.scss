@@ -220,14 +220,18 @@ $details-status-width: 15px;
 
     position: absolute;
     z-index: 10;
-    top: 8px;
-    right: -25px;
+
+    left: 0;
+    right: 0;
+    margin-left: 50%;
+    margin-right: 50%;
+    top: 80%;
 
     border: 1px solid $brand-primary;
     background-color: $brand-primary;
 
-    @media (min-width: $screen-lg) {
-      right: -46px;
+    .add-edit-transaction & {
+      top: 100%;
     }
   }
 }
@@ -250,8 +254,62 @@ tags-input {
   }
 }
 
+date-range-selector {
+  .custom-selector__options {
+    right: 0;
+  }
+}
+
 .create-rule {
   right: -100px;
   top: 7px;
   position: absolute;
+}
+
+.transactions-panel-group {
+  @include clearfix();
+  list-style: none;
+  padding: 0;
+  margin: $margin-md 0;
+
+  &__item {
+    vertical-align: baseline;
+    padding-left: 0;
+  }
+}
+
+.transactions-panel {
+  border-radius: 0;
+
+  &.mod-selected {
+    border-width: 2px;
+    border-color: $brand-primary;
+    z-index: 1;
+    padding: 24px 14px;
+  }
+
+  &__value {
+    font-size: 23px;
+    font-weight: 300;
+    color: $brand-primary;
+
+    &.mod-danger {
+      color: $ios-notification;
+    }
+  }
+
+  &__header {
+    font-weight: 600;
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 6px;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 11px;
+    color: #888;
+  }
 }

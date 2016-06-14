@@ -1,7 +1,6 @@
 @import '../utils';
 @import '../variables';
 
-$color-primary: #57a6db;
 $gray-text: #9ba3a9;
 
 $font-size-sm: 12px;
@@ -55,13 +54,13 @@ $animation-duration: .6s;
   }
   // click animation again
   &::after {
-    background: make-click-color($color-primary);
+    background: make-click-color($brand-primary);
   }
 }
 
 @mixin nav-link-active() {
   color: $white;
-  background-color: $color-primary;
+  background-color: $brand-primary;
 }
 
 %nav-link-active {

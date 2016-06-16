@@ -57,7 +57,7 @@ $table-view-cell-right-padding: 40px;
     align-content: stretch;
     justify-content: flex-start;
     border-bottom: 1px solid $table-border-color;
-    &:hover{
+    &:hover, &.mod-selected{
       background-color: $table-bg-hover;
     }
   }

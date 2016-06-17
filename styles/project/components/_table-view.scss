@@ -60,6 +60,25 @@ $table-view-cell-right-padding: 40px;
     &:hover, &.mod-selected{
       background-color: $table-bg-hover;
     }
+    //transition: width 0.3s ease;
+  }
+
+  &__row-actions {
+    .btn {
+      border-radius: 0 !important;
+    }
+    a {
+      margin-left: 10px;
+      color: #434a54;
+      background-color: #fff;
+      border-color: #ccd1d9;
+      span {
+        position: relative;
+        line-height: 1.42857;
+        text-decoration: none;
+        margin-left: -1px;
+      }
+    }
   }
 
   &__rows-load {
@@ -112,7 +131,7 @@ $table-view-cell-right-padding: 40px;
     text-align: left;
   }
 
-  .mod-string, .mod-number, .mod-datetime {
+  .mod-string, .mod-number, .mod-datetime, .mod-buttons {
     text-align: center;
     padding-right: 8px;
   }

@@ -42,14 +42,7 @@ $table-view-cell-right-padding: 40px;
     cursor: ew-resize;
   }
 
-  &__rows {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-  }
-
-  &__row {
+  &__row, &__footer-row {
     height: $table-view-row-height;
     line-height: $table-view-row-line-height;
     display: flex;
@@ -60,7 +53,6 @@ $table-view-cell-right-padding: 40px;
     &:hover, &.mod-selected{
       background-color: $table-bg-hover;
     }
-    //transition: width 0.3s ease;
   }
 
   &__row-actions {
@@ -97,27 +89,11 @@ $table-view-cell-right-padding: 40px;
     }
   }
 
-  &__row-cell {
-    padding-right: $table-view-cell-right-padding;
-  }
-
-  &__footer {
+  &__rows, &__footer {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-  }
-
-  &__footer-row {
-    height: $table-view-row-height;
-    line-height: $table-view-row-line-height;
-    display: flex;
-    flex-direction: row;
-    align-content: stretch;
-    justify-content: space-between;
-    border-bottom: 1px solid $table-border-color;
-    &:hover{
-      background-color: $table-bg-hover;
-    }
   }
 
   &__footer-cell {
@@ -126,22 +102,15 @@ $table-view-cell-right-padding: 40px;
     text-align: left;
   }
 
-  &__footer-col {
-    text-align: left;
+  &__row-cell, &__header-cell {
+    padding-right: $table-view-cell-right-padding;
+    &.mod-string, &.mod-number, &.mod-datetime, &.mod-buttons {
+      text-align: left;
+    }
+
+    &.mod-money {
+      text-align: right;
+    }
   }
 
-  .mod-string, .mod-number, .mod-datetime, .mod-buttons {
-    text-align: center;
-    padding-right: 8px;
-  }
-
-  &__row-cell.mod-money {
-    text-align: right;
-    padding-right: 40px;
-  }
-
-  &__header-cell.mod-money {
-    text-align: center;
-    padding: 0 20px;
-  }
 }

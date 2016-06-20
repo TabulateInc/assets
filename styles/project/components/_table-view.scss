@@ -104,7 +104,7 @@ $table-view-cell-right-padding: 40px;
 
   &__row-cell, &__header-cell {
     &.mod-string, &.mod-number, &.mod-datetime, &.mod-buttons {
-      padding-left: $table-view-cell-right-padding;
+      padding-left: 10px;
       text-align: left;
     }
 

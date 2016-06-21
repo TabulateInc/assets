@@ -41,6 +41,10 @@ $details-status-width: 15px;
   svg:not(:root) {
     overflow: visible !important;
   }
+
+  .form-control {
+    height: $content-filter-height;
+  }
 }
 
 .similar {

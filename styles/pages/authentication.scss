@@ -2,7 +2,6 @@
 @import '../project/variables';
 @import '../bootstrap/variables';
 
-$btn-primary-bg: #57a6db;
 $btn-primary-color: #fff;
 $desktop-to-mobile: .5;
 $desktop-to-mobile-sm: .75;
@@ -107,7 +106,7 @@ $form-controll-border-width: 1px;
   box-shadow: none;
 
   &:focus {
-    border-color: $btn-primary-bg;
+    border-color: $brand-primary;
   }
 
   @media (max-width:$screen-xs-max) {
@@ -187,8 +186,8 @@ $col-side-paddings: 5px;
 }
 
 .btn-primary {
-  background-color: $btn-primary-bg;
-  border-color: $btn-primary-bg;
+  background-color: $brand-primary;
+  border-color: $brand-primary;
 }
 
 ::-moz-placeholder,

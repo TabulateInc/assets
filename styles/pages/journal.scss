@@ -3,20 +3,30 @@
 
 .stacked-inputs-row {
   position: relative;
-
   border-bottom: 1px solid $table-border-color;
-  border-left: 1px solid $table-border-color;
 
-  input {
+  input, select {
     height: $height-md;
-
     border: none !important;
-    border-right: 1px solid $table-border-color !important;
+
+    &.form-control.has-error {
+      border: 1px solid $grapefruit-dark !important;
+    }
+  }
+
+  &.mod-desktop {
+    border-left: 1px solid $table-border-color;
+
+    input {
+      border-right: 1px solid $table-border-color !important;
+    }
   }
 
   &.mod-inactive {
+    background-color: lighten($gray-base, 97.5%);
 
     input,
+    select,
     div {
       background-color: lighten($gray-base, 97.5%);
     }
@@ -46,4 +56,8 @@ drag-drop.visible .drag-drop {
 
 .as-disabled {
   background-color: $form-disabled-color;
+}
+
+.b-delete-icon {
+  padding-left: 10px !important;
 }

@@ -21,25 +21,9 @@ td.mod-bordered-group {
 }
 
 .journal-report {
-  overflow: scroll;
-
   .items-table {
     min-width: 560px;
   }
-}
-
-.calendar-input.mod-content-filter {
-  height: 29px;
-  max-width: 150px;
-
-  ~ .glyphicon {
-    padding: 7px !important;
-    right: 5px !important;
-  }
-}
-
-.am-slide-right.mod-fix-right {
-  right: 0;
 }
 
 .filters-group {

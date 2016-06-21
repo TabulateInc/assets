@@ -18,6 +18,10 @@
   @media (max-width: 991px) {
     min-width: 290px !important;
   }
+
+  &.am-slide-right.mod-fix-right {
+    right: 0;
+  }
 }
 
 .aside-body {

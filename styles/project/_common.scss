@@ -166,8 +166,14 @@ select::-ms-expand {
     padding-left: 0 !important;
 
     &-xs {
-      @media (max-width:$screen-xs-min){
-        padding-left:0;
+      @media (max-width: $screen-xs-min) { //consider to change to $screen-xs-max
+        padding-left: 0;
+      }
+    }
+
+    &-xs-max {
+      @media (max-width: $screen-xs-max) {
+        padding-left: 0;
       }
     }
 
@@ -392,7 +398,7 @@ select.padding-left-xs option,
 
 // Grid
 // --------------------------
-@media (max-width: $screen-xs-min) {
+@media (max-width: $screen-xs-min) { //consider to change to $screen-xxs-max
   @include make-grid(xxs);
 }
 

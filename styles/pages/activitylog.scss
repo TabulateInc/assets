@@ -1,3 +1,19 @@
 @import '../project/variables';
 @import '../project/utils';
 @import '../bootstrap/variables';
+
+.activity-log {
+  &__search {
+    padding-left: 20px;
+
+    &.mod-search-icon {
+      background: url(/assets/img/magnifying-glass16.svg) no-repeat 5px center;
+      background-size: 12px;
+    }
+  }
+
+  &__table {
+    margin-top: 20px;
+  }
+
+}

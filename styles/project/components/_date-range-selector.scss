@@ -52,6 +52,9 @@
       }
       .calendar-input {
         padding-left: 6px;
+      &.form-control {
+        height: 40px;
+      }
       }
   }
 }

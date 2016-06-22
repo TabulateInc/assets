@@ -3,9 +3,17 @@ $table-view-row-line-height: 45px;
 $table-view-cell-right-padding: 40px;
 
 .table-view {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
+
+  &__table {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
 
   &__header {
     height: $table-view-row-height;
@@ -21,14 +29,22 @@ $table-view-cell-right-padding: 40px;
     overflow: visible;
     text-align: center;
     font-weight: 400;
+  }
+
+  &__header-cell {
     color: $picton-blue-color;
+    border-top: 1px solid $table-border-color;
+    border-bottom: 1px solid $table-border-color;
   }
 
   &__header-cell, &__row-cell {
     position: relative;
+    height: $table-view-row-height;
+    line-height: $table-view-row-line-height;
+    padding: 0;
   }
 
-  &__header-resize-handle.mod-resizable, &__row-border {
+  &__header-resize-handle.mod-resizable {
     display: inline-block;
     position: absolute;
     right: 0;
@@ -36,11 +52,22 @@ $table-view-cell-right-padding: 40px;
     bottom: 0;
     width: 5px;
     padding: 0 5px;
-    border-right: solid 1px $table-border-color;
+    //border-right: solid 1px $table-border-color;
   }
 
   &__header-resize-handle.mod-resizable {
     cursor: ew-resize;
+  }
+
+  &__column {
+    position: relative;
+    display: flex;
+    flex-direction: column;;
+    align-content: stretch;
+    justify-content: flex-start;
+    &.border {
+      border-right: solid 1px $table-border-color;
+    }
   }
 
   &__row, &__footer-row {
@@ -56,25 +83,18 @@ $table-view-cell-right-padding: 40px;
     }
   }
 
-  &__row-actions {
-    .btn {
-      border-radius: 0 !important;
-    }
-    a {
-      margin-left: 10px;
-      color: #434a54;
-      background-color: #fff;
-      border-color: #ccd1d9;
-      span {
-        position: relative;
-        line-height: 1.42857;
-        text-decoration: none;
-        margin-left: -1px;
-      }
+  &__action {
+    margin-left: 5px;
+  }
+
+  &__action-icon, &__action-label {
+    color: $picton-blue-color;
+    &:hover {
+      color: $danube-color;
     }
   }
 
-  &__rows-load {
+  &__load {
     display: none;
     &.mod-loading {
       display: block;

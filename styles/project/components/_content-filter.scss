@@ -8,13 +8,13 @@
   border-top: 1px solid $table-border-color;
   border-bottom: 1px solid $table-border-color;
 
+  .form-control {
+    height: $content-filter-height; // Make inputs at toolbar same height 29px
+  }
+
   &.mod-date-and-tags,
   &.mod-date-and-tags-and-settings {
     $search-input-height: 34px;
-
-    .as-search-height {
-      height: $search-input-height;
-    }
 
     .add-icon > .glyphicon {
       $padding-vertical: $search-input-height - 15;

@@ -10,6 +10,10 @@ tags-input {
   .tags {
     box-shadow: none !important;
     border: none !important;
+
+    input {
+      height: $content-filter-height - 8 !important; // 8 is margin (2+2)+ padding(1+1)+ border(1+1)
+    }
   }
 
   .tags .tag-item {

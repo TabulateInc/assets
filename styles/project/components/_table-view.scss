@@ -54,7 +54,16 @@ $table-view-cell-right-padding: 40px;
     }
   }
 
-  &__row, &__footer-row {
+  &__mobile-rows, &__mobile-footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    align-content: stretch;
+    justify-content: flex-start;
+  }
+
+  &__row, &__mobile-row, &__footer-row {
     height: $table-view-row-height;
     line-height: $table-view-row-line-height;
     display: flex;
@@ -92,13 +101,6 @@ $table-view-cell-right-padding: 40px;
       flex-direction: column;
       justify-content: center;
     }
-  }
-
-  &__rows, &__footer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
   }
 
   &__footer-cell {

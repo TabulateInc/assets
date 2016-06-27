@@ -1,0 +1,93 @@
+$screen-xxs-max-pager: 600px;
+
+.pager {
+  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  align-items: stretch;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+  line-height: 32px;
+  flex: 1 1 auto;
+
+  @media (max-width: $screen-xxs-max-pager) {
+    margin-top: 10px;
+    font-size: 12px;
+    padding: 4px 4px;
+    line-height: 27px;
+  }
+
+  &__page-size {
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: flex-end;
+  }
+
+  &__page-size-select {
+    position: relative;
+    width: 75px;
+    padding: 6px 12px;
+    margin-right: 10px;
+    @media (max-width: $screen-xxs-max-pager) {
+        font-size: 12px;
+        padding: 0 0;
+        margin-right: 5px;
+        width: 45px;
+        height: 27px;
+    }
+  }
+
+  &__page-size, &__navigation, &__all-mode {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+  }
+
+  &__all-mode {
+    margin-left: 15px;
+    @media (max-width: $screen-xxs-max-pager) {
+      margin-left: 5px;
+    }
+  }
+
+  &__btn, &__btn-label {
+    position: relative;
+    line-height: $line-height-base;
+    text-decoration: none;
+    color: $pagination-color;
+    background-color: $pagination-bg;
+    border: 1px solid $pagination-border;
+    margin-left: -1px;
+    border-radius: 0 !important;
+    color: $pagination-color;
+    background-color: $pagination-bg;
+    border-color: $pagination-border;
+    &:hover,
+    &:focus {
+      color: $pagination-hover-color;
+      background-color: $pagination-hover-bg;
+      border-color: $pagination-hover-border;
+    }
+
+    @media (max-width: $screen-xxs-max-pager) {
+        padding: 4px 2px;
+        font-size: 12px;
+    }
+  }
+
+  &__btn-label {
+    border: none;
+    background: transparent;
+  }
+
+  &__label {
+    margin: 0 5px;
+  }
+
+}

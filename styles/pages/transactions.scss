@@ -281,6 +281,18 @@ date-range-selector {
 .transactions-panel {
   border-radius: 0;
 
+  &.custom-panel {
+      margin-left: -1px;
+
+      &:hover {
+        margin-right: 1px;
+      }
+
+      &.mod-selected {
+        margin-right: -1px;
+      }
+  }
+
   &.mod-selected {
     border-width: 2px;
     border-color: $brand-primary;

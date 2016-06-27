@@ -9,7 +9,7 @@ $screen-xxs-max-table-view: 600px;
   flex-direction: column;
   width: 100%;
 
-  &__table {
+  &__table-header, &__table-body {
     display: flex;
     flex-direction: row;
     align-content: stretch;
@@ -52,10 +52,13 @@ $screen-xxs-max-table-view: 600px;
     justify-content: flex-start;
     &.border {
       border-right: solid 1px $table-border-color;
+      min-height: min-content;
+      min-height: -moz-min-content;
+	    min-height: -webkit-min-content;
     }
   }
 
-  &__mobile-rows, &__mobile-footer {
+  &__mobile-rows, &__mobile-row, &__mobile-footer {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -64,14 +67,13 @@ $screen-xxs-max-table-view: 600px;
     justify-content: flex-start;
   }
 
-  &__row, &__mobile-row, &__footer-row {
+  &__row, &__mobile-row-line, &__footer-row {
     height: $table-view-row-height;
     line-height: $table-view-row-line-height;
     display: flex;
     flex-direction: row;
     align-content: stretch;
     justify-content: flex-start;
-    border-bottom: 1px solid $table-border-color;
     &:hover, &.mod-selected{
       background-color: $table-bg-hover;
     }
@@ -82,7 +84,17 @@ $screen-xxs-max-table-view: 600px;
     }
   }
 
+  &__row {
+    flex: 0 0 auto;
+  }
+
+
+  &__row, &__footer-row, &__mobile-row {
+    border-bottom: 1px solid $table-border-color;
+  }
+
   &__mobile-row-cell {
+    flex: 1 1 auto;
     margin-left: 5px
   }
 
@@ -117,6 +129,10 @@ $screen-xxs-max-table-view: 600px;
     padding-right: $table-view-cell-right-padding;
     font-weight: 700;
     text-align: left;
+  }
+
+  &__header-cell {
+    flex: 0 0 auto;
   }
 
   &__row-cell, &__header-cell {

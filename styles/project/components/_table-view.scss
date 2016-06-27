@@ -9,7 +9,7 @@ $screen-xxs-max-table-view: 600px;
   flex-direction: column;
   width: 100%;
 
-  &__table-header, &__table-body {
+  &__table-header, &__table-body, &__mobile-header {
     display: flex;
     flex-direction: row;
     align-content: stretch;
@@ -17,6 +17,10 @@ $screen-xxs-max-table-view: 600px;
     &.mod-init {
       display: none;
     }
+  }
+
+  &__mobile-header {
+    justify-content: flex-end;
   }
 
   &__header-cell {
@@ -67,6 +71,10 @@ $screen-xxs-max-table-view: 600px;
     justify-content: flex-start;
   }
 
+  &__mobile-row.mod-selected {
+    background-color: $table-bg-hover;
+  }
+
   &__row, &__mobile-row-line, &__footer-row {
     height: $table-view-row-height;
     line-height: $table-view-row-line-height;
@@ -74,7 +82,7 @@ $screen-xxs-max-table-view: 600px;
     flex-direction: row;
     align-content: stretch;
     justify-content: flex-start;
-    &:hover, &.mod-selected{
+    &:hover, &.mod-selected {
       background-color: $table-bg-hover;
     }
     @media (max-width: $screen-xxs-max-pager) {
@@ -84,7 +92,7 @@ $screen-xxs-max-table-view: 600px;
     }
   }
 
-  &__row {
+  &__row, &__mobile-row {
     flex: 0 0 auto;
   }
 
@@ -106,6 +114,13 @@ $screen-xxs-max-table-view: 600px;
     color: $picton-blue-color;
     &:hover {
       color: $danube-color;
+    }
+  }
+
+  &__action.mod-disabled > &__action-icon, &__action.mod-disabled > &__action-label {
+    color: $table-border-color;
+    &:hover {
+      color: $table-border-color;
     }
   }
 

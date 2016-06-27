@@ -1,6 +1,7 @@
 $table-view-row-height: 45px;
 $table-view-row-line-height: 45px;
 $table-view-cell-right-padding: 40px;
+$screen-xxs-max-table-view: 600px;
 
 .table-view {
   position: relative;
@@ -74,6 +75,15 @@ $table-view-cell-right-padding: 40px;
     &:hover, &.mod-selected{
       background-color: $table-bg-hover;
     }
+    @media (max-width: $screen-xxs-max-pager) {
+      font-size: 12px;
+      line-height: 30px;
+      height: 30px;
+    }
+  }
+
+  &__mobile-row-cell {
+    margin-left: 5px
   }
 
   &__action {

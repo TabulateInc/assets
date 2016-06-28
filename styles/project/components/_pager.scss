@@ -74,6 +74,10 @@ $screen-xxs-max-pager: 600px;
       background-color: $pagination-hover-bg;
       border-color: $pagination-hover-border;
     }
+    &[disabled], &[disabled] &-label {
+      color: $middle-gray-color;
+      background-color: white;
+    }
 
     @media (max-width: $screen-xxs-max-pager) {
         padding: 4px 2px;

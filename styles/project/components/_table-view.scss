@@ -71,7 +71,7 @@ $screen-xxs-max-table-view: 600px;
     justify-content: flex-start;
   }
 
-  &__mobile-row.mod-selected {
+  &__mobile-row.mod-selected, &__mobile-row:hover {
     background-color: $table-bg-hover;
   }
 
@@ -82,7 +82,7 @@ $screen-xxs-max-table-view: 600px;
     flex-direction: row;
     align-content: stretch;
     justify-content: flex-start;
-    &:hover, &.mod-selected {
+    &:hover, &.mod-selected, &.mod-hovered {
       background-color: $table-bg-hover;
     }
     @media (max-width: $screen-xxs-max-pager) {
@@ -111,17 +111,17 @@ $screen-xxs-max-table-view: 600px;
   }
 
   &__action-icon, &__action-label {
-    color: $picton-blue-color;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    color: $form-font-color;
+    cursor: pointer;
     &:hover {
-      color: $danube-color;
+      color: $form-font-color;
     }
   }
 
   &__action.mod-disabled > &__action-icon, &__action.mod-disabled > &__action-label {
-    color: $table-border-color;
-    &:hover {
-      color: $table-border-color;
-    }
+    display: none;
   }
 
   &__load {

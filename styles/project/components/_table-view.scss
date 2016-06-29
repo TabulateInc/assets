@@ -8,6 +8,7 @@ $screen-xxs-max-table-view: 600px;
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-height: 80px;
 
   &__table-header, &__table-body, &__mobile-header {
     display: flex;

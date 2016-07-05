@@ -57,7 +57,7 @@ $table-view-default-marging: 5px;
     flex-direction: column;;
     align-content: stretch;
     justify-content: flex-start;
-    &.border {
+    &.mod-bordered {
       border-right: solid 1px $table-border-color;
       min-height: min-content;
     }

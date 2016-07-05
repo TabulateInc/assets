@@ -4,7 +4,7 @@
 
 .activity-log {
   &__search {
-    padding-left: 20px;
+    padding-left: $padding-vertical-lg;
 
     &.mod-search-icon {
       background: url(/assets/img/magnifying-glass16.svg) no-repeat 5px center;
@@ -13,11 +13,11 @@
   }
 
   &__table {
-    margin-top: 20px;
+    margin-top: $padding-horizontal-lg;
   }
 
   &__filter {
-    margin-top: 30px;
+    margin-top: $padding-horizontal-lg;
   }
 
   &__tags-input {

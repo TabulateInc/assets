@@ -2,6 +2,8 @@ $table-view-row-height: 45px;
 $table-view-row-line-height: 45px;
 $table-view-cell-right-padding: 40px;
 $screen-xxs-max-table-view: 600px;
+$table-view-header-resize-handle-width: 5px;
+$table-view-default-marging: 5px;
 
 .table-view {
   position: relative;
@@ -44,8 +46,8 @@ $screen-xxs-max-table-view: 600px;
     right: 0;
     top: 0;
     bottom: 0;
-    width: 5px;
-    padding: 0 5px;
+    width: $table-view-header-resize-handle-width;
+    padding: 0 $table-view-header-resize-handle-width;
     cursor: ew-resize;
   }
 
@@ -58,8 +60,6 @@ $screen-xxs-max-table-view: 600px;
     &.border {
       border-right: solid 1px $table-border-color;
       min-height: min-content;
-      min-height: -moz-min-content;
-	    min-height: -webkit-min-content;
     }
   }
 
@@ -87,9 +87,9 @@ $screen-xxs-max-table-view: 600px;
       background-color: $table-bg-hover;
     }
     @media (max-width: $screen-xxs-max-pager) {
-      font-size: 12px;
-      line-height: 30px;
-      height: 30px;
+      font-size: $font-size-xs;
+      line-height: $height-sm;
+      height: $height-sm;
     }
   }
 
@@ -103,7 +103,7 @@ $screen-xxs-max-table-view: 600px;
 
   &__mobile-row-cell {
     flex: 1 1 auto;
-    margin-left: 5px
+    margin-left: $table-view-default-marging;
   }
 
   &__actions {
@@ -113,12 +113,12 @@ $screen-xxs-max-table-view: 600px;
   }
 
   &__action {
-    margin-left: 5px;
+    margin-left: $table-view-default-marging;
   }
 
   &__action-icon, &__action-label {
-    margin-right: 5px;
-    margin-bottom: 5px;
+    margin-right: $table-view-default-marging;
+    margin-bottom: $table-view-default-marging;
     color: $form-font-color;
     cursor: pointer;
     &:hover {

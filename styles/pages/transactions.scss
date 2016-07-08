@@ -279,17 +279,10 @@ date-range-selector {
 
 .transactions-panel {
   border-radius: 0;
+  margin-left: -1px;
 
-  &.custom-panel {
-      margin-left: -1px;
-
-      &:hover {
-        margin-right: 1px;
-      }
-
-      &.mod-selected {
-        margin-right: -1px;
-      }
+  &:hover {
+    margin-right: 1px;
   }
 
   &.mod-selected {
@@ -297,6 +290,7 @@ date-range-selector {
     border-color: $brand-primary;
     z-index: 1;
     padding: 24px 14px;
+    margin-right: -1px;
   }
 
   &__value {

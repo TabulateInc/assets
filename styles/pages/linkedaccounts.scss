@@ -27,6 +27,13 @@
 .modal-iframe {
     .modal-dialog {
         min-width: 751px;
+        width: 85%;
+        min-height: 500px;
+        height: 85%;
+
+        &.modal-content {
+            height: 100%;
+        }
     }
 
     .modal-body {

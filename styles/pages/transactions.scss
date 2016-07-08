@@ -274,23 +274,24 @@ date-range-selector {
   &__item {
     vertical-align: baseline;
     padding-left: 0;
+    z-index: 5;
+    margin-left: -1px;
+
+    &:hover {
+      z-index: 10;
+    }
   }
 }
 
 .transactions-panel {
   border-radius: 0;
-  margin-left: -1px;
-
-  &:hover {
-    margin-right: 1px;
-  }
 
   &.mod-selected {
     border-width: 2px;
     border-color: $brand-primary;
-    z-index: 1;
+    z-index: 20;
     padding: 24px 14px;
-    margin-right: -1px;
+    margin-left: -1px;
   }
 
   &__value {

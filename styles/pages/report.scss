@@ -148,11 +148,26 @@
   height: $content-filter-height!important;
 }
 
+.pie-chart-averages {
+  display: flex;
+  flex-direction: row;
+}
+
 .panel-pie-chart {
   text-align: center;
   display: inline-block;
   width: 330px;
   height: 320px;
+}
+
+.pie-chart-no-data-label {
+  height: 100%;
+  line-height: 250px;
+  font-weight: 600;
+}
+
+.pie-chart {
+  margin-left: 50px;
 }
 
 .panel-table-subheader {

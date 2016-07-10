@@ -149,8 +149,7 @@
 }
 
 .pie-chart-averages {
-  display: flex;
-  flex-direction: row;
+  text-align: center;
 }
 
 .panel-pie-chart {
@@ -161,9 +160,11 @@
 }
 
 .pie-chart-no-data-label {
+  display: table-cell;
   height: 100%;
   line-height: 250px;
   font-weight: 600;
+  padding-left: 50px;
 }
 
 .pie-chart {

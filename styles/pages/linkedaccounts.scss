@@ -27,12 +27,8 @@
 .modal-iframe {
     .modal-dialog {
         min-width: 751px;
-        width: 85%;
-        min-height: 500px;
-        height: 85%;
-
-        &.modal-content {
-            height: 100%;
+        @media (max-width: $screen-xs-max) {
+          min-width: 100%;
         }
     }
 
@@ -42,6 +38,8 @@
     }
 
     iframe {
+        max-width: 751px;
+        height: 538px;
         width: 100%;
         border: none;
         padding: 0;

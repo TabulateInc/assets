@@ -88,6 +88,10 @@ select::-ms-expand {
 
   &__cell {
     display: table-cell;
+
+    &.mod-amount {
+      min-width: 90px;  // enough for longest expected amount "-$1000111.00"
+    }
   }
 
   &--inherit {

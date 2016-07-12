@@ -15,10 +15,12 @@
   .b-delete-icon {
     visibility: visible;
   }
-  
+
   &-md {
     .b-delete-icon {
-      visibility: hidden;
+      @media (min-width: $screen-md-min) {
+        visibility: hidden;
+      }
     }
   }
 }

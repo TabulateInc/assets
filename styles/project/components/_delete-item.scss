@@ -15,4 +15,10 @@
   .b-delete-icon {
     visibility: visible;
   }
+  
+  &-md {
+    .b-delete-icon {
+      visibility: hidden;
+    }
+  }
 }

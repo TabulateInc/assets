@@ -16,6 +16,13 @@
   left: 0;
   top: auto;
   text-align: left;
+  height: 20px;
+}
+
+.sticky .sticky-offset {
+  background-color: $white;
+  width: 0px;
+  height: 100%;
 }
 
 .table-overflow-wrapper {

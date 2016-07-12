@@ -17,9 +17,25 @@
 .report-table {
     thead {
       border-bottom: 1px solid $table-border-color;
+      white-space: nowrap;
+
+      &.sticky {
+        background-color: $white;
+        border-bottom: none;
+        overflow: hidden;
+
+
+        th {
+          display: inline-block;
+        }
+      }
     }
 
-    td {
+    .sticky &__header-caption {
+      display: none;
+    }
+
+    td, th {
       padding: $report-table-cell-padding;
       @extend %report-table-column;
     }

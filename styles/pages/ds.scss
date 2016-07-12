@@ -24,6 +24,10 @@ table.summary-table {
   }
 }
 
+.summary-table__header {
+  background-color: $white;
+}
+
 .ds-cell {
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;

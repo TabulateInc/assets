@@ -51,8 +51,10 @@
 }
 
 .panel-content {
-  text-align: center;
   padding: 15px;
+  &.mod-pie-chart {
+    text-align: center;
+  }
 }
 
 .panel-heading {

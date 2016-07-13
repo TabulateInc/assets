@@ -20,6 +20,13 @@
     min-width: 100%;
     padding-bottom: 5px;
     margin-top: 1px;
+
+    .aside & {
+      @media (max-width: $screen-xs-max) {
+        max-width: 100%;
+        top: $height-md;
+      }
+    }
   }
 
   &__option {
@@ -49,6 +56,7 @@
         padding-right: 5px !important;
         @media (max-width: $screen-xs-min) {
           margin-bottom: 10px;
+          min-width: 50px;
         }
       }
       .calendar-input {

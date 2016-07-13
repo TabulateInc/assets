@@ -7,6 +7,7 @@
 
   &__btn {
     @include custom-selector();
+    padding-right: 20px; // need extra space for carrot
   }
 
   &__options {
@@ -45,7 +46,7 @@
       padding: 5px 5px 5px 10px;
       &__item {
         padding-left: 0;
-        padding-right: 5px;
+        padding-right: 5px !important;
         @media (max-width: $screen-xs-min) {
           margin-bottom: 10px;
         }

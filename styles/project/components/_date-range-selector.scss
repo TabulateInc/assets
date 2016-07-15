@@ -1,3 +1,40 @@
+.daterangepicker.dropdown-menu {
+
+  .ranges li {
+    border-radius: 0;
+
+    &.active {
+      background-color: $brand-primary;
+      border: 1px solid $brand-primary;
+      border-radius: 0;
+    }
+
+    &:hover {
+      background-color: $brand-primary;
+      border: 1px solid $brand-primary;
+      border-radius: 0;
+    }
+  }
+
+  td.active, td.active:hover {
+    background-color: $brand-primary;
+  }
+
+  .input-mini {
+    border-radius: 0;
+  }
+
+  .input-mini.active {
+    border: 1px solid $brand-primary;
+    border-radius: 0;
+  }
+
+  .applyBtn.btn.btn-success {
+    background-color: $brand-primary;
+    border: 1px solid $brand-primary;
+  }
+}
+
 
 // Report Date Selector
 // -----------------------

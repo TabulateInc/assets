@@ -1,8 +1,12 @@
 .two-column-layout {
+  $first-column-width: 127px;
+  $first-column-width--small: 20px;
+
+  &.mod-first-column-long {
+    $first-column-width: 180px;
+  }
 
   &__item {
-    $first-column-width: 127px;
-    $first-column-width--small: 20px;
 
     display: inline-block;
 

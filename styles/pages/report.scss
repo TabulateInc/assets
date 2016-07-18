@@ -2,6 +2,8 @@
 @import '../project/utils';
 @import '../bootstrap/variables';
 
+$pie-chart-width: 380px;
+
 %report-table-column {
   // should fit $xxx,xxx.xx and do not overflow container
   // on medium and large screens
@@ -70,6 +72,11 @@
   padding: 15px;
   &.mod-pie-chart {
     text-align: center;
+
+    @media (max-width: $pie-chart-width) {
+      $pie-chart-offset-left: calc((85vw - #{$pie-chart-width})/2);
+      transform: scale(0.9) translateX($pie-chart-offset-left);
+    }
   }
 }
 

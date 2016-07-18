@@ -1,20 +1,37 @@
+.date-range-selector {
+  position: relative;
+
+  &__input {
+    padding-left: 25px;
+  }
+
+  i {
+    position: absolute;
+    left: 8px;
+    top: 9px;
+  }
+}
+
 .daterangepicker.dropdown-menu {
 
   .ranges li {
     border-radius: 0;
     background: $white;
     border: 1px solid $white;
+    color: $darkgray-dark;
 
     &.active {
       background-color: $brand-primary;
       border: 1px solid $brand-primary;
       border-radius: 0;
+      color: $white;
     }
 
     &:hover {
       background-color: $brand-primary;
       border: 1px solid $brand-primary;
       border-radius: 0;
+      color: $white;
     }
   }
 

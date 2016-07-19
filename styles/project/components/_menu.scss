@@ -18,6 +18,15 @@ $animation-duration: .6s;
   @return transparentize(darken($color, 10%), .5);
 }
 
+@mixin nav-link-active() {
+  color: $white;
+  background-color: $brand-primary;
+}
+
+%nav-link-active {
+  @include nav-link-active();
+}
+
 %nav-wrapper {
   font-size: $font-size-sm;
   font-weight: 400;
@@ -33,7 +42,11 @@ $animation-duration: .6s;
   color: $gray-text;
   background-color: transparent;
 
-  &:hover,
+  &:hover {
+    @media (min-width: $screen-sm-min) {
+      @include nav-link-active();
+    }
+  }
   &:focus {
     @extend %nav-link-active;
   }
@@ -56,15 +69,6 @@ $animation-duration: .6s;
   &::after {
     background: make-click-color($brand-primary);
   }
-}
-
-@mixin nav-link-active() {
-  color: $white;
-  background-color: $brand-primary;
-}
-
-%nav-link-active {
-  @include nav-link-active();
 }
 
 .navbar-header {
@@ -123,9 +127,10 @@ $animation-duration: .6s;
     }
 
     &.open > a {
-
       &:hover {
-        @extend %nav-link-active;
+        @media (min-width: $screen-sm-min) {
+          @include nav-link-active();
+        }
       }
 
       &,
@@ -242,11 +247,17 @@ select.btn-shaded {
     color: $gray-text;
   }
 
-  &:hover,
   &:focus {
-
     + .caret {
       color: $white;
+    }
+  }
+
+  &:hover {
+    @media (min-width: $screen-sm-min) {
+      + .caret {
+        color: $white;
+      }
     }
   }
 

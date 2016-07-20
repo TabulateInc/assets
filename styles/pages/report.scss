@@ -2,7 +2,7 @@
 @import '../project/utils';
 @import '../bootstrap/variables';
 
-$pie-chart-width: 380px;
+$chart-width: 380px;
 
 %report-table-column {
   // should fit $xxx,xxx.xx and do not overflow container
@@ -73,8 +73,8 @@ $pie-chart-width: 380px;
   &.mod-pie-chart {
     text-align: center;
 
-    @media (max-width: $pie-chart-width) {
-      $pie-chart-offset-left: calc((85vw - #{$pie-chart-width})/2);
+    @media (max-width: $chart-width) {
+      $pie-chart-offset-left: calc((85vw - #{$chart-width})/2);
       transform: scale(0.9) translateX($pie-chart-offset-left);
     }
   }
@@ -196,6 +196,18 @@ $pie-chart-width: 380px;
 .panel-table-subheader {
   border-bottom: 2px solid $darkgray-dark;
   margin-bottom: 2px;
+}
+
+.panel-horizontal-bar {
+  svg {
+    min-height: 225px;
+    width: $chart-width;
+
+    @media (max-width: $chart-width) {
+      $pie-chart-offset-left: calc((75vw - #{$chart-width})/2);
+      transform: scale(0.8) translateX($pie-chart-offset-left);
+    }
+  }
 }
 
 td {

@@ -210,6 +210,22 @@ $chart-width: 380px;
   }
 }
 
+.multi-bar-chart {
+  svg {
+    @media (max-width: $screen-sm-min) {
+      transform: translateX(-5%);
+    }
+
+    @media (max-width: $screen-xs-min) {
+      transform: translateX(-8%);
+    }
+
+    @media (max-width: $chart-width) {
+      transform: translateX(-10%);
+    }
+  }
+}
+
 td {
   &.mod-positive {
     background-color: $alert-danger-bg;

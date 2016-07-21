@@ -85,14 +85,8 @@ $chart-width: 380px;
   border-bottom-color: $gray-border;
 }
 
-.table-overflow-wrapper {
-  .ps-scrollbar-x-rail {
-    top: 50px !important;
-  }
-
-  &.mod-adaptive  .ps-scrollbar-x-rail {
+.table-overflow-wrapper .ps-scrollbar-x-rail {
     top: 3px !important;
-  }
 }
 
 .total-column {

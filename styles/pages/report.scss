@@ -162,6 +162,9 @@ $chart-width: 380px;
     &.mod-export {
       height: 29px;
       vertical-align: middle;
+      @media (max-width: $screen-xs-min) {
+        display: none;
+      }
     }
   }
 }

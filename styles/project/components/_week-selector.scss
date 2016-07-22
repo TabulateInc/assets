@@ -35,14 +35,14 @@ button.week-changer {
     }
 }
 
-// week-selector at aside
+week-selector.mod-aside {
+  display: inline-block;
+  width: 100%;
 
-.aside-body {
+  & div:first-child { width: 100%; }
+
   .week-dropdown {
     min-width: 100%;
     padding-left: 7px; // decreease from normal 10px to compensate extra space at weekselector.html line 9
-  }
-  .mod-aside {
-    width: 100%;
   }
 }

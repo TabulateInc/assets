@@ -28,14 +28,25 @@
   }
 
   @media (max-width: $screen-xs-max) {
-    padding-top: $main-navigation-height-mobile + 1;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
 }
 
 .modal {
     &-content {
-        border: 1px solid $border-gray-color;
-        @include box-shadow(none);
+      border: 1px solid $border-gray-color;
+      @include box-shadow(none);
+
+      @media (max-width: $screen-xs-max) {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+      }
     }
 
     &-header {

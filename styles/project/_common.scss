@@ -119,9 +119,9 @@ select::-ms-expand {
   position: relative;
 }
 
-.is-absolute {
-  position: absolute;
-  &.mod-over {
+.is-absolute-over-xs {
+  @media (max-width: $screen-xs-max) {
+    position: absolute;
     z-index: 1;
   }
 }

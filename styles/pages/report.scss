@@ -108,6 +108,19 @@ $chart-width: 380px;
     }
   }
 
+  @media (max-width: $screen-xs-min) {
+    border: none;
+    .mod-export {
+      display: none;
+    }
+
+    .aside-content {
+      .mod-export {
+        display: block;
+      }
+    }
+  }
+
   tags-input.mod-transactions-report {
     @media (min-width: $screen-lg-min) {
       min-width: 200px;
@@ -158,13 +171,15 @@ $chart-width: 380px;
     }
   }
 
+  .aside-footer.mod-actions {
+    padding-top: 0;
+    border: none;
+  }
+
   .btn {
     &.mod-export {
       height: 29px;
       vertical-align: middle;
-      @media (max-width: $screen-xs-min) {
-        display: none;
-      }
     }
   }
 }

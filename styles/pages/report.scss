@@ -110,12 +110,12 @@ $chart-width: 380px;
 
   @media (max-width: $screen-xs-min) {
     border: none;
-    .mod-export {
+    .btn.mod-export {
       display: none;
     }
 
     .aside-content {
-      .mod-export {
+      .btn.mod-export {
         display: block;
       }
     }

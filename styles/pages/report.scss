@@ -2,7 +2,7 @@
 @import '../project/utils';
 @import '../bootstrap/variables';
 
-$pie-chart-width: 380px;
+$chart-width: 380px;
 
 %report-table-column {
   // should fit $xxx,xxx.xx and do not overflow container
@@ -73,8 +73,8 @@ $pie-chart-width: 380px;
   &.mod-pie-chart {
     text-align: center;
 
-    @media (max-width: $pie-chart-width) {
-      $pie-chart-offset-left: calc((85vw - #{$pie-chart-width})/2);
+    @media (max-width: $chart-width) {
+      $pie-chart-offset-left: calc((85vw - #{$chart-width})/2);
       transform: scale(0.9) translateX($pie-chart-offset-left);
     }
   }
@@ -85,14 +85,8 @@ $pie-chart-width: 380px;
   border-bottom-color: $gray-border;
 }
 
-.table-overflow-wrapper {
-  .ps-scrollbar-x-rail {
-    top: 50px !important;
-  }
-
-  &.mod-adaptive  .ps-scrollbar-x-rail {
+.table-overflow-wrapper .ps-scrollbar-x-rail {
     top: 3px !important;
-  }
 }
 
 .total-column {
@@ -105,6 +99,19 @@ $pie-chart-width: 380px;
   @media (min-width: $screen-sm-min) {
     select {
       max-width: 200px;
+    }
+  }
+
+  @media (max-width: $screen-xs-min) {
+    border: none;
+    .btn.mod-export {
+      display: none;
+    }
+
+    .aside-content {
+      .btn.mod-export {
+        display: block;
+      }
     }
   }
 
@@ -158,6 +165,11 @@ $pie-chart-width: 380px;
     }
   }
 
+  .aside-footer.mod-actions {
+    padding-top: 0;
+    border: none;
+  }
+
   .btn {
     &.mod-export {
       height: 29px;
@@ -196,6 +208,34 @@ $pie-chart-width: 380px;
 .panel-table-subheader {
   border-bottom: 2px solid $darkgray-dark;
   margin-bottom: 2px;
+}
+
+.panel-horizontal-bar {
+  svg {
+    min-height: 225px;
+    width: $chart-width;
+
+    @media (max-width: $chart-width) {
+      $pie-chart-offset-left: calc((75vw - #{$chart-width})/2);
+      transform: scale(0.8) translateX($pie-chart-offset-left);
+    }
+  }
+}
+
+.multi-bar-chart {
+  svg {
+    @media (max-width: $screen-sm-min) {
+      transform: translateX(-5%);
+    }
+
+    @media (max-width: $screen-xs-min) {
+      transform: translateX(-8%);
+    }
+
+    @media (max-width: $chart-width) {
+      transform: translateX(-10%);
+    }
+  }
 }
 
 td {

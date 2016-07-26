@@ -2,12 +2,15 @@
 @import '../project/utils';
 @import '../bootstrap/variables';
 
-$btns-width: 190px;
+$btns-width: 220px;
+$input-to-btn: 10px;
 
 .search-accounts {
   max-width: 800px;
 
   &__input {
+    margin-right: $input-to-btn;
+
     @media (min-width: $screen-xs-min) {
       display: inline-block;
       width: calc(100% - #{$btns-width});
@@ -15,18 +18,21 @@ $btns-width: 190px;
   }
 
   &__btns {
+    min-width: $btns-width - $input-to-btn;
+
+    button {
+      width: 49%;
+    }
+
     @media (min-width: $screen-xs-min) {
       display: inline-block;
       vertical-align: top;
     }
 
     @media (max-width: $screen-xxs-max) {
+      display: block;
+      width: 100%;
       margin-top: $margin-xs;
-
-      button {
-        float: left;
-        width: 50%;
-      }
     }
   }
 }

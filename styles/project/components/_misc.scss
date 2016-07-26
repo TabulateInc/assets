@@ -1,6 +1,21 @@
+@import '../variables';
+
 .drag-drop {
   display: inline-block;
   min-width: $drag-icon-size;
+}
+
+.drag-drop-icon {
+  background-image: url(/assets/img/grippy_large.png);
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height:20px;
+  width:4px;
 }
 
 .transactions-sidebar {
@@ -17,4 +32,12 @@
     font-size: $font-size-large;
     text-align: center;
   }
+}
+
+.form-suggestion {
+  position: absolute;
+  bottom: -$font-size-xs - 2;
+  color: $gray-light;
+  font-size: $font-size-xs;
+  margin-left: $padding-base-horizontal + 1;  // input padding + border
 }

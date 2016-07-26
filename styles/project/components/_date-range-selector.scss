@@ -14,25 +14,43 @@
 
 .daterangepicker.dropdown-menu {
 
-  .ranges li {
-    border-radius: 0;
-    background: $white;
-    border: 1px solid $white;
-    color: $darkgray-dark;
-
-    &.active {
-      background-color: $brand-primary;
-      border: 1px solid $brand-primary;
+  .ranges {
+    li {
       border-radius: 0;
-      color: $white;
-    }
+      background: $white;
+      border: 1px solid $white;
+      color: $darkgray-dark;
 
-    &:hover {
-      background-color: $brand-primary;
-      border: 1px solid $brand-primary;
-      border-radius: 0;
-      color: $white;
+      &.active {
+        background-color: $brand-primary;
+        border: 1px solid $brand-primary;
+        border-radius: 0;
+        color: $white;
+      }
+
+      &:hover {
+        background-color: $brand-primary;
+        border: 1px solid $brand-primary;
+        border-radius: 0;
+        color: $white;
+      }
     }
+  }
+
+  .actions {
+    border-top: 1px solid $gray-lighter;
+    .cancelBtn, .applyBtn {
+      margin: 5px 0 0 5px;
+    }
+  }
+
+  .calendar.left {
+    border-left: 1px solid $gray-lighter;
+    padding-left: 5px;
+  }
+
+  .calendar.right {
+
   }
 
   td.active, td.active:hover {

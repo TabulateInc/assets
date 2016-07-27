@@ -7,6 +7,7 @@
   width: 100%;
   border-top: 1px solid $table-border-color;
   border-bottom: 1px solid $table-border-color;
+  min-height: $content-filter-height + 2 * $content-filter-padding;
 
   .form-control {
     height: $content-filter-height; // Make inputs at toolbar same height 29px

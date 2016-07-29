@@ -53,6 +53,12 @@
 
   }
 
+  .calendar-splitter {
+    position: absolute;
+    right: 4px;
+    bottom: 9px;
+  }
+
   td.active, td.active:hover {
     background-color: $brand-primary;
   }

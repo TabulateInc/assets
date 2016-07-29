@@ -119,6 +119,13 @@ select::-ms-expand {
   position: relative;
 }
 
+.is-absolute-over-xs {
+  @media (max-width: $screen-xs-max) {
+    position: absolute;
+    z-index: 1;
+  }
+}
+
 .pull-left-sm {
   @media (min-width: $screen-sm-min) {
     float: left;

@@ -34,3 +34,15 @@ button.week-changer {
       color: $gray !important;
     }
 }
+
+week-selector.mod-aside {
+  display: inline-block;
+  width: 100%;
+
+  :first-child { width: 100%; }
+
+  .week-dropdown {
+    min-width: 100%;
+    padding-left: 7px; // decreease from normal 10px to compensate extra space at weekselector.html line 9
+  }
+}

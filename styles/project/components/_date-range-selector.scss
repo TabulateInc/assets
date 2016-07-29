@@ -21,14 +21,7 @@
       border: 1px solid $white;
       color: $darkgray-dark;
 
-      &.active {
-        background-color: $brand-primary;
-        border: 1px solid $brand-primary;
-        border-radius: 0;
-        color: $white;
-      }
-
-      &:hover {
+      &.active, &:focus, &:hover {
         background-color: $brand-primary;
         border: 1px solid $brand-primary;
         border-radius: 0;

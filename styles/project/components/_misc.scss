@@ -41,3 +41,11 @@
   font-size: $font-size-xs;
   margin-left: $padding-base-horizontal + 1;  // input padding + border
 }
+
+.export-modal {
+  @media (max-width: $screen-xs-max) {
+    embed {
+      background-color: $white;
+    }
+  }
+}

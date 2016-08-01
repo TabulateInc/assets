@@ -72,6 +72,10 @@ $table-view-default-marging: 5px;
     justify-content: flex-start;
   }
 
+  &__mobile-row-line:first-child {
+    font-weight: 700;
+  }
+
   &__mobile-row.mod-selected, &__mobile-row:hover {
     background-color: $table-bg-hover;
   }
@@ -120,8 +124,11 @@ $table-view-default-marging: 5px;
   &__action-icon, &__action-label {
     margin-right: $table-view-default-marging;
     margin-bottom: $table-view-default-marging;
-    color: $form-font-color;
     cursor: pointer;
+  }
+
+  &__action-icon {
+    color: $form-font-color;
     &:hover {
       color: $form-font-color;
     }

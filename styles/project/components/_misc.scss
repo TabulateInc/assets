@@ -7,13 +7,17 @@
 }
 
 .drag-drop-icon {
+<<<<<<< HEAD
   background-image: url('/assets/img/grippy_large.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+=======
+  background: url(/assets/img/grippy_large.png) no-repeat;
+>>>>>>> 4adaf852f9795adad1970eb3861d73790075ff15
   position: absolute;
-  left: 0;
   top: 0;
+<<<<<<< HEAD
   bottom: 0;
   height: 20px;
   width: 4px;
@@ -24,6 +28,26 @@
 
   &.mod-lg {
     min-height: 40px;
+=======
+
+  $drag-drop-size: 1.1;
+  // google drag-drop size at compact interface
+  background-size: 5px * $drag-drop-size 5px*6 * $drag-drop-size;
+  height: 24px * $drag-drop-size;
+  width: 5px * $drag-drop-size;
+
+  //modify drag-drop-icon vertical position
+  drag-drop.mod-top & {
+    top: -3.5px;
+  }
+
+  drag-drop.mod-middle & {
+    top: 3px;
+  }
+
+  drag-drop.mod-low & {
+    top: 6.5px;
+>>>>>>> 4adaf852f9795adad1970eb3861d73790075ff15
   }
 }
 
@@ -49,4 +73,12 @@
   color: $gray-light;
   font-size: $font-size-xs;
   margin-left: $padding-base-horizontal + 1;  // input padding + border
+}
+
+.export-modal {
+  @media (max-width: $screen-xs-max) {
+    embed {
+      background-color: $white;
+    }
+  }
 }

@@ -43,6 +43,10 @@ $animation-duration: .6s;
   background-color: transparent;
 
   &:hover {
+    @media (max-width: $screen-xs-max) {
+      background-color: $gray-lighter;
+    }
+
     @media (min-width: $screen-sm-min) {
       @include nav-link-active();
     }
@@ -348,4 +352,8 @@ select.btn-shaded {
       padding: 0;
     }
   }
+}
+
+.nav-company-name {
+  max-width: 200px;
 }

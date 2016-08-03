@@ -4,8 +4,8 @@
 $details-status-width: 15px;
 
 
-.header {
-  padding-right: $details-status-width;
+.table-view__header-cell {
+  padding-left: $details-status-width;
 }
 
 .edit-details {
@@ -64,33 +64,32 @@ $details-status-width: 15px;
 
 .items-table__row {
   &--transactions {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    padding-right: $details-status-width !important;
+    padding: 0 !important;
 
-    > div {
-      padding: $items-table-padding 0;
+    .readable-row {
+      margin: 5px 0;
     }
 
-    // hack to make consistent wisth for transactions list
-    @media (max-width: $screen-xs-max) {
-      > .col-xs-11 {
-        height: $height-lg - 1;
+    .readable-row {
+      @media (min-width: $screen-sm-min) {
+        height: $height-md;  // input height
+        line-height: $height-md;  // center
+      }
+
+      @media (max-width: $screen-xs-max) {
+        height: $height-md;
       }
     }
   }
 
-  &.transaction-in-edit {
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
+  &.mod-edit-transaction {
     background-color: $white !important;
-
     &:hover {
       background-color: $white !important;
     }
 
-    > div {
-      padding: 0 !important;
+    .editable-row {
+      padding: 5px 0;
     }
   }
 
@@ -129,14 +128,15 @@ $details-status-width: 15px;
 // ----------------------
 
 .status-holder {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-top: 5px;
-  margin-bottom: 8px;
-  height: 22px;
+  $row-height: 50px;
+  $holder-height: 22px;
+  $vertical-margin: ($row-height - $holder-height) / 2;
+  height: $holder-height;
+  margin-top: $vertical-margin;
+  margin-bottom: $vertical-margin;
 
   @media (max-width: $screen-xs-max) {
-    margin-top: 8px;
+    margin-top: 5px;
   }
 }
 
@@ -233,8 +233,8 @@ $details-status-width: 15px;
     border: 1px solid $brand-primary;
     background-color: $brand-primary;
 
-    .add-edit-transaction & {
-      top: 100%;
+    &.glyphicon-menu-up {
+      top: 95%;
     }
   }
 }
@@ -273,13 +273,13 @@ date-range-selector {
   @include clearfix();
   list-style: none;
   padding: 0;
-  margin: $margin-md 0;
+  margin: 0;
 
   &__item {
     vertical-align: baseline;
     padding-left: 0;
     z-index: 5;
-    margin-left: -1px;
+    margin: $margin-md 0 $margin-md -1px;
 
     &:hover {
       z-index: 10;
@@ -288,7 +288,9 @@ date-range-selector {
 }
 
 .transactions-panel {
-  border-radius: 0;
+  @media (min-width: $screen-sm-min) {
+    border-radius: 0;
+  }
 
   &.mod-selected {
     border-width: 2px;

@@ -6,16 +6,28 @@
 }
 
 .drag-drop-icon {
-  background-image: url(/assets/img/grippy_large.png);
-  background-size:contain;
-  background-repeat:no-repeat;
-  background-position: center;
+  background: url(/assets/img/grippy_large.png) no-repeat;
   position: absolute;
-  left: 0;
   top: 0;
-  bottom: 0;
-  height:20px;
-  width:4px;
+
+  $drag-drop-size: 1.1;
+  // google drag-drop size at compact interface
+  background-size: 5px * $drag-drop-size 5px*6 * $drag-drop-size;
+  height: 24px * $drag-drop-size;
+  width: 5px * $drag-drop-size;
+
+  //modify drag-drop-icon vertical position
+  drag-drop.mod-top & {
+    top: -3.5px;
+  }
+
+  drag-drop.mod-middle & {
+    top: 3px;
+  }
+
+  drag-drop.mod-low & {
+    top: 6.5px;
+  }
 }
 
 .transactions-sidebar {

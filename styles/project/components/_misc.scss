@@ -21,6 +21,10 @@
 
 .drag-drop-group {
   min-height: 10px;
+
+  &.mod-lg {
+    min-height: 40px;
+  }
 }
 
 .transactions-sidebar {

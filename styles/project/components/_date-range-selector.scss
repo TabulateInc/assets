@@ -19,14 +19,21 @@ $headerHeight: 50px;
 
     .calendar {
       max-width: 100%;
+      margin:0;
     }
 
     .calendars {
-      //overflow-y: scroll;
+      height: 100%;
+      width: calc(100% + 10px);
+      padding-right: 10px;
+      margin:0;
+      overflow: auto;
     }
 
     .calendars-container {
-      overflow-y: scroll;
+      width: 100%;
+      margin:0;
+      overflow: hidden;
     }
 
     .modal-content {

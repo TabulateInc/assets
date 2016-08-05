@@ -62,7 +62,6 @@ $chart-width: 380px;
       width: 100%;
 
       .fix-first-column {
-        width: $fix-column-width + 1 + $panel-body-padding !important;
         padding-left: $panel-body-padding;  // report panel padding
       }
     }

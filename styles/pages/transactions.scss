@@ -275,6 +275,10 @@ date-range-selector {
   padding: 0;
   margin: 0;
 
+  @media (min-width: $screen-sm-min) {
+    width: calc(100% + 4px);  // add 1 px for every panel
+  }
+
   &__item {
     vertical-align: baseline;
     padding-left: 0;

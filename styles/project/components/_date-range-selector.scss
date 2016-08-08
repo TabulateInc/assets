@@ -1,4 +1,4 @@
-.date-range-selector {
+.date-range-selector, .date-selector {
   position: relative;
 
   &__input {
@@ -13,6 +13,12 @@
 }
 $headerHeight: 50px;
 .daterangepicker {
+
+  &.single {
+    .actions, .applyBtn {
+      display: none;
+    }
+  }
 
   &.modal {
     width: 100%;

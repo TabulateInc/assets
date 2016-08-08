@@ -128,11 +128,12 @@
     height: $main-navigation-height-mobile;
   }
 
-  &.inline-alert{
-    position:static;
-    border:none;
-    border-radius:0px;
-    max-width:auto;
+  &.inline-alert {
+    position: static;
+    max-width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0;
   }
 }
 

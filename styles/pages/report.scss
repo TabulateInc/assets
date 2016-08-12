@@ -62,7 +62,6 @@ $chart-width: 380px;
       width: 100%;
 
       .fix-first-column {
-        width: $fix-column-width + 1 + $panel-body-padding !important;
         padding-left: $panel-body-padding;  // report panel padding
       }
     }
@@ -156,9 +155,6 @@ $chart-width: 380px;
     &.mod-export {
       height: 29px;
       vertical-align: middle;
-      @media (max-width: $screen-xs-min) {
-        display: none;
-      }
     }
   }
 }
@@ -322,4 +318,8 @@ td {
 th.mod-addspace {
   min-width: 75px;
   padding-right: 0 !important;
+}
+
+tags-input.mod-row-filter {
+  width: 300px;
 }

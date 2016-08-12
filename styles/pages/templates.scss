@@ -18,7 +18,19 @@
   }
 
   &__subcategory {
-    line-height: $line-height-sm*.9; // make slightly smaller than category line height
+    line-height: $line-height-sm; // make slightly smaller than category line height
+  }
+
+  // temp hack, anyway we're doing complete restyle of this page
+  // and this code will be removed
+  &__item,
+  &__item + .b-delete-icon {
+    display: flex !important;
+    min-height: 35px;
+    align-items: center;
+  }
+  &__item + .b-delete-icon {
+    justify-content: flex-end;
   }
 
   input,
@@ -41,6 +53,9 @@
   }
 }
 
+settings-selector .glyphicon-option-horizontal {
+  vertical-align: middle;
+}
 
 // Menu
 .item-details-form {
@@ -53,5 +68,11 @@
     @media (max-width:$screen-xs-max){
       margin-right: 0 !important;
     }
+  }
+}
+
+.inventory-template {
+  .items-table__row {
+    min-height: 52px;
   }
 }

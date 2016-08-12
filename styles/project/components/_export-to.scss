@@ -1,0 +1,7 @@
+.btn.mod-export,
+export-to-pdf,
+export-toexcel {
+  @media (max-width: $screen-xs-max) {
+    display: none !important;
+  }
+}

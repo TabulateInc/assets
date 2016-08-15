@@ -121,11 +121,11 @@
   border-radius: 0;
 
   @media (min-width: $screen-sm-min) {
-    height: $main-navigation-height;
+    min-height: $main-navigation-height;
   }
 
   @media (max-width: $screen-xs-max) {
-    height: $main-navigation-height-mobile;
+    min-height: $main-navigation-height-mobile;
   }
 
   &.inline-alert {

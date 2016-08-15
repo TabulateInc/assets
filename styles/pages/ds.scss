@@ -81,3 +81,44 @@ table.summary-table {
     width: calc(100% - #{$width + $grid-gutter-width});
   }
 }
+
+.ds-note {
+  $note-background-color: $white;
+  $note-border-color: $gray-lighter;
+
+  width: 100%;
+  border-color: $note-border-color;
+  background-color: $note-background-color;
+
+  .arrow::after,
+  .arrow {
+    border-bottom-color: $note-border-color !important;
+  }
+
+  &__content {
+    border: none;
+    border-radius: 4px;
+    background-color: $note-background-color;
+
+    .popover-content,
+    .popover-title {
+      height: 0;
+      padding: 0;
+    }
+
+    textarea {
+      padding: 5px;
+      border: none;
+      background-color: $note-background-color;
+      text-align: left;
+      resize: vertical;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 14px;
+    left: -8px;
+    font-size: 9px;
+  }
+}

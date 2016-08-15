@@ -89,11 +89,7 @@ table.summary-table {
   width: 100%;
   border-color: $note-border-color;
   background-color: $note-background-color;
-
-  .arrow::after,
-  .arrow {
-    border-bottom-color: $note-border-color !important;
-  }
+  margin-top: 0 !important;
 
   &__content {
     border: none;
@@ -120,5 +116,6 @@ table.summary-table {
     top: 14px;
     left: -8px;
     font-size: 9px;
+    color: $brand-primary;
   }
 }

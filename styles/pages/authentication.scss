@@ -213,7 +213,7 @@ $col-side-paddings: 5px;
 }
 
 .modal-body-content {
-  overflow: scroll;
+  overflow-y: scroll;
   background-color: $white;
   max-height: 50vh;
 

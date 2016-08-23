@@ -7,11 +7,11 @@
 
   fill: $spinner-dark-color;
   stroke: $spinner-dark-stroke-color;
- 
+
   &.mod-xs {
     width: $spinner-xs;
   }
- 
+
   &.mod-sm {
     width: $spinner-sm;
   }
@@ -23,4 +23,9 @@
   &.mod-inline {
     display: inline;
   }
+
+  &.mod-white {
+    stroke: $white;
+  }
+
 }

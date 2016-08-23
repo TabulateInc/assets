@@ -20,6 +20,16 @@ body {
   }
 }
 
+.password-forgot-link {
+  position: absolute;
+  top: 35%;
+  right: 20px;
+
+  @media (max-width:$screen-xs-max) {
+    font-size: 12px;
+  }
+}
+
 .form-auth {
   border: 0;
 }
@@ -41,7 +51,7 @@ body {
 
   &__title {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 300;
 
     margin-top: -5px;
     margin-bottom: 5px;
@@ -59,7 +69,7 @@ body {
 
   &__subtitle {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
 
     max-width: 560px;
     margin-right: auto;
@@ -196,10 +206,20 @@ $col-side-paddings: 5px;
   font-family: $headings-font-family !important;
 }
 
-.half-height {
-  overflow: scroll;
+.terms-modal-open, .privacy-modal-open {
+  .modal-body {
+    background-color: $white;
+  }
+}
 
+.modal-body-content {
+  overflow-y: scroll;
+  background-color: $white;
   max-height: 50vh;
+
+  @media (max-width:$screen-xs-max) {
+    max-height: calc(100vh - 110px);
+  }
 }
 
 @mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {

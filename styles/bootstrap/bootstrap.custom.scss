@@ -55,6 +55,10 @@
 
       .close {
         font-size: 32px;
+
+        &:disabled {
+          opacity: .1;
+        }
       }
     }
 

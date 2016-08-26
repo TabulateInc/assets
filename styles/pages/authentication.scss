@@ -20,16 +20,6 @@ body {
   }
 }
 
-.password-forgot-link {
-  position: absolute;
-  top: 35%;
-  right: 20px;
-
-  @media (max-width:$screen-xs-max) {
-    font-size: 12px;
-  }
-}
-
 .form-auth {
   border: 0;
 }

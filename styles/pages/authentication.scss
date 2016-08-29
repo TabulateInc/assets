@@ -206,10 +206,20 @@ $col-side-paddings: 5px;
   font-family: $headings-font-family !important;
 }
 
-.half-height {
-  overflow: scroll;
+.terms-modal-open, .privacy-modal-open {
+  .modal-body {
+    background-color: $white;
+  }
+}
 
+.modal-body-content {
+  overflow-y: scroll;
+  background-color: $white;
   max-height: 50vh;
+
+  @media (max-width:$screen-xs-max) {
+    max-height: calc(100vh - 110px);
+  }
 }
 
 @mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {

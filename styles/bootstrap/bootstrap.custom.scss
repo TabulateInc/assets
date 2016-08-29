@@ -22,6 +22,10 @@
   }
 }
 
+body.modal-open {
+  overflow-y: auto;
+}
+
 .modal-dialog {
   @media (min-width: $screen-sm-min) {
     padding-top: $main-navigation-height + 1;
@@ -52,6 +56,14 @@
     &-header {
         border-bottom: 1px solid $border-gray-color;
         min-height: 15px*$modal-title-line-height;    // fixes scss (15px 30px+1.321) style error
+
+      .close {
+        font-size: 32px;
+
+        &:disabled {
+          opacity: .1;
+        }
+      }
     }
 
     &-body {
@@ -121,11 +133,11 @@
   border-radius: 0;
 
   @media (min-width: $screen-sm-min) {
-    height: $main-navigation-height;
+    min-height: $main-navigation-height;
   }
 
   @media (max-width: $screen-xs-max) {
-    height: $main-navigation-height-mobile;
+    min-height: $main-navigation-height-mobile;
   }
 
   &.inline-alert {
@@ -134,6 +146,7 @@
     height: auto;
     border: none;
     border-radius: 0;
+    min-height: auto;
   }
 }
 

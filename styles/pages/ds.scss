@@ -4,15 +4,15 @@
 table.summary-table {
   border-collapse: collapse;
 
-  @media (max-width:$screen-xs-max){
-    width:100%;
+  @media (max-width: $screen-xs-max) {
+    width: 100%;
   }
 
   .active-row {
     background-color: $table-bg-hover;
   }
 
-  th,td {
+  th, td {
     min-width: $ds-table-cell-min-width;
     padding: $ds-table-cell-padding;
   }
@@ -86,10 +86,10 @@ table.summary-table {
   $note-background-color: $white;
   $note-border-color: $gray-lighter;
 
-  width: 100%;
   border-color: $note-border-color;
   background-color: $note-background-color;
   margin-top: 0 !important;
+  left: 0 !important;
 
   &__content {
     border: none;
@@ -107,15 +107,43 @@ table.summary-table {
       border: none;
       background-color: $note-background-color;
       text-align: left;
-      resize: vertical;
+      min-height: 150px;
     }
   }
 
-  &__icon {
+  &__icon-desktop {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 0 10px;
+    border-color: transparent transparent transparent $brand-primary;
     position: absolute;
-    top: 16px;
-    left: -9px;
-    font-size: 9px;
-    color: $brand-primary;
+    left: -8px;
+    top: 13px;
+  }
+
+  &__icon-mobile {
+    position: absolute;
+    top: 2px;
+    left: -40px;
+    height: 100%;
+    color: #ddd;
+    cursor: pointer;
+
+    &.mod-has-data {
+      color: $brand-primary;
+    }
+  }
+
+  &__modal {
+    .modal-body,
+    .modal-footer {
+      background-color: $white;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: none;
+    }
   }
 }

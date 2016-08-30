@@ -31,3 +31,25 @@
   }
 
 }
+
+.activity-detail-modal-open {
+  .modal-body {
+    background-color: $white;
+  }
+
+  .close {
+    font-size: 32px;
+  }
+}
+
+.activity-detail {
+  &__item-name {
+    display: inline-block;
+    font-weight: 700;
+  }
+
+  &__item-value {
+    display: inline-block;
+    font-weight: 400;
+  }
+}

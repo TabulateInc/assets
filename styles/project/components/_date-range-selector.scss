@@ -46,8 +46,11 @@ $headerHeight: 50px;
 }
 
 
-.daterangepicker {
+.modal-open .daterangepicker {
+  position: fixed;
+}
 
+.daterangepicker {
   &.single {
     .actions, .applyBtn {
       display: none;

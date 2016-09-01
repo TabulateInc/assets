@@ -45,12 +45,18 @@ $headerHeight: 50px;
   $headerHeight: 56px
 }
 
-
 .modal-open .daterangepicker {
   position: fixed;
+  &.dropdown-menu.desktop {
+    z-index: 1070;
+  }
 }
 
 .daterangepicker {
+  &.dropdown-menu.desktop {
+    z-index: 1020;
+  }
+
   &.single {
     .actions, .applyBtn {
       display: none;

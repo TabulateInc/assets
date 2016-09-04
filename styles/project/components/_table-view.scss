@@ -13,6 +13,12 @@ $table-view-mobile-default-marging: 4px;
   width: 100%;
   min-height: 80px;
 
+  &__empty-label {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
   &__table-header, &__table-body, &__mobile-header {
     display: flex;
     flex-direction: row;

@@ -13,6 +13,7 @@ $checkboxBorderColor: #d3d8db;
     width: 18px;
     height: 18px;
     display: inline-block;
+    line-height: 16px;
     border: 1px solid $checkboxBorderColor;
     border-radius: 3px;
     color: $brand-saturated;
@@ -25,6 +26,7 @@ $checkboxBorderColor: #d3d8db;
     @media (max-width: $screen-xs-max) {
       width: 15px;
       height: 15px;
+      line-height: 13px;
     }
   }
 

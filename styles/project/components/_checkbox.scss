@@ -1,20 +1,20 @@
+$checkboxBorderColor: #d3d8db;
 .checkbox {
   &__input {
     display: none;
   }
 
   &__indicator {
-    width: 20px;
-    height: 20px;
-    &.mod-checked {
-      /*&:before {
-        content: "";
-        display: block;
-        background-image: ;
-        background-repeat: no-repeat;
-        background-position: 2px;
-
-      }*/
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    border: 1px solid $checkboxBorderColor;
+    border-radius: 3px;
+    color: $brand-saturated;
+    vertical-align: middle;
+    margin-top: -5px;
+    &:before {
+      margin-left: 1px;
     }
   }
 

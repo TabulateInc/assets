@@ -1,5 +1,11 @@
 $checkboxBorderColor: #d3d8db;
+
 .checkbox {
+
+  @media (max-width: $screen-xs-max) {
+    font-size: $font-size-xs;
+  }
+
   &__input {
     display: none;
   }
@@ -15,6 +21,11 @@ $checkboxBorderColor: #d3d8db;
     margin-top: -5px;
     &:before {
       margin-left: 1px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      width: 15px;
+      height: 15px;
     }
   }
 

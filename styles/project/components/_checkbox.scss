@@ -1,7 +1,6 @@
 $checkboxBorderColor: #d3d8db;
 
 .checkbox {
-
   @media (max-width: $screen-xs-max) {
     font-size: $font-size-xs;
   }
@@ -29,7 +28,7 @@ $checkboxBorderColor: #d3d8db;
     }
   }
 
-  &__label {
-
+  .checkbox &__label {
+    font-weight: 300;
   }
 }

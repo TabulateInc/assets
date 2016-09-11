@@ -394,8 +394,22 @@ select.padding-left-xs option,
   background-color: $gray-lighter !important;
 }
 
-.btn-ghost-primary {
-  @extend %btn-ghost-primary;
+.btn-table-row {
+  $color: $brand-primary;
+  $border: 1px solid $color;
+
+  background-color: $table-bg-hover;
+  border: $border;
+  color: $color;
+
+  &:hover, &:focus, &:active, &.active {
+    background-color: $white;
+    border: $border;
+    color: $color;
+  }
+  &:disabled {
+    color: $white;
+  }
 }
 
 .savebtn {

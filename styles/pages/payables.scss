@@ -71,11 +71,6 @@ state-picker .col-sm-4 {
 }
 
 .items-table__row__over {
-  button {
-    @extend %btn-ghost-primary;
-    background-color: $table-bg-hover;
-  }
-
   apply-transaction button {
     float: right;
   }

@@ -22,6 +22,10 @@
   }
 }
 
+body.modal-open {
+  overflow-y: auto;
+}
+
 .modal-dialog {
   @media (min-width: $screen-sm-min) {
     padding-top: $main-navigation-height + 1;
@@ -55,6 +59,10 @@
 
       .close {
         font-size: 32px;
+
+        &:disabled {
+          opacity: .1;
+        }
       }
     }
 

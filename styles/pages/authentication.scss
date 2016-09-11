@@ -5,6 +5,7 @@
 $btn-primary-color: #fff;
 $desktop-to-mobile: .5;
 $desktop-to-mobile-sm: .75;
+$checkbox-border-color: #d3d8db;
 
 body {
   padding: 0;
@@ -80,6 +81,9 @@ body {
       margin-bottom: $desktop-to-mobile*35px;
     }
   }
+}
+.checkbox__label::before {
+  border: 1px solid $checkbox-border-color;
 }
 
 .form-group {

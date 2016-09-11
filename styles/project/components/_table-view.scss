@@ -1,9 +1,10 @@
 $table-view-row-height: 45px;
 $table-view-row-line-height: 45px;
+$table-view-mobile-row-line-height: 19px;
 $table-view-cell-right-padding: 40px;
-$screen-xxs-max-table-view: 600px;
 $table-view-header-resize-handle-width: 5px;
 $table-view-default-marging: 5px;
+$table-view-mobile-default-marging: 4px;
 
 .table-view {
   position: relative;
@@ -11,6 +12,12 @@ $table-view-default-marging: 5px;
   flex-direction: column;
   width: 100%;
   min-height: 80px;
+
+  &__empty-label {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+  }
 
   &__table-header, &__table-body, &__mobile-header {
     display: flex;
@@ -24,6 +31,10 @@ $table-view-default-marging: 5px;
 
   &__mobile-header {
     justify-content: flex-end;
+  }
+
+  &__header-label {
+    text-transform: uppercase;
   }
 
   &__header-cell {
@@ -73,11 +84,14 @@ $table-view-default-marging: 5px;
   }
 
   &__mobile-row-line:first-child {
-    font-weight: 700;
+      font-weight: 700;
+      text-transform: uppercase;
   }
 
-  &__mobile-row.mod-selected, &__mobile-row:hover {
-    background-color: $table-bg-hover;
+  &__mobile-row-cell:last-child {
+    .comma-separator {
+      display: none;
+    }
   }
 
   &__row, &__mobile-row-line, &__footer-row {
@@ -90,15 +104,51 @@ $table-view-default-marging: 5px;
     &:hover, &.mod-selected, &.mod-hovered {
       background-color: $table-bg-hover;
     }
-    @media (max-width: $screen-xxs-max-pager) {
-      font-size: $font-size-xs;
-      line-height: $height-sm;
-      height: $height-sm;
+    @media (max-width: $screen-xs-max) {
+      font-size: $font-size-base;
+      line-height: $table-view-mobile-row-line-height;
+      height: $table-view-mobile-row-line-height;
+      margin-bottom: $table-view-mobile-default-marging;
     }
   }
 
   &__row, &__mobile-row {
+    position: relative;
     flex: 0 0 auto;
+  }
+
+  &__row-actions, &__mobile-row-actions, &__mobile-row-secondary-actions {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    width: 90vw;
+  }
+
+  &__mobile-row-secondary-actions {
+    right: $table-view-default-marging;
+  }
+
+  &__row-action, &__mobile-row-action {
+    float: right;
+  }
+
+  &__row-action {
+    margin-top: $table-view-default-marging;
+  }
+
+  &__mobile-row-action {
+    margin-top: 9px;
+  }
+
+  &__mobile-row {
+    &.mod-selected, &:hover {
+      background-color: $table-bg-hover;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      padding-top: $table-view-mobile-default-marging;
+    }
   }
 
   &__row, &__footer-row, &__mobile-row {
@@ -106,7 +156,6 @@ $table-view-default-marging: 5px;
   }
 
   &__mobile-row-cell {
-    flex: 1 1 auto;
     margin-left: $table-view-default-marging;
   }
 
@@ -114,7 +163,8 @@ $table-view-default-marging: 5px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    height:20px;
+    min-height:20px;
+    margin-bottom: $table-view-default-marging;
   }
 
   &__action {
@@ -135,7 +185,7 @@ $table-view-default-marging: 5px;
   }
 
   &__action.mod-disabled > &__action-icon, &__action.mod-disabled > &__action-label {
-    display: none;
+    visibility:hidden;
   }
 
   &__load {
@@ -175,5 +225,4 @@ $table-view-default-marging: 5px;
       text-align: right;
     }
   }
-
 }

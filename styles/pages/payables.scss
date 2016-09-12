@@ -71,12 +71,25 @@ state-picker .col-sm-4 {
 }
 
 .items-table__row__over {
-  button {
-    @extend %btn-ghost-primary;
-    background-color: $table-bg-hover;
-  }
-
   apply-transaction button {
     float: right;
+  }
+}
+
+.items-table__row.mod-pay-bills {
+  padding-bottom: 0;
+  line-height: $line-height-sm;
+}
+
+.input-helper {
+  // height: 20px;
+  line-height: 14px;
+  font-size: $font-size-xs;
+  padding: 2px $padding-base-horizontal 2px 0;
+  text-align: right;
+  color: $gray-light;
+
+  &.mod-danger {
+    color: $state-danger-text;
   }
 }

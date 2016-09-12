@@ -82,8 +82,12 @@ body {
     }
   }
 }
-.checkbox__label::before {
-  border: 1px solid $checkbox-border-color;
+
+.checkbox .checkbox__label {
+  font-weight: 300;
+  &:before {
+    border: 1px solid $checkbox-border-color;
+  }
 }
 
 .form-group {

@@ -32,7 +32,7 @@
     content: '\e013';
   }
 
-  & &__label {
-    font-weight: 300;
+  &__input[type="checkbox"]:disabled + &__label {
+    color: $middle-gray-color;
   }
 }

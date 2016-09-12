@@ -43,14 +43,11 @@ $toggle-off-background-color:   #cad9e8 !default;
     &:after {
     // toogle circle
       font-size: $circle-font-size;
-      top: $circle-top;
+      margin-top: $circle-top;
       left: $circle-left-off;
 
       width: $circle-size;
       height: $circle-size;
-      @media (-webkit-min-device-pixel-ratio: 2) {
-        top: $circle-top * 1.4;
-      }
     }
   }
 

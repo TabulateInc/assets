@@ -6,7 +6,7 @@ section {
   padding-bottom: 30px;
 }
 
-.nav {
+.sg-nav {
   padding-left: 20px;
   border-left: 2px solid #ddd;
   font-size: 1.1em;
@@ -158,4 +158,55 @@ section {
 }
 .sg-font-new {
   font-family: 'Open Sans Light', 'Open Sans';
+}
+
+/*
+ * Glyphicons
+ *
+ * Special styles for displaying the icons and their classes in the docs.
+ */
+
+.sg-glyphicons {
+  margin: 0 -10px 20px;
+  overflow: hidden;
+}
+.sg-glyphicons-list {
+  padding-left: 0;
+  list-style: none;
+}
+.sg-glyphicons li {
+  float: left;
+  width: 25%;
+  height: 115px;
+  padding: 10px;
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 1px solid #fff;
+}
+.sg-glyphicons .glyphicon {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.sg-glyphicons .glyphicon-class {
+  display: block;
+  text-align: center;
+  word-wrap: break-word; /* Help out IE10+ with class names */
+}
+.sg-glyphicons li:hover {
+  color: #fff;
+  background-color: $brand-saturated;
+}
+
+@media (min-width: 768px) {
+  .sg-glyphicons {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .sg-glyphicons li {
+    width: 12.5%;
+    font-size: 12px;
+  }
 }

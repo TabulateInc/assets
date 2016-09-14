@@ -8,6 +8,7 @@
   input, select {
     height: $height-md;
     border: none !important;
+    border-radius: 0;
 
     &.form-control.has-error {
       border: 1px solid $grapefruit-dark !important;

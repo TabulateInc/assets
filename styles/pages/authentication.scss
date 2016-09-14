@@ -2,22 +2,19 @@
 @import '../project/variables';
 @import '../bootstrap/variables';
 
-$btn-primary-color: #fff;
 $desktop-to-mobile: .5;
 $desktop-to-mobile-sm: .75;
-$checkbox-border-color: #d3d8db;
+
 
 body {
   padding: 0;
 }
 
 .logo {
-  height: 80px;
   margin: 80px auto;
 
   @media (max-width:$screen-xs-max) {
-    height: .75*80px;
-    margin: .5*80px auto;
+    margin: 40px auto;
   }
 }
 
@@ -82,47 +79,24 @@ body {
     }
   }
 }
+
 .checkbox__label::before {
-  border: 1px solid $checkbox-border-color;
+  border: 1px solid $input-border;
 }
 
 .form-group {
   margin-bottom: 5px;
 }
 
-$form-controll-side-padding: 20px;
-$form-controll-border-width: 1px;
-
 .form-control {
   @include animation-name(slideDown);
   @include animation-iteration-count(1);
   @include animation-duration(.2s);
 
-  font-size: 15px;
-
-  height: 60px;
   margin: 5px auto;
-  padding: 18px $form-controll-side-padding;
-
-  color: #515151;
-  border: #d3d8db solid $form-controll-border-width;
-  border-radius: 10px;
-  box-shadow: none;
-
-  &:focus {
-    border-color: $brand-primary;
-  }
-
-  @media (max-width:$screen-xs-max) {
-    border-radius: $desktop-to-mobile-sm*10px;
-    font-size: $desktop-to-mobile-sm*15px;
-    height: $desktop-to-mobile-sm*60px;
-    padding: $desktop-to-mobile-sm*18px $desktop-to-mobile-sm*$form-controll-side-padding;
-  }
 }
 
 @keyframes slideDown {
-
   0% {
     height: 0;
   }
@@ -158,9 +132,9 @@ $col-side-paddings: 5px;
   }
 
   &.mod-input-text-start-aligned {
-    padding-left: $form-controll-side-padding + $form-controll-border-width + $col-side-paddings;
+    padding-left: $input-padding-vertical + $input-border-width + $col-side-paddings;
     @media (max-width:$screen-xs-max) {
-      padding-left: $desktop-to-mobile-sm*$form-controll-side-padding + $form-controll-border-width + $col-side-paddings;
+      padding-left: $desktop-to-mobile-sm*$input-padding-vertical + $input-border-width + $col-side-paddings;
     }
   }
 }
@@ -187,17 +161,6 @@ $col-side-paddings: 5px;
     padding: .7*18px .7*45px;
     border-radius: .7*30px;
   }
-}
-
-.btn-primary {
-  background-color: $brand-primary;
-  border-color: $brand-primary;
-}
-
-::-moz-placeholder,
-:-ms-input-placeholder,
-::-webkit-input-placeholder {
-  font-family: $headings-font-family !important;
 }
 
 .terms-modal-open, .privacy-modal-open {

@@ -212,16 +212,6 @@ $border:1px solid $subnav-border-color;
   }
 }
 
-.form-control[readonly] {
-    background-color: $white;
-}
-
-.form-control[disabled],
-fieldset[disabled] .form-control {
-  border-color: $form-disabled-color !important;
-  background-color: $form-disabled-color !important;
-}
-
 .dropdown-menu {
     overflow-x:hidden;
     height:auto;
@@ -302,20 +292,32 @@ fieldset[disabled] .form-control {
   }
 }
 
-
-
 select.btn{
-  &:focus {
-    border-color: $brand-primary !important;
-  }
+  @include custom-selector();
 
   -webkit-appearance:none;
   -moz-appearance:none;
 
-  @include custom-selector();
+  &:focus {
+    border-color: $brand-primary !important;
+  }
 
-  option{
-      text-align:left;
+  &.btn-default {
+    border-color: $input-border !important;
+    color: $input-color;
+
+    &:hover {
+      background-color: $input-border;
+      color: $white;
+    }
+
+    &:focus {
+      border-color: $brand-primary !important;
+    }
+  }
+
+  option {
+    text-align: left;
   }
 }
 

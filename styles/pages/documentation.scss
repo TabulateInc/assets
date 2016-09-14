@@ -130,7 +130,7 @@ section {
   background: $middle-gray-color;
 }
 .sg-table-border .sg-color-swatch {
-  background: #ddd;
+  background: $table-border-color;
 }
 .sg-gray-border .sg-color-swatch {
   background: $gray-border;
@@ -141,8 +141,8 @@ section {
   padding: .5em 0;
 }
 .show-grid div {
-  background-color: #dddddd;
-  border: 1px solid #808080;
+  background-color: $middle-gray-color;
+  border: 1px solid $white;
   padding: 0.5em;
   font-size: 12px;
 }
@@ -182,8 +182,8 @@ section {
   font-size: 10px;
   line-height: 1.4;
   text-align: center;
-  background-color: #f9f9f9;
-  border: 1px solid #fff;
+  background-color: $middle-gray-color;
+  border: 1px solid $white;
 }
 .sg-glyphicons .glyphicon {
   margin-top: 5px;
@@ -196,7 +196,7 @@ section {
   word-wrap: break-word; /* Help out IE10+ with class names */
 }
 .sg-glyphicons li:hover {
-  color: #fff;
+  color: $white;
   background-color: $brand-saturated;
 }
 

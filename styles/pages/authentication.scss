@@ -145,22 +145,6 @@ $col-side-paddings: 5px;
   @media (max-width:$screen-xs-max) {
     margin-top: $desktop-to-mobile*32px;
   }
-
-}
-
-.btn {
-  font-size: 14px;
-  font-weight: 400;
-
-  padding: 18px 45px;
-
-  border-radius: 30px;
-
-  @media (max-width:$screen-xs-max) {
-    font-size: 12px;
-    padding: .7*18px .7*45px;
-    border-radius: .7*30px;
-  }
 }
 
 .terms-modal-open, .privacy-modal-open {

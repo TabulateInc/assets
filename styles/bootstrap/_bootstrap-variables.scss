@@ -23,7 +23,12 @@
 
 // from bootflat
 $lightgray-light:             #F5F7FA;
+
+// new custom
 $white:                       #fff;
+$gray-new:                    #4c5557;
+$gray-dark-new:               #515151;
+$gray-light-new:              #e8ebed;
 
 // $brand-primary:         darken(#428bca, 6.5%)
 $brand-primary:          #57a6db;
@@ -201,7 +206,7 @@ $input-bg:                       $white;
 $input-bg-disabled:              rgba(241, 242, 243, 1);  // $lightgray-light;
 
 //** Text color for `<input>`s
-$input-color:                    #515151;  // $gray
+$input-color:                    $gray-dark-new;  // $gray
 $input-color-disabled:           #bbb;
 
 $input-text-size:                15px;
@@ -878,3 +883,7 @@ $breadcrumb-bg:                 #fff !important;  // #f5f5f5
 // $dl-horizontal-offset:        $component-offset-horizontal
 //** Horizontal line color.
 // $hr-border:                   $gray-lighter
+
+$horizontal-separator-color:  $gray-light-new;
+$container-max-width: 1230px;
+$container-sm-max-width: 760px;

@@ -2,98 +2,60 @@
 @import '../project/variables';
 @import '../bootstrap/variables';
 
-$desktop-to-mobile: .5;
-$desktop-to-mobile-sm: .75;
-
-
 body {
   padding: 0;
 }
 
-.logo {
-  margin: 80px auto;
+.additional-info {
+  clear: both;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  padding-left: $inputs-separator-distance;
 
-  @media (max-width:$screen-xs-max) {
-    margin: 40px auto;
-  }
-}
+  a {
+    font-size: 15px;
+    font-weight: 400;
 
-.form-auth {
-  border: 0;
-}
-
-.container-fluid {
-  max-width: 750px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-.title {
-  margin-bottom: 45px;
-
-  border-bottom: solid 1px #e8ebed;
-
-  @media (max-width:$screen-xs-max) {
-    margin-bottom: $desktop-to-mobile*45px;
-  }
-
-  &__title {
-    font-size: 32px;
-    font-weight: 300;
-
-    margin-top: -5px;
-    margin-bottom: 5px;
-
-    color: #4c5557;
-
-    @media (min-width:$screen-xs-min) and (max-width:$screen-xs-max) {
-      font-size: .9*32px;
-    }
-
-    @media (max-width:$screen-xxs-max) {
-      font-size: $desktop-to-mobile-sm*32px;
+    @media (max-width: $screen-xs-max) {
+      font-size: 12px;
     }
   }
 
-  &__subtitle {
-    font-size: 16px;
-    font-weight: 300;
-
-    max-width: 560px;
-    margin-right: auto;
-    margin-bottom: 35px;
-    margin-left: auto;
-
-    color: #515151;
-
-    @media (min-width:$screen-xs-min) and (max-width:$screen-xs-max) {
-      font-size: .9*16px;
-    }
-
-    @media (max-width:$screen-xxs-max) {
-      font-size: $desktop-to-mobile-sm*16px;
-    }
-
-    @media (max-width:$screen-xs-max) {
-      margin-bottom: $desktop-to-mobile*35px;
-    }
+  @media (max-width: $screen-xs-max) {
+    font-size: 12px;
   }
 }
 
-.checkbox__label::before {
-  border: 1px solid $input-border;
+.terms-modal-open,
+.privacy-modal-open {
+  .modal-body {
+    background-color: $white;
+  }
 }
 
-.form-group {
-  margin-bottom: 5px;
+.modal-body-content {
+  overflow-y: scroll;
+  background-color: $white;
+  max-height: 50vh;
+
+  @media (max-width: $screen-xs-max) {
+    max-height: calc(100vh - 110px);
+  }
+}
+
+.btn.mod-move-down {
+  $margin-top-desktop: 32px;
+  margin-top: $margin-top-desktop;
+
+  @media (max-width: $screen-xs-max) {
+    margin-top: $desktop-to-mobile*$margin-top-desktop;
+  }
 }
 
 .form-control {
   @include animation-name(slideDown);
   @include animation-iteration-count(1);
   @include animation-duration(.2s);
-
-  margin: 5px auto;
 }
 
 @keyframes slideDown {
@@ -105,72 +67,3 @@ body {
     height: 60%;
   }
 }
-
-$col-side-paddings: 5px;
-
-.additional-info {
-  clear: both;
-
-  margin-top: 4px;
-  margin-bottom: 10px;
-
-  a {
-    font-size: 15px;
-    font-weight: 400;
-
-    @media (max-width:$screen-xs-max) {
-      font-size: 12px;
-    }
-  }
-
-  @media (max-width:$screen-xs-max) {
-    font-size: 12px;
-  }
-
-  &.mod-input-left-border-aligned {
-    padding-left: $col-side-paddings;
-  }
-
-  &.mod-input-text-start-aligned {
-    padding-left: $input-padding-vertical + $input-border-width + $col-side-paddings;
-    @media (max-width:$screen-xs-max) {
-      padding-left: $desktop-to-mobile-sm*$input-padding-vertical + $input-border-width + $col-side-paddings;
-    }
-  }
-}
-
-.form-group + .btn {
-  margin-top: 32px;
-
-  @media (max-width:$screen-xs-max) {
-    margin-top: $desktop-to-mobile*32px;
-  }
-}
-
-.terms-modal-open, .privacy-modal-open {
-  .modal-body {
-    background-color: $white;
-  }
-}
-
-.modal-body-content {
-  overflow-y: scroll;
-  background-color: $white;
-  max-height: 50vh;
-
-  @media (max-width:$screen-xs-max) {
-    max-height: calc(100vh - 110px);
-  }
-}
-
-@mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
-  @for $i from (1 + 1) through $grid-columns {
-    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
-  }
-  #{$list} {
-    padding-left:  $col-side-paddings;
-    padding-right: $col-side-paddings;
-  }
-}
-
-@include make-grid-columns();

@@ -5,6 +5,7 @@
 }
 
 .logo {
+  display: block;
   background: url(#{$images-path}/tabulate-icon.svg) no-repeat center center transparent;
   @include set-icon-size(80px);
 

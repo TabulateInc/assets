@@ -6,10 +6,6 @@
 @import 'Bootflat/bootflat/scss/bootflat';
 @import 'bootstrap-additions/bootstrap-additions';
 
-.container-fluid {
-  max-width: $container-max-width;
-}
-
 .panel {
     border: 1px solid $panel-default-border;
 }

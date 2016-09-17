@@ -224,12 +224,6 @@ $border:1px solid $subnav-border-color;
     }
 }
 
-/*fix boostrap shit*/
-.radio + .radio,
-.checkbox + .checkbox {
-  margin-top: 0px;
-}
-
 .breadcrumb {
   margin-bottom: 0;
   display: inline-block;

@@ -215,6 +215,7 @@ $input-text-size:                15px;
 $input-border:                   #d8dddf;  // rgba(235, 235, 235, 1);  // #d3d8db;  // #ccc
 $input-border-focus:             $brand-primary;
 $input-border-disabled:          $input-border;  // $lightgray-light;
+$input-border-hover:             darken($input-border, 20%);
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius

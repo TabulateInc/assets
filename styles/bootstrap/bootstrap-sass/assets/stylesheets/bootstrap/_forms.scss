@@ -128,6 +128,10 @@ output {
 
   @include transition(border-color ease-in-out .15s);
 
+  &:hover {
+    border-color: $input-border-hover;
+  }
+
   // Customize the `:focus` state to imitate native WebKit styles.
   @include form-control-focus;
 
@@ -257,7 +261,7 @@ input[type="search"] {
 
 .radio + .radio,
 .checkbox + .checkbox {
-  margin-top: -5px; // Move up sibling radios or checkboxes for tighter spacing
+  margin-top: 0;
 }
 
 // Radios and checkboxes on same line

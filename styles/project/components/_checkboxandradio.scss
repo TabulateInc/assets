@@ -1,14 +1,45 @@
-.checkbox,
+.checkbox.mod-custom,
 .radio {
   @media (max-width: $screen-xs-max) {
     font-size: $font-size-xs;
   }
 
-  &__input {
+  input {
     display: none;
+
+    &:checked + label {
+      &.mod-default:before {
+        content: '\e013';
+      }
+
+      &.mod-primary {
+        &:before {
+          background: url(#{$images-path}/checkmark.svg) no-repeat center $brand-primary;
+          background-size: 70%;
+          border-color: $brand-primary;
+        }
+
+        &:hover:before {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    &[disabled],
+    &.disabled,
+    fieldset[disabled] & {
+      + label {
+        &.mod-default:before,
+        &.mod-primary:before {
+          color: $input-color-disabled;
+          background-color: $input-bg-disabled;
+          border-color: $input-border;
+        }
+      }
+    }
   }
 
-  &__label {
+  label {
     font-weight: 300;
 
     &:before {
@@ -21,47 +52,68 @@
       font-family: 'Glyphicons Halflings';
     }
 
-    &.mod-default:before {
-      color: $brand-saturated;
-      width: 18px;
-      height: 18px;
-      line-height: 16px;
+    &:hover:before {
+      border-color: $input-border-hover;
+    }
 
-      @media (max-width: $screen-xs-max) {
+    &.mod-default {
+
+      &.mod-lg:before {
+        width: 18px;
+        height: 18px;
+        line-height: 16px;
+
+        @media (max-width: $screen-xs-max) {
+          width: 15px;
+          height: 15px;
+          line-height: 13px;
+        }
+      }
+
+      &:before {
+        color: $brand-saturated;
         width: 15px;
         height: 15px;
         line-height: 13px;
+
+        @media (max-width: $screen-xs-max) {
+          width: 12px;
+          height: 12px;
+          line-height: 11px;
+        }
       }
     }
 
-    &.mod-primary:before {
-      color: $white;
-      width: 24px;
-      height: 24px;
-      line-height: 16px;
+    &.mod-primary {
+      &.mod-lg:before {
+        width: 24px;
+        height: 24px;
+        line-height: 16px;
 
-      @media (max-width: $screen-xs-max) {
-        width: 15px;
-        height: 15px;
-        line-height: 13px;
+        @media (max-width: $screen-xs-max) {
+          width: 15px;
+          height: 15px;
+          line-height: 13px;
+        }
       }
-    }
-  }
 
-  &__input:checked + &__label {
-    &.mod-default:before {
-      content: '\e013';
-    }
+      &:before {
+        color: $white;
+        width: 18px;
+        height: 18px;
+        line-height: 10px;
 
-    &.mod-primary:before {
-      background: url(#{$images-path}/checkmark.svg) no-repeat center $brand-primary;
-      background-size: 70%;
-      border-color: $brand-primary;
+        @media (max-width: $screen-xs-max) {
+          width: 15px;
+          height: 15px;
+          line-height: 13px;
+        }
+      }
     }
   }
 }
 
-.checkbox__label {
+.checkbox.mod-custom label {
   &.mod-default:before {
     border-radius: 3px;
   }
@@ -75,7 +127,7 @@
   }
 }
 
-.radio__label:before {
+.radio label:before {
   border-radius: 50%;
 }
 

@@ -29,6 +29,12 @@
 
 .container-fluid {
   @include container-fixed;
+
+  max-width: $container-max-width;
+
+  &.mod-sm {
+    max-width: $container-sm-max-width;
+  }
 }
 
 

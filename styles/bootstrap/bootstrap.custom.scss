@@ -301,6 +301,11 @@ select.btn{
       color: $white;
     }
 
+    &:hover option {
+      background-color: $input-bg;
+      color: $input-color;
+    }
+
     &:focus {
       border-color: $brand-primary !important;
     }

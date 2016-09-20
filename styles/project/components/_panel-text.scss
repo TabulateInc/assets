@@ -1,0 +1,29 @@
+.panel-text {
+  height: $panel-text-height;
+  padding: 19px 16px;
+  border: 1px solid $border-color-base;
+  border-radius: $border-radius-lg;
+  color: $gray-new;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $gray-lightest-new;
+  }
+
+  &__info {
+    float: left;
+    font-size: $panel-text-font;
+  }
+
+  &__icon {
+    float: right;
+    width: 18px;
+    height: 18px;
+    background: url(#{$images-path}/checkmark.primary.svg) no-repeat center transparent;
+    background-size: 100%;
+  }
+
+  + .panel-text {
+    margin-top: $panel-text-between-panels;
+  }
+}

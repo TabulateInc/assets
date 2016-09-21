@@ -126,6 +126,12 @@ select::-ms-expand {
   }
 }
 
+.pull-right-xxs {
+  @media (max-width: $screen-xxs-max) {
+    float: right !important;
+  }
+}
+
 .pull-left-sm {
   @media (min-width: $screen-sm-min) {
     float: left;

@@ -93,3 +93,9 @@ state-picker .col-sm-4 {
     color: $state-danger-text;
   }
 }
+
+.input-caption {
+  font-size: $font-size-xs;
+  font-weight: 600;
+  padding: 2px $padding-base-horizontal;
+}

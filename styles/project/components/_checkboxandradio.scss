@@ -1,8 +1,8 @@
 .checkbox.mod-custom,
 .radio {
-  @media (max-width: $screen-xs-max) {
-    font-size: $font-size-xs;
-  }
+  // @media (max-width: $screen-xs-max) {
+  //   font-size: $font-size-xs;
+  // }
 
   input {
     display: none;
@@ -29,6 +29,8 @@
     &.disabled,
     fieldset[disabled] & {
       + label {
+        cursor: $cursor-disabled;
+
         &.mod-default:before,
         &.mod-primary:before {
           color: $input-color-disabled;
@@ -76,11 +78,11 @@
         height: 15px;
         line-height: 13px;
 
-        @media (max-width: $screen-xs-max) {
-          width: 12px;
-          height: 12px;
-          line-height: 11px;
-        }
+        // @media (max-width: $screen-xs-max) {
+        //   width: 12px;
+        //   height: 12px;
+        //   line-height: 11px;
+        // }
       }
     }
 
@@ -90,11 +92,11 @@
         height: 24px;
         line-height: 16px;
 
-        @media (max-width: $screen-xs-max) {
-          width: 15px;
-          height: 15px;
-          line-height: 13px;
-        }
+        // @media (max-width: $screen-xs-max) {
+        //   width: 15px;
+        //   height: 15px;
+        //   line-height: 13px;
+        // }
       }
 
       &:before {
@@ -103,11 +105,11 @@
         height: 18px;
         line-height: 10px;
 
-        @media (max-width: $screen-xs-max) {
-          width: 15px;
-          height: 15px;
-          line-height: 13px;
-        }
+        // @media (max-width: $screen-xs-max) {
+        //   width: 15px;
+        //   height: 15px;
+        //   line-height: 13px;
+        // }
       }
     }
   }
@@ -121,9 +123,9 @@
   &.mod-primary:before {
     border-radius: 8px;
 
-    @media (max-width: $screen-xs-max) {
-      border-radius: 5px;
-    }
+    // @media (max-width: $screen-xs-max) {
+    //   border-radius: 5px;
+    // }
   }
 }
 

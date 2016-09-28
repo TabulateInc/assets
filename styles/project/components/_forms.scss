@@ -4,3 +4,112 @@
   padding-left: $inputs-separator-distance;
   padding-right: $inputs-separator-distance;
 }
+
+$margin-bottom-input: 35px;
+$margin-bottom-input-xs: 25px;
+$padding-right-input: 20px;
+
+$inputs-group-caption-size: 21px;
+$inputs-group-subcaption-size: 14px;
+$inputs-group-input-font-size: 17px;
+$inputs-group-input-height: 45px;
+
+
+@mixin margin-bottom-input() {
+  margin-bottom: $margin-bottom-input;
+
+  @media (max-width: $screen-xs-max){
+    margin-bottom: $margin-bottom-input-xs;
+  }
+}
+
+.add-control {
+  padding-left: 0;
+  padding-right: $input-in-control-padding-right;
+  margin-bottom: $margin-normal;
+
+  button,
+  input,
+  div.form-control,
+  select {
+    height: $input-in-control-height;
+  }
+
+  @media (max-width: $screen-xs-max){
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// section blue title
+h5 {
+  font-size: $section-title-font-size;
+  color: $brand-primary;
+  text-transform: uppercase;
+  margin-top: $page-title-margin-top;
+
+  &:first-child {
+    margin-top: $margin-normal;
+  }
+}
+
+.inputs-group {
+  margin-top: $margin-bottom-input;
+
+  @media (max-width: $screen-xs-max){
+    margin-top: $margin-bottom-input-xs;
+  }
+
+  h5 {
+    @include margin-bottom-input();
+
+    font-size: $inputs-group-caption-size;
+    text-transform: capitalize;
+    color: inherit;
+    margin-top: 0;
+  }
+
+  .subcaption {
+    font-size: $inputs-group-subcaption-size;
+    padding-top: 2px;
+    color: $gray-middle-new;
+  }
+
+  hr {
+    @include margin-bottom-input();
+
+    margin-top: 0;
+    border-top: 1px solid $horizontal-separator-color;
+    height: 0;
+  }
+
+  .add-control {
+    @include margin-bottom-input();
+
+    padding-right: $padding-right-input;
+
+    button,
+    input,
+    div.form-control,
+    select {
+      height: $inputs-group-input-height;
+      font-size: $inputs-group-input-font-size;
+    }
+
+    @media (max-width: $screen-xs-max){
+      padding-right: 0;
+    }
+  }
+
+  .checkbox.mod-custom,
+  .radio {
+    margin-top: 10px;
+    padding-right: $padding-right-input;
+    font-size: $inputs-group-input-font-size;
+
+    label {
+      padding-left: 0;
+      font-weight: 400;
+    }
+  }
+}

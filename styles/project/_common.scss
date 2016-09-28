@@ -32,18 +32,6 @@ h3 {
   font-size: $page-title-font-size;
 }
 
-// section blue title
-h5 {
-  font-size: $section-title-font-size;
-  color: $brand-primary;
-  text-transform: uppercase;
-  margin-top: $page-title-margin-top;
-
-  &:first-child {
-    margin-top: $margin-normal;
-  }
-}
-
 label {
   font-weight:normal;
 }
@@ -331,24 +319,6 @@ select.padding-left-xs option,
 
 // Inputs
 // --------------------------
-.add-control {
-  padding-left: 0;
-  padding-right: $input-in-control-padding-right;
-  margin-bottom: $margin-normal;
-
-  button,
-  input,
-  div.form-control,
-  select {
-    height: $input-in-control-height;
-  }
-
-  @media (max-width: $screen-xs-max){
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
 .over-input {
   position: absolute;
   top: 35%;

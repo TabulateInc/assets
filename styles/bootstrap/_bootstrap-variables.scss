@@ -26,8 +26,10 @@ $lightgray-light:             #F5F7FA;
 
 // new custom
 $white:                       #fff;
+// $gray-base:                   #595959;
 $gray-new:                    #4c5557;
-$gray-dark-new:               #515151;
+$gray-darker-new:             #bebcbb;
+$gray-middle-new:             #98A9B1;
 $gray-lighter-new:            #d8dddf;
 $gray-light-new:              #e8ebed;
 $gray-lightest-new:           #f2f2f2;
@@ -53,7 +55,7 @@ $link-font-color-hover:$brand-saturated;
 //** Background color for `<body>`.
 // $body-bg:               #fff
 //** Global text color on `<body>`.
-// $text-color:            $gray-dark
+$text-color:               $gray-new;
 
 //** Global textual link color.
 // $link-color:            $brand-primary
@@ -207,18 +209,18 @@ $border-color-base:         $gray-lighter-new;
 //
 //##
 
-//** `<input>` background color
-$input-bg:                       $white;
-$input-bg-disabled:              rgba(241, 242, 243, 1);  // $lightgray-light;
-
-//** Text color for `<input>`s
-$input-color:                    $gray-dark-new;  // $gray
-$input-color-disabled:           #bbb;
-
 $input-text-size:                15px;
 
+//** `<input>` background color
+$input-bg:                       $white;
+$input-bg-disabled:              $gray-lightest-new;
+
+//** Text color for `<input>`s
+$input-color:                    $gray-new;
+$input-color-disabled:           $gray-darker-new;
+
 //** `<input>` border color
-$input-border:                   $border-color-base;  // rgba(235, 235, 235, 1);  // #d3d8db;  // #ccc
+$input-border:                   $border-color-base;
 $input-border-focus:             $brand-primary;
 $input-border-disabled:          $input-border;  // $lightgray-light;
 $input-border-hover:             darken($input-border, 20%);
@@ -234,7 +236,7 @@ $input-border-radius:            3px;  //$border-radius-base
 $input-border-width:             1px;
 
 //** Placeholder text color
-$input-color-placeholder:        #a7a8b2;  // #999
+$input-color-placeholder:        $gray-darker-new;
 
 //** Default `.form-control` height
 // $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2)

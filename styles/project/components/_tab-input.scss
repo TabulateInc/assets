@@ -1,0 +1,72 @@
+$tab-input-caption-size: 15px;
+$tab-input-message-size: 13px;
+$tab-input-distance: 2px;
+
+@mixin tab-input-colors($el, $color-hover, $color-focus, $color-disabled, $color-error) {
+  #{$el} {
+    @include transition(color ease-in-out .15s);
+  }
+
+  &:hover #{$el} {
+    color: $color-hover;
+  }
+
+  &.mod-focused #{$el} {
+    color: $color-focus;
+  }
+
+  &.mod-disabled #{$el} {
+    color: $color-disabled;
+  }
+
+  &.has-error #{$el} {
+    color: $color-error;
+  }
+}
+
+tab-input {
+  display: block;
+}
+
+.tab-input {
+  @include tab-input-colors('.tab-input__caption', darken($gray-middle-new, 20%), $input-border-focus, $input-color-disabled, $state-danger-text);
+
+  @include tab-input-colors('.tab-input__message', darken($gray-middle-new, 20%), $input-border-focus, $input-color-disabled, $state-danger-text);
+
+  &__caption {
+    font-size: $tab-input-caption-size;
+    padding-bottom: $tab-input-distance;
+    color: $gray-middle-new;
+  }
+
+  &__message {
+    font-size: $tab-input-message-size;
+    padding-top: $tab-input-distance;
+    color: $gray-middle-new;
+  }
+
+  // same look in any state
+  &__checkmark {
+    position: absolute;
+    background: url(#{$images-path}/checkmark.success.svg) no-repeat center transparent;
+    background-size: 100%;
+    height: 16px;
+    width: 16px;
+    right: 16px;
+    top: 14px;
+
+    &__wrapper {
+      position: relative;
+    }
+  }
+
+  &:hover {
+    .form-control {
+      border-color: $input-border-hover;
+    }
+  }
+
+  .form-control:focus {
+    border-color: $input-border-focus !important;
+  }
+}

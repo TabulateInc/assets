@@ -9,12 +9,8 @@
   .control-label,
   .radio,
   .checkbox,
-  .radio-inline,
-  .checkbox-inline,
   &.radio label,
-  &.checkbox label,
-  &.radio-inline label,
-  &.checkbox-inline label  {
+  &.checkbox label {
     color: $text-color;
   }
   // Set the border and box shadow on specific inputs to match

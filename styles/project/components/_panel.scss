@@ -1,6 +1,37 @@
 $font-size-panel: 15px;
 $gray-panel: #7b8994;
 
+
+.panel-new {
+  border: 1px solid $border-color-base;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+
+  &__header {
+    font-size: 27px;
+    line-height: 1em;
+    border-bottom: 1px solid $border-color-base;
+    padding: $distance-hor-md;
+
+    @media (max-width: $screen-xs-max) {
+      padding: 15px $panel-new-padding-hor-mobile;    // move
+      font-size: 23px;
+    }
+  }
+
+  &__content {
+    padding-left: $panel-new-padding-hor;
+    padding-right: $panel-new-padding-hor;
+    margin-top: $distance-ver-md;
+
+    @media (max-width: $screen-xs-max) {
+      padding-left: $panel-new-padding-hor-mobile;
+      padding-right: $panel-new-padding-hor-mobile;
+    }
+  }
+}
+
 .custom-panel {
   border: 1px solid $middle-gray-color;
   border-radius: $border-radius-large;
@@ -37,6 +68,7 @@ $gray-panel: #7b8994;
 
 .report-panel-group {
   @include clearfix();
+
   list-style: none;
   padding: 0;
   margin-top: $margin-md;

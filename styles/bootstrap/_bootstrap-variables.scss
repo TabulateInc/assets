@@ -137,7 +137,7 @@ $border-radius-large:       4px;
 $border-radius-small:       1px;
 
 $border-radius-lg:          10px;
-$border-color-base:         $gray-lighter-new;
+$border-color-base:         $gray-light-new;
 
 
 //** Global color for active items (e.g., navs or dropdowns).
@@ -897,6 +897,12 @@ $horizontal-separator-color:  $gray-light-new;
 $container-max-width: 1230px;
 $container-sm-max-width: 760px;
 
+$distance-hor-md: 20px;
+$distance-ver-md: 35px;
+
 $panel-text-between-panels:      10px;
 $panel-text-font:                16px;
 $panel-text-height:              60px;
+
+$panel-new-padding-hor: $distance-hor-md;
+$panel-new-padding-hor-mobile: 10px;

@@ -1,6 +1,6 @@
 $tab-input-caption-size: 15px;
 $tab-input-message-size: 13px;
-$tab-input-distance: 2px;
+$tab-input-distance: 5px;
 
 @mixin tab-input-colors($el, $color-hover, $color-focus, $color-disabled, $color-error) {
   #{$el} {

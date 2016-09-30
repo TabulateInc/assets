@@ -1,0 +1,91 @@
+@import '../project/variables';
+@import '../project/utils';
+@import '../bootstrap/variables';
+
+$panel-nav-link-width: 290px;
+$panel-nav-link-height: 35px;
+$panel-nav-width-calc: $panel-nav-link-width + 1px*2;
+$nav-to-content-panel: $distance-hor-md;
+
+.container-fluid.mod-settings {
+  max-width: 1350px;
+}
+
+.content-panel {
+  display: inline-block;
+  min-height: 452px;  // hardcoded height of the nav panel
+  float: left;
+
+  @media (min-width: $screen-md-min) {
+    width: calc(100% - #{$panel-nav-width-calc + $nav-to-content-panel});
+  }
+}
+
+.nav-panel {
+  margin-right: $nav-to-content-panel;
+  width: $panel-nav-link-width;
+  float: left;
+
+  @media (max-width: $screen-sm-max) {
+    display: none;
+  }
+}
+
+.nav-panel-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: $distance-ver-md;
+
+  &.actions-list {
+    background-color: $white;
+    padding: 10px;
+    margin-bottom: 0;
+  }
+
+  a {
+    display: block;
+    height: $panel-nav-link-height;
+    line-height: $panel-nav-link-height;
+    border-radius: $border-radius-base;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: $gray-new;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &.active,
+    &.active:hover {
+      background-color: $brand-primary;
+      color: $white;
+    }
+
+    &:hover {
+      background-color: $gray-lightest-new;
+    }
+  }
+
+  li:last-child a {
+    margin-bottom: 0;
+  }
+}
+
+.nav-button {
+  width: 100%;
+  margin-bottom: $distance-ver-md;
+  text-align: left;
+  height: 45px;  // $inputs-group-input-height;
+  border-color: $border-color-base !important;
+  font-size: 15px;
+
+  .caret {
+    margin-top: 8px;
+    float: right;
+    color: $gray-middle-new;
+  }
+
+  @media (min-width: $screen-md-min) {
+    display: none;
+  }
+}

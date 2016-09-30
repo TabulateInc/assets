@@ -78,6 +78,7 @@ $nav-to-content-panel: $distance-hor-md;
   height: 45px;  // $inputs-group-input-height;
   border-color: $border-color-base !important;
   font-size: 15px;
+  padding-left: $panel-new-padding-hor-mobile;
 
   .caret {
     margin-top: 8px;
@@ -88,4 +89,9 @@ $nav-to-content-panel: $distance-hor-md;
   @media (min-width: $screen-md-min) {
     display: none;
   }
+}
+
+.permission-icon {
+  font-size: 14px;
+  margin-left: $distance-hor-md;
 }

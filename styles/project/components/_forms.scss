@@ -55,10 +55,6 @@ h5 {
 .inputs-group {
   line-height: 1em;
 
-  @media (max-width: $screen-xs-max){
-    margin-top: $margin-bottom-input-xs;
-  }
-
   h5 {
     @include margin-bottom-input();
 

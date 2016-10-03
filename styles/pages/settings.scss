@@ -91,11 +91,13 @@ $nav-to-content-panel: $distance-hor-md;
   }
 }
 
+// Users
 .permission-icon {
   font-size: 14px;
   margin-left: $distance-hor-md;
 }
 
+// Financial
 .financial__btn {
     @media (max-width: $screen-xs-min) {
         width: 49%;
@@ -152,3 +154,32 @@ input.mod-delete-option {
   margin-top: 3px;
 }
 
+
+// Classifications
+.tags {
+  min-height: 38px !important;
+}
+
+.input {
+  height: 36px !important;
+  margin: 0 !important;
+}
+
+.tag-item {
+  line-height: 30px !important;
+
+  height: 32px !important;
+}
+
+.ng-invalid.ng-touched .host {
+  border-width: 1px !important;
+  border-color: $grapefruit-dark !important;
+}
+
+.padding-left-at-xs {
+  padding-left: 0;
+
+  @media (max-width: $screen-xs-max) {
+    padding-left: 15px;
+  }
+}

@@ -13,7 +13,7 @@ $nav-to-content-panel: $distance-hor-md;
 
 .content-panel {
   display: inline-block;
-  min-height: 452px;  // hardcoded height of the nav panel
+  min-height: 528px;  // hardcoded height of the nav panel
   float: left;
 
   @media (min-width: $screen-md-min) {
@@ -98,20 +98,6 @@ $nav-to-content-panel: $distance-hor-md;
 }
 
 // Financial
-.financial__btn {
-    @media (max-width: $screen-xs-min) {
-        width: 49%;
-    }
-
-    &--add {
-        margin-left: 5px;
-
-        @media (max-width: $screen-xs-min) {
-            margin-left: 2%;
-        }
-    }
-}
-
 .institutions-list{
     max-height:400px;
     overflow-y:auto;
@@ -181,5 +167,82 @@ input.mod-delete-option {
 
   @media (max-width: $screen-xs-max) {
     padding-left: 15px;
+  }
+}
+
+// Templates
+// Daily Summary
+.dst-categories {
+
+  p,
+  strong {
+    word-wrap: break-word;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  &__category {
+    line-height: $line-height-sm;
+  }
+
+  &__subcategory {
+    line-height: $line-height-sm; // make slightly smaller than category line height
+  }
+
+  // temp hack, anyway we're doing complete restyle of this page
+  // and this code will be removed
+  &__item,
+  &__item + .b-delete-icon {
+    display: flex !important;
+    min-height: 35px;
+    align-items: center;
+  }
+  &__item + .b-delete-icon {
+    justify-content: flex-end;
+  }
+
+  input,
+  select {
+    font-size: 100% !important; // set font size the same as in wrapper element
+  }
+
+  .add-control {
+    label {
+      margin-bottom: 0;
+    }
+
+    .checkbox {
+      position:relative;
+      top:0;
+      height:auto;
+      display: inline-block;
+      margin: 0;
+    }
+  }
+}
+
+settings-selector .glyphicon-option-horizontal {
+  vertical-align: middle;
+}
+
+// Menu
+.item-details-form {
+  .alert-danger {
+    position: relative;
+    top: 0;
+    margin-right: $input-in-control-padding-right !important;
+    margin-bottom: $margin-normal !important;
+
+    @media (max-width:$screen-xs-max){
+      margin-right: 0 !important;
+    }
+  }
+}
+
+.inventory-template {
+  .items-table__row {
+    min-height: 52px;
   }
 }

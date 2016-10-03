@@ -132,7 +132,7 @@ $icon-font-path: '/bower_components/bootstrap-sass/assets/fonts/bootstrap/';
 // $line-height-large:         1.33
 // $line-height-small:         1.5
 
-$border-radius-base:        2px;
+$border-radius-base:        3px;
 $border-radius-large:       4px;
 $border-radius-small:       1px;
 
@@ -227,7 +227,7 @@ $input-border-hover:             darken($input-border, 20%);
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
-$input-border-radius:            3px;  //$border-radius-base
+$input-border-radius:            $border-radius-base;
 //** Large `.form-control` border radius
 // $input-border-radius-large:      $border-radius-large
 //** Small `.form-control` border radius

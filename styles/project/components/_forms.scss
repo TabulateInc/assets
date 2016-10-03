@@ -59,6 +59,7 @@ h5 {
     @include margin-bottom-input();
 
     font-size: $inputs-group-caption-size;
+    font-weight: 300;
     text-transform: capitalize;
     color: inherit;
     margin-top: 0;

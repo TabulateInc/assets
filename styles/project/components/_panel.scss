@@ -43,6 +43,10 @@ $panel-header-line-height: $panel-header-height - $panel-header-padding*2;
       outline: none;
       margin-top: -1*(36px - $panel-header-line-height) / 2;
     }
+
+    .custom-selector {
+      font-size: 14px;
+    }
   }
 
   &__content {

@@ -386,6 +386,17 @@ select.padding-left-xs option,
   &:disabled {
     color: $white;
   }
+
+  &.mod-icon {
+    background-color: transparent !important;
+    border-color: transparent !important;
+
+    &:hover, &:focus, &:active, &.active {
+      span {
+        color: $color;
+      }
+    }
+  }
 }
 
 .savebtn {

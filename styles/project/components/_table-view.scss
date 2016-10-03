@@ -41,14 +41,32 @@ $table-view-mobile-default-marging: 4px;
     color: $brand-primary;
     border-top: 1px solid $table-border-color;
     border-bottom: 1px solid $table-border-color;
-    text-transform: uppercase;
+    flex: 0 0 auto;
+
+    .table-view.mod-in-panel & {
+      border-top: none;
+      height: auto;
+      line-height: 1em;
+      padding-bottom: 5px;
+    }
   }
 
   &__header-cell, &__row-cell {
     position: relative;
+    font-size: 15px;
     height: $table-view-row-height;
     line-height: $table-view-row-line-height;
     padding: 0;
+
+    &.mod-string, &.mod-number, &.mod-datetime, &.mod-buttons {
+      padding-left: 10px;
+      text-align: left;
+    }
+
+    &.mod-money {
+      padding-right: $table-view-cell-right-padding;
+      text-align: right;
+    }
   }
 
   &__header-resize-handle.mod-resizable {
@@ -68,9 +86,22 @@ $table-view-mobile-default-marging: 4px;
     flex-direction: column;;
     align-content: stretch;
     justify-content: flex-start;
-    &.mod-bordered {
-      border-right: solid 1px $table-border-color;
-      min-height: min-content;
+    border-right: solid 1px $table-border-color;
+    min-height: min-content;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    .table-view.mod-in-panel & {
+      border-right: none;
+
+      &:first-child {
+        .table-view__row-cell,
+        .table-view__header-cell {
+          padding-left: 20px;
+        }
+      }
     }
   }
 
@@ -208,21 +239,5 @@ $table-view-mobile-default-marging: 4px;
     padding-right: $table-view-cell-right-padding;
     font-weight: 700;
     text-align: left;
-  }
-
-  &__header-cell {
-    flex: 0 0 auto;
-  }
-
-  &__row-cell, &__header-cell {
-    &.mod-string, &.mod-number, &.mod-datetime, &.mod-buttons {
-      padding-left: 10px;
-      text-align: left;
-    }
-
-    &.mod-money {
-      padding-right: $table-view-cell-right-padding;
-      text-align: right;
-    }
   }
 }

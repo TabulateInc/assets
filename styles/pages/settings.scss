@@ -95,3 +95,60 @@ $nav-to-content-panel: $distance-hor-md;
   font-size: 14px;
   margin-left: $distance-hor-md;
 }
+
+.financial__btn {
+    @media (max-width: $screen-xs-min) {
+        width: 49%;
+    }
+
+    &--add {
+        margin-left: 5px;
+
+        @media (max-width: $screen-xs-min) {
+            margin-left: 2%;
+        }
+    }
+}
+
+.institutions-list{
+    max-height:400px;
+    overflow-y:auto;
+}
+
+.table-head {
+    border-bottom:2px solid $table-border-color;
+}
+
+.modal-iframe {
+    .modal-dialog {
+        min-width: 751px;
+        @media (max-width: $screen-xs-max) {
+          min-width: 100%;
+        }
+    }
+
+    .modal-body {
+        padding: 0;
+        min-height: 500px;
+    }
+
+    iframe {
+        max-width: 751px;
+        height: 538px;
+        width: 100%;
+        border: none;
+        padding: 0;
+        margin: 0;
+        min-height: 500px;
+    }
+}
+
+.wizardADAClose,
+.y12btn_secondary.y12btn_small input {
+    display: none !important;
+}
+
+input.mod-delete-option {
+  margin-top: 3px;
+}
+

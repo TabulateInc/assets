@@ -89,30 +89,17 @@ $animation-duration: .6s;
 
 .navbar-nav {
   // link wrapper
-  > li {
-    border-right: 1px solid $gray-border;
-    @media (max-width: $screen-xs-max) {
-      border-right: none;
-    }
 
-    &:last-child {
-      border-right: none;
-    }
+  > li {
     // links
     > a {
       @extend %nav-link;
-
-      line-height: $nav-link-height;
 
       &.mod-active {
         @extend %nav-link-active;
       }
 
-      &.mod-has-active {
-        @media (min-width: $screen-sm-min) {
-          @include nav-link-active();
-        }
-      }
+      line-height: $nav-link-height;
 
       @media (min-width: $screen-sm-min) {
         height: $nav-link-height + $nav-link-padding-vertical*2;
@@ -178,31 +165,20 @@ $animation-duration: .6s;
     > li > a {
       @extend %nav-link;
 
-      line-height: $nav-link-height;
+      &.mod-active {
+        @extend %nav-link-active;
+      }
 
+      line-height: $nav-link-height;
       padding-top: $subnav-link-padding-vertical;
       padding-bottom: $subnav-link-padding-vertical;
-
-      &.mod-active {
-        @media (max-width: $screen-xs-max) {
-          @include nav-link-active();
-        }
-      }
-
-      @media (min-width: $screen-sm-min) {
-        transition-property: none;
-      }
-
-      @media (max-width: $screen-xs-max) {
-        padding-left: $subnav-link-padding-left-xs;
-      }
-
+      transition-property: none;
     }
   }
   // animation
   .dropdown:hover .dropdown-menu,
   .dropdown.open .dropdown-menu {
-    max-height: 300px;
+    max-height: 320px;
 
     opacity: 1;
   }

@@ -1,4 +1,3 @@
-$tab-input-caption-size: 15px;
 $tab-input-message-size: 13px;
 $tab-input-distance: 5px;
 
@@ -29,12 +28,11 @@ tab-input {
 }
 
 .tab-input {
-  @include tab-input-colors('.tab-input__caption', darken($gray-middle-new, 20%), $input-border-focus, $input-color-disabled, $state-danger-text);
+  @include tab-input-colors('.tab-input__caption', $gray-darkest-new, $input-border-focus, $input-color-disabled, $state-danger-text);
 
-  @include tab-input-colors('.tab-input__message', darken($gray-middle-new, 20%), $input-border-focus, $input-color-disabled, $state-danger-text);
+  @include tab-input-colors('.tab-input__message', $gray-darkest-new, $input-border-focus, $input-color-disabled, $state-danger-text);
 
   &__caption {
-    font-size: $tab-input-caption-size;
     padding-bottom: $tab-input-distance;
     color: $gray-middle-new;
   }

@@ -3,7 +3,8 @@
 @import '../bootstrap/variables';
 
 $panel-nav-link-width: 290px;
-$panel-nav-link-height: 35px;
+$panel-nav-link-height: 30px;
+$panel-nav-link-font: $font-size-base;
 $panel-nav-width-calc: $panel-nav-link-width + 1px*2;
 $nav-to-content-panel: $distance-hor-md;
 
@@ -13,7 +14,7 @@ $nav-to-content-panel: $distance-hor-md;
 
 .content-panel {
   display: inline-block;
-  min-height: 528px;  // hardcoded height of the nav panel
+  min-height: 470px;  // hardcoded height of the nav panel
   float: left;
 
   @media (min-width: $screen-md-min) {
@@ -35,6 +36,7 @@ $nav-to-content-panel: $distance-hor-md;
   list-style: none;
   padding: 0;
   margin-bottom: $distance-ver-md;
+  margin-top: -($panel-nav-link-height - $panel-nav-link-font)/2;
 
   &.actions-list {
     background-color: $white;
@@ -49,7 +51,7 @@ $nav-to-content-panel: $distance-hor-md;
     border-radius: $border-radius-base;
     padding-left: 20px;
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: $panel-nav-link-font;
     color: $gray-new;
     overflow: hidden;
     white-space: nowrap;
@@ -77,7 +79,6 @@ $nav-to-content-panel: $distance-hor-md;
   text-align: left;
   height: 45px;  // $inputs-group-input-height;
   border-color: $border-color-base !important;
-  font-size: 15px;
   padding-left: $panel-new-padding-hor-mobile;
 
   .caret {
@@ -93,8 +94,11 @@ $nav-to-content-panel: $distance-hor-md;
 
 // Users
 .permission-icon {
-  font-size: 14px;
-  margin-left: $distance-hor-md;
+  font-size: 10px;
+  margin-left: 5px;
+  margin-top: -5px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 // Financial
@@ -244,5 +248,38 @@ settings-selector .glyphicon-option-horizontal {
 .inventory-template {
   .items-table__row {
     min-height: 52px;
+
+    .form-control,
+    .savebtn {
+      height: 46px;
+    }
+  }
+}
+
+.margin-bottom-md {
+  margin-bottom: $distance-ver-md;
+}
+
+.btn-expand {
+  $btn-width: 110px;
+
+  color: $gray-middle-new;
+  width: $btn-width;
+  padding: 7px 10px;
+  cursor: pointer;
+  float: left;
+  position: absolute;
+  top: -17px;
+  left: calc(50% - #{$btn-width}/2);
+
+  &__wrapper {
+    position: relative;
+    z-index: 1000;
+    height: 1px;
+  }
+
+  &__line {
+    border-bottom: 1px solid $table-border-color;
+    width: calc(50% - #{$btn-width}/2);
   }
 }

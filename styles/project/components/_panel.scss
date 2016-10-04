@@ -21,7 +21,7 @@ $panel-header-line-height: $panel-header-height - $panel-header-padding*2;
 
     @media (max-width: $screen-xs-max) {
       padding: 15px $panel-new-padding-hor-mobile;    // move
-      font-size: 23px;
+      font-size: 16px;
     }
 
     button {
@@ -30,9 +30,10 @@ $panel-header-line-height: $panel-header-height - $panel-header-padding*2;
 
     .btn {
       $btn-padding-ver: 5px;
-      $btn-height: floor($btn-padding-ver*2 + $line-height-base*$font-size-md + 2px);
+      $btn-font-size: 14px;
+      $btn-height: floor($btn-padding-ver*2 + $line-height-base*$btn-font-size + 2px);
 
-      font-size: 16px;
+      font-size: $btn-font-size;
       padding: $btn-padding-ver 23px;
       margin-top: -1*($btn-height - $panel-header-line-height) / 2;
     }
@@ -42,6 +43,26 @@ $panel-header-line-height: $panel-header-height - $panel-header-padding*2;
       font-size: 36px;
       outline: none;
       margin-top: -1*(36px - $panel-header-line-height) / 2;
+      opacity: 1;
+
+      color: $gray-middle-new;
+
+      &:hover {
+        color: $gray-darkest-new;
+      }
+    }
+
+    .b-delete-icon {
+      font-size: 18px;
+      margin-right: 16px;
+
+      a {
+        color: $gray-middle-new;
+
+        &:hover {
+          color: $gray-darkest-new;
+        }
+      }
     }
 
     .custom-selector {

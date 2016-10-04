@@ -53,7 +53,6 @@ $table-view-mobile-default-marging: 4px;
 
   &__header-cell, &__row-cell {
     position: relative;
-    font-size: 15px;
     height: $table-view-row-height;
     line-height: $table-view-row-line-height;
     padding: 0;
@@ -112,12 +111,14 @@ $table-view-mobile-default-marging: 4px;
     flex: 1 1 auto;
     align-content: stretch;
     justify-content: flex-start;
-    font-weight: 300;
   }
 
   &__mobile-row-line:first-child {
       font-weight: 700;
-      text-transform: uppercase;
+  }
+
+  &__mobile-row-line:nth-child(2) {
+      font-size: 85%;
   }
 
   &__mobile-row-cell:last-child {

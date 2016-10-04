@@ -11,13 +11,12 @@
   }
 
   &__wrapper {
-    font-size: 15px;
     color: $gray-middle-new;
     position: relative;
 
     &:hover,
     &:focus {
-      color: darken($gray-middle-new, 20%);
+      color: $gray-darkest-new;
     }
   }
 }

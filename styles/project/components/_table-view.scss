@@ -115,10 +115,7 @@ $table-view-mobile-default-marging: 4px;
 
   &__mobile-row-line:first-child {
       font-weight: 700;
-  }
-
-  &__mobile-row-line:nth-child(2) {
-      font-size: 85%;
+      margin-bottom: 0;
   }
 
   &__mobile-row-cell:last-child {

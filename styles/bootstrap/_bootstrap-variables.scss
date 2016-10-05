@@ -221,7 +221,7 @@ $input-color:                    $gray-new;
 $input-color-disabled:           $gray-darker-new;
 
 //** `<input>` border color
-$input-border:                   $border-color-base;
+$input-border:                   $gray-lighter-new;
 $input-border-focus:             $brand-primary;
 $input-border-disabled:          $input-border;  // $lightgray-light;
 $input-border-hover:             darken($input-border, 20%);
@@ -900,6 +900,7 @@ $container-sm-max-width: 760px;
 
 $distance-hor-md: 20px;
 $distance-ver-md: 35px;
+$distance-ver-sm: 20px;
 
 $panel-text-between-panels:      10px;
 $panel-text-font:                16px;

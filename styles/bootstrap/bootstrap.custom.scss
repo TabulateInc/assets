@@ -296,14 +296,10 @@ select.btn{
     border-color: $input-border !important;
     color: $input-color;
 
-    &:hover {
-      background-color: $input-border;
-      color: $white;
-    }
-
+    &:hover,
     &:hover option {
       background-color: $input-bg;
-      color: $input-color;
+      border-color: $input-border-hover !important;
     }
 
     &:focus {

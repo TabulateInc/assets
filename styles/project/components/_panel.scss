@@ -10,6 +10,10 @@ $gray-panel: #7b8994;
   border-radius: $border-radius-base;
 
   &__header {
+    $btn-padding-ver: 5px;
+    $btn-font-size: 14px;
+    $btn-height: floor($btn-padding-ver*2 + $line-height-base*$btn-font-size + 2px);
+
     font-size: 27px;
     font-weight: 300;
     line-height: $panel-header-line-height;
@@ -26,13 +30,44 @@ $gray-panel: #7b8994;
     }
 
     .btn {
-      $btn-padding-ver: 5px;
-      $btn-font-size: 14px;
-      $btn-height: floor($btn-padding-ver*2 + $line-height-base*$btn-font-size + 2px);
-
       font-size: $btn-font-size;
       padding: $btn-padding-ver 23px;
       margin-top: -1*($btn-height - $panel-header-line-height) / 2;
+
+      @media (max-width: $screen-xs-max) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+    .custom-selector {
+      &__option {
+        font-weight: 400;
+        color: $gray-new;
+
+        &:hover {
+          color: $white;
+        }
+      }
+
+      &__btn {
+        height: $btn-height;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        // border: none;
+
+        // &:hover,
+        // &:focus {
+        //   background-color: transparent;
+        //   color: $brand-primary;
+        //   border: none;
+        // }
+
+        // &:active {
+        //   box-shadow: none;
+        // }
+      }
     }
 
     .close {
@@ -50,15 +85,13 @@ $gray-panel: #7b8994;
     }
 
     .b-delete-icon {
+      cursor: pointer;
       font-size: 18px;
       margin-right: 16px;
+      color: $gray-middle-new;
 
-      a {
-        color: $gray-middle-new;
-
-        &:hover {
-          color: $gray-darkest-new;
-        }
+      &:hover {
+        color: $gray-darkest-new;
       }
     }
 

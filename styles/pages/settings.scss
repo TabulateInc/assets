@@ -30,6 +30,10 @@ $nav-to-content-panel: $distance-hor-md;
     width: 100%;
     border: none;
   }
+
+  .checkbox label {
+    font-weight: 400;
+  }
 }
 
 .panel-new__content.mod-yodlee {
@@ -295,5 +299,11 @@ settings-selector .glyphicon-option-horizontal {
   &__line {
     border-bottom: 1px solid $table-border-color;
     width: calc(50% - #{$btn-width}/2);
+  }
+}
+
+.hidden-xxs {
+  @media (max-width: $screen-xxs-max) {
+    display: none;
   }
 }

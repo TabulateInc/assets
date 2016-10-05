@@ -16,10 +16,24 @@ $nav-to-content-panel: $distance-hor-md;
   display: inline-block;
   min-height: 470px;  // hardcoded height of the nav panel
   float: left;
+  position: relative;
 
   @media (min-width: $screen-md-min) {
     width: calc(100% - #{$panel-nav-width-calc + $nav-to-content-panel});
   }
+
+  iframe {
+    position: absolute;
+    left: 0;
+    top: $panel-header-height + 1px;  // + border
+    height: calc(100% - #{$panel-header-height} - 2px);  // -border
+    width: 100%;
+    border: none;
+  }
+}
+
+.panel-new__content.mod-yodlee {
+  min-height: 488px;
 }
 
 .nav-panel {

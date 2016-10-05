@@ -29,6 +29,8 @@ $nav-to-content-panel: $distance-hor-md;
     height: calc(100% - #{$panel-header-height} - 2px);  // -border
     width: 100%;
     border: none;
+    padding: 0;
+    margin: 0;
   }
 
   .checkbox label {
@@ -120,42 +122,13 @@ $nav-to-content-panel: $distance-hor-md;
 }
 
 // Financial
-.institutions-list{
-    max-height:400px;
-    overflow-y:auto;
-}
-
 .table-head {
-    border-bottom:2px solid $table-border-color;
+  padding-left: 20px;
+  border-bottom: 1px solid $table-border-color;
 }
 
-.modal-iframe {
-    .modal-dialog {
-        min-width: 751px;
-        @media (max-width: $screen-xs-max) {
-          min-width: 100%;
-        }
-    }
-
-    .modal-body {
-        padding: 0;
-        min-height: 500px;
-    }
-
-    iframe {
-        max-width: 751px;
-        height: 538px;
-        width: 100%;
-        border: none;
-        padding: 0;
-        margin: 0;
-        min-height: 500px;
-    }
-}
-
-.wizardADAClose,
-.y12btn_secondary.y12btn_small input {
-    display: none !important;
+.items-table {
+  margin-bottom: $distance-ver-md;
 }
 
 input.mod-delete-option {

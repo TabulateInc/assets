@@ -56,10 +56,6 @@
       padding: 2px;
     }
 
-    &.mod-borderless {
-      border: 0 !important;
-    }
-
     .items-table.mod-in-panel & {
       padding-left: 20px;
 
@@ -87,13 +83,6 @@
 
     input, select {
       padding-left: $row-column-padding - $padding-sm - 1px;
-    }
-  }
-
-  &__btn {
-    &.mod-no-spaces {
-      margin-top: -$padding-small-vertical;
-      margin-bottom: -$padding-small-vertical;
     }
   }
 

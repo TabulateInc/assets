@@ -48,6 +48,26 @@ $link-font-color-hover:$brand-saturated;
 // $brand-warning:         #f0ad4e
 // $brand-danger:          #d9534f
 
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+
+// $state-success-text:             #3c763d
+// $state-success-bg:               #dff0d8
+// $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%)
+
+// $state-info-text:                #31708f
+// $state-info-bg:                  #d9edf7
+// $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%)
+
+// $state-warning-text:             #8a6d3b
+// $state-warning-bg:               #fcf8e3
+// $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%)
+
+$state-danger-text:              #f25353;
+$state-danger-bg:                #f2dede;
+$state-danger-border:            #f25353;  // darken(adjust-hue($state-danger-bg, -10), 5%)
+
 
 //== Scaffolding
 //
@@ -222,9 +242,10 @@ $input-color-disabled:           $gray-darker-new;
 
 //** `<input>` border color
 $input-border:                   $gray-lighter-new;
-$input-border-focus:             $brand-primary;
 $input-border-disabled:          $input-border;  // $lightgray-light;
-$input-border-hover:             darken($input-border, 20%);
+$input-border-focus:             $brand-primary;
+$input-border-hover:             $input-border-focus;  //darken($input-border, 20%);
+$input-border-error:             $state-danger-text;
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -519,26 +540,6 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 
 // $pager-disabled-color:                 $pagination-disabled-color
 
-
-//== Form states and alerts
-//
-//## Define colors for form feedback states and, by default, alerts.
-
-// $state-success-text:             #3c763d
-// $state-success-bg:               #dff0d8
-// $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%)
-
-// $state-info-text:                #31708f
-// $state-info-bg:                  #d9edf7
-// $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%)
-
-// $state-warning-text:             #8a6d3b
-// $state-warning-bg:               #fcf8e3
-// $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%)
-
-$state-danger-text:              #f25353;
-$state-danger-bg:                #f2dede;
-$state-danger-border:            #f25353;  // darken(adjust-hue($state-danger-bg, -10), 5%)
 
 
 //== Tooltips

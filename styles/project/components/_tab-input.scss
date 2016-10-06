@@ -28,9 +28,9 @@ tab-input {
 }
 
 .tab-input {
-  @include tab-input-colors('.tab-input__caption', $gray-darkest-new, $input-border-focus, $input-color-disabled, $state-danger-text);
+  @include tab-input-colors('.tab-input__caption', $input-border-focus, $input-border-focus, $input-color-disabled, $input-border-error);
 
-  @include tab-input-colors('.tab-input__message', $gray-darkest-new, $input-border-focus, $input-color-disabled, $state-danger-text);
+  @include tab-input-colors('.tab-input__message', $input-border-focus, $input-border-focus, $input-color-disabled, $input-border-error);
 
   &__caption {
     padding-bottom: $tab-input-distance;

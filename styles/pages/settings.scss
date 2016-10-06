@@ -14,7 +14,7 @@ $nav-to-content-panel: $distance-hor-md;
 
 .content-panel {
   display: inline-block;
-  min-height: 470px;  // hardcoded height of the nav panel
+  min-height: 505px;  // hardcoded height of the nav panel
   float: left;
   position: relative;
 
@@ -133,28 +133,6 @@ $nav-to-content-panel: $distance-hor-md;
 
 input.mod-delete-option {
   margin-top: 3px;
-}
-
-
-// Classifications
-.tags {
-  min-height: 38px !important;
-}
-
-.input {
-  height: 36px !important;
-  margin: 0 !important;
-}
-
-.tag-item {
-  line-height: 30px !important;
-
-  height: 32px !important;
-}
-
-.ng-invalid.ng-touched .host {
-  border-width: 1px !important;
-  border-color: $grapefruit-dark !important;
 }
 
 .padding-left-at-xs {
@@ -278,5 +256,16 @@ settings-selector .glyphicon-option-horizontal {
 .hidden-xxs {
   @media (max-width: $screen-xxs-max) {
     display: none;
+  }
+}
+
+.content-filter tags-input.mod-xs {
+  padding-left: 20px;
+  padding-right: 40px;
+
+  @media (max-width: $screen-xs-max) {
+    margin-top: 0;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }

@@ -29,7 +29,8 @@ $gray-panel: #7b8994;
       float: right;
     }
 
-    .btn {
+    > .btn,
+    .custom-selector__btn {
       font-size: $btn-font-size;
       padding: $btn-padding-ver 23px;
       margin-top: -1*($btn-height - $panel-header-line-height) / 2;
@@ -95,7 +96,8 @@ $gray-panel: #7b8994;
       }
     }
 
-    .custom-selector {
+    .custom-selector,
+    &-text {
       font-size: 14px;
     }
   }

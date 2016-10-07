@@ -1,16 +1,20 @@
 @import '../utils';
 @import '../variables';
 
-$font-size-sm: 12px;
+$nav-header-content-height: 45px;
+$nav-header-title-size: 27px;
+$nav-header-title-size-sm: 19px;
+$nav-header-padding: 20px 40px;
+
 $nav-link-height: 19px;
-$nav-link-padding-vertical: ($main-navigation-height - $nav-link-height - 1) / 2;  // -1 for border
 $nav-link-padding-horizontal: 25px;
 $nav-link-padding-horizontal-sm: 20px;
+$nav-link-padding-vertical: 6px;
 $nav-link-glyphicon-size: 14px;
-$subnav-link-padding-vertical: 6px; // aside
-$subnav-link-padding-left-xs: 50px; // aside
-$subnav-link-padding-xs: 10px;
+
 $animation-duration: .6s;
+$dropdown-triangle-size: 20px;
+
 
 @function make-click-color($color) {
   @return transparentize(darken($color, 10%), .5);
@@ -25,44 +29,57 @@ $animation-duration: .6s;
   @include nav-link-active();
 }
 
-%nav-wrapper {
-  font-size: $font-size-sm;
-  font-weight: 400;
-
-  text-transform: uppercase;
-
-  background-color: $white;
-}
-
-%nav-link {
-  // transition: background $animation-duration, color $animation-duration, opacity $animation-duration;
-
-  color: $gray-text;
+@mixin nav-link {
+  display: block;
+  position: relative;
+  padding: $nav-link-padding-vertical $nav-link-padding-horizontal;
+  line-height: $nav-link-height;
+  color: $gray-new;
   background-color: transparent;
 
   &:hover {
     @media (max-width: $screen-xs-max) {
-      background-color: $gray-lighter;
+      background-color: transparent;
+      color: $gray-new;
+
+      &.mod-active {
+        &,
+        .glyphicon {
+          @include nav-link-active();
+        }
+      }
     }
 
     @media (min-width: $screen-sm-min) {
-      @include nav-link-active();
+      &,
+      .glyphicon {
+        @include nav-link-active();
+      }
     }
   }
+
   &:focus {
     @extend %nav-link-active;
   }
+
+  &.mod-active {
+    &,
+    .glyphicon {
+      @extend %nav-link-active;
+    }
+  }
+
   // center glyphicon between link and left border
   .glyphicon {
     font-size: $nav-link-glyphicon-size;
-
     width: $nav-link-padding-horizontal + $nav-link-glyphicon-size/2;
     height: $nav-link-height;
     margin-left: -$nav-link-glyphicon-size/2;
-
+    color: $gray-middle-new;
     text-align: left;
     vertical-align: middle;
   }
+
   // click animation
   &.mod-click {
     color: make-click-color($white);
@@ -73,220 +90,196 @@ $animation-duration: .6s;
   }
 }
 
+%nav-link {
+  @include nav-link();
+}
+
 .navbar-header {
-  @extend %nav-wrapper;
-
-  float: none;
-
+  background-color: $white;
   border-bottom: 1px solid $gray-border;
+
+  @media (min-width: $screen-sm-min) {
+    padding: $nav-header-padding;
+  }
+
   @media (max-width: $screen-xs-max) {
-    margin-bottom: 0;
-
-    border-bottom: none;
     background-color: transparentize($white, .25);
+    border-bottom: none;
   }
 }
 
-.navbar-nav {
-  // link wrapper
+.navbar-title {
+  font-weight: 300;
+  font-size: $nav-header-title-size;
+  height: $nav-header-content-height;
+  line-height: $nav-header-content-height;
+  float: left;
+  cursor: pointer;
 
-  > li {
-    // links
-    > a {
-      @extend %nav-link;
+  .nav-icon {
+    font-size: 16px;
+    top: -2px;
+  }
 
-      &.mod-active {
-        @extend %nav-link-active;
-      }
+  @media (max-width: $screen-sm-min) {
+    $toggle-button-width: 46px;
 
-      line-height: $nav-link-height;
-
-      @media (min-width: $screen-sm-min) {
-        height: $nav-link-height + $nav-link-padding-vertical*2;
-        padding: $nav-link-padding-vertical $nav-link-padding-horizontal;
-      }
-      @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-        padding-right: $nav-link-padding-horizontal-sm;
-        // not enough space for stores selector
-        padding-left: $nav-link-padding-horizontal-sm;
-      }
-      @media (max-width: $screen-xs-max) {
-        padding: $subnav-link-padding-vertical $nav-link-padding-horizontal;
-      }
-    }
-
-    &.open > a {
-      &:hover {
-        @media (min-width: $screen-sm-min) {
-          @include nav-link-active();
-        }
-      }
-
-      &,
-      &:focus {
-        @extend %nav-link-active;
-        @media (max-width: $screen-xs-max) {
-          color: $gray-text;
-          background-color: transparent;
-        }
-      }
-    }
+    font-size: $nav-header-title-size-sm;
+    line-height: 1em;
+    margin: 0;
+    padding-right: $toggle-button-width;
+    height: $main-navigation-height-mobile;
+    line-height: $main-navigation-height-mobile;
+    text-align: center;
+    float: none;
   }
 }
 
-// subnav
+// dropdown menu and nav actually
 .navbar {
-  // wrapper style and animation
-  .dropdown-menu {
-    @extend %nav-wrapper;
 
+  .dropdown-wrapper {
+    @media (min-width: $screen-sm-min) {
+      margin-left: 20px;
+    }
+  }
+
+  .dropdown-menu {
+    background-color: $white;
     display: block;
     overflow: hidden;
     margin: 0;
 
     @media (min-width: $screen-sm-min) {
+      min-width: 300px;
       max-height: 0;
       padding: 0;
       opacity: 0;
-      // transition: max-height $animation-duration, padding $animation-duration, opacity $animation-duration;
+      box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+      margin-top: $dropdown-triangle-size/3 !important;
     }
 
     @media (max-width: $screen-xs-max) {
       max-height: none !important;
-      padding-top: $subnav-link-padding-xs;
-      padding-bottom: $subnav-link-padding-xs;
+      padding-top: 0;
+      padding-bottom: 0;
       opacity: 1;
+      box-shadow: none;
 
       position: static;
       float: none;
-      box-shadow: none;
     }
-    // links
-    > li > a {
+
+    a {
       @extend %nav-link;
-
-      &.mod-active {
-        @extend %nav-link-active;
-      }
-
-      line-height: $nav-link-height;
-      padding-top: $subnav-link-padding-vertical;
-      padding-bottom: $subnav-link-padding-vertical;
-      transition-property: none;
     }
   }
+
   // animation
   .dropdown:hover .dropdown-menu,
   .dropdown.open .dropdown-menu {
-    max-height: 320px;
-
+    max-height: 340px;
     opacity: 1;
   }
-  @media (max-width: $screen-xs-max) {
-    border: none;
-    // no carets on mobile
-    .caret {
-      display: none;
-    }
-  }
 }
 
-.no-border {
-  border: none !important;
-}
+// triangle in desktop dropdown
+.dropdown-triangle {
+  display: none;
+  z-index: 1001;
+  bottom: -$dropdown-triangle-size/3;
+  left: 20px;
+  position: absolute;
 
-// store button
-select.btn-shaded {
-  $height: $nav-link-height*2;
+  width: $dropdown-triangle-size;
+  height: $dropdown-triangle-size;
+  overflow: hidden;
+  box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.5);
 
-  @extend %nav-link;
-
-  height: $height;
-
-  border-color: $gray-border;
-  background-color: transparent;
-  background-image: none !important;
-  @media (min-width: $screen-sm-min) {
-    max-width: 110px;  // otherwise store will go to the second row
-    margin-top: ($main-navigation-height - $height - 1) / 2;
-    margin-bottom: ($main-navigation-height - $height - 1) / 2;
-  }
-  @media (max-width: $screen-xs-max) {
-    margin-top: ($main-navigation-height-mobile - $height - 1) / 2;
-    margin-bottom: ($main-navigation-height-mobile - $height - 1) / 2;
-    margin-left: $subnav-link-padding-left-xs;
-  }
-  // caret for select that can change color and does not break animation
-  + .caret {
+  &:after {
+    content: "";
     position: absolute;
-    top: $main-navigation-height / 2;
-    right: 5px;
-
-    color: $gray-text;
+    width: $dropdown-triangle-size/2;
+    height: $dropdown-triangle-size/2;
+    background: $white;
+    transform: rotate(45deg); /* Prefixes... */
+    top: $dropdown-triangle-size*3/4;
+    left: $dropdown-triangle-size/4;
+    box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
   }
 
-  &:focus {
-    + .caret {
-      color: $white;
+  .dropdown.open &,
+  .dropdown:hover & {
+    display: block;
+  }
+}
+
+.navbar-right {
+  @media (min-width: $screen-sm-min) {
+    float: right;
+  }
+
+  a,
+  a:hover {
+    @media (max-width: $screen-xs-max) {
+      @include nav-link();
     }
   }
 
-  &:hover {
+
+  tab-input {
     @media (min-width: $screen-sm-min) {
-      + .caret {
-        color: $white;
+      $tab-input-height: 34px;
+
+      min-width: 210px;
+      max-width: 310px;  // otherwise store will go to the second row
+      margin-top: ($nav-header-content-height - $tab-input-height) / 2;
+      margin-bottom: ($nav-header-content-height - $tab-input-height) / 2;
+      .tab-input__caption {
+        display: none;
       }
     }
+
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: $nav-link-padding-vertical;
+      padding-left: $nav-link-padding-horizontal - $nav-link-glyphicon-size/2;
+      padding-right: $nav-link-padding-horizontal;
+    }
   }
 
-  option {
-    color: $black;
-    background: $white;
+  .glyphicon {
+    @media (min-width: $screen-sm-min) {
+      color: $gray-middle-new;
+      font-size: 23px;
+      line-height: $nav-header-content-height;
+      margin-left: 20px;
+    }
+  }
+
+  &__title {
+    @media (min-width: $screen-sm-min) {
+      line-height: $nav-header-content-height;
+      color: $gray-middle-new;
+      max-width: 310px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      line-height: $nav-link-padding-vertical*2 + $nav-link-height;
+      padding-left: $nav-link-padding-horizontal*2 + 2px;
+    }
   }
 }
 
 // mobile specific styles
 @media (max-width: $screen-xs-max) {
-
-  .navbar-right {
-
-    .dropdown-menu > li > a {
-
-      &,
-      &:hover {
-        padding-left: $nav-link-padding-horizontal;  // make it look like not from dropdown
-      }
-    }
-  }
-
-  /*
-    visible on xs only
-  */
-  .navbar-title {
-    $font-size: 19px;
-    $padding-vertical: ($main-navigation-height-mobile - $font-size) / 2;
-    $toggle-button-size: 46px;
-
-    font-size: $font-size;
-    line-height: .9;
-
-    margin: 0;
-    padding: $padding-vertical $toggle-button-size $padding-vertical 0;
-
-    text-align: center;
-    text-transform: capitalize;
-  }
-
   .navbar-toggle {
     $icon-height: 14px;
     $button-padding: ($main-navigation-height-mobile - $icon-height) / 2;
     $button-size: $button-padding*2 + $icon-height;
 
     float: left;
-
     margin: 0;
-    padding: $button-padding;  // testing
-
+    padding: $button-padding;
     border: none;
 
     .icon-bar {
@@ -294,7 +287,7 @@ select.btn-shaded {
     }
     // click animation
     &[animate-click]::after {
-      $size: $button-size;  // testing
+      $size: $button-size;
 
       top: 50%;
       left: 50%;
@@ -310,6 +303,7 @@ select.btn-shaded {
   }
 }
 
+// mobile aside styles
 .aside.mod-navbar {
   background-color: $white;
 
@@ -317,6 +311,7 @@ select.btn-shaded {
     float: left;
     padding: 10px 14px;
     margin-left: 5px;
+    outline: none !important;
   }
 
   .aside-dialog {
@@ -326,8 +321,4 @@ select.btn-shaded {
       padding: 0;
     }
   }
-}
-
-.nav-company-name {
-  max-width: 200px;
 }

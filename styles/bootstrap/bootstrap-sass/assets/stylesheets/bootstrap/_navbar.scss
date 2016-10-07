@@ -274,14 +274,6 @@
   .navbar-left {
     float: left !important;
   }
-  .navbar-right {
-    float: right !important;
-  margin-right: -$navbar-padding-horizontal;
-
-    ~ .navbar-right {
-      margin-right: 0;
-    }
-  }
 }
 
 

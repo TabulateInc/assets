@@ -14,7 +14,7 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-// $gray-base:              #000
+// $gray-base:              #000                       // #595959;
 // $gray-darker:            lighten($gray-base, 13.5%) // #222
 // $gray-dark:              lighten($gray-base, 20%)   // #333
 // $gray:                   lighten($gray-base, 33.5%) // #555
@@ -26,7 +26,6 @@ $lightgray-light:             #F5F7FA;
 
 // new custom
 $white:                       #fff;
-// $gray-base:                   #595959;
 $gray-new:                    #4c5557;
 $gray-darker-new:             #bebcbb;
 $gray-middle-new:             #98A9B1;
@@ -35,14 +34,9 @@ $gray-lighter-new:            #d8dddf;
 $gray-light-new:              #e8ebed;
 $gray-lightest-new:           #f2f2f2;
 
-// $brand-primary:         darken(#428bca, 6.5%)
-$brand-primary:          #57a6db;
-$brand-saturated:         #5C89B7;
-$button-primary:       $brand-primary;
-$button-primary-hover:  $brand-saturated;
-$pill-background-color : $brand-primary;
-$link-font-color : $brand-primary;
-$link-font-color-hover:$brand-saturated;
+$brand-primary:               #57a6db;  // darken(#428bca, 6.5%)
+$brand-saturated:             #5C89B7;
+
 // $brand-success:         #5cb85c
 // $brand-info:            #5bc0de
 // $brand-warning:         #f0ad4e
@@ -67,6 +61,14 @@ $link-font-color-hover:$brand-saturated;
 $state-danger-text:              #f25353;
 $state-danger-bg:                #f2dede;
 $state-danger-border:            #f25353;  // darken(adjust-hue($state-danger-bg, -10), 5%)
+
+
+// stuff
+$button-primary:              $brand-primary;
+$button-primary-hover:        $brand-saturated;
+$pill-background-color:       $brand-primary;
+$link-font-color:             $brand-primary;
+$link-font-color-hover:       $brand-saturated;
 
 
 //== Scaffolding

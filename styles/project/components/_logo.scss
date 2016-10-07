@@ -12,4 +12,11 @@
   @media (max-width:$screen-xs-max) {
     @include set-icon-size(60px);
   }
+
+  &.mod-header {
+    @include set-icon-size(45px);
+
+    display: inline-block;
+    float: left;
+  }
 }

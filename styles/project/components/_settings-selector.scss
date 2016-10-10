@@ -1,28 +1,75 @@
+$padding-top-opened: 10px;
+$padding-top-default: 5px;
+$padding-bottom-default: 2px;
+$ellipsis-height: 20px;
+$ellipsis-width: 30px;
+$custom-selector-padding-hor: 12px;
+
 settings-selector {
+  position: relative;
+  display: block;
+  text-align: left;
+  min-height: $padding-top-default + $padding-bottom-default + $ellipsis-height + 2px;
+  min-width: $custom-selector-padding-hor*2 + $ellipsis-width + 2px;
+
   .custom-selector {
-    .glyphicon {
-      font-size: 17px;
-    }
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: $padding-top-default $custom-selector-padding-hor $padding-bottom-default;
+    cursor: pointer;
+    background-color: $white;
+    z-index: 1;
+    border: 1px solid transparent;
+    transition: $transition-default;
 
-    &__options {
-      right: 0;
-      width: 260px;
-      padding-bottom: 0;
-    }
+    &.mod-opened {
+      box-shadow: $shadow-default;
+      border-color: $gray-lighter-new;
+      padding-top: $padding-top-opened;
+      padding-bottom: $padding-top-opened + $padding-bottom-default + $ellipsis-height;
+      top: $padding-top-default - $padding-top-opened;
 
-    &__btn {
-      text-align: center;
-
-      @media (max-width: $screen-xs-max) {
-        padding-right: 0;
-        padding-left: 0;
-        background: none;
-
-        &:hover,
-        &:focus {
-          background: $mediumgray-light;
-        }
+      .settings-selector__options {
+        display: block;
       }
     }
+
+    &__option {
+      white-space: nowrap;
+      padding: 10px 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: inherit;
+      }
+
+      label {
+        cursor: pointer;
+      }
+    }
+
+    .glyphicon {
+      font-size: $ellipsis-height - 3px;
+    }
+  }
+}
+
+.settings-selector {
+  &__options {
+    display: none;
+    transition: $transition-default;
+  }
+
+  &__btn {
+    float: right;
+    width: 30px !important;
+    text-align: center;
+    position: relative;
   }
 }

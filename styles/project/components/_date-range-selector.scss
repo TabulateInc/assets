@@ -8,23 +8,6 @@
   &__btn {
     @include custom-selector();
     padding-right: 20px; // need extra space for carrot
-
-    &.mod-no-carrot {
-      background-image: none;
-
-      &:hover,
-      &:active,
-      &:focus {
-        background-image: none;
-      }
-    }
-
-    &.mod-centers-inside {
-      @media (max-width: $screen-xs-min) {
-        padding: 6px 0px 3px;
-      }
-      padding: 6px 12px 3px;
-    }
   }
 
   &__options {

@@ -29,8 +29,7 @@ $gray-panel: #7b8994;
       float: right;
     }
 
-    > .btn,
-    .custom-selector__btn {
+    > .btn {
       font-size: $btn-font-size;
       padding: $btn-padding-ver 23px;
       margin-top: -1*($btn-height - $panel-header-line-height) / 2;
@@ -41,33 +40,14 @@ $gray-panel: #7b8994;
       }
     }
 
-    .custom-selector {
-      &__option {
+    settings-selector {
+      margin-top: -6px;
+
+      .custom-selector {
         font-weight: 400;
-        color: $gray-new;
-
-        &:hover {
-          color: $white;
+        &__btn {
+          font-size: $btn-font-size;
         }
-      }
-
-      &__btn {
-        height: $btn-height;
-        padding-left: 10px;
-        padding-right: 10px;
-
-        // border: none;
-
-        // &:hover,
-        // &:focus {
-        //   background-color: transparent;
-        //   color: $brand-primary;
-        //   border: none;
-        // }
-
-        // &:active {
-        //   box-shadow: none;
-        // }
       }
     }
 

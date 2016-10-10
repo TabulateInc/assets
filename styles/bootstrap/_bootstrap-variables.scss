@@ -914,3 +914,6 @@ $panel-new-padding-hor-mobile: 10px;
 $panel-header-height: 60px;
 $panel-header-padding: $distance-hor-md;
 $panel-header-line-height: $panel-header-height - $panel-header-padding*2;
+
+$transition-default: all 0.2s ease-in-out;
+$shadow-default: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);

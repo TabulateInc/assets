@@ -13,7 +13,6 @@ $nav-link-padding-vertical: 6px;
 $nav-link-glyphicon-size: 14px;
 
 $animation-duration: .6s;
-$dropdown-triangle-size: 20px;
 
 
 @function make-click-color($color) {
@@ -110,18 +109,21 @@ $dropdown-triangle-size: 20px;
 
 .navbar-title {
   font-weight: 300;
-  font-size: $nav-header-title-size;
-  height: $nav-header-content-height;
-  line-height: $nav-header-content-height;
-  float: left;
-  cursor: pointer;
 
   .nav-icon {
     font-size: 16px;
     top: -2px;
   }
 
-  @media (max-width: $screen-sm-min) {
+  @media (min-width: $screen-sm-min) {
+    font-size: $nav-header-title-size;
+    height: $nav-header-content-height;
+    line-height: $nav-header-content-height;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  @media (max-width: $screen-xs-max) {
     $toggle-button-width: 46px;
 
     font-size: $nav-header-title-size-sm;
@@ -139,8 +141,26 @@ $dropdown-triangle-size: 20px;
 .navbar {
 
   .dropdown-wrapper {
+    $transition: all 0.2s ease-in-out;
+
+    background-color: $white;
+
     @media (min-width: $screen-sm-min) {
-      margin-left: 20px;
+      position: absolute;
+      left: 85px;
+      padding: 0 20px 20px 20px;
+      transition: $transition;
+
+      &.mod-opened {
+        box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+
+        .dropdown-menu {
+          padding-top: 20px;
+          max-height: 350px;
+          opacity: 1;
+          transition: $transition;
+        }
+      }
     }
   }
 
@@ -149,14 +169,14 @@ $dropdown-triangle-size: 20px;
     display: block;
     overflow: hidden;
     margin: 0;
+    box-shadow: none;
+    position: relative;
 
     @media (min-width: $screen-sm-min) {
       min-width: 300px;
       max-height: 0;
       padding: 0;
       opacity: 0;
-      box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
-      margin-top: $dropdown-triangle-size/3 !important;
     }
 
     @media (max-width: $screen-xs-max) {
@@ -164,8 +184,6 @@ $dropdown-triangle-size: 20px;
       padding-top: 0;
       padding-bottom: 0;
       opacity: 1;
-      box-shadow: none;
-
       position: static;
       float: none;
     }
@@ -173,44 +191,6 @@ $dropdown-triangle-size: 20px;
     a {
       @extend %nav-link;
     }
-  }
-
-  // animation
-  .dropdown:hover .dropdown-menu,
-  .dropdown.open .dropdown-menu {
-    max-height: 340px;
-    opacity: 1;
-  }
-}
-
-// triangle in desktop dropdown
-.dropdown-triangle {
-  display: none;
-  z-index: 1001;
-  bottom: -$dropdown-triangle-size/3;
-  left: 20px;
-  position: absolute;
-
-  width: $dropdown-triangle-size;
-  height: $dropdown-triangle-size;
-  overflow: hidden;
-  box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.5);
-
-  &:after {
-    content: "";
-    position: absolute;
-    width: $dropdown-triangle-size/2;
-    height: $dropdown-triangle-size/2;
-    background: $white;
-    transform: rotate(45deg); /* Prefixes... */
-    top: $dropdown-triangle-size*3/4;
-    left: $dropdown-triangle-size/4;
-    box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
-  }
-
-  .dropdown.open &,
-  .dropdown:hover & {
-    display: block;
   }
 }
 
@@ -301,24 +281,23 @@ $dropdown-triangle-size: 20px;
       background: make-click-color($white);
     }
   }
-}
 
-// mobile aside styles
-.aside.mod-navbar {
-  background-color: $white;
-
-  .close {
-    float: left;
-    padding: 10px 14px;
-    margin-left: 5px;
-    outline: none !important;
-  }
-
-  .aside-dialog {
+  .aside.mod-navbar {
     background-color: $white;
 
-    .aside-body {
-      padding: 0;
+    .close {
+      float: left;
+      padding: 10px 14px;
+      margin-left: 5px;
+      outline: none !important;
+    }
+
+    .aside-dialog {
+      background-color: $white;
+
+      .aside-body {
+        padding: 0;
+      }
     }
   }
 }

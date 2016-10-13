@@ -7,7 +7,8 @@ $inputs-group-subcaption-size: 14px;
 $inputs-group-input-height: 45px;
 
 
-.inputs-separator {
+.inputs-separator,
+.inputs-separator.checkbox {
   margin-bottom: $inputs-separator-distance*2;
   margin-top: $inputs-separator-distance;
   padding-left: $inputs-separator-distance;
@@ -105,6 +106,7 @@ h5 {
   .checkbox.mod-custom,
   .radio {
     margin-top: 10px;
+    margin-bottom: 10px;
     padding-right: $padding-right-input;
     font-size: $input-text-size;
 

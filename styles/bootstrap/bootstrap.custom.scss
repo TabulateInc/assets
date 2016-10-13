@@ -49,6 +49,27 @@ select.btn {
   }
 }
 
+// For inventory page
+.btn-fake {
+  // button that looks like an input
+  @extend .btn-default;
+  top: 1px;
+  width: 80px;  // to acomodate x,xxx.xx
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow: hidden;
+
+  @media (max-width: $screen-xxs-max - 1) {
+    padding: 6px 3px !important;
+    width: 42px;
+  }
+
+  &:hover {
+    background-color: $white;
+    color: $gray-base;
+  }
+}
+
 .has-error {              // fixes the issue with select element which already has border with !important color
   select.form-control {
     border-color: $grapefruit-dark !important;

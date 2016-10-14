@@ -8,8 +8,9 @@ $nav-logo-size: 40px;
 $nav-link-height: 19px;
 $nav-link-padding-horizontal: 25px;
 $nav-link-padding-horizontal-sm: 20px;
-$nav-link-padding-vertical: 6px;
+$nav-link-padding-vertical: 8px;
 $nav-link-glyphicon-size: 14px;
+$nav-link-distance-between: 5px;
 
 $animation-duration: .6s;
 
@@ -19,8 +20,8 @@ $animation-duration: .6s;
 }
 
 @mixin nav-link-active() {
-  color: $white;
-  background-color: $brand-primary;
+  color: $gray-new;
+  background-color: #f5f5f5;
 }
 
 @mixin nav-link {
@@ -30,6 +31,7 @@ $animation-duration: .6s;
   line-height: $nav-link-height;
   color: $gray-new;
   background-color: transparent;
+  margin-top: $nav-link-distance-between;
 
   &:hover {
     @media (max-width: $screen-xs-max) {
@@ -147,17 +149,16 @@ $animation-duration: .6s;
     @media (min-width: $screen-sm-min) {
       position: absolute;
       left: $nav-header-padding-hor + $nav-logo-size;
-      padding: 0 10px 10px 10px;
-      transition: $transition-default;
+      margin-left: 10px;
 
       &.mod-opened {
-        box-shadow: $shadow-default;
-
         .dropdown-menu {
-          padding-top: 20px;
-          max-height: 350px;
+          margin-top: -$nav-header-content-height;
+          padding-bottom: $nav-link-distance-between;
+          max-height: 480px;
           opacity: 1;
           transition: $transition-default;
+          box-shadow: $shadow-default;
         }
       }
     }
@@ -170,6 +171,9 @@ $animation-duration: .6s;
     margin: 0;
     box-shadow: none;
     position: relative;
+    border-radius: 0;
+    font-size: 15px;
+    transition: $transition-default;
 
     @media (min-width: $screen-sm-min) {
       min-width: 300px;
@@ -244,7 +248,8 @@ $animation-duration: .6s;
 
     @media (max-width: $screen-xs-max) {
       line-height: $nav-link-padding-vertical*2 + $nav-link-height;
-      padding-left: $nav-link-padding-horizontal*2 + 2px;
+      // update padding when custom icons created
+      padding-left: $nav-link-padding-horizontal;  // $nav-link-padding-horizontal*2 + 2px
     }
   }
 }

@@ -4,11 +4,17 @@ $images-path: '/assets/img';
 // Screen
 $screen-xxs-max: 479px;  // $screen-xs-min - 1;
 
+$desktop-to-mobile: .5;
+$desktop-to-mobile-sm: .75;
+$inputs-separator-distance: 5px;
+
+
 // Colors
 $middle-gray-color:          #ccc;
 $gray-lighter-custom:        lighten($middle-gray-color, 18%);
 $gray-background: #f3f6f8;
 $gray-border: #ebebeb;
+$gray-text: #9ba3a9;
 $white: #fff;
 $black: rgb(0,0,0);
 $blue-light: #e3f2ff;  // dropbox blue on files page
@@ -51,7 +57,6 @@ $line-height-lg: 42px;
 
 // Elements
 // ------------------------------
-$container-max-width: 1230px;
 $input-in-control-height: $height-md;
 $input-in-control-padding-right: 5px;
 

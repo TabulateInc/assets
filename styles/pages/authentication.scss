@@ -2,123 +2,63 @@
 @import '../project/variables';
 @import '../bootstrap/variables';
 
-$btn-primary-color: #fff;
-$desktop-to-mobile: .5;
-$desktop-to-mobile-sm: .75;
-
 body {
   padding: 0;
 }
 
-.logo {
-  height: 80px;
-  margin: 80px auto;
+.additional-info {
+  clear: both;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  padding-left: $inputs-separator-distance;
 
-  @media (max-width:$screen-xs-max) {
-    height: .75*80px;
-    margin: .5*80px auto;
-  }
-}
-
-.form-auth {
-  border: 0;
-}
-
-.container-fluid {
-  max-width: 750px;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-.title {
-  margin-bottom: 45px;
-
-  border-bottom: solid 1px #e8ebed;
-
-  @media (max-width:$screen-xs-max) {
-    margin-bottom: $desktop-to-mobile*45px;
-  }
-
-  &__title {
-    font-size: 32px;
+  a {
+    font-size: 15px;
     font-weight: 400;
 
-    margin-top: -5px;
-    margin-bottom: 5px;
-
-    color: #4c5557;
-
-    @media (min-width:$screen-xs-min) and (max-width:$screen-xs-max) {
-      font-size: .9*32px;
-    }
-
-    @media (max-width:$screen-xxs-max) {
-      font-size: $desktop-to-mobile-sm*32px;
+    @media (max-width: $screen-xs-max) {
+      font-size: 12px;
     }
   }
 
-  &__subtitle {
-    font-size: 16px;
-    font-weight: 400;
-
-    max-width: 560px;
-    margin-right: auto;
-    margin-bottom: 35px;
-    margin-left: auto;
-
-    color: #515151;
-
-    @media (min-width:$screen-xs-min) and (max-width:$screen-xs-max) {
-      font-size: .9*16px;
-    }
-
-    @media (max-width:$screen-xxs-max) {
-      font-size: $desktop-to-mobile-sm*16px;
-    }
-
-    @media (max-width:$screen-xs-max) {
-      margin-bottom: $desktop-to-mobile*35px;
-    }
+  @media (max-width: $screen-xs-max) {
+    font-size: 12px;
   }
 }
 
-.form-group {
-  margin-bottom: 5px;
+.terms-modal-open,
+.privacy-modal-open {
+  .modal-body {
+    background-color: $white;
+  }
 }
 
-$form-controll-side-padding: 20px;
-$form-controll-border-width: 1px;
+.modal-body-content {
+  overflow-y: scroll;
+  background-color: $white;
+  max-height: 50vh;
+
+  @media (max-width: $screen-xs-max) {
+    max-height: calc(100vh - 110px);
+  }
+}
+
+.btn.mod-move-down {
+  $margin-top-desktop: 32px;
+  margin-top: $margin-top-desktop;
+
+  @media (max-width: $screen-xs-max) {
+    margin-top: $desktop-to-mobile*$margin-top-desktop;
+  }
+}
 
 .form-control {
   @include animation-name(slideDown);
   @include animation-iteration-count(1);
   @include animation-duration(.2s);
-
-  font-size: 15px;
-
-  height: 60px;
-  margin: 5px auto;
-  padding: 18px $form-controll-side-padding;
-
-  color: #515151;
-  border: #d3d8db solid $form-controll-border-width;
-  border-radius: 10px;
-  box-shadow: none;
-
-  &:focus {
-    border-color: $brand-primary;
-  }
-
-  @media (max-width:$screen-xs-max) {
-    border-radius: $desktop-to-mobile-sm*10px;
-    font-size: $desktop-to-mobile-sm*15px;
-    height: $desktop-to-mobile-sm*60px;
-    padding: $desktop-to-mobile-sm*18px $desktop-to-mobile-sm*$form-controll-side-padding;
-  }
 }
 
 @keyframes slideDown {
-
   0% {
     height: 0;
   }
@@ -127,89 +67,3 @@ $form-controll-border-width: 1px;
     height: 60%;
   }
 }
-
-$col-side-paddings: 5px;
-
-.additional-info {
-  clear: both;
-
-  margin-top: 4px;
-  margin-bottom: 10px;
-
-  a {
-    font-size: 15px;
-    font-weight: 400;
-
-    @media (max-width:$screen-xs-max) {
-      font-size: 12px;
-    }
-  }
-
-  @media (max-width:$screen-xs-max) {
-    font-size: 12px;
-  }
-
-  &.mod-input-left-border-aligned {
-    padding-left: $col-side-paddings;
-  }
-
-  &.mod-input-text-start-aligned {
-    padding-left: $form-controll-side-padding + $form-controll-border-width + $col-side-paddings;
-    @media (max-width:$screen-xs-max) {
-      padding-left: $desktop-to-mobile-sm*$form-controll-side-padding + $form-controll-border-width + $col-side-paddings;
-    }
-  }
-}
-
-.form-group + .btn {
-  margin-top: 32px;
-
-  @media (max-width:$screen-xs-max) {
-    margin-top: $desktop-to-mobile*32px;
-  }
-
-}
-
-.btn {
-  font-size: 14px;
-  font-weight: 400;
-
-  padding: 18px 45px;
-
-  border-radius: 30px;
-
-  @media (max-width:$screen-xs-max) {
-    font-size: 12px;
-    padding: .7*18px .7*45px;
-    border-radius: .7*30px;
-  }
-}
-
-.btn-primary {
-  background-color: $brand-primary;
-  border-color: $brand-primary;
-}
-
-::-moz-placeholder,
-:-ms-input-placeholder,
-::-webkit-input-placeholder {
-  font-family: $headings-font-family !important;
-}
-
-.half-height {
-  overflow: scroll;
-
-  max-height: 50vh;
-}
-
-@mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
-  @for $i from (1 + 1) through $grid-columns {
-    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
-  }
-  #{$list} {
-    padding-left:  $col-side-paddings;
-    padding-right: $col-side-paddings;
-  }
-}
-
-@include make-grid-columns();

@@ -2,9 +2,9 @@ tags-input {
   .host {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
-    border: 1px solid $mediumgray-dark !important;
+    border: $input-border-width solid $input-border !important;
     border-radius: $input-border-radius;
-    color: $darkgray-dark !important;
+    color: $input-color !important;
   }
 
   .tags {

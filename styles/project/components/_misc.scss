@@ -3,13 +3,13 @@
 .drag-drop {
   display: inline-block;
   min-width: $drag-icon-size;
+  min-height: $drag-icon-size;
 }
 
 .drag-drop-icon {
   background: url(/assets/img/grippy_large.png) no-repeat;
   position: absolute;
   top: 0;
-
   $drag-drop-size: 1.1;
   // google drag-drop size at compact interface
   background-size: 5px * $drag-drop-size 5px*6 * $drag-drop-size;
@@ -27,6 +27,14 @@
 
   drag-drop.mod-low & {
     top: 6.5px;
+  }
+}
+
+.drag-drop-group {
+  min-height: 10px;
+
+  &.mod-lg {
+    min-height: 40px;
   }
 }
 

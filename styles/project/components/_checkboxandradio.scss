@@ -1,0 +1,133 @@
+.checkbox.mod-custom,
+.radio {
+  @media (max-width: $screen-xs-max) {
+    font-size: $font-size-xs;
+  }
+
+  input {
+    display: none;
+
+    &:checked + label {
+      &.mod-default:before {
+        content: '\e013';
+      }
+
+      &.mod-primary {
+        &:before {
+          background: url(#{$images-path}/checkmark.svg) no-repeat center $brand-primary;
+          background-size: 70%;
+          border-color: $brand-primary;
+        }
+
+        &:hover:before {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    &[disabled],
+    &.disabled,
+    fieldset[disabled] & {
+      + label {
+        &.mod-default:before,
+        &.mod-primary:before {
+          color: $input-color-disabled;
+          background-color: $input-bg-disabled;
+          border-color: $input-border;
+        }
+      }
+    }
+  }
+
+  label {
+    font-weight: 300;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      border: 1px solid $input-border;
+      vertical-align: middle;
+      margin-top: -5px;
+      margin-right: 10px;
+      font-family: 'Glyphicons Halflings';
+    }
+
+    &:hover:before {
+      border-color: $input-border-hover;
+    }
+
+    &.mod-default {
+
+      &.mod-lg:before {
+        width: 18px;
+        height: 18px;
+        line-height: 16px;
+
+        @media (max-width: $screen-xs-max) {
+          width: 15px;
+          height: 15px;
+          line-height: 13px;
+        }
+      }
+
+      &:before {
+        color: $brand-saturated;
+        width: 15px;
+        height: 15px;
+        line-height: 13px;
+
+        @media (max-width: $screen-xs-max) {
+          width: 12px;
+          height: 12px;
+          line-height: 11px;
+        }
+      }
+    }
+
+    &.mod-primary {
+      &.mod-lg:before {
+        width: 24px;
+        height: 24px;
+        line-height: 16px;
+
+        @media (max-width: $screen-xs-max) {
+          width: 15px;
+          height: 15px;
+          line-height: 13px;
+        }
+      }
+
+      &:before {
+        color: $white;
+        width: 18px;
+        height: 18px;
+        line-height: 10px;
+
+        @media (max-width: $screen-xs-max) {
+          width: 15px;
+          height: 15px;
+          line-height: 13px;
+        }
+      }
+    }
+  }
+}
+
+.checkbox.mod-custom label {
+  &.mod-default:before {
+    border-radius: 3px;
+  }
+
+  &.mod-primary:before {
+    border-radius: 8px;
+
+    @media (max-width: $screen-xs-max) {
+      border-radius: 5px;
+    }
+  }
+}
+
+.radio label:before {
+  border-radius: 50%;
+}
+

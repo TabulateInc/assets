@@ -11,7 +11,7 @@ $toggle-off-background-color:   #cad9e8 !default;
 
   $circle-size:           $toggle-height * .8;
   $circle-font-size:      $toggle-height * .5;
-  $circle-top:            $toggle-height * .08;
+  $circle-top:            $toggle-height * .1;
   $circle-left-off:       $circle-size   * .15;
   $circle-left-on:        $toggle-width  - $circle-size * 1.15;
 
@@ -43,12 +43,12 @@ $toggle-off-background-color:   #cad9e8 !default;
     &:after {
     // toogle circle
       font-size: $circle-font-size;
-      top: $circle-top;
+      margin-top: $circle-top;
       left: $circle-left-off;
 
       width: $circle-size;
       height: $circle-size;
-      }
+    }
   }
 
   & input[type="checkbox"]:checked + .handle:after,

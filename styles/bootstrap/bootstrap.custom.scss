@@ -6,10 +6,6 @@
 @import 'Bootflat/bootflat/scss/bootflat';
 @import 'bootstrap-additions/bootstrap-additions';
 
-.container-fluid {
-  max-width: $container-max-width;
-}
-
 .panel {
     border: 1px solid $panel-default-border;
 }
@@ -20,6 +16,10 @@
     padding-left: $padding-small-horizontal;
     padding-right: $padding-small-horizontal;
   }
+}
+
+body.modal-open {
+  overflow-y: auto;
 }
 
 .modal-dialog {
@@ -52,6 +52,14 @@
     &-header {
         border-bottom: 1px solid $border-gray-color;
         min-height: 15px*$modal-title-line-height;    // fixes scss (15px 30px+1.321) style error
+
+      .close {
+        font-size: 32px;
+
+        &:disabled {
+          opacity: .1;
+        }
+      }
     }
 
     &-body {
@@ -98,6 +106,13 @@
   padding: $alert-margin-vertical $alert-margin-horizontal;
   border-radius: $alert-border-radius;
 
+}
+
+.alert-success {
+  background-color: $alert-success-bg !important;
+  border: 1px solid $alert-success-border !important;
+  width: $alert-success-width !important;
+
   @media (min-width: $screen-sm-min) {
     top: $main-navigation-height + $alert-from-top;
   }
@@ -107,21 +122,27 @@
   }
 }
 
-.alert-success {
-  background-color: $alert-success-bg !important;
-  border: 1px solid $alert-success-border !important;
-  width: $alert-success-width !important;
-}
-
 .alert-danger {
   font-size: $font-size-small;
   border: 1px solid $alert-danger-border;
+  top: 0;
+  border-radius: 0;
 
-  &.inline-alert{
-    position:static;
-    border:none;
-    border-radius:0px;
-    max-width:auto;
+  @media (min-width: $screen-sm-min) {
+    min-height: $main-navigation-height;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    min-height: $main-navigation-height-mobile;
+  }
+
+  &.inline-alert {
+    position: static;
+    max-width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    min-height: auto;
   }
 }
 
@@ -187,16 +208,6 @@ $border:1px solid $subnav-border-color;
   }
 }
 
-.form-control[readonly] {
-    background-color: $white;
-}
-
-.form-control[disabled],
-fieldset[disabled] .form-control {
-  border-color: $form-disabled-color !important;
-  background-color: $form-disabled-color !important;
-}
-
 .dropdown-menu {
     overflow-x:hidden;
     height:auto;
@@ -210,12 +221,6 @@ fieldset[disabled] .form-control {
         top:47%;
         right:15px;
     }
-}
-
-/*fix boostrap shit*/
-.radio + .radio,
-.checkbox + .checkbox {
-  margin-top: 0px;
 }
 
 .breadcrumb {
@@ -276,20 +281,37 @@ fieldset[disabled] .form-control {
   }
 }
 
-
-
 select.btn{
-  &:focus {
-    border-color: $brand-primary !important;
-  }
+  @include custom-selector();
 
   -webkit-appearance:none;
   -moz-appearance:none;
 
-  @include custom-selector();
+  &:focus {
+    border-color: $brand-primary !important;
+  }
 
-  option{
-      text-align:left;
+  &.btn-default {
+    border-color: $input-border !important;
+    color: $input-color;
+
+    &:hover {
+      background-color: $input-border;
+      color: $white;
+    }
+
+    &:hover option {
+      background-color: $input-bg;
+      color: $input-color;
+    }
+
+    &:focus {
+      border-color: $brand-primary !important;
+    }
+  }
+
+  option {
+    text-align: left;
   }
 }
 

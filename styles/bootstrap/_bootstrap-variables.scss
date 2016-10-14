@@ -21,6 +21,17 @@
 // $gray-light:             lighten($gray-base, 46.7%) // #777
 // $gray-lighter:           lighten($gray-base, 93.5%) // #eee
 
+// from bootflat
+$lightgray-light:             #F5F7FA;
+
+// new custom
+$white:                       #fff;
+$gray-new:                    #4c5557;
+$gray-dark-new:               #515151;
+$gray-lighter-new:            #d8dddf;
+$gray-light-new:              #e8ebed;
+$gray-lightest-new:           #f2f2f2;
+
 // $brand-primary:         darken(#428bca, 6.5%)
 $brand-primary:          #57a6db;
 $brand-saturated:         #5C89B7;
@@ -119,9 +130,13 @@ $icon-font-path: '/bower_components/bootstrap-sass/assets/fonts/bootstrap/';
 // $line-height-large:         1.33
 // $line-height-small:         1.5
 
- $border-radius-base:        2px;
- $border-radius-large:       4px;
- $border-radius-small:       1px;
+$border-radius-base:        2px;
+$border-radius-large:       4px;
+$border-radius-small:       1px;
+
+$border-radius-lg:          10px;
+$border-color-base:         $gray-lighter-new;
+
 
 //** Global color for active items (e.g., navs or dropdowns).
 // $component-active-color:    #fff
@@ -193,28 +208,33 @@ $icon-font-path: '/bower_components/bootstrap-sass/assets/fonts/bootstrap/';
 //##
 
 //** `<input>` background color
-// $input-bg:                       #fff
-//** `<input disabled>` background color
-// $input-bg-disabled:              $gray-lighter
+$input-bg:                       $white;
+$input-bg-disabled:              rgba(241, 242, 243, 1);  // $lightgray-light;
 
 //** Text color for `<input>`s
-// $input-color:                    $gray
+$input-color:                    $gray-dark-new;  // $gray
+$input-color-disabled:           #bbb;
+
+$input-text-size:                15px;
+
 //** `<input>` border color
-// $input-border:                   #ccc
+$input-border:                   $border-color-base;  // rgba(235, 235, 235, 1);  // #d3d8db;  // #ccc
+$input-border-focus:             $brand-primary;
+$input-border-disabled:          $input-border;  // $lightgray-light;
+$input-border-hover:             darken($input-border, 20%);
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
-// $input-border-radius:            $border-radius-base
+$input-border-radius:            3px;  //$border-radius-base
 //** Large `.form-control` border radius
 // $input-border-radius-large:      $border-radius-large
 //** Small `.form-control` border radius
 // $input-border-radius-small:      $border-radius-small
 
-//** Border color for inputs on focus
-// $input-border-focus:             #66afe9
+$input-border-width:             1px;
 
 //** Placeholder text color
-// $input-color-placeholder:        #999
+$input-color-placeholder:        #a7a8b2;  // #999
 
 //** Default `.form-control` height
 // $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2)
@@ -222,6 +242,12 @@ $icon-font-path: '/bower_components/bootstrap-sass/assets/fonts/bootstrap/';
 // $input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2)
 //** Small `.form-control` height
 // $input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2)
+
+// large input
+$input-padding-horizontal:       20px;
+$input-padding-vertical:         18px;
+$input-height-lg:                60px;
+$input-border-radius-lg:         $border-radius-lg;
 
 // $legend-color:                   $gray-dark
 // $legend-border-color:            #e5e5e5
@@ -507,9 +533,9 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 // $state-warning-bg:               #fcf8e3
 // $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%)
 
-// $state-danger-text:              #a94442
-// $state-danger-bg:                #f2dede
-// $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%)
+$state-danger-text:              #f25353;
+$state-danger-bg:                #f2dede;
+$state-danger-border:            #f25353;  // darken(adjust-hue($state-danger-bg, -10), 5%)
 
 
 //== Tooltips
@@ -864,3 +890,11 @@ $breadcrumb-bg:                 #fff !important;  // #f5f5f5
 // $dl-horizontal-offset:        $component-offset-horizontal
 //** Horizontal line color.
 // $hr-border:                   $gray-lighter
+
+$horizontal-separator-color:  $gray-light-new;
+$container-max-width: 1230px;
+$container-sm-max-width: 760px;
+
+$panel-text-between-panels:      10px;
+$panel-text-font:                16px;
+$panel-text-height:              60px;

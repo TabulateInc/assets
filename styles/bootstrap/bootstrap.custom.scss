@@ -19,7 +19,9 @@
 }
 
 body.modal-open {
-  overflow-y: auto;
+  @media (min-width: $screen-md-min) {
+    overflow-y: auto;
+  }
 }
 
 .modal-dialog {

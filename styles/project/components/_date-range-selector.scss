@@ -1,40 +1,88 @@
 .date-range-selector, .date-selector {
   position: relative;
 
-  &__input {
-    padding-left: 25px;
-  }
-
   i {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     left: 8px;
-    top: 9px;
+  }
+
+  &__input {
+    padding-left: 25px;
+    line-height: normal;
+    padding-top: 5px;
+  }
+
+  &.hide-icon {
+    i {
+      left: 0;
+      display: none;
+    }
+
+    .date-selector__input {
+      padding-left: 5px;
+      padding-right: 0;
+    }
+  }
+}
+
+.date-range-selector {
+  &__input {
+    min-width: 192px;
   }
 }
 
 .date-selector {
   max-width: 120px;
+  &.full-width {
+    max-width: none;
+  }
 }
 
 $headerHeight: 50px;
+@media (min-width: 767px) {
+  $headerHeight: 56px
+}
+
+.modal-open .daterangepicker {
+  &.dropdown-menu.desktop {
+    z-index: 1070;
+  }
+}
+
 .daterangepicker {
+  &.dropdown-menu.desktop {
+    z-index: 1020;
+  }
 
   &.single {
     .actions, .applyBtn {
       display: none;
     }
+
+    &.opensright .calendar.left, &.opensleft .calendar.right {
+      border-left: none;
+      padding-left: 0;
+    }
   }
+
+  &.opensright .calendar.left {
+    border-left: 1px solid $gray-lighter;
+    padding-left: 5px;
+  }
+
+  &.opensleft .calendar.right {
+    border-right: 1px solid $gray-lighter;
+    padding-right: 5px;
+  }
+
 
   &.modal {
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-
-    .calendar {
-      max-width: 100%;
-      margin:0;
-    }
 
     .calendars {
       height: 100%;
@@ -52,6 +100,21 @@ $headerHeight: 50px;
 
     .modal-content {
       position: relative;
+      @media (min-width: 767px) {
+        font-size: 20px;
+      }
+      .ranges li {
+        @media (min-width: 767px) {
+          font-size: 20px;
+        }
+      }
+
+      .ranges ul {
+        @media (min-width: 767px) {
+          width: 100%;
+        }
+      }
+
     }
 
     .modal-body {
@@ -62,6 +125,26 @@ $headerHeight: 50px;
       padding: 0;
       margin: 0;
       background-color: $white;
+
+      .calendar {
+        max-width: 100%;
+        margin:0;
+        @media (min-width: 767px) {
+          td {
+            height: 50px;
+          }
+        }
+      }
+
+      @media (min-width: 767px) {
+        height: calc(100% - #{$headerHeight} - 100px);
+      }
+    }
+
+    &.ltr .calendar, &.single.ltr .calendar {
+      @media (min-width: 564px) {
+        float: none;
+      }
     }
 
     .modal-header {
@@ -96,13 +179,8 @@ $headerHeight: 50px;
     }
   }
 
-  .calendar.left {
-    border-left: 1px solid $gray-lighter;
-    padding-left: 5px;
-  }
-
-  .calendar.right {
-
+  &.single .calendar-splitter {
+    display: none;
   }
 
   .calendar-splitter {

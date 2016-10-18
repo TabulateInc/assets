@@ -92,7 +92,7 @@ $text-color:               $gray-new;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-// $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif
+$font-family-sans-serif:    'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 // $font-family-serif:       Georgia, "Times New Roman", Times, serif
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 // $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace
@@ -292,7 +292,7 @@ $input-border-radius-lg:         $border-radius-lg;
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-// $dropdown-bg:                    #fff
+$dropdown-bg:                    $white;
 //** Dropdown menu `border-color`.
 // $dropdown-border:                rgba(0,0,0,.15)
 //** Dropdown menu `border-color` **for IE8**.
@@ -320,6 +320,13 @@ $input-border-radius-lg:         $border-radius-lg;
 
 //** Deprecated `$dropdown-caret-color` as of v3.1.0
 // $dropdown-caret-color:           #000
+
+$dropdown-item-height: 19px;
+$dropdown-item-padding-horizontal: 25px;
+$dropdown-item-padding-horizontal-sm: 20px;
+$dropdown-item-padding-vertical: 8px;
+$dropdown-item-glyphicon-size: 14px;
+$dropdown-item-distance-between: 5px;
 
 
 //-- Z-index master list
@@ -510,13 +517,13 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 //
 //##
 
-// $pagination-color:                     $link-color
-// $pagination-bg:                        #fff
-// $pagination-border:                    #ddd
+$pagination-color:                        $brand-primary;
+$pagination-bg:                           transparent;
+$pagination-border:                       transparent;
 
-// $pagination-hover-color:               $link-hover-color
-// $pagination-hover-bg:                  $gray-lighter
-// $pagination-hover-border:              #ddd
+$pagination-hover-color:                  $brand-primary;
+$pagination-hover-bg:                     transparent;
+$pagination-hover-border:                 transparent;
 
 // $pagination-active-color:              #fff
 // $pagination-active-bg:                 $brand-primary
@@ -916,4 +923,4 @@ $panel-header-padding: $distance-hor-md;
 $panel-header-line-height: $panel-header-height - $panel-header-padding*2;
 
 $transition-default: all 0.2s ease-in-out;
-$shadow-default: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+$shadow-default: 0 0 7px 0 rgba(0, 0, 0, 0.25);

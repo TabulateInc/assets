@@ -7,22 +7,6 @@
 @import 'bootstrap-additions/bootstrap-additions';
 
 
-.dropdown-menu {
-    overflow-x:hidden;
-    height:auto;
-    max-height:300px;  // no idea why
-}
-
-.dropdown.caretright  button{
-    text-align:left;
-    position:relative;
-    .caret {
-        position:absolute;
-        top:47%;
-        right:15px;
-    }
-}
-
 select.btn {
   @include custom-selector();
 

@@ -56,38 +56,44 @@ $screen-xxs-max-pager: 600px;
     }
   }
 
-  &__btn, &__btn-label {
+  &__btn,
+  &__btn-label {
     position: relative;
     line-height: $line-height-base;
     text-decoration: none;
     color: $pagination-color;
     background-color: $pagination-bg;
     border: 1px solid $pagination-border;
-    margin-left: -1px;
-    border-radius: 0 !important;
-    color: $pagination-color;
-    background-color: $pagination-bg;
-    border-color: $pagination-border;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 13px;
+    box-shadow: none;
+
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       color: $pagination-hover-color;
       background-color: $pagination-hover-bg;
       border-color: $pagination-hover-border;
+      box-shadow: none;
     }
-    &[disabled], &[disabled] &-label {
-      color: $middle-gray-color;
+
+    &[disabled],
+    &[disabled] &-label {
+      opacity: 1;
+      color: $gray-darkest-new;
       background-color: white;
+      border-color: $pagination-border;
     }
 
     @media (max-width: $screen-xxs-max-pager) {
-        padding: 4px 2px;
-        font-size: 12px;
+      padding: 4px 2px;
+      font-size: 12px;
     }
   }
 
-  &__btn-label {
-    border: none;
-    background: transparent;
+  .move-left {
+    margin-left: -9px;
   }
 
   &__label {

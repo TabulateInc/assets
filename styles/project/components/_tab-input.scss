@@ -67,4 +67,10 @@ tab-input {
   .form-control:focus {
     border-color: $input-border-focus !important;
   }
+
+  .glyphicon-calendar {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+  }
 }

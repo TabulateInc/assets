@@ -2,7 +2,6 @@
 // Dropdown menus
 // --------------------------------------------------
 
-
 // Dropdown arrow/caret
 .caret {
   display: inline-block;
@@ -28,24 +27,24 @@
 
 // The dropdown menu (ul)
 .dropdown-menu {
+  box-shadow: $shadow-default;
   position: absolute;
-  top: 100%;
-  left: 0;
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0; // override default ul
+  padding: 0 0 $dropdown-item-distance-between 0;
+  margin: 0; // override default ul
   list-style: none;
   font-size: $font-size-base;
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   background-color: $dropdown-bg;
-  border: 1px solid $dropdown-fallback-border; // IE8 fallback
-  border: 1px solid $dropdown-border;
-  border-radius: $border-radius-base;
-  @include box-shadow(0 6px 12px rgba(0,0,0,.175));
   background-clip: padding-box;
+
+  &.select {
+    top: -10px !important;
+    left: -10px !important;
+  }
 
   // Aligns the dropdown menu to right
   //
@@ -55,42 +54,13 @@
     left: auto;
   }
 
-  // Dividers (basically an hr) within the dropdown
-  .divider {
-    @include nav-divider($dropdown-divider-bg);
-  }
-
   // Links within the dropdown menu
   > li > a {
-    display: block;
-    padding: 3px 20px;
-    clear: both;
-    font-weight: normal;
-    line-height: $line-height-base;
-    color: $dropdown-link-color;
-    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    @include dropdown-item();
   }
-}
 
-// Hover/Focus state
-.dropdown-menu > li > a {
-  &:hover,
-  &:focus {
-    text-decoration: none;
-    color: $dropdown-link-hover-color;
-    background-color: $dropdown-link-hover-bg;
-  }
-}
-
-// Active state
-.dropdown-menu > .active > a {
-  &,
-  &:hover,
-  &:focus {
-    color: $dropdown-link-active-color;
-    text-decoration: none;
-    outline: 0;
-    background-color: $dropdown-link-active-bg;
+  li.active a {
+    @include dropdown-item-active();
   }
 }
 
@@ -121,11 +91,6 @@
   // Show the menu
   > .dropdown-menu {
     display: block;
-  }
-
-  // Remove the outline when :focus is triggered
-  > a {
-    outline: 0;
   }
 }
 
@@ -189,5 +154,16 @@
     top: auto;
     bottom: 100%;
     margin-bottom: 2px;
+  }
+}
+
+.dropdown.caretright  button {
+  text-align: left;
+  position: relative;
+
+  .caret {
+    position: absolute;
+    top: 47%;
+    right: 15px;
   }
 }

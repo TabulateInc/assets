@@ -5,6 +5,36 @@ tags-input {
     border: $input-border-width solid $input-border !important;
     border-radius: $input-border-radius;
     color: $input-color !important;
+
+    .autocomplete {
+      margin-top: 0;
+      padding: 0;
+
+      .suggestion-item {
+        @include dropdown-item();
+
+        font-family: $font-family-base;
+        font-size: $font-size-base;
+
+        &.selected,
+        &.selected em {
+          @include dropdown-item-active();
+        }
+
+        em {
+          font-size: $font-size-base + 1;
+          font-family: $font-family-base;
+          color: inherit;
+          font-size: inherit;
+        }
+
+        &:hover em,
+        em:hover {
+          background-color: transparent;
+          color: inherit;
+        }
+      }
+    }
   }
 
   .tags {
@@ -13,17 +43,18 @@ tags-input {
 
     input {
       height: $content-filter-height - 8 !important; // 8 is margin (2+2)+ padding(1+1)+ border(1+1)
+      font-family: $font-family-base;
     }
-  }
 
-  .tags .tag-item {
-    color: $brand-primary !important;
-    border-color: $brand-primary !important;
-    background: transparent !important;
-  }
+    .tag-item {
+      color: $gray-middle-new !important;
+      border-color: $gray-darker-new !important;
+      background: transparent !important;
 
-  .remove-button {
-    color: $brand-primary !important;
+      .remove-button {
+        color: $gray-darker-new !important;
+      }
+    }
   }
 
   &.has-search-icon {

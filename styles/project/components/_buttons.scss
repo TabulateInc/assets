@@ -14,3 +14,18 @@
     border-radius: $coef*30px;
   }
 }
+
+.btn-primary-panel {
+  border-color: $gray-lighter-new;
+  background-color: $white;
+  color: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $brand-primary;
+    background-color: $brand-primary;
+    color: $white;
+  }
+}
+

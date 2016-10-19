@@ -17,7 +17,7 @@ $panel-new-filter-font: 12px;
     font-weight: 300;
     line-height: $panel-header-line-height;
     border-bottom: 1px solid $border-color-base;
-    padding: $panel-header-padding;
+    padding: $panel-header-padding 10px $panel-header-padding $panel-header-padding;
 
     @media (max-width: $screen-xs-max) {
       padding: 15px $panel-new-padding-hor-mobile;    // move

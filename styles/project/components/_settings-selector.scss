@@ -4,7 +4,8 @@ $padding-bottom-default: 2px;
 $ellipsis-height: 20px;
 $ellipsis-width: 30px;
 $custom-selector-padding-left: 20px;
-$custom-selector-padding-right: 0;
+$custom-selector-padding-right: 10px;
+$padding-right-opened: 10px;
 
 settings-selector {
   position: relative;
@@ -25,14 +26,17 @@ settings-selector {
     transition: $transition-default;
 
     &.mod-opened {
+      min-width: 270px;
       box-shadow: $shadow-default;
       border-color: $gray-lighter-new;
       padding-top: $padding-top-opened;
-      padding-bottom: $padding-top-opened + $padding-bottom-default + $ellipsis-height;
+      padding-bottom: $padding-top-opened + $padding-bottom-default;
       top: $padding-top-default - $padding-top-opened;
 
       .settings-selector__options {
+        padding: 3px 10px 8px 0;
         display: block;
+        visibility: visible;
       }
     }
 

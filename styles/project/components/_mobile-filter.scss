@@ -12,12 +12,25 @@
 
   select,
   date-range-selector,
-  tags-input {
+  tags-input,
+  .btn-select {
     width: 100%;
     display: block;
     margin: 0 0 $margin-sm;
     height: $height-md;
     max-width: 568px;
+  }
+
+  .btn-select {
+    text-align: left;
+
+    .caret {
+      position: absolute;
+      top: ($height-md - 4px)/2;
+      cursor: pointer;
+      right: 10px;
+      color: $gray-middle-new;
+    }
   }
 
   .custom-selector__btn {

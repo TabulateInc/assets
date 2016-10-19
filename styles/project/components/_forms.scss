@@ -2,11 +2,6 @@ $margin-bottom-input: $distance-ver-md;
 $margin-bottom-input-xs: 25px;
 $padding-right-input: $distance-hor-md;
 
-$inputs-group-caption-size: 21px;
-$inputs-group-subcaption-size: 14px;
-$inputs-group-input-height: 45px;
-
-
 .inputs-separator,
 .inputs-separator.checkbox.mod-custom {
   margin-bottom: $inputs-separator-distance*2;
@@ -87,9 +82,14 @@ h5 {
     height: 0;
   }
 
-  .add-control,
   .add-control.checkbox.mod-custom,
   .add-control.radio {
+    @include margin-bottom-input();
+
+    padding-right: $padding-right-input;
+  }
+
+  .add-control {
     @include margin-bottom-input();
 
     padding-right: $padding-right-input;
@@ -102,8 +102,21 @@ h5 {
       font-size: $input-text-size;
     }
 
-    @media (max-width: $screen-xs-max){
+    .caret {
+      top: ($inputs-group-input-height - 4px)/2;
+      cursor: pointer;
+    }
+
+    .over-input {
+      right: 20px + $padding-right-input;
+    }
+
+    @media (max-width: $screen-xs-max) {
       padding-right: 0;
+
+      .over-input {
+        right: 20px;
+      }
     }
   }
 

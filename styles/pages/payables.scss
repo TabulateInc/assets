@@ -6,12 +6,6 @@
   margin-right: $margin-xs !important;
 }
 
-.add-control {
-  @media (max-width: $screen-xs-max) {
-    padding-right: $padding-sm;
-  }
-}
-
 .form-control.mod-read-only-block {
   width: auto;
   height: auto;
@@ -25,12 +19,6 @@
   }
 }
 
-.hidden-xxs {
-  @media (max-width: $screen-xxs-max) {
-    display: none;
-  }
-}
-
 .visible-xxs {
   @media (min-width: $screen-xs-min) {
     display: none;
@@ -38,26 +26,20 @@
 }
 
 .remove-detail-btn {
+  $from-top-to-start: ($inputs-group-input-height - 16px)/2;
   position: absolute;
+  top: $from-top-to-start;
+  cursor: pointer;
+  right: 10px;
+
+  @media (max-width: $screen-xxs-max) {
+    top: $inputs-group-input-height + 25px + $from-top-to-start;
+    right: $distance-hor-md;
+  }
 }
 
 .has-error .form-control[disabled] {
   border-color: $grapefruit-dark;
-}
-
-state-picker .col-sm-4 {
-  width: 100% !important;  // temp hack, while add / edit vendor page is not confirmed
-}
-
-.btn-group-justified {
-  .btn-primary {
-    border-color: $brand-primary !important;
-  }
-
-  .btn-default {
-    color: $brand-primary;
-    border-color: $brand-primary !important;
-  }
 }
 
 .modal.mod-over-alert {

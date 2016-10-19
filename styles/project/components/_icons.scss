@@ -54,3 +54,11 @@
     background-size: 22px 22px;
   }
 }
+
+.icon-ellipses {
+  background: url(#{$images-path}/ellipses.svg) no-repeat top center;
+  vertical-align: middle;
+  height: 30px;
+  width: 30px;
+  background-size: 30px 30px;
+}

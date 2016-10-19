@@ -1,22 +1,23 @@
-$padding-top-opened: 10px;
-$padding-top-default: 5px;
+$padding-top-opened: 5px;
+$padding-top-default: 0;
 $padding-bottom-default: 2px;
 $ellipsis-height: 20px;
 $ellipsis-width: 30px;
-$custom-selector-padding-hor: 12px;
+$custom-selector-padding-left: 20px;
+$custom-selector-padding-right: 0;
 
 settings-selector {
   position: relative;
   display: block;
   text-align: left;
   min-height: $padding-top-default + $padding-bottom-default + $ellipsis-height + 2px;
-  min-width: $custom-selector-padding-hor*2 + $ellipsis-width + 2px;
+  min-width: $custom-selector-padding-left + $custom-selector-padding-right + $ellipsis-width + 2px;
 
   .custom-selector {
     position: absolute;
     right: 0;
     top: 0;
-    padding: $padding-top-default $custom-selector-padding-hor $padding-bottom-default;
+    padding: $padding-top-default $custom-selector-padding-right $padding-bottom-default $custom-selector-padding-left;
     cursor: pointer;
     background-color: $white;
     z-index: 1;

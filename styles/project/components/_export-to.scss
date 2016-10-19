@@ -1,14 +1,12 @@
 .btn.mod-export,
-.btn.mod-export:hover{
+.btn.mod-export:hover {
   color: $gray-new;
   background-color: transparent;
-  font-size: 12px; // should be variable
+  font-size: 12px;
 
   width: 100%;
   text-align: left;
   border: none;
-  // export icon
-  // padding-left: 30px;
 
   @media (max-width: $screen-xs-max) {
     display: none !important;

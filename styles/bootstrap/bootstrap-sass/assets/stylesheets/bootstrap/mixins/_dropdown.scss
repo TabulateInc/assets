@@ -15,6 +15,7 @@
   white-space: nowrap; // prevent links from randomly breaking onto new lines
   outline: 0;
   cursor: pointer !important;
+  font-weight: 400;
 
   &:hover {
     @media (min-width: $screen-sm-min) {

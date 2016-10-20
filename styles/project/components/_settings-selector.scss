@@ -63,6 +63,18 @@ settings-selector {
       font-size: $ellipsis-height - 3px;
     }
   }
+
+  .btn.mod-export,
+  .btn.mod-export:hover {
+    color: $gray-new;
+    background-color: transparent;
+    font-size: 12px;
+
+    width: 100%;
+    text-align: left;
+    border: none;
+  }
+
 }
 
 .settings-selector {

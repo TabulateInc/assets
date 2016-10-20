@@ -1,13 +1,6 @@
 .btn.mod-export,
-.btn.mod-export:hover {
-  color: $gray-new;
-  background-color: transparent;
-  font-size: 12px;
-
-  width: 100%;
-  text-align: left;
-  border: none;
-
+export-to-pdf,
+export-to-excel {
   @media (max-width: $screen-xs-max) {
     display: none !important;
   }

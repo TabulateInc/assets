@@ -1,4 +1,9 @@
 // third-party, so everything is important here
+$tag-item-distance-hor: 20px;
+$tag-item-border-color: $gray-lighter-new;
+$tag-item-color: $gray-darker-new;
+$tag-remove-button-size: 16px;
+
 @mixin tags-input-size($content-height) {
   min-height: $content-filter-height;
 
@@ -9,14 +14,20 @@
   .tag-item {
     height: $content-height !important;
     line-height: $content-height - 1 !important;
+
+    .remove-button {
+      padding-top: ($content-height - $tag-remove-button-size - 2px - 1px) / 2 !important;
+      padding-bottom: ($content-height - $tag-remove-button-size - 2px - 1px) / 2 !important;
+      margin-top: -2px !important;
+    }
   }
 
   @media (max-width: $screen-xs-max) {
-    width: 100%;
     display: block;
-    margin-left: 0;
+    width: 100%;
     padding-right: 0;
     margin-top: $margin-xs;
+    margin-left: 0;
   }
 }
 
@@ -29,8 +40,8 @@ tags-input {
     color: $input-color !important;
 
     .autocomplete {
-      margin-top: 0;
       padding: 0;
+      margin-top: 0;
 
       .suggestion-item {
         @include dropdown-item();
@@ -38,43 +49,50 @@ tags-input {
         font-family: $font-family-base;
         font-size: $font-size-base;
 
+        em {
+          color: inherit;
+          font-family: inherit;
+          font-size: inherit;
+        }
+
         &.selected,
         &.selected em {
           @include dropdown-item-active();
         }
 
-        em {
-          font-size: $font-size-base + 1;
-          font-family: $font-family-base;
-          color: inherit;
-          font-size: inherit;
-        }
-
-        &:hover em,
-        em:hover {
+        &:hover em {
           background-color: transparent;
           color: inherit;
         }
       }
     }
-  }
 
-  .tags {
-    box-shadow: none !important;
-    border: none !important;
+    .tags {
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
 
-    input {
-      height: $content-filter-height - 8 !important; // 8 is margin (2+2)+ padding(1+1)+ border(1+1)
-      font-family: $font-family-base;
-    }
+      input {
+        height: $content-filter-height - 8; // 8 is margin (2+2)+ padding(1+1)+ border(1+1)
+        font-family: $font-family-base;
+      }
 
-    .tag-item {
-      color: $gray-middle-new !important;
-      border-color: $gray-darker-new !important;
-      background: transparent !important;
+      .tag-item {
+        padding-right: 0;
+        padding-left: $tag-item-distance-hor;
+        border-color: $gray-lighter-new;
+        background: transparent;
+        color: $gray-new;
 
-      .remove-button {
-        color: $gray-darker-new !important;
+        .remove-button {
+          display: inline-block;
+          padding-right: $tag-item-distance-hor - $tag-remove-button-size/2;
+          padding-left: $tag-item-distance-hor - $tag-remove-button-size/2;
+          margin-left: $tag-item-distance-hor;
+          border-left: 1px solid $tag-item-border-color;
+          color: $tag-item-color;
+          font-size: $tag-remove-button-size;
+        }
       }
     }
   }
@@ -88,99 +106,161 @@ tags-input {
 }
 
 .search {
-  .close {
-    display: none;
+  @media (min-width: $screen-sm-min) {
+    position: relative;
   }
 
   @media (max-width: $screen-xs-max) {
-    $search-input-size: 40px;
-    $search-show-icon-size: 15px;
-    $search-input-margin: 5px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: $search-input-margin;
+    background: $white;
+  }
 
-    &__show {
+  .close {
+    position: absolute;
+    display: none;
+    font-size: $search-close-size;
+
+    @media (min-width: $screen-sm-min) {
+      top: 5px;
+      right: $search-close-size - 6px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      top: $search-input-margin + ($search-input-size - $search-close-size) / 2;
+      right: $search-input-margin + 10px + 1px;
+    }
+  }
+
+  &__show {
+    background: url(#{$images-path}/magnifying-glass16.svg) no-repeat center transparent;
+    cursor: pointer;
+
+    @media (min-width: $screen-sm-min) {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 14px;
+      padding: $search-show-icon-padding;
+      background-size: $search-show-icon-size;
+      transition: $transition-default;
+    }
+
+    @media (max-width: $screen-xs-max) {
       position: fixed;
       z-index: 1040;
       top: 0;
       right: 55px;
-      display: block;
       padding: $main-navigation-height-mobile / 2;
-      background: url(#{$images-path}/magnifying-glass16.svg) no-repeat center transparent;
       background-size: $search-show-icon-size;
-      cursor: pointer;
-
-      .search.mod-opened & {
-        display: none;
-      }
     }
+  }
 
-    &__hide {
-      position: absolute;
+  &__hide {
+    @media (max-width: $screen-xs-max) {
+      position: fixed;
       z-index: 1040;
       top: $search-input-margin + ($search-input-size - $search-show-icon-size) / 2 + 1px;
       left: 8px;
       display: none;
-      padding: $search-show-icon-size / 2 $dropdown-item-padding-horizontal / 2;
+      padding: $search-show-icon-size/2 $dropdown-item-padding-horizontal/2;
       background: url(#{$images-path}/magnifying-glass16.svg) no-repeat center transparent;
-      background-size: $search-show-icon-size;
+      background-size: $search-show-icon-size !important;
       cursor: pointer;
+    }
+  }
 
-      .search.mod-opened & {
-        display: block;
+  tags-input {
+    @include tags-input-size($search-tag-height + 2px);  // plus borders
+
+    display: none;
+
+    // misc
+    @media (min-width: $screen-sm-min) {
+      padding-left: $search-show-icon-padding*2;
+      padding-right: $search-show-icon-padding*2;
+
+      // overflow scroll
+      .tags {
+        white-space: nowrap;
+        overflow-x: scroll;
+      }
+
+      .tag-list {
+        white-space: nowrap;
+        display: inline-block;
+      }
+
+      .input {
+        display: inline-block;
+        float: none !important;
+      }
+
+      .tag-item {
+        float: none !important;
       }
     }
 
-    tags-input {
-      @include tags-input-size($search-input-size - 4px);
+    @media (max-width: $screen-xs-max) {
+      $tag-input-padding: 5px;  // from ng-tags-input
+      $border-to-tag: $dropdown-item-padding-horizontal;
 
-      display: none;
+      margin-top: 0;
+      border: 1px solid $border-color-base;
+
+      .autocomplete {
+        margin-top: $search-input-margin;
+        margin-left: -$border-to-tag;
+        border: 1px solid $border-color-base;
+        box-shadow: none;
+      }
+
+      .host {
+        padding-right: $border-to-tag + 5px;
+        padding-left: $border-to-tag;
+      }
+
+      .tag-list {
+        padding-left: $tag-input-padding;
+      }
+
+      .input {
+        padding-left: 0 !important;
+        min-width: 52px;  // Search word
+      }
     }
+  }
 
-    &.mod-opened {
+  &.mod-opened {
+    @media (max-width: $screen-xs-max) {
       position: fixed;
       z-index: 1040;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      padding: $search-input-margin;
-      background: $white;
+      margin-top: 0;
+    }
 
-      tags-input {
-        $tag-input-padding: 5px;
-        $border-to-tag: $dropdown-item-padding-horizontal - $tag-input-padding;
+    .close,
+    tags-input {
+      display: block;
+    }
 
-        display: block;
-        margin-top: 0;
-        border: 1px solid $border-color-base;
-
-        .autocomplete {
-          margin-top: $search-input-margin;
-          margin-left: -$border-to-tag;
-          border: 1px solid $border-color-base;
-          box-shadow: none;
-        }
-
-        .host {
-          padding-left: $border-to-tag;
-          padding-right: $border-to-tag + 5px;
-        }
-
-        .tag-list {
-          padding-left: $tag-input-padding;
-        }
-
-        .input {
-          min-width: 52px;  // Search word
-        }
+    .search__show {
+      @media (min-width: $screen-sm-min) {
+        right: calc(100% - #{$search-show-icon-padding*2});
       }
 
-      .close {
+      @media (max-width: $screen-xs-max) {
+        display: none;
+      }
+    }
+
+    .search__hide {
+      @media (max-width: $screen-xs-max) {
         display: block;
-        position: absolute;
-        top: $search-input-margin + ($search-input-size - 21px) / 2;
-        right: $search-input-margin + 10px + 1px;
       }
     }
   }

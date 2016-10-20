@@ -29,8 +29,9 @@ $animation-duration: .6s;
   font-weight: 300;
 
   .nav-icon {
-    top: -2px;
-    font-size: 16px;
+    top: -1px;
+    font-size: 13px;
+    font-weight: bold;
   }
 
   @media (min-width: $screen-sm-min) {
@@ -218,4 +219,3 @@ $animation-duration: .6s;
     }
   }
 }
-

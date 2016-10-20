@@ -134,9 +134,11 @@ $panel-new-filter-font: 12px;
       }
     }
 
-    tags-input {
-      @include tags-input-size($panel-new-filter-height - 4px);
+    .search {
+      margin-top: ($panel-new-filter-height - $search-input-size) / 2;
+    }
 
+    tags-input {
       .host {
         border: none !important;
       }

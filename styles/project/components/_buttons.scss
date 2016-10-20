@@ -29,3 +29,66 @@
   }
 }
 
+.btn-group-dropdown {
+  $toggle-width: 33px;
+  $caret-height: 4px;
+  $caret-width: 12px;
+  $divider-color: #4e98c6;
+
+  position: relative;
+
+  > button {
+    float: left;
+
+    &:first-child {
+      border-radius: $border-radius-base 0 0 $border-radius-base;
+    }
+  }
+
+  &__select {
+    position: relative;
+    width: 33px;
+    overflow: hidden;
+    color: transparent !important;
+    border-radius: 0 $border-radius-base $border-radius-base 0;
+    border-left: 1px solid $divider-color;
+
+    .caret {
+      color: $white;
+      position: absolute;
+      top: ($toggle-width - $caret-height)/2;
+      left: ($toggle-width - $caret-width)/2;
+    }
+  }
+
+  .dropdown-menu {
+    top: auto !important;
+    bottom: 0;
+    right: 0;
+    left: auto !important;
+    overflow: hidden;
+    padding: 0;
+    border-radius: $border-radius-base;
+    background: $brand-primary;
+    min-width: auto;
+
+    button {
+      width: 100%;
+      text-align: left;
+      border-radius: 0;
+      border-color: $brand-primary;
+      padding-right: $padding-base-horizontal + $toggle-width;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $divider-color;
+        border-color: $divider-color;
+      }
+    }
+
+    li:not(:last-child) {
+      border-bottom: 1px solid $divider-color;
+    }
+  }
+}

@@ -9,7 +9,7 @@
 .form-control.mod-read-only-block {
   width: auto;
   height: auto;
-  margin-right: $margin-xs;
+  margin-right: 0;
   margin-bottom: $distance-ver-md;
 }
 
@@ -23,6 +23,10 @@
   @media (min-width: $screen-xs-min) {
     display: none;
   }
+}
+
+.margin-bottom-md {
+  margin-bottom: $distance-ver-md;
 }
 
 .remove-detail-btn {

@@ -81,6 +81,46 @@ $panel-new-filter-font: 13px;
     &-text {
       font-size: $font-size-base;
     }
+
+    .breadcrumb {
+      padding: 0;
+
+      > li {
+        height: $panel-header-line-height;
+
+        &.active > span {
+          @media (max-width: $screen-xs-max) {
+            max-width: 200px;
+          }
+        }
+
+        > a,
+        > span {
+          display: inline-block;
+          // font-size: 27px;
+          line-height: $panel-header-line-height;
+
+          max-width: 199px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          @media (max-width: $screen-xs-max) {
+            max-width: 100px;
+            // font-size: 16px;
+          }
+        }
+
+        .glyphicon-menu-right {
+          top: 1px;
+          font-size: 10px;
+
+          @media (max-width: $screen-xs-max) {
+            font-size: 9px;
+          }
+        }
+      }
+    }
   }
 
   &__content {

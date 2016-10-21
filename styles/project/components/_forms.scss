@@ -133,41 +133,46 @@ h5 {
 }
 
 .select-dropdown {
-  display: inline-block;
   position: relative;
+  display: inline-block;
 
   button {
     float: left;
-    cursor: pointer;
     padding: 0;
     margin: 0;
     border: 0;
-    background: none;
     outline: none;
+    background: none;
     white-space: nowrap;
+    cursor: pointer;
   }
 
   &.mod-menu-down {
+    .dropdown-menu {
+      display: block;
+      overflow: hidden;
+      max-height: 0;
+      transition: $dropdown-transition;
+    }
+
+    &:hover {
+      .dropdown-menu {
+        max-height: 1000px;
+      }
+    }
+
     button {
       float: left;
       padding-right: 20px;
     }
 
-    .caret {
-      display: none;
-    }
-
     .glyphicon-menu-down {
       vertical-align: top;
-      z-index: -1;
       font-size: 13px;
       font-weight: bold;
       padding-top: 5px;
-      margin-left: -20px;
-      cursor: pointer;
 
       @media (max-width: $screen-xs-max) {
-        padding-top: 5px;
         font-size: 9px;
       }
     }

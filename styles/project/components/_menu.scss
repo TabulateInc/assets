@@ -76,34 +76,31 @@ $animation-duration: .6s;
       &.mod-opened,
       &:hover {
         .dropdown-menu {
-          margin-top: -$nav-header-content-height;
-          padding-bottom: $dropdown-item-distance-between;
-          max-height: 480px;
-          opacity: 1;
+          max-height: 1000px;
         }
       }
     }
   }
 
   .dropdown-menu {
-    display: block;
-    overflow: hidden;
     position: relative;
-    font-size: 15px;
+    display: block;
     top: 0 !important;
     left: 0 !important;
-    transition: $transition-default;
+    padding-bottom: 0;
+    overflow: hidden;
+    font-size: 15px;
+    transition: $dropdown-transition;
 
     @media (min-width: $screen-sm-min) {
-      max-height: 0;
-      opacity: 0;
       min-width: 300px;
+      max-height: 0;
+      margin-top: -$nav-header-content-height !important;
     }
 
     @media (max-width: $screen-xs-max) {
       max-height: none !important;
       padding-top: 0;
-      padding-bottom: 0;
       float: none;
       box-shadow: none;
       border: none;

@@ -33,7 +33,7 @@
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: 160px;
-  padding: 0 0 $dropdown-item-distance-between 0;
+  padding: 0;
   margin: 0; // override default ul
   list-style: none;
   font-size: $font-size-base;
@@ -52,6 +52,10 @@
   &.pull-right {
     right: 0;
     left: auto;
+  }
+
+  > li:last-child a {
+    margin-bottom: $dropdown-item-distance-between;
   }
 
   // Links within the dropdown menu

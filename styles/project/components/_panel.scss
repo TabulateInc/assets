@@ -105,6 +105,10 @@ $panel-new-filter-font: 13px;
         color: $gray-middle-new;
         font-size: $panel-new-filter-font - 2px;
       }
+
+      .dropdown-menu {
+        font-size: $panel-new-filter-font;
+      }
     }
 
     .search {

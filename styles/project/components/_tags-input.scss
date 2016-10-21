@@ -138,7 +138,7 @@ tags-input {
   }
 
   &__show {
-    background: url(#{$images-path}/magnifying-glass16.svg) no-repeat center transparent;
+    background: url(#{$images-path}/search.svg) no-repeat center transparent;
     cursor: pointer;
 
     @media (min-width: $screen-sm-min) {
@@ -169,7 +169,7 @@ tags-input {
       left: 8px;
       display: none;
       padding: $search-show-icon-size/2 $dropdown-item-padding-horizontal/2;
-      background: url(#{$images-path}/magnifying-glass16.svg) no-repeat center transparent;
+      background: url(#{$images-path}/search.svg) no-repeat center transparent;
       background-size: $search-show-icon-size !important;
       cursor: pointer;
     }
@@ -188,7 +188,6 @@ tags-input {
       // overflow scroll
       .tags {
         white-space: nowrap;
-        overflow-x: scroll;
       }
 
       .tag-list {
@@ -203,6 +202,15 @@ tags-input {
 
       .tag-item {
         float: none !important;
+      }
+
+      .ps-scrollbar-x-rail {
+        left: 0 !important;
+        background-color: transparent !important;
+
+        .ps-scrollbar-x {
+          background-color: transparent !important;
+        }
       }
     }
 

@@ -1,5 +1,5 @@
 $panel-new-filter-height: 50px;
-$panel-new-filter-font: 12px;
+$panel-new-filter-font: 13px;
 
 .panel-new {
   border: 1px solid $border-color-base;
@@ -99,38 +99,11 @@ $panel-new-filter-font: 12px;
 
     border-bottom: 1px solid $border-color-base;
 
-    date-range-selector {
-      display: inline-block;
-      vertical-align: top;
-    }
-
-    .custom-selector__btn,
-    button,
-    .form-control {
-      height: $panel-new-filter-height;
-      line-height: $panel-new-filter-height;
-      font-size: $panel-new-filter-font;
-
-      border: none;
-      padding-top: 0;
-      padding-bottom: 0;
-
-      &:hover,
-      &:focus,
-      &:active,
-      &.is-focused {
-        color: inherit;
-        background-color: transparent;
-        border: none;
-        box-shadow: none;
-      }
-    }
-
     .select-dropdown {
       .caret {
         margin-top: -3px;
-        font-size: $panel-new-filter-font - 2px;
         color: $gray-middle-new;
+        font-size: $panel-new-filter-font - 2px;
       }
     }
 
@@ -148,20 +121,43 @@ $panel-new-filter-font: 12px;
       }
     }
 
+    .custom-selector__btn,
     &__item {
+      height: $panel-new-filter-height;
+      padding: 0 $distance-hor-md !important;
+      border: none;
+      font-size: $panel-new-filter-font;
+      line-height: $panel-new-filter-height;
+
+      &:hover,
+      &:focus,
+      &:active,
+      &.is-focused {
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+        color: inherit;
+      }
+
+      &.calendar-input {
+        padding: 0;
+        width: 130px;
+
+        ~ .glyphicon {
+          top: 0;
+          right: $distance-hor-md !important;
+          padding: 0;
+          line-height: $panel-new-filter-height;
+        }
+      }
+    }
+
+    &__item__wrapper {
       display: inline-block;
       float: left;
-      padding-left: $distance-hor-md;
-
-      .custom-selector__btn {
-        padding-left: 0;
-      }
-
-      .glyphicon {
-        line-height: $panel-new-filter-height;
-        padding: 0;
-        top: -1px;
-      }
+      padding: 0;
+      border-right: 1px solid $border-color-base;
+      vertical-align: top;
     }
   }
 }

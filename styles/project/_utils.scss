@@ -2,14 +2,7 @@
 @import 'variables';
 @import '../bootstrap/variables';
 
-$arrow-possition: no-repeat right 8px center;
-
-$arrow-down: $img-arrow-down $arrow-possition $input-bg;
-$arrow-down-gray: $img-arrow-down-gray $arrow-possition transparent;
-$arrow-down-white: $img-arrow-down-white $arrow-possition transparent;
-
 @mixin custom-selector() {
-  background: $arrow-down;
   position: relative;
   padding-bottom: 3px;
   padding-right: $padding-md;
@@ -17,12 +10,16 @@ $arrow-down-white: $img-arrow-down-white $arrow-possition transparent;
 
   &:active,
   &:focus {
-    background: $arrow-down;
-    color: $black;
+    color: $gray-new;
     border-radius: 2px;
   }
   &.is-focused {
     border-color: $brand-primary !important;
+  }
+
+  .caret {
+    color: $gray-middle-new;
+    margin-top: -3px;
   }
 }
 

@@ -33,8 +33,9 @@
   $from-top-to-start: ($inputs-group-input-height - 16px)/2;
   position: absolute;
   top: $from-top-to-start;
+  color: $gray-middle-new;
   cursor: pointer;
-  right: 10px;
+  right: -16px;
 
   @media (max-width: $screen-xxs-max) {
     top: $inputs-group-input-height + 25px + $from-top-to-start;

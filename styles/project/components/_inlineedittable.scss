@@ -49,11 +49,9 @@
     }
 
     &.mod-edit {
-      border: $items-table-edit-border-width solid $brand-primary !important;
-      border-radius: $border-radius-default;
-      margin-bottom: -1px;
+      padding: 8px;
       margin-top: -1px;
-      padding: 2px;
+      margin-bottom: -1px;
     }
 
     .items-table.mod-in-panel & {

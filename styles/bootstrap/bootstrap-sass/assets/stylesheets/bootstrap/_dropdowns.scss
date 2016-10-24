@@ -39,6 +39,8 @@
   text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   background-color: $dropdown-bg;
   background-clip: padding-box;
+  max-height: 320px;
+  overflow: hidden;
 
   &.select {
     top: 0 !important;

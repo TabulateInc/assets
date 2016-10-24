@@ -47,6 +47,13 @@
   border-color: $grapefruit-dark;
 }
 
+.has-error .panel-new__filter__item {
+  &,
+  & .caret {
+    color: $grapefruit-dark;
+  }
+}
+
 .modal.mod-over-alert {
   z-index: $alert-z-index + 1;
 }

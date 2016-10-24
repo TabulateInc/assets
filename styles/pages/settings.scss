@@ -93,12 +93,6 @@ $nav-to-content-panel: $distance-hor-md;
   }
 }
 
-.nav-button {
-  @media (min-width: $screen-md-min) {
-    display: none;
-  }
-}
-
 // Financial
 .table-head {
   padding-left: 20px;
@@ -252,19 +246,4 @@ settings-selector .glyphicon-option-horizontal {
   position: absolute;
   bottom: 0;
   right: 0;
-}
-
-.nav-button {
-  width: 100%;
-  margin-bottom: $distance-ver-sm;
-  text-align: left;
-  height: $inputs-group-input-height;
-  border-color: $border-color-base !important;
-  padding-left: $panel-new-padding-hor-mobile;
-
-  .caret {
-    margin-top: 8px;
-    float: right;
-    color: $gray-middle-new;
-  }
 }

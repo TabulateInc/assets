@@ -1,7 +1,9 @@
 .header {
-  font-weight:bold;
-  border-bottom:2px solid $table-border-color;
-  padding: $items-table-row-padding;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $table-border-color;
+  line-height: 1em;
+
   &.sticky {
     background: $white;
   }
@@ -10,7 +12,7 @@
 .items-table {
 
   &.mod-sm-at-xs {
-    @media (max-width:$screen-xs-max){
+    @media (max-width: $screen-xs-max) {
       font-size: $font-size-xs;
 
       .sorticon {
@@ -30,10 +32,10 @@
   }
 
   &__row {
+    position: relative;
+    padding: $items-table-row-padding;
     border-bottom: 1px solid $table-border-color;
     cursor: pointer;
-    padding: $items-table-row-padding;
-    position: relative;
 
     &:hover,
     &.as-hovered {

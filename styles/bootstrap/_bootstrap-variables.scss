@@ -922,5 +922,10 @@ $panel-header-height: 60px;
 $panel-header-padding: $distance-hor-md;
 $panel-header-line-height: $panel-header-height - $panel-header-padding*2;
 
-$transition-default: all 0.2s ease-in-out;
+$transition-duration-base: 0.5s;
+$transition-style-base: ease-out;
+$transition-default: all $transition-duration-base $transition-style-base;
+
+$dropdown-transition: max-height $transition-duration-base $transition-style-base;
+
 $shadow-default: 0 0 7px 0 rgba(0, 0, 0, 0.25);

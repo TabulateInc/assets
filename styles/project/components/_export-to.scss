@@ -1,6 +1,11 @@
 .btn.mod-export,
 export-to-pdf,
 export-to-excel {
+  
+  .export-text {
+    margin-left: 4px;
+  }
+
   @media (max-width: $screen-xs-max) {
     display: none !important;
   }

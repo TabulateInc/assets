@@ -68,11 +68,17 @@ settings-selector {
   .btn.mod-export:hover {
     color: $gray-new;
     background-color: transparent;
-    font-size: 12px;
+    font-size: 13px;
 
     width: 100%;
     text-align: left;
     border: none;
+
+    .export-text {
+      position: relative;
+      top: -3px;
+      margin-left: 6px;
+    }
   }
 
 }

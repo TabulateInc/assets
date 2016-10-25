@@ -116,12 +116,6 @@ $table-view-mobile-default-marging: 4px;
       margin-bottom: 0;
   }
 
-  &__mobile-row-cell:last-child {
-    .comma-separator {
-      display: none;
-    }
-  }
-
   &__row, &__mobile-row-line, &__footer-row {
     height: $table-view-row-height;
     line-height: $table-view-row-line-height;
@@ -197,6 +191,12 @@ $table-view-mobile-default-marging: 4px;
 
   &__mobile-row-cell {
     margin-left: $table-view-default-marging;
+
+    &:last-child {
+      .comma-separator {
+        display: none;
+      }
+    }
   }
 
   &__actions {

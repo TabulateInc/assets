@@ -97,3 +97,10 @@
     border: none;
   }
 }
+
+.select-dropdown .dropdown-menu {
+  @media (min-width: $screen-sm-min) {
+    top: -1px !important;
+    min-width: 250px;
+  }
+}

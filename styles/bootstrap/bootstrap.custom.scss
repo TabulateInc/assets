@@ -12,7 +12,10 @@ select.btn {
 
   -webkit-appearance:none;
   -moz-appearance:none;
+}
 
+select.btn,
+.btn[bs-select] {
   &.btn-default {
     border-color: $input-border !important;
     color: $input-color;
@@ -23,7 +26,9 @@ select.btn {
       border-color: $input-border-hover !important;
     }
 
-    &:focus {
+    &:focus,
+    &:active {
+      background-color: $input-bg;
       border-color: $brand-primary !important;
     }
   }

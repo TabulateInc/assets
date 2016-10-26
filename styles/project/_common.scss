@@ -201,6 +201,12 @@ select::-ms-expand {
 select.padding-left-xs option,
 .padding-left-xs {
   padding-left: 6px !important;
+
+  &-at-xs {
+    @media (max-width: $screen-xs-max) {
+      padding-left: 6px !important;
+    }
+  }
 }
 
 .no-margin {

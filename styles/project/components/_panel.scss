@@ -183,6 +183,12 @@ $panel-new-filter-font: 13px;
         color: inherit;
       }
 
+      .caret {
+        position: relative;
+        top: auto;
+        right: auto;
+      }
+
       &.calendar-input {
         padding: 0;
         width: 130px;

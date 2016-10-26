@@ -2,7 +2,14 @@
 @import 'variables';
 @import '../bootstrap/variables';
 
+$arrow-possition: no-repeat right 8px center;
+
+$arrow-down: $img-arrow-down $arrow-possition $input-bg;
+$arrow-down-gray: $img-arrow-down-gray $arrow-possition transparent;
+$arrow-down-white: $img-arrow-down-white $arrow-possition transparent;
+
 @mixin custom-selector() {
+  background: $arrow-down;
   position: relative;
   padding-bottom: 3px;
   padding-right: $padding-md;
@@ -26,4 +33,3 @@
 @function make-click-color($color) {
   @return transparentize(darken($color, 10%), .5);
 }
-

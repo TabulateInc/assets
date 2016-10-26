@@ -8,6 +8,13 @@
   &__btn {
     @include custom-selector();
     padding-right: 20px; // need extra space for carrot
+    background: none;
+
+    .caret {
+      position: absolute;
+      top: calc(50% + 2px);
+      right: 4px;
+    }
   }
 
   &__options {

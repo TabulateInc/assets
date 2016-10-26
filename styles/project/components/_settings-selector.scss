@@ -54,6 +54,10 @@ settings-selector {
         color: inherit;
       }
 
+      * {
+        font-weight: 400 !important;
+      }
+
       label {
         cursor: pointer;
       }
@@ -78,6 +82,10 @@ settings-selector {
       position: relative;
       top: -3px;
       margin-left: 6px;
+
+      .mod-settings-selector {
+        display: inline;
+      }
     }
   }
 

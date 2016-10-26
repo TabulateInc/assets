@@ -2,6 +2,10 @@
 @import '../bootstrap/variables';
 @import '../project/utils';
 
+$overdue-label-width: 3px;
+$overdue-label-color: #F25353;
+
+
 .margin-right-sm {
   margin-right: $margin-xs !important;
 }
@@ -107,4 +111,16 @@
     top: -1px !important;
     min-width: 250px;
   }
+}
+
+.table-view__column:first-child .table-view__row.mod-overdue  .table-view__row-cell {
+  padding-left: 20px - $overdue-label-width !important;
+  border-left: $overdue-label-width solid $overdue-label-color;
+  height: 44px;
+  line-height: 44px;
+}
+
+.table-view__mobile-row.mod-overdue {
+  margin-left: -$overdue-label-width;
+  border-left: $overdue-label-width solid $overdue-label-color;
 }

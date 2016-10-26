@@ -62,6 +62,10 @@
   apply-transaction button {
     float: right;
   }
+
+  &.mod-view-payments {
+    top: 6px;
+  }
 }
 
 .items-table__row.mod-pay-bills {

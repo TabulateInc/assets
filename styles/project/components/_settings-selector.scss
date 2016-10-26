@@ -54,6 +54,10 @@ settings-selector {
         color: inherit;
       }
 
+      * {
+        font-weight: 400 !important;
+      }
+
       label {
         cursor: pointer;
       }

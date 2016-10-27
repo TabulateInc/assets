@@ -49,6 +49,10 @@ $table-view-mobile-default-marging: 4px;
       line-height: 1em;
       padding-bottom: 5px;
     }
+
+    .table-view.mod-in-panel-stack & {
+      border-top: none;
+    }
   }
 
   &__header-cell, &__row-cell {
@@ -89,7 +93,8 @@ $table-view-mobile-default-marging: 4px;
       border-right: none;
     }
 
-    .table-view.mod-in-panel & {
+    .table-view.mod-in-panel &,
+    .table-view.mod-in-panel-stack & {
       border-right: none;
 
       &:first-child {

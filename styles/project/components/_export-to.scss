@@ -10,6 +10,10 @@ export-to-excel {
     }
   }
 
+  &.btn-actions-dropdown button {
+    padding: 0;
+  }
+
   @media (max-width: $screen-xs-max) {
     display: none !important;
   }

@@ -97,6 +97,15 @@
         }
       }
 
+      &.mod-xs {
+        &:before {
+          margin-top: -3px;
+          width: 15px;
+          height: 15px;
+          line-height: 9px;
+        }
+      }
+
       &:before {
         color: $white;
         width: 18px;

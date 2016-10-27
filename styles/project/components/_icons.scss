@@ -73,6 +73,7 @@
 }
 
 .icon-close {
+  float: right;
   border: none;
   background: url(#{$images-path}/close.svg) no-repeat;
   background-position-y: -5px;

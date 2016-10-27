@@ -202,6 +202,17 @@ $table-view-mobile-default-marging: 4px;
         display: none;
       }
     }
+
+    &.mod-money {
+      margin-left: auto;
+      margin-right: $table-view-default-marging;
+    }
+
+    &.mod-no-comma {
+      .comma-separator {
+        display: none;
+      }
+    }
   }
 
   &__actions {

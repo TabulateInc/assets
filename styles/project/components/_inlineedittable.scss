@@ -35,7 +35,9 @@
     }
 
     .items-table__row {
-      line-height: $line-height-sm;
+      @media (min-width: $screen-sm-min) {
+        line-height: $line-height-sm;
+      }
     }
 
     .header,

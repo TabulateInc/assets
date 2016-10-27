@@ -36,10 +36,9 @@ $panel-new-filter-font: 13px;
     }
 
     settings-selector {
-      margin-top: -6px;
+      margin-top: -10px;
 
       .custom-selector {
-        font-weight: 400;
         &__btn {
           font-size: $btn-font-size;
         }

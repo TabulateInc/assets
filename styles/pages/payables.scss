@@ -1,3 +1,4 @@
+
 @import '../project/variables';
 @import '../bootstrap/variables';
 @import '../project/utils';
@@ -123,4 +124,13 @@ $overdue-label-color: #F25353;
 .table-view__mobile-row.mod-overdue {
   margin-left: -$overdue-label-width;
   border-left: $overdue-label-width solid $overdue-label-color;
+}
+
+.wtfsection {
+  padding: 5px 20px;
+  border-bottom: 1px solid $border-color-base;
+
+  .add-control {
+    margin-bottom: 0;
+  }
 }

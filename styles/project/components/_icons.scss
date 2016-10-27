@@ -57,12 +57,12 @@
 
 .icon-export,
 .icon-ellipses,
-.icon-close {
+.icon-close,
+.icon-trash {
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
 }
-
 
 .icon-export {
   background: url(#{$images-path}/export.svg) no-repeat top left;
@@ -77,6 +77,10 @@
   border: none;
   background: url(#{$images-path}/close.svg) no-repeat;
   background-position-y: -5px;
+}
+
+.icon-trash {
+  background: url(#{$images-path}/trash.svg) no-repeat top left;
 }
 
 .chevrone-down-icon {

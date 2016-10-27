@@ -113,10 +113,19 @@ $panel-new-filter-font: 13px;
         .glyphicon-menu-right {
           top: 1px;
           font-size: 10px;
+          vertical-align: top;
 
           @media (max-width: $screen-xs-max) {
             font-size: 9px;
           }
+        }
+
+        .dropdown .glyphicon-menu-right{
+          top: -1px;
+        }
+
+        .dropdown-toggle {
+          margin-top: -1px;
         }
       }
     }

@@ -167,11 +167,6 @@ h5 {
     }
 
     .glyphicon-menu-down {
-      vertical-align: top;
-      font-size: 13px;
-      font-weight: bold;
-      padding-top: 5px;
-
       @media (max-width: $screen-xs-max) {
         font-size: 9px;
       }

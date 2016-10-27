@@ -28,12 +28,6 @@ $animation-duration: .6s;
 .navbar-title {
   font-weight: 300;
 
-  .nav-icon {
-    top: -1px;
-    font-size: 13px;
-    font-weight: bold;
-  }
-
   @media (min-width: $screen-sm-min) {
     font-size: $nav-header-title-size;
     height: $nav-header-content-height;

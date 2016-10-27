@@ -99,7 +99,7 @@ tags-input {
 
   &.has-search-icon {
     input.input {
-      background: url(#{$images-path}/magnifying-glass16.svg) no-repeat 5px center transparent;
+      background: url(#{$images-path}/search.svg) no-repeat 5px center transparent;
       background-size: 12px;
     }
   }
@@ -121,7 +121,7 @@ tags-input {
     background: $white;
   }
 
-  .close {
+  .icon-close {
     position: absolute;
     display: none;
     font-size: $search-close-size;
@@ -251,7 +251,7 @@ tags-input {
       margin-top: 0;
     }
 
-    .close,
+    .icon-close,
     tags-input {
       display: block;
     }

@@ -50,10 +50,14 @@
   }
 
   .add-icon{
-    >.glyphicon{
+    >.glyphicon {
       position: absolute;
       padding: 13px 5px;
       right: 15px;
+
+      &.icon-calendar {
+        right: 10px;
+      }
     }
   }
   .calendar-holder {

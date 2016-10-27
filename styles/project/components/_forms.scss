@@ -149,6 +149,8 @@ h5 {
 
   &.mod-menu-down {
     .dropdown-menu {
+      top: -10px !important;
+      left: -10px !important;
       display: block;
       overflow: hidden;
       max-height: 0;

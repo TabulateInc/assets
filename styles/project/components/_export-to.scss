@@ -1,9 +1,10 @@
 .btn.mod-export,
 export-to-pdf,
 export-to-excel {
+min-width: 70px;
 
   .export-text {
-    margin-left: 4px;
+    margin-left: 18px;
 
     .mod-settings-selector {
       display: none;

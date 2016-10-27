@@ -70,3 +70,10 @@
   display: inline-block;
   vertical-align: middle;
 }
+
+.icon-export {
+   background: url(#{$images-path}/export.svg) no-repeat top left;
+   height: 30px;
+   width: 30px;
+   background-size: 30px 30px;
+ }

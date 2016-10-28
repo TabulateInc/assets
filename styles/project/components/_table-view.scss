@@ -265,3 +265,12 @@ $table-view-mobile-default-marging: 4px;
     text-align: left;
   }
 }
+
+.table-view.mod-in-panel-stack,
+.table-view.mod-in-panel {
+  .table-view__row.mod-money .table-view__row-cell,
+  .table-view__footer-row.mod-money .table-view__footer-cell,
+  .table-view__header-cell.mod-money {
+    padding-right: $panel-new-padding-hor;
+  }
+}

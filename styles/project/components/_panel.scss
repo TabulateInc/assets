@@ -64,17 +64,19 @@ $panel-new-filter-font: 13px;
     }
 
     .b-delete-icon {
-      cursor: pointer;
-      font-size: 18px;
+      margin-top: -1*(36px - $panel-header-line-height) / 2;
+      // top: 0;
       margin-right: 16px;
       color: $gray-middle-new;
+      font-size: 18px;
+      cursor: pointer;
 
       &:hover,
-      &:hover .glyphicon-trash {
+      &:hover .icon-trash {
         color: $gray-darkest-new;
       }
 
-      .glyphicon-trash {
+      .icon-trash {
         color: $gray-middle-new;
         font-size: 18px;
       }

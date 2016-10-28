@@ -35,6 +35,12 @@
           background-color: $input-bg-disabled;
           border-color: $input-border;
         }
+
+        &.mod-primary {
+          &:before {
+            background-image: url(#{$images-path}/checkmark.dark.svg);
+          }
+        }
       }
     }
   }

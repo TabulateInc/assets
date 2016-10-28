@@ -200,11 +200,9 @@ $animation-duration: .6s;
   .aside.mod-navbar {
     background-color: $white;
 
-    .close {
+    .icon-close {
       float: left;
-      padding: 10px 14px;
       margin-left: 5px;
-      outline: none !important;
     }
 
     .aside-dialog {

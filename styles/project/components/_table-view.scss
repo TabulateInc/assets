@@ -173,7 +173,8 @@ $table-view-mobile-default-marging: 4px;
   }
 
   &__row-action {
-    margin-top: $table-view-default-marging;
+    // margin-top: $table-view-default-marging;
+    padding-bottom: 0;
   }
 
   &__mobile-row-action {
@@ -227,9 +228,9 @@ $table-view-mobile-default-marging: 4px;
     margin-left: $table-view-default-marging;
   }
 
-  &__action-icon, &__action-label {
+  &__action-icon,
+  &__action-label {
     margin-right: $table-view-default-marging;
-    margin-bottom: $table-view-default-marging;
     cursor: pointer;
   }
 

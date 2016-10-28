@@ -59,7 +59,8 @@
 .icon-ellipses,
 .icon-close,
 .icon-trash,
-.icon-calendar {
+.icon-calendar,
+.icon-filter {
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
@@ -87,6 +88,9 @@
   background: url(#{$images-path}/calendar.svg) no-repeat top left;
 }
 
+.icon-filter {
+  background: url(#{$images-path}/filter.svg) no-repeat top left;
+}
 
 .chevrone-down-icon {
   font-size: 10px;

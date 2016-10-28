@@ -78,29 +78,6 @@ $overdue-label-color: #F25353;
       padding-bottom: 0;
     }
   }
-
-  &.mod-in-panel {
-    .header {
-      padding-top: 8px;
-      padding-bottom: 8px;
-      line-height: $line-height-sm;
-    }
-
-    .items-table__row {
-      line-height: $line-height-sm;
-    }
-
-    .header,
-    .items-table__row {
-      padding-right: $panel-new-padding-hor;
-      padding-left: $panel-new-padding-hor;
-
-      @media (max-width: $screen-xs-max) {
-        padding-right: $panel-new-padding-hor-mobile;
-        padding-left: $panel-new-padding-hor-mobile;
-      }
-    }
-  }
 }
 
 .input-helper {

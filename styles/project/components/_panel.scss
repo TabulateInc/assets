@@ -21,7 +21,7 @@ $panel-new-filter-font: 13px;
 
     @media (max-width: $screen-xs-max) {
       padding: 15px $panel-new-padding-hor-mobile;    // move
-      font-size: 16px;
+      font-size: 18px;
     }
 
     > .btn {
@@ -36,10 +36,9 @@ $panel-new-filter-font: 13px;
     }
 
     settings-selector {
-      margin-top: -6px;
+      margin-top: -10px;
 
       .custom-selector {
-        font-weight: 400;
         &__btn {
           font-size: $btn-font-size;
         }
@@ -118,10 +117,19 @@ $panel-new-filter-font: 13px;
         .glyphicon-menu-right {
           top: 1px;
           font-size: 10px;
+          vertical-align: top;
 
           @media (max-width: $screen-xs-max) {
             font-size: 9px;
           }
+        }
+
+        .dropdown .glyphicon-menu-right{
+          top: -1px;
+        }
+
+        .dropdown-toggle {
+          margin-top: -1px;
         }
       }
     }

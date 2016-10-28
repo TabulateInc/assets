@@ -27,6 +27,31 @@
     }
   }
 
+  &.mod-in-panel {
+    .header {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      line-height: $line-height-sm;
+    }
+
+    .items-table__row {
+      @media (min-width: $screen-sm-min) {
+        line-height: $line-height-sm;
+      }
+    }
+
+    .header,
+    .items-table__row {
+      padding-right: $panel-new-padding-hor;
+      padding-left: $panel-new-padding-hor;
+
+      @media (max-width: $screen-xs-max) {
+        padding-right: $panel-new-padding-hor-mobile;
+        padding-left: $panel-new-padding-hor-mobile;
+      }
+    }
+  }
+
   &__top {
     border-top: 1px solid $table-border-color;
   }

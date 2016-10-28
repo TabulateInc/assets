@@ -202,6 +202,17 @@ $table-view-mobile-default-marging: 4px;
         display: none;
       }
     }
+
+    &.mod-money {
+      margin-left: auto;
+      margin-right: $table-view-default-marging;
+    }
+
+    &.mod-no-comma {
+      .comma-separator {
+        display: none;
+      }
+    }
   }
 
   &__actions {
@@ -251,7 +262,15 @@ $table-view-mobile-default-marging: 4px;
 
   &__footer-cell {
     padding-right: $table-view-cell-right-padding;
-    font-weight: 700;
     text-align: left;
+  }
+}
+
+.table-view.mod-in-panel-stack,
+.table-view.mod-in-panel {
+  .table-view__row.mod-money .table-view__row-cell,
+  .table-view__footer-row.mod-money .table-view__footer-cell,
+  .table-view__header-cell.mod-money {
+    padding-right: $panel-new-padding-hor;
   }
 }

@@ -50,14 +50,25 @@ $icon-btn-padding: 10px;
   display: inline-block;
 }
 
-mobile-filters.mod-fixed-top
-.icon-btn.mod-mobile-filter {
-  $icon-height: 14px;
-  $btn-height: $icon-btn-padding*2 + $icon-height;
+mobile-filters {
+  &.mod-fixed-top
+  .icon-btn.mod-mobile-filter {
+    $icon-height: 14px;
+    $btn-height: $icon-btn-padding*2 + $icon-height;
 
-  position: fixed;
-  z-index: 1040;
-  top: ($main-navigation-height-mobile - $btn-height) / 2;  // extra margin
-  right: ($grid-gutter-width / 2);
-  margin-right: 0;
+    position: fixed;
+    z-index: 1040;
+    top: ($main-navigation-height-mobile - $btn-height) / 2;  // extra margin
+    right: ($grid-gutter-width / 2);
+    margin-right: 0;
+  }
+
+  &.mod-sm {
+    min-height: 1px;
+
+    .icon-filter {
+      height: 16px;
+      background-position: 2px;
+    }
+  }
 }

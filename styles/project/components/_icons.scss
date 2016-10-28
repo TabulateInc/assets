@@ -74,10 +74,12 @@
   background: url(#{$images-path}/ellipses.svg) no-repeat top center;
 }
 
-.icon-close {
+.icon-close,
+.icon-close:hover {
   float: right;
   border: none;
   background: url(#{$images-path}/close.svg) no-repeat;
+  background-color: transparent;
 }
 
 .icon-trash {

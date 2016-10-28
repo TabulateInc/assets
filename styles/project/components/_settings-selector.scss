@@ -58,12 +58,12 @@ settings-selector {
         font-weight: 400 !important;
       }
 
-      .btn-actions-dropdown {
+      .btn-settings-action {
         position: relative;
         width: 100%;
         border: none;
 
-        .mod-align-caption,
+        .btn-settings-action__caption,
         .export-text {
           position: absolute !important;
           top: 0 !important;

@@ -67,10 +67,16 @@ settings-selector {
         font-weight: 400 !important;
       }
 
-      .btn-settings-action {
+      .btn-settings-action,
+      .btn-settings-action:hover,
+      .btn-settings-action:focus,
+      .btn-settings-action:active {
         position: relative;
         width: 100%;
         border: none;
+        background-color: transparent;
+        box-shadow: none;
+        color: $gray-new;
 
         .btn-settings-action__caption,
         .export-text {
@@ -90,8 +96,8 @@ settings-selector {
 
   .btn.mod-export,
   .btn.mod-export:hover {
-    color: $gray-new;
     background-color: transparent;
+    color: $gray-new;
     font-size: 13px;
 
     width: 100%;

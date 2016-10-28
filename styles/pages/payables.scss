@@ -78,6 +78,12 @@ $overdue-label-color: #F25353;
       padding-bottom: 0;
     }
   }
+
+  &__row .checkbox.mod-custom label {
+    @media (max-width: $screen-xs-max) {
+      top: 0 !important;
+    }
+  }
 }
 
 .input-helper {

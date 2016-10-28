@@ -67,6 +67,21 @@ settings-selector {
         font-weight: 400 !important;
       }
 
+      .btn-settings-action {
+        position: relative;
+        width: 100%;
+        border: none;
+
+        .btn-settings-action__caption,
+        .export-text {
+          position: absolute !important;
+          top: 0 !important;
+          left: 30px;
+          margin-left: 0 !important;
+          font-size: 13px;
+        }
+      }
+
       label {
         cursor: pointer;
       }

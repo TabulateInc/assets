@@ -11,8 +11,14 @@ export-to-excel {
     }
   }
 
-  &.btn-settings-action button {
-    padding: 0;
+  &.btn-settings-action {
+    & button {
+      padding: 0;
+    }
+
+    .icon-export {
+      background-position: -5px 0;
+    }
   }
 
   @media (max-width: $screen-xs-max) {

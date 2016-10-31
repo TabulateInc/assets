@@ -175,6 +175,10 @@ tags-input {
     }
   }
 
+  &__wrapper {
+    flex-grow: 1;
+  }
+
   tags-input {
     @include tags-input-size($search-tag-height + 2px);  // plus borders
 

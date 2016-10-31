@@ -8,6 +8,7 @@ $panel-new-filter-font: 13px;
   width: 100%;
   border-radius: $border-radius-base;
 
+
   &__header {
     $btn-padding-ver: 5px;
     $btn-font-size: $font-size-base;
@@ -150,6 +151,16 @@ $panel-new-filter-font: 13px;
     @include clearfix;
 
     border-bottom: 1px solid $border-color-base;
+
+    @media (max-width: $screen-xs-max) {
+      overflow: hidden;
+      height: 0;
+      border: none;
+    }
+
+    &.mod-search {
+      display: flex;
+    }
 
     .select-dropdown {
       .caret {

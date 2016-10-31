@@ -99,22 +99,6 @@ $overdue-label-color: #F25353;
   }
 }
 
-.panel-new__filter.mod-search {
-  display: flex;
-}
-
-.search__wrapper {
-  flex-grow: 1;
-}
-
-@media (max-width: $screen-xs-max) {
-  .panel-new__filter {
-    overflow: hidden;
-    height: 0;
-    border: none;
-  }
-}
-
 .dropdown-menu.mod-wide {
   @media (min-width: $screen-sm-min) {
     top: -1px !important;

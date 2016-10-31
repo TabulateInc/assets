@@ -30,15 +30,17 @@ select.btn {
 
 select.btn,
 .btn[bs-select] {
-  border-color: $input-border;
-  color: $input-color;
-
-  &:focus,
-  &:hover,
-  &:active {
-    border-color: $input-border-hover;
-    background-color: $input-bg;
+  &.btn-default {
+    border-color: $input-border;
     color: $input-color;
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: $input-border-hover;
+      background-color: $input-bg;
+      color: $input-color;
+    }
   }
 }
 

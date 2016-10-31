@@ -173,8 +173,12 @@ $table-view-mobile-default-marging: 4px;
   }
 
   &__row-action {
-    // margin-top: $table-view-default-marging;
-    padding-bottom: 0;
+    margin-top: $table-view-default-marging;
+
+    &.mod-icon {
+      padding-bottom: 0;
+      margin-top: 0;
+    }
   }
 
   &__mobile-row-action {

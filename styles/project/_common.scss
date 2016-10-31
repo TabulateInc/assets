@@ -194,10 +194,15 @@ select::-ms-expand {
   }
 }
 
-.padding-right-sm {
-  padding-right: $padding-sm !important;
-}
+.padding-right {
+  &-sm {
+    padding-right: $padding-sm !important;
+  }
 
+  &-lg {
+    padding-right: $padding-horizontal-lg;
+  }
+}
 select.padding-left-xs option,
 .padding-left-xs {
   padding-left: 6px !important;
@@ -380,10 +385,11 @@ select.padding-left-xs option,
   $color: $brand-primary;
   $border: 1px solid $color;
 
-  background-color: $table-bg-hover;
   border: $border;
+  background-color: $table-bg-hover;
   color: $color;
 
+  margin-left: 6px;
   &:hover, &:focus, &:active, &.active {
     background-color: $white;
     border: $border;

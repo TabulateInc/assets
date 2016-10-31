@@ -1,3 +1,4 @@
+
 // Override Bootstrap variables here (defaults from bootstrap-sass v3.3.1.0):
 
 // When true, asset path helpers are used, otherwise the regular CSS `url()` is used.
@@ -61,14 +62,6 @@ $brand-saturated:             #5C89B7;
 $state-danger-text:              #f25353;
 $state-danger-bg:                #f2dede;
 $state-danger-border:            #f25353;  // darken(adjust-hue($state-danger-bg, -10), 5%)
-
-
-// stuff
-$button-primary:              $brand-primary;
-$button-primary-hover:        $brand-saturated;
-$pill-background-color:       $brand-primary;
-$link-font-color:             $brand-primary;
-$link-font-color-hover:       $brand-saturated;
 
 
 //== Scaffolding
@@ -929,3 +922,19 @@ $transition-default: all $transition-duration-base $transition-style-base;
 $dropdown-transition: max-height $transition-duration-base $transition-style-base;
 
 $shadow-default: 0 0 7px 0 rgba(0, 0, 0, 0.25);
+
+
+// bootflat
+$button-primary:                 $brand-primary;
+$button-primary-hover:           $brand-saturated;
+$button-normal:                  $gray-lighter-new;
+$button-normal-hover:            $button-normal;
+$button-default:                 $white;
+$button-default-hover:           $brand-primary;
+
+$button-font-color-dark:         $gray-new;
+$button-font-color-light:        $white;
+
+$pill-background-color:       $brand-primary;
+$link-font-color:             $brand-primary;
+$link-font-color-hover:       $brand-saturated;

@@ -2,8 +2,7 @@
 @import '../bootstrap/variables';
 
 .aside.mod-mobile-filter {
-  width: 90%;
-  max-width: 600px;
+  width: 100%;
 
   .content-filter {
     margin: 0;
@@ -18,10 +17,10 @@
     display: block;
     margin: 0 0 $margin-sm;
     height: $height-md;
-    max-width: 568px;
   }
 
-  .btn-select {
+  .btn-select,
+  .custom-selector__btn {
     text-align: left;
 
     .caret {
@@ -30,12 +29,14 @@
       cursor: pointer;
       right: 10px;
       color: $gray-middle-new;
+      margin-top: 0;
     }
   }
 
   .custom-selector__btn {
     height: $height-md;
     line-height: $height-sm;
+    position: relative;
   }
 
   tags-input.mod-xs {

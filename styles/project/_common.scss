@@ -194,14 +194,8 @@ select::-ms-expand {
   }
 }
 
-.padding-right {
-  &-sm {
-    padding-right: $padding-sm !important;
-  }
-
-  &-lg {
-    padding-right: $padding-horizontal-lg;
-  }
+.padding-right-sm {
+  padding-right: $padding-sm !important;
 }
 select.padding-left-xs option,
 .padding-left-xs {

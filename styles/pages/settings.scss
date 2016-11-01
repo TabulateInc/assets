@@ -116,8 +116,17 @@ input.mod-delete-option {
 }
 
 // Templates
-// Daily Summary
-.dst-categories {
+.items-table__row.mod-template {
+  line-height: 35px;
+
+  .form-control {
+    height: 35px;
+    padding-left: 21px;
+  }
+
+  .over-input {
+    top: 30%;
+  }
 
   p,
   strong {
@@ -127,38 +136,8 @@ input.mod-delete-option {
   p {
     margin-bottom: 0;
   }
-
-  &__category {
-    line-height: $line-height-sm;
-  }
-
-  &__subcategory {
-    line-height: $line-height-sm; // make slightly smaller than category line height
-
-    .form-control {
-      height: $line-height-sm;
-      padding-left: 21px;
-    }
-  }
-
-  // temp hack, anyway we're doing complete restyle of this page
-  // and this code will be removed
-  &__item,
-  &__item + .b-delete-icon {
-    display: flex !important;
-    min-height: 35px;
-    align-items: center;
-  }
-  &__item + .b-delete-icon {
-    justify-content: flex-end;
-  }
 }
 
-settings-selector .glyphicon-option-horizontal {
-  vertical-align: middle;
-}
-
-// Menu
 .item-details-form {
   .alert-danger {
     position: relative;
@@ -166,7 +145,7 @@ settings-selector .glyphicon-option-horizontal {
     margin-right: $input-in-control-padding-right !important;
     margin-bottom: $margin-normal !important;
 
-    @media (max-width:$screen-xs-max){
+    @media (max-width: $screen-xs-max) {
       margin-right: 0 !important;
     }
   }

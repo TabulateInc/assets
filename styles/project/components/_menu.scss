@@ -28,12 +28,6 @@ $animation-duration: .6s;
 .navbar-title {
   font-weight: 300;
 
-  .nav-icon {
-    top: -1px;
-    font-size: 13px;
-    font-weight: bold;
-  }
-
   @media (min-width: $screen-sm-min) {
     font-size: $nav-header-title-size;
     height: $nav-header-content-height;
@@ -146,7 +140,7 @@ $animation-duration: .6s;
       color: $gray-middle-new;
       font-size: 20px;
       line-height: $nav-header-content-height;
-      margin-left: 20px;
+      margin-left: 10px;
     }
   }
 
@@ -200,11 +194,9 @@ $animation-duration: .6s;
   .aside.mod-navbar {
     background-color: $white;
 
-    .close {
+    .icon-close {
       float: left;
-      padding: 10px 14px;
-      margin-left: 5px;
-      outline: none !important;
+      margin-left: 18px;
     }
 
     .aside-dialog {

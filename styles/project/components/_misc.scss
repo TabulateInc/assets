@@ -71,3 +71,16 @@
     margin-bottom: 25px;
   }
 }
+
+.remove-detail-btn {
+  display: inline-block;
+  color: $gray-middle-new;
+  cursor: pointer;
+
+  @media (min-width: $screen-xs-min) {
+    $from-top-to-start: ($inputs-group-input-height - 30px)/2;
+
+    padding-right: 0 !important;
+    margin-top: $from-top-to-start;
+  }
+}

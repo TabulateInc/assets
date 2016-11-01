@@ -2,28 +2,27 @@
 @import 'variables';
 @import '../bootstrap/variables';
 
+
 @mixin custom-selector() {
   position: relative;
-  padding-bottom: 3px;
   padding-right: $padding-md;
+  padding-bottom: 3px;
   text-align: left;
 
   &:active,
   &:focus {
     color: $gray-new;
-    border-radius: 2px;
   }
   &.is-focused {
     border-color: $brand-primary !important;
   }
 
   .caret {
-    color: $gray-middle-new;
     margin-top: -3px;
+    color: $gray-middle-new;
   }
 }
 
 @function make-click-color($color) {
   @return transparentize(darken($color, 10%), .5);
 }
-

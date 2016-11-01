@@ -64,7 +64,7 @@ h5 {
     line-height: 1em;
 
     @media (max-width: $screen-xs-max) {
-      font-size: 19px;
+      font-size: 18px;
     }
   }
 
@@ -149,6 +149,8 @@ h5 {
 
   &.mod-menu-down {
     .dropdown-menu {
+      top: -10px !important;
+      left: -10px !important;
       display: block;
       overflow: hidden;
       max-height: 0;
@@ -157,21 +159,26 @@ h5 {
 
     &:hover {
       .dropdown-menu {
-        max-height: 1000px;
+        @media (min-width: $screen-sm-min) {
+          max-height: 1000px;
+        }
+      }
+    }
+
+    &.open {
+      .dropdown-menu {
+        @media (max-width: $screen-xs-max) {
+          max-height: 1000px;
+        }
       }
     }
 
     button {
       float: left;
-      padding-right: 20px;
+      padding-right: 0;
     }
 
     .glyphicon-menu-down {
-      vertical-align: top;
-      font-size: 13px;
-      font-weight: bold;
-      padding-top: 5px;
-
       @media (max-width: $screen-xs-max) {
         font-size: 9px;
       }

@@ -55,11 +55,49 @@
   }
 }
 
+.icon-export,
+.icon-ellipses,
+.icon-close,
+.icon-trash,
+.icon-calendar,
+.icon-filter {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+}
+
+.icon-export {
+  background: url(#{$images-path}/export.svg) no-repeat top left;
+}
+
 .icon-ellipses {
   background: url(#{$images-path}/ellipses.svg) no-repeat top center;
-  height: 30px;
-  width: 30px;
-  background-size: 30px 30px;
+}
+
+.icon-close {
+  float: right;
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border: none;
+    background: url(#{$images-path}/close.svg) no-repeat;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.icon-trash {
+  background: url(#{$images-path}/trash.svg) no-repeat top left;
+}
+
+.icon-calendar {
+  background: url(#{$images-path}/calendar.svg) no-repeat top left;
+}
+
+.icon-filter {
+  background: url(#{$images-path}/filter.svg) no-repeat top left;
 }
 
 .chevrone-down-icon {
@@ -67,6 +105,18 @@
   font-weight: bold;
   margin-left: 5px;
   margin-top: -3px;
-  display: inline-block;
   vertical-align: middle;
+}
+
+.icon-profile,
+.icon-logout {
+  width: 38px;
+  height: 38px;
+  background-size: 38px 38px;
+}
+
+.icon-profile { background: url(#{$images-path}/profile.svg) no-repeat top left;}
+.icon-logout {
+  background: url(#{$images-path}/logout.svg) no-repeat;
+  background-position: 0 -1px;
 }

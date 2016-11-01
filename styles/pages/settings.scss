@@ -190,30 +190,6 @@ settings-selector .glyphicon-option-horizontal {
   margin-bottom: $distance-ver-md;
 }
 
-.btn-expand {
-  $btn-width: 110px;
-
-  color: $gray-middle-new;
-  width: $btn-width;
-  padding: 7px 10px;
-  cursor: pointer;
-  float: left;
-  position: absolute;
-  top: -17px;
-  left: calc(50% - #{$btn-width}/2);
-
-  &__wrapper {
-    position: relative;
-    z-index: 900;
-    height: 1px;
-  }
-
-  &__line {
-    border-bottom: 1px solid $table-border-color;
-    width: calc(50% - #{$btn-width}/2);
-  }
-}
-
 .hidden-xxs {
   @media (max-width: $screen-xxs-max) {
     display: none;

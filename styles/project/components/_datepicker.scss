@@ -1,13 +1,17 @@
 // Other styles in _third-parties (angular strap)
 
 .add-icon {
-    position: relative;
+  position: relative;
 
-    > .glyphicon {
-        position:absolute;
-        padding: 12px 15px;
-        right:10px;
+  > .glyphicon {
+    position: absolute;
+    padding: 12px 15px;
+    right: 10px;
+
+    &.icon-calendar {
+      margin-top: 3px;
     }
+  }
 }
 
 .calendar-input {

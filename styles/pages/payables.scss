@@ -1,6 +1,11 @@
+
 @import '../project/variables';
 @import '../bootstrap/variables';
 @import '../project/utils';
+
+$overdue-label-width: 3px;
+$overdue-label-color: #F25353;
+
 
 .margin-right-sm {
   margin-right: $margin-xs !important;
@@ -29,20 +34,6 @@
   margin-bottom: $distance-ver-md;
 }
 
-.remove-detail-btn {
-  $from-top-to-start: ($inputs-group-input-height - 16px)/2;
-  position: absolute;
-  top: $from-top-to-start;
-  color: $gray-middle-new;
-  cursor: pointer;
-  right: -16px;
-
-  @media (max-width: $screen-xxs-max) {
-    top: $inputs-group-input-height + 25px + $from-top-to-start;
-    right: $distance-hor-md;
-  }
-}
-
 .has-error .form-control[disabled] {
   border-color: $grapefruit-dark;
 }
@@ -62,11 +53,24 @@
   apply-transaction button {
     float: right;
   }
+
+  &.mod-view-payments {
+    top: 6px;
+  }
 }
 
-.items-table__row.mod-pay-bills {
-  padding-bottom: 0;
-  line-height: $line-height-sm;
+.items-table{
+  &.mod-pay-bills {
+    .items-table__row {
+      padding-bottom: 0;
+    }
+  }
+
+  &__row .checkbox.mod-custom label {
+    @media (max-width: $screen-xs-max) {
+      top: 0 !important;
+    }
+  }
 }
 
 .input-helper {
@@ -82,18 +86,30 @@
   }
 }
 
-.panel-new__filter.mod-search {
-  display: flex;
+.dropdown-menu.mod-wide {
+  @media (min-width: $screen-sm-min) {
+    top: -1px !important;
+    min-width: 250px;
+  }
 }
 
-.search__wrapper {
-  flex-grow: 1;
+.table-view__column:first-child .table-view__row.mod-overdue  .table-view__row-cell {
+  padding-left: 20px - $overdue-label-width !important;
+  border-left: $overdue-label-width solid $overdue-label-color;
+  height: 44px;
+  line-height: 44px;
 }
 
-@media (max-width: $screen-xs-max) {
-  .panel-new__filter {
-    overflow: hidden;
-    height: 0;
-    border: none;
+.table-view__mobile-row.mod-overdue {
+  margin-left: -$overdue-label-width;
+  border-left: $overdue-label-width solid $overdue-label-color;
+}
+
+.wtfsection {
+  padding: 5px 20px;
+  border-bottom: 1px solid $border-color-base;
+
+  .add-control {
+    margin-bottom: 0;
   }
 }

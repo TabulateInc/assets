@@ -35,6 +35,12 @@
           background-color: $input-bg-disabled;
           border-color: $input-border;
         }
+
+        &.mod-primary {
+          &:before {
+            background-image: url(#{$images-path}/checkmark.dark.svg);
+          }
+        }
       }
     }
   }
@@ -94,6 +100,15 @@
           width: 24px;
           height: 24px;
           line-height: 16px;
+        }
+      }
+
+      &.mod-xs {
+        &:before {
+          margin-top: -3px;
+          width: 15px;
+          height: 15px;
+          line-height: 9px;
         }
       }
 

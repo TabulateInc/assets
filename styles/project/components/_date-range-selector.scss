@@ -8,6 +8,24 @@
   &__btn {
     @include custom-selector();
     padding-right: 20px; // need extra space for carrot
+    border-color: $input-border;
+    background: none;
+    color: $input-color;
+
+    &:focus,
+    &:hover,
+    &.is-focused {
+      border-color: $input-border-hover;
+      background-color: $input-bg;
+      color: $input-color;
+    }
+
+    .caret {
+      position: absolute;
+      top: calc(50% - 1px);
+      right: 4px;
+      margin-top: 0;
+    }
   }
 
   &__options {
@@ -43,10 +61,14 @@
   }
 
   .add-icon{
-    >.glyphicon{
+    >.glyphicon {
       position: absolute;
       padding: 13px 5px;
       right: 15px;
+
+      &.icon-calendar {
+        right: 10px;
+      }
     }
   }
   .calendar-holder {

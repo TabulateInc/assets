@@ -8,28 +8,39 @@
 
 
 select.btn {
+  $arrow-possition: no-repeat right 8px center;
+  $arrow-down: $img-arrow-down $arrow-possition $input-bg;
+  $arrow-down-gray: $img-arrow-down-gray $arrow-possition transparent;
+  $arrow-down-white: $img-arrow-down-white $arrow-possition transparent;
+
   @include custom-selector();
 
-  -webkit-appearance:none;
-  -moz-appearance:none;
-
-  &.btn-default {
-    border-color: $input-border !important;
-    color: $input-color;
-
-    &:hover,
-    &:hover option {
-      background-color: $input-bg;
-      border-color: $input-border-hover !important;
-    }
-
-    &:focus {
-      border-color: $brand-primary !important;
-    }
-  }
+  background: $arrow-down;
+  appearance: none;
 
   option {
     text-align: left;
+  }
+
+  &:hover option {
+    border-color: $input-border-hover;
+    background-color: $input-bg;
+  }
+}
+
+select.btn,
+.btn[bs-select] {
+  &.btn-default {
+    border-color: $input-border;
+    color: $input-color;
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: $input-border-hover;
+      background-color: $input-bg;
+      color: $input-color;
+    }
   }
 }
 

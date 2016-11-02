@@ -33,12 +33,8 @@ $table-view-mobile-default-marging: 4px;
     justify-content: flex-end;
   }
 
-  &__header-label {
-    text-transform: uppercase;
-  }
-
   &__header-cell {
-    color: $brand-primary;
+    color: $gray-middle-new;
     border-top: 1px solid $table-border-color;
     border-bottom: 1px solid $table-border-color;
     flex: 0 0 auto;

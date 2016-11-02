@@ -148,6 +148,8 @@ h5 {
   }
 
   &.mod-menu-down {
+    float: left;
+
     .dropdown-menu {
       top: -10px !important;
       left: -10px !important;

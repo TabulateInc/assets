@@ -1,11 +1,9 @@
 @import '../project/variables';
 @import '../project/utils';
 @import 'variables';
-
 @import 'bootstrap-sass/assets/stylesheets/bootstrap';
 @import 'Bootflat/bootflat/scss/bootflat';
 @import 'bootstrap-additions/bootstrap-additions';
-
 
 select.btn {
   $arrow-possition: no-repeat right 8px center;
@@ -48,14 +46,23 @@ select.btn,
 .btn-fake {
   // button that looks like an input
   @extend .btn-default;
+
   top: 1px;
-  width: 80px;  // to acomodate x,xxx.xx
-  padding-top: 5px;
-  padding-bottom: 5px;
   overflow: hidden;
+  width: 80px;  // to acomodate x,xxx.xx
+  padding: 0;
+  border: 1px solid $input-border !important;
+
+  input {
+    padding: 0 12px !important;
+    line-height: 31px !important;
+
+    @media (max-width: $screen-xxs-max - 1) {
+      padding-left: 0 3px !important;
+    }
+  }
 
   @media (max-width: $screen-xxs-max - 1) {
-    padding: 6px 3px !important;
     width: 42px;
   }
 

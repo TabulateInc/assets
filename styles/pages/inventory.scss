@@ -1,16 +1,7 @@
 @import '../project/variables';
 @import '../bootstrap/variables';
 
-.update-prices-modal {
-  @media (max-width: 420px) {
-    .datepicker {
-      left: -91px !important;  // fixes ang strap js positioning issue
-    }
-  }
-}
-
 .item-units-input {
-
   .glyphicon-plus:hover,
   .glyphicon-plus:focus,
   .glyphicon-minus:hover,
@@ -20,13 +11,26 @@
 
   .btn {
     height: $bootstrap-btn-height;
-    @media (max-width:$screen-xs-max){
-      padding-left: 6px;
+
+    &:first-child {
+      border-left-color: $input-border;
+    }
+
+    @media (max-width: $screen-xs-max) {
       padding-right: 6px;
+      padding-left: 6px;
     }
   }
 }
 
-.content-filter {
-  margin-bottom: 0;
+week-selector select {
+  width: 160px !important;
+  height: 29px;
+  padding: 3px 15px 4px 10px;
+}
+
+.items-table__row {
+  @media (max-width: $screen-xxs-max) {
+    font-size: 12px;
+  }
 }

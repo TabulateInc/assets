@@ -1,22 +1,31 @@
 // Icons
 // -----------------
-.icon-folder-plus {
-  background: url(#{$images-path}/folder1+.svg) no-repeat center center transparent;
-}
 
-.icon-file-plus {
-  background: url(#{$images-path}/file1+.svg) no-repeat center center transparent;
-}
-
+.icon-file,
+.icon-file-plus,
+.icon-folder,
 .icon-folder-plus,
+.icon-export,
+.icon-ellipses,
+.icon-close,
+.icon-trash,
+.icon-calendar,
+.icon-filter {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+}
+
+.icon-folder-plus {
+  background: url(#{$images-path}/add_folder.svg) no-repeat center center transparent;
+}
+
 .icon-file-plus {
-  height: 32px;
-  width: 32px;
-  background-size: 24px 24px !important;
+  background: url(#{$images-path}/add_file.svg) no-repeat center center transparent;
 }
 
 .icon-folder {
-  background: url(#{$images-path}/folder1.svg) no-repeat top center transparent;
+  background: url(#{$images-path}/folder.svg) no-repeat top center transparent;
   vertical-align: middle;
 
   @media (min-width: $screen-xs-max) {
@@ -39,7 +48,7 @@
 }
 
 .icon-file {
-  background: url(#{$images-path}/file1.svg) no-repeat top center transparent;
+  background: url(#{$images-path}/file.svg) no-repeat top center transparent;
   vertical-align: middle;
 
   @media (min-width: $screen-xs-max) {
@@ -53,17 +62,6 @@
     width: 27px;
     background-size: 22px 22px;
   }
-}
-
-.icon-export,
-.icon-ellipses,
-.icon-close,
-.icon-trash,
-.icon-calendar,
-.icon-filter {
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
 }
 
 .icon-export {

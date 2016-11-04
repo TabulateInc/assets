@@ -147,3 +147,19 @@ table.summary-table {
     }
   }
 }
+
+week-selector {
+  display: inline-block;
+  float: right;
+  margin-top: -4px;
+
+  select {
+    width: 160px !important;
+    height: 29px;
+    padding: 3px 15px 4px 10px;
+  }
+}
+
+.panel-new__header .breadcrumb > li > span {
+  max-width: none;
+}

@@ -163,3 +163,15 @@ week-selector {
 .panel-new__header .breadcrumb > li > span {
   max-width: none;
 }
+
+.items-table__row {
+  .glyphicon.glyphicon-menu-right {
+    color: $brand-primary;
+    font-size: 16px;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 20px;
+      line-height: $line-height-sm;
+    }
+  }
+}

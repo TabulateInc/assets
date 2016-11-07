@@ -66,10 +66,24 @@
   color: $gray-middle-new;
   cursor: pointer;
 
+  span {
+    position: absolute;
+    top: 9px;
+    right: -21px;
+    width: 21px;
+    height: 26px;
+    background-position: center center;
+    background-size: 26px;
+  }
+
   @media (min-width: $screen-xs-min) {
     $from-top-to-start: ($inputs-group-input-height - 30px) / 2;
     padding-right: 0 !important;
     margin-top: $from-top-to-start;
+
+    span {
+      position: static;
+    }
   }
 }
 

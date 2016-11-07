@@ -30,3 +30,22 @@
 .items-table__row {
   line-height: 43px !important;
 }
+
+.btn-fake.editable {
+  overflow: visible;
+
+  input:focus {
+    margin: -1px;
+    padding: 0 11px !important;
+    border: 1px solid $brand-primary;
+    outline: none !important;
+  }
+}
+
+.inventory-item-caption {
+  line-height: 21px;
+
+  svg {
+    width: 20px !important;
+  }
+}

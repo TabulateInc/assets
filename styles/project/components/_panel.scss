@@ -167,6 +167,10 @@ $panel-new-filter-font: 13px;
 
     &.mod-search {
       display: flex;
+
+      @media (min-width: $screen-xs-max) {
+        min-height: $panel-new-filter-height;
+      }
     }
 
     .select-dropdown {

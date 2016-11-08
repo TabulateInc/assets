@@ -167,10 +167,6 @@ $panel-new-filter-font: 13px;
 
     &.mod-search {
       display: flex;
-
-      @media (min-width: $screen-xs-max) {
-        min-height: $panel-new-filter-height;
-      }
     }
 
     .select-dropdown {
@@ -187,6 +183,11 @@ $panel-new-filter-font: 13px;
 
     .search {
       margin-top: ($panel-new-filter-height - $search-input-size) / 2;
+      margin-bottom: ($panel-new-filter-height - $search-input-size) / 2;
+
+      @media (min-width: $screen-xs-max) {
+        height: $search-input-size;
+      }
     }
 
     tags-input {

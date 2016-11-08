@@ -71,7 +71,7 @@
   cursor: pointer;
 
   span {
-    float: none;
+    float: none !important;
   }
 
   @media (min-width: $screen-sm-min) {

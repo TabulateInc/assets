@@ -182,7 +182,7 @@ input.mod-delete-option {
   padding-left: 27px;  // drag and drop width
 }
 
-.inputs-group .add-control.radio {
+.inputs-group .radio.mod-margin-xs {
   @media (max-width: $screen-xs-max) {
     margin-bottom: 15px;
   }

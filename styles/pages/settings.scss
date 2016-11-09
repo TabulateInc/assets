@@ -181,3 +181,9 @@ input.mod-delete-option {
 .menu-category {
   padding-left: 27px;  // drag and drop width
 }
+
+.inputs-group .add-control.radio {
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 15px;
+  }
+}

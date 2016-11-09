@@ -84,11 +84,7 @@ h5 {
 
   .add-control.checkbox.mod-custom,
   .add-control.radio {
-    margin-bottom: $margin-bottom-input;
-
-    @media (max-width: $screen-xs-max){
-      margin-bottom: $margin-bottom-input-xs - 10px;
-    }
+    @include margin-bottom-input();
 
     padding-right: $padding-right-input;
   }

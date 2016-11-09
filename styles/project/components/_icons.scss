@@ -89,15 +89,21 @@
 }
 
 .icon-trash {
-  background: url(#{$images-path}/trash.svg) no-repeat top left;
+  mask: url(#{$images-path}/trash.svg) no-repeat top left;
+  background-color: $gray-text;
 
-  &--small {
+  &--small,
+  &.mod-icon-button {
     height: 20px;
     width: 20px;
     background-size: 20px 20px;
   }
+
   &.mod-middle {
     top: 3px;
+  }
+  &.mod-icon-button {
+    background-color: $brand-primary;
   }
 }
 

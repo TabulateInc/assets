@@ -52,9 +52,10 @@ settings-selector {
     &__option {
       white-space: nowrap;
       padding: 10px 0;
+      border: none;
 
-      &:last-child {
-        border-bottom: none;
+      &.mod-options-separator {
+        border-top: 1px solid $gray-lighter;
       }
 
       &:hover,

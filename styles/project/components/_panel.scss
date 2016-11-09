@@ -50,6 +50,11 @@ $panel-new-filter-font: 13px;
       margin-top: -6px;
     }
 
+    week-selector {
+      float: right;
+      margin-top: -4px;
+    }
+
     .close {
       padding: 0;
       font-size: 36px;
@@ -178,6 +183,11 @@ $panel-new-filter-font: 13px;
 
     .search {
       margin-top: ($panel-new-filter-height - $search-input-size) / 2;
+      margin-bottom: ($panel-new-filter-height - $search-input-size) / 2;
+
+      @media (min-width: $screen-xs-max) {
+        height: $search-input-size;
+      }
     }
 
     tags-input {

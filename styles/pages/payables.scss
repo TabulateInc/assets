@@ -59,16 +59,22 @@ $overdue-label-color: #F25353;
   }
 }
 
-.items-table{
+.items-table {
   &.mod-pay-bills {
     .items-table__row {
       padding-bottom: 0;
     }
   }
 
-  &__row .checkbox.mod-custom label {
-    @media (max-width: $screen-xs-max) {
-      top: 0 !important;
+  &__row {
+    .checkbox.mod-custom label {
+      @media (max-width: $screen-xs-max) {
+        top: 0 !important;
+      }
+    }
+
+    &.mod-no-border {
+      border: none;
     }
   }
 }

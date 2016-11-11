@@ -93,7 +93,7 @@
   background-color: $gray-text;
 
   &--small,
-  &.mod-icon-button {
+  &.mod-is-button {
     width: 20px;
     height: 20px;
     margin-right: 0;
@@ -103,7 +103,7 @@
   &.mod-middle {
     top: 3px;
   }
-  &.mod-icon-button {
+  &.mod-is-button {
     background-color: $brand-primary;
   }
 }

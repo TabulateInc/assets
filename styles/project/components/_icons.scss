@@ -15,7 +15,7 @@
   height: 30px;
   background-size: 30px 30px;
 
-  &--small {
+  &.mod-small {
     width: 20px;
     height: 20px;
     background-size: 20px 20px;
@@ -88,12 +88,6 @@
 
 .icon-trash {
   background: url(#{$images-path}/trash.svg) no-repeat top left;
-
-  &--small {
-    height: 20px;
-    width: 20px;
-    background-size: 20px 20px;
-  }
 }
 
 .icon-calendar {

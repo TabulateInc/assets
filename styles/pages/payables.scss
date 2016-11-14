@@ -6,9 +6,13 @@
 $overdue-label-width: 3px;
 $overdue-label-color: #F25353;
 
-
-.margin-right-sm {
-  margin-right: $margin-xs !important;
+.margin-right {
+  &-sm {
+    margin-right: $margin-xs !important;
+  }
+  &-md {
+    margin-right: $margin-sm !important;
+  }
 }
 
 .form-control.mod-read-only-block {
@@ -66,15 +70,9 @@ $overdue-label-color: #F25353;
     }
   }
 
-  &__row {
-    .checkbox.mod-custom label {
-      @media (max-width: $screen-xs-max) {
-        top: 0 !important;
-      }
-    }
-
-    &.mod-no-border {
-      border: none;
+  &__row .checkbox.mod-custom label {
+    @media (max-width: $screen-xs-max) {
+      top: 0 !important;
     }
   }
 }

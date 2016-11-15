@@ -6,9 +6,13 @@
 $overdue-label-width: 3px;
 $overdue-label-color: #F25353;
 
-
-.margin-right-sm {
-  margin-right: $margin-xs !important;
+.margin-right {
+  &-sm {
+    margin-right: $margin-xs !important;
+  }
+  &-md {
+    margin-right: $margin-sm !important;
+  }
 }
 
 .form-control.mod-read-only-block {
@@ -59,7 +63,7 @@ $overdue-label-color: #F25353;
   }
 }
 
-.items-table{
+.items-table {
   &.mod-pay-bills {
     .items-table__row {
       padding-bottom: 0;

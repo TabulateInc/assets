@@ -18,14 +18,10 @@
 }
 
 .icon-add {
-  // display: none;
-
   @media (max-width: $screen-xs-max) {
-    // display: inline-block;
     background: url(#{$images-path}/add-plus.svg) no-repeat transparent;
-    background-position: 0px -5px;
+    background-position: 0 -5px;
   }
-
 }
 
 .icon-folder-plus {

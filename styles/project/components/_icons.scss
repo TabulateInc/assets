@@ -10,10 +10,22 @@
 .icon-close,
 .icon-trash,
 .icon-calendar,
-.icon-filter {
+.icon-filter,
+.icon-add {
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
+}
+
+.icon-add {
+  // display: none;
+
+  @media (max-width: $screen-xs-max) {
+    // display: inline-block;
+    background: url(#{$images-path}/add-plus.svg) no-repeat transparent;
+    background-position: 0px -5px;
+  }
+
 }
 
 .icon-folder-plus {

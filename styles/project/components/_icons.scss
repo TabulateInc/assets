@@ -11,10 +11,12 @@
 .icon-trash,
 .icon-calendar,
 .icon-filter,
-.icon-add {
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
+.icon-add,
+.icon-back {
+  $default-icon-size: 30px;
+  width: $default-icon-size;
+  height: $default-icon-size;
+  background-size: 100%;
 }
 
 .icon-add {
@@ -131,4 +133,8 @@
 .icon-logout {
   background: url(#{$images-path}/logout.svg) no-repeat;
   background-position: 0 -1px;
+}
+
+.icon-back {
+  background: url(#{$images-path}/back.svg) no-repeat center transparent;
 }

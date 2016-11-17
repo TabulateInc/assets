@@ -13,10 +13,16 @@
 .icon-filter,
 .icon-add,
 .icon-back {
-  $default-icon-size: 30px;
-  width: $default-icon-size;
-  height: $default-icon-size;
+  $icon-size-default: 30px;
+  width: $icon-size-default;
+  height: $icon-size-default;
   background-size: 100%;
+
+  &.mod-small {
+    $icon-size-sm: 20px;
+    width: $icon-size-sm;
+    height: $icon-size-sm;
+  }
 }
 
 .icon-add {
@@ -39,21 +45,15 @@
   vertical-align: middle;
 
   @media (min-width: $screen-xs-max) {
-    height: 32px;
     width: 36px;
+    height: 32px;
     background-size: 32px 32px;
   }
 
   @media (max-width: $screen-xs-max) {
-    height: 24px;
     width: 27px;
-    background-size: 22px 22px;
-  }
-
-  &--small {
     height: 24px;
-    width: 20px;
-    background-size: 20px 20px;
+    background-size: 22px 22px;
   }
 }
 
@@ -98,12 +98,6 @@
 
 .icon-trash {
   background: url(#{$images-path}/trash.svg) no-repeat top left;
-
-  &--small {
-    height: 20px;
-    width: 20px;
-    background-size: 20px 20px;
-  }
 }
 
 .icon-calendar {

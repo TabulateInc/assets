@@ -225,6 +225,7 @@ $table-view-mobile-default-marging: 4px;
   }
 
   &__action {
+    display: inline-flex;
     margin-left: $table-view-default-marging;
   }
 
@@ -232,6 +233,7 @@ $table-view-mobile-default-marging: 4px;
   &__action-label {
     margin-right: $table-view-default-marging;
     cursor: pointer;
+    align-self: center;;
   }
 
   &__action-icon {

@@ -12,6 +12,7 @@
 .icon-calendar,
 .icon-filter,
 .icon-add,
+.icon-minus,
 .icon-back {
   $icon-size-default: 30px;
   width: $icon-size-default;
@@ -25,9 +26,18 @@
   }
 }
 
+.icon-minus {
+  background: url(#{$images-path}/remove-minus.svg) no-repeat center center transparent;
+}
+
 .icon-add {
+  background: url(#{$images-path}/add-plus.svg) no-repeat transparent;
+
+  &.mod-centered {
+    background-position: center center;
+  }
+
   @media (max-width: $screen-xs-max) {
-    background: url(#{$images-path}/add-plus.svg) no-repeat transparent;
     background-position: 0 -5px;
   }
 }

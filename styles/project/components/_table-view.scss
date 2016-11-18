@@ -113,8 +113,14 @@ $table-view-mobile-default-marging: 4px;
   }
 
   &__mobile-row-line:first-child {
-      font-weight: 700;
-      margin-bottom: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+
+    .table-view__mobile-row-cell.mod-money {
+      @media (max-width: $screen-sm-min) {
+        font-weight: normal;
+      }
+    }
   }
 
   &__row, &__mobile-row-line, &__footer-row {

@@ -87,6 +87,12 @@ settings-selector {
           margin-left: 0 !important;
           font-size: 13px;
         }
+
+        .btn-settings-action__icon {
+          position: absolute;
+          top: 0;
+          left: -5px;
+        }
       }
 
       label {

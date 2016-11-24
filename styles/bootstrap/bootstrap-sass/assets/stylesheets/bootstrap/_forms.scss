@@ -162,9 +162,12 @@ output {
   }
 
   email-input.mod-lg-rounded &,
+  state-picker.mod-lg-rounded &,
   &.mod-lg-rounded {
+    appearance: none;
     font-size: $input-text-size;
     height: $input-height-lg; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+    line-height: 1em;
     padding: $input-padding-vertical $input-padding-horizontal;  // $padding-base-vertical $padding-base-horizontal;
     border-radius: $input-border-radius-lg; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
 

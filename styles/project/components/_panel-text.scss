@@ -10,6 +10,11 @@
     background-color: $gray-lightest-new;
   }
 
+  &.mod-disabled {
+    background-color: $gray-lightest-new;
+    cursor: not-allowed;
+  }
+
   &__info {
     float: left;
     font-size: $panel-text-font;

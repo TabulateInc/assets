@@ -23,6 +23,12 @@ settings-selector {
     }
   }
 
+  &.mod-overflow-visible {
+    .custom-selector {
+      overflow: visible;
+    }
+  }
+
   .custom-selector {
     position: absolute;
     top: 0;
@@ -121,6 +127,9 @@ settings-selector {
     }
   }
 
+  .select-dropdown {
+    margin-left: 30px;
+  }
 }
 
 .settings-selector {

@@ -113,8 +113,14 @@ $table-view-mobile-default-marging: 4px;
   }
 
   &__mobile-row-line:first-child {
-      font-weight: 700;
-      margin-bottom: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+
+    .table-view__mobile-row-cell.mod-money {
+      @media (max-width: $screen-xs-max) {
+        font-weight: normal;
+      }
+    }
   }
 
   &__row, &__mobile-row-line, &__footer-row {
@@ -225,6 +231,7 @@ $table-view-mobile-default-marging: 4px;
   }
 
   &__action {
+    display: inline-flex;
     margin-left: $table-view-default-marging;
   }
 
@@ -232,6 +239,7 @@ $table-view-mobile-default-marging: 4px;
   &__action-label {
     margin-right: $table-view-default-marging;
     cursor: pointer;
+    align-self: center;;
   }
 
   &__action-icon {

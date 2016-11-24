@@ -281,7 +281,13 @@ select.padding-left-xs option,
 // --------------------------
 
 .bold {
-  font-weight:bold;
+  font-weight: bold;
+
+  &-sm {
+    @media (min-width: $screen-sm-min) {
+      font-weight: bold;
+    }
+  }
 }
 
 .text-dark {

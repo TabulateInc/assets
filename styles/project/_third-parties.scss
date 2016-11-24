@@ -115,6 +115,7 @@
 }
 
 .typeahead {
+  overflow: auto;
     a {
         @include dropdown-item();
 

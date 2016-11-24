@@ -117,7 +117,7 @@ $table-view-mobile-default-marging: 4px;
     font-weight: 700;
 
     .table-view__mobile-row-cell.mod-money {
-      @media (max-width: $screen-sm-min) {
+      @media (max-width: $screen-xs-max) {
         font-weight: normal;
       }
     }

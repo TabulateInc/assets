@@ -281,7 +281,13 @@ select.padding-left-xs option,
 // --------------------------
 
 .bold {
-  font-weight:bold;
+  font-weight: bold;
+
+  &-sm {
+    @media (min-width: $screen-sm-min) {
+      font-weight: bold;
+    }
+  }
 }
 
 .text-dark {
@@ -385,11 +391,12 @@ select.padding-left-xs option,
   $color: $brand-primary;
   $border: 1px solid $color;
 
+  margin-left: 6px;
   border: $border;
   background-color: $table-bg-hover;
   color: $color;
+  vertical-align: top;
 
-  margin-left: 6px;
   &:hover, &:focus, &:active, &.active {
     background-color: $white;
     border: $border;

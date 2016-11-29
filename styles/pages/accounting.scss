@@ -75,3 +75,30 @@ td.mod-bordered-group {
 h5.margin-top-md {
   margin-top: $distance-ver-md;
 }
+
+.report-table.mod-reconciliation {
+  td:first-child,
+  th:first-child {
+    padding-left: 0;
+  }
+
+  thead {
+    overflow: hidden;
+    height: 0;
+    border-bottom: none;
+  }
+
+  tr.mod-no-hover:hover {
+    background-color: transparent;
+  }
+
+  tr td {
+    padding-top: $margin-normal / 2;
+    padding-bottom: $margin-normal / 2;
+  }
+}
+
+.beginning-bank-balance {
+  height: auto;
+  padding: 0;
+}

@@ -31,4 +31,18 @@
   + .panel-text {
     margin-top: $panel-text-between-panels;
   }
+
+  &.mod-deposits {
+    border-radius: $border-radius-base;
+    cursor: default;
+  }
+
+  &.mod-deposits  &__icon {
+    float: left;
+    margin-right: $distance-ver-sm;
+  }
+
+  &.mod-deposits  &__info {
+    float: none;
+  }
 }

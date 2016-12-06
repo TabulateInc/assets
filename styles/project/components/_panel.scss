@@ -152,6 +152,21 @@ $panel-new-filter-font: 13px;
       padding-left: $panel-new-padding-hor-mobile;
       padding-right: $panel-new-padding-hor-mobile;
     }
+
+    h5 {
+      @include margin-bottom-input();
+
+      font-size: $inputs-group-caption-size;
+      font-weight: 300;
+      text-transform: capitalize;
+      color: inherit;
+      margin-top: 0;
+      line-height: 1em;
+
+      @media (max-width: $screen-xs-max) {
+        font-size: 18px;
+      }
+    }
   }
 
   &__filter {

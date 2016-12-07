@@ -51,7 +51,8 @@ $icon-btn-padding: 10px;
   display: inline-block;
 }
 
-mobile-filters {
+mobile-filters,
+.mobile-filter {
   &.mod-fixed-top
   .icon-btn.mod-mobile-filter {
     $icon-height: 14px;

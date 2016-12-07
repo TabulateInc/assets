@@ -12,8 +12,8 @@ $animation-duration: .6s;
 }
 
 .navbar-header {
+  border-bottom: 1px solid $gray-light-new;
   background-color: $white;
-  border-bottom: 1px solid $gray-border;
 
   @media (min-width: $screen-sm-min) {
     padding: $nav-header-padding;

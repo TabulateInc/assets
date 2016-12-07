@@ -1,17 +1,5 @@
 .b-delete-icon {
   display: inline-block;
-
-  &.mod-is-button {
-    min-width: 32px;
-    min-height: 32px;
-    padding: $padding-base-vertical $padding-base-horizontal;
-    border: 1px solid $brand-primary;
-    border-radius: $btn-border-radius;
-    background-color: $table-bg-hover;
-    &:hover {
-      background-color: $white;
-    }
-  }
 }
 
 .items-table__row:hover,

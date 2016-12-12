@@ -14,7 +14,7 @@ $nav-to-content-panel: $distance-hor-md;
 
 .content-panel {
   display: inline-block;
-  min-height: 505px;  // hardcoded height of the nav panel
+  min-height: 540px;  // hardcoded height of the nav panel
   float: left;
   position: relative;
 
@@ -186,4 +186,10 @@ input.mod-delete-option {
   @media (max-width: $screen-xs-max) {
     margin-bottom: 15px;
   }
+}
+
+drag-drop.mod-tender {
+  position: absolute;
+  left: 5px;
+  top: 12px;
 }

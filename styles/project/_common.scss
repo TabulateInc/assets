@@ -504,3 +504,8 @@ td.mod-clickable:hover {
   color: $brand-primary;
   cursor: pointer;
 }
+
+.padding-hor-md {
+  padding-right: $distance-hor-md;
+  padding-left: $distance-hor-md;
+}

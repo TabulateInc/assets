@@ -122,3 +122,10 @@ $overdue-label-color: #F25353;
   float: right;
   margin-top: 6px;
 }
+
+.dropdown-menu__btn.btn {
+  &.mod-active {
+    border-color: $brand-saturated;
+    background-color: $brand-saturated;
+  }
+}

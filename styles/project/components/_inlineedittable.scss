@@ -1,7 +1,9 @@
 .header {
-  font-weight:bold;
-  border-bottom:2px solid $table-border-color;
-  padding: $items-table-row-padding;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid $table-border-color;
+  line-height: 1em;
+
   &.sticky {
     background: $white;
   }
@@ -10,17 +12,42 @@
 .items-table {
 
   &.mod-sm-at-xs {
-    @media (max-width:$screen-xs-max){
+    @media (max-width: $screen-xs-max) {
       font-size: $font-size-xs;
 
       .sorticon {
-        font-size: 6px;
         top: 5px;
         right: -6px;
+        font-size: 6px;
 
         &__wrapper {
           font-size: $font-size-xs - 1;
         }
+      }
+    }
+  }
+
+  &.mod-in-panel {
+    .header {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      line-height: $line-height-sm;
+    }
+
+    .items-table__row {
+      @media (min-width: $screen-sm-min) {
+        line-height: $line-height-sm;
+      }
+    }
+
+    .header,
+    .items-table__row {
+      padding-right: $panel-new-padding-hor;
+      padding-left: $panel-new-padding-hor;
+
+      @media (max-width: $screen-xs-max) {
+        padding-right: $panel-new-padding-hor-mobile;
+        padding-left: $panel-new-padding-hor-mobile;
       }
     }
   }
@@ -30,10 +57,10 @@
   }
 
   &__row {
+    position: relative;
+    padding: $items-table-row-padding;
     border-bottom: 1px solid $table-border-color;
     cursor: pointer;
-    padding: $items-table-row-padding;
-    position: relative;
 
     &:hover,
     &.as-hovered {
@@ -49,15 +76,15 @@
     }
 
     &.mod-edit {
-      border: $items-table-edit-border-width solid $brand-primary !important;
-      border-radius: $border-radius-default;
-      margin-bottom: -1px;
+      padding: 8px;
       margin-top: -1px;
-      padding: 2px;
+      margin-bottom: -1px;
     }
 
-    &.mod-borderless {
-      border: 0 !important;
+    .items-table.mod-in-panel & {
+      &.mod-edit {
+        padding-left: 2px;
+      }
     }
 
     &__over {
@@ -65,7 +92,6 @@
       top: 1px;
       right: 8px;
     }
-
   }
 
   &__input {
@@ -80,13 +106,6 @@
 
     input, select {
       padding-left: $row-column-padding - $padding-sm - 1px;
-    }
-  }
-
-  &__btn {
-    &.mod-no-spaces {
-      margin-top: -$padding-small-vertical;
-      margin-bottom: -$padding-small-vertical;
     }
   }
 

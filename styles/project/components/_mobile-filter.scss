@@ -2,8 +2,7 @@
 @import '../bootstrap/variables';
 
 .aside.mod-mobile-filter {
-  width: 90%;
-  max-width: 600px;
+  width: 100%;
 
   .content-filter {
     margin: 0;
@@ -12,17 +11,32 @@
 
   select,
   date-range-selector,
-  tags-input {
+  tags-input,
+  .btn-select {
     width: 100%;
     display: block;
     margin: 0 0 $margin-sm;
     height: $height-md;
-    max-width: 568px;
+  }
+
+  .btn-select,
+  .custom-selector__btn {
+    text-align: left;
+
+    .caret {
+      position: absolute;
+      top: ($height-md - 4px)/2;
+      cursor: pointer;
+      right: 10px;
+      color: $gray-middle-new;
+      margin-top: 0;
+    }
   }
 
   .custom-selector__btn {
     height: $height-md;
     line-height: $height-sm;
+    position: relative;
   }
 
   tags-input.mod-xs {
@@ -37,12 +51,26 @@ $icon-btn-padding: 10px;
   display: inline-block;
 }
 
-.icon-btn.mod-mobile-filter {
-  $icon-height: 14px;
-  $btn-height: $icon-btn-padding*2 + $icon-height;
+mobile-filters,
+.mobile-filter {
+  &.mod-fixed-top
+  .icon-btn.mod-mobile-filter {
+    $icon-height: 14px;
+    $btn-height: $icon-btn-padding*2 + $icon-height;
 
-  position: fixed;
-  top: ($main-navigation-height-mobile - $btn-height) / 2;  // extra margin
-  right: ($grid-gutter-width / 2);
-  z-index: 1040;
+    position: fixed;
+    z-index: 1040;
+    top: ($main-navigation-height-mobile - $btn-height) / 2;  // extra margin
+    right: ($grid-gutter-width / 2);
+    margin-right: 0;
+  }
+
+  &.mod-sm {
+    min-height: 1px;
+
+    .icon-filter {
+      height: 16px;
+      background-position: 2px;
+    }
+  }
 }

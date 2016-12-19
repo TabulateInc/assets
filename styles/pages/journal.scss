@@ -45,7 +45,8 @@
   padding-left: $padding-base-horizontal;
 }
 
-.border-right {
+.border-right,
+.border-right:hover {
   border-right: 1px solid $table-border-color;
 }
 
@@ -60,5 +61,6 @@ drag-drop.visible .drag-drop {
 }
 
 .b-delete-icon {
-  padding-left: 10px !important;
+  height: 33px;
+  padding: 0 6px !important;
 }

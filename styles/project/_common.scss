@@ -32,18 +32,6 @@ h3 {
   font-size: $page-title-font-size;
 }
 
-// section blue title
-h5 {
-  font-size: $section-title-font-size;
-  color: $brand-primary;
-  text-transform: uppercase;
-  margin-top: $page-title-margin-top;
-
-  &:first-child {
-    margin-top: $margin-normal;
-  }
-}
-
 label {
   font-weight:normal;
 }
@@ -209,10 +197,15 @@ select::-ms-expand {
 .padding-right-sm {
   padding-right: $padding-sm !important;
 }
-
 select.padding-left-xs option,
 .padding-left-xs {
   padding-left: 6px !important;
+
+  &-at-xs {
+    @media (max-width: $screen-xs-max) {
+      padding-left: 6px !important;
+    }
+  }
 }
 
 .no-margin {
@@ -264,12 +257,18 @@ select.padding-left-xs option,
   }
 }
 
-.margin-left-xs {
-  margin-left: $margin-xs;
-}
+.margin-left {
+  &-xs {
+    margin-left: $margin-xs;
+  }
 
-.margin-left-sm {
-  margin-left: $margin-normal;
+  &-sm {
+    margin-left: $margin-normal;
+  }
+
+  &-md {
+    margin-left: $margin-md;
+  }
 }
 
 .no-outline {
@@ -282,7 +281,13 @@ select.padding-left-xs option,
 // --------------------------
 
 .bold {
-  font-weight:bold;
+  font-weight: bold;
+
+  &-sm {
+    @media (min-width: $screen-sm-min) {
+      font-weight: bold;
+    }
+  }
 }
 
 .text-dark {
@@ -331,24 +336,6 @@ select.padding-left-xs option,
 
 // Inputs
 // --------------------------
-.add-control {
-  padding-left: 0;
-  padding-right: $input-in-control-padding-right;
-  margin-bottom: $margin-normal;
-
-  button,
-  input,
-  div.form-control,
-  select {
-    height: $input-in-control-height;
-  }
-
-  @media (max-width: $screen-xs-max){
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
 .over-input {
   position: absolute;
   top: 35%;
@@ -404,9 +391,11 @@ select.padding-left-xs option,
   $color: $brand-primary;
   $border: 1px solid $color;
 
-  background-color: $table-bg-hover;
+  margin-left: 6px;
   border: $border;
+  background-color: $table-bg-hover;
   color: $color;
+  vertical-align: top;
 
   &:hover, &:focus, &:active, &.active {
     background-color: $white;
@@ -415,6 +404,17 @@ select.padding-left-xs option,
   }
   &:disabled {
     color: $white;
+  }
+
+  &.mod-icon {
+    background-color: transparent !important;
+    border-color: transparent !important;
+
+    &:hover, &:focus, &:active, &.active {
+      span {
+        color: $color;
+      }
+    }
   }
 }
 

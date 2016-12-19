@@ -1,28 +1,149 @@
+$ellipsis-height: 30px;
+$ellipsis-width: 30px;
+$custom-selector-padding-left: 20px;
+$custom-selector-padding-right: 10px;
+$custom-selector-padding-top: 5px;
+$padding-right-opened: 10px;
+$custom-selector-padding-bottom: $custom-selector-padding-top + 2px;
+$custom-selector-btn-height: $custom-selector-padding-top + $custom-selector-padding-bottom + $ellipsis-height + 2px;
+
 settings-selector {
+  position: relative;
+  display: block;
+  text-align: left;
+  min-height: $custom-selector-btn-height;
+  min-width: $custom-selector-padding-left + $custom-selector-padding-right + $ellipsis-width + 2px;
+
+  &.mod-sm {
+    min-height: 1px;
+
+    .settings-selector__btn {
+      height: 16px;
+      background-position: 2px;
+    }
+  }
+
+  &.mod-overflow-visible {
+    .custom-selector {
+      overflow: visible;
+    }
+  }
+
   .custom-selector {
-    .glyphicon {
-      font-size: 17px;
-    }
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: $custom-selector-padding-top $custom-selector-padding-right $custom-selector-padding-bottom $custom-selector-padding-left;
+    cursor: pointer;
+    background-color: $white;
+    z-index: 1000;
+    border: 1px solid transparent;
+    max-height: $custom-selector-btn-height;
+    overflow: hidden;
+    transition: max-height $transition-duration-base $transition-style-base;
 
-    &__options {
-      right: 0;
-      width: 260px;
-      padding-bottom: 0;
-    }
+    &.mod-opened {
+      max-height: 244px;
+      min-width: 270px;
+      box-shadow: $shadow-default;
+      border-color: $gray-lighter-new;
 
-    &__btn {
-      text-align: center;
-
-      @media (max-width: $screen-xs-max) {
-        padding-right: 0;
-        padding-left: 0;
-        background: none;
-
-        &:hover,
-        &:focus {
-          background: $mediumgray-light;
-        }
+      .settings-selector__options {
+        padding: 3px 10px 8px 0;
+        display: block;
+        visibility: visible;
       }
     }
+
+    &__option {
+      white-space: nowrap;
+      padding: 10px 0;
+      border: none;
+
+      &.mod-options-separator {
+        border-top: 1px solid $gray-lighter;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: inherit;
+      }
+
+      * {
+        font-weight: 400 !important;
+      }
+
+      .btn-settings-action,
+      .btn-settings-action:hover,
+      .btn-settings-action:focus,
+      .btn-settings-action:active {
+        position: relative;
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+        color: $gray-new;
+
+        .btn-settings-action__caption,
+        .export-text {
+          position: absolute !important;
+          top: 0 !important;
+          left: 30px;
+          margin-left: 0 !important;
+          font-size: 13px;
+        }
+
+        .btn-settings-action__icon {
+          position: absolute;
+          top: 0;
+          left: -5px;
+        }
+      }
+
+      label {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .btn.mod-export,
+  .btn.mod-export:hover {
+    background-color: transparent;
+    color: $gray-new;
+    font-size: 13px;
+
+    width: 100%;
+    text-align: left;
+    border: none;
+
+    .export-text {
+      position: relative;
+      top: -3px;
+      margin-left: 6px;
+
+      .mod-settings-selector {
+        display: inline;
+      }
+    }
+  }
+
+  .select-dropdown {
+    margin-left: 30px;
+  }
+}
+
+.settings-selector {
+  &__options {
+    display: none;
+    transition: $transition-default;
+  }
+
+  &__btn {
+    color: $gray-middle-new;
+    float: right;
+    width: 30px !important;
+    text-align: center;
+    position: relative;
   }
 }

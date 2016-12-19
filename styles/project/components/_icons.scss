@@ -1,7 +1,49 @@
 // Icons
 // -----------------
+
+.icon-file,
+.icon-file-plus,
+.icon-folder,
+.icon-folder-plus,
+.icon-export,
+.icon-ellipses,
+.icon-close,
+.icon-trash,
+.icon-calendar,
+.icon-filter,
+.icon-add,
+.icon-minus,
+.icon-back {
+  $icon-size-default: 30px;
+  width: $icon-size-default;
+  height: $icon-size-default;
+  background-size: 100%;
+
+  &.mod-small {
+    $icon-size-sm: 20px;
+    width: $icon-size-sm;
+    height: $icon-size-sm;
+  }
+}
+
 .icon-folder-plus {
   background: url(#{$images-path}/folder1+.svg) no-repeat center center transparent;
+}
+
+.icon-minus {
+  background: url(#{$images-path}/remove-minus.svg) no-repeat center center transparent;
+}
+
+.icon-add {
+  background: url(#{$images-path}/add-plus.svg) no-repeat transparent;
+
+  &.mod-centered {
+    background-position: center center;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    background-position: 0 -5px;
+  }
 }
 
 .icon-file-plus {
@@ -20,21 +62,15 @@
   vertical-align: middle;
 
   @media (min-width: $screen-xs-max) {
-    height: 32px;
     width: 36px;
+    height: 32px;
     background-size: 32px 32px;
   }
 
   @media (max-width: $screen-xs-max) {
-    height: 24px;
     width: 27px;
-    background-size: 22px 22px;
-  }
-
-  &--small {
     height: 24px;
-    width: 20px;
-    background-size: 20px 20px;
+    background-size: 22px 22px;
   }
 }
 
@@ -53,4 +89,79 @@
     width: 27px;
     background-size: 22px 22px;
   }
+}
+
+.icon-export {
+  background: url(#{$images-path}/export.svg) no-repeat top left;
+}
+
+.icon-ellipses {
+  background: url(#{$images-path}/ellipses.svg) no-repeat top center;
+}
+
+.icon-close {
+  float: right;
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    border: none;
+    background: url(#{$images-path}/close.svg) no-repeat;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.icon-trash {
+  mask: url(#{$images-path}/trash.svg) no-repeat top left;
+  background-color: $gray-text;
+
+  &--small,
+  .btn-table-row & {
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
+    background-size: 100%;
+  }
+
+  &.mod-middle {
+    top: 3px;
+  }
+  .btn-table-row & {
+    background-color: $brand-primary;
+  }
+}
+
+.icon-calendar {
+  background: url(#{$images-path}/calendar.svg) no-repeat top left;
+}
+
+.icon-filter {
+  background: url(#{$images-path}/filter.svg) no-repeat top left;
+}
+
+.chevrone-down-icon {
+  font-size: 10px;
+  font-weight: bold;
+  margin-left: 5px;
+  margin-top: -3px;
+  vertical-align: middle;
+}
+
+.icon-profile,
+.icon-logout {
+  width: 38px;
+  height: 38px;
+  background-size: 38px 38px;
+}
+
+.icon-profile { background: url(#{$images-path}/profile.svg) no-repeat top left;}
+.icon-logout {
+  background: url(#{$images-path}/logout.svg) no-repeat;
+  background-position: 0 -1px;
+}
+
+.icon-back {
+  background: url(#{$images-path}/back.svg) no-repeat center transparent;
 }

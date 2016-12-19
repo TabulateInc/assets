@@ -1,32 +1,30 @@
+
 @import '../project/variables';
 @import '../bootstrap/variables';
 @import '../project/utils';
 
-.margin-right-sm {
-  margin-right: $margin-xs !important;
-}
+$overdue-label-width: 3px;
+$overdue-label-color: #F25353;
 
-.add-control {
-  @media (max-width: $screen-xs-max) {
-    padding-right: $padding-sm;
+.margin-right {
+  &-sm {
+    margin-right: $margin-xs !important;
+  }
+  &-md {
+    margin-right: $margin-sm !important;
   }
 }
 
 .form-control.mod-read-only-block {
   width: auto;
   height: auto;
-  margin-right: $margin-xs;
+  margin-right: 0;
+  margin-bottom: $distance-ver-md;
 }
 
 .text-left-xxs {
   @media (max-width: $screen-xxs-max) {
     text-align: left;
-  }
-}
-
-.hidden-xxs {
-  @media (max-width: $screen-xxs-max) {
-    display: none;
   }
 }
 
@@ -36,26 +34,18 @@
   }
 }
 
-.remove-detail-btn {
-  position: absolute;
+.margin-bottom-md {
+  margin-bottom: $distance-ver-md;
 }
 
 .has-error .form-control[disabled] {
   border-color: $grapefruit-dark;
 }
 
-state-picker .col-sm-4 {
-  width: 100% !important;  // temp hack, while add / edit vendor page is not confirmed
-}
-
-.btn-group-justified {
-  .btn-primary {
-    border-color: $brand-primary !important;
-  }
-
-  .btn-default {
-    color: $brand-primary;
-    border-color: $brand-primary !important;
+.has-error .panel-new__filter__item {
+  &,
+  & .caret {
+    color: $grapefruit-dark;
   }
 }
 
@@ -67,11 +57,24 @@ state-picker .col-sm-4 {
   apply-transaction button {
     float: right;
   }
+
+  &.mod-view-payments {
+    top: 6px;
+  }
 }
 
-.items-table__row.mod-pay-bills {
-  padding-bottom: 0;
-  line-height: $line-height-sm;
+.items-table {
+  &.mod-pay-bills {
+    .items-table__row {
+      padding-bottom: 0;
+    }
+  }
+
+  &__row .checkbox.mod-custom label {
+    @media (max-width: $screen-xs-max) {
+      top: 0 !important;
+    }
+  }
 }
 
 .input-helper {
@@ -87,8 +90,42 @@ state-picker .col-sm-4 {
   }
 }
 
-.input-caption {
-  font-size: $font-size-xs;
-  font-weight: 600;
-  padding: 2px $padding-base-horizontal;
+.dropdown-menu.mod-wide {
+  @media (min-width: $screen-sm-min) {
+    top: -1px !important;
+    min-width: 250px;
+  }
+}
+
+.table-view__column:first-child .table-view__row.mod-overdue  .table-view__row-cell {
+  padding-left: 20px - $overdue-label-width !important;
+  border-left: $overdue-label-width solid $overdue-label-color;
+  height: 44px;
+  line-height: 44px;
+}
+
+.table-view__mobile-row.mod-overdue {
+  margin-left: -$overdue-label-width;
+  border-left: $overdue-label-width solid $overdue-label-color;
+}
+
+.wtfsection {
+  padding: 5px 20px;
+  border-bottom: 1px solid $border-color-base;
+
+  .add-control {
+    margin-bottom: 0;
+  }
+}
+
+.void-text {
+  float: right;
+  margin-top: 6px;
+}
+
+.dropdown-menu__btn.btn {
+  &.mod-active {
+    border-color: $brand-saturated;
+    background-color: $brand-saturated;
+  }
 }

@@ -9,6 +9,11 @@
   padding-left:  ($gutter / 2);
   padding-right: ($gutter / 2);
   @include clearfix;
+
+  @media (max-width: $screen-xs-max) {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 }
 
 // Creates a wrapper for a series of columns

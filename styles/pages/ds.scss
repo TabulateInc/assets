@@ -29,12 +29,12 @@ table.summary-table {
 }
 
 .ds-cell {
-  border-left: 1px solid transparent;
-  border-right: 1px solid transparent;
   min-width: $ds-table-cell-min-width;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
 
   &.editable {
-    border: 1px solid $table-border-color;
+    border: 1px solid $input-border;
 
     .has-error {
       outline: 2px solid red !important;
@@ -146,4 +146,24 @@ table.summary-table {
       resize: none;
     }
   }
+}
+
+.panel-new__header .breadcrumb > li > span {
+  max-width: none;
+}
+
+.items-table__row {
+  .glyphicon.glyphicon-menu-right {
+    color: $brand-primary;
+    font-size: 20px;
+    line-height: 43px;
+  }
+}
+
+.items-table__row {
+  line-height: 43px !important;
+}
+
+.category-head {
+  border-color: $input-border !important;
 }

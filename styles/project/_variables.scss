@@ -68,7 +68,11 @@ $btn-border-radius: $border-radius-default;
 
 // Components
 // ------------------------------
-$main-navigation-height: 50px;
+$nav-header-content-height: 39px;
+$nav-header-padding-ver: 15px;
+$nav-header-padding-hor: 40px;
+$nav-header-padding: $nav-header-padding-ver $nav-header-padding-hor;
+$main-navigation-height: $nav-header-content-height + $nav-header-padding-ver*2 + 1px;
 $main-navigation-height-mobile: 40px;
 $main-navigation-to-content: 30px;
 $main-navigation-to-content-mobile: 15px;
@@ -131,9 +135,22 @@ $fix-column-width-lg: 269px;
 $content-filter-height: 29px;
 $content-filter-padding: 4px;
 
+// inputs-group
+$inputs-group-caption-size: 21px;
+$inputs-group-subcaption-size: 14px;
+$inputs-group-input-height: 45px;
+
+// ng-tags
+$search-tag-height: 34px;
+$search-input-size: $search-tag-height + 6px;  // tag margins and borders
+$search-input-margin: 5px;
+$search-show-icon-size: 30px;
+$search-show-icon-padding: ($search-input-size - 2px)/2;
+$search-close-size: 28px;
+
 // Misc
 $sorticon-size: 9px;
-$sorticon-margin: 4px;
+$sorticon-margin: 6px;
 $drag-icon-size: 20px;
 
 

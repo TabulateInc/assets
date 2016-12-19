@@ -5,22 +5,53 @@
 
 .breadcrumb {
   padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
-  margin-bottom: $line-height-computed;
+  margin-bottom: 0;
   list-style: none;
   background-color: $breadcrumb-bg;
   border-radius: $border-radius-base;
+  display: inline-block;
+  float: left;
 
   > li {
     display: inline-block;
+    font-weight: 300;
+    float: left;
+    font-size: $font-size-base;
 
-    + li:before {
-      content: "#{$breadcrumb-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
-      padding: 0 5px;
-      color: $breadcrumb-color;
+    &:before {
+      content: none !important;
+    }
+
+    &.active {
+      color: $breadcrumb-active-color;
     }
   }
 
-  > .active {
-    color: $breadcrumb-active-color;
+  .glyphicon-menu-right {
+    color: $gray-light;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 10px;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 13px;
+    }
+  }
+
+  .dropdown-menu {
+    a {
+      padding-left: 0;
+
+      @media (min-width: $screen-sm-min) {
+        font-size: $font-size-base;
+      }
+    }
+  }
+
+  .dropdown-link {
+    display: block;
+    float: none;
+    font-size: $font-size-base;
   }
 }

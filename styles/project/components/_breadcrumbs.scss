@@ -2,12 +2,11 @@
   padding-top: 8px;
   padding-bottom: 8px;
 
-  li,
-  .btn-link,
-  .dropdown-menu a {
+  > li,
+  .btn-link {
     @media (min-width: $screen-sm-min) {
-     font-size: $font-size-md !important;
-   }
+      font-size: $font-size-md !important;
+    }
   }
 
   li {
@@ -28,17 +27,8 @@
     text-decoration: none;
     vertical-align: top;
 
-    color: $aqua-dark;
+    color: $brand-primary;
     border: none !important;
     outline: none !important;
-  }
-
-  .icon-folder {
-    @media (min-width: $screen-sm-min) {
-      margin-top: -5px;
-    }
-    @media (max-width: $screen-xs-max) {
-      margin-top: -3px;
-    }
   }
 }

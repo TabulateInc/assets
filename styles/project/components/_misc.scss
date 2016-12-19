@@ -11,6 +11,7 @@
   position: absolute;
   top: 0;
   $drag-drop-size: 1.1;
+
   // google drag-drop size at compact interface
   background-size: 5px * $drag-drop-size 5px*6 * $drag-drop-size;
   height: 24px * $drag-drop-size;
@@ -38,34 +39,90 @@
   }
 }
 
-.transactions-sidebar {
-  padding-left: 50px !important;
-}
-
-.nodata {
-  width: 100%;
-  clear: both;
-  margin-top: 30px;
-
-  b, strong {
-    display: block;
-    font-size: $font-size-large;
-    text-align: center;
-  }
-}
-
 .form-suggestion {
   position: absolute;
   bottom: -$font-size-xs - 2;
   color: $gray-light;
   font-size: $font-size-xs;
-  margin-left: $padding-base-horizontal + 1;  // input padding + border
+  margin-left: $padding-base-horizontal + 1; // input padding + border
 }
 
 .export-modal {
   @media (max-width: $screen-xs-max) {
     embed {
       background-color: $white;
+    }
+  }
+}
+
+.inputs-group classification-details {
+  .add-control:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+.remove-detail-btn {
+  position: absolute;
+  top: 10px;
+  right: -20px;
+  display: inline-block;
+  background-position: center center;
+  color: $gray-middle-new;
+  cursor: pointer;
+
+  span {
+    float: none !important;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    width: 21px;
+    height: 26px;
+
+    span {
+      background-size: 22px;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    $from-top-to-start: ($inputs-group-input-height - 30px) / 2;
+    position: static;
+    padding-right: 0 !important;
+    margin-top: $from-top-to-start;
+  }
+}
+
+.nodata {
+  font-weight: 300;
+  text-align: center;
+
+  &__icon {
+    margin-bottom: 30px;
+    color: $gray-lighter-new;
+    font-size: 50px;
+    line-height: 1em;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: $gray-new;
+    font-size: 25px;
+    line-height: 1em;
+  }
+
+  &__descr {
+    color: $gray-middle-new;
+    font-size: 18px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    &__title {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    &__descr {
+      font-size: 15px;
     }
   }
 }

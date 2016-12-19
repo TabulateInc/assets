@@ -1,8 +1,6 @@
 .checkbox.mod-custom,
 .radio {
-  @media (max-width: $screen-xs-max) {
-    font-size: $font-size-xs;
-  }
+  margin-bottom: 0;
 
   input {
     display: none;
@@ -29,11 +27,19 @@
     &.disabled,
     fieldset[disabled] & {
       + label {
+        cursor: $cursor-disabled;
+
         &.mod-default:before,
         &.mod-primary:before {
           color: $input-color-disabled;
           background-color: $input-bg-disabled;
           border-color: $input-border;
+        }
+
+        &.mod-primary {
+          &:before {
+            background-image: url(#{$images-path}/checkmark.dark.svg);
+          }
         }
       }
     }
@@ -58,15 +64,23 @@
 
     &.mod-default {
 
-      &.mod-lg:before {
-        width: 18px;
-        height: 18px;
-        line-height: 16px;
+      &.mod-lg {
+        line-height: 24px;
 
         @media (max-width: $screen-xs-max) {
-          width: 15px;
-          height: 15px;
-          line-height: 13px;
+          line-height: 21px;
+        }
+
+        &:before {
+          width: 18px;
+          height: 18px;
+          line-height: 16px;
+
+          @media (max-width: $screen-xs-max) {
+            width: 15px;
+            height: 15px;
+            line-height: 13px;
+          }
         }
       }
 
@@ -75,25 +89,26 @@
         width: 15px;
         height: 15px;
         line-height: 13px;
-
-        @media (max-width: $screen-xs-max) {
-          width: 12px;
-          height: 12px;
-          line-height: 11px;
-        }
       }
     }
 
     &.mod-primary {
-      &.mod-lg:before {
-        width: 24px;
-        height: 24px;
-        line-height: 16px;
+      &.mod-lg {
+        line-height: 24px;
 
-        @media (max-width: $screen-xs-max) {
+        &:before {
+          width: 24px;
+          height: 24px;
+          line-height: 16px;
+        }
+      }
+
+      &.mod-xs {
+        &:before {
+          margin-top: -3px;
           width: 15px;
           height: 15px;
-          line-height: 13px;
+          line-height: 9px;
         }
       }
 
@@ -102,28 +117,20 @@
         width: 18px;
         height: 18px;
         line-height: 10px;
-
-        @media (max-width: $screen-xs-max) {
-          width: 15px;
-          height: 15px;
-          line-height: 13px;
-        }
       }
     }
   }
 }
 
 .checkbox.mod-custom label {
+  padding-left: 0;
+
   &.mod-default:before {
     border-radius: 3px;
   }
 
   &.mod-primary:before {
-    border-radius: 8px;
-
-    @media (max-width: $screen-xs-max) {
-      border-radius: 5px;
-    }
+    border-radius: 33%;
   }
 }
 
@@ -131,3 +138,6 @@
   border-radius: 50%;
 }
 
+.checkbox {
+  margin-bottom: 0;
+}

@@ -213,27 +213,28 @@ $headerHeight: 50px;
   &__btn {
     @include custom-selector();
     padding-right: 20px; // need extra space for carrot
+    border-color: $input-border;
+    background: none;
+    color: $input-color;
 
-    &.mod-no-carrot {
-      background-image: none;
-
-      &:hover,
-      &:active,
-      &:focus {
-        background-image: none;
-      }
+    &:focus,
+    &:hover,
+    &.is-focused {
+      border-color: $input-border-hover;
+      background-color: $input-bg;
+      color: $input-color;
     }
 
-    &.mod-centers-inside {
-      @media (max-width: $screen-xs-min) {
-        padding: 6px 0px 3px;
-      }
-      padding: 6px 12px 3px;
+    .caret {
+      position: absolute;
+      top: calc(50% - 1px);
+      right: 4px;
+      margin-top: 0;
     }
   }
 
   &__options {
-    border: 1px solid $mediumgray-dark;
+    border: 1px solid $border-color-base;
     box-shadow: 0 1px 1px $mediumgray-dark;
     position: absolute;
     z-index: 900;
@@ -265,10 +266,14 @@ $headerHeight: 50px;
   }
 
   .add-icon{
-    >.glyphicon{
+    >.glyphicon {
       position: absolute;
       padding: 13px 5px;
       right: 15px;
+
+      &.icon-calendar {
+        right: 10px;
+      }
     }
   }
   .calendar-holder {

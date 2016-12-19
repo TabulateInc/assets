@@ -1,6 +1,189 @@
-.inputs-separator {
+$margin-bottom-input: $distance-ver-md;
+$margin-bottom-input-xs: 25px;
+$padding-right-input: $distance-hor-md;
+
+.inputs-separator,
+.inputs-separator.checkbox.mod-custom {
   margin-bottom: $inputs-separator-distance*2;
   margin-top: $inputs-separator-distance;
   padding-left: $inputs-separator-distance;
   padding-right: $inputs-separator-distance;
+}
+
+@mixin margin-bottom-input() {
+  margin-bottom: $margin-bottom-input;
+
+  @media (max-width: $screen-xs-max){
+    margin-bottom: $margin-bottom-input-xs;
+  }
+}
+
+.add-control,
+.add-control.checkbox.mod-custom,
+.add-control.radio {
+  padding-left: 0;
+  padding-right: $input-in-control-padding-right;
+  margin-bottom: $margin-normal;
+
+  button,
+  input,
+  div.form-control,
+  select {
+    height: $input-in-control-height;
+  }
+
+  @media (max-width: $screen-xs-max){
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// section blue title
+h5 {
+  font-size: $section-title-font-size;
+  color: $brand-primary;
+  text-transform: uppercase;
+  margin-top: $page-title-margin-top;
+
+  &:first-child {
+    margin-top: $margin-normal;
+  }
+}
+
+.inputs-group {
+  line-height: 1em;
+
+  h5 {
+    @include margin-bottom-input();
+
+    font-size: $inputs-group-caption-size;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: inherit;
+    margin-top: 0;
+    line-height: 1em;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 18px;
+    }
+  }
+
+  .subcaption {
+    font-size: $inputs-group-subcaption-size;
+    padding-top: 2px;
+    color: $gray-middle-new;
+  }
+
+  hr {
+    @include margin-bottom-input();
+
+    margin-top: 0;
+    border-top: 1px solid $horizontal-separator-color;
+    height: 0;
+  }
+
+  .add-control.checkbox.mod-custom,
+  .add-control.radio {
+    @include margin-bottom-input();
+
+    padding-right: $padding-right-input;
+  }
+
+  .add-control {
+    @include margin-bottom-input();
+
+    padding-right: $padding-right-input;
+
+    button,
+    input,
+    div.form-control,
+    select {
+      height: $inputs-group-input-height;
+      font-size: $input-text-size;
+    }
+
+    .caret {
+      top: ($inputs-group-input-height - 4px)/2;
+      cursor: pointer;
+    }
+
+    .over-input {
+      right: 20px + $padding-right-input;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      padding-right: 0;
+
+      .over-input {
+        right: 20px;
+      }
+    }
+  }
+
+  .checkbox.mod-custom,
+  .radio {
+    padding-right: $padding-right-input;
+    font-size: $input-text-size;
+
+    label {
+      padding-left: 0;
+      font-weight: 400;
+    }
+  }
+}
+
+.select-dropdown {
+  position: relative;
+  display: inline-block;
+
+  button {
+    float: left;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    background: none;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  &.mod-menu-down {
+    float: left;
+
+    .dropdown-menu {
+      top: -10px !important;
+      left: -10px !important;
+      display: block;
+      overflow: hidden;
+      max-height: 0;
+      transition: $dropdown-transition;
+    }
+
+    &:hover {
+      .dropdown-menu {
+        @media (min-width: $screen-sm-min) {
+          max-height: 1000px;
+        }
+      }
+    }
+
+    &.open {
+      .dropdown-menu {
+        @media (max-width: $screen-xs-max) {
+          max-height: 1000px;
+        }
+      }
+    }
+
+    button {
+      float: left;
+      padding-right: 0;
+    }
+
+    .glyphicon-menu-down {
+      @media (max-width: $screen-xs-max) {
+        font-size: 9px;
+      }
+    }
+  }
 }

@@ -115,7 +115,8 @@ $details-status-width: 15px;
     border-color: $ios-notification !important;  // $message-danger !important;
   }
 
-  .glyphicon-calendar {
+  .glyphicon-calendar,
+  .icon-calendar {
     right: 0 !important;
   }
 }

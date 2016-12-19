@@ -17,6 +17,8 @@
     margin-top: 0;
     // Specified for the h4 to prevent conflicts of changing $headings-color
     color: inherit;
+    margin-bottom: 10px;
+    font-weight: bold;
   }
 
   // Provide class for links that match alerts
@@ -70,4 +72,57 @@
 
 .alert-danger {
   @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+}
+
+.alert-info {
+  padding: $alert-info-padding !important;
+  font-size: $font-size-small;
+  margin: $margin-normal auto;
+}
+
+.alert-success,
+.alert-danger {
+  text-align: center;
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: $alert-z-index;
+  padding: $alert-margin-vertical $alert-margin-horizontal;
+  border-radius: $alert-border-radius;
+}
+
+.alert-success {
+  width: $alert-success-width !important;
+
+  @media (min-width: $screen-sm-min) {
+    top: $main-navigation-height + $alert-from-top;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    top: $main-navigation-height-mobile + $alert-from-top;
+  }
+}
+
+.alert-danger {
+  font-size: $font-size-small;
+  top: 0;
+  border-radius: 0;
+
+  @media (min-width: $screen-sm-min) {
+    min-height: $main-navigation-height;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    min-height: $main-navigation-height-mobile;
+  }
+
+  &.inline-alert {
+    position: static;
+    max-width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    min-height: auto;
+  }
 }

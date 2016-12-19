@@ -33,15 +33,22 @@ $table-view-mobile-default-marging: 4px;
     justify-content: flex-end;
   }
 
-  &__header-label {
-    text-transform: uppercase;
-  }
-
   &__header-cell {
-    color: $brand-primary;
+    color: $gray-middle-new;
     border-top: 1px solid $table-border-color;
     border-bottom: 1px solid $table-border-color;
-    text-transform: uppercase;
+    flex: 0 0 auto;
+
+    .table-view.mod-in-panel & {
+      border-top: none;
+      height: auto;
+      line-height: 1em;
+      padding-bottom: 5px;
+    }
+
+    .table-view.mod-in-panel-stack & {
+      border-top: none;
+    }
   }
 
   &__header-cell, &__row-cell {
@@ -49,6 +56,13 @@ $table-view-mobile-default-marging: 4px;
     height: $table-view-row-height;
     line-height: $table-view-row-line-height;
     padding: 0;
+    padding-left: 10px;
+    text-align: left;
+
+    &.mod-money {
+      text-align: right;
+      padding-right: $table-view-cell-right-padding;
+    }
   }
 
   &__header-resize-handle.mod-resizable {
@@ -68,9 +82,24 @@ $table-view-mobile-default-marging: 4px;
     flex-direction: column;;
     align-content: stretch;
     justify-content: flex-start;
-    &.mod-bordered {
-      border-right: solid 1px $table-border-color;
-      min-height: min-content;
+    border-right: solid 1px $table-border-color;
+    min-height: min-content;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    .table-view.mod-in-panel &,
+    .table-view.mod-in-panel-stack & {
+      border-right: none;
+
+      &:first-child {
+        .table-view__row-cell,
+        .table-view__header-cell,
+        .table-view__footer-cell {
+          padding-left: 20px;
+        }
+      }
     }
   }
 
@@ -84,13 +113,13 @@ $table-view-mobile-default-marging: 4px;
   }
 
   &__mobile-row-line:first-child {
-      font-weight: 700;
-      text-transform: uppercase;
-  }
+    margin-bottom: 0;
+    font-weight: 700;
 
-  &__mobile-row-cell:last-child {
-    .comma-separator {
-      display: none;
+    .table-view__mobile-row-cell.mod-money {
+      @media (max-width: $screen-xs-max) {
+        font-weight: normal;
+      }
     }
   }
 
@@ -101,9 +130,7 @@ $table-view-mobile-default-marging: 4px;
     flex-direction: row;
     align-content: stretch;
     justify-content: flex-start;
-    &:hover, &.mod-selected, &.mod-hovered {
-      background-color: $table-bg-hover;
-    }
+
     @media (max-width: $screen-xs-max) {
       font-size: $font-size-base;
       line-height: $table-view-mobile-row-line-height;
@@ -112,9 +139,23 @@ $table-view-mobile-default-marging: 4px;
     }
   }
 
-  &__row, &__mobile-row {
+  &__row, &__mobile-row-line {
+    &:hover, &.mod-selected, &.mod-hovered {
+      background-color: $table-bg-hover;
+    }
+  }
+
+  &__row, &__mobile-row, &__footer-row {
     position: relative;
     flex: 0 0 auto;
+
+    &.mod-money {
+      justify-content: flex-end;
+
+      .table-view__row-cell {
+        padding-right: $table-view-cell-right-padding;
+      }
+    }
   }
 
   &__row-actions, &__mobile-row-actions, &__mobile-row-secondary-actions {
@@ -135,6 +176,11 @@ $table-view-mobile-default-marging: 4px;
 
   &__row-action {
     margin-top: $table-view-default-marging;
+
+    &.mod-icon {
+      padding-bottom: 0;
+      margin-top: 0;
+    }
   }
 
   &__mobile-row-action {
@@ -157,6 +203,23 @@ $table-view-mobile-default-marging: 4px;
 
   &__mobile-row-cell {
     margin-left: $table-view-default-marging;
+
+    &:last-child {
+      .comma-separator {
+        display: none;
+      }
+    }
+
+    &.mod-money {
+      margin-left: auto;
+      margin-right: $table-view-default-marging;
+    }
+
+    &.mod-no-comma {
+      .comma-separator {
+        display: none;
+      }
+    }
   }
 
   &__actions {
@@ -168,13 +231,15 @@ $table-view-mobile-default-marging: 4px;
   }
 
   &__action {
+    display: inline-flex;
     margin-left: $table-view-default-marging;
   }
 
-  &__action-icon, &__action-label {
+  &__action-icon,
+  &__action-label {
     margin-right: $table-view-default-marging;
-    margin-bottom: $table-view-default-marging;
     cursor: pointer;
+    align-self: center;;
   }
 
   &__action-icon {
@@ -206,23 +271,15 @@ $table-view-mobile-default-marging: 4px;
 
   &__footer-cell {
     padding-right: $table-view-cell-right-padding;
-    font-weight: 700;
     text-align: left;
   }
+}
 
-  &__header-cell {
-    flex: 0 0 auto;
-  }
-
-  &__row-cell, &__header-cell {
-    &.mod-string, &.mod-number, &.mod-datetime, &.mod-buttons {
-      padding-left: 10px;
-      text-align: left;
-    }
-
-    &.mod-money {
-      padding-right: $table-view-cell-right-padding;
-      text-align: right;
-    }
+.table-view.mod-in-panel-stack,
+.table-view.mod-in-panel {
+  .table-view__row.mod-money .table-view__row-cell,
+  .table-view__footer-row.mod-money .table-view__footer-cell,
+  .table-view__header-cell.mod-money {
+    padding-right: $panel-new-padding-hor;
   }
 }

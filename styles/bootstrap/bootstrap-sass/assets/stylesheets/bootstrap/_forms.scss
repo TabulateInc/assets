@@ -162,9 +162,12 @@ output {
   }
 
   email-input.mod-lg-rounded &,
+  state-picker.mod-lg-rounded &,
   &.mod-lg-rounded {
+    appearance: none;
     font-size: $input-text-size;
     height: $input-height-lg; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+    line-height: 1em;
     padding: $input-padding-vertical $input-padding-horizontal;  // $padding-base-vertical $padding-base-horizontal;
     border-radius: $input-border-radius-lg; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
 
@@ -251,9 +254,7 @@ input[type="search"] {
   }
 }
 .radio input[type="radio"],
-.radio-inline input[type="radio"],
-.checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"] {
+.checkbox input[type="checkbox"] {
   position: absolute;
   margin-left: -20px;
   margin-top: 4px \9;
@@ -262,23 +263,6 @@ input[type="search"] {
 .radio + .radio,
 .checkbox + .checkbox {
   margin-top: 0;
-}
-
-// Radios and checkboxes on same line
-.radio-inline,
-.checkbox-inline {
-  position: relative;
-  display: inline-block;
-  padding-left: 20px;
-  margin-bottom: 0;
-  vertical-align: middle;
-  font-weight: normal;
-  cursor: pointer;
-}
-.radio-inline + .radio-inline,
-.checkbox-inline + .checkbox-inline {
-  margin-top: 0;
-  margin-left: 10px; // space out consecutive inline controls
 }
 
 // Apply same disabled cursor tweak as for inputs
@@ -293,14 +277,7 @@ input[type="checkbox"] {
     cursor: $cursor-disabled;
   }
 }
-// These classes are used directly on <label>s
-.radio-inline,
-.checkbox-inline {
-  &.disabled,
-  fieldset[disabled] & {
-    cursor: $cursor-disabled;
-  }
-}
+
 // These classes are used on elements with <label> descendants
 .radio,
 .checkbox {
@@ -543,17 +520,12 @@ input[type="checkbox"] {
   //
   // Labels also get some reset styles, but that is scoped to a media query below.
   .radio,
-  .checkbox,
-  .radio-inline,
-  .checkbox-inline {
+  .checkbox {
     margin-top: 0;
     margin-bottom: 0;
     padding-top: ($padding-base-vertical + 1); // Default padding plus a border
-  }
-  // Account for padding we're adding to ensure the alignment and of help text
-  // and other content below items
-  .radio,
-  .checkbox {
+    // Account for padding we're adding to ensure the alignment and of help text
+    // and other content below items
     min-height: ($line-height-computed + ($padding-base-vertical + 1));
   }
 

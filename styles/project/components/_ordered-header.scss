@@ -3,16 +3,20 @@
 
   position: absolute;
   top: $sorticon-margin;
-  right: -$sorticon-size - 1;
+  right: -$sorticon-size - 3;
 
   &.mod-left {
     right: auto;
-    left: -$sorticon-size - 1;
+    left: -$sorticon-size - 3;
   }
 
   &__wrapper {
-    font-size: $sorticon-size + $sorticon-margin;
-
+    color: $gray-middle-new;
     position: relative;
+
+    &:hover,
+    &:focus {
+      color: $gray-darkest-new;
+    }
   }
 }

@@ -23,8 +23,6 @@
     margin-top: -5px;
     margin-bottom: 5px;
 
-    color: $gray-new;
-
     @media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
       font-size: .9*32px;
     }
@@ -42,8 +40,6 @@
     margin-bottom: 35px;
     margin-right: auto;
     margin-left: auto;
-
-    color: $gray-dark-new;
 
     @media (min-width:$screen-xs-min) and (max-width:$screen-xs-max) {
       font-size: .9*16px;

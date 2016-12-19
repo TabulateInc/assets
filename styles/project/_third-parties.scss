@@ -54,10 +54,12 @@
     border: 1px solid $gray-lighter;
 
     button {
-        height: 33px;
+        height: 33px !important;
         outline: none;
-        border: 1px solid;
+        border: 1px solid $white;
         border-color: $white !important;
+        line-height: $line-height-base;
+        font-size: $font-size-base;
     }
 
     .dow {
@@ -85,7 +87,6 @@
     }
 
     .btn-grey {
-        padding: 0;
         &:hover,
         &.mod-hover {
             color: $brand-primary;
@@ -93,9 +94,13 @@
         }
     }
 
+
     .btn-primary {
-        padding: 0;
         color: $white;
+    }
+
+    .btn-default {
+        padding: 0;
     }
 
     td, th {
@@ -110,44 +115,29 @@
 }
 
 .typeahead {
-    %active-item {
-        color: $white !important;
-        background-color: $brand-primary !important;
-    }
-
-    background-color: $white !important;
-    border: 1px solid rgba(0, 0, 0, 0.175) !important;
-
+  overflow: auto;
     a {
-        color: $gray !important;
-        background-color: $white !important;
+        @include dropdown-item();
 
-        &:hover {
-            @extend %active-item;
-
-            &.no-matches {
-                color: $gray !important;
-                background-color: $white !important;
-            }
+        &.no-matches:hover {
+            background-color: transparent;
+            cursor: default !important;
         }
-    }
-
-    li.active a {
-        @extend %active-item;
     }
 
     .btn-link {
         text-decoration: none;
-
-        &:hover {
-            @extend %active-item;
-        }
     }
 
     &__group-header {
-        padding-left: 20px;
+        @include dropdown-item();
+
         font-weight: 600;
-        cursor: default;
+        cursor: default !important;
+
+        &:hover {
+            background-color: transparent;
+        }
     }
 }
 

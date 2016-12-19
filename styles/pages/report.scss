@@ -328,3 +328,18 @@ th.mod-addspace {
 tags-input.mod-row-filter {
   width: 300px;
 }
+
+.nav-glyph {
+  display:inline-block;
+  font-size:1.5em;
+  margin-right:0.5em;
+  margin-left:5px;
+
+  &.active {
+    color: $brand-primary;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

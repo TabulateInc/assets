@@ -1,0 +1,62 @@
+@mixin dropdown-item-active() {
+  background-color: $gray-lightest-new;
+  color: $gray-new;
+}
+
+@mixin dropdown-item() {
+  display: block;
+  position: relative;
+  padding: $dropdown-item-padding-vertical $dropdown-item-padding-horizontal;
+  line-height: $dropdown-item-height;
+  color: $gray-new;
+  background-color: transparent;
+  margin-top: $dropdown-item-distance-between;
+  clear: both;
+  white-space: nowrap; // prevent links from randomly breaking onto new lines
+  outline: 0;
+  cursor: pointer !important;
+  font-weight: 400;
+
+  &:hover {
+    @media (min-width: $screen-sm-min) {
+      &,
+      .glyphicon {
+        @include dropdown-item-active();
+      }
+    }
+  }
+
+  &.mod-active,
+  &.mod-active:hover,
+  &:focus {
+    &,
+    .glyphicon {
+      @include dropdown-item-active();
+    }
+  }
+
+  // center glyphicon between link and left border
+  .glyphicon {
+    font-size: $dropdown-item-glyphicon-size;
+    width: $dropdown-item-padding-horizontal + $dropdown-item-glyphicon-size/2;
+    height: $dropdown-item-height;
+    margin-left: -$dropdown-item-glyphicon-size/2;
+    color: $gray-middle-new;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    // click animation again
+    &::after {
+      background: make-click-color(#f5f5f5);
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    // click animation again
+    &:focus::after {
+      background: make-click-color(#f5f5f5);
+    }
+  }
+}

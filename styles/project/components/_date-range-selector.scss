@@ -3,9 +3,10 @@
 
   i {
     position: absolute;
-    top: 50%;
+    top: 50% !important;
     transform: translateY(-50%);
     left: 8px;
+    width: 20px;
   }
 
   &__input {
@@ -52,7 +53,9 @@ $headerHeight: 50px;
 }
 
 .daterangepicker {
+
   &.dropdown-menu.desktop {
+    max-height: none;
     z-index: 1020;
   }
 

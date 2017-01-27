@@ -1,4 +1,3 @@
-
 @import '../project/variables';
 @import '../bootstrap/variables';
 @import '../project/utils';
@@ -121,4 +120,17 @@ $overdue-label-color: #F25353;
 .void-text {
   float: right;
   margin-top: 6px;
+}
+
+.dropdown-menu__btn.btn {
+  &.mod-active {
+    border-color: $brand-saturated;
+    background-color: $brand-saturated;
+  }
+}
+
+.clearfix-xs {
+  @media (max-width: $screen-xs-max) {
+    @include clearfix;
+  }
 }

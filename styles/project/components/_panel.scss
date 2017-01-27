@@ -258,6 +258,11 @@ $panel-new-filter-font: 13px;
       padding: 0;
       border-right: 1px solid $border-color-base;
       vertical-align: top;
+
+      .date-picker {
+        height: $panel-new-filter-height;
+        border: none;
+      }
     }
   }
 }

@@ -111,10 +111,20 @@
 
   @media (min-width: $screen-sm-min) {
     min-height: $main-navigation-height;
+
+    &.mod-middle > * {
+      display: inline-block;
+      padding-top: $main-navigation-height/2 - $alert-margin-vertical - 10px - 1px !important;
+    }
   }
 
   @media (max-width: $screen-xs-max) {
     min-height: $main-navigation-height-mobile;
+
+    &.mod-middle > * {
+      display: inline-block;
+      padding-top: $main-navigation-height-mobile/2 - $alert-margin-vertical - 10px - 1px !important;
+    }
   }
 
   &.inline-alert {

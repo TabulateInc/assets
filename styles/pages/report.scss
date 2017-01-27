@@ -95,9 +95,14 @@ $chart-width: 380px;
 .content-filter {
   // third-party, so everything is important here
 
-  @media (min-width: $screen-sm-min) {
-    select {
+
+  select {
+    @media (min-width: $screen-lg-min) {
       max-width: 200px;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      max-width: 180px;
     }
   }
 

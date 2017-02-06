@@ -5,11 +5,12 @@
 @import 'Bootflat/bootflat/scss/bootflat';
 @import 'bootstrap-additions/bootstrap-additions';
 
+$arrow-possition: no-repeat right 8px center;
+$arrow-down: $img-arrow-down $arrow-possition $input-bg;
+$arrow-down-gray: $img-arrow-down-gray $arrow-possition transparent;
+$arrow-down-white: $img-arrow-down-white $arrow-possition transparent;
+
 select.btn {
-  $arrow-possition: no-repeat right 8px center;
-  $arrow-down: $img-arrow-down $arrow-possition $input-bg;
-  $arrow-down-gray: $img-arrow-down-gray $arrow-possition transparent;
-  $arrow-down-white: $img-arrow-down-white $arrow-possition transparent;
 
   @include custom-selector();
 
@@ -24,6 +25,10 @@ select.btn {
     border-color: $input-border-hover;
     background-color: $input-bg;
   }
+}
+
+select.form-control.mod-lg-rounded {
+  background: $arrow-down;
 }
 
 select.btn,

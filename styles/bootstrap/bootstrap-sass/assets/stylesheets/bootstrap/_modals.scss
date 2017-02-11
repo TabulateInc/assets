@@ -190,3 +190,10 @@ body.modal-open {
   padding-left: 0;
   padding-right: 0;
 }
+
+.modal-dialog.mod-lg {
+  width: auto !important;
+  max-width: 960px;
+  padding-left: 0;
+  padding-right: 0;
+}

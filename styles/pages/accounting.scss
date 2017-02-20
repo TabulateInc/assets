@@ -103,8 +103,26 @@ h5.margin-top-md {
 }
 
 .beginning-bank-balance {
-  height: auto;
-  padding: 0;
+  $icon-margin-left: 8px;
+
+  padding-top: 3px !important;
+  padding-bottom: 2px !important;
+
+  input {
+    height: auto;
+    padding: 0 5px;
+  }
+
+  + td.mod-checked {
+    background: url(#{$images-path}/checkmark.success.svg) no-repeat $icon-margin-left center transparent;
+    background-size: 16px;
+  }
+
+  + td.glyphicon-remove {
+    font-size: 11px;
+    padding-left: $icon-margin-left;
+    color: $alert-danger-text;
+  }
 }
 
 .half-column {

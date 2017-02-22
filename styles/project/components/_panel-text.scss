@@ -35,6 +35,7 @@
   &.mod-deposits {
     border-radius: $border-radius-base;
     cursor: default;
+    position: relative;
   }
 
   &.mod-deposits  &__icon {

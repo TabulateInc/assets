@@ -107,7 +107,8 @@ $details-status-width: 15px;
 }
 
 .add-edit-transaction,
-.modal-split {
+.modal-split,
+.modal {
   .ng-invalid,
   .form-control.mod-invalid,
   tags-input.ng-invalid .host {

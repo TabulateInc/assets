@@ -1,5 +1,6 @@
 @import '../project/variables';
 @import '../bootstrap/variables';
+@import '../bootstrap/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
 
 $details-status-width: 15px;
 
@@ -19,11 +20,6 @@ $details-status-width: 15px;
     @media (min-width:$screen-sm-min){
       position: absolute;
       line-height: $line-height-md;
-      width: 20px;
-      top: 0;
-      right: -$details-status-width;
-      padding-left: 10px;
-      font-size: 14px;
     }
 
     @media (max-width:$screen-xs-max){
@@ -34,6 +30,22 @@ $details-status-width: 15px;
 
   @media (max-width:$screen-xs-max){
     margin-bottom: $margin-normal;
+  }
+
+  settings-selector {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  .custom-selector {
+    padding: 1px 10px 0;
+    border: 1px solid $button-normal;
+    border-radius: $border-radius-base;
+  }
+
+  .icon-trash {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -68,9 +80,7 @@ $details-status-width: 15px;
 
     .readable-row {
       margin: 5px 0;
-    }
 
-    .readable-row {
       @media (min-width: $screen-sm-min) {
         height: $height-md;  // input height
         line-height: $height-md;  // center
@@ -83,6 +93,8 @@ $details-status-width: 15px;
   }
 
   &.mod-edit-transaction {
+    padding-top: 0;
+    padding-bottom: 0;
     background-color: $white !important;
     &:hover {
       background-color: $white !important;
@@ -128,20 +140,6 @@ $details-status-width: 15px;
 
 // Transaction Status
 // ----------------------
-
-.status-holder {
-  $row-height: 50px;
-  $holder-height: 22px;
-  $vertical-margin: ($row-height - $holder-height) / 2;
-  height: $holder-height;
-  margin-top: $vertical-margin;
-  margin-bottom: $vertical-margin;
-
-  @media (max-width: $screen-xs-max) {
-    margin-top: 5px;
-  }
-}
-
 .icon-circle {
   display: inline-block;
   width: 18px;
@@ -152,87 +150,21 @@ $details-status-width: 15px;
     width: 15px;
   }
 
-  &--unchecked svg {
-    fill: $ios-unchecked;
-    width: 22px;
-    height: 22px;
-    vertical-align: middle;
-
-    @media (max-width:$screen-xs-max) {
-      width: 19px;
-      height: 19px;
-    }
-  }
-
-  &--checked svg {
-    fill: $brand-primary;
-    width: 22px;
-    height: 22px;
-
-    @media (max-width:$screen-xs-max) {
-      width: 19px;
-      height: 19px;
-    }
-  }
-
-  &--info svg {
-    fill: $ios-notification;
-    width: 18px;
-    height: 18px;
-    margin: 2px;
-
-    @media (max-width:$screen-xs-max) {
-      width: 15px;
-      height: 15px;
-    }
-
-    circle {
-      stroke: $ios-notification;
-    }
-  }
-
-  &--notify,
   &--expand {
-    line-height: 19px;
-
-    width: 21px;
-    height: 21px;
-
-    text-align: center;
-
-    color: $white;
-    border-radius: 50%;
-  }
-
-  &--notify {
-    font-size: 10px;
-
-    vertical-align: top;
-
-    border: 1px solid $ios-notification;
-    background-color: $ios-notification;
-
-    @media (max-width:$screen-xs-max) {
-      font-size: 8px;
-      line-height: 2em;
-
-      width: 18px;
-      height: 18px;
-    }
-  }
-
-  &--expand {
-    font-size: 7px;
-
-    position: absolute;
     z-index: 10;
-
+    position: absolute;
     left: 0;
     right: 0;
-    margin-left: 45.5%;    // 5/11 = 45.5%
     top: 80%;
-
+    margin-left: 45.5%;    // 5/11 = 45.5%
+    width: 21px;
+    height: 21px;
     border: 1px solid $brand-primary;
+    border-radius: 50%;
+    line-height: 19px;
+    font-size: 7px;
+    text-align: center;
+    color: $white;
     background-color: $brand-primary;
 
     &.glyphicon-menu-up {
@@ -276,57 +208,49 @@ date-range-selector {
   list-style: none;
   padding: 0;
   margin: 0;
-
-  @media (min-width: $screen-sm-min) {
-    width: calc(100% + 4px);  // add 1 px for every panel
-  }
+  border-bottom: 1px solid $gray-light-new;
 
   &__item {
     vertical-align: baseline;
-    padding-left: 0;
-    z-index: 5;
-    margin: $margin-md 0 $margin-md -1px;
+    padding: 5px;
 
-    &:hover {
-      z-index: 10;
+    &__text {
+      border: 1px solid $gray-light-new;
+      border-radius: 3px;
+      padding: 5px;
+      font-size: 12px;
+      cursor: pointer;
+
+      &.mod-selected,
+      &:hover {
+        border-color: $brand-primary;
+        background-color: $brand-primary;
+        color: $white;
+      }
     }
   }
 }
 
-.transactions-panel {
+.select-dropdown .dropdown-menu {
+  overflow-y: scroll;
+}
+
+.aside.mod-mobile-filter {
+  .aside-body {
+    padding: 0;
+  }
+
+  .panel-new__filter__item__wrapper {
+    float: none;
+    display: block;
+    border-right: 0;
+
+    @include clearfix;
+  }
+}
+
+.pull-right-sm {
   @media (min-width: $screen-sm-min) {
-    border-radius: 0;
-  }
-
-  &.mod-selected {
-    border-width: 2px;
-    border-color: $brand-primary;
-    z-index: 20;
-    padding: 24px 14px;
-  }
-
-  &__value {
-    font-size: 23px;
-    font-weight: 300;
-    color: $brand-primary;
-
-    &.mod-danger {
-      color: $ios-notification;
-    }
-  }
-
-  &__header {
-    font-weight: 600;
-    font-size: 11px;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding-top: 6px;
-  }
-
-  &__description {
-    font-weight: 400;
-    font-size: 11px;
-    color: #888;
+    float: right;
   }
 }

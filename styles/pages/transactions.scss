@@ -254,3 +254,64 @@ date-range-selector {
     float: right;
   }
 }
+
+.other-details {
+  @media (min-width: $screen-sm-min) {
+    .add-control {
+      position: relative;
+    }
+
+    strong {
+      display: inline-block;
+      vertical-align: top;
+      line-height: 41px;
+    }
+
+    .form-control {
+      position: relative;
+      display: inline-block;
+      width: auto;
+      border-color: transparent !important;
+      background-color: transparent !important;
+      z-index: 2;
+
+      &:hover,
+      &:focus {
+        border-color: $input-border !important;
+      }
+
+      &:focus + .glyphicon-pencil {
+        display: none;
+      }
+    }
+
+    select {
+      background: none;
+    }
+
+    textarea {
+      padding-top: 10px;
+      height: 40px;
+      resize: none;
+
+      &:hover,
+      &:focus {
+        resize: both;
+      }
+    }
+
+    .glyphicon-pencil {
+      font-size: 10px;
+      position: absolute;
+      top: 15px;
+      margin-left: -15px;
+      z-index: 1;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .glyphicon-pencil {
+      display: none;
+    }
+  }
+}

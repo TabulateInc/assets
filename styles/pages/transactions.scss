@@ -10,7 +10,10 @@
 
   &__btn {
     z-index: 10;
-    right: -23px;
+
+    .add-edit-transaction & {
+      right: -23px;
+    }
 
     @media (min-width:$screen-sm-min){
       position: absolute;
@@ -331,15 +334,16 @@ date-range-selector {
 .status-panels {
 
   @media (min-width: $screen-sm-min) {
-    text-align: center;
-    padding: $padding-base-vertical 15px $padding-base-vertical 0;
-    border-bottom: 1px solid $border-color-base;
     @include clearfix();
+
+    text-align: center;
+    padding: $padding-base-vertical*2 15px $padding-base-vertical*2 0;
+    border-bottom: 1px solid $border-color-base;
   }
 
   &__panel {
     border-bottom: 1px solid $border-color-base;
-    padding: $padding-base-vertical 0;
+    padding: $padding-base-vertical*2 0;
     text-align: center;
     cursor: pointer;
 

@@ -173,9 +173,10 @@ date-range-selector {
 }
 
 .create-rule {
-  right: -100px;
+  right: 10px;
   top: 7px;
   position: absolute;
+  z-index: 10;
 }
 
 .transactions-panel-group {

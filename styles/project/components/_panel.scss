@@ -18,7 +18,7 @@ $panel-new-filter-font: 13px;
     font-weight: 300;
     line-height: $panel-header-line-height;
     border-bottom: 1px solid $border-color-base;
-    padding: $panel-header-padding 10px $panel-header-padding $panel-header-padding;
+    padding: $panel-header-padding $panel-new-padding-hor;
 
     @media (max-width: $screen-xs-max) {
       padding: 15px $panel-new-padding-hor-mobile;    // move
@@ -34,10 +34,16 @@ $panel-new-filter-font: 13px;
         padding-left: 10px;
         padding-right: 10px;
       }
+
+      &.icon-close {
+        padding: 0;
+        margin-right: -6px;
+      }
     }
 
     settings-selector {
       margin-top: -10px;
+      margin-right: -15px;
 
       .custom-selector {
         &__btn {

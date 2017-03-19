@@ -391,11 +391,14 @@ select.padding-left-xs option,
   $color: $brand-primary;
   $border: 1px solid $color;
 
-  margin-left: 6px;
   border: $border;
   background-color: $table-bg-hover;
   color: $color;
   vertical-align: top;
+
+  .table-view & {
+    margin-left: 6px;
+  }
 
   &:hover, &:focus, &:active, &.active {
     background-color: $white;
@@ -508,4 +511,8 @@ td.mod-clickable:hover {
 .padding-hor-md {
   padding-right: $distance-hor-md;
   padding-left: $distance-hor-md;
+}
+
+.input-padding-right {
+  padding-right: $padding-base-horizontal;
 }

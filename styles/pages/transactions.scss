@@ -338,7 +338,7 @@ date-range-selector {
     @include clearfix();
 
     text-align: center;
-    padding: $padding-base-vertical*2 15px $padding-base-vertical*2 0;
+    padding: $padding-base-vertical*2 $panel-new-padding-hor $padding-base-vertical*2 0;
     border-bottom: 1px solid $border-color-base;
   }
 
@@ -354,10 +354,10 @@ date-range-selector {
     }
 
     @media (min-width: $screen-sm-min) {
-      margin-left: 15px;
+      margin-left: $panel-new-padding-hor;
       border: 1px solid $border-color-base;
       border-radius: $border-radius-base;
-      width: calc(25% - 15px);
+      width: calc(25% - #{$panel-new-padding-hor});
       float: left;
       display: inline-block;
       font-size: 12px;

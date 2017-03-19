@@ -202,6 +202,10 @@ $panel-new-filter-font: 13px;
       }
     }
 
+    .date-range-selector__input {
+      padding-left: $distance-hor-md;
+    }
+
     .search {
       margin-top: ($panel-new-filter-height - $search-input-size) / 2;
       margin-bottom: ($panel-new-filter-height - $search-input-size) / 2;
@@ -268,6 +272,9 @@ $panel-new-filter-font: 13px;
       .date-picker {
         height: $panel-new-filter-height;
         border: none;
+        line-height: $panel-new-filter-height;
+        padding-top: 0;
+        font-size:  $panel-new-filter-font;
       }
     }
   }

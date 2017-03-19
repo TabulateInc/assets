@@ -10,7 +10,7 @@
   min-height: $content-filter-height + 2 * $content-filter-padding;
 
   .form-control {
-    height: $content-filter-height; // Make inputs at toolbar same height 29px
+    height: $content-filter-height !important; // Make inputs at toolbar same height 29px
   }
 
   &.mod-date-and-tags,

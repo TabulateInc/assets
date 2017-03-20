@@ -89,7 +89,7 @@ $animation-duration: .6s;
     @media (min-width: $screen-sm-min) {
       min-width: 300px;
       max-height: 0;
-      margin-top: -$nav-header-content-height !important;
+      top: -$nav-header-content-height !important;
     }
 
     @media (max-width: $screen-xs-max) {

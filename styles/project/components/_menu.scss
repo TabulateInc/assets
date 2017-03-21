@@ -32,6 +32,7 @@ $animation-duration: .6s;
     font-size: $nav-header-title-size;
     height: $nav-header-content-height;
     line-height: $nav-header-content-height;
+    margin-left: 10px !important;
     cursor: pointer;
     user-select: none;
   }
@@ -59,45 +60,33 @@ $animation-duration: .6s;
 
 // dropdown menu and nav actually
 .navbar {
+  .select-dropdown.mod-menu-down .dropdown-menu {
+    min-width: 300px;
+    top: 0 !important;
+    left: 10px !important;
+  }
+
   .dropdown-wrapper {
     background-color: $white;
 
-    @media (min-width: $screen-sm-min) {
-      position: absolute;
-      left: $nav-header-padding-hor + $nav-logo-size;
-      margin-left: 10px;
+    .dropdown-menu {
 
-      &.mod-opened,
-      &:hover {
-        .dropdown-menu {
-          max-height: 1000px;
-        }
+      @media (max-width: $screen-xs-max) {
+        position: relative;
+        display: block;
+        top: 0 !important;
+        left: 0 !important;
+        padding-bottom: 0;
+        overflow: hidden;
+        font-size: 15px;
+        transition: $dropdown-transition;
+
+        max-height: none !important;
+        padding-top: 0;
+        float: none;
+        box-shadow: none;
+        border: none;
       }
-    }
-  }
-
-  .dropdown-menu {
-    position: relative;
-    display: block;
-    top: 0 !important;
-    left: 0 !important;
-    padding-bottom: 0;
-    overflow: hidden;
-    font-size: 15px;
-    transition: $dropdown-transition;
-
-    @media (min-width: $screen-sm-min) {
-      min-width: 300px;
-      max-height: 0;
-      top: -$nav-header-content-height !important;
-    }
-
-    @media (max-width: $screen-xs-max) {
-      max-height: none !important;
-      padding-top: 0;
-      float: none;
-      box-shadow: none;
-      border: none;
     }
   }
 }

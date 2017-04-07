@@ -90,6 +90,10 @@
       position: absolute;
       top: 1px;
       right: 8px;
+
+      &.mod-merge-table {
+        top: $items-table-padding;
+      }
     }
   }
 

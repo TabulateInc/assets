@@ -78,6 +78,7 @@ $animation-duration: .6s;
         left: 0 !important;
         padding-bottom: 0;
         overflow: hidden;
+        overflow-y: hidden !important;
         font-size: 15px;
         transition: $dropdown-transition;
 

@@ -102,6 +102,16 @@ h5.margin-top-md {
   }
 }
 
+.report-table.mod-admin {
+  th {
+    max-width: 122px;  // $xx,xxx,xxx.xx
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+
 .beginning-bank-balance {
   $icon-margin-left: 8px;
 

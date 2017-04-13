@@ -371,3 +371,7 @@ date-range-selector {
     }
   }
 }
+
+.items-table__row.mod-selected {
+  background-color: $table-bg-hover;
+}

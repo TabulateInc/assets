@@ -193,3 +193,13 @@ drag-drop.mod-tender {
   left: 5px;
   top: 12px;
 }
+
+error-icon.mod-fee-info {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+
+  + .tooltip {
+    margin-right: -80px;
+  }
+}

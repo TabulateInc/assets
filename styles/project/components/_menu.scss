@@ -64,6 +64,7 @@ $animation-duration: .6s;
     min-width: 300px;
     top: 0 !important;
     left: 10px !important;
+    overflow-y: hidden !important;
   }
 
   .dropdown-wrapper {
@@ -78,7 +79,6 @@ $animation-duration: .6s;
         left: 0 !important;
         padding-bottom: 0;
         overflow: hidden;
-        overflow-y: hidden !important;
         font-size: 15px;
         transition: $dropdown-transition;
 

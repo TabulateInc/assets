@@ -164,3 +164,37 @@ drag-drop.mod-deposit-item {
   position: absolute;
   left: 4px;
 }
+
+aside-button {
+  .btn-default.mod-report-content-filter {
+    color: $icon-color;
+
+    @media (max-width: $screen-xs-max) {
+      border: none;
+      background-color: transparent;
+
+      &:hover,
+      &:active {
+        color: $icon-color;
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    z-index: 1030;
+    position: fixed;
+    top: 5px;
+    right: 0;
+  }
+}
+
+.js-export-subtitle {
+  height: 0;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10000;
+}

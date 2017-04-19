@@ -284,7 +284,7 @@ $panel-new-filter-font: 13px;
   $font-size-panel: 15px;
   $gray-panel: #7b8994;
 
-  border: 1px solid $middle-gray-color;
+  border: 1px solid $border-color-base;
   border-radius: $border-radius-large;
   box-shadow: none;
   margin: 0;
@@ -297,7 +297,6 @@ $panel-new-filter-font: 13px;
 
   &__header {
     font-size: $font-size-panel;
-    font-weight: $font-weight-lg;
     margin-bottom: $margin-sm;
   }
 
@@ -309,7 +308,6 @@ $panel-new-filter-font: 13px;
   &__action {
     margin-top: $margin-sm - 6px;  // button padding-top
     font-size: $font-size-panel;
-    font-weight: $font-weight-lg;
 
     .glyphicon {
       font-size: $font-size-panel - 4;

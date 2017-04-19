@@ -55,6 +55,16 @@
       @include table-overflow-wrapper($fix-column-width-lg);
     }
   }
+
+  &.mod-adaptive-xs {
+    @media (max-width: $screen-xs-max) {
+      @include table-overflow-wrapper($fix-column-width-sm);
+    }
+
+    @media (min-width: $screen-sm-min) {
+      @include table-overflow-wrapper($fix-column-width-lg);
+    }
+  }
 }
 
 .table-centrify {

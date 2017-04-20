@@ -343,3 +343,41 @@ tags-input.mod-row-filter {
     cursor: pointer;
   }
 }
+
+.table.mod-transactions {
+  thead {
+    white-space: nowrap;
+  }
+
+  th {
+    border-bottom-width: 1px;
+    font-weight: 400;
+  }
+}
+
+.search.mod-transactions-report {
+  @media (max-width: $screen-xs-max) {
+    tags-input {
+      display: none;
+    }
+
+    &.mod-opened {
+      z-index: 1041;
+
+      tags-input {
+        display: block;
+      }
+    }
+
+    .search__show {
+      margin-right: 30px;
+    }
+  }
+  @media (min-width: $screen-sm-min) {
+    height: 42px;
+
+    .host {
+      border-width: 0 !important;
+    }
+  }
+}

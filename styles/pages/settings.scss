@@ -206,4 +206,29 @@ error-icon.mod-fee-info {
 
 .toggle.mod-payroll {
   line-height: 17px;
+
+  &:after {
+    display: none;
+  }
+
+  .handle {
+    &:before {
+      padding-top: 2px !important;
+      padding-left: 22px !important;
+      width: 78px;
+      content: 'Payroll Off';
+      color: $white;
+    }
+  }
+
+  input[type=checkbox]:checked {
+    + .handle:after {
+      left: 60px;
+    }
+    + .handle:before {
+      content: 'Payroll On';
+      padding-left: 8px !important;
+    }
+  }
 }
+

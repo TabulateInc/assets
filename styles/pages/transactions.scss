@@ -349,8 +349,20 @@ date-range-selector {
     cursor: pointer;
 
     @media (max-width: $screen-xs-max) {
+      @include clearfix();
+
       line-height: 40px;
       font-weight: 300;
+
+      &__amount {
+        padding-right: 10px;
+        float: right;
+      }
+
+      &__text {
+        padding-left: 10px;
+        float: left;
+      }
     }
 
     @media (min-width: $screen-sm-min) {
@@ -367,6 +379,21 @@ date-range-selector {
         background-color: $brand-primary;
         border-color: $brand-primary;
         color: $white;
+      }
+
+      &__text {
+        display: inline-block;
+      }
+
+      &__amount {
+        display: inline-block;
+
+        &:before {
+          content: '('
+        }
+        &:after {
+          content: ')'
+        }
       }
     }
   }

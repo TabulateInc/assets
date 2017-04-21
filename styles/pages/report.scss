@@ -381,3 +381,13 @@ tags-input.mod-row-filter {
     }
   }
 }
+
+.transaction-details {
+  padding-top: $table-cell-padding;
+  padding-bottom: $table-cell-padding;
+
+  @media (min-width: $screen-sm-min) {
+    padding-right: $padding-md + $table-cell-padding;
+    padding-left: $padding-md;
+  }
+}

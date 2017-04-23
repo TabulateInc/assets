@@ -19,6 +19,10 @@
     min-width: 290px !important;
   }
 
+  @media (max-width: $screen-xs-max) {
+    min-width: 100% !important;
+  }
+
   &.am-slide-right.mod-fix-right {
     right: 0;
   }

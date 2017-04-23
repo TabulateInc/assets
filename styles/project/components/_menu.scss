@@ -25,6 +25,18 @@ $animation-duration: .6s;
   }
 }
 
+@mixin mobile-menu__item {
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $border-color-base;
+
+  &:hover {
+    color: $brand-primary;
+    cursor: pointer;
+  }
+}
+
 .navbar-title {
   font-weight: 300;
 
@@ -69,44 +81,14 @@ $animation-duration: .6s;
 
   .dropdown-wrapper {
     background-color: $white;
-
-    .dropdown-menu {
-
-      @media (max-width: $screen-xs-max) {
-        position: relative;
-        display: block;
-        top: 0 !important;
-        left: 0 !important;
-        padding-bottom: 0;
-        overflow: hidden;
-        font-size: 15px;
-        transition: $dropdown-transition;
-
-        max-height: none !important;
-        padding-top: 0;
-        float: none;
-        box-shadow: none;
-        border: none;
-      }
-    }
   }
 }
 
 .navbar-right {
   @media (min-width: $screen-sm-min) {
     float: right;
-  }
 
-  a,
-  a:hover {
-    @media (max-width: $screen-xs-max) {
-      @include dropdown-item();
-    }
-  }
-
-
-  tab-input {
-    @media (min-width: $screen-sm-min) {
+    tab-input {
       $tab-input-height: 34px;
 
       min-width: 210px;
@@ -118,21 +100,29 @@ $animation-duration: .6s;
       }
     }
 
-    @media (max-width: $screen-xs-max) {
-      margin-bottom: $dropdown-item-padding-vertical;
-      padding-left: $dropdown-item-padding-horizontal - $dropdown-item-glyphicon-size/2;
-      padding-right: $dropdown-item-padding-horizontal;
-    }
-  }
-
-  .glyphicon {
-    @media (min-width: $screen-sm-min) {
+    .glyphicon {
       color: $gray-middle-new;
       font-size: 20px;
       line-height: $nav-header-content-height;
       margin-left: 10px;
     }
   }
+
+  @media (max-width: $screen-xs-max) {
+    li {
+      @include mobile-menu__item();
+    }
+
+    a {
+      display: block;
+      color: $gray-new;
+
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+
 
   &__title {
     @media (min-width: $screen-sm-min) {
@@ -150,51 +140,94 @@ $animation-duration: .6s;
 }
 
 // mobile specific styles
-@media (max-width: $screen-xs-max) {
-  .navbar-toggle {
-    $icon-height: 14px;
-    $button-padding: ($main-navigation-height-mobile - $icon-height) / 2;
-    $button-size: $button-padding*2 + $icon-height;
+.navbar.mod-mobile {
+  &.mod-opened {
+    z-index: 1000000;
+    position: fixed;
+    background-color: $white;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 
-    float: left;
-    margin: 0;
-    padding: $button-padding;
-    border: none;
-
-    .icon-bar {
-      background-color: $gray-text;
+    .navbar-title {
+      display: none;
     }
-    // click animation
-    &[animate-click]::after {
-      $size: $button-size;
 
-      top: 50%;
-      left: 50%;
+    .navbar-content {
+      padding: 0 48px;
+    }
 
-      width: $size;
-      height: $size;
-      margin-top: -$size / 2;
-      margin-left: -$size / 2;
+    select {
+      font-size: 16px;
+    }
+  }
+}
 
-      border-radius: 50%;
-      background: make-click-color($white);
+.menu-nav-dropdown {
+  &__item {
+    @include mobile-menu__item();
+  }
+}
+
+.navbar-toggle {
+  $to-top-bar: 4px;
+  $bar-height: 2px;
+  $bar-width: ($to-top-bar*2 + $bar-height*3)*1.4;
+  $margin-top: ($main-navigation-height-mobile - $nav-header-title-size-sm)/2;
+
+  float: left;
+  margin: $margin-top 0 0 5px;
+  padding: 0;
+  border: none;
+
+  width: $bar-width;
+  height: $bar-height*3 + $to-top-bar*2;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+
+  .icon-bar--animated {
+    display: block;
+    position: absolute;
+    height: $bar-height;
+    width: 100%;
+    background: $gray-text;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: $to-top-bar + $bar-height;
+    }
+
+    &:nth-child(3) {
+      top: ($to-top-bar + $bar-height)*2;
     }
   }
 
-  .aside.mod-navbar {
-    background-color: $white;
-
-    .icon-close {
-      float: left;
-      margin-left: 18px;
+  &.mod-opened .icon-bar--animated {
+    &:nth-child(1) {
+      top: $to-top-bar + $bar-height;
+      transform: rotate(135deg);
     }
 
-    .aside-dialog {
-      background-color: $white;
+    &:nth-child(2) {
+      opacity: 0;
+      left: -60px;
+    }
 
-      .aside-body {
-        padding: 0;
-      }
+    &:nth-child(3) {
+      top: $to-top-bar + $bar-height;
+      transform: rotate(-135deg);
     }
   }
 }

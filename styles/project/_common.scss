@@ -516,3 +516,9 @@ td.mod-clickable:hover {
 .input-padding-right {
   padding-right: $padding-base-horizontal;
 }
+
+.aside-backdrop.am-fade,
+.aside.am-slide-left,
+.aside.am-slide-right {
+  animation: none !important;
+}

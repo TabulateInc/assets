@@ -143,7 +143,6 @@ $chart-width: 380px;
   }
 
   .aside {
-
     .add-control {
       .form-control {
         height: 40px!important;
@@ -153,6 +152,11 @@ $chart-width: 380px;
 
     .custom-selector__btn{
       line-height:2.1;
+    }
+
+    report-filter-new,
+    week-end-filter {
+      display: none;
     }
   }
 
@@ -389,5 +393,21 @@ tags-input.mod-row-filter {
   @media (min-width: $screen-sm-min) {
     padding-right: $padding-md + $table-cell-padding;
     padding-left: $padding-md;
+  }
+}
+
+.row-filter {
+  > * {
+    display: none;
+  }
+
+  report-filter-new,
+  week-end-filter {
+    display: block;
+
+    > .date-range-selector > * {
+      float: left;
+      margin-right: 5px;
+    }
   }
 }

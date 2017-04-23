@@ -281,74 +281,41 @@ $panel-new-filter-font: 13px;
 }
 
 .custom-panel {
-  $font-size-panel: 15px;
-  $gray-panel: #7b8994;
+  @include clearfix();
 
-  border: 1px solid $border-color-base;
-  border-radius: $border-radius-large;
+  $gray-panel: #7b8994;
+  $img-height: 37px;
+
+  border-bottom: 1px solid $border-color-base;
   box-shadow: none;
   margin: 0;
-  padding: 25px $padding-md;
+  padding: 25px 0;
+
+  &:first-child {
+    border-top: 1px solid $border-color-base;
+  }
 
   &:hover {
-    border-color: $brand-primary;
+    background-color: $table-bg-hover;
     cursor: pointer;
   }
 
-  &__header {
-    font-size: $font-size-panel;
-    margin-bottom: $margin-sm;
+  &__image {
+    width: $img-height;
+    height: $img-height;
+    background: url(#{$images-path}/analytics.svg) no-repeat;
+    background-size: $img-height;
+    float: left;
+  }
+
+  &__about {
+    padding-left: 50px - $img-height;
+    width: calc(100% - #{$img-height});
+    float: left;
   }
 
   &__description {
-    font-weight: $font-weight-xs;
     color: $gray-panel;
-  }
-
-  &__action {
-    margin-top: $margin-sm - 6px;  // button padding-top
-    font-size: $font-size-panel;
-
-    .glyphicon {
-      font-size: $font-size-panel - 4;
-    }
-  }
-}
-
-.report-panel-group {
-  @include clearfix();
-
-  list-style: none;
-  padding: 0;
-  margin-top: $margin-md;
-
-  &__item {
-    vertical-align: baseline;
-    margin-bottom: $margin-md;
-    padding: 0;
-
-    @media (min-width: $screen-sm-min) {
-      &:nth-child(even) {
-        padding-left: $margin-md / 2;
-      }
-
-      &:nth-child(odd) {
-        padding-right: $margin-md / 2;
-      }
-    }
-  }
-
-  // custom panel is link only here
-  .custom-panel {
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
-    // overflow issue fix
-    .custom-panel__description {
-      min-height: 40px;
-    }
+    font-size: 13px;
   }
 }

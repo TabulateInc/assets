@@ -121,6 +121,7 @@ h5.margin-top-md {
   input {
     height: auto;
     padding: 0 5px;
+    min-width: 100px;
   }
 
   + td.mod-checked {
@@ -202,5 +203,17 @@ aside-button {
 .content-filter account-filter.mod-ledger-journal {
   @media (max-width: $screen-xs-max) {
     display: none;
+  }
+}
+
+.filters-group.mod-row-filters {
+  @media (max-width: $screen-xs-max) {
+    report-type {
+      display: none;
+    }
+
+    date-range-grouping > * {
+      width: auto;
+    }
   }
 }

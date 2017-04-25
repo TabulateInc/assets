@@ -389,10 +389,10 @@ date-range-selector {
         display: inline-block;
 
         &:before {
-          content: '('
+          content: '(';
         }
         &:after {
-          content: ')'
+          content: ')';
         }
       }
     }
@@ -401,4 +401,20 @@ date-range-selector {
 
 .items-table__row.mod-selected {
   background-color: $table-bg-hover;
+}
+
+.aside {
+  .panel-new__filter__item__wrapper .date-picker {
+    padding-left: 20px;
+
+    width: auto;
+    display: inline-block;
+    min-width: auto;
+
+    + .caret {
+      position: relative;
+      color: $gray-new;
+      margin-top: 2px;
+    }
+  }
 }

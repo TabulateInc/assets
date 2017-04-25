@@ -137,9 +137,10 @@ $animation-duration: .6s;
     }
 
     @media (max-width: $screen-xs-max) {
-      line-height: $dropdown-item-padding-vertical*2 + $dropdown-item-height;
-      // update padding when custom icons created
-      padding-left: $dropdown-item-padding-horizontal;  // $dropdown-item-padding-horizontal*2 + 2px
+      &:hover {
+        color: $gray-new !important;
+        cursor: default !important;
+      }
     }
   }
 }

@@ -79,11 +79,22 @@ h5.margin-top-md {
 .report-table.mod-reconciliation {
   td:first-child,
   th:first-child {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     padding-left: 0;
+
+    @media (max-width: $screen-xs-max) {
+      max-width: 210px;
+    }
   }
 
   td, th {
     padding-left: 60px;
+
+    @media (max-width: $screen-xs-max) {
+      padding-left: 10px;
+    }
   }
 
   thead {

@@ -165,3 +165,13 @@
 .icon-back {
   background: url(#{$images-path}/back.svg) no-repeat center transparent;
 }
+
+.icon-equalizer {
+  $size: 19px;
+
+  background: url(#{$images-path}/equalizer.svg) no-repeat center;
+  background-size: $size;
+  height: $size - 2px;
+  width: $size;
+  display: inline-block;
+}

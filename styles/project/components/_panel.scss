@@ -284,7 +284,8 @@ $panel-new-filter-font: 13px;
   @include clearfix();
 
   $gray-panel: #7b8994;
-  $img-height: 37px;
+  $img-height: 36px;
+  $img-width: 30px;
 
   border-bottom: 1px solid $border-color-base;
   box-shadow: none;
@@ -301,16 +302,16 @@ $panel-new-filter-font: 13px;
   }
 
   &__image {
-    width: $img-height;
+    width: $img-width;
     height: $img-height;
     background: url(#{$images-path}/analytics.svg) no-repeat;
-    background-size: $img-height;
+    background-size: $img-width $img-height;
     float: left;
   }
 
   &__about {
-    padding-left: 50px - $img-height;
-    width: calc(100% - #{$img-height});
+    padding-left: 50px - $img-width;
+    width: calc(100% - #{$img-width});
     float: left;
   }
 

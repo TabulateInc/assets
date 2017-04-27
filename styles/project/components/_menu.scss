@@ -55,10 +55,9 @@ $animation-duration: .6s;
   }
 
   @media (max-width: $screen-xs-max) {
-    $toggle-button-width: 46px;
+    $toggle-button-width: 20px;
 
     font-size: $nav-header-title-size-sm;
-    line-height: 1em;
     margin: 0;
     padding-right: $toggle-button-width;
     height: $main-navigation-height-mobile;

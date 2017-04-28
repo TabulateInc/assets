@@ -48,8 +48,6 @@
   color: $gray;
 }
 
-$nav-header-title-size-sm: 19px;
-
 @media (max-width: $screen-xs-max) {
   .aside {
     .aside-dialog {
@@ -59,27 +57,17 @@ $nav-header-title-size-sm: 19px;
       }
       $icon-width: 25px;
       $icon-height: 25px;
-      $margin-top: ($main-navigation-height-mobile - $icon-height)/2;
+
+      .aside-body {
+        @include actions-content(24px);
+      }
 
       .icon-back {
-        float: left;
-        padding: 0;
-        margin: $margin-top 0 0 5px;
-        border: none;
-
-        width: $icon-width;
-        height: $icon-height;
-        position: relative;
-        cursor: pointer;
+        @include actions-back($icon-height, $icon-width);
       }
 
       .aside-title {
-        font-size: $nav-header-title-size-sm;
-        margin: 0;
-        padding-right: $icon-width;
-        height: $main-navigation-height-mobile;
-        line-height: $main-navigation-height-mobile;
-        text-align: center;
+        @include actions-title($icon-width);
       }
     }
   }

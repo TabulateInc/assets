@@ -7,26 +7,29 @@ $padding-right-opened: 10px;
 $custom-selector-padding-bottom: $custom-selector-padding-top + 2px;
 $custom-selector-btn-height: $custom-selector-padding-top + $custom-selector-padding-bottom + $ellipsis-height + 2px;
 
+$back-icon-width: 25px;
+$back-icon-height: 25px;
+
 settings-selector {
-  position: relative;
   display: block;
   text-align: left;
-  min-height: $custom-selector-btn-height;
-  min-width: $custom-selector-padding-left + $custom-selector-padding-right + $ellipsis-width + 2px;
+  position: relative;
 
-  &.mod-sm {
-    min-height: 1px;
-
-    .settings-selector__btn {
-      height: 16px;
-      background-position: 2px;
-    }
+  @media (min-width: $screen-sm-min) {
+    min-width: $custom-selector-padding-left + $custom-selector-padding-right + $ellipsis-width + 2px;
+    min-height: $custom-selector-btn-height;
   }
 
   &.mod-overflow-visible {
     .custom-selector {
       overflow: visible;
     }
+  }
+
+  .icon-back {
+    display: none;
+
+    @include actions-back($back-icon-height, $back-icon-width);
   }
 
   .custom-selector {
@@ -38,27 +41,48 @@ settings-selector {
     background-color: $white;
     z-index: 1000;
     border: 1px solid transparent;
-    max-height: $custom-selector-btn-height;
     overflow: hidden;
-    transition: max-height $transition-duration-base $transition-style-base;
 
     &.mod-opened {
-      max-height: 244px;
-      min-width: 270px;
-      box-shadow: $shadow-default;
-      border-color: $gray-lighter-new;
-
       .settings-selector__options {
-        padding: 3px 10px 8px 0;
         display: block;
         visibility: visible;
+      }
+
+      @media (min-width: $screen-sm-min) {
+        box-shadow: $shadow-default;
+        border-color: $gray-lighter-new;
+        max-height: 244px;
+        min-width: 270px;
+      }
+
+      @media (max-width: $screen-xs-max) {
+
+        @include actions-container();
+
+        padding: 0;
+
+        .icon-back,
+        .settings-selector__caption {
+          display: block;
+        }
+
+        .settings-selector__btn {
+          display: none;
+        }
       }
     }
 
     &__option {
-      white-space: nowrap;
-      padding: 10px 0;
-      border: none;
+      @media (min-width: $screen-sm-min) {
+        padding: 10px 0;
+        border: none;
+        white-space: nowrap;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        @include actions-option();
+      }
 
       &.mod-options-separator {
         border-top: 1px solid $gray-lighter;
@@ -74,10 +98,7 @@ settings-selector {
         font-weight: 400 !important;
       }
 
-      .btn-settings-action,
-      .btn-settings-action:hover,
-      .btn-settings-action:focus,
-      .btn-settings-action:active {
+      .btn-settings-action {
         position: relative;
         width: 100%;
         border: none;
@@ -85,19 +106,56 @@ settings-selector {
         box-shadow: none;
         color: $gray-new;
 
-        .btn-settings-action__caption,
-        .export-text {
-          position: absolute !important;
-          top: 0 !important;
-          left: 30px;
-          margin-left: 0 !important;
-          font-size: 13px;
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+          border: none;
+          background-color: transparent;
+          box-shadow: none;
+          color: $gray-new;
         }
 
-        .btn-settings-action__icon {
-          position: absolute;
-          top: 0;
-          left: -5px;
+        @media (max-width: $screen-xs-max) {
+          padding: 0;
+          text-align: left;
+        }
+
+        &__caption,
+        .export-text {
+          @media (min-width: $screen-sm-min) {
+            position: absolute;
+            top: 0;
+            left: 30px;
+            margin-left: 0;
+            font-size: 13px;
+          }
+
+          @media (max-width: $screen-xs-max) {
+            line-height: 30px;
+            padding-left: 5px;
+            font-size: 16px;
+            margin: 0;
+            position: relative;
+          }
+        }
+
+        &__icon {
+          @media (max-width: $screen-xs-max) {
+            float: left;
+            position: relative;
+            background-position: 0;
+
+            &.icon-add {
+              background-position: -5px;
+            }
+          }
+
+          @media (min-width: $screen-sm-min) {
+            position: absolute;
+            top: 0;
+            left: -5px;
+          }
         }
       }
 
@@ -136,7 +194,14 @@ settings-selector {
 .settings-selector {
   &__options {
     display: none;
-    transition: $transition-default;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 3px 10px 8px 0;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      @include actions-content();
+    }
   }
 
   &__btn {
@@ -145,5 +210,10 @@ settings-selector {
     width: 30px !important;
     text-align: center;
     position: relative;
+  }
+
+  &__caption {
+    @include actions-title($back-icon-width);
+    display: none;
   }
 }

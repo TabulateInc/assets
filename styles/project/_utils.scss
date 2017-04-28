@@ -26,3 +26,55 @@
 @function make-click-color($color) {
   @return transparentize(darken($color, 10%), .5);
 }
+
+$nav-header-title-size-sm: 19px;
+
+@mixin actions-container() {
+  z-index: 1000000;
+  position: fixed;
+  background-color: $white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+@mixin actions-title($icon-width) {
+  font-size: $nav-header-title-size-sm;
+  margin: 0;
+  padding-right: $icon-width;
+  height: $main-navigation-height-mobile;
+  line-height: $main-navigation-height-mobile;
+  text-align: center;
+}
+
+@mixin actions-back($icon-height, $icon-width) {
+  $margin-top: ($main-navigation-height-mobile - $icon-height)/2;
+
+  float: left;
+  padding: 0;
+  margin: $margin-top 0 0 5px;
+  border: none;
+
+  width: $icon-width;
+  height: $icon-height;
+  position: relative;
+  cursor: pointer;
+}
+
+@mixin actions-content($padding: 48px) {
+  padding: 0 $padding;
+}
+
+@mixin actions-option() {
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $border-color-base;
+
+  &:hover {
+    color: $brand-primary;
+    cursor: pointer;
+  }
+}

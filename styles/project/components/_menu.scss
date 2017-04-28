@@ -30,18 +30,6 @@ $animation-duration: .6s;
   }
 }
 
-@mixin mobile-menu__item {
-  font-size: 16px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid $border-color-base;
-
-  &:hover {
-    color: $brand-primary;
-    cursor: pointer;
-  }
-}
-
 .navbar-title {
   font-weight: 300;
 
@@ -57,12 +45,8 @@ $animation-duration: .6s;
   @media (max-width: $screen-xs-max) {
     $toggle-button-width: 20px;
 
-    font-size: $nav-header-title-size-sm;
-    margin: 0;
-    padding-right: $toggle-button-width;
-    height: $main-navigation-height-mobile;
-    line-height: $main-navigation-height-mobile;
-    text-align: center;
+    @include actions-title($toggle-button-width);
+
     float: none;
   }
 }
@@ -114,7 +98,7 @@ $animation-duration: .6s;
 
   @media (max-width: $screen-xs-max) {
     li {
-      @include mobile-menu__item();
+      @include actions-option();
     }
 
     a {
@@ -147,21 +131,14 @@ $animation-duration: .6s;
 // mobile specific styles
 .navbar.mod-mobile {
   &.mod-opened {
-    z-index: 1000000;
-    position: fixed;
-    background-color: $white;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
+    @include actions-container();
 
     .navbar-title {
       display: none;
     }
 
     .navbar-content {
-      padding: 0 48px;
+      @include actions-content();
     }
 
     select {
@@ -172,7 +149,7 @@ $animation-duration: .6s;
 
 .menu-nav-dropdown {
   &__item {
-    @include mobile-menu__item();
+    @include actions-option();
   }
 }
 
@@ -180,19 +157,13 @@ $animation-duration: .6s;
   $to-top-bar: 4px;
   $bar-height: 2px;
   $bar-width: ($to-top-bar*2 + $bar-height*3)*1.4;
-  $margin-top: ($main-navigation-height-mobile - $nav-header-title-size-sm)/2;
+  $icon-width: $bar-width;
+  $icon-height: $bar-height*3 + $to-top-bar*2;
 
-  float: left;
-  margin: $margin-top 0 0 5px;
-  padding: 0;
-  border: none;
+  @include actions-back($icon-height, $icon-width);
 
-  width: $bar-width;
-  height: $bar-height*3 + $to-top-bar*2;
-  position: relative;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
-  cursor: pointer;
 
   .icon-bar--animated {
     display: block;

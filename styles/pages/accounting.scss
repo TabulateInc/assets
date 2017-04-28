@@ -42,7 +42,8 @@ td.mod-bordered-group {
 
   &.mod-aside-filters {
     date-range-selector .custom-selector__btn,
-    select {
+    select,
+    date-selector {
       height: 34px !important;
     }
 
@@ -206,15 +207,10 @@ aside-button {
   z-index: -10000;
 }
 
-.content-filter account-filter.mod-ledger-journal {
-  @media (max-width: $screen-xs-max) {
-    display: none;
-  }
-}
-
 .filters-group.mod-row-filters {
   @media (max-width: $screen-xs-max) {
-    report-type {
+    report-type,
+    account-filter {
       display: none;
     }
 

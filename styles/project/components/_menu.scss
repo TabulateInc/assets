@@ -160,7 +160,7 @@ $animation-duration: .6s;
   $icon-width: $bar-width;
   $icon-height: $bar-height*3 + $to-top-bar*2;
 
-  @include actions-back($icon-height, $icon-width);
+  @include actions-button($icon-height, $icon-width);
 
   transform: rotate(0deg);
   transition: .5s ease-in-out;

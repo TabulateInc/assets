@@ -7,6 +7,8 @@
 
 // Aside
 // -----------------------
+$icon-width: 25px;
+$icon-height: 25px;
 
 .aside {
   &.am-slide-left {
@@ -55,15 +57,13 @@
         padding: 0;
         border-bottom: none;
       }
-      $icon-width: 25px;
-      $icon-height: 25px;
 
       .aside-body {
         @include actions-content(24px);
       }
 
       .icon-back {
-        @include actions-back($icon-height, $icon-width);
+        @include actions-button($icon-height, $icon-width);
       }
 
       .aside-title {
@@ -190,6 +190,46 @@
       padding-right: 0;
       border-right: 0;
     }
+  }
+}
+
+
+.daterangepicker.modal {
+  padding: 0;
+  margin: 0;
+
+  .modal-content {
+    border: none;
+  }
+
+  .modal-header {
+    border: none;
+    padding: 0;
+    height: auto;
+  }
+
+  .modal-body {
+    @include actions-content();
+    height: calc(100% - #{$main-navigation-height-mobile}) !important;
+  }
+
+  .icon-back {
+    @include actions-button($icon-height, $icon-width);
+  }
+
+  .icon-apply {
+    background: url(#{$images-path}/checkmark.dark.svg) no-repeat center;
+    background-size: 21px;
+    @include actions-button(14px, 21px, 'right');
+  }
+
+  .modal-title {
+    @include actions-title($icon-width);
+  }
+  .modal-dialog {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
   }
 }
 

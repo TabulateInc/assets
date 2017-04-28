@@ -14,11 +14,8 @@ settings-selector {
   display: block;
   text-align: left;
   position: relative;
-
-  @media (min-width: $screen-sm-min) {
-    min-width: $custom-selector-padding-left + $custom-selector-padding-right + $ellipsis-width + 2px;
-    min-height: $custom-selector-btn-height;
-  }
+  min-width: $custom-selector-padding-left + $custom-selector-padding-right + $ellipsis-width + 2px;
+  min-height: $custom-selector-btn-height;
 
   &.mod-overflow-visible {
     .custom-selector {
@@ -29,7 +26,7 @@ settings-selector {
   .icon-back {
     display: none;
 
-    @include actions-back($back-icon-height, $back-icon-width);
+    @include actions-button($back-icon-height, $back-icon-width);
   }
 
   .custom-selector {

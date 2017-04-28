@@ -522,3 +522,8 @@ td.mod-clickable:hover {
 .aside.am-slide-right {
   animation: none !important;
 }
+
+.aside-backdrop.am-fade,
+.modal-backdrop.am-fade {
+  background: rgba(0,0,0,.3) !important;
+}

@@ -7,8 +7,10 @@
 
 // Aside
 // -----------------------
-$icon-width: 25px;
-$icon-height: 25px;
+$back-icon-width: 25px;
+$back-icon-height: 25px;
+$apply-icon-height: 14px;
+$apply-icon-width: 21px;
 
 .aside {
   &.am-slide-left {
@@ -63,11 +65,11 @@ $icon-height: 25px;
       }
 
       .icon-back {
-        @include actions-button($icon-height, $icon-width);
+        @include actions-button($back-icon-height, $back-icon-width);
       }
 
       .aside-title {
-        @include actions-title($icon-width);
+        @include actions-title($back-icon-width);
       }
     }
   }
@@ -213,19 +215,43 @@ $icon-height: 25px;
     height: calc(100% - #{$main-navigation-height-mobile}) !important;
   }
 
-  .icon-back {
-    @include actions-button($icon-height, $icon-width);
+  @media (max-width: $screen-xs-max) {
+    .icon-back {
+      @include actions-button($back-icon-height, $back-icon-width);
+    }
+
+    .icon-apply {
+      @include actions-button($apply-icon-height, $apply-icon-width, 'right');
+
+      background: url(#{$images-path}/checkmark.dark.svg) no-repeat center;
+      background-size: $apply-icon-width;
+    }
+
+    .modal-title {
+      @include actions-title($back-icon-width);
+    }
   }
 
-  .icon-apply {
-    background: url(#{$images-path}/checkmark.dark.svg) no-repeat center;
-    background-size: 21px;
-    @include actions-button(14px, 21px, 'right');
+  @media (min-width: $screen-sm-min) {
+    $xs-to-sm: 1.5;
+    .icon-back {
+      @include actions-button($back-icon-height*$xs-to-sm, $back-icon-width*$xs-to-sm);
+    }
+
+    .icon-apply {
+      @include actions-button($apply-icon-height*$xs-to-sm, $apply-icon-width*$xs-to-sm, 'right');
+
+      background: url(#{$images-path}/checkmark.dark.svg) no-repeat center;
+      background-size: $apply-icon-width*$xs-to-sm;
+    }
+
+    .modal-title {
+      @include actions-title($back-icon-width*$xs-to-sm);
+
+      font-size: 25px;
+    }
   }
 
-  .modal-title {
-    @include actions-title($icon-width);
-  }
   .modal-dialog {
     margin-top: 0;
     margin-bottom: 0;

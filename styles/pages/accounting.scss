@@ -38,6 +38,16 @@ td.mod-bordered-group {
       width: 50%;
       padding: 0;
     }
+
+    select {
+      @media (min-width: $screen-lg-min) {
+        max-width: 200px;
+      }
+
+      @media (min-width: $screen-xs-min) {
+        max-width: 180px;
+      }
+    }
   }
 
   &.mod-aside-filters {

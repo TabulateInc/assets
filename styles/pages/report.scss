@@ -94,7 +94,7 @@ $chart-width: 380px;
 
 .content-filter {
   // third-party, so everything is important here
-  select {
+  .row-filter select {
     @media (min-width: $screen-lg-min) {
       max-width: 200px;
     }
@@ -150,11 +150,6 @@ $chart-width: 380px;
 
     .custom-selector__btn{
       line-height:2.1;
-    }
-
-    report-filter-new,
-    week-end-filter {
-      display: none;
     }
   }
 

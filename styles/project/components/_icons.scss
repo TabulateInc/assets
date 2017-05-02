@@ -167,11 +167,20 @@
 }
 
 .icon-equalizer {
-  $size: 19px;
+  $size: 26px;
 
   background: url(#{$images-path}/equalizer.svg) no-repeat center;
-  background-size: $size;
-  height: $size - 2px;
-  width: $size;
   display: inline-block;
+
+  background-size: $size;
+  height: 19px;
+  width: $size;
+
+  @media (min-width: $screen-sm-min) {
+    $size: 19px;
+
+    background-size: $size;
+    height: $size - 3px;
+    width: $size;
+  }
 }

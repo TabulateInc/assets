@@ -28,6 +28,8 @@
 }
 
 $nav-header-title-size-sm: 19px;
+$actions-options-height: floor($actions-option-font-size*$line-height-base);
+$actions-options-height-full: floor($actions-option-font-size*$line-height-base) + $actions-option-padding*2 + 1px;
 
 @mixin actions-container() {
   z-index: 1000000;
@@ -56,10 +58,10 @@ $nav-header-title-size-sm: 19px;
 
   @if $position == 'right' {
     float: right;
-    margin-right: 5px;
+    margin-right: 5px;  // TODO
   } @else {
     float: left;
-    margin-left: 5px;
+    margin-left: 5px;  // TODO
   }
   padding: 0;
   border: none;
@@ -70,18 +72,33 @@ $nav-header-title-size-sm: 19px;
   cursor: pointer;
 }
 
-@mixin actions-content($padding: 48px) {
+@mixin actions-content($padding: #{$actions-content-padding}) {
   padding: 0 $padding;
 }
 
 @mixin actions-option() {
-  font-size: 16px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  font-size: $actions-option-font-size;
+  padding: $actions-option-padding 0;
+  border: none;
   border-bottom: 1px solid $border-color-base;
+  border-radius: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: $line-height-base;
+  background: $white;
+  color: $gray-new;
+  margin: 0;
 
   &:hover {
     color: $brand-primary;
     cursor: pointer;
+    background: $white;
+    border: none;
+    border-bottom: 1px solid $border-color-base;
+  }
+
+  &:focus {
+    outline: none;
   }
 }

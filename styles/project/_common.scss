@@ -336,16 +336,6 @@ select.padding-left-xs option,
 
 // Inputs
 // --------------------------
-.over-input {
-  position: absolute;
-  top: 35%;
-  right: 20px;
-
-  @media (max-width:$screen-xs-max) {
-    font-size: 12px;
-  }
-}
-
 .input-disabled {
   background-color: $gray-lighter;
 }

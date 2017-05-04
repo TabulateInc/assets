@@ -174,9 +174,25 @@ output {
     @media (max-width: $screen-xs-max) {
       height: 50px;
     }
+
+    + .form-control__over {
+      line-height: $input-height-lg;
+
+      @media (max-width: $screen-xs-max) {
+        line-height: 50px;
+      }
+    }
   }
 
   // [converter] extracted textarea& to textarea.form-control
+}
+
+.form-control__over {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: $font-size-base;
+  line-height: $input-height-base;
 }
 
 // Reset height for `textarea`s

@@ -1,0 +1,174 @@
+[tabulate-typeahead] {
+  @media (min-width: $screen-sm-min) {
+    padding-right: 20px;
+
+    ~ .icon-close {
+      $icon-width: 20px;
+      $icon-height: 20px;
+      $to-border: 4px;
+
+      top: calc(50% - #{$icon-height}/2);
+      right: $to-border;
+      width: $icon-width;
+      height: $icon-height;
+
+      position: absolute;
+      cursor: pointer;
+
+      .inputs-group .add-control & {
+        right: $to-border + $distance-hor-md;
+      }
+
+      tab-input & {
+        right: $to-border !important;
+      }
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    ~ .form-control__over,
+    ~ .icon-close {
+      display: none;
+    }
+  }
+}
+
+// active in mobile
+[tabulate-typeahead].active {
+  $zindex-mobile-typeahead: 1050;
+
+  position: fixed;
+  z-index: $zindex-mobile-typeahead;
+  top: 0;
+  right: $actions-content-padding;
+  left: $actions-content-padding;
+  width: calc(100% - #{$actions-content-padding}*2);
+  padding-left: 0;
+  border-color: transparent !important;
+  border-bottom: 1px solid $border-color-base !important;
+  border-radius: 0;
+  font-size: $actions-option-font-size !important;
+  height: $main-navigation-height-mobile !important;
+  line-height: $main-navigation-height-mobile !important;
+
+  &.input-inactive {
+    background-color: $white;
+  }
+
+  .tab-input:hover &,
+  .tab-input &.form-control:focus {
+    border-color: transparent !important;
+    border-bottom: 1px solid $border-color-base !important;
+  }
+
+  .tab-input:hover &,
+  .tab-input &.form-control:focus {
+    border-color: transparent !important;
+    border-bottom: 1px solid $border-color-base !important;
+  }
+
+  .add-edit-transaction &.form-control.mod-invalid {
+    border-color: transparent !important;
+    border-bottom: 1px solid $border-color-base !important;
+  }
+
+  ~ {
+    .typeahead.dropdown-menu {
+      position: fixed;
+      z-index: $zindex-mobile-typeahead;
+      right: $actions-content-padding;
+      left: 0 !important;
+      height: calc(100% - #{$main-navigation-height-mobile*2});
+      max-height: none;
+      box-shadow: none;
+
+      li {
+        &:before {
+          content: '';
+          display: inline-block;
+          width: $actions-content-padding - 4px;
+          height: $actions-options-height-full;
+          background: url(#{$images-path}/search.svg) no-repeat center;
+          background-size: 26px;
+          vertical-align: middle;
+        }
+
+        a,
+        span {
+          @include actions-option();
+
+          display: inline-block;
+          float: right;
+          width: calc(100% - #{$actions-content-padding});
+        }
+
+        &.active a {
+          background-color: $white;
+          color: $brand-primary;
+        }
+
+        .btn-link {
+          padding: 0;
+        }
+
+        &.add-vendor-row:before {
+          background: none;
+        }
+      }
+    }
+
+    // icons
+    .icon-back,
+    .icon-close,
+    .form-control__over {
+      position: fixed;
+      z-index: $zindex-mobile-typeahead;
+      display: inline-block;
+    }
+
+    .form-control__over {
+      $icon-width: $font-size-base;
+      line-height: $main-navigation-height-mobile;
+      right: ($actions-content-padding - $icon-width)/2;
+    }
+
+    .icon-back,
+    .icon-close {
+      top: ($main-navigation-height-mobile - $back-icon-height)/2;
+      width: $back-icon-width;
+      height: $back-icon-height;
+    }
+
+    .icon-back {
+      left: ($actions-content-padding - $back-icon-width)/2;
+    }
+
+    .icon-close {
+      right: ($actions-content-padding - $back-icon-width)/2;
+    }
+
+    // backdrop
+    .aside-backdrop.mod-mobile-typeahead {
+      background: $white !important;
+    }
+  }
+}
+
+.form-control__over.mod-typeahead {
+  $to-border: 7px;
+
+  color: $gray-text;
+  cursor: pointer;
+
+  @media (min-width: $screen-sm-min) {
+    right: $to-border;
+
+    .inputs-group .add-control & {
+      right: $to-border + $distance-hor-md;
+    }
+
+    .inputs-group tab-input.add-control & {
+      right: $to-border;
+    }
+  }
+}

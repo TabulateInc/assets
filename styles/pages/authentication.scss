@@ -58,6 +58,10 @@ body {
   @include animation-duration(.2s);
 }
 
+.form-control__over.mod-signin {
+  right: 20px;
+}
+
 @keyframes slideDown {
   0% {
     height: 0;

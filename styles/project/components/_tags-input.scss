@@ -117,7 +117,6 @@ tags-input {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: $search-input-margin;
     background: $white;
   }
 
@@ -132,8 +131,8 @@ tags-input {
     }
 
     @media (max-width: $screen-xs-max) {
-      top: $search-input-margin + ($search-input-size - $search-close-size) / 2;
-      right: $search-input-margin + 10px + 1px;
+      top: 5px;
+      right: 5px;
     }
   }
 
@@ -165,8 +164,8 @@ tags-input {
     @media (max-width: $screen-xs-max) {
       position: fixed;
       z-index: 1040;
-      top: $search-input-margin + ($search-input-size - $search-show-icon-size) / 2 + 1px;
-      left: 8px;
+      top: 5px;
+      left: 5px;
       display: none;
       padding: $search-show-icon-size/2 $dropdown-item-padding-horizontal/2;
       background: url(#{$images-path}/search.svg) no-repeat center transparent;
@@ -223,18 +222,71 @@ tags-input {
       $border-to-tag: $dropdown-item-padding-horizontal;
 
       margin-top: 0;
-      border: 1px solid $border-color-base;
+      border: none;
+
+      .tags {
+        @include actions-content();
+      }
+
+      .tags .input,
+      .tags .tag-item {
+        font-size: $actions-option-font-size;
+      }
 
       .autocomplete {
-        margin-top: $search-input-margin;
-        margin-left: -$border-to-tag;
-        border: 1px solid $border-color-base;
+        margin-top: 1px;
+        border: none;
         box-shadow: none;
+
+        .suggestion-list {
+          max-height: none;
+        }
+
+        .suggestion-item {
+          @include actions-option();
+          @include clearfix();
+
+          margin-left: $actions-content-padding;
+          margin-right: $actions-content-padding;
+          overflow: visible;
+
+          ti-autocomplete-match {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            display: inline-block;
+            float: left;
+            width: 100%;
+          }
+
+          &:before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: $actions-options-height-full;
+            background: url(#{$images-path}/search.svg) no-repeat center;
+            background-size: 30px;
+            vertical-align: middle;
+            position: absolute;
+            left: -$actions-content-padding + 5px;
+            top: 0;
+          }
+
+          &.selected,
+          &.selected em {
+            background: $white;
+            color: $brand-primary;
+          }
+        }
       }
 
       .host {
-        padding-right: $border-to-tag + 5px;
-        padding-left: $border-to-tag;
+        border-bottom: 1px solid $border-color-base !important;
+      }
+
+      .tags {
+        margin-right: 0;
+        max-width: 100% !important;
       }
 
       .tag-list {
@@ -244,6 +296,15 @@ tags-input {
       .input {
         padding-left: 0 !important;
         min-width: 52px;  // Search word
+      }
+
+      .tag-item span {
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        float: left;
       }
     }
   }
@@ -277,3 +338,4 @@ tags-input {
     }
   }
 }
+

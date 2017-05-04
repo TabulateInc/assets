@@ -177,17 +177,49 @@ $headerHeight: 50px;
   }
 
   .ranges {
-    li {
-      border-radius: 0;
-      background: $white;
-      border: 1px solid $white;
-      color: $darkgray-dark;
-
-      &.active, &:focus, &:hover {
-        background-color: $brand-primary;
-        border: 1px solid $brand-primary;
+    @media (min-width: $screen-sm-min) {
+      li {
         border-radius: 0;
-        color: $white;
+        background: $white;
+        border: 1px solid $white;
+        color: $darkgray-dark;
+
+        &.active, &:focus, &:hover {
+          background-color: $brand-primary;
+          border: 1px solid $brand-primary;
+          border-radius: 0;
+          color: $white;
+        }
+      }
+    }
+
+    @media (max-width: $screen-xs-max) {
+      @include actions-content();
+
+      margin: 0;
+      float: none !important;
+
+      ul {
+        width: 100% !important;
+      }
+
+      li {
+        @include actions-option();
+
+        position: relative;
+        overflow: visible;
+
+        &:before {
+          position: absolute;
+          content: '';
+          left: -47px;
+          top: 0;
+          width: 39px;
+          height: 39px;
+          background: url(#{$images-path}/calendar.svg) no-repeat center;
+          background-size: 25px;
+          vertical-align: middle;
+        }
       }
     }
   }

@@ -15,6 +15,10 @@
     }
   }
 
+  .form-control__over {
+    line-height: $height-md;
+  }
+
   &.mod-desktop {
     border-left: 1px solid $table-border-color;
 

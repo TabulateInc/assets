@@ -266,13 +266,12 @@ $apply-icon-width: 21px;
 
     max-height: none;
 
-    &:before {
+    .icon-back {
       $icon-height: 25px;
       $icon-width: 25px;
 
       @include actions-button($icon-height, $icon-width);
 
-      content: '';
       background: url(#{$images-path}/back.svg) no-repeat center transparent;
       position: absolute;
       top: 0;

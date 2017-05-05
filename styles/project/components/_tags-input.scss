@@ -168,7 +168,7 @@ tags-input {
       left: 5px;
       display: none;
       padding: $search-show-icon-size/2 $dropdown-item-padding-horizontal/2;
-      background: url(#{$images-path}/search.svg) no-repeat center transparent;
+      background: url(#{$images-path}/back.svg) no-repeat center transparent;
       background-size: $search-show-icon-size !important;
       cursor: pointer;
     }
@@ -183,38 +183,38 @@ tags-input {
 
     display: none;
 
+    // overflow scroll
+    .tags {
+      white-space: nowrap;
+    }
+
+    .tag-list {
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    .input {
+      display: inline-block;
+      float: none !important;
+    }
+
+    .tag-item {
+      float: none !important;
+    }
+
+    .ps-scrollbar-x-rail {
+      left: 0 !important;
+      background-color: transparent !important;
+
+      .ps-scrollbar-x {
+        background-color: transparent !important;
+      }
+    }
+
     // misc
     @media (min-width: $screen-sm-min) {
       padding-left: $search-show-icon-padding*2;
       padding-right: $search-show-icon-padding*2;
-
-      // overflow scroll
-      .tags {
-        white-space: nowrap;
-      }
-
-      .tag-list {
-        white-space: nowrap;
-        display: inline-block;
-      }
-
-      .input {
-        display: inline-block;
-        float: none !important;
-      }
-
-      .tag-item {
-        float: none !important;
-      }
-
-      .ps-scrollbar-x-rail {
-        left: 0 !important;
-        background-color: transparent !important;
-
-        .ps-scrollbar-x {
-          background-color: transparent !important;
-        }
-      }
     }
 
     @media (max-width: $screen-xs-max) {
@@ -225,7 +225,8 @@ tags-input {
       border: none;
 
       .tags {
-        @include actions-content();
+        margin-left: $actions-content-padding;
+        margin-right: $actions-content-padding;
       }
 
       .tags .input,
@@ -286,7 +287,6 @@ tags-input {
 
       .tags {
         margin-right: 0;
-        max-width: 100% !important;
       }
 
       .tag-list {
@@ -296,15 +296,21 @@ tags-input {
       .input {
         padding-left: 0 !important;
         min-width: 52px;  // Search word
+        vertical-align: top;
       }
 
-      .tag-item span {
-        max-width: 200px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        display: inline-block;
-        float: left;
+      .tag-item {
+        span {
+          max-width: 200px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display: inline-block;
+        }
+
+        .remove-button {
+          vertical-align: top !important;
+        }
       }
     }
   }

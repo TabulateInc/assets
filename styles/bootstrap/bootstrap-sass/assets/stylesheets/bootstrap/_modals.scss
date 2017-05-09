@@ -137,7 +137,7 @@ body.modal-open {
   margin-top: 0;
   padding: 0 $modal-footer-horizontal-padding $modal-footer-bottom-padding;
   background-color: $gray-lighter-custom;
-  @include radius($type: border-radius, $value: 0 0 #{$modal-border-radius} #{$modal-border-radius});
+  border-radius: 0 0 $modal-border-radius $modal-border-radius;
   border-top: none;
 
   .btn {

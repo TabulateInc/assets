@@ -26,7 +26,7 @@ $toggle-off-background-color:   #cad9e8 !default;
   }
 
   & .handle {
-    @include radius($value: $toggle-radius);
+    border-radius: $toggle-radius;
 
     &:before {
       //checked character [V]
@@ -37,7 +37,7 @@ $toggle-off-background-color:   #cad9e8 !default;
       // toogle background
       width: $toggle-width;
       height: $toggle-height;
-      @include radius($value: $toggle-radius);
+      border-radius: $toggle-radius;
     }
 
     &:after {
@@ -74,7 +74,7 @@ $toggle-off-background-color:   #cad9e8 !default;
     margin: 0;
     padding: 0;
     text-indent: -100000px;
-    @include opacity($opacity: $toggle-checkbox-opacity, $filter: true);
+    @include opacity($toggle-checkbox-opacity);
   }
 
   & .handle {
@@ -103,7 +103,7 @@ $toggle-off-background-color:   #cad9e8 !default;
     &:after {
     // toogle circle
       content: "";
-      @include radius($value: 100%);
+      border-radius: 100%;
       @include transition($toggle-transition-value);
         background-color: $white;
       }
@@ -113,7 +113,7 @@ $toggle-off-background-color:   #cad9e8 !default;
   & input[type="radio"]:disabled    +  .handle,
   & input[type="checkbox"]:disabled +  .handle:before,
   & input[type="radio"]:disabled    +  .handle:before {
-    @include opacity($opacity: 60, $filter: true);
+    @include opacity(.6);
   }
 
   & input[type="checkbox"]:checked + .handle:before,

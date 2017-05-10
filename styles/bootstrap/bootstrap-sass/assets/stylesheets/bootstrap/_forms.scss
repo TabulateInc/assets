@@ -33,7 +33,7 @@ label {
   display: inline-block;
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
   margin-bottom: 5px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 
@@ -73,11 +73,30 @@ select[size] {
   height: auto;
 }
 
+select::-ms-expand {
+  display: none;
+}
+
 // Focus for file, radio, and checkbox
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
   @include tab-focus;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  /*margin: 0; [> <-- Apparently some margin are still there even though it's hidden <]*/
 }
 
 // Adjust output element
@@ -303,64 +322,14 @@ input[type="checkbox"] {
   }
 }
 
-
-// Static form control text
-//
-// Apply class to a `p` element to make any string of text align with labels in
-// a horizontal form layout.
-
-.form-control-static {
-  // Size it appropriately next to real form controls
-  padding-top: ($padding-base-vertical + 1);
-  padding-bottom: ($padding-base-vertical + 1);
-  // Remove default margin from `p`
-  margin-bottom: 0;
-  min-height: ($line-height-computed + $font-size-base);
-
-  &.input-lg,
-  &.input-sm {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-
 // Form control sizing
 //
 // Build on `.form-control` with modifier classes to decrease or increase the
 // height and font-size of form controls.
-//
-// The `.form-group-* form-control` variations are sadly duplicated to avoid the
-// issue documented in https://github.com/twbs/bootstrap/issues/15074.
 
 @include input-size('.input-sm', $input-height-small, $padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $input-border-radius-small);
-.form-group-sm {
-
-  @include input-size('.form-control', $input-height-small, $padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $input-border-radius-small);
-
-  .form-control-static {
-    height: $input-height-small;
-    padding: $padding-small-vertical $padding-small-horizontal;
-    font-size: $font-size-small;
-    line-height: $line-height-small;
-    min-height: ($line-height-computed + $font-size-small);
-  }
-}
 
 @include input-size('.input-lg', $input-height-large, $padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $input-border-radius-large);
-.form-group-lg {
-
-  @include input-size('.form-control', $input-height-large, $padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $input-border-radius-large);
-
-  .form-control-static {
-    height: $input-height-large;
-    padding: $padding-large-vertical $padding-large-horizontal;
-    font-size: $font-size-large;
-    line-height: $line-height-large;
-    min-height: ($line-height-computed + $font-size-large);
-  }
-}
-
 
 // Form control feedback states
 //
@@ -374,29 +343,6 @@ input[type="checkbox"] {
   .form-control {
     padding-right: ($input-height-base * 1.25);
   }
-}
-// Feedback icon (requires .glyphicon classes)
-.form-control-feedback {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2; // Ensure icon is above input groups
-  display: block;
-  width: $input-height-base;
-  height: $input-height-base;
-  line-height: $input-height-base;
-  text-align: center;
-  pointer-events: none;
-}
-.input-lg + .form-control-feedback {
-  width: $input-height-large;
-  height: $input-height-large;
-  line-height: $input-height-large;
-}
-.input-sm + .form-control-feedback {
-  width: $input-height-small;
-  height: $input-height-small;
-  line-height: $input-height-small;
 }
 
 // Feedback states
@@ -419,17 +365,4 @@ input[type="checkbox"] {
   &.sr-only ~ .form-control-feedback {
      top: 0;
   }
-}
-
-
-// Help text
-//
-// Apply to any element you wish to create light text for placement immediately
-// below a form control. Use for general help, formatting, or instructional text.
-
-.help-block {
-  display: block; // account for any element using help-block
-  margin-top: 5px;
-  margin-bottom: 10px;
-  color: lighten($text-color, 25%); // lighten the text some for contrast
 }

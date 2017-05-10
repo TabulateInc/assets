@@ -1,7 +1,6 @@
 // Here go all the custom styles that are not related to any component
 
 // TOC:
-// * Scaffolding
 // * Display & Positioning
 // * Box (height, padding, margin, borders, outline)
 // * Text
@@ -9,55 +8,6 @@
 // * Buttons
 // * Grid
 // * Misc
-
-
-// Scaffolding
-// --------------------------------------------------
-
-body {
-  padding-bottom: 100px;
-
-  @media (min-width: $screen-sm-min) {
-    padding-top: $main-navigation-height + $main-navigation-to-content;
-  }
-
-  @media (max-width: $screen-xs-max) {
-    padding-top: $main-navigation-height-mobile + $main-navigation-to-content-mobile;
-  }
-}
-
-// page title
-h3 {
-  margin-top: 0;
-  font-size: $page-title-font-size;
-}
-
-label {
-  font-weight:normal;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="email"],
-input[type="password"],
-textarea {
-  -webkit-appearance: none;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
-  -webkit-appearance: none;
-  /*margin: 0; [> <-- Apparently some margin are still there even though it's hidden <]*/
-}
-
-a:hover {
-  cursor: pointer;
-}
-
-select::-ms-expand {
-  display: none;
-}
 
 // Display & Positioning
 // -----------------------------
@@ -279,57 +229,6 @@ select.padding-left-xs option,
 
 // Text
 // --------------------------
-
-.bold {
-  font-weight: bold;
-
-  &-sm {
-    @media (min-width: $screen-sm-min) {
-      font-weight: bold;
-    }
-  }
-}
-
-.text-dark {
-  color: $darkgray-dark !important;
-}
-
-.text-grey {
-  color: $gray-text;
-}
-
-.primary-text {
-  color: $brand-primary;
-}
-
-.danger-text {
-  color: $brand-danger;
-}
-
-.text-lowercase {
-  text-transform: lowercase;
-}
-
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-.text-capitalize {
-  text-transform: capitalize;
-}
-
-.line-height-sm {
-  line-height: $line-height-sm;
-}
-
-.line-height-md {
-  line-height: $line-height-md;
-}
-
-.line-height-lg {
-  line-height: $line-height-lg;
-}
-
 .break-word {
   word-wrap: break-word;
 }
@@ -444,12 +343,6 @@ select.padding-left-xs option,
 
 // Misc
 // --------------------------
-
-.clearfix {
-  clear: both;
-  float: none;
-}
-
 .overflow-ellipsis {
   overflow: hidden;
   white-space: nowrap;
@@ -507,13 +400,7 @@ td.mod-clickable:hover {
   padding-right: $padding-base-horizontal;
 }
 
-.aside-backdrop.am-fade,
-.aside.am-slide-left,
-.aside.am-slide-right {
-  animation: none !important;
-}
-
-.aside-backdrop.am-fade,
-.modal-backdrop.am-fade {
-  background: rgba(0,0,0,.3) !important;
+.clearfix {
+  clear: both;
+  float: none;
 }

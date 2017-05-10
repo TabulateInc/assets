@@ -64,23 +64,6 @@ th {
   }
 }
 
-
-// Condensed table w/ half padding
-
-.table-condensed {
-  > thead,
-  > tbody,
-  > tfoot {
-    > tr {
-      > th,
-      > td {
-        padding: $table-condensed-cell-padding;
-      }
-    }
-  }
-}
-
-
 // Bordered version
 //
 // Add borders all around the table and between all the columns.
@@ -229,6 +212,21 @@ table {
         }
       }
 
+    }
+  }
+}
+
+// date range picker
+
+.table-condensed {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: $table-condensed-cell-padding;
+      }
     }
   }
 }

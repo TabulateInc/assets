@@ -296,6 +296,17 @@ $apply-icon-width: 21px;
   animation-delay: 0s !important;
 }
 
+.aside-backdrop.am-fade,
+.aside.am-slide-left,
+.aside.am-slide-right {
+  animation: none !important;
+}
+
+.aside-backdrop.am-fade,
+.modal-backdrop.am-fade {
+  background: rgba(0,0,0,.3) !important;
+}
+
 [ng-cloak] {
   display: none;
 }

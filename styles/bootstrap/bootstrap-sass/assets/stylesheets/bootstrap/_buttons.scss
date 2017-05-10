@@ -84,6 +84,7 @@
   &:focus,
   &:active,
   &.active {
+    color: $white;
     border-color: $button-normal-hover;
     background-color: $button-normal-hover;
   }

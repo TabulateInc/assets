@@ -30,6 +30,15 @@ body {
   line-height: $line-height-base;
   color: $text-color;
   background-color: $body-bg;
+  padding-bottom: 100px;
+
+  @media (min-width: $screen-sm-min) {
+    padding-top: $main-navigation-height + $main-navigation-to-content;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    padding-top: $main-navigation-height-mobile + $main-navigation-to-content-mobile;
+  }
 }
 
 // Reset fonts for relevant elements
@@ -48,6 +57,7 @@ textarea {
 a {
   color: $link-color;
   text-decoration: none;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -76,22 +86,6 @@ figure {
 img {
   vertical-align: middle;
 }
-
-// Responsive images (ensure images don't scale beyond their parents)
-.img-responsive {
-  @include img-responsive;
-}
-
-// Rounded corners
-.img-rounded {
-  border-radius: $border-radius-large;
-}
-
-// Perfect circle
-.img-circle {
-  border-radius: 50%; // set radius in percents
-}
-
 
 // Horizontal rules
 

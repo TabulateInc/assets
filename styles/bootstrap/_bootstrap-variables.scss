@@ -1,10 +1,4 @@
-
-// Override Bootstrap variables here (defaults from bootstrap-sass v3.3.1.0):
-
-// When true, asset path helpers are used, otherwise the regular CSS `url()` is used.
-// When there no function is defined, `fn('')` is parsed as string that equals the right hand side
-// NB: in Sass 3.3 there is a native function: function-exists(twbs-font-path)
-// $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")'))
+$bootstrap-sass-asset-helper: false !default;
 
 //
 // Variables
@@ -15,22 +9,20 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-// $gray-base:              #000                       // #595959;
-// $gray-darker:            lighten($gray-base, 13.5%) // #222
-// $gray-dark:              lighten($gray-base, 20%)   // #333
-// $gray:                   lighten($gray-base, 33.5%) // #555
-// $gray-light:             lighten($gray-base, 46.7%) // #777
-// $gray-lighter:           lighten($gray-base, 93.5%) // #eee
+$gray-base:              #000;                       // #595959;
+$gray-darker:            lighten($gray-base, 13.5%); // #222
+$gray-dark:              lighten($gray-base, 20%);   // #333
+$gray:                   lighten($gray-base, 33.5%); // #555
+$gray-light:             lighten($gray-base, 46.7%); // #777
+$gray-lighter:           lighten($gray-base, 93.5%); // #eee
 
 // from bootflat
 $lightgray-light:             #F5F7FA;
 $mediumgray-dark:             #AAB2BD;
 $mediumgray-light:            #CCD1D9;
-$lightgray-dark:                 #E6E9ED !default;
-
+$lightgray-dark:              #E6E9ED !default;
 $darkgray-dark:               #434A54;
 $darkgray-light:              #656D78;
-
 
 // new custom
 $white:                       #fff;
@@ -47,26 +39,27 @@ $icon-color:                  #9ba3a9;
 $brand-primary:               #57a6db;  // darken(#428bca, 6.5%)
 $brand-saturated:             #5C89B7;
 
-// $brand-success:         #5cb85c
-// $brand-info:            #5bc0de
-// $brand-warning:         #f0ad4e
-// $brand-danger:          #d9534f
+$brand-success:         #5cb85c;
 
 //== Form states and alerts
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-// $state-success-text:             #3c763d
-// $state-success-bg:               #dff0d8
-// $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%)
+$state-success-text:             #3c763d !default;
+$state-success-bg:               #dff0d8 !default;
+$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
-// $state-info-text:                #31708f
-// $state-info-bg:                  #d9edf7
-// $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%)
+$state-info-text:                #31708f !default;
+$state-info-bg:                  #d9edf7 !default;
+$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
-// $state-warning-text:             #8a6d3b
-// $state-warning-bg:               #fcf8e3
-// $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%)
+$state-warning-text:             #8a6d3b !default;
+$state-warning-bg:               #fcf8e3 !default;
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+
+$state-danger-text:              #a94442 !default;
+$state-danger-bg:                #f2dede !default;
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
 $state-danger-text:              #f25353;
 $state-danger-bg:                #f2dede;
@@ -83,9 +76,9 @@ $body-bg:                  $white;
 $text-color:               $gray-new;
 
 //** Global textual link color.
-// $link-color:            $brand-primary
+$link-color:               $brand-primary;
 //** Link hover color set via `darken()` function.
-// $link-hover-color:      darken($link-color, 15%)
+$link-hover-color:         darken($link-color, 15%);
 //** Link hover decoration.
 $link-hover-decoration:      none;
 
@@ -95,33 +88,33 @@ $link-hover-decoration:      none;
 //## Font, line-height, and color for body text, headings, and more.
 
 $font-family-sans-serif:    'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-// $font-family-serif:       Georgia, "Times New Roman", Times, serif
+$font-family-serif:          Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-// $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace
-// $font-family-base:        $font-family-sans-serif
+$font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-base:            $font-family-sans-serif;
 
 $font-size-base:             14px;
-// $font-size-large:         ceil(($font-size-base * 1.25)) // ~18px
-// $font-size-small:         ceil(($font-size-base * 0.85)) // ~12px
+$font-size-large:            ceil(($font-size-base * 1.25)); // ~18px
+$font-size-small:            ceil(($font-size-base * 0.85)); // ~12px
 
 $font-size-h1:               51px; //floor(($font-size-base * 2.6)) // ~36px
 $font-size-h2:               43px; //floor(($font-size-base * 2.15)) // ~30px
 $font-size-h3:               30px; //ceil(($font-size-base * 1.7)) // ~24px
 $font-size-h4:               19px; //ceil(($font-size-base * 1.25)) // ~18px
-// $font-size-h5:            $font-size-base
+$font-size-h5:               $font-size-base;
 $font-size-h6:               $font-size-base;
 $header-margin: 30px;
 
 //** Unit-less `line-height` for use in components like buttons.
-// $line-height-base:        1.428571429 // 20/14
+$line-height-base:        1.428571429 !default; // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-// $line-height-computed:    floor(($font-size-base * $line-height-base)) // ~20px
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 //** By default, this inherits from the `<body>`.
-// $headings-font-family:    inherit
+$headings-font-family:    inherit !default;
 $headings-font-weight:    500;
-// $headings-line-height:    1.1
-// $headings-color:          inherit
+$headings-line-height:    1.1 !default;
+$headings-color:          inherit !default;
 
 
 //== Iconography
@@ -538,29 +531,6 @@ $popover-title-font-color:            $mediumgray-dark;
 $popover-arrow-outer-color:           $popover-bg;
 
 
-//== Labels
-//
-//##
-
-//** Default label background color
-// $label-default-bg:            $gray-light
-//** Primary label background color
-// $label-primary-bg:            $brand-primary
-//** Success label background color
-// $label-success-bg:            $brand-success
-//** Info label background color
-// $label-info-bg:               $brand-info
-//** Warning label background color
-// $label-warning-bg:            $brand-warning
-//** Danger label background color
-// $label-danger-bg:             $brand-danger
-
-//** Default label text color
-// $label-color:                 #fff
-//** Default text color of a linked label
-// $label-link-hover-color:      #fff
-
-
 //== Modals
 //
 //##
@@ -625,22 +595,9 @@ $alert-danger-border:            #eed3d7;  // $state-danger-border // doesnt wor
 
 //** Background color of the whole progress component
 // $progress-bg:                 #f5f5f5
-//** Progress bar text color
 // $progress-bar-color:          #fff
-//** Variable for setting rounded corners on progress bar.
 // $progress-border-radius:      $border-radius-base
-
-//** Default progress bar color
 // $progress-bar-bg:             $brand-primary
-//** Success progress bar color
-// $progress-bar-success-bg:     $brand-success
-//** Warning progress bar color
-// $progress-bar-warning-bg:     $brand-warning
-//** Danger progress bar color
-// $progress-bar-danger-bg:      $brand-danger
-//** Info progress bar color
-// $progress-bar-info-bg:        $brand-info
-
 
 //== List group
 //
@@ -719,7 +676,7 @@ $panel-default-border:           $border-color-base;
 //
 //##
 
-$breadcrumb-padding-vertical:   0;
+$breadcrumb-padding-vertical:   8px;
 $breadcrumb-padding-horizontal: 0; // 15px
 //** Breadcrumb background color
 $breadcrumb-bg:                 #fff !important;  // #f5f5f5

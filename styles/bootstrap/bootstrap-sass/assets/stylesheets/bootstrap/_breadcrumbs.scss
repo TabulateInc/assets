@@ -27,8 +27,16 @@
     }
   }
 
+  > li,
+  .btn-link {
+    @media (min-width: $screen-sm-min) {
+      font-size: $font-size-md !important;
+    }
+  }
+
   .glyphicon-menu-right {
     color: $gray-light;
+    margin-right: $margin-xs;
 
     @media (max-width: $screen-xs-max) {
       font-size: 10px;
@@ -53,5 +61,22 @@
     display: block;
     float: none;
     font-size: $font-size-base;
+  }
+
+  .btn-link {
+    font-size: $font-size-base;
+    font-weight: 300;
+
+    display: inline;
+
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+    vertical-align: top;
+
+    color: $brand-primary;
+    border: none !important;
+    outline: none !important;
   }
 }

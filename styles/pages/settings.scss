@@ -65,6 +65,8 @@ $nav-to-content-panel: $distance-hor-md;
   }
 
   a {
+    @include text-overflow();
+
     display: block;
     height: $panel-nav-link-height;
     line-height: $panel-nav-link-height;
@@ -73,9 +75,6 @@ $nav-to-content-panel: $distance-hor-md;
     margin-bottom: 5px;
     font-size: $panel-nav-link-font;
     color: $gray-new;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 
     &.active,
     &.active:hover {

@@ -1,12 +1,11 @@
 @import '../project/variables';
 @import '../bootstrap/variables';
-@import '../bootstrap/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
 
 
 .edit-details {
-  position:relative;
+  position: relative;
   content: " ";
-  width:100%;
+  width: 100%;
 
   &__btn {
     z-index: 10;

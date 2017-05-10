@@ -77,14 +77,13 @@ $actions-options-height-full: floor($actions-option-font-size*$line-height-base)
 }
 
 @mixin actions-option() {
+  @include text-overflow();
+
   font-size: $actions-option-font-size;
   padding: $actions-option-padding 0;
   border: none;
   border-bottom: 1px solid $border-color-base;
   border-radius: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   line-height: $line-height-base;
   background: $white;
   color: $gray-new;
@@ -105,9 +104,8 @@ $actions-options-height-full: floor($actions-option-font-size*$line-height-base)
 
 // We use this to ellipsis text
 @mixin ellipsis($width: 100%) {
+  @include text-overflow();
+
   display: inline-block;
   max-width: $width;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }

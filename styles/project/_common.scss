@@ -344,9 +344,7 @@ select.padding-left-xs option,
 // Misc
 // --------------------------
 .overflow-ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  @include text-overflow();
 };
 
 .rtl {

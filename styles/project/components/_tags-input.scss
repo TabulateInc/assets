@@ -252,9 +252,8 @@ tags-input {
           overflow: visible;
 
           ti-autocomplete-match {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+            @include text-overflow();
+
             display: inline-block;
             float: left;
             width: 100%;
@@ -301,10 +300,9 @@ tags-input {
 
       .tag-item {
         span {
+          @include text-overflow();
+
           max-width: 200px;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
           display: inline-block;
         }
 

@@ -85,9 +85,8 @@ h5.margin-top-md {
 .report-table.mod-reconciliation {
   td:first-child,
   th:first-child {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    @include text-overflow();
+
     padding-left: 0;
 
     @media (max-width: $screen-xs-max) {
@@ -121,10 +120,9 @@ h5.margin-top-md {
 
 .report-table.mod-admin {
   th {
+    @include text-overflow();
+
     max-width: 122px;  // $xx,xxx,xxx.xx
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 }
 

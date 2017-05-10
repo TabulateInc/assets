@@ -17,9 +17,7 @@ $gray-border: #ebebeb;
 $gray-text: #9ba3a9;
 $white: #fff;
 $black: rgb(0,0,0);
-$blue-light: #e3f2ff;  // dropbox blue on files page
-$ios-checked: #007aff;  // on transactions page
-$ios-unchecked: #c7c7cc;
+$blue-light: #e3f2ff;
 $ios-notification: #ff3b30;
 
 // typography
@@ -99,12 +97,6 @@ $spinner-md: 75px;
 $spinner-dark-color: #444;
 $spinner-light-color: lighten($spinner-dark-color, 90%);
 $spinner-dark-stroke-color: #69717d;
-
-// subnav
-$subnav-border-radius: $border-radius-default;
-$subnav-border-color: #bbb;
-$subnav-height: 82px;
-$subnav-margin-vertical: $margin-md;
 
 // modals
 $modal-border-radius: $border-radius-default;

@@ -114,14 +114,11 @@ $panel-new-filter-font: 13px;
 
         > a,
         > span {
-          display: inline-block;
-          // font-size: 27px;
-          line-height: $panel-header-line-height;
+          @include text-overflow();
 
+          display: inline-block;
+          line-height: $panel-header-line-height;
           max-width: 199px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
 
           @media (max-width: $screen-xs-max) {
             max-width: 100px;

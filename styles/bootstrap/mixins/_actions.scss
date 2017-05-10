@@ -1,33 +1,3 @@
-@import 'data-uri-images';
-@import 'variables';
-@import '../bootstrap/variables';
-
-
-@mixin custom-selector() {
-  position: relative;
-  padding-right: $padding-md;
-  padding-bottom: 3px;
-  text-align: left;
-
-  &:active,
-  &:focus {
-    color: $gray-new;
-  }
-  &.is-focused {
-    border-color: $brand-primary !important;
-  }
-
-  .caret {
-    margin-top: -3px;
-    color: $gray-middle-new;
-  }
-}
-
-@function make-click-color($color) {
-  @return transparentize(darken($color, 10%), .5);
-}
-
-$nav-header-title-size-sm: 19px;
 $actions-options-height: floor($actions-option-font-size*$line-height-base);
 $actions-options-height-full: floor($actions-option-font-size*$line-height-base) + $actions-option-padding*2 + 1px;
 
@@ -100,12 +70,4 @@ $actions-options-height-full: floor($actions-option-font-size*$line-height-base)
   &:focus {
     outline: none;
   }
-}
-
-// We use this to ellipsis text
-@mixin ellipsis($width: 100%) {
-  @include text-overflow();
-
-  display: inline-block;
-  max-width: $width;
 }

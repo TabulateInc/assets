@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import '../project/variables';
 @import '../bootstrap/variables';
+@import '../bootstrap/mixins/mixins';
+
 
 body {
   padding: 0;

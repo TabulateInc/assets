@@ -1,0 +1,97 @@
+// Other styles in _third-parties (angular strap)
+
+.add-icon {
+  position: relative;
+
+  > .glyphicon {
+    position: absolute;
+    padding: 12px 15px;
+    right: 10px;
+
+    &.icon-calendar {
+      margin-top: 3px;
+    }
+  }
+}
+
+.calendar-input {
+  background: url(#{$images-path}/calendar.svg) no-repeat center right;
+  background-size: 30px 30px;
+
+  @media (min-width: $screen-sm-min) {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  &.mod-content-filter {
+    max-width: 120px;
+    height: 29px;
+  }
+}
+
+.datepicker.dropdown-menu {
+    width: 195px !important;
+    height: 245px !important;
+    background-color: $white;
+    border: 1px solid $gray-lighter;
+
+    button {
+        height: 33px !important;
+        outline: none;
+        border: 1px solid $white;
+        border-color: $white !important;
+        line-height: $line-height-base;
+        font-size: $font-size-base;
+    }
+
+    .dow {
+        color: $text-muted;
+        font-weight: 400;
+    }
+
+    .btn-link {
+        padding-left: 8px;
+        padding-right: 8px;
+        border: 1px solid;
+        border-color: $white !important;
+        &:hover {
+            background-color: $white;
+            border: 1px solid $brand-primary;
+            border-color: $brand-primary !important;
+        }
+    }
+
+    tbody {
+        height: 135px;
+        button {
+            padding: 6px;
+        }
+    }
+
+    .btn-grey {
+        &:hover,
+        &.mod-hover {
+            color: $brand-primary;
+            border: 1px solid $brand-primary !important;
+        }
+    }
+
+
+    .btn-primary {
+        color: $white;
+    }
+
+    .btn-default {
+        padding: 0;
+    }
+
+    td, th {
+        padding:1px;
+    }
+}
+
+.datepicker {
+    td, th {
+        padding:1px;
+    }
+}

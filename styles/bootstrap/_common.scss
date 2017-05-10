@@ -147,6 +147,7 @@
 .padding-right-sm {
   padding-right: $padding-sm !important;
 }
+
 select.padding-left-xs option,
 .padding-left-xs {
   padding-left: 6px !important;
@@ -264,76 +265,6 @@ select.padding-left-xs option,
   }
 }
 
-// Buttons
-// --------------------------
-.back-btn {
-  display: inline-block;
-  padding: 0 12px;
-  font-weight: 600;
-}
-
-.btn-grey {
-  background-color: $gray-lighter !important;
-}
-
-.btn-table-row {
-  $color: $brand-primary;
-  $border: 1px solid $color;
-
-  border: $border;
-  background-color: $table-bg-hover;
-  color: $color;
-  vertical-align: top;
-
-  .table-view & {
-    margin-left: 6px;
-  }
-
-  &:hover, &:focus, &:active, &.active {
-    background-color: $white;
-    border: $border;
-    color: $color;
-  }
-  &:disabled {
-    color: $white;
-  }
-
-  &.mod-icon {
-    background-color: transparent !important;
-    border-color: transparent !important;
-
-    &:hover, &:focus, &:active, &.active {
-      span {
-        color: $color;
-      }
-    }
-  }
-}
-
-.savebtn {
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-}
-
-.control-buttons > div {
-  padding-left: 2px;
-  padding-right: 2px;
-
-  &:first-child {
-    padding-left: 0;
-  }
-
-  &:last-child {
-    padding-right: 0;
-  }
-
-  button {
-    width: 100%;
-    // padding:2px;
-  }
-}
-
 // Grid
 // --------------------------
 @media (max-width: $screen-xs-min) { //consider to change to $screen-xxs-max
@@ -345,39 +276,19 @@ select.padding-left-xs option,
 // --------------------------
 .overflow-ellipsis {
   @include text-overflow();
-};
+}
 
 .rtl {
   direction: rtl;
 }
 
 .pointer-hover:hover {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .custom-label {
   line-height: $line-height-sm;
   font-weight: 400;
-}
-
-.btn-file {
-    position: relative;
-    overflow: hidden;
-
-  input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    opacity: 0;
-    outline: none;
-    background: white;
-    cursor: inherit;
-    display: block;
-  }
 }
 
 .is-invisible {

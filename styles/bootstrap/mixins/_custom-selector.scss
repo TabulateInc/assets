@@ -1,0 +1,19 @@
+@mixin custom-selector() {
+  position: relative;
+  padding-right: $padding-md;
+  padding-bottom: 3px;
+  text-align: left;
+
+  &:active,
+  &:focus {
+    color: $gray-new;
+  }
+  &.is-focused {
+    border-color: $brand-primary !important;
+  }
+
+  .caret {
+    margin-top: -3px;
+    color: $gray-middle-new;
+  }
+}

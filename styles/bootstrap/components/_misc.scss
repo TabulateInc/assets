@@ -1,0 +1,43 @@
+.drag-drop-group {
+  min-height: 10px;
+
+  &.mod-lg {
+    min-height: 40px;
+  }
+}
+
+.inputs-group classification-details {
+  .add-control:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+.remove-detail-btn {
+  position: absolute;
+  top: 10px;
+  right: -20px;
+  display: inline-block;
+  background-position: center center;
+  color: $gray-middle-new;
+  cursor: pointer;
+
+  span {
+    float: none !important;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    width: 21px;
+    height: 26px;
+
+    span {
+      background-size: 22px;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    $from-top-to-start: ($inputs-group-input-height - 30px) / 2;
+    position: static;
+    padding-right: 0 !important;
+    margin-top: $from-top-to-start;
+  }
+}

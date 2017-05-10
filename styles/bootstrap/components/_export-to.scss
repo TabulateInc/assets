@@ -25,3 +25,11 @@ export-to-excel {
     display: none !important;
   }
 }
+
+.export-modal {
+  @media (max-width: $screen-xs-max) {
+    embed {
+      background-color: $white;
+    }
+  }
+}

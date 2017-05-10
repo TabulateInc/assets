@@ -1,3 +1,10 @@
+@import './data-uri-images';
+
+$arrow-possition: no-repeat right 8px center;
+$arrow-down: $img-arrow-down $arrow-possition $input-bg;
+$arrow-down-gray: $img-arrow-down-gray $arrow-possition transparent;
+$arrow-down-white: $img-arrow-down-white $arrow-possition transparent;
+
 //
 // Forms
 // --------------------------------------------------
@@ -364,5 +371,50 @@ input[type="checkbox"] {
   }
   &.sr-only ~ .form-control-feedback {
      top: 0;
+  }
+}
+select.btn {
+  @include custom-selector();
+
+  background: $arrow-down;
+  appearance: none;
+
+  option {
+    text-align: left;
+  }
+
+  &:hover option {
+    border-color: $input-border-hover;
+    background-color: $input-bg;
+  }
+}
+
+select.form-control.mod-lg-rounded {
+  background: $arrow-down;
+}
+
+select.btn,
+.btn[bs-select] {
+  &.btn-default {
+    border-color: $input-border;
+    color: $input-color;
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-color: $input-border-hover;
+      background-color: $input-bg;
+      color: $input-color;
+    }
+  }
+}
+
+.has-error {              // fixes the issue with select element which already has border with !important color
+  select.form-control {
+    border-color: $grapefruit-dark !important;
+
+    &:focus {
+      border-color: $grapefruit-dark !important;
+    }
   }
 }

@@ -197,3 +197,238 @@ input[type="button"] {
     width: 100%;
   }
 }
+
+.btn.mod-lg-rounded {
+  font-size: $font-size-base;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 18px 45px;
+  border-radius: 30px;
+
+  @media (max-width:$screen-xs-max) {
+    $coef: .7;
+    font-size: 12px;
+    padding: $coef*18px $coef*45px;
+    border-radius: $coef*30px;
+  }
+}
+
+.btn-primary-panel {
+  border-color: $gray-lighter-new;
+  background-color: $white;
+  color: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: $brand-primary;
+    background-color: $brand-primary;
+    color: $white;
+  }
+}
+
+.btn-group-dropdown {
+  $toggle-width: 33px;
+  $caret-height: 4px;
+  $caret-width: 12px;
+  $divider-color: #4e98c6;
+
+  position: relative;
+
+  > button {
+    float: left;
+
+    &:first-child {
+      border-radius: $border-radius-base 0 0 $border-radius-base;
+    }
+  }
+
+  &__select {
+    position: relative;
+    width: 33px;
+    overflow: hidden;
+    color: transparent !important;
+    border-radius: 0 $border-radius-base $border-radius-base 0;
+    border-left: 1px solid $divider-color;
+
+    .caret {
+      color: $white;
+      position: absolute;
+      top: ($toggle-width - $caret-height)/2;
+      left: ($toggle-width - $caret-width)/2;
+    }
+  }
+
+  .dropdown-menu {
+    top: auto !important;
+    bottom: 0;
+    right: 0;
+    left: auto !important;
+    overflow: hidden;
+    padding: 0;
+    border-radius: $border-radius-base;
+    background: $brand-primary;
+    min-width: auto;
+
+    button {
+      width: 100%;
+      text-align: left;
+      border-radius: 0;
+      border-color: $brand-primary;
+      padding-right: $padding-base-horizontal + $toggle-width;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $divider-color;
+        border-color: $divider-color;
+      }
+    }
+
+    li:not(:last-child) {
+      border-bottom: 1px solid $divider-color;
+    }
+  }
+}
+
+.btn-expand {
+  $btn-width: 110px;
+
+  color: $gray-middle-new;
+  width: $btn-width;
+  padding: 7px 10px;
+  cursor: pointer;
+  float: left;
+  position: absolute;
+  top: -17px;
+  left: calc(50% - #{$btn-width}/2);
+
+  &__wrapper {
+    position: relative;
+    z-index: 900;
+    height: 1px;
+  }
+
+  &__line {
+    border-bottom: 1px solid $table-border-color;
+    width: calc(50% - #{$btn-width}/2);
+  }
+}
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+
+  input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+  }
+}
+
+.savebtn {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.control-buttons > div {
+  padding-left: 2px;
+  padding-right: 2px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 0 12px;
+  font-weight: 600;
+}
+
+.btn-grey {
+  background-color: $gray-lighter !important;
+}
+
+.btn-table-row {
+  $color: $brand-primary;
+  $border: 1px solid $color;
+
+  border: $border;
+  background-color: $table-bg-hover;
+  color: $color;
+  vertical-align: top;
+
+  .table-view & {
+    margin-left: 6px;
+  }
+
+  &:hover, &:focus, &:active, &.active {
+    background-color: $white;
+    border: $border;
+    color: $color;
+  }
+  &:disabled {
+    color: $white;
+  }
+
+  &.mod-icon {
+    background-color: transparent !important;
+    border-color: transparent !important;
+
+    &:hover, &:focus, &:active, &.active {
+      span {
+        color: $color;
+      }
+    }
+  }
+}
+
+// For inventory page
+.btn-fake {
+  // button that looks like an input
+  @extend .btn-default;
+
+  top: 1px;
+  overflow: hidden;
+  width: 80px;  // to acomodate x,xxx.xx
+  padding: 0;
+  border: 1px solid $input-border !important;
+
+  input {
+    padding: 0 12px !important;
+    line-height: 31px !important;
+
+    @media (max-width: $screen-xxs-max - 1) {
+      padding-left: 0 3px !important;
+    }
+  }
+
+  @media (max-width: $screen-xxs-max - 1) {
+    width: 42px;
+  }
+
+  &:hover {
+    background-color: $white;
+    color: $gray-base;
+  }
+}
+

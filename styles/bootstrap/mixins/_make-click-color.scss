@@ -1,0 +1,3 @@
+@function make-click-color($color) {
+  @return transparentize(darken($color, 10%), .5);
+}

@@ -1,3 +1,8 @@
+$back-icon-width: 25px;
+$back-icon-height: 25px;
+$apply-icon-height: 14px;
+$apply-icon-width: 21px;
+
 .date-range-selector, .date-selector {
   position: relative;
 
@@ -346,3 +351,91 @@ $headerHeight: 50px;
       }
   }
 }
+
+.daterangepicker.ltr {
+  padding-right: 10px;
+  padding-bottom: 10px;
+
+  .calendar.left {
+    margin-left: 0;
+
+    .calendar-table {
+      padding-left: 0;
+      border-left: 0;
+    }
+  }
+  .calendar.right {
+    margin-right: 0;
+    border-right: 0;
+
+    .calendar-table {
+      padding-right: 0;
+      border-right: 0;
+    }
+  }
+}
+
+.daterangepicker.modal {
+  padding: 0;
+  margin: 0;
+
+  .modal-content {
+    border: none;
+  }
+
+  .modal-header {
+    border: none;
+    padding: 0;
+    height: auto;
+  }
+
+  .modal-body {
+    @include actions-content();
+    height: calc(100% - #{$main-navigation-height-mobile}) !important;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .icon-back {
+      @include actions-button($back-icon-height, $back-icon-width);
+    }
+
+    .icon-apply {
+      @include actions-button($apply-icon-height, $apply-icon-width, 'right');
+
+      background: url(#{$images-path}/checkmark.dark.svg) no-repeat center;
+      background-size: $apply-icon-width;
+    }
+
+    .modal-title {
+      @include actions-title($back-icon-width);
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    $xs-to-sm: 1.5;
+
+    .icon-back {
+      @include actions-button($back-icon-height*$xs-to-sm, $back-icon-width*$xs-to-sm);
+    }
+
+    .icon-apply {
+      @include actions-button($apply-icon-height*$xs-to-sm, $apply-icon-width*$xs-to-sm, 'right');
+
+      background: url(#{$images-path}/checkmark.dark.svg) no-repeat center;
+      background-size: $apply-icon-width*$xs-to-sm;
+    }
+
+    .modal-title {
+      @include actions-title($back-icon-width*$xs-to-sm);
+
+      font-size: 25px;
+    }
+  }
+
+  .modal-dialog {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+}
+

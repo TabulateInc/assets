@@ -1,0 +1,35 @@
+.nodata {
+  font-weight: 300;
+  text-align: center;
+
+  &__icon {
+    margin-bottom: 30px;
+    color: $gray-lighter-new;
+    font-size: 50px;
+    line-height: 1em;
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: $gray-new;
+    font-size: 25px;
+    line-height: 1em;
+  }
+
+  &__descr {
+    color: $gray-middle-new;
+    font-size: 18px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    &__title {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    &__descr {
+      font-size: 15px;
+    }
+  }
+}

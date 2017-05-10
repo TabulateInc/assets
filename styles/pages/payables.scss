@@ -1,6 +1,6 @@
-@import '../project/variables';
 @import '../bootstrap/variables';
-@import '../project/utils';
+@import '../bootstrap/mixins/mixins';
+
 
 $overdue-label-width: 3px;
 $overdue-label-color: #F25353;

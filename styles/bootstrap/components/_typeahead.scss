@@ -1,3 +1,30 @@
+.typeahead {
+  overflow: auto;
+  a {
+    @include dropdown-item();
+
+    &.no-matches:hover {
+      background-color: transparent;
+      cursor: default !important;
+    }
+  }
+
+  .btn-link {
+    text-decoration: none;
+  }
+
+  &__group-header {
+    @include dropdown-item();
+
+    font-weight: 600;
+    cursor: default !important;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
 [tabulate-typeahead] {
   @media (min-width: $screen-sm-min) {
     padding-right: 20px;

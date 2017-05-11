@@ -418,3 +418,36 @@ select.btn,
     }
   }
 }
+
+.inputs-separator,
+.inputs-separator.checkbox.mod-custom {
+  margin-bottom: $inputs-separator-distance*2;
+  margin-top: $inputs-separator-distance;
+  padding-left: $inputs-separator-distance;
+  padding-right: $inputs-separator-distance;
+}
+
+.add-control,
+.add-control.checkbox.mod-custom,
+.add-control.radio {
+  padding-left: 0;
+  padding-right: $input-in-control-padding-right;
+  margin-bottom: $margin-normal;
+
+  button,
+  input,
+  div.form-control,
+  select {
+    height: $input-in-control-height;
+  }
+
+  .form-control__over {
+    line-height: $input-in-control-height;
+  }
+
+  @media (max-width: $screen-xs-max){
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+

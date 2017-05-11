@@ -313,3 +313,15 @@ td.mod-clickable:hover {
   clear: both;
   float: none;
 }
+
+// section blue title
+h5 {
+  font-size: $section-title-font-size;
+  color: $brand-primary;
+  text-transform: uppercase;
+  margin-top: $page-title-margin-top;
+
+  &:first-child {
+    margin-top: $margin-normal;
+  }
+}

@@ -22,11 +22,11 @@ $mediumgray-dark:             #AAB2BD;
 $mediumgray-light:            #CCD1D9;
 $lightgray-dark:              #E6E9ED !default;
 $darkgray-dark:               #434A54;
-$darkgray-light:              #656D78;
 $grapefruit-dark:             #DA4453;
 
 // new custom
 $white:                       #fff;
+$black:                       #000;
 $gray-new:                    #4c5557;
 $gray-darker-new:             #bebcbb;
 $gray-middle-new:             #98A9B1;
@@ -34,24 +34,19 @@ $gray-darkest-new:            darken($gray-middle-new, 20%);
 $gray-lighter-new:            #d8dddf;
 $gray-light-new:              #dde1e4;
 $gray-lightest-new:           #f2f2f2;
-
-// Colors
 $middle-gray-color:           #ccc;
 $gray-lighter-custom:         lighten($middle-gray-color, 18%);
-$gray-background: #f3f6f8;
-$gray-border: #ebebeb;
-$gray-text: #9ba3a9;
-$white: #fff;
-$black: rgb(0,0,0);
-$blue-light: #e3f2ff;
-$ios-notification: #ff3b30;
+$gray-background:             #f3f6f8;
+$gray-border:                 #ebebeb;
+$gray-text:                   #9ba3a9;
 
+$blue-light:                  #e3f2ff;
+$ios-notification:            #ff3b30;
 $icon-color:                  #9ba3a9;
 
 $brand-primary:               #57a6db;  // darken(#428bca, 6.5%)
 $brand-saturated:             #5C89B7;
-
-$brand-success:         #5cb85c;
+$brand-success:               #5cb85c;
 
 //== Form states and alerts
 //
@@ -96,23 +91,23 @@ $link-hover-decoration:      none;
 //## Font, line-height, and color for body text, headings, and more.
 
 $font-family-sans-serif:    'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-serif:          Georgia, "Times New Roman", Times, serif;
+$font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace;
-$font-family-base:            $font-family-sans-serif;
+$font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:           $font-family-sans-serif;
 
 $font-size-base:             14px;
 $font-size-large:            ceil(($font-size-base * 1.25)); // ~18px
 $font-size-small:            ceil(($font-size-base * 0.85)); // ~12px
 
-$font-size-xs: 11px;
-$font-size-md: 16px;
-$font-size-xlg: 36px;
+$font-size-xs:               11px;
+$font-size-md:               16px;
+$font-size-xlg:              36px;
 
-$font-weight-xs: 300;
-$font-weight-sm: 400;
-$font-weight-md: 500;
-$font-weight-lg: 600;
+$font-weight-xs:             300;
+$font-weight-sm:             400;
+$font-weight-md:             500;
+$font-weight-lg:             600;
 
 $font-size-h1:               51px; //floor(($font-size-base * 2.6)) // ~36px
 $font-size-h2:               43px; //floor(($font-size-base * 2.15)) // ~30px
@@ -186,6 +181,7 @@ $line-height-md: 40px;
 $line-height-lg: 42px;
 
 $border-radius-default:     4px;
+
 $border-radius-base:        3px;
 $border-radius-large:       4px;
 $border-radius-small:       1px;
@@ -600,7 +596,7 @@ $list-group-link-heading-color:  #333 !default;
 //
 //##
 
-$panel-bg:                       $white;
+$panel-bg:                    $white;
 $panel-body-padding:          15px !default;
 $panel-heading-padding:       10px 15px !default;
 $panel-footer-padding:        $panel-heading-padding !default;
@@ -797,6 +793,11 @@ $search-input-margin: 5px;
 $search-show-icon-size: 30px;
 $search-show-icon-padding: ($search-input-size - 2px)/2;
 $search-close-size: 28px;
+
+$tag-item-distance-hor: 20px;
+$tag-item-border-color: $gray-lighter-new;
+$tag-item-color: $gray-darker-new;
+$tag-remove-button-size: 16px;
 
 // Misc
 $sorticon-size: 9px;

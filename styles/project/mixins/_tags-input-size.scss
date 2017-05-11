@@ -1,0 +1,26 @@
+@mixin tags-input-size($content-height) {
+  min-height: $content-filter-height;
+
+  .input {
+    height: $content-height !important;
+  }
+
+  .tag-item {
+    height: $content-height !important;
+    line-height: $content-height - 1 !important;
+
+    .remove-button {
+      padding-top: ($content-height - $tag-remove-button-size - 2px - 1px) / 2 !important;
+      padding-bottom: ($content-height - $tag-remove-button-size - 2px - 1px) / 2 !important;
+      margin-top: -2px !important;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    display: block;
+    width: 100%;
+    padding-right: 0;
+    margin-top: $margin-xs;
+    margin-left: 0;
+  }
+}

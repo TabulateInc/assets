@@ -1,36 +1,3 @@
-// third-party, so everything is important here
-$tag-item-distance-hor: 20px;
-$tag-item-border-color: $gray-lighter-new;
-$tag-item-color: $gray-darker-new;
-$tag-remove-button-size: 16px;
-
-@mixin tags-input-size($content-height) {
-  min-height: $content-filter-height;
-
-  .input {
-    height: $content-height !important;
-  }
-
-  .tag-item {
-    height: $content-height !important;
-    line-height: $content-height - 1 !important;
-
-    .remove-button {
-      padding-top: ($content-height - $tag-remove-button-size - 2px - 1px) / 2 !important;
-      padding-bottom: ($content-height - $tag-remove-button-size - 2px - 1px) / 2 !important;
-      margin-top: -2px !important;
-    }
-  }
-
-  @media (max-width: $screen-xs-max) {
-    display: block;
-    width: 100%;
-    padding-right: 0;
-    margin-top: $margin-xs;
-    margin-left: 0;
-  }
-}
-
 tags-input {
   .host {
     margin-top: 0 !important;

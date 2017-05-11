@@ -1,0 +1,79 @@
+$padding-right-input: $distance-hor-md;
+
+.inputs-group {
+  line-height: 1em;
+
+  h5 {
+    @include margin-bottom-input();
+
+    font-size: $inputs-group-caption-size;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: inherit;
+    margin-top: 0;
+    line-height: 1em;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 18px;
+    }
+  }
+
+  .subcaption {
+    font-size: $inputs-group-subcaption-size;
+    padding-top: 2px;
+    color: $gray-middle-new;
+  }
+
+  hr {
+    @include margin-bottom-input();
+
+    margin-top: 0;
+    border-top: 1px solid $horizontal-separator-color;
+    height: 0;
+  }
+
+  .add-control.checkbox.mod-custom,
+  .add-control.radio {
+    @include margin-bottom-input();
+
+    padding-right: $padding-right-input;
+  }
+
+  .add-control {
+    @include margin-bottom-input();
+
+    padding-right: $padding-right-input;
+
+    button,
+    input,
+    div.form-control,
+    select {
+      height: $inputs-group-input-height;
+      font-size: $input-text-size;
+    }
+
+    .form-control__over {
+      line-height: $inputs-group-input-height;
+    }
+
+    .caret {
+      top: ($inputs-group-input-height - 4px)/2;
+      cursor: pointer;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      padding-right: 0;
+    }
+  }
+
+  .checkbox.mod-custom,
+  .radio {
+    padding-right: $padding-right-input;
+    font-size: $input-text-size;
+
+    label {
+      padding-left: 0;
+      font-weight: 400;
+    }
+  }
+}

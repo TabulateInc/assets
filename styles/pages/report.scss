@@ -151,6 +151,12 @@ $chart-width: 380px;
     }
   }
 
+  .add-control {
+    .form-control__over {
+      line-height: $main-navigation-to-content;
+    }
+  }
+
   .btn {
     &.mod-export {
       height: 29px;

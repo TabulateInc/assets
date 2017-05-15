@@ -27,10 +27,22 @@
       }
     }
 
-    &:hover {
-      .dropdown-menu {
-        @media (min-width: $screen-sm-min) {
-          max-height: 1000px;
+    &:not(.js-mobile-view) {
+      &:hover {
+        .dropdown-menu {
+          @media (min-width: $screen-sm-min) {
+            max-height: 1000px;
+          }
+        }
+      }
+    }
+
+    &.js-mobile-view {
+      &.open {
+        .dropdown-menu {
+          @media (min-width: $screen-sm-min) {
+            max-height: 1000px;
+          }
         }
       }
     }

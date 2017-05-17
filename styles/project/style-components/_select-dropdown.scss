@@ -50,10 +50,10 @@
 
 
 .no-touch {
-  .navbar {
+  nav:not(.navbar) {
     .select-dropdown {
       &.mod-menu-down {
-        &:hover {
+        &:open {
           .dropdown-menu {
             @media (min-width: $screen-sm-min) {
               max-height: 1000px;
@@ -63,17 +63,26 @@
       }
     }
   }
+  .select-dropdown {
+    &.mod-menu-down {
+      &:hover {
+        .dropdown-menu {
+          @media (min-width: $screen-sm-min) {
+            max-height: 1000px;
+          }
+        }
+      }
+    }
+  }
 }
 
 .touch {
-  .navbar {
-    .select-dropdown {
-      &.mod-menu-down {
-        &.open {
-          .dropdown-menu {
-            @media (min-width: $screen-sm-min) {
-              max-height: 1000px;
-            }
+  .select-dropdown {
+    &.mod-menu-down {
+      &.open {
+        .dropdown-menu {
+          @media (min-width: $screen-sm-min) {
+            max-height: 1000px;
           }
         }
       }

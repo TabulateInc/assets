@@ -27,6 +27,9 @@ export-to-excel {
 }
 
 .export-modal {
+  .modal-dialog {
+    margin-top: 62px;
+  }
   @media (max-width: $screen-xs-max) {
     embed {
       background-color: $white;

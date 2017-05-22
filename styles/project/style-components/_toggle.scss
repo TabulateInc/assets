@@ -59,6 +59,10 @@ $toggle-off-background-color:   #cad9e8 !default;
 
 .toggle {
   // common attributes;
+  cursor: pointer;
+  &[disabled] {
+    cursor: no-drop;
+  }
   &:after {
     // character X
     content: "\2715";

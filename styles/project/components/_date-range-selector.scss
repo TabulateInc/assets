@@ -61,6 +61,10 @@ $apply-icon-width: 21px;
   &.full-width {
     max-width: none;
   }
+
+  &.calendar-input {
+    background-position: 98% 50%;
+  }
 }
 
 $headerHeight: 50px;

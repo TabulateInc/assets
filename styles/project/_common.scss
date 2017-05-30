@@ -110,6 +110,12 @@
 .overflow-hidden {
   overflow: hidden;
 }
+
+.min-height {
+  &-xs {
+    min-height: 185px;
+  }
+}
 // Box
 // -----------------------------
 

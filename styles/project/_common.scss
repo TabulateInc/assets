@@ -107,6 +107,9 @@
   text-align: right;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
 // Box
 // -----------------------------
 
@@ -164,6 +167,20 @@ select.padding-left-xs option,
     @media (max-width: $screen-xs-max) {
       padding-left: 6px !important;
     }
+  }
+}
+
+.padding-bottom {
+  &-xs {
+    padding-bottom: $margin-xs;
+  }
+
+  &-sm {
+    padding-bottom: $margin-normal !important;
+  }
+
+  &-md {
+    padding-bottom: $margin-md;
   }
 }
 

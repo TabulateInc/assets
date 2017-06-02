@@ -16,6 +16,20 @@ table.summary-table {
     padding: $ds-table-cell-padding;
   }
 
+  th {
+    @media (max-width: $screen-sm-max) {
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
+      box-sizing: content-box;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
+      box-sizing: content-box;
+    }
+  }
+
   .category-head.fix-first-column {
     width: 100% !important;
     height: $data-table-cell-height + 1 !important; //fix bottom border
@@ -165,4 +179,14 @@ table.summary-table {
 
 .category-head {
   border-color: $input-border !important;
+}
+
+.total-cell {
+  @media (max-width: $screen-sm-max) {
+    display: none !important;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    display: none !important;
+  }
 }

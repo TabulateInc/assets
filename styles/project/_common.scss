@@ -99,6 +99,10 @@
   position: relative;
 }
 
+.font-size-lg {
+  font-size: $font-size-large;
+}
+
 .text-left {
   text-align: left;
 }
@@ -161,8 +165,16 @@
   }
 }
 
-.padding-right-sm {
-  padding-right: $padding-sm !important;
+.padding-right {
+  &-sm {
+    padding-right: $padding-sm !important;
+  }
+  &-md {
+    padding-right: $padding-md + 5px !important;
+    @media (max-width: $screen-xs-max) {
+      padding-right: $padding-md - 5px !important;
+    }
+  }
 }
 
 select.padding-left-xs option,

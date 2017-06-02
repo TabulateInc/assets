@@ -20,6 +20,12 @@ $panel-new-filter-font: 13px;
     border-bottom: 1px solid $border-color-base;
     padding: $panel-header-padding $panel-new-padding-hor;
 
+    @media (max-width: $screen-sm-max) {
+      padding: 15px $panel-new-padding-hor-mobile*2;
+      line-height: 30px;
+    }
+
+
     @media (max-width: $screen-xs-max) {
       padding: 15px $panel-new-padding-hor-mobile;    // move
       font-size: 18px;

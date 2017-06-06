@@ -144,13 +144,10 @@ input.mod-delete-option {
   }
 }
 
-.alert-input {
-  &.alert-input {
+.contrary {
+  .alert-danger {
     top: auto;
     bottom: 0;
-  }
-  .alert-danger {
-    margin-top: 0 !important;
   }
 }
 

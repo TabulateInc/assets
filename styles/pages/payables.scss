@@ -12,6 +12,12 @@ $overdue-label-color: #F25353;
   &-md {
     margin-right: $margin-sm !important;
   }
+  &-lg {
+    margin-right: $margin-md !important;
+    @media (max-width: $screen-xs-max){
+      margin-right: $margin-sm !important;
+    }
+  }
 }
 
 .form-control.mod-read-only-block {

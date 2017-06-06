@@ -27,6 +27,7 @@ $grapefruit-dark:             #DA4453;
 // new custom
 $white:                       #fff;
 $black:                       #000;
+$red-danger:                  #df3320;
 $gray-new:                    #4c5557;
 $gray-darker-new:             #bebcbb;
 $gray-middle-new:             #98A9B1;
@@ -546,9 +547,9 @@ $alert-warning-bg:            $state-warning-bg !default;
 $alert-warning-text:          $state-warning-text !default;
 $alert-warning-border:        $state-warning-border !default;
 
-$alert-danger-bg:                #f2dede;  // $state-danger-bg
-$alert-danger-text:              #b94a48;  // $state-danger-text
-$alert-danger-border:            #eed3d7;  // $state-danger-border // doesnt work !important") is not a color for `darken')
+$alert-danger-bg:                $white;  // $state-danger-bg
+$alert-danger-text:              $red-danger;  // $state-danger-text
+$alert-danger-border:            $red-danger;  // $state-danger-border // doesnt work !important") is not a color for `darken')
 
 $alert-success-width: 200px;  // top message
 $alert-from-top: $margin-normal;

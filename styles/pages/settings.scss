@@ -135,14 +135,22 @@ input.mod-delete-option {
 
 .item-details-form {
   .alert-danger {
-    position: relative;
     top: 0;
-    margin-right: $input-in-control-padding-right !important;
     margin-bottom: $margin-normal !important;
 
     @media (max-width: $screen-xs-max) {
       margin-right: 0 !important;
     }
+  }
+}
+
+.alert-input {
+  &.alert-input {
+    top: auto;
+    bottom: 0;
+  }
+  .alert-danger {
+    margin-top: 0 !important;
   }
 }
 

@@ -223,6 +223,10 @@ select.padding-left-xs option,
 
     &.alert-danger {
       margin-top: $margin-normal !important;
+
+      @media (max-width:$screen-xs-max){
+        margin-top: 3px !important;
+      }
     }
   }
 

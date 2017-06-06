@@ -140,3 +140,7 @@ $overdue-label-color: #F25353;
     @include clearfix;
   }
 }
+
+.btn-table-row {
+  vertical-align: middle;
+}

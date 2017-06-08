@@ -67,3 +67,11 @@ drag-drop.visible .drag-drop {
   height: 33px;
   padding: 0 6px !important;
 }
+
+settings-selector {
+  .custom-selector {
+    &.mod-opened {
+      min-width: 287px;
+    }
+  }
+}

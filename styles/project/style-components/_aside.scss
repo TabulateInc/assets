@@ -29,6 +29,13 @@ $back-icon-height: 25px;
 
 .aside-header {
   background-color: $white !important;
+  display: flex;
+  align-items: center;
+
+  .icon-close {
+    flex: 0 30px;
+    order: 2;
+  }
 
   .close {
     color: $gray-base !important;
@@ -39,6 +46,7 @@ $back-icon-height: 25px;
 
 .aside-title {
   color: $gray;
+  flex: 1;
 }
 
 @media (max-width: $screen-xs-max) {

@@ -27,6 +27,9 @@ export-to-excel {
 }
 
 .export-modal {
+  .icon-close {
+    opacity: 1 !important;
+  }
   .modal-dialog {
     margin-top: 62px;
   }

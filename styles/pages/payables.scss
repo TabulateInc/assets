@@ -109,9 +109,12 @@ $overdue-label-color: #F25353;
   line-height: 44px;
 }
 
-.table-view__mobile-row.mod-overdue {
-  margin-left: -$overdue-label-width;
-  border-left: $overdue-label-width solid $overdue-label-color;
+.table-view__mobile-row {
+  padding-left: 5px;
+  &.mod-overdue {
+    margin-left: -$overdue-label-width;
+    border-left: $overdue-label-width solid $overdue-label-color;
+  }
 }
 
 .wtfsection {

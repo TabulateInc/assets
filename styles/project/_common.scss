@@ -120,6 +120,12 @@
     min-height: 185px;
   }
 }
+
+.border-none-active {
+  &.active {
+    border: none !important;
+  }
+}
 // Box
 // -----------------------------
 

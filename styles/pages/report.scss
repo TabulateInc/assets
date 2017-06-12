@@ -410,3 +410,11 @@ tags-input.mod-row-filter {
     }
   }
 }
+
+.items-table {
+  &__row {
+    &.active {
+      border-bottom: none;
+    }
+  }
+}

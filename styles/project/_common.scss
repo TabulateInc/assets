@@ -281,6 +281,37 @@ select.padding-left-xs option,
   }
 }
 
+// mode width
+.mode-width {
+  &-sm {
+    @media (min-width: $screen-xs-max) {
+      max-width: 240px !important;
+    }
+
+    @media (min-width: $screen-xs-max) {
+      max-width: 180px !important;
+    }
+
+    @media (max-width: $screen-phone) {
+      max-width: 100% !important;
+    }
+  }
+
+  &-md {
+    @media (min-width: $screen-xs-max) {
+      max-width: 360px !important;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      max-width: 240px !important;
+    }
+
+    @media (max-width: $screen-phone) {
+      max-width: 100% !important;
+    }
+  }
+}
+
 // Text
 // --------------------------
 .break-word {

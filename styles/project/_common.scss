@@ -312,6 +312,33 @@ select.padding-left-xs option,
   }
 }
 
+// row height mode
+.row-height-mode {
+  &-xs {
+    line-height: 28px;
+
+    @media (max-width: $screen-xs-max) {
+      line-height: 22px;
+    }
+  }
+
+  &-sm {
+    line-height: 33px;
+
+    @media (max-width: $screen-xs-max) {
+      line-height: 27px;
+    }
+  }
+
+  &-md {
+    line-height: 40px;
+
+    @media (max-width: $screen-xs-max) {
+      line-height: 35px;
+    }
+  }
+}
+
 // Text
 // --------------------------
 .break-word {

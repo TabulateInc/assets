@@ -123,6 +123,10 @@ $overdue-label-color: #F25353;
 
   .add-control {
     margin-bottom: 0;
+
+    .has-error {
+      border-color: $grapefruit-dark;
+    }
   }
 }
 

@@ -25,6 +25,13 @@
   height: 100%;
 }
 
+.sticky-ghost th {
+  overflow: hidden;
+  line-height: 0px!important;
+  padding-top:0px!important;
+  padding-bottom:0px!important;
+}
+
 .table-overflow-wrapper {
   overflow-x: scroll;
   overflow-y: visible;

@@ -227,8 +227,8 @@ $chart-width: 380px;
 
 td {
   &.mod-positive {
-    background-color: $alert-danger-bg;
-    color: $alert-danger-text;
+    background-color: $state-danger-bg !important;
+    color: $alert-danger-text !important;
   }
 
   &.mod-negative {

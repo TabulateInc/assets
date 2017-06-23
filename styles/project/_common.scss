@@ -436,3 +436,9 @@ h5 {
     margin-top: $margin-normal;
   }
 }
+
+.fa-calendar{
+  &:before {
+    content: "\f073" !important;
+  }
+}

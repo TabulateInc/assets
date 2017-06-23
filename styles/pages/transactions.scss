@@ -40,12 +40,6 @@
   }
 }
 
-.transactions-page {
-  svg:not(:root) {
-    overflow: visible !important;
-  }
-}
-
 .similar {
   &__body .transactions-list {
     // make borders fit the left table

@@ -376,6 +376,13 @@ select.padding-left-xs option,
   }
 }
 
+.btn-xsm {
+  padding: 7px 10px 6px;
+  font-size: $font-size-xs + 1;
+  line-height: 1.5;
+  border-radius: $border-radius-small;
+}
+
 // Grid
 // --------------------------
 @media (max-width: $screen-xs-min) { //consider to change to $screen-xxs-max

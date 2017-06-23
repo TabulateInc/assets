@@ -233,6 +233,10 @@ $table-view-mobile-default-marging: 4px;
   &__action {
     display: inline-flex;
     margin-left: $table-view-default-marging;
+
+    .fa-calendar {
+      top: -1px;
+    }
   }
 
   &__action-icon,

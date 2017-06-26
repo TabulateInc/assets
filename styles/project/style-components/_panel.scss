@@ -125,6 +125,7 @@ $panel-new-filter-font: 13px;
           display: inline-block;
           line-height: $panel-header-line-height;
           max-width: 199px;
+          vertical-align: top;
 
           @media (max-width: $screen-xs-max) {
             max-width: 100px;

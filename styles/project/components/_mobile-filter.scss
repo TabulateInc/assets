@@ -62,7 +62,7 @@ mobile-filters,
     position: fixed;
     z-index: 1040;
     top: ($main-navigation-height-mobile - $btn-height) / 2;  // extra margin
-    right: ($grid-gutter-width / 2);
+    right: ($grid-gutter-width / 2) - 12;
     margin-right: 0;
   }
 

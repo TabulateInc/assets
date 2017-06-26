@@ -188,6 +188,7 @@ aside-button {
     @media (max-width: $screen-xs-max) {
       border: none;
       background-color: transparent;
+      padding-right: 3px;
 
       &:hover,
       &:active {

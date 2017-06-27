@@ -55,6 +55,7 @@ $back-icon-height: 25px;
       .aside-header {
         padding: 0;
         border-bottom: none;
+        align-items: center;
       }
 
       .aside-body {
@@ -63,10 +64,14 @@ $back-icon-height: 25px;
 
       .icon-back {
         @include actions-button($back-icon-height, $back-icon-width);
+        float: none;
+        margin-top: 0;
       }
 
       .aside-title {
         @include actions-title($back-icon-width);
+        margin-bottom: 5px;
+        font-weight: 300;
       }
     }
   }

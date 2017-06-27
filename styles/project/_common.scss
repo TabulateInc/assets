@@ -59,8 +59,20 @@
 
 .is-absolute-over-xs {
   @media (max-width: $screen-xs-max) {
-    position: absolute;
+    position: absolute !important;
     z-index: 1;
+  }
+}
+
+.is-opacity {
+  opacity: 0;
+}
+
+.sticky {
+  .is-opacity {
+    @media (max-width: $screen-xs-max) {
+      opacity: 1;
+    }
   }
 }
 

@@ -177,6 +177,10 @@ table.summary-table {
   line-height: 43px !important;
 }
 
+.items-table__row:last-child {
+  border-bottom: 0px;
+}
+
 .category-head {
   border-color: $input-border !important;
 }

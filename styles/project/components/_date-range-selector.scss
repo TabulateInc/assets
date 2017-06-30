@@ -388,6 +388,10 @@ $headerHeight: 50px;
   padding: 0;
   margin: 0;
 
+  &.mobile {
+    position: fixed;
+  }
+
   .modal-content {
     border: none;
   }

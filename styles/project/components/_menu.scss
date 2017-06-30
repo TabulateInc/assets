@@ -158,6 +158,8 @@ $animation-duration: .6s;
 
     .navbar-content {
       @include actions-content();
+      max-height: 535px;
+      overflow-y: auto;
     }
 
     select {

@@ -390,6 +390,8 @@ $headerHeight: 50px;
 
   &.mobile {
     position: fixed;
+    top: 0 !important;
+    bottom: 0 !important;
   }
 
   .modal-content {

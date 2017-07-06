@@ -28,53 +28,21 @@ td.mod-bordered-group {
 
 .filters-group {
   &.mod-row-filters {
-    date-range-selector {
-      float: left;
-      padding-right: $padding-sm;
-    }
-
     account-filter {
       float: left;
       width: 50%;
-      padding: 0;
     }
 
-    select {
-      @media (min-width: $screen-lg-min) {
-        max-width: 200px;
+    @media (max-width: $screen-xs-max) {
+      report-type,
+      account-filter {
+        display: none;
       }
 
-      @media (min-width: $screen-xs-min) {
-        max-width: 180px;
+      date-range-grouping > * {
+        width: auto;
       }
     }
-  }
-
-  &.mod-aside-filters {
-    date-range-selector .custom-selector__btn,
-    select,
-    date-selector {
-      height: 34px !important;
-    }
-
-    select {
-      width: 100%;
-      max-width: 100%;
-    }
-
-    account-filter,
-    date-range-selector,
-    select,
-    .calendar-input {
-      display: block;
-      margin-bottom: 15px;
-    }
-  }
-}
-
-@media (max-width: $screen-xs-max) {
-  .content-filter tags-input.mod-xs {
-    margin-top: 0;
   }
 }
 
@@ -216,15 +184,26 @@ aside-button {
   z-index: -10000;
 }
 
-.filters-group.mod-row-filters {
-  @media (max-width: $screen-xs-max) {
-    report-type,
-    account-filter {
-      display: none;
-    }
+.aside {
+  account-filter {
+    width: 100%;
+    float: none;
+    display: block;
+  }
 
-    date-range-grouping > * {
-      width: auto;
-    }
+  date-range-selector {
+    @include clearfix();
+
+    float: none;
+  }
+}
+
+.panel-new__filter__item aside-button {
+  .aside {
+    line-height: $line-height-base;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    line-height: $line-height-base;
   }
 }

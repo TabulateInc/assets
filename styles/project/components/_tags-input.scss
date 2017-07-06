@@ -311,3 +311,11 @@ tags-input {
     }
   }
 }
+
+.search.mod-move-left-mobile {
+  .search__show {
+    @media (max-width: $screen-xs-max) {
+      right: 40px;
+    }
+  }
+}

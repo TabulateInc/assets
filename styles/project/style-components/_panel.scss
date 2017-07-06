@@ -154,6 +154,11 @@ $panel-new-filter-font: 13px;
     }
   }
 
+  &__line {
+    border-top: 1px solid $border-color-base;
+    padding-top: $panel-new-padding-hor;
+  }
+
   &__content {
     padding-left: $panel-new-padding-hor;
     padding-right: $panel-new-padding-hor;

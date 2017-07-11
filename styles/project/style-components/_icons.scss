@@ -26,6 +26,13 @@
   }
 }
 
+.icon-trash {
+  width: 27px;
+  &.mod-small {
+    width: 18px;
+  }
+}
+
 .icon-folder-plus {
   background: url(#{$images-path}/folder1+.svg) no-repeat center center transparent;
 }

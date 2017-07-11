@@ -14,8 +14,8 @@
 
 .remove-detail-btn {
   position: absolute;
-  top: 10px;
-  right: -20px;
+  top: 8px;
+  right: -18px;
   display: inline-block;
   background-position: center center;
   color: $gray-middle-new;
@@ -23,6 +23,10 @@
 
   span {
     float: none !important;
+  }
+
+  .icon-trash {
+    width: 26px;
   }
 
   @media (min-width: $screen-sm-min) {

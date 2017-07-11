@@ -1,16 +1,11 @@
 @import '../project/variables';
 .items-table__row {
+  &__row {
+    line-height: 43px !important;
+  }
   .glyphicon.glyphicon-menu-right {
     color: $brand-primary;
     font-size: 20px;
     line-height: 43px;
   }
-}
-
-.items-table__row {
-  line-height: 43px !important;
-}
-
-.items-table__row:last-child {
-  border-bottom: 0;
 }

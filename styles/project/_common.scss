@@ -469,3 +469,27 @@ h5 {
 .btn-border {
   border-color: #d8dddf !important;
 }
+
+.week-dropdown,
+.day-dropdown {
+  text-align: left;
+  position: relative;
+  height: $content-filter-height;
+
+  .caret {
+    position: absolute;
+    right: 10px;
+    top: 47%;
+  }
+
+  @media (max-width: $screen-xxs-max) {
+    max-width: 133px;
+  }
+}
+
+.account-dropdown {
+  @media (min-width: $screen-xs-min) {
+    max-width: 200px;
+  }
+}
+

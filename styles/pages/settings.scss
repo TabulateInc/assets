@@ -161,17 +161,6 @@ input.mod-delete-option {
   }
 }
 
-.content-filter tags-input.mod-xs {
-  padding-left: 20px;
-  padding-right: 40px;
-
-  @media (max-width: $screen-xs-max) {
-    margin-top: 0;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
-
 .delete-financial-btn {
   position: absolute;
   bottom: 0;

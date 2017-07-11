@@ -118,7 +118,13 @@
     overflow: scroll;
     margin-top: 10px;
 
-    &__member {
+    &__grid {
+      flex-flow: wrap;
+    }
+
+    &__member,
+    &__add,
+    &__team {
       border: 1px solid $border-color-base;
       border-radius: $border-radius-base;
       width: 34px;
@@ -127,11 +133,40 @@
       line-height: 34px;
       text-align: center;
       margin-right: 10px;
+    }
+
+    &__member {
+      cursor: pointer;
 
       &:first-child {
         margin-right: 0px;
       }
     }
+
+    &__add {
+      cursor: pointer;
+      margin-right: 10px!important;
+
+      >span {
+        font-size: 32px;
+        line-height: 32px;
+        color: $mediumgray-dark;
+      }
+    }
+
+    &__team {
+      width: auto;
+      padding: 0 10px;
+      background-color: $border-color-base;
+      white-space: nowrap;
+    }
+  }
+}
+
+.task-card__members__grid {
+  margin: 5px -5px 0 -5px;
+  .task-card__members__member {
+    margin: 5px;
   }
 }
 
@@ -224,4 +259,38 @@
       }
     }
   }
+}
+
+.task-details .task-card__members {
+  overflow: visible;
+}
+
+.context-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background-color: $white;
+  z-index: 1000;
+  border: 1px solid transparent;
+  display: none;
+
+  @media (min-width: $screen-sm-min) {
+    box-shadow: $shadow-default;
+    border-color: $gray-lighter-new;
+    // max-height: 244px;
+    // min-width: 270px;
+  }
+
+  &.mod-opened {
+    display: block;
+  }
+}
+
+.add-member {
+  width: 276px;
+}
+
+user-avatar {
+  display: block;
 }

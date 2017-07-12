@@ -6,11 +6,6 @@
 .aside.mod-mobile-filter {
   width: 100%;
 
-  .content-filter {
-    margin: 0;
-    border: 0;
-  }
-
   select,
   date-range-selector,
   tags-input,
@@ -56,12 +51,10 @@ $icon-btn-padding: 10px;
 mobile-filters,
 .mobile-filter {
   &.mod-fixed-top .icon-btn.mod-mobile-filter {
-    $icon-height: 0;
-    $btn-height: $icon-btn-padding*2 + $icon-height;
-
     position: fixed;
     z-index: 1040;
-    top: ($main-navigation-height-mobile - $btn-height) / 2;  // extra margin
+    top: 5px;
+    height: 30px;
     right: ($grid-gutter-width / 2) - 12;
     margin-right: 0;
   }

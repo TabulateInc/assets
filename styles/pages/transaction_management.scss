@@ -1,5 +1,8 @@
 @import '../project/variables';
-.items-table__row {
+.items-table__row:not(.open-close) {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
   &__row {
     line-height: 43px !important;
   }
@@ -7,5 +10,29 @@
     color: $brand-primary;
     font-size: 20px;
     line-height: 43px;
+    flex: 1 auto;
+    text-align: right;
+  }
+  .count {
+    margin-left: 5px;
+  }
+
+  @media (max-width:$screen-xs-max) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 28px;
+    .count {
+      order: 2;
+    }
+    .full-address {
+      order: 3;
+    }
+    .glyphicon {
+      order: 4;
+      position: absolute;
+      right: 9px;
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+    }
   }
 }

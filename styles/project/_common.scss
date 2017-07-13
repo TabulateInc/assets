@@ -430,9 +430,21 @@ td.mod-clickable:hover {
   cursor: pointer;
 }
 
-.padding-hor-md {
-  padding-right: $distance-hor-md;
-  padding-left: $distance-hor-md;
+.padding-hor {
+  &-md {
+    padding-right: $distance-hor-md;
+    padding-left: $distance-hor-md;
+  }
+  &-sm {
+
+    padding-right: $distance-hor-md;
+    padding-left: $distance-hor-md;
+
+    @media (max-width: $screen-sm-min) {
+      padding-right: $distance-hor-md - 10;
+      padding-left: $distance-hor-md - 10;
+    }
+  }
 }
 
 .input-padding-right {

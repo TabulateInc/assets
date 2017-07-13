@@ -2,7 +2,7 @@
   position: relative;
   display: inline-block;
 
-  button {
+  button:not(.icon-close) {
     float: left;
     padding: 0;
     margin: 0;
@@ -28,6 +28,15 @@
     }
 
     &.open {
+      .btn.icon-close {
+        display: block !important;
+        left: 1px;
+        top: 6px;
+        position: fixed;
+        z-index: 10000001;
+        width: 28px;
+        height: 28px;
+      }
       .dropdown-menu {
         @media (max-width: $screen-xs-max) {
           max-height: 1000px;

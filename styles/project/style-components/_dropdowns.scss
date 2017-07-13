@@ -145,6 +145,7 @@
 @media (max-width: $screen-xs-max) {
   .select.dropdown-menu {
     @include actions-container();
+    padding-top: 27px;
 
     max-height: none;
 

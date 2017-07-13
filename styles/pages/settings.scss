@@ -221,3 +221,14 @@ error-icon.mod-fee-info {
   }
 }
 
+@media (max-width: $screen-md-min) {
+  tender-item {
+    .icon-close {
+      margin-top: 0 !important;
+    }
+    .b-delete-icon {
+      margin-right: 3px !important;
+      margin-top: -1px !important;
+    }
+  }
+}

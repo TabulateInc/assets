@@ -47,3 +47,14 @@ $input-to-btn: 10px;
 .company-details {
   line-height: $line-height-base;
 }
+
+.is-open-detail {
+  border: 0 !important;
+  .is-not-shown {
+    display: none;
+  }
+  .is-reset-props {
+    padding: 0;
+    margin: 0;
+  }
+}

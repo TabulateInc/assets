@@ -222,7 +222,8 @@ error-icon.mod-fee-info {
 }
 
 @media (max-width: $screen-md-min) {
-  tender-item {
+  tender-item,
+  tender-group {
     .icon-close {
       margin-top: 0 !important;
     }

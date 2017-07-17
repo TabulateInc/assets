@@ -22,7 +22,7 @@ $nav-to-content-panel: $distance-hor-md;
     width: calc(100% - #{$panel-nav-width-calc + $nav-to-content-panel});
   }
 
-  iframe {
+  iframe.yodlee {
     position: absolute;
     left: 0;
     top: $panel-header-height + 1px;  // + border
@@ -232,4 +232,10 @@ error-icon.mod-fee-info {
       margin-top: -1px !important;
     }
   }
+}
+
+.form-control.stripe {
+  padding-top:0px;
+  padding-bottom:0px;
+  height: 45px!important;
 }

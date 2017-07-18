@@ -143,6 +143,11 @@
 }
 
 @media (max-width: $screen-xs-max) {
+  .aside {
+   .select.dropdown-menu {
+     padding-top: 10px;
+   }
+  }
   .select.dropdown-menu {
     @include actions-container();
     padding-top: 27px;

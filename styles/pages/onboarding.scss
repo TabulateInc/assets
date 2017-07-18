@@ -42,6 +42,10 @@ body {
   margin-top: 40px;
 }
 
+.margin-bottom-lg {
+  margin-bottom: 40px;
+}
+
 .is-submitted {
   .ng-invalid {
     border-color: red!important;
@@ -118,6 +122,7 @@ body {
     margin-top: 0px;
     font-size: 18px;
     line-height: 24px;
+    width: 100%;
   }
 }
 

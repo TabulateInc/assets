@@ -12,6 +12,10 @@ $apply-icon-width: 21px;
     transform: translateY(-50%);
     left: 9px;
     z-index: -1;
+
+    @media (max-width: $screen-xs-max) {
+      z-index: 0;
+    }
   }
 
   &__input {

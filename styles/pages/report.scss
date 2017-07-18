@@ -1,4 +1,6 @@
 @import '../project/variables';
+@import '../project/mixins/mixins';
+@import '../project/style-components/aside';
 
 $chart-width: 380px;
 
@@ -372,31 +374,6 @@ tags-input.mod-row-filter {
   }
 }
 
-.aside .panel-new__filter__item {
-  padding-left: 0 !important;
-
-  &__wrapper {
-    display: block;
-    width: 100%;
-    border-right: none;
-
-    .date-range-selector {
-      float: left;
-      padding-left: 30px;
-    }
-
-    .date-range-selector__input {
-      min-width: 0;
-      padding-right: 20px;
-      padding-left: 0;
-    }
-
-    .fa-calendar {
-      left: 0;
-    }
-  }
-}
-
 .aside account-filter {
   .tags {
     margin-left: 0;
@@ -415,5 +392,30 @@ tags-input.mod-row-filter {
     .search__show {
       display: none;
     }
+  }
+}
+
+page-state {
+  .nav-glyph {
+    &:first-child {
+      padding-left: 20px !important;
+    }
+    padding: 0 9px !important;
+  }
+}
+
+.floating-box {
+  &-md {
+    position: absolute;
+    width: 303px;
+    right: 0;
+    top: -109px;
+  }
+
+  &-xs {
+    position: absolute;
+    width: 303px;
+    right: 0;
+    top: -60px;
   }
 }

@@ -29,8 +29,8 @@ td.mod-bordered-group {
 .filters-group {
   &.mod-row-filters {
     account-filter {
-      float: left;
-      width: 50%;
+      float: right;
+      width: 81%;
     }
 
     @media (max-width: $screen-xs-max) {

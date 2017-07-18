@@ -160,6 +160,7 @@
     padding-left: $panel-new-padding-hor;
     padding-right: $panel-new-padding-hor;
     margin-top: $distance-ver-md;
+    padding-bottom: $panel-new-padding-hor - 10;
 
     @media (max-width: $screen-xs-max) {
       padding-left: $panel-new-padding-hor-mobile;

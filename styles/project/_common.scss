@@ -505,3 +505,8 @@ h5 {
   }
 }
 
+.hidden-xxs {
+  @media (max-width: $screen-xxs-max) {
+    display: none;
+  }
+}

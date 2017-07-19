@@ -155,12 +155,6 @@ input.mod-delete-option {
   margin-bottom: $distance-ver-md;
 }
 
-.hidden-xxs {
-  @media (max-width: $screen-xxs-max) {
-    display: none;
-  }
-}
-
 .delete-financial-btn {
   position: absolute;
   bottom: 0;

@@ -158,6 +158,10 @@ settings-selector {
           @media (min-width: $screen-sm-min) {
             top: 0;
             left: -5px;
+
+            &.icon-add {
+              top: -5px;
+            }
           }
         }
       }

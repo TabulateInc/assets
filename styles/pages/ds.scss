@@ -79,19 +79,16 @@ table.summary-table {
   z-index: 1000;
 
   @media (max-width: $screen-sm-min) {  // yes, ipad portrait as well
-    margin-right: $grid-gutter-width/2;
+    padding-right: $grid-gutter-width/2;
+    top: 30px;
   }
 
   @media (max-width: $screen-md-max) {
-    $width: $fix-column-width-sm;
-    max-width: $container-max-width - $grid-gutter-width - $width;
-    width: calc(100% - #{$grid-gutter-width});
+    width: 100%;
   }
 
   @media (min-width: $screen-lg-min) {
-    $width: $fix-column-width-lg;
-    max-width: $container-max-width - $grid-gutter-width - $width;
-    width: calc(100% - #{$width + $grid-gutter-width});
+    width: 100%;
   }
 }
 

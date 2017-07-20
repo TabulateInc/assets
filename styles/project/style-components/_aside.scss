@@ -115,6 +115,31 @@ $back-icon-height: 25px;
       }
     }
   }
+
+  @media (min-width: $screen-sm-min) {
+    account-filter {
+      .search__wrapper {
+        display: block;
+        width: 100%;
+        border: 1px solid #d8dddf;
+        border-radius: 3px;
+        line-height: 26px;
+        margin: 0 0 12px;
+        height: auto !important;
+
+        .search {
+          margin: 0;
+          height: 38px;
+        }
+
+        tags-input {
+          .input {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
   report-type {
     width: 100%;
   }

@@ -29,7 +29,7 @@ $overdue-label-color: #F25353;
 
 .text-left-xxs {
   @media (max-width: $screen-xxs-max) {
-    text-align: left;
+    text-align: left!important;
   }
 }
 

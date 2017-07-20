@@ -243,3 +243,18 @@ settings-selector {
     display: none;
   }
 }
+
+settings-selector.vertical-inline {
+  min-width: 24px;
+  min-height: 24px;
+  overflow: hidden;
+  margin:-5px 0px -7px 0px;
+
+  .custom-selector {
+    background-color: transparent;
+
+    &.mod-opened {
+      background-color: $white;
+    }
+  }
+}

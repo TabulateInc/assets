@@ -174,6 +174,7 @@ tags-input {
       left: 0 !important;
       background-color: transparent !important;
       bottom: -5px !important;
+      height: 5px;
 
       .ps-scrollbar-x {
         background-color: transparent !important;
@@ -190,6 +191,7 @@ tags-input {
       .ps-scrollbar-x {
         background-color: #999 !important;
         cursor: pointer;
+        height: 100%;
       }
     }
 

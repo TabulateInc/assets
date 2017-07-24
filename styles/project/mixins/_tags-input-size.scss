@@ -71,6 +71,10 @@
       padding-top: 5.5px !important;
       padding-bottom: 5.5px !important;
       margin-top: -2px !important;
+
+      @media (max-width: $screen-xs-max) {
+        margin-top: 0 !important;
+      }
     }
   }
 

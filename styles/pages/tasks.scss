@@ -205,6 +205,8 @@
 
   .avatar {
     width: 50px;
+    flex-shrink: 0;
+    -webkit-flex-shrink: 0;
   }
   .content {
     width: 800px;

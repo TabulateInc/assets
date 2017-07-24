@@ -56,7 +56,7 @@ tags-input {
           display: inline-block;
           padding-right: $tag-item-distance-hor - $tag-remove-button-size/2;
           padding-left: $tag-item-distance-hor - $tag-remove-button-size/2;
-          margin-left: $tag-item-distance-hor;
+          margin-left: $tag-item-distance-hor - 8;
           border-left: 1px solid $tag-item-border-color;
           color: $tag-item-color;
           font-size: $tag-remove-button-size;

@@ -49,7 +49,7 @@
     .tag-template {
       border: 1px solid $tag-item-border-color;
       border-radius: 3px;
-      padding-left: $tag-item-distance-hor;
+      padding-left: $tag-item-distance-hor - 7;
       margin: 2px;
       position: relative;
 

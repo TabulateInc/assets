@@ -30,8 +30,10 @@
   line-height: 43px !important;
 }
 
-.items-table__row:last-child {
-  border-bottom: 0px;
+.items-table {
+  > .items-table__row:last-child {
+    border-bottom: 0px;
+  }
 }
 
 .btn-fake.editable {

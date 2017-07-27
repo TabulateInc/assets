@@ -386,11 +386,16 @@ user-avatar {
     .search_wrapper {
       height: 0px;
       overflow: hidden;
+
+      .search {
+        height: 100%;
+      }
     }
     .search__show {
       position: absolute;
       top: -52px;
       right: 0px;
+      z-index: 1039;
     }
   }
 

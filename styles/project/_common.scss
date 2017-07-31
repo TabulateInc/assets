@@ -519,3 +519,32 @@ h5 {
     display: none;
   }
 }
+
+.no-border {
+  .form-control {
+    border: 0px;
+  }
+}
+
+.bulk-edit {
+  .title {
+    line-height: 28px;
+  }
+  .row {
+    border-bottom: 1px solid $gray-light-new;
+    margin: 0px;
+
+    .border-left {
+      border-left: 1px solid $gray-light-new;
+    }
+
+    .border-right {
+      border-right: 1px solid $gray-light-new;
+    }
+
+    .has-error {
+      border: 1px solid $input-border-error;
+      margin: -1px 0;
+    }
+  }
+}

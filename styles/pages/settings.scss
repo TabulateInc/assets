@@ -22,7 +22,7 @@ $nav-to-content-panel: $distance-hor-md;
     width: calc(100% - #{$panel-nav-width-calc + $nav-to-content-panel});
   }
 
-  iframe {
+  iframe.yodlee {
     position: absolute;
     left: 0;
     top: $panel-header-height + 1px;  // + border
@@ -155,12 +155,6 @@ input.mod-delete-option {
   margin-bottom: $distance-ver-md;
 }
 
-.hidden-xxs {
-  @media (max-width: $screen-xxs-max) {
-    display: none;
-  }
-}
-
 .delete-financial-btn {
   position: absolute;
   bottom: 0;
@@ -221,6 +215,7 @@ error-icon.mod-fee-info {
   }
 }
 
+
 .icon-trash {
   &--small {
     background-color: #4c5557;
@@ -232,4 +227,89 @@ error-icon.mod-fee-info {
     }
   }
 }
+      
+@media (max-width: $screen-md-min) {
+  tender-item,
+  tender-group {
+    .icon-close {
+      margin-top: 0 !important;
+    }
+    .b-delete-icon {
+      margin-right: 3px !important;
+      margin-top: -1px !important;
+    }
+  }
+}
 
+.form-control.stripe {
+  padding-top:0px;
+  padding-bottom:0px;
+  height: 45px!important;
+}
+
+.billing h5 {
+  margin-bottom: 20px;
+}
+
+.plan-option {
+  border: 1px solid $gray-lighter-new;
+  border-radius: 10px;
+  color: $gray-new;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+  &.selected {
+    border-color: $brand-primary;
+  }
+
+  .title {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .price {
+    margin-top: 25px;
+    font-size: 42px;
+    line-height: 58px;
+    font-weight: 300;
+
+    span {
+      display: block;
+      text-transform: uppercase;
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  .volume {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-bottom: 35px;
+  }
+}
+
+.option {
+  text-align: left;
+  padding: 20px;
+  font-weight: 300;
+
+  label {
+    font-size: 18px;
+  }
+  p {
+    margin: 5px 0 0 34px;
+    line-height: 24px;
+  }
+
+  .price {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0px;
+    padding: 0px;
+  }
+}

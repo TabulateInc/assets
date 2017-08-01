@@ -49,6 +49,102 @@ $back-icon-height: 25px;
   flex: 1;
 }
 
+.aside {
+  .panel-new__filter__item {
+    padding-left: 0 !important;
+
+    &__wrapper {
+      display: block;
+      width: 100%;
+      border: 1px solid #d8dddf;
+      border-radius: 3px;
+      line-height: 26px;
+      margin: 0 0 12px;
+      padding: 5px 10px;
+      height: auto !important;
+
+      .date-picker,
+      .panel-new__filter__item {
+        height: 26px;
+        line-height: 26px;
+        float: none;
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+
+        .caret {
+          position: absolute;
+          top: 18px;
+          cursor: pointer;
+          right: 10px;
+          color: #98a9b1;
+          margin-top: 0;
+        }
+      }
+
+      .fa-calendar {
+        top: 50% !important;
+        transform: translate3d(0, -50%, 0);
+      }
+
+      .date-selector {
+        max-width: 100%;
+
+        i {
+          z-index: 0;
+        }
+      }
+
+      .date-range-selector {
+        float: none;
+        padding-left: 20px;
+        .caret {
+          right: 1px;
+        }
+      }
+
+      .date-range-selector__input {
+        min-width: 0;
+        padding-right: 25px;
+        padding-left: 0;
+      }
+
+      .fa-calendar {
+        left: 0;
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    account-filter {
+      .search__wrapper {
+        display: block;
+        width: 100%;
+        border: 1px solid #d8dddf;
+        border-radius: 3px;
+        line-height: 26px;
+        margin: 0 0 12px;
+        height: auto !important;
+
+        .search {
+          margin: 0;
+          height: 38px;
+        }
+
+        tags-input {
+          .input {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  report-type {
+    width: 100%;
+  }
+}
+
 @media (max-width: $screen-xs-max) {
   .aside {
     .aside-dialog {

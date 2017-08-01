@@ -158,6 +158,10 @@ settings-selector {
           @media (min-width: $screen-sm-min) {
             top: 0;
             left: -5px;
+
+            &.icon-add {
+              top: -5px;
+            }
           }
         }
       }
@@ -237,5 +241,20 @@ settings-selector {
   &__caption {
     @include actions-title($back-icon-width);
     display: none;
+  }
+}
+
+settings-selector.vertical-inline {
+  min-width: 24px;
+  min-height: 24px;
+  overflow: hidden;
+  margin:-5px 0px -7px 0px;
+
+  .custom-selector {
+    background-color: transparent;
+
+    &.mod-opened {
+      background-color: $white;
+    }
   }
 }

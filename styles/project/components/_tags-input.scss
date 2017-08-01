@@ -46,16 +46,17 @@ tags-input {
 
       .tag-item {
         padding-right: 0;
-        padding-left: $tag-item-distance-hor;
-        border-color: $tag-item-border-color;
+        padding-left: 0;
+        border: none;
         background: transparent;
         color: $gray-new;
+        margin: 0;
 
         .remove-button {
           display: inline-block;
           padding-right: $tag-item-distance-hor - $tag-remove-button-size/2;
           padding-left: $tag-item-distance-hor - $tag-remove-button-size/2;
-          margin-left: $tag-item-distance-hor;
+          margin-left: $tag-item-distance-hor - 8;
           border-left: 1px solid $tag-item-border-color;
           color: $tag-item-color;
           font-size: $tag-remove-button-size;
@@ -172,9 +173,25 @@ tags-input {
     .ps-scrollbar-x-rail {
       left: 0 !important;
       background-color: transparent !important;
+      bottom: -5px !important;
+      height: 5px;
 
       .ps-scrollbar-x {
         background-color: transparent !important;
+      }
+    }
+
+    .ps-active-x {
+      .ps-scrollbar-x-rail {
+        bottom: -5px !important;
+        background-color: #ccc !important;
+        z-index: 9999 !important;
+        opacity: 0.6 !important;
+      }
+      .ps-scrollbar-x {
+        background-color: #999 !important;
+        cursor: pointer;
+        height: 100%;
       }
     }
 

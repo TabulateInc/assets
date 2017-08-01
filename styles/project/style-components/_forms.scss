@@ -297,6 +297,12 @@ input[type="search"] {
     position: relative;
     top: 2px;
   }
+
+  span {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 168px;
+  }
 }
 .radio input[type="radio"],
 .checkbox input[type="checkbox"] {

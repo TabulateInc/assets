@@ -35,6 +35,7 @@
 .table-overflow-wrapper {
   overflow-x: scroll;
   overflow-y: visible;
+  padding-top: 10px;
 
   table {
     border-collapse: separate;
@@ -80,7 +81,8 @@
   max-width: 100%;
 }
 
-.ps-scrollbar-x-rail {
+.ps-scrollbar-x-rail,
+.ps-scrollbar-y-rail {
   display: block !important;
   opacity: 0.6 !important;
   background-color: $gray-lighter !important;

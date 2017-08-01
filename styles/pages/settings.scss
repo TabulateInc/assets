@@ -221,3 +221,15 @@ error-icon.mod-fee-info {
   }
 }
 
+.icon-trash {
+  &--small {
+    background-color: #4c5557;
+    width: 18px;
+    height: 18px;
+
+    &:hover {
+      background-color: #57a6db;
+    }
+  }
+}
+

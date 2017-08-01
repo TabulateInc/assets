@@ -164,6 +164,10 @@
   }
 }
 
-.icon-trash.col-xs-3 {
-  width: 25%;
+.icon-trash{
+  background-color: #4c5557;
+  width: 17px;
+  &.col-xs-3 {
+    width: 25%;
+  }
 }

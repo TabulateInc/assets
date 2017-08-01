@@ -89,6 +89,12 @@
     background-color: $button-normal-hover;
   }
 
+  &:hover {
+    [class^='icon-'] {
+      background-color: $white;
+    }
+  }
+
   &,
   &.disabled,
   &[disabled] {

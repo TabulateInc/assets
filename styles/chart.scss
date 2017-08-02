@@ -9,9 +9,6 @@ $chart-margin:75px;
 }
 
 .chart{
-    @media (min-width:$screen-sm-min){
-      margin-left: -1*$chart-margin;
-    }
     margin-top:20px;
     margin-bottom:30px;
 }

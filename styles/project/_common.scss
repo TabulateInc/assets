@@ -287,6 +287,20 @@ select.padding-left-xs option,
   }
 }
 
+.negative-margin-right {
+  &-xs {
+    margin-right: -$margin-xs;
+  }
+
+  &-sm {
+    margin-right: -$margin-normal;
+  }
+
+  &-md {
+    margin-right: -$margin-md;
+  }
+}
+
 .no-outline {
   &:focus {
     outline: none !important;

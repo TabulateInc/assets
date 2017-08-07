@@ -313,3 +313,11 @@ error-icon.mod-fee-info {
     padding: 0px;
   }
 }
+
+.sm-width {
+  @media (max-width: $screen-sm-max - 1) {
+    &-2 {
+      width: 11% !important;
+    }
+  }
+}

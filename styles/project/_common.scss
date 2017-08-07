@@ -287,17 +287,33 @@ select.padding-left-xs option,
   }
 }
 
-.negative-margin-right {
-  &-xs {
-    margin-right: -$margin-xs;
+.negative-margin {
+  &-right {
+    &-xs {
+      margin-right: -$margin-xs;
+    }
+
+    &-sm {
+      margin-right: -$margin-normal;
+    }
+
+    &-md {
+      margin-right: -$margin-md - 10;
+    }
   }
 
-  &-sm {
-    margin-right: -$margin-normal;
-  }
+  &-left {
+    &-xs {
+      margin-left: -$margin-xs;
+    }
 
-  &-md {
-    margin-right: -$margin-md;
+    &-sm {
+      margin-left: -$margin-normal;
+    }
+
+    &-md {
+      margin-left: -$margin-md - 10;
+    }
   }
 }
 

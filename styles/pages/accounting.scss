@@ -31,6 +31,10 @@ td.mod-bordered-group {
     account-filter {
       float: right;
       width: 81%;
+
+      &.alt {
+        width: 50%;
+      }
     }
 
     @media (max-width: $screen-xs-max) {

@@ -118,6 +118,16 @@
     background-color: transparent;
     box-shadow: none;
   }
+
+  &.search-close {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translate3d(0, -50%, 0);
+    cursor: pointer;
+  }
 }
 
 .icon-trash {

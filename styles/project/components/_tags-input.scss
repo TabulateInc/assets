@@ -73,6 +73,23 @@ tags-input {
   }
 }
 
+.search__wrapper {
+  &.search-position {
+    .search {
+      &__show {
+        @media (max-width: $screen-xs-max) {
+          right: 30px;
+        }
+      }
+      &.mod-opened {
+        @media (max-width: $screen-xs-max) {
+          z-index: 1041;
+        }
+      }
+    }
+  }
+}
+
 .search {
   @media (min-width: $screen-sm-min) {
     position: relative;

@@ -21,6 +21,14 @@
     }
   }
 
+  &.top-space {
+    margin-top: -35px;
+
+    @media (max-width: $screen-sm - 1) {
+      margin-top: -25px;
+    }
+  }
+
   &:after {
     position: absolute;
     top: -10px;

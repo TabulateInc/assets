@@ -215,3 +215,121 @@ section {
     font-size: 12px;
   }
 }
+
+pre {
+  margin: 10px 0;
+}
+.js-docs-text br {
+  color: #ccc;
+}
+.img-holder img {
+  display: block;
+  margin: 0 auto;
+}
+date-range-selector {
+  border: 1px solid #dde1e4;
+}
+.input-message {
+  display: block;
+  position: static;
+  left: auto;
+  top: auto;
+  bottom: auto;
+}
+.alert {
+  position: static;
+  left: auto;
+  top: auto;
+  right: auto;
+}
+.main-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  background: #f9f9f9;
+}
+.main-table td {
+  position: relative;
+  width: 16.666%;
+  padding: 5px;
+  height: 100px;
+  text-align: center;
+  border: 2px solid #fff;
+}
+.main-table i {
+  position: static;
+  left: auto;
+  top: auto;
+  display: block;
+  padding: 0;
+  margin: 0 auto 5px;
+  width: 24px;
+  height: 24px;
+  float: none;
+  fill: #4c5557;
+}
+.main-table .icon-circle--expand{
+  background: #4c5557;
+  border-color: #4c5557;
+  width: 21px;
+  height: 21px;
+}
+.main-table i.middle-size {
+  background-size: 24px 24px;
+}
+.main-table i.custom-panel__image,
+.main-table i.calendar-input {
+  background-size: 20px 24px;
+}
+.main-table .desc {
+  display: block;
+}
+.example-container {
+  width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+.example-container div {
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.example-container-sidebar {
+  background: #80bdff;
+  order: 1;
+  flex: 1 auto;
+}
+.example-container-body {
+  background: #ccc;
+  order: 2;
+  flex: 5 auto;
+}
+.search__wrapper {
+  border: 1px solid #d8dddf;
+  min-height: 49px;
+}
+tags-input .host {
+  border: none !important;
+}
+#tag-search .search__show {
+  top: 4px;
+}
+#tag-search .icon-close {
+  top: 8px;
+}
+.report-table th,
+.report-table td {
+  width: 20%;
+  text-align: right;
+  padding: 2px 1px 3px 22px;
+}
+.report-table th:first-child,
+.report-table td:first-child {
+  width: 35%;
+  text-align: left;
+}
+.panel-new__filter {
+  border: 1px solid #dde1e4;
+}

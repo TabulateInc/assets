@@ -2,6 +2,26 @@
 .radio {
   margin-bottom: 0;
 
+  &.disabled {
+    label {
+      cursor: $cursor-disabled !important;
+      //pointer-events: none;
+
+      &.mod-default:before,
+      &.mod-primary:before {
+        color: $input-color-disabled !important;
+        background-color: $input-bg-disabled !important;
+        border-color: $input-border !important;
+      }
+
+      &.mod-primary {
+        &:before {
+          background-image: url(#{$images-path}/checkmark.dark.svg) !important;
+        }
+      }
+    }
+  }
+
   input {
     display: none;
 

@@ -115,6 +115,15 @@
   display: inline-block;
   margin: 15px auto 10px;
   vertical-align: top;
+  cursor: pointer;
+  color: #57a6db;
+  border: none;
+  padding: 0;
+  background: none;
+
+  &.disabled {
+    cursor: not-allowed;
+  }
 }
 
 .task-card {

@@ -106,6 +106,16 @@
 .status-label.s3 {
   background-color: #56A500;
 }
+.task-list.status-4 .task-list__status,
+.status-label.s4 {
+  background-color: #dde1e4;
+}
+
+.get-more-btn {
+  display: inline-block;
+  margin: 15px auto 10px;
+  vertical-align: top;
+}
 
 .task-card {
   border: 1px solid $border-color-base;

@@ -115,6 +115,7 @@
     &.mod-middle > * {
       display: inline-block;
       padding-top: $main-navigation-height/2 - $alert-margin-vertical - 10px - 1px !important;
+      max-width: 90%;
     }
   }
 
@@ -124,6 +125,7 @@
     &.mod-middle > * {
       display: inline-block;
       padding-top: $main-navigation-height-mobile/2 - $alert-margin-vertical - 10px - 1px !important;
+      max-width: 90%;
     }
   }
 

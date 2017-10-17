@@ -1,0 +1,12 @@
+stripe-add-payment {
+  .btn {
+    &.selected {
+      line-height: 43px;
+      padding:0 12px;
+      border: 1px solid #57a6db;
+      background-color: #57a6db;
+      border-radius: 3px;
+      color:white;
+    }
+  }
+}

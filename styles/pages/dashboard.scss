@@ -1,0 +1,157 @@
+// WARNINIG!
+// this is a test version
+// the markup and styles will be changed significantly
+// later
+// so no worries about the this shitty code
+
+@import '../project/variables';
+
+.dashboard {
+  .content-box {
+    padding: 40px;
+    position: relative;
+  }
+
+  .promo-title {
+    font-size: 27px;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0 0 5px;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 300;
+    color: #4c5557;
+  }
+
+  .description {
+    font-size: 16px;
+    color: #98a9b1;
+    font-weight: 300;
+    margin: 0 0 20px;
+  }
+
+  .item-list {
+    max-width: 600px;
+    &__frame {
+      padding-bottom: 30px;
+      position: relative;
+      cursor: pointer;
+      &:first-child {
+        &:after {
+          top: -300px;
+        }
+      }
+      &:last-child {
+        &:after {
+          bottom: auto;
+        }
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        left: -40px;
+        top: 0;
+        bottom: -15px;
+        width: 1px;
+        background-color: $gray-border;
+      }
+
+      &:before {
+        content: "";
+        border: 2px solid #00b3ee;
+        border-radius: 10px;
+        background: $white;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        left: -46px;
+        top: 6px;
+        color: #00b3ee;
+        z-index: 2;
+      }
+    }
+    &__row {
+      padding: 25px 20px 25px 65px;
+      border: 1px solid $gray-border;
+      position: relative;
+      color: #98a9b1;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .glyphicon.glyphicon-menu-right {
+    color: $brand-primary;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translate3d(0, -50%, 0)
+    //line-height: 43px;
+  }
+
+  .icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    font-size: 40px;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+//.overview {
+//
+//  .panel-default > .panel-heading,
+//  &__panel .panel-footer {
+//    border-color: $gray-border;
+//    background-color: $gray-background;
+//  }
+//
+//  &__header {
+//    margin-left: 15px;
+//  }
+//
+//  &__counter {
+//    font-size: $font-size-xlg;
+//    padding: $padding-md 0;
+//  }
+//
+//  &__week_item {
+//    margin-top: 6px;
+//  }
+//
+//  &__chart_control {
+//    @media (max-width: $screen-xxs-max) {
+//      float: none !important;
+//      margin-top: 5px;
+//    }
+//
+//    .btn-group {
+//      margin-left: 0 !important;
+//    }
+//  }
+//
+//  &__table_header th {
+//    border-top: none !important;
+//  }
+//
+//  &.container-fluid {
+//    max-width: 1600px;
+//  }
+//}
+//
+//select.btn-xs {
+//    height:22px;
+//}
+//
+//.panel-body {
+//  svg:not(:root) {
+//    overflow: visible;
+//  }
+//}
+//
+//.bank-credit-table td {
+//  min-width: 88px;
+//}

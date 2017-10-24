@@ -10,6 +10,10 @@
   .content-box {
     padding: 40px;
     position: relative;
+
+    @media (max-width: $screen-xs-max) {
+      padding: 20px;
+    }
   }
 
   .promo-title {
@@ -17,6 +21,10 @@
     font-weight: 300;
     line-height: 20px;
     margin: 0 0 5px;
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 20px;
+    }
   }
 
   .title {
@@ -37,7 +45,6 @@
     &__frame {
       padding-bottom: 30px;
       position: relative;
-      cursor: pointer;
       &:first-child {
         &:after {
           top: -300px;
@@ -71,6 +78,15 @@
         color: #00b3ee;
         z-index: 2;
       }
+
+      @media (max-width: $screen-xs-max) {
+        &:after,
+        &:before {
+          width: 0;
+          height: 0;
+          border: none;
+        }
+      }
     }
     &__row {
       padding: 25px 20px 25px 65px;
@@ -79,6 +95,11 @@
       color: #98a9b1;
       border-radius: 3px;
       margin-bottom: 10px;
+      cursor: pointer;
+
+      @media (max-width: $screen-xs-max) {
+        padding: 20px 20px 20px 60px;
+      }
     }
   }
 
@@ -88,8 +109,11 @@
     position: absolute;
     top: 50%;
     right: 30px;
-    transform: translate3d(0, -50%, 0)
-    //line-height: 43px;
+    transform: translate3d(0, -50%, 0);
+
+    @media (max-width: $screen-xs-max) {
+      right: 5px;
+    }
   }
 
   .icon {
@@ -98,7 +122,35 @@
     top: 50%;
     font-size: 40px;
     transform: translate3d(0, -50%, 0);
+
+    @media (max-width: $screen-xs-max) {
+      left: 10px;
+    }
   }
+
+  .form-control {
+    min-height: 44px;
+  }
+
+  .btn-top {
+    left: 40px;
+    top: 92px;
+    color: #98a9b1;
+    position: absolute;
+    z-index: 99999;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .bigaction {
+      .logo {
+        display: none;
+      }
+    }
+  }
+}
+
+.intercome-hidden {
+  display: none;
 }
 
 //.overview {

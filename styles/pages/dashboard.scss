@@ -1,10 +1,5 @@
-// WARNINIG!
-// this is a test version
-// the markup and styles will be changed significantly
-// later
-// so no worries about the this shitty code
-
 @import '../project/variables';
+@import './files';
 
 .dashboard {
   .content-box {
@@ -89,7 +84,7 @@
       }
     }
     &__row {
-      padding: 25px 20px 25px 65px;
+      padding: 25px 40px 25px 65px;
       border: 1px solid $gray-border;
       position: relative;
       color: #98a9b1;
@@ -103,12 +98,12 @@
     }
   }
 
-  .glyphicon.glyphicon-menu-right {
+  .glyphicon.glyphicon-menu-right.alt {
     color: $brand-primary;
     font-size: 20px;
     position: absolute;
     top: 50%;
-    right: 30px;
+    right: 24px;
     transform: translate3d(0, -50%, 0);
 
     @media (max-width: $screen-xs-max) {
@@ -138,6 +133,14 @@
     color: #98a9b1;
     position: absolute;
     z-index: 99999;
+
+    @media (max-width: $screen-xs-max) {
+      left: 10px;
+      top: 10px;
+      &__cap {
+        display: none;
+      }
+    }
   }
 
   @media (max-width: $screen-xs-max) {
@@ -149,8 +152,17 @@
   }
 }
 
-.intercome-hidden {
-  display: none;
+.js-dashboard-item-open {
+  #intercom-container {
+    display: none;
+  }
+  .navbar {
+    z-index: 999999;
+
+    @media (max-width: $screen-xs-max) {
+      display: none !important;
+    }
+  }
 }
 
 //.overview {

@@ -415,3 +415,13 @@ date-range-selector {
 .items-table__row.mod-selected {
   background-color: $table-bg-hover;
 }
+
+.b-file-input {
+  input {
+    display: none;
+  }
+  label {
+    color: #57a6db;
+    cursor: pointer;
+  }
+}

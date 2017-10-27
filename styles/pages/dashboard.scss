@@ -129,9 +129,9 @@
 
   .btn-top {
     left: 40px;
-    top: 92px;
+    top: 20px;
     color: #98a9b1;
-    position: absolute;
+    position: fixed;
     z-index: 99999;
 
     @media (max-width: $screen-xs-max) {
@@ -143,9 +143,11 @@
     }
   }
 
-  @media (max-width: $screen-xs-max) {
-    .bigaction {
-      .logo {
+  .bigaction {
+    .logo {
+      margin-top: 40px;
+
+      @media (max-width: $screen-xs-max) {
         display: none;
       }
     }
@@ -153,14 +155,9 @@
 }
 
 .js-dashboard-item-open {
+  padding-top: 50px;
+
   #intercom-container {
     display: none;
-  }
-  .navbar {
-    z-index: 999999;
-
-    @media (max-width: $screen-xs-max) {
-      display: none !important;
-    }
   }
 }

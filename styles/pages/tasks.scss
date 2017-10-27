@@ -136,6 +136,10 @@
     margin-top: 0px;
   }
 
+  &.is-overdue {
+    border-color: $red-danger;
+  }
+
   &__members {
     display: flex;
     flex-flow: wrap;

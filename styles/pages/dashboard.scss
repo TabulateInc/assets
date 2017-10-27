@@ -92,6 +92,10 @@
       margin-bottom: 10px;
       cursor: pointer;
 
+      &.is-overdue {
+        border-color: $red-danger;
+      }
+
       @media (max-width: $screen-xs-max) {
         padding: 20px 20px 20px 60px;
       }

@@ -158,6 +158,13 @@
   }
 }
 
+.check-list {
+  margin-bottom: 40px;
+  > div {
+    padding: 0 10px 20px;
+  }
+}
+
 .js-dashboard-item-open {
   padding-top: 50px;
 

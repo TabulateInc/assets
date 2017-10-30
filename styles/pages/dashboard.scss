@@ -147,12 +147,14 @@
     }
   }
 
-  .bigaction {
-    .logo {
-      margin-top: 40px;
+  .big{
+    &.action {
+      .logo {
+        margin-top: 40px;
 
-      @media (max-width: $screen-xs-max) {
-        display: none;
+        @media (max-width: $screen-xs-max) {
+          display: none;
+        }
       }
     }
   }

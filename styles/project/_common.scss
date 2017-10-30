@@ -588,3 +588,15 @@ h5 {
   background: #fff;
   z-index: 9999999;
 }
+
+stripe-add-payment {
+  .checkbox-block {
+    .checkbox {
+      &.is-invalid {
+        label:before {
+          border-color: $red-danger;
+        }
+      }
+    }
+  }
+}

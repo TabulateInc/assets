@@ -21,6 +21,17 @@ body.modal-open {
   overflow-y: auto;
 }
 
+body.credit-card-modal-open,
+body.bank-account-modal-open {
+  overflow-y: auto;
+
+  @media (min-width: $screen-xs-max) {
+    .modal-dialog {
+      padding-top: 200px;
+    }
+  }
+}
+
 // Container that the modal scrolls within
 .modal {
   display: none;

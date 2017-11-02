@@ -559,6 +559,9 @@ h5 {
 .bulk-edit {
   .title {
     line-height: 28px;
+    > div {
+      padding: 0 8px;
+    }
   }
   .row {
     border-bottom: 1px solid $gray-light-new;
@@ -575,6 +578,30 @@ h5 {
     .has-error {
       border: 1px solid $input-border-error;
       margin: -1px 0;
+    }
+  }
+
+  .cost-call {
+    padding-right: 47px !important;
+  }
+
+  .icon-trash {
+    top: 4px;
+  }
+
+  .form-control {
+    text-align: left;
+    padding: 6px 8px;
+
+    &[disabled]{
+      color: #bebcbb;
+    }
+
+    .caret {
+      position: absolute;
+      right: 1px;
+      top: 50%;
+      transform: translate3d(-50%, 0, 0);
     }
   }
 }

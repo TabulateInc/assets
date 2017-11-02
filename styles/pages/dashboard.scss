@@ -165,6 +165,10 @@
   > div {
     padding: 0 10px 20px;
   }
+  .checkbox,
+  .radio {
+    span { max-width: 100%; }
+  }
 }
 
 .js-dashboard-item-open {

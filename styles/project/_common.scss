@@ -561,7 +561,30 @@ h5 {
     line-height: 28px;
     > div {
       padding: 0 8px;
+      span:hover {
+        cursor: pointer;
+        color: #627781;
+      }
+      .glyphicon {
+        font-size: 9px;
+      }
     }
+  }
+  .special-size {
+    padding: 0 0 0 7px !important;
+  }
+
+  .has-error {
+    .form-control:focus,
+    .btn-default:focus {
+      border: none !important;
+    }
+  }
+  .form-control:focus,
+  .btn-default:focus {
+    border: 1px solid #57a6db !important;
+    border-radius: 0 !important;
+    outline: 0;
   }
   .row {
     border-bottom: 1px solid $gray-light-new;

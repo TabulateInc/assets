@@ -92,9 +92,14 @@ h5.margin-top-md {
 
 .report-table.mod-admin {
   th {
-    @include text-overflow();
+
 
     max-width: 122px;  // $xx,xxx,xxx.xx
+
+    span {
+      @include text-overflow();
+      display: block;
+    }
   }
 }
 

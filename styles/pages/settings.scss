@@ -322,3 +322,15 @@ error-icon.mod-fee-info {
     }
   }
 }
+
+.refresh-modal {
+  @media (max-width: $screen-sm-max) {
+    .modal-body,
+    .modal-footer {
+      background: $white;
+    }
+    .text-box {
+      padding: 0;
+    }
+  }
+}

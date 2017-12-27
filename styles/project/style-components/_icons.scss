@@ -201,3 +201,20 @@
     width: $size;
   }
 }
+
+.icon-apply-btn {
+  margin-top: 0;
+  float: right;
+  margin-right: 5px;
+  padding: 0;
+  border: none;
+  width: 21px;
+  height: 14px;
+  position: relative;
+  cursor: pointer;
+  background: url(/assets/img/checkmark.dark.svg) no-repeat center;
+  background-size: 21px;
+  &--right-indent {
+    margin-right: 15px;
+  }
+}

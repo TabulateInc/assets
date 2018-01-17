@@ -128,6 +128,10 @@
   position: fixed;
 }
 
+.as-overflow {
+  overflow: hidden;
+}
+
 .min-height {
   &-xs {
     min-height: 185px;

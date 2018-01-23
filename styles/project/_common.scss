@@ -143,6 +143,10 @@
     border: none !important;
   }
 }
+
+.is-overflow-hidden {
+  overflow: hidden;
+}
 // Box
 // -----------------------------
 
@@ -642,6 +646,30 @@ h5 {
   bottom: 0;
   background: #fff;
   z-index: 9999999;
+}
+
+.no-border-bottom {
+  border-bottom: 0;
+}
+
+.flex-blocks {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .filters-group {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+
+    > div,
+    date-range-selector {
+      flex-grow: 0;
+
+      &.is_search_filter {
+        flex-grow: 2;
+      }
+    }
+  }
 }
 
 stripe-add-payment {

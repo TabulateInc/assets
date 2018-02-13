@@ -1,0 +1,23 @@
+@import '../project/variables';
+
+
+@mixin lightBox() {
+  background-color: #fff;
+  border: 1px solid $gray-light-new;
+  border-radius: 3px;
+}
+
+
+@mixin link($color) {
+  &:link {
+    color: $color;
+  }
+  &:hover {
+    color: darken($color, 15);
+  }
+  &:focus,
+  &:visited {
+    color: $color;
+    outline: none;
+  }
+}

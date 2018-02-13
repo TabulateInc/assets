@@ -1,5 +1,5 @@
 @import '../../../node_modules/sanitize.css/sanitize.css';
-@import '../project/variables';
+@import './mixins';
 
 
 html,
@@ -11,23 +11,9 @@ body {
 body {
   font-weight: 400;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $gray-new;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  &.fontLoaded {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
-}
-
-
-#app {
-  background-color: #fafafa;
-  min-height: 100%;
-  min-width: 100%;
-}
-
-.app-payroll {
-  height: 100%;
 }
 
 p,
@@ -35,3 +21,16 @@ label {
   font-family: Georgia, Times, "Times New Roman", serif;
   line-height: 1.5em;
 }
+
+a {
+  @include link($brand-primary);
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+

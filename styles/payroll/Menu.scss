@@ -1,0 +1,43 @@
+@import './mixins';
+
+
+.menu {
+  width: 295px;
+  margin-right: 20px;
+}
+
+.nav {
+  @include lightBox();
+}
+
+.list {
+  padding: 21px 20px;
+}
+
+.li {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 0 20px;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: $gray-lightest-new;
+  }
+}
+
+.a {
+  @include link($gray-new)
+}
+
+.active {
+  background-color: $brand-primary;
+  color: #fff;
+  
+  &:hover {
+    background-color: $brand-primary;
+  }
+}

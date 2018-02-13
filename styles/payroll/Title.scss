@@ -1,0 +1,10 @@
+@import '../project/variables';
+
+.title {
+  margin: 0;
+  padding: 16px 20px 17px;
+  border-bottom: 1px solid $gray-light-new;
+  line-height: 1;
+  font-weight: 300;
+  font-size: 27px;
+}

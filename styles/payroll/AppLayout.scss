@@ -1,3 +1,22 @@
-.app-payroll {
+@import './mixins';
 
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+  max-width: 1350px;
+  padding: 100px 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.main {
+  @include lightBox();
+  width: calc(100% - 295px);
 }

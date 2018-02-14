@@ -6,9 +6,9 @@
 
 
 @mixin link($color) {
-  &:link {
-    color: $color;
-  }
+  color: $color;
+  cursor: pointer;
+
   &:hover {
     color: darken($color, 15);
   }

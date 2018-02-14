@@ -1,10 +1,16 @@
 .title {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   margin: 0;
-  padding: 16px 20px 17px;
-  border-bottom: 1px solid $gray-light-new;
   line-height: 1;
   font-weight: 300;
   font-size: 27px;
+}
+
+.h2 {
+  font-size: 21px;
+}
+
+.h3 {
+  font-size: 16px;
 }

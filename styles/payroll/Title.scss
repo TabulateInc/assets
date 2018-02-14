@@ -1,6 +1,6 @@
-@import '../project/variables';
-
 .title {
+  display: flex;
+  align-items: center;
   margin: 0;
   padding: 16px 20px 17px;
   border-bottom: 1px solid $gray-light-new;

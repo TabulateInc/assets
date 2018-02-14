@@ -1,12 +1,15 @@
 @import './mixins';
 
+
 .app {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
 .content {
+  position: relative;
   flex: 1;
   width: 100%;
   max-width: 1350px;

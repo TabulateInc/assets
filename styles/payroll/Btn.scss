@@ -1,10 +1,48 @@
+@import './mixins';
+
 .btn {
   font-size: 14px;
-  padding: 5px 23px;
+  padding: 5px 35px;
   border: 1px solid $gray-lighter-new;
   background-color: $white;
+  color: $gray-new;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:hover {
+    color: $white;
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+  }
 }
 
-.action {
-  background-color: lightblue;
+.short {
+  padding-left: 15px;
+  padding-right: 15px;
 }
+
+.icon {
+  font-size: 24px;
+  line-height: 1;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  color: $gray-text;
+
+  &:hover {
+    color: $gray-new;
+    background-color: transparent;
+  }
+}
+
+.plain {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  @include link($brand-primary);
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+

@@ -2,6 +2,23 @@
 
 
 .glyphicon {
+  top: 0;
   display: inline-flex;
+  margin: 0 3px;
   font-size: 13px;
+}
+
+.circle {
+  height: 18px;
+  width: 18px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+.green {
+  background-color: #7fc957;
 }

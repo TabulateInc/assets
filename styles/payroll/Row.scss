@@ -3,10 +3,11 @@
   justify-content: space-between;
   align-items: center;
   margin: 15px 0;
-  padding: 10px 20px;
+  padding: 0 20px;
 }
 
 .border {
+  height: 42px;
   border: 1px solid $gray-light-new;
   border-radius: 2px;
 }
@@ -18,4 +19,8 @@
 
 .left {
   justify-content: flex-start;
+}
+
+.col {
+  flex-direction: column;
 }

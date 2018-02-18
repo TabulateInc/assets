@@ -18,3 +18,19 @@
     outline: none;
   }
 }
+
+@mixin formElement() {
+  display: inline-flex;
+  height: 45px;
+  border: 1px solid $gray-lighter-new;
+  background: $white;
+  padding: 6px 12px;
+  border-radius: 3px;
+  transition: border-color ease-in-out .15s;
+
+  &:hover,
+  &:focus {
+    border-color: $brand-primary;
+    outline: none;
+  }
+}

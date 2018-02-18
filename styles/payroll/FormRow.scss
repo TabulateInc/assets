@@ -1,0 +1,19 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+
+  &:hover {
+
+    label {
+      color: $brand-primary;
+    }
+    input {
+      border-color: $brand-primary;
+    }
+  }
+}
+
+.errorMessage {
+  color: red;
+}

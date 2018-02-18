@@ -1,0 +1,5 @@
+@import "./mixins";
+
+.select {
+  @include formElement();
+}

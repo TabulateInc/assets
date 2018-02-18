@@ -1,8 +1,11 @@
 @import './mixins';
 
 .btn {
+  height: 35px;
   display: inline-flex;
-  padding: 5px 35px;
+  align-items: center;
+  margin: 0 10px;
+  padding: 0 40px;
   background-color: $white;
   border: 1px solid $gray-lighter-new;
   font-size: 14px;
@@ -45,6 +48,18 @@
 
   &:hover {
     background-color: transparent;
+  }
+}
+
+.blue {
+  background-color: $brand-primary;
+  color: $white;
+  border-color: $brand-primary;
+  
+  &:hover,
+  &:focus {
+    background-color: $brand-saturated;
+    border-color: $brand-saturated;
   }
 }
 

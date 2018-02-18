@@ -1,0 +1,11 @@
+@import "./mixins";
+
+.input {
+  @include formElement();
+  
+  &:hover,
+  &:focus {
+    border-color: $brand-primary;
+    outline: none;
+  }
+}

@@ -1,0 +1,15 @@
+.btnGroup {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 35px -10px;
+
+  * {
+    margin: 0 10px;
+  }
+}
+
+.noIndent {
+  margin-top: 0;
+  margin-bottom: 0;
+}

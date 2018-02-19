@@ -1,0 +1,31 @@
+@import "../mixins";
+
+.input {
+  @include formElement();
+  @include placeholder {
+    color: $gray-middle-new;
+  }
+  
+  &:hover,
+  &:focus {
+    border-color: $brand-primary;
+    outline: none;
+  }
+}
+
+.textRight {
+  text-align: right;
+}
+
+.disabled {
+  background-color: $gray-lightest-new;
+  pointer-events: none;
+  
+  &:hover {
+    border-color: $gray-lightest-new;
+  }
+}
+
+.error {
+  border-color: $state-danger-border;
+}

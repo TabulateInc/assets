@@ -21,7 +21,7 @@
 
 @mixin formElement() {
   display: inline-flex;
-  height: 45px;
+  height: 46px;
   border: 1px solid $gray-lighter-new;
   background: $white;
   padding: 6px 12px;
@@ -33,4 +33,12 @@
     border-color: $brand-primary;
     outline: none;
   }
+}
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
 }

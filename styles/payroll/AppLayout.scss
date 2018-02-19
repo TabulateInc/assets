@@ -20,7 +20,7 @@
 
 .main {
   @include lightBox();
-  width: calc(100% - 295px);
+  width: calc(100% - 259px);
 
   @media (max-width: 1025px) {
     width: 100%;

@@ -1,0 +1,41 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0 15px;
+
+  &:hover {
+
+    label {
+      color: $brand-primary;
+    }
+    input,
+    select {
+      border-color: $brand-primary;
+    }
+  }
+
+  b {
+    font-weight: normal;
+    font-size: 10px;
+  }
+}
+
+.disabled {
+
+  &:hover {
+
+    label {
+      color: $gray-middle-new;
+    }
+    input {
+      border-color: $gray-lighter-new;
+    }
+  }
+}
+
+
+.errorMessage {
+  color: red;
+}
+
+

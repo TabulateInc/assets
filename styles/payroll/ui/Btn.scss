@@ -1,10 +1,9 @@
-@import './mixins';
+@import '../mixins';
 
 .btn {
   height: 35px;
   display: inline-flex;
   align-items: center;
-  margin: 0 10px;
   padding: 0 40px;
   background-color: $white;
   border: 1px solid $gray-lighter-new;

@@ -69,3 +69,15 @@
   padding: 0;
   transition: max-height .5s ease-out;
 }
+
+@mixin triangle (
+  $sizes: 0 5px 5px 5px,
+  $colors: transparent transparent #000 transparent
+) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $sizes;
+  border-color: $colors;
+  transform:rotate(360deg);
+}

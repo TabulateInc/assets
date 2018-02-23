@@ -9,14 +9,18 @@
   border: 1px solid $gray-lighter-new;
   font-size: 14px;
   color: $gray-new;
-  border-radius: 2px;
+  border-radius: 3px;
   cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
   line-height: 1;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $white;
-    background-color: $brand-primary;
-    border-color: $brand-primary;
+    background-color: $gray-lighter-new;
+    border-color: $gray-lighter-new;
+    outline: 0 none;
   }
 }
 
@@ -59,6 +63,21 @@
   &:focus {
     background-color: $brand-saturated;
     border-color: $brand-saturated;
+  }
+}
+
+.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: .45;
+}
+
+.loading {
+  overflow: hidden;
+
+  img {
+    position: relative;
+    top: -1px;
   }
 }
 

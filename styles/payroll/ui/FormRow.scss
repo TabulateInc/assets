@@ -1,4 +1,7 @@
+@import '../mixins';
+
 .row {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 5px 0 15px;
@@ -12,11 +15,6 @@
     select {
       border-color: $brand-primary;
     }
-  }
-
-  b {
-    font-weight: normal;
-    font-size: 10px;
   }
 }
 
@@ -34,8 +32,45 @@
 }
 
 
-.errorMessage {
-  color: red;
+.error {
+  color: $state-danger-text;
+
+  &:hover {
+
+    label {
+      color: $state-danger-text;
+    }
+    input,
+    select {
+      border-color: $state-danger-border;
+    }
+  }
+}
+
+.errorBox {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px 0 0;
+  padding: 10px 20px;
+  border-radius: 3px;
+  background-color: $red-danger;
+  color: $white;
+  font-weight: normal;
+  font-size: 12px;
+  z-index: 100;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 10px;
+    @include triangle(0 5px 5px 5px, transparent transparent #df3320 transparent);
+  }
 }
 
 

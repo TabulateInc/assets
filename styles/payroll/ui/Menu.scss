@@ -8,11 +8,20 @@
 
 .nav {
   @include lightBox();
+
+}
+
+.navTablet {
+  @include dropdown(215px, 5px, 5px);
 }
 
 .list {
   margin: 0;
   padding: 5px 20px;
+}
+
+.listTablet {
+  padding: 0;
 }
 
 .li {
@@ -30,8 +39,14 @@
   }
 }
 
+.liTablet {
+  height: 32px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .a {
-  @include link($gray-new)
+  @include link($gray-new);
 }
 
 .active {
@@ -42,3 +57,6 @@
     background-color: $brand-primary;
   }
 }
+
+
+

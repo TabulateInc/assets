@@ -1,4 +1,5 @@
 @import '../../../node_modules/sanitize.css/sanitize.css';
+@import '../../../node_modules/normalize.css/normalize.css';
 @import '../project/variables';
 @import './mixins';
 
@@ -22,7 +23,14 @@ a {
   text-decoration: none;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 section {
+  position: relative;
   padding: 0 0 20px;
 }
 
@@ -34,48 +42,3 @@ article {
 p {
   margin: 0;
 }
-
-
-
-
-// TODO: move to separate file
-table {
-  width: 100%;
-  margin: 20px 0 10px;
-  padding: 0;
-  background: none;
-  border-collapse: collapse;
-  border-radius: 2px;
-  border-style: hidden;
-  box-shadow: 0 0 0 1px $gray-light-new;
-  border-spacing: 0;
-
-  th {
-    font-weight: normal;
-    font-style: normal;
-    color: $gray-middle-new;
-  }
-
-  tr {
-    border: 1px solid $gray-light-new;
-  }
-
-  th,
-  td {
-    text-align: left;
-    padding: 3px 25px;
-  }
-
-  th {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-}
-
-
-
-
-
-
-
-

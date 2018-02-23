@@ -25,7 +25,7 @@
   border: 1px solid $gray-lighter-new;
   background: $white;
   padding: 6px 12px;
-  border-radius: 3px;
+  border-radius: 3px !important;
   transition: border-color ease-in-out .15s;
 
   &:hover,
@@ -41,4 +41,31 @@
   &::-moz-placeholder { @content; }
   &:-ms-input-placeholder { @content; }
   &::-webkit-input-placeholder { @content; }
+}
+
+@mixin circle($size: 20px, $color: $white) {
+  height: $size;
+  width: $size;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: $color;
+  border-radius: 50%;
+  font-size: 10px;
+}
+
+@mixin dropdown ($width, $top: 0, $left: 0) {
+  width: $width;
+  min-width: 160px;
+  position: absolute;
+  top: $top;
+  left: $left;
+  background-color: $white;
+  background-clip: padding-box;
+  box-sizing: border-box;
+  box-shadow: 0 0 7px 0 rgba(0,0,0,.25);
+  border: none;
+  margin: 0;
+  padding: 0;
+  transition: max-height .5s ease-out;
 }

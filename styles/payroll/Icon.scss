@@ -1,24 +1,44 @@
 @import '../project/style-components/glyphicons';
+@import './mixins';
 
 
 .glyphicon {
+  position: relative;
   top: 0;
   display: inline-flex;
   margin: 0 3px;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .circle {
-  height: 20px;
-  width: 20px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  color: $white;
-  border-radius: 50%;
-  font-size: 10px;
+  @include circle();
+}
+
+.top3 {
+  top: 3px;
+}
+
+.radioChecked,
+.radioEmpty {
+  height: 25px;
+  width: 25px;
+  font-size: 13px;
+}
+
+.radioChecked {
+  background-color: $brand-primary;
+}
+
+.radioEmpty {
+  background-color: $white;
+  border: 1px solid $gray-light-new;
 }
 
 .green {
   background-color: #7fc957;
+}
+
+.white {
+  background-color: $white;
+  border-color: gray;
 }

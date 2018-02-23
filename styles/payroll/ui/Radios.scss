@@ -25,6 +25,12 @@
   display: inline-flex;
   align-items: center;
   margin-right: 80px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $brand-primary;
+  }
 }
 
 .input {

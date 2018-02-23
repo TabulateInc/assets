@@ -81,3 +81,12 @@
   border-color: $colors;
   transform:rotate(360deg);
 }
+
+@mixin fullHeight() {
+  height: 100%;
+  overflow: scroll;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

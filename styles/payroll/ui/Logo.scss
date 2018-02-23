@@ -1,0 +1,22 @@
+.logo {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: $brand-primary;
+  color: $white;
+
+  span {
+    position: absolute;
+    top: -36px;
+    left: 12px;
+    bottom: 0;
+    font-size: 50px;
+  }
+}

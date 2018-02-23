@@ -18,11 +18,19 @@
   top: 3px;
 }
 
+.font50 {
+  font-size: 50px;
+}
+
 .radioChecked,
 .radioEmpty {
   height: 25px;
   width: 25px;
   font-size: 13px;
+}
+
+.gray {
+  color: $gray-lighter-new;
 }
 
 .radioChecked {
@@ -34,7 +42,7 @@
   border: 1px solid $gray-light-new;
 }
 
-.green {
+.greenCircle {
   background-color: #7fc957;
 }
 

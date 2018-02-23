@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .logo {
   position: relative;
   height: 40px;
@@ -10,9 +12,10 @@
   font-weight: bold;
   font-size: 20px;
   background-color: $brand-primary;
-  color: $white;
 
-  span {
+
+  a {
+    @include link($white);
     position: absolute;
     top: -36px;
     left: 12px;

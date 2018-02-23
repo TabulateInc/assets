@@ -1,6 +1,7 @@
 .text {
   display: inline-flex;
   align-items: center;
+  font-size: 14px;
   line-height: 1;
 }
 
@@ -11,4 +12,8 @@
 
 .gray {
   color: $gray-middle-new;
+}
+
+.font18 {
+  font-size: 18px;
 }

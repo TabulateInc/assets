@@ -19,6 +19,7 @@
 }
 
 .main {
+  position: relative;
   @include lightBox();
   width: calc(100% - 259px);
 

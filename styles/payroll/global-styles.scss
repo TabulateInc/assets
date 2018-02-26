@@ -3,11 +3,17 @@
 @import '../project/variables';
 @import './mixins';
 
+html {
+  position:relative;
+  min-height: 100%;
+}
 
 html,
 body {
-  height: 100%;
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 body {

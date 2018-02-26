@@ -1,10 +1,9 @@
+@import '../mixins';
+
 .loading {
-  position: absolute;
-  top: 49%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  text-align: center;
-  font-size: 16px;
-  letter-spacing: 2px;
+  @include abs();
+}
+
+.wrap {
+  @include centeredFlexWrap();
 }

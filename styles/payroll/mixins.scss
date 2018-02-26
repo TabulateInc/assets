@@ -83,11 +83,19 @@
   transform:rotate(360deg);
 }
 
-@mixin fullHeight() {
-  height: 100%;
-  overflow: scroll;
+@mixin abs() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
 
-  ::-webkit-scrollbar {
-    display: none;
-  }
+@mixin centeredFlexWrap() {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

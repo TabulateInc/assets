@@ -14,13 +14,22 @@
   white-space: nowrap;
   user-select: none;
   line-height: 1;
+  outline: 0 none;
 
   &:hover,
   &:focus {
     color: $white;
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+    outline: 0 none;
+  }
+}
+
+.hoverGray {
+  &:hover,
+  &:focus {
     background-color: $gray-lighter-new;
     border-color: $gray-lighter-new;
-    outline: 0 none;
   }
 }
 

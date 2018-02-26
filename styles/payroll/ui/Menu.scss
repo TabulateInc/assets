@@ -25,34 +25,35 @@
 }
 
 .li {
+  display: flex;
+  margin: 5px 0;
+  padding: 0;
+}
+
+.liTablet {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.a {
+  flex: 1;
   height: 30px;
   display: flex;
   align-items: center;
-  margin: 5px 0;
   border-radius: 2px;
   font-size: 14px;
   padding: 0 20px;
-  cursor: pointer;
-  
+  @include link($gray-new);
+
   &:hover {
     background-color: $gray-lightest-new;
   }
 }
 
-.liTablet {
-  height: 32px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.a {
-  @include link($gray-new);
-}
-
 .active {
   background-color: $brand-primary;
-  color: $white;
-  
+  @include link($white);
+
   &:hover {
     background-color: $brand-primary;
   }

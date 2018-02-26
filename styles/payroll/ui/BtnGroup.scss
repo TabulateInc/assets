@@ -6,5 +6,9 @@
 
   * {
     margin: 0 10px;
+
+    @media (max-width: $screen-sm) {
+      flex: 1;
+    }
   }
 }

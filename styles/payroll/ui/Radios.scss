@@ -4,6 +4,10 @@
   display: flex;
   align-items: center;
   margin: 10px 0;
+
+  @media (max-width: $screen-sm) {
+    justify-content: space-between;
+  }
 }
 
 .radio {
@@ -30,6 +34,10 @@
   &:hover,
   &:focus {
     color: $brand-primary;
+  }
+
+  @media (max-width: $screen-sm) {
+    margin-right: 10px;
   }
 }
 

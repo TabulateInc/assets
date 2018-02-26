@@ -10,6 +10,11 @@
   border-bottom: 1px solid $gray-light-new;
   background-color: #fafafa;
   z-index: 9999;
+
+  @media (max-width: $screen-sm) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .left {

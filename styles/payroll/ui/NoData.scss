@@ -6,6 +6,7 @@
 
 .content {
   @include centeredFlexWrap();
+  padding: 20px;
 }
 
 .icon {

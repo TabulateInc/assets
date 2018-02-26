@@ -2,6 +2,13 @@
   display: grid;
   grid-template-columns: repeat(18, 1fr);
   grid-gap: 20px;
+
+  @media (max-width: $screen-md){
+    grid-gap: 10px;
+  }
+  @media (max-width: $screen-sm){
+    grid-gap: 0;
+  }
 }
 
 $grid-columns: 18;

@@ -3,6 +3,7 @@
 .btn {
   height: 35px;
   display: inline-flex;
+  justify-content: center;
   align-items: center;
   padding: 0 40px;
   background-color: $white;
@@ -23,9 +24,13 @@
     border-color: $brand-primary;
     outline: 0 none;
   }
+
+  @media (max-width: $screen-sm) {
+    font-size: 12px;
+  }
 }
 
-.hoverGray {
+.hover-gray {
   &:hover,
   &:focus {
     background-color: $gray-lighter-new;
@@ -33,12 +38,12 @@
   }
 }
 
-.short {
+.mod-short {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.icon {
+.mod-icon {
   font-size: 24px;
   line-height: 1;
   border: none;
@@ -52,7 +57,8 @@
   }
 }
 
-.plain {
+.mod-plain {
+  height: auto;
   padding: 0;
   border: none;
   background-color: transparent;
@@ -63,7 +69,7 @@
   }
 }
 
-.blue {
+.mod-blue {
   background-color: $brand-primary;
   color: $white;
   border-color: $brand-primary;
@@ -75,13 +81,19 @@
   }
 }
 
-.disabled {
+.font-20 {
+  font-size: 20px;
+}
+
+
+
+.is-disabled {
   cursor: not-allowed;
   pointer-events: none;
   opacity: .45;
 }
 
-.loading {
+.is-loading {
   overflow: hidden;
 
   img {
@@ -89,4 +101,6 @@
     top: -1px;
   }
 }
+
+
 

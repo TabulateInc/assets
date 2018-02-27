@@ -19,14 +19,24 @@
   }
 }
 
+@mixin word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+  hyphens: auto;
+}
+
 @mixin formElement() {
   display: inline-flex;
   height: 46px;
   border: 1px solid $gray-lighter-new;
   background: $white;
-  padding: 6px 12px;
+  padding: 6px 22px 6px 12px;
   border-radius: 3px !important;
   transition: border-color ease-in-out .15s;
+  white-space: pre;
+  text-overflow:ellipsis;
+  overflow: hidden;
 
   &:hover,
   &:focus {

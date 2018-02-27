@@ -1,16 +1,18 @@
 @import "../mixins";
 
 .noData {
-  @include abs();
+
 }
 
 .content {
-  @include centeredFlexWrap();
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
 }
 
 .icon {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 .title {

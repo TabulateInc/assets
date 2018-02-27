@@ -16,18 +16,23 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-
-  @media (max-width: $screen-sm) {
-    padding-top: 90px;
-  }
 }
 
 .main {
   position: relative;
   @include lightBox();
   width: calc(100% - 259px);
+}
 
-  @media (max-width: $screen-md) {
+
+@media (max-width: $screen-md) {
+  .main {
     width: 100%;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .content {
+    padding: 57px 5px 5px;
   }
 }

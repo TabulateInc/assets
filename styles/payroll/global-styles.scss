@@ -49,3 +49,9 @@ article {
 p {
   margin: 0;
 }
+
+@media (max-width: $screen-sm) {
+  article {
+    padding: 0 10px;
+  }
+}

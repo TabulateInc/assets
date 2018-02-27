@@ -3,10 +3,6 @@
   align-items: center;
   font-size: 14px;
   line-height: 1;
-
-  @media (max-width: $screen-sm) {
-    font-size: 12px;
-  }
 }
 
 .row {
@@ -14,11 +10,15 @@
   align-items: center;
 }
 
-.gray {
+.color-gray {
   color: $gray-middle-new;
 }
 
-.font18 {
+.font-15 {
+  font-size: 15px;
+}
+
+.font-18 {
   font-size: 18px;
 }
 

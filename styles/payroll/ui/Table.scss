@@ -36,3 +36,11 @@
   margin-top: 20px;
   box-shadow: 0 1px 0 0 $gray-light-new;
 }
+
+.hover {
+  tr {
+    &:hover {
+      background-color: $table-bg-hover;
+    }
+  }
+}

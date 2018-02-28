@@ -1,0 +1,63 @@
+@import "../mixins";
+
+.content {
+  display: flex;
+  @include dropdown(5px, 5px);
+}
+
+.list {
+  margin: 0;
+  flex: 1;
+}
+
+.li {
+  display: flex;
+  margin: 3px 0;
+  padding: 0;
+}
+
+.a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  font-size: 14px;
+  padding: 12px 25px;
+  white-space: nowrap;
+  @include link($gray-new);
+
+  &:hover {
+    background-color: $gray-lightest-new;
+  }
+}
+
+.active {
+  background-color: $gray-lightest-new;
+}
+
+.mobileView {
+  @include fixedBox();
+
+  ul {
+    padding-top: 28px;
+  }
+
+  li {
+    padding: 0 18px;
+  }
+
+  a {
+    padding: 9px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px solid $gray-light-new;
+    font-size: 16px;
+    line-height: $line-height-base;
+    
+    &:hover {
+      color: $brand-primary;
+      background-color: $white;
+    }
+  }
+}

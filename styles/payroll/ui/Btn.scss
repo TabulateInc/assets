@@ -85,6 +85,36 @@
   margin-top: 15px;
 }
 
+.svg {
+  border: none;
+  min-width: 30px;
+  margin: 0;
+  padding: 0;
+  background: transparent center center no-repeat;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.svg-ellipses {
+  background-image: url('../../../img/ellipses.svg');
+}
+
+.svg-back {
+  background-image: url('../../../img/back.svg');
+}
+
+.svg-add-plus {
+  background-image: url('../../../img/add-plus.svg');
+}
+
+.spinner {
+  height: 30px;
+  width: 30px;
+  background: url('../../../img/spinner.svg') center center no-repeat;
+}
+
 .disabled {
   cursor: not-allowed;
   pointer-events: none;

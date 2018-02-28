@@ -10,29 +10,15 @@
   @include lightBox();
 
 }
-
-.navTablet {
-  @include dropdown(215px, 5px, 5px);
-}
-
 .list {
   margin: 0;
   padding: 5px 20px;
-}
-
-.listTablet {
-  padding: 0;
 }
 
 .li {
   display: flex;
   margin: 5px 0;
   padding: 0;
-}
-
-.liTablet {
-  margin-top: 5px;
-  margin-bottom: 10px;
 }
 
 .a {

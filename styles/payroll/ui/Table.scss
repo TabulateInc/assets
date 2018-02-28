@@ -38,9 +38,11 @@
 }
 
 .hover {
-  tr {
-    &:hover {
-      background-color: $table-bg-hover;
+  tbody {
+    tr {
+      &:hover {
+        background-color: $table-bg-hover;
+      }
     }
   }
 }

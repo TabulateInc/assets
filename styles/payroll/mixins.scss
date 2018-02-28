@@ -64,8 +64,7 @@
   font-size: 10px;
 }
 
-@mixin dropdown ($width, $top: 0, $left: 0) {
-  width: $width;
+@mixin dropdown ($top: 0, $left: 0) {
   min-width: 160px;
   position: absolute;
   top: $top;
@@ -108,4 +107,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@mixin fixedBox() {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 1000000;
+  padding: 0 5px;
 }

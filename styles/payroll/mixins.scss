@@ -53,9 +53,11 @@
   &::-webkit-input-placeholder { @content; }
 }
 
-@mixin circle($size: 20px, $color: $white) {
+@mixin circle($size: 18px, $color: $white) {
   height: $size;
   width: $size;
+  min-height: $size;
+  min-width: $size;
   display: inline-flex;
   justify-content: center;
   align-items: center;

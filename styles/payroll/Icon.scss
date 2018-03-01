@@ -10,45 +10,40 @@
   font-size: 11px;
 }
 
+.top-3 {
+  top: 3px;
+}
+
+.font-50 {
+  font-size: 50px;
+}
+
 .circle {
   @include circle();
 }
 
-.top3 {
-  top: 3px;
+.circle-24 {
+  @include circle(24px);
 }
 
-.font50 {
-  font-size: 50px;
-}
-
-.radioChecked,
-.radioEmpty {
-  min-height: 24px;
-  min-width: 24px;
-  height: 24px;
-  width: 24px;
-  font-size: 13px;
-}
-
-.gray {
+.color-gray {
   color: $gray-lighter-new;
 }
 
-.radioChecked {
+.img-check {
+  background: url('../../img/checkmark.svg') center center no-repeat;
+  background-size: 70%;
+}
+
+.bg-blue {
   background-color: $brand-primary;
 }
 
-.radioEmpty {
-  background-color: $white;
-  border: 1px solid $gray-light-new;
-}
-
-.greenCircle {
+.bg-green {
   background-color: #7fc957;
 }
 
-.white {
+.bg-white {
   background-color: $white;
-  border-color: gray;
+  border: 1px solid $gray-light-new;
 }

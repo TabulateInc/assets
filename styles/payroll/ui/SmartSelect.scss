@@ -1,0 +1,252 @@
+@import "../mixins";
+
+:global {
+  @keyframes toLeft{
+    from { right: -10px; }
+    to { left: -37px; }
+  }
+
+  .Select,
+  .Select-menu-outer,
+  .Select-control {
+    border: none;
+    background: $white;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      border: none;
+      background: $white;
+      outline: 0 none;
+      box-shadow: none;
+    }
+  }
+
+  .Select {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 10px;
+    border-top: 1px solid $gray-light-new !important;
+    border-bottom: 1px solid $gray-light-new !important;
+  }
+
+  .Select-control {
+    height: 36px;
+    position: relative;
+    top: 1px;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .Select.is-focused:not(.is-open) {
+    .Select-control {
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  .Select-arrow-zone {
+    height: 30px;
+    width: 35px;
+    display: inline-flex;
+    position: absolute;
+    right: -10px;
+    cursor: pointer;
+    transition: all .2s ease-out;
+  }
+
+  .Select-arrow {
+    height: 30px;
+    width: 35px;
+    border: none;
+    background: transparent url('../../../img/search.svg') center center no-repeat;
+    background-size: 30px;
+  }
+
+  .Select-clear-zone {
+    position: absolute;
+    right: -30px;
+    width: 30px !important;
+    height: 30px !important;
+
+    &:hover,
+    &:focus {
+      color: transparent;
+    }
+  }
+
+  .Select-clear-all {
+    position: relative;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    user-select: none;
+    transition: all 1s ease-out;
+    background: transparent url('../../../img/close.svg') center center no-repeat;
+    z-index: 1000;
+  }
+
+  .Select {
+    &.is-open,
+    &.is-focused {
+      padding: 0 45px;
+
+      .Select-control {
+        overflow: visible;
+
+        &:after {
+          position: absolute;
+          right: -30px;
+          width: 30px;
+          height: 30px;
+          content: '';
+          background: transparent url('../../../img/close.svg') center center no-repeat;
+          cursor: pointer;
+          pointer-events: none;
+          transition: all 1s ease-out;
+          z-index: 100;
+        }
+
+        .Select-arrow-zone {
+          right: calc(100% - -2px);
+        }
+      }
+
+      .Select-menu-outer {
+        width: 86%;
+        margin-top: 3px;
+        left: 7%;
+        right: 7%;
+        border: 1px solid rgba(0, 0, 0, .2);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+        border-radius: 0;
+        z-index: 99999;
+      }
+    }
+  }
+
+  .Select--multi {
+    .Select-multi-value-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .Select-value {
+      position: relative;
+      height: 30px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 5px 0 0;
+      background: $white;
+      border: 1px solid $brand-primary;
+      border-radius: 3px;
+
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 38px;
+        bottom: 0;
+        content: '';
+        width: 1px;
+        background-color: $brand-primary;
+      }
+
+      &:hover {
+        .Select-tooltip {
+          opacity: 1 !important;
+        }
+      }
+    }
+
+    .Select-value-label {
+      display: inline-block;
+      max-width: 7ch;
+      @include textWrap();
+      margin: 0 10px;
+      padding: 0;
+      color: $gray-new;
+    }
+
+    .Select-value-icon {
+      display: inline-flex;
+      width: 38px;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      border-right: none;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1;
+
+      &:hover {
+        background: $white;
+      }
+    }
+
+    .Select-option {
+      margin: 5px 0;
+      padding: 8px 25px;
+      background: $white;
+
+      &.is-focused {
+        background: $white;
+        color: $gray-new;
+      }
+
+      &:hover {
+        background-color: $gray-lightest-new;
+      }
+    }
+
+    .Select-tooltip {
+      opacity: 0 !important;
+      position: absolute;
+      top: -28px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.2s ease-in-out;
+      z-index: 500;
+    }
+
+    .Select-tooltip-inner {
+      max-width: 500px;
+      background: $form-font-color;
+      padding: 3px 8px;
+      color: $white;
+      border-radius: 3px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: visible;
+      font-size: 12px;
+      line-height: 1.2;
+      user-select: none;
+
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        margin-left: -5px;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 5px 5px 0;
+        border-top-color: $form-font-color;
+      }
+    }
+  }
+}
+

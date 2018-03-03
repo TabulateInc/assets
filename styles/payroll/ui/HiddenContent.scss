@@ -44,9 +44,7 @@
 
   a {
     padding: 9px 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    @include textWrap();
     border-bottom: 1px solid $gray-light-new;
     font-size: 16px;
     line-height: $line-height-base;

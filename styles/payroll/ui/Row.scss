@@ -24,3 +24,16 @@
   @include heading();
   margin: 0;
 }
+
+.control-height-78 {
+  height: 78px;
+  margin: 0;
+  border-bottom: 1px solid $gray-light-new;
+  cursor: pointer;
+}
+
+.column-start {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}

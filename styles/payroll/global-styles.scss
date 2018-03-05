@@ -56,5 +56,13 @@ p {
   }
 }
 
+:global {
+  article {
+    &.top-13 {
+      margin-top: 13px;
+    }
+  }
+}
+
 
 

@@ -1,11 +1,16 @@
 @import "../mixins";
 
 .row {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 15px 0;
   padding: 0 20px;
+}
+
+.flex-end {
+  justify-content: flex-end;
 }
 
 .jumbo {
@@ -38,7 +43,13 @@
   align-items: flex-start;
 }
 
-.plain {
+.no-indent {
   margin: 0;
   padding: 0;
+}
+
+.with-hover {
+  &:hover {
+    background-color: $table-bg-hover;
+  }
 }

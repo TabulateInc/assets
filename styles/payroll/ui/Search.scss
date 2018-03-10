@@ -9,6 +9,7 @@
   .Select,
   .Select-menu-outer,
   .Select-control {
+    width: 100%;
     border: none;
     background: $white;
     box-shadow: none;
@@ -26,8 +27,7 @@
     height: 52px;
     display: flex;
     align-items: center;
-    padding: 0 20px 0 10px;
-    border-top: 1px solid $gray-light-new !important;
+    padding: 0 20px;
     border-bottom: 1px solid $gray-light-new !important;
   }
 
@@ -246,6 +246,12 @@
         border-width: 5px 5px 0;
         border-top-color: $form-font-color;
       }
+    }
+  }
+
+  @media (max-width: $screen-sm) {
+    .Select {
+      padding: 0 10px;
     }
   }
 }

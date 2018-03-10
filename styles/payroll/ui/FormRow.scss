@@ -18,6 +18,11 @@
   }
 }
 
+.table {
+  margin: 0;
+  align-items: flex-end;
+}
+
 .disabled {
 
   &:hover {

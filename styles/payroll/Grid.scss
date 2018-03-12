@@ -1,4 +1,5 @@
 .grid {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(18, 1fr);
   grid-gap: 20px;
@@ -9,6 +10,10 @@
   @media (max-width: $screen-sm){
     grid-gap: 0;
   }
+}
+
+.noGap {
+  grid-gap: 0;
 }
 
 $grid-columns: 18;
@@ -32,4 +37,13 @@ $grid-columns: 18;
 
 .end-last {
   grid-column-end: -1;
+}
+
+:global {
+  @for $i from 1 through $grid-columns {
+    .span-#{$i} {
+      grid-column: span $i;
+      display: inline-flex;
+    }
+  }
 }

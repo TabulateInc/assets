@@ -3,6 +3,12 @@
 .input {
   @include formElement();
   padding-right: 12px;
+
+  &:hover,
+  &:focus {
+    border-color: $brand-primary;
+    outline: none;
+  }
 }
 
 .width-145 {

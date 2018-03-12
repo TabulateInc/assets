@@ -1,0 +1,124 @@
+@import "../mixins";
+
+.select {
+  display: flex;
+  width: 100%;
+  width: 100%;
+
+  :global {
+
+    .Select {
+      width: 100%;
+      display: flex;
+      position: relative;
+
+      .Select-control {
+        width: 100%;
+        position: relative;
+        @include formElement();
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .Select-multi-value-wrapper {
+        display: flex;
+        @include textWrap();
+      }
+
+      .Select-menu-outer {
+        @include dropdown(-1px, -1px);
+      }
+
+      .Select-control {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .Select-option {
+        display: flex;
+        margin: 4px 0;
+        padding: 0;
+        align-items: center;
+        border-radius: 2px;
+        font-size: 14px;
+        padding: 12px 25px;
+        white-space: nowrap;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $gray-lightest-new;
+        }
+
+        &.is-selected {
+          background-color: $gray-lightest-new;
+        }
+        &.is-focused {
+
+        }
+      }
+
+      .Select-input {
+        outline: none;
+        background: none;
+        user-select: none;
+      }
+
+      .Select-arrow {
+        position: relative;
+        display: inline-flex;
+        width: 0;
+        height: 0;
+        border-color: #999 transparent transparent;
+        border-style: solid;
+        border-width: 5px 5px 2.5px;
+      }
+
+      .Select-value {
+        @include textWrap();
+      }
+
+      &.is-open {
+
+        .Select-arrow {
+          top: -5px;
+          border-color: transparent transparent #999;
+          border-width: 0 5px 5px;
+        }
+      }
+
+      &.is-focused {
+        .Select-control {
+          border-color: $brand-primary;
+        }
+      }
+
+      &.is-disabled {
+        .Select-control {
+          background-color: $gray-lightest-new;
+          pointer-events: none;
+
+          &:hover {
+            border-color: $gray-lightest-new;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.plain {
+
+  :global {
+
+    .Select {
+
+      .Select-control {
+        height: auto;
+        border: none;
+      }
+    }
+  }
+}

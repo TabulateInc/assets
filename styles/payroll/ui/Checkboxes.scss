@@ -6,8 +6,31 @@
 
 .checkbox {
   margin-right: 42px;
+
+  input {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  i {
+    margin-right: 10px;
+    margin-left: 0;
+  }
 }
 
-.input {
-  margin-right: 10px;
+.label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $brand-primary;
+  }
+
+  @media (max-width: $screen-sm) {
+    margin-right: 25px;
+  }
 }

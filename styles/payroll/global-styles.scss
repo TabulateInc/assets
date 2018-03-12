@@ -57,10 +57,15 @@ p {
 }
 
 :global {
+  // TODO: refactoring
   article {
     &.top-13 {
       margin-top: 13px;
     }
+  }
+
+  .border-right {
+    border-right: 1px solid $gray-light-new;
   }
 }
 

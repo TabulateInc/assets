@@ -4,6 +4,7 @@
 
 .withScroll {
   overflow-x: scroll;
+  overflow-y: -webkit-paged-y;
 
   &::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -94,8 +95,12 @@
 }
 
 .high {
-  td {
+  tr {
     height: 80px;
+
+    &:last-child {
+      height: 60px;
+    }
   }
 }
 

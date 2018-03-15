@@ -145,6 +145,11 @@
         }
       }
 
+      .Select-noresults {
+        padding: 15px 30px;
+        z-index: 99999;
+      }
+
       .Select-value-label {
         display: inline-block;
         max-width: 7ch;

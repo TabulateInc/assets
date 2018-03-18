@@ -18,6 +18,7 @@
 
 $grid-columns: 18;
 
+
 @for $i from 1 through $grid-columns {
   .start-#{$i} {
     grid-column-start: $i;
@@ -40,6 +41,27 @@ $grid-columns: 18;
 }
 
 :global {
+  @for $i from 1 through $grid-columns {
+    .start-#{$i} {
+      grid-column-start: $i;
+
+      @media (max-width: $screen-sm){
+        grid-column-start: 1;
+      }
+    }
+    .end-#{$i} {
+      grid-column-end: $i;
+
+      @media (max-width: $screen-sm){
+        grid-column-end: -1;
+      }
+    }
+  }
+
+  .end-last {
+    grid-column-end: -1;
+  }
+
   @for $i from 1 through $grid-columns {
     .span-#{$i} {
       grid-column: span $i;

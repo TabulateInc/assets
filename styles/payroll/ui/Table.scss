@@ -28,6 +28,7 @@
   border-style: hidden;
   box-shadow: 0 0 0 1px $gray-light-new;
   border-spacing: 0;
+  transition: all 1s ease-in-out !important;
 
   th {
     font-weight: normal;

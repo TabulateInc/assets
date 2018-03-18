@@ -29,6 +29,7 @@
     background: #00a699
   }
   .SingleDatePickerWrap {
+    width: 100%;
 
     &.is-focused {
 
@@ -40,14 +41,52 @@
         }
       }
     }
+
+    // This one looks as regular input inside Formrow
+    &.plain {
+
+      .SingleDatePickerInput {
+        border: 1px solid $gray-light-new;
+        border-radius: 4px;
+      }
+
+      .DateInput {
+
+        &:after {
+          display: none !important;
+        }
+      }
+
+      .DateInput_input {
+        padding: 10px 0;
+      }
+
+      .SingleDatePickerInput_calendarIcon {
+        margin-left: 4px;
+      }
+
+      .SingleDatePicker_picker {
+        margin-top: -22px;
+        margin-left: 0;
+      }
+
+      &:hover,
+      &.is-focused {
+
+        .SingleDatePickerInput {
+          border-color: $brand-primary;
+        }
+      }
+    }
   }
   .SingleDatePicker {
-
+    width: 100%;
   }
   .SingleDatePickerInput {
     display: flex;
     align-items: center;
     background-color: #fff;
+    transition: border-color ease-in-out .15s;
   }
   .SingleDatePickerInput__withBorder {
     border: 1px solid #dbdbdb
@@ -302,11 +341,9 @@
     &:focus {
       outline: none;
     }
-
-    &__today {
-      background-color: #357ebd !important;
-      color: #fff !important;
-    }
+  }
+  .CalendarDay__today {
+    background-color: transparent !important;
   }
   .CalendarDay:active {
     outline: 0
@@ -330,7 +367,11 @@
   .CalendarDay__outside {
     border: 0;
     background: #fff;
-    color: #565a5c
+    color: #999;
+
+    &:hover {
+      color: $gray-new;
+    }
   }
   .CalendarDay__blocked_minimum_nights {
     background: #fff;
@@ -352,9 +393,7 @@
     color: #565a5c
   }
   .CalendarDay__selected_span {
-    background: #66e2da;
-    border: 1px solid #33dacd;
-    color: #fff
+    color: #fff;
   }
   .CalendarDay__selected_span:active,
   .CalendarDay__selected_span:hover {
@@ -368,9 +407,8 @@
   .CalendarDay__selected,
   .CalendarDay__selected:active,
   .CalendarDay__selected:hover {
-    background: #00a699;
-    border: 1px solid #00a699;
-    color: #fff
+    background: $brand-primary !important;
+    color: #fff;
   }
   .CalendarDay__hovered_span,
   .CalendarDay__hovered_span:hover {
@@ -665,6 +703,7 @@
     overflow-y: scroll
   }
   .DateInput {
+    width: 85%;
     position: relative;
     margin: 0;
     padding: 0;

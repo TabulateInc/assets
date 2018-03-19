@@ -6,6 +6,8 @@
   justify-content: flex-start;
   @include dropdown(5px, 5px);
   @include fixedBox();
+  max-height: 100vh !important;
+
 }
 
 .title {

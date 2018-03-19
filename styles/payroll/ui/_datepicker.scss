@@ -197,7 +197,13 @@
     width: 100%
   }
   .SingleDatePicker_picker__fullScreenPortal {
-    background-color: #fff
+    background-color: #fff;
+    z-index: $zindex-modal;
+    margin-top: -70px;
+
+    .DayPicker {
+      height: 100vh !important;
+    }
   }
   .SingleDatePicker_closeButton {
     background: 0 0;
@@ -733,12 +739,14 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
+    padding-right: 12px;
     color: $gray-new;
     background-color: #fff;
     width: 100%;
     padding: 14px 0;
     border: none;
     user-select: none;
+    @include textWrap();
 
     &:focus {
       outline: none;
@@ -937,5 +945,11 @@
     height: 15px;
     width: 15px;
     fill: #cacccd
+  }
+
+  @media (max-width: $screen-sm) {
+    .SingleDatePickerInput_calendarIcon {
+      padding: 0;
+    }
   }
 }

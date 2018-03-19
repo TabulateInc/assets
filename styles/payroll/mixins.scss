@@ -129,8 +129,8 @@
   bottom: 0;
   right: 0;
   height: 100vh;
-  z-index: 1000000;
   padding: 0 5px;
+  z-index: $zindex-dropdown;
 }
 
 @mixin heading() {

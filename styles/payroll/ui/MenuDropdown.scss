@@ -32,7 +32,18 @@
 }
 
 .mobileView {
-  @include fixedBox();
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  max-height: 100vh;
+  background: $white;
+  box-shadow: none;
+  border: none;
+  padding: 0 7px;
+  z-index: $zindex-modal;
 
   ul {
     padding-top: 28px;

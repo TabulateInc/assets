@@ -18,6 +18,21 @@
   font-size: 50px;
 }
 
+.sorting {
+  font-size: $sorticon-size;
+  color: $gray-middle-new;
+
+  &:hover,
+  &:focus {
+    color: $gray-darkest-new;
+  }
+}
+
+
+.hidden {
+  visibility: hidden;
+}
+
 .circle {
   @include circle();
 }

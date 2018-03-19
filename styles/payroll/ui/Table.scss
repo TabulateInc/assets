@@ -58,6 +58,19 @@
       }
     }
   }
+
+  @media (max-width: $screen-xs) {
+
+    th,
+    td {
+      &:first-child {
+        padding-left: 10px;
+      }
+      &:last-child {
+        padding-right: 10px;
+      }
+    }
+  }
 }
 
 .top-10 {
@@ -94,7 +107,7 @@
     }
   }
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: $screen-xs) {
 
     th,
     td {

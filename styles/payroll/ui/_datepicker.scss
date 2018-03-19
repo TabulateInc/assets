@@ -204,8 +204,13 @@
     .DayPicker {
       height: 100vh !important;
     }
+
+    .SingleDatePicker_closeButton {
+      display: block;
+    }
   }
   .SingleDatePicker_closeButton {
+    display: none;
     background: 0 0;
     border: 0;
     color: inherit;
@@ -215,8 +220,8 @@
     cursor: pointer;
     position: absolute;
     top: 0;
-    right: 0;
-    padding: 15px;
+    left: 0;
+    padding: 10px 12px;
     z-index: 2
   }
   .SingleDatePicker_closeButton:focus,
@@ -483,7 +488,15 @@
   }
   .CalendarMonthGrid__vertical_scrollable {
     margin: 0 auto;
-    overflow-y: scroll
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+      display: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      display: none;
+    }
   }
   .CalendarMonthGrid_month__horizontal {
     display: inline-block;
@@ -509,7 +522,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 52px;
+    height: 42px;
     width: 100%
   }
   .DayPickerNavigation_container__verticalScrollable {
@@ -601,8 +614,8 @@
     fill: #82888a
   }
   .DayPickerNavigation_svg__vertical {
-    height: 42px;
-    width: 42px;
+    height: 32px;
+    width: 32px;
     fill: #565a5c
   }
   .DayPicker {
@@ -658,10 +671,13 @@
     left: 50%
   }
   .DayPicker_weekHeader__verticalScrollable {
+    position: fixed;
+    padding: 25px 43px 10px;
     top: 0;
     display: table-row;
     border-bottom: 1px solid #dbdbdb;
-    background: #fff;
+    background: $white !important;
+    border: none !important;
     margin-left: 0;
     left: 0;
     width: 100%;
@@ -699,7 +715,7 @@
     width: 100%
   }
   .DayPicker_transitionContainer__verticalScrollable {
-    padding-top: 20px;
+    padding-top: 50px;
     height: 100%;
     position: absolute;
     top: 0;
@@ -947,7 +963,7 @@
     fill: #cacccd
   }
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: $screen-xs) {
     .SingleDatePickerInput_calendarIcon {
       padding: 0;
     }

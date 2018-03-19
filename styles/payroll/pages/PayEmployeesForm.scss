@@ -25,6 +25,14 @@
   display: flex;
 }
 
+.searchOpenMobileButton {
+  position: fixed;
+  top: 11px;
+  right: 9px;
+  z-index: $zindex-navbar-fixed;
+  cursor: pointer;
+}
+
 @media (min-width: $screen-xs) and (max-width: $screen-md) {
 
   .dateInput {
@@ -50,5 +58,9 @@
 
   .commonSelect {
     border: none;
+  }
+
+  .search {
+    grid-column: span 18;
   }
 }

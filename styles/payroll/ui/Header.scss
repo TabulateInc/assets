@@ -11,7 +11,7 @@
   background-color: $white;
   z-index: $zindex-navbar-fixed;
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: $screen-xs) {
     height: 56px;
     justify-content: center;
     padding-left: 15px;

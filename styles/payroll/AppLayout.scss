@@ -25,13 +25,13 @@
 }
 
 
-@media (max-width: $screen-sm) {
+@media (max-width: $screen-xs-max) {
   .main {
     width: 100%;
   }
 }
 
-@media (max-width: $screen-xs) {
+@media (max-width: $screen-xxs-max) {
   .content {
     padding: 57px 5px 5px;
   }

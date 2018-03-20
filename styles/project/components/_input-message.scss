@@ -24,7 +24,7 @@
   &.top-space {
     margin-top: -35px;
 
-    @media (max-width: $screen-sm - 1) {
+    @media (max-width: $screen-xs-max) {
       margin-top: -25px;
     }
   }

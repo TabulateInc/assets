@@ -4,10 +4,10 @@
   grid-template-columns: repeat(18, 1fr);
   grid-gap: 20px;
 
-  @media (max-width: $screen-md){
+  @media (max-width: $screen-sm-max){
     grid-gap: 10px;
   }
-  @media (max-width: $screen-sm){
+  @media (max-width: $screen-xs-max){
     grid-gap: 0;
   }
 }
@@ -26,14 +26,14 @@ $grid-columns: 18;
   .start-#{$i} {
     grid-column-start: $i;
 
-    @media (max-width: $screen-sm){
+    @media (max-width: $screen-xs-max){
       grid-column-start: 1;
     }
   }
   .end-#{$i} {
     grid-column-end: $i;
 
-    @media (max-width: $screen-sm){
+    @media (max-width: $screen-xs-max){
       grid-column-end: -1;
     }
   }

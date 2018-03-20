@@ -963,7 +963,7 @@
     fill: #cacccd
   }
 
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-xxs-max) {
     .SingleDatePickerInput_calendarIcon {
       padding: 0;
     }

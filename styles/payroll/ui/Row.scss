@@ -7,10 +7,19 @@
   align-items: center;
   margin: 15px 0;
   padding: 0 20px;
+
+  @media (max-width: $screen-xs) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .flex-end {
   justify-content: flex-end;
+
+  @media (max-width: $screen-xs) {
+    justify-content: center;
+  }
 }
 
 .flex-start {

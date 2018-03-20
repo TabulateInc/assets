@@ -32,7 +32,13 @@
 }
 
 .mobileView {
-  @include fixedBox();
+  top: 0;
+  left: 0;
+  padding: 0 7px;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  max-height: 100vh;
 
   ul {
     padding-top: 28px;

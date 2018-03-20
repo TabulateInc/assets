@@ -12,8 +12,12 @@
   }
 }
 
-.noGap {
+.no-gap {
   grid-gap: 0;
+}
+
+.height-52 {
+  height: 52px;
 }
 
 $grid-columns: 18;
@@ -39,11 +43,3 @@ $grid-columns: 18;
   grid-column-end: -1;
 }
 
-:global {
-  @for $i from 1 through $grid-columns {
-    .span-#{$i} {
-      grid-column: span $i;
-      display: inline-flex;
-    }
-  }
-}

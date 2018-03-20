@@ -15,8 +15,18 @@
     select {
       border-color: $brand-primary;
     }
+
+    :global {
+      .SingleDatePickerWrap.plain {
+        .SingleDatePickerInput {
+          border-color: $brand-primary;
+        }
+      }
+    }
   }
 }
+
+
 
 .flex-end {
   margin: 0;

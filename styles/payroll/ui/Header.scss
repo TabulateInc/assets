@@ -9,16 +9,14 @@
   padding: 0 35px;
   border-bottom: 1px solid $gray-light-new;
   background-color: $white;
-  z-index: 100;
+  z-index: $zindex-navbar-fixed;
 
-
-  @media (max-width: $screen-sm) {
+  @media (max-width: $screen-xs) {
     height: 56px;
     justify-content: center;
     padding-left: 15px;
     padding-right: 15px;
     border-bottom: none;
     background: rgba(255, 255, 255, 0.7);
-    z-index: 1;
   }
 }

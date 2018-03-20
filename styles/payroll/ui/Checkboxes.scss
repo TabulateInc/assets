@@ -1,6 +1,8 @@
 .checkboxes {
   display: flex;
-  padding: 18px 20px;
+  padding: 2px 20px 0;
+  height: 52px;
+  align-items: center;
   border-bottom: 1px solid $gray-light-new;
 }
 
@@ -22,7 +24,7 @@
 }
 
 .label {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   cursor: pointer;
 
@@ -30,8 +32,19 @@
   &:focus {
     color: $brand-primary;
   }
+}
 
-  @media (max-width: $screen-sm) {
-    margin-right: 25px;
+@media (max-width: $screen-xs) {
+  .checkboxes {
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+  }
+  .checkbox {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

@@ -119,3 +119,16 @@
     }
   }
 }
+
+.left-20 {
+
+  :global {
+
+    .Select {
+
+      .Select-control {
+        padding-left: 20px;
+      }
+    }
+  }
+}

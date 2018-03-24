@@ -5,6 +5,14 @@
   to { left: -37px; }
 }
 
+.openButton {
+  position: fixed;
+  top: 11px;
+  right: 16px;
+  z-index: $zindex-modal;
+  user-select: none;
+}
+
 .search {
   display: flex;
   width: 100%;
@@ -26,11 +34,11 @@
       position: relative;
       display: flex;
       align-items: center;
-      padding: 0 20px;
+      padding: 0 24px;
 
       &.is-open,
       &.is-focused {
-        padding: 0 45px;
+        padding: 0 48px;
 
         .Select-control {
           overflow: visible;
@@ -55,10 +63,10 @@
 
         .Select-menu-outer {
           position: absolute;
-          top: 56px;
-          left: 7%;
-          right: 7%;
-          width: 86%;
+          top: 48px;
+          left: 48px;
+          right: 48px;
+          width: 90%;
           border: 1px solid rgba(0, 0, 0, .2);
           box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
           border-radius: 0;
@@ -71,9 +79,12 @@
     .Select-control {
       height: 36px;
       position: relative;
-      top: 1px;
       display: flex;
       align-items: center;
+      top: 3px;
+      padding-bottom: 2px;
+      white-space: nowrap;
+      -webkit-appearance: textfield;
     }
 
     .Select-arrow-zone {
@@ -111,7 +122,17 @@
     }
 
     .Select-multi-value-wrapper {
+      position: relative;
+      top: 2px;
+      width: 100%;
       margin-right: 5px;
+      padding-bottom: 3px;
+      overflow: hidden;
+      @include customScroll();
+    }
+
+    .Select-input {
+      width: 0;
     }
 
     .Select--multi {
@@ -244,6 +265,105 @@
       }
     }
   }
+}
+
+.mobile {
+
+  :global {
+
+    .Select {
+      flex-direction: column;
+      padding: 0 !important;
+
+      .Select-clear-zone {
+        top: 5px !important;
+        right: 5px !important;
+      }
+
+      .Select-control {
+        padding: 0 44px;
+        height: auto !important;
+        min-height: 44px;
+        border-bottom: 1px solid $gray-light-new;
+        margin-bottom: 1px;
+
+        &:after {
+          top: 5px !important;
+          right: 5px !important;
+        }
+      }
+
+      .Select-multi-value-wrapper {
+        flex-wrap: wrap;
+        padding: 5px 0 0;
+      }
+
+      .Select-value {
+        margin-bottom: 5px;
+      }
+
+      .Select-arrow-zone {
+        top: 0 !important;
+        right: auto !important;
+        left: 0 !important;
+      }
+
+      .Select-option {
+        position: relative;
+        border-bottom: 1px solid $gray-light-new;
+        padding: 13px 0;
+        margin: 0 44px;
+
+        &:before {
+          width: 32px;
+          height: 30px;
+          content: '';
+          position: absolute;
+          top: 1px;
+          left: -45px;
+          background: transparent url('../../../img/search.svg') 6px 5px no-repeat;
+          background-size: 30px;
+        }
+      }
+      
+      .Select-create-option-placeholder {
+        position: relative;
+
+        &:before {
+          width: 32px;
+          height: 30px;
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -45px;
+          background: transparent url('../../../img/add-plus.svg') 7px 6px no-repeat;
+          background-size: 30px;
+        }
+      }
+
+      .Select-clear-zone {
+        right: 0;
+      }
+
+      .Select-menu-outer {
+        position: static !important;
+        border: none !important;
+        box-shadow: none !important;
+        width: 100% !important;
+      }
+
+      .Select-arrow-zone {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.searchClose {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: $zindex-modal;
 }
 
 

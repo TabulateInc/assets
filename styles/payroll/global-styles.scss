@@ -14,6 +14,8 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
 }
 
 body {
@@ -38,7 +40,6 @@ ul {
 
 section {
   position: relative;
-  padding: 0 0 20px;
 }
 
 article {

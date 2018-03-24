@@ -965,7 +965,7 @@
 
   @media (max-width: $screen-xxs-max) {
     .SingleDatePickerInput_calendarIcon {
-      padding: 0;
+      padding: 0 0 0 7px;
     }
   }
 }

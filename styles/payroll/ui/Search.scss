@@ -8,7 +8,7 @@
 .openButton {
   position: fixed;
   top: 11px;
-  right: 16px;
+  right: 10px;
   z-index: $zindex-modal;
   user-select: none;
 }
@@ -34,11 +34,11 @@
       position: relative;
       display: flex;
       align-items: center;
-      padding: 0 24px;
+      padding: 0 20px;
 
       &.is-open,
       &.is-focused {
-        padding: 0 48px;
+        padding: 0 44px;
 
         .Select-control {
           overflow: visible;
@@ -92,7 +92,7 @@
       width: 35px;
       display: inline-flex;
       position: absolute;
-      top: 3px;
+      top: 2px;
       right: -9px;
       transition: all .2s ease-out;
     }
@@ -127,7 +127,6 @@
       width: 100%;
       margin-right: 5px;
       padding-bottom: 3px;
-      overflow: hidden;
       @include customScroll();
     }
 
@@ -361,7 +360,7 @@
 
 .searchClose {
   position: absolute;
-  top: 5px;
+  top: 7px;
   left: 5px;
   z-index: $zindex-modal;
 }

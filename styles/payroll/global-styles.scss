@@ -16,6 +16,12 @@ body {
   flex-direction: column;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+  }
 }
 
 body {

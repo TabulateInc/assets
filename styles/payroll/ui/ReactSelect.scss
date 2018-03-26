@@ -3,7 +3,6 @@
 .select {
   display: flex;
   width: 100%;
-  width: 100%;
 
   :global {
 
@@ -29,6 +28,7 @@
 
       .Select-menu-outer {
         @include dropdown(-1px, -1px);
+        @include customScroll();
       }
 
       .Select-control {
@@ -105,7 +105,6 @@
   }
 }
 
-
 .plain {
 
   :global {
@@ -115,6 +114,61 @@
       .Select-control {
         height: auto;
         border: none;
+      }
+
+      .Select-arrow-zone {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.as-main-nav {
+
+  :global {
+
+    .Select {
+
+      .Select-control {
+        border: none;
+        height: auto;
+      }
+
+      .Select-value {
+        overflow: visible;
+      }
+
+      .Select-value-label {
+        font-weight: 300;
+        font-size: 27px;
+      }
+
+      .Select-arrow-zone {
+        top: -8px;
+        margin: 0 3px;
+      }
+
+      .Select-arrow {
+        position: relative;
+        border: none;
+        font-size: 11px;
+        font-family: 'Glyphicons Halflings';
+
+        &:after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 30px;
+          height: 30px;
+          content: "\E259";
+          border: none;
+        }
+      }
+
+      .Select-menu-outer {
+        min-width: 300px;
+        max-height: 1000px;
+        overflow-y: hidden;
       }
     }
   }
@@ -128,6 +182,19 @@
 
       .Select-control {
         padding-left: 20px;
+      }
+    }
+  }
+}
+
+.no-indent {
+
+  :global {
+
+    .Select {
+
+      .Select-control {
+        padding: 0;
       }
     }
   }

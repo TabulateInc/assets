@@ -8,7 +8,7 @@
 .openButton {
   position: fixed;
   top: 11px;
-  right: 10px;
+  right: 16px;
   z-index: $zindex-modal;
   user-select: none;
 }
@@ -273,6 +273,7 @@
     .Select {
       flex-direction: column;
       padding: 0 !important;
+      border-bottom: 1px solid $gray-light-new;
 
       .Select-clear-zone {
         top: 5px !important;
@@ -283,16 +284,17 @@
         padding: 0 44px;
         height: auto !important;
         min-height: 44px;
-        border-bottom: 1px solid $gray-light-new;
         margin-bottom: 1px;
 
         &:after {
-          top: 5px !important;
+          top: 6px !important;
           right: 5px !important;
         }
       }
 
       .Select-multi-value-wrapper {
+        position: relative;
+        top: -1px;
         flex-wrap: wrap;
         padding: 5px 0 0;
       }
@@ -322,6 +324,10 @@
           left: -45px;
           background: transparent url('../../../img/search.svg') 6px 5px no-repeat;
           background-size: 30px;
+        }
+
+        &:last-child {
+          border-bottom: none;
         }
       }
       
@@ -360,7 +366,7 @@
 
 .searchClose {
   position: absolute;
-  top: 7px;
+  top: 6px;
   left: 5px;
   z-index: $zindex-modal;
 }

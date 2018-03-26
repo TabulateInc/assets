@@ -140,3 +140,8 @@
   pointer-events: none;
   opacity: .45 !important;
 }
+
+.alert-close {
+  font-size: 14px;
+  color: $alert-danger-text;
+}

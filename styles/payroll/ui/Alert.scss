@@ -1,0 +1,61 @@
+.alert {
+  text-align: center;
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: $alert-z-index;
+  padding: $alert-margin-vertical $alert-margin-horizontal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alertSuccess {
+  border: 1px solid $alert-success-border;
+  background-color: $alert-success-bg;
+  color: $alert-success-text;
+  width: $alert-success-width !important;
+  border-radius: $alert-border-radius;
+
+  @media (min-width: $screen-sm-min) {
+    top: $main-navigation-height + $alert-from-top;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    top: $main-navigation-height-mobile + $alert-from-top;
+  }
+}
+
+
+.alertDanger {
+  border: 1px solid $alert-danger-border;
+  background-color: $alert-danger-bg;
+  border-color: $alert-danger-border;
+  color: $alert-danger-text;
+  font-size: $font-size-small;
+  top: 0;
+
+  @media (min-width: $screen-sm-min) {
+    min-height: $main-navigation-height;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    min-height: $main-navigation-height-mobile;
+  }
+}
+
+.close {
+  position: absolute;
+  z-index: $zindex-navbar-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    top: ($main-navigation-height - 35px)/2;
+    right: 16px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    top: ($main-navigation-height-mobile - 35px)/2;
+    right: 10px;
+  }
+}

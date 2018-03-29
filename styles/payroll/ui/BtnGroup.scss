@@ -7,8 +7,19 @@
   * {
     margin: 0 10px;
 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-xxs-max) {
       flex: 1;
     }
   }
+}
+
+.pad-20 {
+  padding: 0 20px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+  justify-content: end;
 }

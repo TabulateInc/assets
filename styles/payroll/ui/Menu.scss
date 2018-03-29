@@ -2,16 +2,21 @@
 
 
 .menu {
+  position: fixed;
   width: 259px;
-  margin-right: 20px;
 }
 
 .nav {
   @include lightBox();
 
 }
+
+.title {
+  @include heading();
+}
+
 .list {
-  margin: 0;
+  margin: 17px 0 35px;
   padding: 5px 20px;
 }
 

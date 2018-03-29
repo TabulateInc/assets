@@ -12,7 +12,7 @@
 
 .li {
   display: flex;
-  margin: 3px 0;
+  margin: 4px 0;
   padding: 0;
 }
 
@@ -32,7 +32,13 @@
 }
 
 .mobileView {
-  @include fixedBox();
+  top: 0;
+  left: 0;
+  padding: 0 7px;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  max-height: 100vh;
 
   ul {
     padding-top: 28px;
@@ -43,10 +49,8 @@
   }
 
   a {
-    padding: 9px 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    padding: 10px 0;
+    @include textWrap();
     border-bottom: 1px solid $gray-light-new;
     font-size: 16px;
     line-height: $line-height-base;

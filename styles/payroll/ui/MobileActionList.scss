@@ -4,8 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  @include dropdown(5px, 5px);
-  @include fixedBox();
+  height: 100vh;
 }
 
 .title {
@@ -17,7 +16,7 @@
 
 .list {
   margin: 0;
-  padding-top: 11px;
+  padding: 11px 5px;
   flex: 1;
   background: $white;
 }
@@ -40,11 +39,9 @@
   border-radius: 2px;
   font-size: 16px;
   padding: 9px 0;
-  white-space: nowrap;
   @include link($gray-new);
+  @include textWrap();
   background: $white;
-  overflow: hidden;
-  text-overflow: ellipsis;
   border-bottom: 1px solid $gray-light-new;
   line-height: $line-height-base;
 
@@ -55,7 +52,5 @@
 }
 
 .close {
-  position: absolute;
-  top: 5px;
-  left: 5px;
+  @include closeButton();
 }

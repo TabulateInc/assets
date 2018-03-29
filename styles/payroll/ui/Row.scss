@@ -1,9 +1,29 @@
+@import "../mixins";
+
 .row {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 15px 0;
   padding: 0 20px;
+
+  @media (max-width: $screen-xxs-max) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.flex-end {
+  justify-content: flex-end;
+
+  @media (max-width: $screen-xxs-max) {
+    justify-content: center;
+  }
+}
+
+.flex-start {
+  justify-content: flex-start;
 }
 
 .jumbo {
@@ -16,4 +36,40 @@
 .sub-head {
   margin: 0px -1px 20px;
   padding: 0;
+}
+
+.as-heading {
+  @include heading();
+  margin: 0;
+}
+
+.control-height-78 {
+  height: 78px;
+  margin: 0;
+  border-bottom: 1px solid $gray-light-new;
+}
+
+.column-start {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.no-indent {
+  margin: 0;
+  padding: 0;
+}
+
+.with-hover {
+  &:hover {
+    background-color: $table-bg-hover;
+  }
+}
+
+.border-bottom {
+  border-bottom: 1px solid $gray-light-new;
+}
+
+.height-52 {
+  height: 52px;
 }

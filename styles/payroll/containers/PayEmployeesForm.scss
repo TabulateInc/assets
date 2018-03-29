@@ -1,0 +1,66 @@
+.page {
+  width: 100%;
+}
+
+.dateInput {
+  grid-column: span 4;
+  display: flex;
+  border-right: 1px solid $gray-light-new;
+}
+
+.commonSelect {
+  grid-column: span 4;
+  display: flex;
+  border-right: 1px solid $gray-light-new;
+}
+
+.regularSelect {
+  grid-column: span 4;
+  display: flex;
+  border-right: 1px solid $gray-light-new;
+}
+
+.search {
+  grid-column: span 10;
+  display: flex;
+}
+
+.searchOpenMobileButton {
+  position: fixed;
+  top: 11px;
+  right: 9px;
+  z-index: $zindex-navbar-fixed;
+  cursor: pointer;
+}
+
+@media (min-width: $screen-xs-min) and (max-width: $screen-sm-max) {
+
+  .dateInput {
+    grid-column: span 5;
+  }
+
+  .commonSelect,
+  .regularSelect {
+    grid-column: span 5;
+  }
+
+  .search {
+    grid-column: span 8;
+  }
+}
+
+@media (max-width: $screen-xxs-max) {
+  .dateInput,
+  .commonSelect,
+  .regularSelect {
+    grid-column: span 9;
+  }
+
+  .commonSelect {
+    border: none;
+  }
+
+  .search {
+    grid-column: span 18;
+  }
+}

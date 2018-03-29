@@ -14,6 +14,14 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0;
+    height: 0;
+  }
 }
 
 body {
@@ -38,7 +46,6 @@ ul {
 
 section {
   position: relative;
-  padding: 0 0 20px;
 }
 
 article {
@@ -50,8 +57,18 @@ p {
   margin: 0;
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: $screen-xs-max) {
   article {
     padding: 0 10px;
   }
 }
+
+:global {
+  // Global Includes
+  .top-13 {
+    margin-top: 13px;
+  }
+}
+
+
+

@@ -12,28 +12,38 @@
   flex: 1;
   width: 100%;
   max-width: 1350px;
-  padding: 100px 15px 15px;
+  padding: 0 15px 15px;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  z-index: 5;
+  margin: 100px auto 0;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  bottom: 0;
+  right: 0;
+  width: 259px;
 }
 
 .main {
   position: relative;
   @include lightBox();
-  width: calc(100% - 259px);
+  width: 100%;
+  margin-left: 280px;
 }
 
 
-@media (max-width: $screen-md) {
+@media (max-width: $screen-md-min) {
   .main {
-    width: 100%;
+    margin-left: 0;
   }
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: $screen-xxs-max) {
   .content {
-    padding: 57px 5px 5px;
+    margin-top: 53px;
+    padding: 5px;
   }
 }

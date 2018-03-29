@@ -14,8 +14,27 @@
   top: 3px;
 }
 
+.font-15 {
+  font-size: 15px;
+}
+
 .font-50 {
   font-size: 50px;
+}
+
+.sorting {
+  font-size: $sorticon-size;
+  color: $gray-middle-new;
+
+  &:hover,
+  &:focus {
+    color: $gray-darkest-new;
+  }
+}
+
+
+.hidden {
+  visibility: hidden;
 }
 
 .circle {
@@ -28,6 +47,10 @@
 
 .color-gray {
   color: $gray-lighter-new;
+}
+
+.color-gray-text {
+  color: $gray-text;
 }
 
 .img-check {
@@ -46,4 +69,8 @@
 .bg-white {
   background-color: $white;
   border: 1px solid $gray-light-new;
+}
+
+.radius-33 {
+  border-radius: 33%;
 }

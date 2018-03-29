@@ -1,0 +1,201 @@
+@import "../mixins";
+
+.select {
+  display: flex;
+  width: 100%;
+
+  :global {
+
+    .Select {
+      width: 100%;
+      display: flex;
+      position: relative;
+
+      .Select-control {
+        width: 100%;
+        position: relative;
+        @include formElement();
+        padding-right: 10px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .Select-multi-value-wrapper {
+        display: flex;
+        @include textWrap();
+      }
+
+      .Select-menu-outer {
+        @include dropdown(-1px, -1px);
+        @include customScroll();
+      }
+
+      .Select-control {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .Select-option {
+        display: flex;
+        margin: 4px 0;
+        padding: 0;
+        align-items: center;
+        border-radius: 2px;
+        font-size: 14px;
+        padding: 12px 25px;
+        white-space: nowrap;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $gray-lightest-new;
+        }
+
+        &.is-selected {
+          background-color: $gray-lightest-new;
+        }
+        &.is-focused {
+
+        }
+      }
+
+      .Select-input {
+        outline: none;
+        background: none;
+        user-select: none;
+      }
+
+      .Select-arrow-zone {
+        position: relative;
+        top: -2px;
+      }
+
+      .Select-arrow {
+        @include arrowBottom();
+      }
+
+      .Select-value {
+        @include textWrap();
+      }
+
+      &.is-open {
+
+        .Select-arrow {
+          @include arrowTop();
+        }
+      }
+
+      &.is-focused {
+        .Select-control {
+          border-color: $brand-primary;
+        }
+      }
+
+      &.is-disabled {
+        .Select-control {
+          background-color: $gray-lightest-new;
+          pointer-events: none;
+
+          &:hover {
+            border-color: $gray-lightest-new;
+          }
+        }
+      }
+    }
+  }
+}
+
+.plain {
+
+  :global {
+
+    .Select {
+
+      .Select-control {
+        height: auto;
+        border: none;
+      }
+
+      .Select-arrow-zone {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.as-main-nav {
+
+  :global {
+
+    .Select {
+
+      .Select-control {
+        border: none;
+        height: auto;
+      }
+
+      .Select-value {
+        overflow: visible;
+      }
+
+      .Select-value-label {
+        font-weight: 300;
+        font-size: 27px;
+      }
+
+      .Select-arrow-zone {
+        top: -8px;
+        margin: 0 3px;
+      }
+
+      .Select-arrow {
+        position: relative;
+        border: none;
+        font-size: 11px;
+        font-family: 'Glyphicons Halflings';
+
+        &:after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 30px;
+          height: 30px;
+          content: "\E259";
+          border: none;
+        }
+      }
+
+      .Select-menu-outer {
+        min-width: 300px;
+        max-height: 1000px;
+        overflow-y: hidden;
+      }
+    }
+  }
+}
+
+.left-20 {
+
+  :global {
+
+    .Select {
+
+      .Select-control {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+.no-indent {
+
+  :global {
+
+    .Select {
+
+      .Select-control {
+        padding: 0;
+      }
+    }
+  }
+}

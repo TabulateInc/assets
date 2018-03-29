@@ -15,7 +15,22 @@
     select {
       border-color: $brand-primary;
     }
+
+    :global {
+      .SingleDatePickerWrap.plain {
+        .SingleDatePickerInput {
+          border-color: $brand-primary;
+        }
+      }
+    }
   }
+}
+
+
+
+.flex-end {
+  margin: 0;
+  align-items: flex-end;
 }
 
 .disabled {
@@ -47,11 +62,11 @@
   }
 }
 
-.errorBox {
+.errorMsg {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -37px;
+  top: 67px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,6 +77,7 @@
   color: $white;
   font-weight: normal;
   font-size: 12px;
+  text-align: center;
   z-index: 100;
 
   &:before {
@@ -71,6 +87,26 @@
     left: 10px;
     @include triangle(0 5px 5px 5px, transparent transparent #df3320 transparent);
   }
+
+  i {
+    margin: 0 5px;
+  }
 }
+
+.small {
+  top: 38px;
+  flex-direction: column;
+  padding: 10px 8px;
+
+  &:before {
+    right: 10px;
+    left: auto;
+  }
+
+  i {
+    margin: 0 0 5px;
+  }
+}
+
 
 

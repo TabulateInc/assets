@@ -5,7 +5,7 @@
   @include placeholder {
     color: $gray-middle-new;
   }
-  
+
   &:hover,
   &:focus {
     border-color: $brand-primary;
@@ -22,8 +22,14 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.textRight {
+.text-right {
   text-align: right;
+}
+
+.small {
+  max-width: 68px;
+  height: 33px;
+  padding: 5px;
 }
 
 .disabled {

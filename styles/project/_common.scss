@@ -343,7 +343,7 @@ select.padding-left-xs option,
       max-width: 180px !important;
     }
 
-    @media (max-width: $screen-phone) {
+    @media (max-width: $screen-xs-min) {
       max-width: 100% !important;
     }
   }
@@ -357,7 +357,7 @@ select.padding-left-xs option,
       max-width: 240px !important;
     }
 
-    @media (max-width: $screen-phone) {
+    @media (max-width: $screen-xs-min) {
       max-width: 100% !important;
     }
   }

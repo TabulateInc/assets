@@ -21,9 +21,9 @@
   @media (max-width: $screen-xxs-max) {
     height: 56px;
     justify-content: center;
+    align-items: flex-start;
     border-bottom: none;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.8);
   }
 }

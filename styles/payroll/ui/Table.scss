@@ -2,6 +2,8 @@
 
 .wrapper {
   @include customScroll();
+  padding: 1px;
+  margin: -1px;
 }
 
 .table {

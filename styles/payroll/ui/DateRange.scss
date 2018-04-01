@@ -1,0 +1,96 @@
+.btnOpen {
+  font-size: 13px;
+  min-width: 192px;
+  padding: 0 12px 6px 40px;
+  transition: border-color ease-in-out .15s;
+  color: #4c5557;
+}
+
+.dateRangeWrapper {
+  padding: 10px 7px;
+  border: 1px solid #eee;
+  max-width: 647px;
+  overflow: hidden;
+  box-shadow: 0 0 7px 0 rgba(0,0,0,.25);
+}
+
+.ranges {
+  width: 160px;
+  margin: 4px;
+  padding: 0;
+}
+
+.range {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  padding: 0 12px;
+  height: 26px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 0;
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #434a54;
+  width: 100%;
+  text-align: left;
+
+  &:hover,
+  &:focus {
+    background-color: #57a6db;
+    border-color: #57a6db;
+    color: #fff;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.rangeSelected {
+  background-color: #57a6db;
+  border-color: #57a6db;
+  color: #fff;
+}
+
+.inputs {
+  padding-bottom: 8px;
+  padding-right: 3px;
+  text-align: right;
+}
+
+.actions {
+  border-top: 1px solid #eee;
+  padding-top: 8px;
+  margin-right: 3px;
+  text-align: right;
+}
+
+:global {
+  .date-range-picker {
+    .CalendarDay__selected_span {
+      background-color: #ebf4f8;
+      color: $black;
+      border-radius: 0 !important;
+
+      &:active, &:hover, &:focus {
+        background-color: #e4e7e7;
+        color: $black;
+      }
+    }
+
+    .CalendarDay__selected_start {
+      border-radius: 4px 0 0 4px !important;
+      &, &:active, &:hover, &:focus {
+        color: $white;
+      }
+    }
+
+    .CalendarDay__selected_end {
+      border-radius: 0 4px 4px 0 !important;
+      &, &:active, &:hover, &:focus {
+        color: $white;
+      }
+    }
+  }
+}

@@ -23,14 +23,19 @@
   margin-bottom: 45px;
 }
 
-.inputStartDate {
+.inputStartDate,
+.inputEndDate {
+  background: url('../../../img/calendar.svg') 5px center no-repeat;
+  background-size: 20px;
+  padding-left: 28px;
   width: 203px;
-  margin-right: 12px;
   height: 35px;
 }
 
+.inputStartDate {
+  margin-right: 12px;
+}
+
 .inputEndDate {
-  width: 203px;
   margin-left: 12px;
-  height: 35px;
 }

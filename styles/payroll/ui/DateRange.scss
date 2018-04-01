@@ -3,15 +3,26 @@
   min-width: 192px;
   padding: 0 12px 6px 40px;
   transition: border-color ease-in-out .15s;
-  color: #4c5557;
+  color: $gray-new;
 }
 
 .dateRangeWrapper {
+  position: relative;
+  z-index: 1;
+  background: $white;
   padding: 10px 7px;
-  border: 1px solid #eee;
-  max-width: 647px;
+  border: 1px solid $gray-lighter;
   overflow: hidden;
   box-shadow: 0 0 7px 0 rgba(0,0,0,.25);
+
+
+  @media (min-width: $screen-md-min) {
+    max-width: 647px;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    height: 100vh;
+  }
 }
 
 .ranges {
@@ -23,23 +34,23 @@
 .range {
   display: flex;
   align-items: center;
-  font-size: 13px;
   padding: 0 12px;
-  height: 26px;
   margin-bottom: 8px;
+  height: 26px;
+  font-size: 13px;
   cursor: pointer;
   border-radius: 0;
-  background-color: #fff;
-  border: 1px solid #fff;
-  color: #434a54;
+  background-color: $white;
+  border: 1px solid $white;
+  color: $darkgray-dark;
   width: 100%;
   text-align: left;
 
   &:hover,
   &:focus {
-    background-color: #57a6db;
-    border-color: #57a6db;
-    color: #fff;
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+    color: $white;
   }
 
   &:focus {
@@ -48,9 +59,9 @@
 }
 
 .rangeSelected {
-  background-color: #57a6db;
-  border-color: #57a6db;
-  color: #fff;
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  color: $white;
 }
 
 .inputs {
@@ -60,7 +71,7 @@
 }
 
 .actions {
-  border-top: 1px solid #eee;
+  border-top: 1px solid $gray-lighter;
   padding-top: 8px;
   margin-right: 3px;
   text-align: right;
@@ -68,6 +79,10 @@
 
 :global {
   .date-range-picker {
+    @media (min-width: $screen-md-min) {
+      height: 20px;
+    }
+
     .CalendarDay__selected_span {
       background-color: #ebf4f8;
       color: $black;
@@ -92,5 +107,33 @@
         color: $white;
       }
     }
+
+    .CalendarDay__selected_start.CalendarDay__selected_end {
+      border-radius: 4px !important;
+    }
+
+    .DayPicker__horizontal {
+      margin: 0 auto;
+    }
+
+    .DayPicker_weekHeader__verticalScrollable {
+      top: 26px;
+    }
   }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $white;
+  font-size: 19px;
+}
+
+.headerPortrait {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
 }

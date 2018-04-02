@@ -65,8 +65,10 @@
   background-color: transparent;
   @include link($brand-primary);
 
-  &:hover {
+  &:hover,
+  &:visited {
     background-color: transparent;
+    border: none;
   }
 }
 

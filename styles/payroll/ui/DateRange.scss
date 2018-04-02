@@ -1,7 +1,10 @@
+$calendar-day-radius: 4px;
+$btn-daterange-open-height: 20px;
+$distance-sm: 8px;
+$calendar-day-inrange-color: #ebf4f8;
+
 .btnOpen {
-  font-size: 13px;
-  min-width: 192px;
-  padding: 0 12px 6px 40px;
+  height: $btn-daterange-open-height;
   transition: border-color ease-in-out .15s;
   color: $gray-new;
 }
@@ -10,14 +13,13 @@
   position: relative;
   z-index: 1;
   background: $white;
-  padding: 10px 7px;
+  padding: 10px;
   border: 1px solid $gray-lighter;
   overflow: hidden;
-  box-shadow: 0 0 7px 0 rgba(0,0,0,.25);
-
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.25);
 
   @media (min-width: $screen-md-min) {
-    max-width: 647px;
+    max-width: 637px;
   }
 
   @media (max-width: $screen-sm-max) {
@@ -27,15 +29,13 @@
 
 .ranges {
   width: 160px;
-  margin: 4px;
-  padding: 0;
 }
 
 .range {
   display: flex;
   align-items: center;
   padding: 0 12px;
-  margin-bottom: 8px;
+  margin-bottom: $distance-sm;
   height: 26px;
   font-size: 13px;
   cursor: pointer;
@@ -65,51 +65,65 @@
 }
 
 .inputs {
-  padding-bottom: 8px;
-  padding-right: 3px;
+  padding-bottom: $distance-sm;
   text-align: right;
 }
 
 .actions {
   border-top: 1px solid $gray-lighter;
-  padding-top: 8px;
-  margin-right: 3px;
+  padding-top: $distance-sm;
   text-align: right;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $white;
+  font-size: $nav-header-title-size-sm;
+}
+
+.headerPortrait {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
 }
 
 :global {
   .date-range-picker {
     @media (min-width: $screen-md-min) {
-      height: 20px;
+      height: $btn-daterange-open-height;
     }
 
     .CalendarDay__selected_span {
-      background-color: #ebf4f8;
+      background-color: $calendar-day-inrange-color;
       color: $black;
       border-radius: 0 !important;
 
       &:active, &:hover, &:focus {
-        background-color: #e4e7e7;
+        background-color: $gray-lighter-new;
         color: $black;
       }
     }
 
     .CalendarDay__selected_start {
-      border-radius: 4px 0 0 4px !important;
+      border-radius: $calendar-day-radius 0 0 $calendar-day-radius !important;
       &, &:active, &:hover, &:focus {
         color: $white;
       }
     }
 
     .CalendarDay__selected_end {
-      border-radius: 0 4px 4px 0 !important;
+      border-radius: 0 $calendar-day-radius $calendar-day-radius 0 !important;
       &, &:active, &:hover, &:focus {
         color: $white;
       }
     }
 
     .CalendarDay__selected_start.CalendarDay__selected_end {
-      border-radius: 4px !important;
+      border-radius: $calendar-day-radius !important;
     }
 
     .DayPicker__horizontal {
@@ -120,20 +134,4 @@
       top: 26px;
     }
   }
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: $white;
-  font-size: 19px;
-}
-
-.headerPortrait {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
 }

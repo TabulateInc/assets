@@ -367,12 +367,12 @@
     background: #fff
   }
   .CalendarDay__default:hover {
-    background: #e4e7e7;
+    background: $gray-lighter-new;
     color: inherit
   }
   .CalendarDay__hovered_offset {
     background: #f4f5f5;
-    border: 1px double #e4e7e7;
+    border: 1px double $gray-lighter-new;
     color: inherit
   }
   .CalendarDay__outside {
@@ -537,7 +537,7 @@
     user-select: none
   }
   .DayPickerNavigation_button__default {
-    border: 1px solid #e4e7e7;
+    border: 1px solid $gray-lighter-new;
     background-color: #fff;
     color: #757575
   }

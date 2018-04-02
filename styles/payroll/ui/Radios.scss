@@ -3,7 +3,7 @@
 .radios {
   display: flex;
   align-items: center;
-  margin: 15px 0 10px -3px;
+  margin: 15px 0 10px;
 }
 
 .radio {
@@ -32,6 +32,10 @@
     color: $brand-primary;
   }
 
+  i {
+    margin-left: 0;
+  }
+
   @media (max-width: $screen-xxs-max) {
     margin-right: 25px;
   }
@@ -39,4 +43,15 @@
 
 .input {
   margin-right: 10px;
+}
+
+.column {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 25px;
+  margin-bottom: 32px;
+
+  label {
+    margin: 7px 0;
+  }
 }

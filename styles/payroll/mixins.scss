@@ -187,7 +187,27 @@
 
 @mixin closeButton() {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 0;
+  left: 0;
   z-index: $zindex-modal;
+}
+
+@mixin actions-button($icon-height, $icon-width, $position: 'left') {
+  $margin-top: ($main-navigation-height-mobile - $icon-height)/2;
+  margin-top: $margin-top;
+
+  @if $position == 'right' {
+    float: right;
+    margin-right: 5px;  // TODO
+  } @else {
+    float: left;
+    margin-left: 5px;  // TODO
+  }
+  padding: 0;
+  border: none;
+
+  width: $icon-width;
+  height: $icon-height;
+  position: relative;
+  cursor: pointer;
 }

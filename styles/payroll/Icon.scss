@@ -74,3 +74,15 @@
 .radius-33 {
   border-radius: 33%;
 }
+
+.breadcrumb-right {
+  color: $gray-light;
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 9px;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 10px;
+  }
+}

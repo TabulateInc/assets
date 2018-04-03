@@ -1,16 +1,43 @@
+@import '../mixins';
+
 $calendar-day-radius: 4px;
-$btn-daterange-open-height: 20px;
+$btn-daterange-open-height: 52px;
 $distance-sm: 8px;
 $calendar-day-inrange-color: #ebf4f8;
 
 .btnOpen {
-  height: $btn-daterange-open-height;
+  height: 100%;
+  width: 100%;
   transition: border-color ease-in-out .15s;
   color: $gray-new;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 20px;
+  position: relative;
+  user-select: none;
+
+  &::after {
+    content: '';
+    right: 12px;
+  }
+
+  &::after {
+    @include arrowBottom();
+
+    top: (52px - 4px)/2;
+    position: absolute;
+  }
+
+  &.isOpened::after {
+    @include arrowTop();
+
+    top: (52px - 4px)/2;
+    position: absolute;
+  }
 }
 
 .dateRangeWrapper {
-  position: relative;
   z-index: 1;
   background: $white;
   padding: 10px;
@@ -19,6 +46,7 @@ $calendar-day-inrange-color: #ebf4f8;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.25);
 
   @media (min-width: $screen-md-min) {
+    position: absolute;
     max-width: 637px;
   }
 
@@ -93,6 +121,7 @@ $calendar-day-inrange-color: #ebf4f8;
 
 :global {
   .date-range-picker {
+    width: 100%;
     @media (min-width: $screen-md-min) {
       height: $btn-daterange-open-height;
     }

@@ -1,0 +1,62 @@
+@import "../mixins";
+
+.wrapper {
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+  margin: 20px 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 11px;
+
+  thead {
+
+    tr {
+
+      th {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        border-bottom: 1px solid $gray-light-new;
+      }
+    }
+  }
+  tbody {
+
+    tr {
+
+      td {
+        border-bottom: 1px solid $gray-light-new;
+      }
+
+      &:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  th,
+  td {
+    text-align: left;
+    width: 25%;
+    padding: 5px 20px;
+  }
+  th {
+    font-weight: 400;
+    color: $gray-middle-new;
+    white-space: pre-line;
+  }
+  td {
+    vertical-align: top;
+
+    p {
+      margin: 9px 0;
+      line-height: 1.4;
+      white-space: pre-line;
+    }
+  }
+}

@@ -8,12 +8,7 @@
   border-right: 1px solid $gray-light-new;
 }
 
-.commonSelect {
-  grid-column: span 4;
-  display: flex;
-  border-right: 1px solid $gray-light-new;
-}
-
+.commonSelect,
 .regularSelect {
   grid-column: span 4;
   display: flex;
@@ -22,6 +17,11 @@
 
 .search {
   grid-column: span 10;
+  display: flex;
+}
+
+.searchContractor {
+  grid-column: span 14;
   display: flex;
 }
 
@@ -34,7 +34,6 @@
 }
 
 @media (min-width: $screen-xs-min) and (max-width: $screen-sm-max) {
-
   .dateInput {
     grid-column: span 5;
   }
@@ -47,6 +46,10 @@
   .search {
     grid-column: span 8;
   }
+
+  .searchContractor {
+    grid-column: span 13;
+  }
 }
 
 @media (max-width: $screen-xxs-max) {
@@ -56,11 +59,13 @@
     grid-column: span 9;
   }
 
-  .commonSelect {
+  .commonSelect:last-child {
     border: none;
   }
+}
 
-  .search {
-    grid-column: span 18;
-  }
+.mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
 }

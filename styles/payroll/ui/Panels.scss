@@ -1,0 +1,44 @@
+@import '../../project/mixins/clearfix';
+
+$gray-panel: #7b8994;
+$img-height: 36px;
+$img-width: 30px;
+
+.wrapper {
+  @include clearfix();
+
+  border-bottom: 1px solid $border-color-base;
+  box-shadow: none;
+  margin: 0;
+  padding: 25px $panel-new-padding-hor;
+
+  @media (max-width: $screen-xs-max) {
+    padding-left: $panel-new-padding-hor-mobile;
+  }
+
+  &:hover {
+    background-color: $table-bg-hover;
+    cursor: pointer;
+  }
+}
+
+.image {
+  width: $img-width;
+  height: $img-height;
+  background: url('../../../img/analytics.svg') no-repeat;
+  background-size: $img-width $img-height;
+  float: left;
+}
+
+.about {
+  padding-left: 50px - $img-width;
+  width: calc(100% - #{$img-width});
+  float: left;
+  line-height: $line-height-base;
+}
+
+.description {
+  color: $gray-panel;
+  line-height: $line-height-base;
+  font-size: 13px;
+}

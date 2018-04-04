@@ -1,0 +1,86 @@
+@import "../mixins";
+
+.wrapper {
+  margin: 40px 20px;
+
+  @media (max-width: $screen-lg-min) {
+    @include customScroll();
+  }
+}
+
+.table {
+  table-layout: fixed;
+  width: calc(100% + 70px);
+  margin: 0 -35px;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 11px;
+  border-collapse: separate;
+  border-spacing: 35px 5px;
+
+  thead {
+
+    tr {
+      &:first-child {
+        th {
+          font-size: 12px;
+          border-bottom: 1px solid black;
+        }
+      }
+      &:last-child {
+        color: $gray-middle-new;
+
+        th {
+          font-weight: 400;
+          padding: 0 0 7px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $screen-lg-min) {
+    table-layout: auto;
+  }
+}
+
+.row {
+  padding: 7px 0 !important;
+  background-color: $table-bg-hover;
+  border-top: 1px solid $gray-light-new;
+  border-bottom: 1px solid $gray-light-new;
+}
+
+.tr {
+  position: relative;
+}
+
+.th {
+  width: 20px;
+  padding: 7px 0;
+}
+
+.td {
+  width: 20px;
+  padding: 4px 0;
+}
+
+.cell-0,
+.cell-3,
+.cell-4,
+.cell-6,
+.cell-8,
+.cell-10 {
+  text-align: left;
+}
+
+.cell-1,
+.cell-2,
+.cell-5,
+.cell-7,
+.cell-9,
+.cell-11,
+.cell-12 {
+  text-align: right;
+}
+
+

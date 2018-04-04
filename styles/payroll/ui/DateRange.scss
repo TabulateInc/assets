@@ -1,0 +1,180 @@
+@import '../mixins';
+
+$calendar-day-radius: 4px;
+$btn-daterange-open-height: 52px;
+$distance-sm: 8px;
+$calendar-day-inrange-color: #ebf4f8;
+
+.btnOpen {
+  height: 100%;
+  width: 100%;
+  transition: border-color ease-in-out .15s;
+  color: $gray-new;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 20px;
+  position: relative;
+  user-select: none;
+
+  &::after {
+    content: '';
+    right: 12px;
+  }
+
+  &::after {
+    @include arrowBottom();
+
+    top: (52px - 4px)/2;
+    position: absolute;
+  }
+
+  &.isOpened::after {
+    @include arrowTop();
+
+    top: (52px - 4px)/2;
+    position: absolute;
+  }
+}
+
+.dateRangeWrapper {
+  z-index: 1;
+  background: $white;
+  border: 1px solid $gray-lighter;
+  overflow: hidden;
+  padding: 10px;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.25);
+
+  @media (min-width: $screen-md-min) {
+    position: absolute;
+    max-width: 637px;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    height: 100vh;
+    padding: 0;
+  }
+}
+
+.ranges {
+  width: 160px;
+}
+
+.range {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  margin-bottom: $distance-sm;
+  height: 26px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 0;
+  background-color: $white;
+  border: 1px solid $white;
+  color: $darkgray-dark;
+  width: 100%;
+  text-align: left;
+
+  &:hover,
+  &:focus {
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+    color: $white;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.rangeSelected {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  color: $white;
+}
+
+.inputs {
+  padding-bottom: $distance-sm;
+  text-align: right;
+}
+
+.actions {
+  border-top: 1px solid $gray-lighter;
+  padding-top: $distance-sm;
+  text-align: right;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+}
+
+.headerPortrait {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $zindex-modal;
+  background: transparent !important;
+  width: 100%;
+}
+
+:global {
+  .date-range-picker {
+    width: 100%;
+    @media (min-width: $screen-md-min) {
+      height: $btn-daterange-open-height;
+    }
+
+    .CalendarDay__selected_span {
+      background-color: $calendar-day-inrange-color;
+      color: $black;
+      border-radius: 0 !important;
+
+      &:active,
+      &:hover,
+      &:focus {
+        background-color: $gray-lighter-new;
+        color: $black;
+      }
+    }
+
+    .CalendarDay__selected_start {
+      border-radius: $calendar-day-radius 0 0 $calendar-day-radius !important;
+      &, &:active, &:hover, &:focus {
+        color: $white;
+      }
+    }
+
+    .CalendarDay__selected_end {
+      border-radius: 0 $calendar-day-radius $calendar-day-radius 0 !important;
+      &, &:active, &:hover, &:focus {
+        color: $white;
+      }
+    }
+
+    .CalendarDay__selected_start.CalendarDay__selected_end {
+      border-radius: $calendar-day-radius !important;
+    }
+
+    .DayPicker__horizontal {
+      margin: 0 auto;
+    }
+
+    .DayPicker_weekHeader__verticalScrollable {
+
+    }
+
+    &.mobile {
+      .DayPicker__horizontal {
+        height: 100vh;
+        margin-top: -35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: transparent;
+      }
+    }
+  }
+}

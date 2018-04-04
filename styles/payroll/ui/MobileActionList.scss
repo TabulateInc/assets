@@ -45,7 +45,8 @@
   border-bottom: 1px solid $gray-light-new;
   line-height: $line-height-base;
 
-  &:hover {
+  &:hover,
+  &.active {
     color: $brand-primary;
     background-color: $white;
   }

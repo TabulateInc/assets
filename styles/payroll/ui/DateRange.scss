@@ -40,9 +40,9 @@ $calendar-day-inrange-color: #ebf4f8;
 .dateRangeWrapper {
   z-index: 1;
   background: $white;
-  padding: 10px;
   border: 1px solid $gray-lighter;
   overflow: hidden;
+  padding: 10px;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.25);
 
   @media (min-width: $screen-md-min) {
@@ -52,6 +52,7 @@ $calendar-day-inrange-color: #ebf4f8;
 
   @media (max-width: $screen-sm-max) {
     height: 100vh;
+    padding: 0;
   }
 }
 
@@ -107,15 +108,15 @@ $calendar-day-inrange-color: #ebf4f8;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: $white;
-  font-size: $nav-header-title-size-sm;
+  background: transparent;
 }
 
 .headerPortrait {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: $zindex-modal;
+  background: transparent !important;
   width: 100%;
 }
 
@@ -131,7 +132,9 @@ $calendar-day-inrange-color: #ebf4f8;
       color: $black;
       border-radius: 0 !important;
 
-      &:active, &:hover, &:focus {
+      &:active,
+      &:hover,
+      &:focus {
         background-color: $gray-lighter-new;
         color: $black;
       }
@@ -160,7 +163,18 @@ $calendar-day-inrange-color: #ebf4f8;
     }
 
     .DayPicker_weekHeader__verticalScrollable {
-      top: 26px;
+
+    }
+
+    &.mobile {
+      .DayPicker__horizontal {
+        height: 100vh;
+        margin-top: -35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: transparent;
+      }
     }
   }
 }

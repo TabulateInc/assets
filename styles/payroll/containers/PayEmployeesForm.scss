@@ -56,11 +56,13 @@
     grid-column: span 9;
   }
 
-  .commonSelect {
+  .commonSelect:last-child {
     border: none;
   }
+}
 
-  .search {
-    grid-column: span 18;
-  }
+.mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
 }

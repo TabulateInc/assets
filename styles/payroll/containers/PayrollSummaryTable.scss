@@ -3,7 +3,7 @@
 .wrapper {
   margin: 40px 20px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: $screen-lg-min) {
     @include customScroll();
   }
 }
@@ -38,7 +38,7 @@
     }
   }
 
-  @media (max-width: 1200px) {
+  @media (max-width: $screen-lg-min) {
     table-layout: auto;
   }
 }

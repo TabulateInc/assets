@@ -15,6 +15,7 @@ $calendar-day-inrange-color: #ebf4f8;
   background: $white;
   border: 1px solid $gray-lighter;
   overflow: hidden;
+  padding: 10px;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.25);
 
   @media (min-width: $screen-md-min) {
@@ -23,6 +24,7 @@ $calendar-day-inrange-color: #ebf4f8;
 
   @media (max-width: $screen-sm-max) {
     height: 100vh;
+    padding: 0;
   }
 }
 

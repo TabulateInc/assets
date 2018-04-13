@@ -9,14 +9,14 @@
 }
 
 .table {
-  table-layout: fixed;
-  width: calc(100% + 70px);
-  margin: 0 -35px;
+  //table-layout: fixed;
+  width: calc(100% + 20px);
+  margin: 0 -5px;
   white-space: nowrap;
   font-weight: 400;
   font-size: 11px;
   border-collapse: separate;
-  border-spacing: 35px 5px;
+  border-spacing: 2.5px 5px;
 
   thead {
 
@@ -55,12 +55,10 @@
 }
 
 .th {
-  width: 20px;
   padding: 7px 0;
 }
 
 .td {
-  width: 20px;
   padding: 4px 0;
 }
 

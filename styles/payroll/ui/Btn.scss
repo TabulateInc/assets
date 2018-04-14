@@ -62,12 +62,12 @@
   height: auto;
   padding: 0;
   border: none;
-  background-color: transparent;
+  background-color: transparent !important;
   @include link($brand-primary);
 
   &:hover,
   &:visited {
-    background-color: transparent;
+    background-color: transparent !important;
     border: none;
   }
 }

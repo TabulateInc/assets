@@ -31,9 +31,12 @@ $img-width: 30px;
 }
 
 .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: $img-height;
   padding-left: 50px - $img-width;
   width: calc(100% - #{$img-width});
-  float: left;
   line-height: $line-height-base;
 }
 

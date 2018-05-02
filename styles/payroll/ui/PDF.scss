@@ -1,0 +1,33 @@
+.document {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  background: $white;
+
+  @media (min-width: $screen-sm-min) {
+    margin: 73px auto 30px;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    margin: 0 auto;
+  }
+}
+
+.btnWrapper {
+  background: rgba(0, 0, 0, 0.3);
+  text-align: right;
+}
+
+.shadow {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background: rgba(0, 0, 0, 0.3) !important;
+  animation-duration: 0.15s;
+  animation-timing-function: linear;
+  animation-fill-mode: backwards;
+  opacity: 1;
+}

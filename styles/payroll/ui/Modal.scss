@@ -1,5 +1,5 @@
 .modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -8,4 +8,8 @@
   height: 100vh;
   background: $white;
   z-index: $zindex-modal;
+
+  &.transparent {
+    background-color: transparent;
+  }
 }

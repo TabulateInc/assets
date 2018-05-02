@@ -4,7 +4,7 @@
 @import './mixins';
 
 html {
-  position:relative;
+  position: relative;
   min-height: 100%;
 }
 
@@ -46,12 +46,12 @@ ul {
 
 section {
   position: relative;
-  padding: 0 0 20px;
+  padding: 0;
 }
 
 article {
   margin: 0;
-  padding: 0 20px;
+  padding: 35px 20px;
 }
 
 p {
@@ -63,13 +63,3 @@ p {
     padding: 0 10px;
   }
 }
-
-:global {
-  // Global Includes
-  .top-13 {
-    margin-top: 13px;
-  }
-}
-
-
-

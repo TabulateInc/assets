@@ -1,6 +1,10 @@
 .item {
   display: inline-flex;
-  margin: 7px 0;
+  margin-bottom: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .key {

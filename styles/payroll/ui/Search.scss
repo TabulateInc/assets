@@ -61,6 +61,8 @@
         }
 
         .Select-menu-outer {
+          max-height: 385px;
+          @include customScroll();
           position: absolute;
           top: 48px;
           left: 48px;
@@ -125,7 +127,6 @@
       top: 2px;
       width: 100%;
       margin-right: 5px;
-      padding-bottom: 3px;
       @include customScroll();
     }
 

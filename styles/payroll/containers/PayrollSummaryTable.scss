@@ -12,7 +12,6 @@
   //table-layout: fixed;
   width: calc(100% + 20px);
   margin: 0 -5px;
-  white-space: nowrap;
   font-weight: 400;
   font-size: 11px;
   border-collapse: separate;
@@ -55,11 +54,16 @@
 }
 
 .th {
-  padding: 7px 0;
+  padding: 7px 4px;
+  max-width: 100px;
+  word-break: break-word;
 }
 
 .td {
-  padding: 4px 0;
+  padding: 4px;
+  max-width: 100px;
+  vertical-align: top;
+  word-break: break-word;
 }
 
 .cell-0,

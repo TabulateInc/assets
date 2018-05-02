@@ -169,6 +169,11 @@
         min-width: 300px;
         max-height: 1000px;
         overflow-y: hidden;
+
+        @media (max-height: 375px) {
+          max-height: 350px;
+          overflow-y: scroll;
+        }
       }
     }
   }
@@ -196,6 +201,19 @@
       .Select-control {
         padding: 0;
       }
+    }
+  }
+}
+
+.companyDropdown {
+  :global {
+    .Select .Select-menu-outer {
+      @include textWrap();
+
+      right: -1px;
+      left: auto;
+      min-width: 210px;
+      max-width: 310px;
     }
   }
 }

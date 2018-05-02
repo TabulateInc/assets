@@ -204,3 +204,16 @@
     }
   }
 }
+
+.companyDropdown {
+  :global {
+    .Select .Select-menu-outer {
+      @include textWrap();
+
+      right: -1px;
+      left: auto;
+      min-width: 210px;
+      max-width: 310px;
+    }
+  }
+}

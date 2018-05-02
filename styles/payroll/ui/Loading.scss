@@ -1,9 +1,5 @@
 @import '../mixins';
 
-.loading {
-  @include abs();
-}
-
 .wrap {
   @include centeredFlexWrap();
 }

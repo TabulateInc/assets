@@ -185,14 +185,18 @@
   }
 }
 
-.left-20 {
-
+.filterRow {
   :global {
-
     .Select {
-
       .Select-control {
-        padding-left: 20px;
+        padding-left: $panel-filter-item-padding;
+        padding-right: $panel-filter-item-padding;
+        height: auto;
+        border: none;
+      }
+
+      .Select-arrow-zone {
+        margin-left: 5px;
       }
     }
   }

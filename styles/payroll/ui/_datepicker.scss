@@ -42,6 +42,31 @@
       }
     }
 
+    &.is-in-panel {
+      @include panelFilterItem();
+
+      padding-right: $panel-filter-item-padding;
+      padding-left: $panel-filter-item-padding;
+      width: auto;
+
+      .SingleDatePickerInput_calendarIcon {
+        padding-left: 0;
+        margin-left: 0;
+      }
+
+      .DateInput {
+        width: auto;
+
+        &:after {
+          right: 0;
+        }
+      }
+
+      .DateInput_input {
+        line-height: 23px;
+      }
+    }
+
     // This one looks as regular input inside Formrow
     &.plain {
 
@@ -758,7 +783,6 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
-    padding-right: 12px;
     color: $gray-new;
     background-color: #fff;
     width: 100%;
@@ -780,9 +804,6 @@
     font-weight: normal;
   }
   .DateInput_input__readOnly {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none
   }
   .DateInput_input__focused {

@@ -195,3 +195,10 @@
   position: relative;
   cursor: pointer;
 }
+
+@mixin panelFilterItem() {
+  max-width: 320px;
+  flex: 0 1 auto;
+  border-right: 1px solid $gray-light-new;
+  height: 100%;
+}

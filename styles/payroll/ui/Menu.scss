@@ -8,11 +8,6 @@
 
 .nav {
   @include lightBox();
-
-}
-
-.title {
-  @include heading();
 }
 
 .list {

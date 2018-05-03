@@ -124,12 +124,14 @@
 }
 
 .as-main-nav {
+  width: auto;
 
   :global {
 
     .Select {
 
       .Select-control {
+        padding: 0;
         border: none;
         height: auto;
       }
@@ -141,10 +143,14 @@
       .Select-value-label {
         font-weight: 300;
         font-size: 27px;
+
+        @media (max-width: $screen-xs-max) {
+          font-size: 19px;
+        }
       }
 
       .Select-arrow-zone {
-        top: -8px;
+        top: -10px;
         margin: 0 3px;
       }
 

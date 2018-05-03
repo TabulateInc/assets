@@ -1,7 +1,8 @@
 @import "../mixins";
 
 .wrapper {
-  margin: 40px 20px;
+  margin-left: 5px;
+  margin-right: 5px;
 
   @media (max-width: $screen-lg-min) {
     @include customScroll();

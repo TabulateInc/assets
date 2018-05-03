@@ -32,33 +32,7 @@
   padding: 0;
 }
 
-.control-height-78 {
-  height: 78px;
-  margin: 0;
-  border-bottom: 1px solid $gray-light-new;
-}
-
-.column-start {
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
 .no-indent {
   margin: 0;
   padding: 0;
-}
-
-.with-hover {
-  &:hover {
-    background-color: $table-bg-hover;
-  }
-}
-
-.border-bottom {
-  border-bottom: 1px solid $gray-light-new;
-}
-
-.height-52 {
-  height: 52px;
 }

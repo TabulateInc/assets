@@ -3,6 +3,7 @@
 $gray-panel: #7b8994;
 $img-height: 36px;
 $img-width: 30px;
+$img-to-text: 20px;
 
 .wrapper {
   @include clearfix();
@@ -28,6 +29,7 @@ $img-width: 30px;
   background: url('../../../img/analytics.svg') no-repeat;
   background-size: $img-width $img-height;
   float: left;
+  margin-right: $img-to-text;
 }
 
 .about {
@@ -35,8 +37,7 @@ $img-width: 30px;
   flex-direction: column;
   justify-content: center;
   min-height: $img-height;
-  padding-left: 50px - $img-width;
-  width: calc(100% - #{$img-width});
+  width: calc(100% - #{$img-width + $img-to-text});
   line-height: $line-height-base;
 }
 

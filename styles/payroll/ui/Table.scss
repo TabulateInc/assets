@@ -2,13 +2,14 @@
 
 .wrapper {
   @include customScroll();
+
   padding: 1px;
   margin: -1px;
 }
 
 .table {
   width: 100%;
-  margin: 40px 0 18px;
+  margin: 0 0 18px;
   padding: 0;
   background: none;
   border-collapse: collapse;
@@ -67,19 +68,20 @@
   box-shadow: 0 1px 0 0 $gray-light-new;
 }
 
-.top-4 {
+.headerSort {
+  &:hover {
+    color: $gray-darkest-new;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.payEmployeesForm {
   margin-top: 4px;
-}
-
-.bottom-4 {
   margin-bottom: 4px;
-}
-
-.no-margin-top {
-  margin-top: 0;
-}
-
-.small {
+  border: 0 none;
+  box-shadow: none;
 
   th {
     font-size: 12px;
@@ -90,18 +92,30 @@
     min-width: 90px;
     padding-left: 5px;
     padding-right: 5px;
+    text-align: right;
 
     &:first-child {
       min-width: 140px;
       padding-left: 20px;
+      text-align: left;
     }
     &:last-child {
       padding-right: 20px;
     }
   }
 
-  @media (max-width: $screen-xxs-max) {
+  tr {
+    height: 80px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
 
+    &:last-child {
+      height: 60px;
+    }
+  }
+
+  @media (max-width: $screen-xxs-max) {
     th,
     td {
       &:first-child {
@@ -111,47 +125,5 @@
         padding-right: 10px;
       }
     }
-  }
-}
-
-.high {
-  tr {
-    height: 80px;
-
-    &:last-child {
-      height: 60px;
-    }
-  }
-}
-
-.align-right {
-
-  th,
-  td {
-    text-align: right;
-
-    &:first-child {
-      text-align: left;
-    }
-  }
-}
-
-.no-border {
-  border: 0 none;
-  box-shadow: none;
-
-  tr {
-    border-left: none;
-    border-right: none;
-    border-top: none;
-  }
-}
-
-.headerSort {
-  &:hover {
-    color: $gray-darkest-new;
-    cursor: pointer;
-    user-select: none;
-    transition: all 0.3s ease-in-out;
   }
 }

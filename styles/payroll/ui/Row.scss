@@ -1,38 +1,27 @@
 .row {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 15px 0;
-  padding: 0 20px;
-
-  @media (max-width: $screen-xs-max) {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+  width: 100%;
+  justify-content: space-between;
 }
 
-.flex-end {
+.make-primary {
+  margin-bottom: 20px;
+}
+
+.form-buttons {
   justify-content: flex-end;
 
   @media (max-width: $screen-xs-max) {
     justify-content: center;
   }
-}
 
-.jumbo {
-  height: 42px;
-  margin: 0 0 5px;
-  border: 1px solid $gray-light-new;
-  border-radius: 2px;
-}
+  &.pay-employees-buttons {
+    padding: 35px 20px;
 
-.sub-head {
-  margin: 0px -1px 20px;
-  padding: 0;
-}
-
-.no-indent {
-  margin: 0;
-  padding: 0;
+    @media (max-width: $screen-xs-max) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
 }

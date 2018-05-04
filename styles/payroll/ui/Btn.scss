@@ -6,7 +6,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 20px;
   background-color: $white;
   border: 1px solid $gray-lighter-new;
   font-size: 14px;
@@ -34,15 +34,6 @@
     background-color: $gray-lighter-new;
     border-color: $gray-lighter-new;
   }
-}
-
-.pad-15 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.group {
-  margin: 0 10px;
 }
 
 .as-icon {
@@ -91,10 +82,6 @@
 
 .font-16 {
   font-size: 16px;
-}
-
-.font-20 {
-  font-size: 20px;
 }
 
 .opacity-hover {
@@ -185,4 +172,14 @@
 
 .hidden {
   visibility: hidden;
+}
+
+.in-group {
+  margin-left: 20px;
+  min-width: 125px;
+
+  @media (max-width: $screen-xxs-max) {
+    margin-left: 0;
+    width: 48%;
+  }
 }

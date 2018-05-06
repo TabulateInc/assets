@@ -1,0 +1,25 @@
+@import '../mixins';
+
+.btn {
+  @include btn();
+
+  font-size: 24px;
+  color: $gray-text;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  width: 30px;
+  height: 30px;
+
+  @media (max-width: $screen-xs-max) {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.alert-close {
+  font-size: 14px;
+  color: $alert-danger-text;
+}

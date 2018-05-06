@@ -202,3 +202,19 @@
   border-right: 1px solid $gray-light-new;
   height: 100%;
 }
+
+@mixin btn() {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  outline: 0 none;
+  transition: all .2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    outline: 0 none;
+  }
+}

@@ -1,0 +1,47 @@
+@import '../mixins';
+
+.btn {
+  @include btn();
+
+  background: center center no-repeat;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
+
+  @media (max-width: $screen-xs-max) {
+    background-size: 25px;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@each $img in ellipses, back, search, close, profile, logout {
+  .#{$img} {
+    background-image: url('../../../img/#{$img}.svg');
+  }
+}
+
+.check {
+  background-image: url('../../../img/checkmark.dark.svg');
+}
+
+.mobile-top-left,
+.mobile-top-right {
+  position: fixed;
+  top: 0;
+  height: $main-navigation-height-mobile;
+  z-index: $zindex-modal;
+}
+
+.mobile-top-left {
+  left: 5px;
+}
+
+.mobile-top-right {
+  right: 5px;
+}

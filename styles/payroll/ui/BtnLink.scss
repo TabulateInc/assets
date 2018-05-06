@@ -1,0 +1,14 @@
+@import '../mixins';
+
+.btn {
+  @include btn();
+
+  white-space: nowrap;
+  line-height: 1;
+  font-size: $font-size-base;
+  color: $brand-primary;
+
+  &:hover {
+    color: darken($brand-primary, 15);
+  }
+}

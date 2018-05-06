@@ -16,7 +16,7 @@ $icon-height: $bar-height*3 + $to-top-bar*2;
   z-index: $zindex-navbar-fixed;
 
   @media (min-width: $screen-sm-min) {
-    height: 73px;
+    height: $main-navigation-height;
     align-items: center;
     border-bottom: 1px solid $gray-light-new;
     padding: 5px 40px;
@@ -79,16 +79,13 @@ $icon-height: $bar-height*3 + $to-top-bar*2;
 .mobileToggler {
   position: absolute !important;
   top: 0;
-  left: 0;
-  @include actions-button($icon-height, $icon-width);
-  background-color: transparent;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  left: 5px;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
-
-  &:focus {
-    outline: 0;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $main-navigation-height-mobile;
 }
 
 .iconBar {

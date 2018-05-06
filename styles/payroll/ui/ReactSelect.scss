@@ -39,10 +39,9 @@
       .Select-option {
         display: flex;
         margin: 4px 0;
-        padding: 0;
         align-items: center;
         border-radius: 2px;
-        font-size: 14px;
+        font-size: $font-size-base;
         padding: 12px 25px;
         white-space: nowrap;
         cursor: pointer;

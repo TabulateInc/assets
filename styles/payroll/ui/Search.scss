@@ -5,13 +5,6 @@
   to { left: -37px; }
 }
 
-.openButton {
-  position: fixed;
-  top: 2px;
-  right: 7px;
-  z-index: $zindex-modal;
-}
-
 .search {
   display: flex;
 
@@ -292,26 +285,29 @@
       }
 
       .Select-control {
-        padding: 0 44px;
-        height: auto !important;
-        min-height: 44px;
-        margin-bottom: 1px;
+        padding: 0 48px;
+        min-height: $main-navigation-height-mobile;
+        height: auto;
+        top: 0;
 
         &:after {
-          top: 5px !important;
+          top: 0 !important;
           right: 5px !important;
+          width: 25px !important;
+          height: $main-navigation-height-mobile !important;
+          background-size: 25px !important;
         }
       }
 
       .Select-multi-value-wrapper {
         position: relative;
-        top: -1px;
+        top: 0;
         flex-wrap: wrap;
-        padding: 5px 0 0;
       }
 
-      .Select-value {
-        margin-bottom: 5px;
+      .Select-value,
+      .Select-input {
+        margin-top: 3px;
       }
 
       .Select-arrow-zone {
@@ -374,12 +370,3 @@
     }
   }
 }
-
-.searchClose {
-  position: absolute;
-  top: 6px;
-  left: 5px;
-  z-index: $zindex-modal;
-}
-
-

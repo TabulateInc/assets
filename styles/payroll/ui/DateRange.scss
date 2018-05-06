@@ -104,10 +104,6 @@ $caret-margin-left: 5px;
   text-align: right;
 }
 
-.header {
-  height: $main-navigation-height-mobile;
-}
-
 :global {
   .date-range-picker {
     width: 100%;
@@ -150,14 +146,9 @@ $caret-margin-left: 5px;
       margin: 0 auto;
     }
 
-    .DayPicker_weekHeader__verticalScrollable {
-
-    }
-
     &.mobile {
       .DayPicker__horizontal {
         height: 100vh;
-        margin-top: -35px;
         display: flex;
         flex-direction: column;
         justify-content: center;

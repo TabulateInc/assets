@@ -23,7 +23,7 @@
     tr {
       &:first-child {
         th {
-          font-size: 12px;
+          font-size: $font-size-small;
           border-bottom: 1px solid black;
         }
       }

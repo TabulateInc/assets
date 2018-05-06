@@ -11,7 +11,17 @@
 }
 
 .title {
+  text-align: center;
   margin-bottom: 14px;
-  font-size: 25px;
   color: $gray-new;
+}
+
+.children {
+  text-align: center;
+  font-size: 18px;
+  color: $gray-middle-new;
+
+  @media (max-width: $screen-xs-max) {
+    font-size: 15px;
+  }
 }

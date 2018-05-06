@@ -1,6 +1,5 @@
 @import '../../project/mixins/clearfix';
 
-$gray-panel: #7b8994;
 $img-height: 36px;
 $img-width: 30px;
 $img-to-text: 20px;
@@ -38,11 +37,5 @@ $img-to-text: 20px;
   justify-content: center;
   min-height: $img-height;
   width: calc(100% - #{$img-width + $img-to-text});
-  line-height: $line-height-base;
 }
 
-.description {
-  color: $gray-panel;
-  line-height: $line-height-base;
-  font-size: 13px;
-}

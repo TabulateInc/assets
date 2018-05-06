@@ -9,16 +9,12 @@ $caret-margin-left: 5px;
 
 .btnOpen {
   @include panelFilterItem();
+  @include btn();
 
   padding-right: $panel-filter-item-padding + $caret-width + $caret-margin-left;
   padding-left: $panel-filter-item-padding;
   transition: border-color ease-in-out .15s;
   color: $gray-new;
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  user-select: none;
 
   &::after {
     @include arrowBottom();

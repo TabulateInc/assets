@@ -156,6 +156,10 @@
           max-height: 350px;
           overflow-y: scroll;
         }
+
+        @media (max-width: $screen-xs-max) {
+          display: none !important;
+        }
       }
     }
   }

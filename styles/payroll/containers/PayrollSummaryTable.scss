@@ -56,13 +56,11 @@
 
 .th {
   padding: 7px 4px;
-  max-width: 100px;
   word-break: break-word;
 }
 
 .td {
   padding: 4px;
-  max-width: 100px;
   vertical-align: top;
   word-break: break-word;
 }
@@ -74,6 +72,12 @@
 .cell-8,
 .cell-10 {
   text-align: left;
+
+  .text {
+    @include textWrap();
+
+    max-width: 100px;
+  }
 }
 
 .cell-1,
@@ -81,8 +85,7 @@
 .cell-5,
 .cell-7,
 .cell-9,
-.cell-11,
-.cell-12 {
+.cell-11 {
   text-align: right;
 }
 

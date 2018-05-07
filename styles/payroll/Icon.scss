@@ -85,7 +85,17 @@
   border-radius: 33%;
 }
 
-
 .hidden {
   visibility: hidden;
+}
+
+.mobile-top-left {
+  position: fixed;
+  top: 0;
+  height: $main-navigation-height-mobile;
+  z-index: $zindex-modal;
+  left: 5px;
+  margin: 0;
+  background-position: center;
+  width: 25px;
 }

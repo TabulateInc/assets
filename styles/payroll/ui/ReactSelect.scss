@@ -46,15 +46,10 @@
         white-space: nowrap;
         cursor: pointer;
 
-        &:hover {
-          background-color: $gray-lightest-new;
-        }
-
+        &:hover,
+        &.is-focused,
         &.is-selected {
           background-color: $gray-lightest-new;
-        }
-        &.is-focused {
-
         }
       }
 
@@ -99,24 +94,6 @@
             border-color: $gray-lightest-new;
           }
         }
-      }
-    }
-  }
-}
-
-.plain {
-
-  :global {
-
-    .Select {
-
-      .Select-control {
-        height: auto;
-        border: none;
-      }
-
-      .Select-arrow-zone {
-        margin-left: 5px;
       }
     }
   }
@@ -201,28 +178,27 @@
   }
 }
 
-.no-indent {
-
+.companyDropdown {
   :global {
-
     .Select {
+      .Select-menu-outer {
+        @include textWrap();
+
+        right: -1px;
+        left: auto;
+        min-width: 210px;
+        max-width: 310px;
+      }
 
       .Select-control {
         padding: 0;
+        height: auto;
+        border: none;
       }
-    }
-  }
-}
 
-.companyDropdown {
-  :global {
-    .Select .Select-menu-outer {
-      @include textWrap();
-
-      right: -1px;
-      left: auto;
-      min-width: 210px;
-      max-width: 310px;
+      .Select-arrow-zone {
+        margin-left: 5px;
+      }
     }
   }
 }

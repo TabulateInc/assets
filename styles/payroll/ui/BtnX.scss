@@ -19,7 +19,18 @@
   }
 }
 
+
 .alert-close {
   font-size: 14px;
   color: $alert-danger-text;
+}
+
+.tag-remove {
+  font-size: 14px;
+  color: $brand-primary;
+
+  @media (max-width: $screen-xs-max) {
+    width: 30px;
+    height: 30px;
+  }
 }

@@ -5,6 +5,51 @@
   to { left: -37px; }
 }
 
+.selectValue {
+  position: relative;
+  height: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5px 0 0;
+  background: $white;
+  border: 1px solid $brand-primary;
+  border-radius: 3px;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 29px;
+    bottom: 0;
+    content: '';
+    width: 1px;
+    background-color: $brand-primary;
+  }
+
+  &:hover {
+    :global {
+      .Select-tooltip {
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    margin-top: 3px;
+  }
+}
+
+.selectValueLabel {
+  @include textWrap();
+
+  display: inline-block;
+  max-width: 7ch;
+  margin: 0 10px;
+  padding: 0;
+  color: $gray-new;
+}
+
 .search {
   display: flex;
 
@@ -28,16 +73,12 @@
       }
     }
 
-    .Select,
-    .Select-control {
-      width: 100%;
-    }
-
     .Select {
       position: relative;
       display: flex;
       align-items: center;
       padding: 0 20px;
+      width: 100%;
 
       &.is-open,
       &.is-focused {
@@ -82,11 +123,12 @@
     }
 
     .Select-control {
+      width: 100%;
       height: 36px;
       position: relative;
       display: flex;
       align-items: center;
-      top: 3px;
+      top: 1px;
       padding-bottom: 2px;
       white-space: nowrap;
       -webkit-appearance: textfield;
@@ -138,133 +180,87 @@
       width: 0;
     }
 
-    .Select--multi {
-      .Select-multi-value-wrapper {
-        display: flex;
-        align-items: center;
-      }
+    .Select-multi-value-wrapper {
+      display: flex;
+      align-items: center;
+    }
 
-      .Select-value {
-        position: relative;
-        height: 30px;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 5px 0 0;
+    .Select-noresults {
+      padding: 15px 30px;
+      z-index: 99999;
+    }
+
+    .Select-value-icon {
+      display: inline-flex;
+      width: 38px;
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      border-right: none;
+      font-weight: 700;
+      font-size: 16px;
+      color: $brand-primary;
+      line-height: 1;
+
+      &:hover {
         background: $white;
-        border: 1px solid $brand-primary;
-        border-radius: 3px;
-
-        &:after {
-          position: absolute;
-          top: 0;
-          right: 38px;
-          bottom: 0;
-          content: '';
-          width: 1px;
-          background-color: $brand-primary;
-        }
-
-        &:hover {
-          .Select-tooltip {
-            opacity: 1 !important;
-          }
-        }
-      }
-
-      .Select-noresults {
-        padding: 15px 30px;
-        z-index: 99999;
-      }
-
-      .Select-value-label {
-        display: inline-block;
-        max-width: 7ch;
-        @include textWrap();
-        margin: 0 10px;
-        padding: 0;
-        color: $gray-new;
-      }
-
-      .Select-value-icon {
-        display: inline-flex;
-        width: 38px;
-        padding: 0;
-        justify-content: center;
-        align-items: center;
-        border-right: none;
-        font-weight: 700;
-        font-size: 16px;
-        color: $brand-primary;
-        line-height: 1;
-
-        &:hover {
-          background: $white;
-        }
-      }
-
-      .Select-option {
-        margin: 5px 0;
-        padding: 8px 25px;
-        background: $white;
-
-        &.is-focused {
-          background: $white;
-          color: $gray-new;
-        }
-
-        &:hover {
-          background-color: $gray-lightest-new;
-        }
-      }
-
-      .Select-tooltip {
-        opacity: 0 !important;
-        position: absolute;
-        top: -28px;
-        left: 0;
-        right: 0;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: opacity 0.2s ease-in-out;
-        z-index: $zindex-tooltip;
-      }
-
-      .Select-tooltip-inner {
-        max-width: 500px;
-        background: $form-font-color;
-        padding: 3px 8px;
-        color: $white;
-        border-radius: 3px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: visible;
-        font-size: $font-size-small;
-        line-height: 1.2;
-        user-select: none;
-
-        &:after {
-          content: '';
-          width: 0;
-          height: 0;
-          position: absolute;
-          bottom: -5px;
-          left: 50%;
-          margin-left: -5px;
-          border-color: transparent;
-          border-style: solid;
-          border-width: 5px 5px 0;
-          border-top-color: $form-font-color;
-        }
       }
     }
 
-    @media (max-width: $screen-xxs-max) {
-      .Select {
-        padding: 0 10px;
+    .Select-option {
+      margin: 5px 0;
+      padding: 8px 25px;
+      background: $white;
+
+      &.is-focused {
+        background: $gray-lightest-new;
+        color: $gray-new;
+      }
+
+      &:hover {
+        background-color: $gray-lightest-new;
+      }
+    }
+
+    .Select-tooltip {
+      opacity: 0 !important;
+      position: absolute;
+      top: -28px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.2s ease-in-out;
+      z-index: $zindex-tooltip;
+    }
+
+    .Select-tooltip-inner {
+      max-width: 500px;
+      background: $form-font-color;
+      padding: 3px 8px;
+      color: $white;
+      border-radius: 3px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: visible;
+      font-size: $font-size-small;
+      line-height: 1.2;
+      user-select: none;
+
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        margin-left: -5px;
+        border-color: transparent;
+        border-style: solid;
+        border-width: 5px 5px 0;
+        border-top-color: $form-font-color;
       }
     }
   }
@@ -305,15 +301,12 @@
         flex-wrap: wrap;
       }
 
-      .Select-value,
       .Select-input {
         margin-top: 3px;
       }
 
       .Select-arrow-zone {
-        top: 0 !important;
-        right: auto !important;
-        left: 0 !important;
+        display: none !important;
       }
 
       .Select-option {
@@ -336,6 +329,10 @@
         &:last-child {
           border-bottom: none;
         }
+
+        &.is-focused {
+          background: $white;
+        }
       }
 
       .Select-create-option-placeholder {
@@ -353,19 +350,15 @@
         }
       }
 
-      .Select-clear-zone {
-        right: 0;
-      }
-
       .Select-menu-outer {
         position: static !important;
         border: none !important;
         box-shadow: none !important;
         width: 100% !important;
-      }
 
-      .Select-arrow-zone {
-        display: none !important;
+        .Select-menu {
+          border-top: 1px solid $gray-light-new;
+        }
       }
     }
   }

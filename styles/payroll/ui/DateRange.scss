@@ -102,7 +102,6 @@ $caret-margin-left: 5px;
 
 :global {
   .date-range-picker {
-    width: 100%;
 
     @media (min-width: $screen-md-min) {
       height: $btn-daterange-open-height;

@@ -20,7 +20,7 @@
   }
 }
 
-@each $img in ellipses, back, search, close, profile, logout {
+@each $img in ellipses, back, search, close, profile, logout, filter {
   .#{$img} {
     background-image: url('../../../img/#{$img}.svg');
   }
@@ -44,4 +44,12 @@
 
 .mobile-top-right {
   right: 5px;
+}
+
+.filter {
+  position: absolute;
+  top: 0;
+  height: 60px;
+  right: 10px + 25px + 10px + 10px;
+  z-index: 50;
 }

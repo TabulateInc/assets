@@ -201,6 +201,13 @@
   flex: 0 1 auto;
   border-right: 1px solid $gray-light-new;
   height: 100%;
+
+  @media (max-width: $screen-xs-max) {
+    border: 1px solid $gray-light-new;
+    height: 40px;
+    margin: 10px auto;
+    width: 100%;
+  }
 }
 
 @mixin btn() {

@@ -166,8 +166,13 @@
 }
 
 .filterRow {
+  @media (max-width: $screen-xs-max) {
+    height: 100%;
+  }
+
   :global {
     .Select {
+
       .Select-control {
         padding-left: $panel-filter-item-padding;
         padding-right: $panel-filter-item-padding;

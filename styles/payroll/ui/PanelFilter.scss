@@ -4,3 +4,10 @@
   height: 52px;
   border-bottom: 1px solid $gray-light-new;
 }
+
+.header {
+  display: flex;
+  justify-content: center;
+  height: $main-navigation-height-mobile;
+  min-height: $main-navigation-height-mobile;
+}

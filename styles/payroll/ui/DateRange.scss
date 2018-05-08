@@ -103,6 +103,7 @@ $caret-margin-left: 5px;
 :global {
   .date-range-picker {
     width: 100%;
+
     @media (min-width: $screen-md-min) {
       height: $btn-daterange-open-height;
     }
@@ -150,6 +151,17 @@ $caret-margin-left: 5px;
         justify-content: center;
         background: transparent;
       }
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .btnOpen {
+    display: block;
+    text-align: left;
+
+    &:after {
+      top: (40px - 4px)/2;
     }
   }
 }

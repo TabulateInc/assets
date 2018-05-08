@@ -20,7 +20,7 @@
   }
 }
 
-@each $img in ellipses, back, search, close, profile, logout, filter {
+@each $img in ellipses, back, search, close, profile, logout, filter, trash {
   .#{$img} {
     background-image: url('../../../img/#{$img}.svg');
   }
@@ -52,4 +52,8 @@
   height: 60px;
   right: 10px + 25px + 10px + 10px;
   z-index: 50;
+}
+
+.panel-trash {
+  margin-right: 5px;
 }

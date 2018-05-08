@@ -1,21 +1,26 @@
 .document {
+  z-index: 1050;
   position: relative;
-  width: 90vw;
-  height: 90vh;
   background: $white;
 
   @media (min-width: $screen-sm-min) {
-    margin: 73px auto 30px;
+    width: 90vw;
+    height: 90vh;
+    margin: $main-navigation-height auto 30px;
   }
 
   @media (max-width: $screen-xs-max) {
     margin: 0 auto;
+    width: calc(100% - 25px*2);
   }
 }
 
 .btnWrapper {
   background: rgba(0, 0, 0, 0.3);
-  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: $main-navigation-height-mobile;
 }
 
 .shadow {

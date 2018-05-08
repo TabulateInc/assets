@@ -39,23 +39,17 @@
       .Select-option {
         display: flex;
         margin: 4px 0;
-        padding: 0;
         align-items: center;
         border-radius: 2px;
-        font-size: 14px;
+        font-size: $font-size-base;
         padding: 12px 25px;
         white-space: nowrap;
         cursor: pointer;
 
-        &:hover {
-          background-color: $gray-lightest-new;
-        }
-
+        &:hover,
+        &.is-focused,
         &.is-selected {
           background-color: $gray-lightest-new;
-        }
-        &.is-focused {
-
         }
       }
 
@@ -105,31 +99,15 @@
   }
 }
 
-.plain {
-
-  :global {
-
-    .Select {
-
-      .Select-control {
-        height: auto;
-        border: none;
-      }
-
-      .Select-arrow-zone {
-        margin-left: 5px;
-      }
-    }
-  }
-}
-
 .as-main-nav {
+  width: auto;
 
   :global {
 
     .Select {
 
       .Select-control {
+        padding: 0;
         border: none;
         height: auto;
       }
@@ -141,10 +119,14 @@
       .Select-value-label {
         font-weight: 300;
         font-size: 27px;
+
+        @media (max-width: $screen-xs-max) {
+          font-size: 19px;
+        }
       }
 
       .Select-arrow-zone {
-        top: -8px;
+        top: -10px;
         margin: 0 3px;
       }
 
@@ -174,32 +156,32 @@
           max-height: 350px;
           overflow-y: scroll;
         }
+
+        @media (max-width: $screen-xs-max) {
+          display: none !important;
+        }
       }
     }
   }
 }
 
-.left-20 {
-
-  :global {
-
-    .Select {
-
-      .Select-control {
-        padding-left: 20px;
-      }
-    }
+.filterRow {
+  @media (max-width: $screen-xs-max) {
+    height: 100%;
   }
-}
-
-.no-indent {
 
   :global {
-
     .Select {
 
       .Select-control {
-        padding: 0;
+        padding-left: $panel-filter-item-padding;
+        padding-right: $panel-filter-item-padding;
+        height: auto;
+        border: none;
+      }
+
+      .Select-arrow-zone {
+        margin-left: 5px;
       }
     }
   }
@@ -207,13 +189,25 @@
 
 .companyDropdown {
   :global {
-    .Select .Select-menu-outer {
-      @include textWrap();
+    .Select {
+      .Select-menu-outer {
+        @include textWrap();
 
-      right: -1px;
-      left: auto;
-      min-width: 210px;
-      max-width: 310px;
+        right: -1px;
+        left: auto;
+        min-width: 210px;
+        max-width: 310px;
+      }
+
+      .Select-control {
+        padding: 0;
+        height: auto;
+        border: none;
+      }
+
+      .Select-arrow-zone {
+        margin-left: 5px;
+      }
     }
   }
 }

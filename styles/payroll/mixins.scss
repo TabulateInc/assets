@@ -132,22 +132,6 @@
   z-index: $zindex-dropdown;
 }
 
-@mixin heading() {
-  position: relative;
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  border-bottom: 1px solid $gray-light-new;
-  z-index: 50;
-
-  @media (max-width: $screen-xs-max) {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
 @mixin arrowBottom() {
   position: relative;
   display: inline-flex;
@@ -210,4 +194,34 @@
   height: $icon-height;
   position: relative;
   cursor: pointer;
+}
+
+@mixin panelFilterItem() {
+  max-width: 320px;
+  flex: 0 1 auto;
+  border-right: 1px solid $gray-light-new;
+  height: 100%;
+
+  @media (max-width: $screen-xs-max) {
+    border: 1px solid $gray-light-new;
+    height: 40px;
+    margin: 10px auto;
+    width: 100%;
+  }
+}
+
+@mixin btn() {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  outline: 0 none;
+  transition: all .2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    outline: 0 none;
+  }
 }

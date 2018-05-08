@@ -1,3 +1,20 @@
 .listWrapper {
   margin-bottom: 15px;
 }
+
+.row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  height: 42px;
+  margin: 0 0 5px;
+  padding: 0 20px;
+  border: 1px solid $gray-light-new;
+  border-radius: 2px;
+
+  @media (max-width: $screen-xs-max) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

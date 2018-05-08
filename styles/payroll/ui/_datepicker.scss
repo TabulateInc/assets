@@ -42,6 +42,37 @@
       }
     }
 
+    &.is-in-panel {
+      @include panelFilterItem();
+
+      display: flex;
+      align-items: center;
+      padding-right: $panel-filter-item-padding;
+      padding-left: $panel-filter-item-padding;
+      width: auto;
+
+      .SingleDatePickerInput_calendarIcon {
+        padding-left: 0;
+        margin-left: 0;
+      }
+
+      .SingleDatePicker_picker {
+        margin-top: -30px;
+      }
+
+      .DateInput {
+        width: 100%;
+
+        &:after {
+          right: 0;
+        }
+      }
+
+      .DateInput_input {
+        padding: 0;
+      }
+    }
+
     // This one looks as regular input inside Formrow
     &.plain {
 
@@ -199,7 +230,7 @@
   .SingleDatePicker_picker__fullScreenPortal {
     background-color: #fff;
     z-index: $zindex-modal;
-    margin-top: -70px;
+    margin-top: 0;
 
     .DayPicker {
       height: 100vh !important;
@@ -244,7 +275,7 @@
     overflow: visible;
     padding: 0;
     cursor: pointer;
-    font-size: 14px
+    font-size: $font-size-base
   }
   .DayPickerKeyboardShortcuts_buttonReset:active {
     outline: 0
@@ -319,7 +350,7 @@
   .DayPickerKeyboardShortcuts_list {
     list-style: none;
     padding: 0;
-    font-size: 14px
+    font-size: $font-size-base
   }
   .DayPickerKeyboardShortcuts_close {
     position: absolute;
@@ -343,7 +374,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     cursor: pointer;
-    font-size: 14px;
+    font-size: $font-size-base;
     border-radius: 4px !important;
     border: none !important;
     text-align: center;
@@ -461,14 +492,14 @@
   }
   .CalendarMonth_caption {
     color: #565a5c;
-    font-size: 14px;
+    font-size: $font-size-base;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 50px;
     caption-side: initial;
   }
   .CalendarMonth_caption__verticalScrollable {
-    padding-top: 12px;
+    padding-top: 10px;
     padding-bottom: 7px
   }
   .CalendarMonthGrid {
@@ -692,7 +723,7 @@
     margin-top: -5px;
     padding-left: 0;
     padding-right: 0;
-    font-size: 14px;
+    font-size: $font-size-base;
 
     small {
       font-weight: bold;
@@ -756,9 +787,8 @@
   }
   .DateInput_input {
     font-weight: 400;
-    font-size: 14px;
+    font-size: $font-size-base;
     line-height: 24px;
-    padding-right: 12px;
     color: $gray-new;
     background-color: #fff;
     width: 100%;
@@ -772,7 +802,7 @@
     }
   }
   .DateInput_input__small {
-    font-size: 14px;
+    font-size: $font-size-base;
     line-height: 18px;
     padding: 8px 8px 6px
   }
@@ -780,9 +810,6 @@
     font-weight: normal;
   }
   .DateInput_input__readOnly {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none
   }
   .DateInput_input__focused {

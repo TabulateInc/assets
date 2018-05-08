@@ -712,7 +712,7 @@ $nav-header-content-height: 39px;
 $nav-header-padding-ver: 15px;
 $nav-header-padding-hor: 40px;
 $nav-header-padding: $nav-header-padding-ver $nav-header-padding-hor;
-$main-navigation-height: $nav-header-content-height + $nav-header-padding-ver*2 + 1px;
+$main-navigation-height: 71px;
 $main-navigation-height-mobile: 40px;
 $main-navigation-to-content: 30px;
 $main-navigation-to-content-mobile: 15px;
@@ -821,3 +821,5 @@ $chart-indent-xs: 30px;
 $chart-border-radius: 2px;
 $chart-base-width: 200px;
 $chart-base-font-size: 12px;
+
+$panel-filter-item-padding: 20px;

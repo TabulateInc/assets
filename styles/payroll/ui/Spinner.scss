@@ -1,7 +1,10 @@
+@import '../mixins';
+
 .spinner {
-  width: $spinner-sm;
-  height: 100%;
+  @include abs();
   margin: auto;
+  height: 100%;
+  width: $spinner-sm;
   fill: $spinner-light-color;
   stroke: $spinner-light-color;
 }

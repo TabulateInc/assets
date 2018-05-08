@@ -1,75 +1,27 @@
-@import "../mixins";
-
 .row {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 15px 0;
-  padding: 0 20px;
-
-  @media (max-width: $screen-xs-max) {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+  width: 100%;
+  justify-content: space-between;
 }
 
-.flex-end {
+.make-primary {
+  margin-bottom: 20px;
+}
+
+.form-buttons {
   justify-content: flex-end;
 
   @media (max-width: $screen-xs-max) {
     justify-content: center;
   }
-}
 
-.flex-start {
-  justify-content: flex-start;
-}
+  &.pay-employees-buttons {
+    padding: 35px 20px;
 
-.jumbo {
-  height: 42px;
-  margin: 0 0 5px;
-  border: 1px solid $gray-light-new;
-  border-radius: 2px;
-}
-
-.sub-head {
-  margin: 0px -1px 20px;
-  padding: 0;
-}
-
-.as-heading {
-  @include heading();
-  margin: 0;
-}
-
-.control-height-78 {
-  height: 78px;
-  margin: 0;
-  border-bottom: 1px solid $gray-light-new;
-}
-
-.column-start {
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.no-indent {
-  margin: 0;
-  padding: 0;
-}
-
-.with-hover {
-  &:hover {
-    background-color: $table-bg-hover;
+    @media (max-width: $screen-xs-max) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
-}
-
-.border-bottom {
-  border-bottom: 1px solid $gray-light-new;
-}
-
-.height-52 {
-  height: 52px;
 }

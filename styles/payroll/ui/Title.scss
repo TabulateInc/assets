@@ -13,10 +13,12 @@
   }
 }
 
-.title {
-  font-size: 27px;
-}
+@media (min-width: $screen-sm-min) {
+  .title {
+    font-size: 27px;
+  }
 
-.title2 {
-  font-size: 21px;
+  .title2 {
+    font-size: 21px;
+  }
 }

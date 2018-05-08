@@ -7,16 +7,18 @@
   height: 100vh;
 }
 
-.title {
+.header,
+.close {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 12px;
+  height: $main-navigation-height-mobile;
+  min-height: $main-navigation-height-mobile;
 }
 
 .list {
   margin: 0;
-  padding: 11px 5px;
+  padding-right: 48px;
   flex: 1;
   background: $white;
 }
@@ -26,10 +28,6 @@
   align-items: center;
   margin: 3px 0;
   background: $white;
-
-  span {
-    margin-right: 13px;
-  }
 }
 
 .span {

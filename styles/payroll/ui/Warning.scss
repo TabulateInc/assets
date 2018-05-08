@@ -21,6 +21,7 @@
   text-align: center;
   font-size: 18px;
   color: $gray-middle-new;
+  line-height: $line-height-base;
 
   @media (max-width: $screen-xs-max) {
     font-size: 15px;

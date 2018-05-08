@@ -21,6 +21,11 @@
   @include circle();
 
   background-color: #7fc957;
+
+  &.warning {
+    background-color: transparent;
+    color: #7fc957;
+  }
 }
 
 .sorting {

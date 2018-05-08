@@ -1,14 +1,14 @@
 .alert {
-  text-align: center;
-  margin: 0 auto;
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: $alert-z-index;
-  padding: $alert-margin-vertical $alert-margin-horizontal;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  z-index: $alert-z-index;
+  text-align: center;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  padding: $alert-margin-vertical $alert-margin-horizontal;
 }
 
 .alertSuccess {

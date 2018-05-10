@@ -184,7 +184,7 @@ $border-radius-lg:          10px;
 
 $border-color-base:         $gray-light-new;
 $border-gray-color:         $middle-gray-color;
-
+$border-base:               1px solid $border-color-base;
 
 //== Components
 //
@@ -823,3 +823,10 @@ $panel-filter-item-padding: 20px;
 $breadcrumb-header-max-width: 199px;
 $btn-icon-size: 30px;
 $btn-icon-size-mobile: 25px;
+
+$title-font: 27px;
+$title-font-mobile: 19px;
+$title2-font: 21px;
+$title2-font-mobile: 19px;
+
+$nav-logo-size: 40px;

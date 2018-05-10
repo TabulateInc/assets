@@ -12,9 +12,10 @@
       position: relative;
 
       .Select-control {
+        @include formElement();
+
         width: 100%;
         position: relative;
-        @include formElement();
         padding-right: 10px;
         display: flex;
         align-items: center;
@@ -22,8 +23,9 @@
       }
 
       .Select-multi-value-wrapper {
-        display: flex;
         @include textWrap();
+
+        display: flex;
       }
 
       .Select-menu-outer {
@@ -40,7 +42,7 @@
         display: flex;
         margin: 4px 0;
         align-items: center;
-        border-radius: 2px;
+        color: $gray-new;
         font-size: $font-size-base;
         padding: 12px 25px;
         white-space: nowrap;
@@ -118,10 +120,10 @@
 
       .Select-value-label {
         font-weight: 300;
-        font-size: 27px;
+        font-size: $title-font;
 
         @media (max-width: $screen-xs-max) {
-          font-size: 19px;
+          font-size: $title-font-mobile;
         }
       }
 

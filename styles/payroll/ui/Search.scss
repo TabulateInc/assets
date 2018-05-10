@@ -266,7 +266,7 @@
     .Select {
       flex-direction: column;
       padding: 0 !important;
-      border-bottom: 1px solid $gray-light-new;
+      border-bottom: $border-base;
 
       .Select-clear-zone {
         top: 5px !important;
@@ -304,7 +304,7 @@
 
       .Select-option {
         position: relative;
-        border-bottom: 1px solid $gray-light-new;
+        border-bottom: $border-base;
         padding: 13px 0;
         margin: 0 44px;
 
@@ -350,7 +350,7 @@
         width: 100% !important;
 
         .Select-menu {
-          border-top: 1px solid $gray-light-new;
+          border-top: $border-base;
         }
       }
     }

@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   height: $panel-new-filter-height;
-  border-bottom: 1px solid $border-color-base;
+  border-bottom: $border-base;
 }
 
 .checkbox {

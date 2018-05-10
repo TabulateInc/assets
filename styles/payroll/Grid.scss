@@ -4,11 +4,12 @@ $grid-columns: 18;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(18, 1fr);
-  grid-gap: 20px;  // TODO
+  grid-gap: $panel-new-padding-hor;
 
   @media (max-width: $screen-sm-max) {
-    grid-gap: 10px; // TODO
+    grid-gap: $panel-new-padding-hor-mobile;
   }
+
   @media (max-width: $screen-xs-max) {
     grid-gap: 0;
   }

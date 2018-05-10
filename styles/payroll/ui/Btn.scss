@@ -6,7 +6,7 @@
   white-space: nowrap;
   line-height: 1;
   font-size: $font-size-base;
-  height: 35px;
+  height: 33px;
   padding: 0 20px;
   border: 1px solid;
   border-radius: $border-radius-base;
@@ -15,13 +15,13 @@
 .default {
   color: $gray-new;
   background-color: $white;
-  border-color: $gray-lighter-new;
+  border-color: $border-color-base;
 
   &:hover,
   &:focus {
     color: $white;
     background-color: $gray-lighter-new;
-    border-color: $gray-lighter-new;
+    border-color: $border-color-base;
   }
 }
 
@@ -41,7 +41,7 @@
 .panel-header {
   color: $gray-new;
   background-color: $white;
-  border-color: $gray-lighter-new;
+  border-color: $border-color-base;
 
   &:hover,
   &:focus {
@@ -58,12 +58,6 @@
   height: 14px;
 }
 
-.spinner {
-  height: 30px;   // TODO
-  width: 30px;
-  background: url('../../../img/spinner.svg') center center no-repeat;
-}
-
 .disabled {
   cursor: not-allowed;
   pointer-events: none;
@@ -75,7 +69,7 @@
 }
 
 .in-group {
-  margin-left: 20px;
+  margin-left: $panel-new-padding-hor;
   min-width: 125px;
 
   @media (max-width: $screen-xxs-max) {
@@ -85,7 +79,7 @@
 }
 
 .date-range {
-  height: 30px;  // TODO
+  height: 30px;
   padding: 0 10px;
   margin-left: 8px;
   border-radius: 0;

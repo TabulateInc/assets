@@ -26,7 +26,6 @@
 .li {
   display: flex;
   align-items: center;
-  margin: 3px 0; // TODO
   background: $white;
 }
 
@@ -37,10 +36,10 @@
   flex: 1;
   display: flex;
   align-items: center;
-  font-size: 16px; // TODO
-  padding: 9px 0;
+  font-size: $actions-option-font-size;
+  padding: $actions-option-padding 0;
   background: $white;
-  border-bottom: 1px solid $border-color-base;
+  border-bottom: $border-base;
   line-height: $line-height-base;
 
   &:hover,

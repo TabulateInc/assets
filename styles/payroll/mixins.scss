@@ -23,8 +23,8 @@
 
 @mixin lightBox() {
   background-color: $white;
-  border: 1px solid $gray-light-new;
-  border-radius: 2px;
+  border: $border-base;
+  border-radius: $border-radius-base;
 }
 
 @mixin textWrap() {
@@ -151,12 +151,6 @@
   border-width: 0 5px 5px;  // TODO
 }
 
-@mixin tableCell() {
-  @include inlineFlexCenter();
-
-  border-radius: 4px;  // TODO
-}
-
 @mixin customScroll() {
   overflow-x: scroll !important;
 
@@ -174,11 +168,11 @@
 @mixin panelFilterItem() {
   max-width: 320px;  // TODO
   flex: 0 1 auto;
-  border-right: 1px solid $gray-light-new;
+  border-right: $border-base;
   height: 100%;
 
   @media (max-width: $screen-xs-max) {
-    border: 1px solid $gray-light-new;
+    border: $border-base;
     height: 40px;  // TODO
     margin: 10px auto;  // TODO
     width: 100%;

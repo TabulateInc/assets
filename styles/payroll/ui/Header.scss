@@ -18,8 +18,8 @@ $icon-height: $bar-height*3 + $to-top-bar*2;
   @media (min-width: $screen-sm-min) {
     height: $main-navigation-height;
     align-items: center;
-    border-bottom: 1px solid $gray-light-new;
-    padding: 5px $nav-header-padding-hor;  //TODO
+    border-bottom: $border-base;
+    padding: 0 $nav-header-padding-hor;
     background-color: $white;
   }
 
@@ -33,7 +33,6 @@ $icon-height: $bar-height*3 + $to-top-bar*2;
     justify-content: center;
     align-items: flex-start;
     border-bottom: none;
-    padding: 10px $nav-header-padding-hor-sm;  // TODO
     background: rgba(255, 255, 255, 0.8);
   }
 }
@@ -52,15 +51,16 @@ $icon-height: $bar-height*3 + $to-top-bar*2;
 
 .nav {
   justify-content: space-between;
+  height: 100%;
 }
 
 .menu {
   position: relative;
-  margin-left: 10px; // TODO
+  margin-left: 10px;
 }
 
 .item {
-  margin: 0 5px; // TODO
+  margin: 0 5px;
 
   &:last-child {
     margin-right: 0;
@@ -69,7 +69,6 @@ $icon-height: $bar-height*3 + $to-top-bar*2;
 
 .mobile {
   justify-content: center;
-  padding: 0 50px; // TODO
 }
 
 .mobileToggler {
@@ -78,7 +77,7 @@ $icon-height: $bar-height*3 + $to-top-bar*2;
   height: $main-navigation-height-mobile;
   position: absolute !important;
   top: 0;
-  left: 5px; // TODO
+  left: 5px;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
 }
@@ -124,8 +123,8 @@ $icon-height: $bar-height*3 + $to-top-bar*2;
   flex: 1;
   display: flex;
   align-items: center;
-  padding: 10px 0; // TODO
-  border-bottom: 1px solid $gray-light-new;
-  font-size: 16px; // TODO
+  padding: $actions-option-padding 0;
+  border-bottom: $border-base;
+  font-size: $actions-option-font-size;
   line-height: $line-height-base;
 }

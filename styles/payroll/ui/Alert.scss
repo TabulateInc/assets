@@ -18,7 +18,7 @@
   background-color: $alert-success-bg;
   color: $alert-success-text;
   width: $alert-success-width !important;
-  border-radius: $alert-border-radius;
+  border-radius: $border-radius-base;
 
   @media (min-width: $screen-sm-min) {
     top: $main-navigation-height + $alert-from-top;

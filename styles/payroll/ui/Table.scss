@@ -13,7 +13,6 @@
   padding: 0;
   background: none;
   border-collapse: collapse;
-  border-radius: 2px; // TODO
   border-style: hidden;
   box-shadow: 0 0 0 1px $gray-light-new;
   border-spacing: 0;
@@ -27,7 +26,7 @@
   }
 
   tr {
-    border: 1px solid $gray-light-new; // TODO
+    border: $border-base; // TODO
   }
 
   th,

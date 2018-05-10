@@ -1,20 +1,20 @@
 @import '../../project/mixins/clearfix';
+@import '../mixins';
 
 $img-height: 36px;
 $img-width: 30px;
 $img-to-text: 20px;
+$panel-padding-ver: 25px;
 
 .wrapper {
   @include clearfix();
+  @include panelHorPadding();
 
-  border-bottom: 1px solid $border-color-base;
+  border-bottom: $border-base;
   box-shadow: none;
   margin: 0;
-  padding: 25px $panel-new-padding-hor; // TODO
-
-  @media (max-width: $screen-xs-max) {
-    padding-left: $panel-new-padding-hor-mobile;
-  }
+  padding-top: $panel-padding-ver;
+  padding-bottom: $panel-padding-ver;
 
   &:hover {
     background-color: $table-bg-hover;

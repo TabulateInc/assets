@@ -7,18 +7,24 @@
   line-height: 1;
   font-weight: 300;
   margin: 0;
+}
 
-  @media (max-width: $screen-xs-max) {
-    font-size: 19px; // TODO
+@media (max-width: $screen-xs-max) {
+  .title {
+    font-size: $title-font-mobile;
+  }
+
+  .title2 {
+    font-size: $title2-font-mobile;
   }
 }
 
 @media (min-width: $screen-sm-min) {
   .title {
-    font-size: 27px; // TODO
+    font-size: $title-font;
   }
 
   .title2 {
-    font-size: 21px; // TODO
+    font-size: $title2-font;
   }
 }

@@ -7,7 +7,7 @@
     }
 
     input,
-    select {
+    .Select .Select-control {
       border-color: $border-color;
     }
   }
@@ -38,8 +38,6 @@
 
 .error {
   @include onHover($state-danger-text, $state-danger-border); // TODO
-
-  color: $state-danger-text;
 }
 
 .flex-end {

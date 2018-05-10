@@ -5,7 +5,7 @@
   align-items: center;
   height: $panel-header-height;
   padding: 0 $panel-new-padding-hor;
-  border-bottom: 1px solid $border-color-base;
+  border-bottom: $border-base;
   z-index: 50; // ???
 
   @media (max-width: $screen-xs-max) {

@@ -18,7 +18,7 @@
 
 .list {
   margin: 0;
-  padding-right: 48px;
+  padding-right: $actions-content-padding;
   flex: 1;
   background: $white;
 }
@@ -26,21 +26,21 @@
 .li {
   display: flex;
   align-items: center;
-  margin: 3px 0;
+  margin: 3px 0; // TODO
   background: $white;
 }
 
 .span {
+  @include link($gray-new);
+  @include textWrap();
+
   flex: 1;
   display: flex;
   align-items: center;
-  border-radius: 2px;
-  font-size: 16px;
+  font-size: 16px; // TODO
   padding: 9px 0;
-  @include link($gray-new);
-  @include textWrap();
   background: $white;
-  border-bottom: 1px solid $gray-light-new;
+  border-bottom: 1px solid $border-color-base;
   line-height: $line-height-base;
 
   &:hover,
@@ -48,8 +48,4 @@
     color: $brand-primary;
     background-color: $white;
   }
-}
-
-.close {
-  @include closeButton();
 }

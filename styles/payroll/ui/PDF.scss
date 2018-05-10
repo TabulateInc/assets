@@ -1,17 +1,17 @@
 .document {
-  z-index: 1050;
+  z-index: 1050; // TODO
   position: relative;
   background: $white;
 
   @media (min-width: $screen-sm-min) {
     width: 90vw;
     height: 90vh;
-    margin: $main-navigation-height auto 30px;
+    margin: $main-navigation-height auto 30px; // TODO
   }
 
   @media (max-width: $screen-xs-max) {
     margin: 0 auto;
-    width: calc(100% - 25px*2);
+    width: calc(100% - 25px*2); // TODO
   }
 }
 
@@ -29,7 +29,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1040;
+  z-index: 1040; // TODO
   background: rgba(0, 0, 0, 0.3) !important;
   animation-duration: 0.15s;
   animation-timing-function: linear;

@@ -387,7 +387,7 @@ tags-input.mod-row-filter {
 
   @media (max-width: $screen-xs-max) {
     .search.mod-opened .tags {
-      margin-left: 48px;
+      margin-left: $actions-content-padding;
     }
 
     .search__show {

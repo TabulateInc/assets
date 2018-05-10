@@ -27,20 +27,20 @@ input[type="number"] {
 }
 
 .small {
-  max-width: 68px;
-  height: 33px;
-  padding: 5px;
+  max-width: 68px;  // TODO
+  height: 33px;  // TODO
+  padding: 5px;  // TODO
 }
 
 .disabled {
-  background-color: $gray-lightest-new;
+  background-color: $gray-lightest-new; // TODO
   pointer-events: none;
-  
+
   &:hover {
-    border-color: $gray-lightest-new;
+    border-color: $gray-lightest-new; // TODO
   }
 }
 
 .invalid {
-  border-color: $state-danger-border;
+  border-color: $state-danger-border; // TODO
 }

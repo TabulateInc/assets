@@ -9,14 +9,14 @@
     opacity: 0.7;
   }
 
-  background-size: 30px;
-  width: 30px;
-  height: 30px;
+  background-size: $btn-icon-size;
+  width: $btn-icon-size;
+  height: $btn-icon-size;
 
   @media (max-width: $screen-xs-max) {
-    background-size: 25px;
-    width: 25px;
-    height: 25px;
+    background-size: $btn-icon-size-mobile;
+    width: $btn-icon-size-mobile;
+    height: $btn-icon-size-mobile;
   }
 }
 
@@ -30,30 +30,22 @@
   background-image: url('../../../img/checkmark.dark.svg');
 }
 
-.mobile-top-left,
-.mobile-top-right {
-  position: fixed;
-  top: 0;
-  height: $main-navigation-height-mobile;
-  z-index: $zindex-modal;
-}
-
 .mobile-top-left {
-  left: 5px;
+  @include modalTopBtn();
 }
 
 .mobile-top-right {
-  right: 5px;
+  @include modalTopBtn('right');
 }
 
 .filter {
   position: absolute;
   top: 0;
-  height: 60px;
-  right: 10px + 25px + 10px + 10px;
+  height: $panel-header-height;
+  right: 20px + $btn-icon-size-mobile + $panel-new-padding-hor-mobile; // TODO
   z-index: 50;
 }
 
 .panel-trash {
-  margin-right: 5px;
+  margin-right: 10px; // TODO
 }

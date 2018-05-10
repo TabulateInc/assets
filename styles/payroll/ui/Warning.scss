@@ -4,7 +4,7 @@
   @include centeredFlexWrap();
 
   height: 100%;
-  padding-top: 35px;
+  padding-top: $distance-ver-md;
 }
 
 .icon {
@@ -19,11 +19,11 @@
 
 .children {
   text-align: center;
-  font-size: 18px;
+  font-size: 18px; // TODO
   color: $gray-middle-new;
   line-height: $line-height-base;
 
   @media (max-width: $screen-xs-max) {
-    font-size: 15px;
+    font-size: 15px; // TODO
   }
 }

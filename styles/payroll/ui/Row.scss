@@ -1,3 +1,5 @@
+@import '../mixins';
+
 .row {
   display: flex;
   align-items: center;
@@ -6,22 +8,20 @@
 }
 
 .make-primary {
-  margin-bottom: 20px;
+  margin-bottom: $distance-ver-sm;
 }
 
 .form-buttons {
   justify-content: flex-end;
 
   @media (max-width: $screen-xs-max) {
-    justify-content: center;
+    justify-content: space-between;
   }
 
   &.pay-employees-buttons {
-    padding: 35px 20px;
+    @include panelHorPadding();
 
-    @media (max-width: $screen-xs-max) {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
+    padding-top: $distance-ver-md;
+    padding-bottom: $distance-ver-md;
   }
 }

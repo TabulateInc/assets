@@ -3,6 +3,24 @@
   to   { opacity: 1; }
 }
 
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin inlineFlexCenter() {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin centeredFlexWrap() {
+  @include flexCenter();
+
+  flex-direction: column;
+}
+
 @mixin lightBox() {
   background-color: $white;
   border: 1px solid $gray-light-new;
@@ -22,6 +40,7 @@
   &:hover {
     color: darken($color, 15);
   }
+
   &:focus,
   &:visited {
     color: $color;
@@ -39,11 +58,11 @@
 @mixin formElement() {
   position: relative;
   display: inline-flex;
-  height: 46px;
-  border: 1px solid $gray-lighter-new;
+  height: 46px;  // TODO
+  border: 1px solid $border-color-base;
   background: $white;
-  padding: 6px 22px 6px 12px;
-  border-radius: 3px !important;
+  padding: 6px 22px 6px 12px;  // TODO
+  border-radius: $border-radius-base !important;
   transition: border-color ease-in-out .15s;
 
   &:hover,
@@ -53,28 +72,19 @@
   }
 }
 
-@mixin placeholder {
-  &.placeholder { @content; }
-  &:-moz-placeholder { @content; }
-  &::-moz-placeholder { @content; }
-  &:-ms-input-placeholder { @content; }
-  &::-webkit-input-placeholder { @content; }
-}
-
 @mixin circle($size: 18px, $color: $white) {
+  @include inlineFlexCenter();
+
   height: $size;
   width: $size;
   min-height: $size;
   min-width: $size;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   color: $color;
   border-radius: 50%;
   font-size: 10px;
 }
 
-@mixin dropdown ($top: 0, $left: 0) {
+@mixin dropdown($top: 0, $left: 0) {
   min-width: 160px;
   max-height: 320px;
   position: absolute;
@@ -114,13 +124,6 @@
   z-index: 1;
 }
 
-@mixin centeredFlexWrap() {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 @mixin fixedBox() {
   position: fixed;
   top: 0;
@@ -128,7 +131,7 @@
   bottom: 0;
   right: 0;
   height: 100vh;
-  padding: 0 5px;
+  padding: 0 5px;  // TODO
   z-index: $zindex-dropdown;
 }
 
@@ -139,20 +142,19 @@
   height: 0;
   border-color: #999 transparent transparent;
   border-style: solid;
-  border-width: 5px 5px 2.5px;
+  border-width: 5px 5px 2.5px;  // TODO
 }
 
 @mixin arrowTop() {
   top: -5px;
-  border-color: transparent transparent #999;
-  border-width: 0 5px 5px;
+  border-color: transparent transparent #999;  // TODO
+  border-width: 0 5px 5px;  // TODO
 }
 
 @mixin tableCell() {
-  border-radius: 4px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  @include inlineFlexCenter();
+
+  border-radius: 4px;  // TODO
 }
 
 @mixin customScroll() {
@@ -160,32 +162,78 @@
 
   &::-webkit-scrollbar {
     -webkit-appearance: none;
-    width: 3px;
-    height: 4px;
+    width: 3px;  // TODO
+    height: 4px;  // TODO
   }
   &::-webkit-scrollbar-thumb {
-    border-radius: 3px;
+    border-radius: $border-radius-base;  // TODO
     background-color: #c2c2c2;
   }
 }
 
-@mixin closeButton() {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: $zindex-modal;
+@mixin panelFilterItem() {
+  max-width: 320px;  // TODO
+  flex: 0 1 auto;
+  border-right: 1px solid $gray-light-new;
+  height: 100%;
+
+  @media (max-width: $screen-xs-max) {
+    border: 1px solid $gray-light-new;
+    height: 40px;  // TODO
+    margin: 10px auto;  // TODO
+    width: 100%;
+  }
 }
 
+@mixin btn() {
+  @include inlineFlexCenter();
+
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  outline: 0 none;
+  transition: all .2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    outline: 0 none;
+  }
+}
+
+@mixin panelHorPadding() {
+  padding-left: $panel-new-padding-hor;
+  padding-right: $panel-new-padding-hor;
+
+  @media (max-width: $screen-xs-max) {
+    padding-left: $panel-new-padding-hor-mobile;
+    padding-right: $panel-new-padding-hor-mobile;
+  }
+}
+
+@mixin modalTopBtn($position: 'left') {
+  z-index: $zindex-modal;
+  position: fixed;
+  top: 0;
+  height: $main-navigation-height-mobile;
+
+  @if $position == 'right' {
+    right: 5px;
+  } @else {
+    left: 5px;
+  }
+}
+
+// deprecated
 @mixin actions-button($icon-height, $icon-width, $position: 'left') {
   $margin-top: ($main-navigation-height-mobile - $icon-height)/2;
   margin-top: $margin-top;
 
   @if $position == 'right' {
     float: right;
-    margin-right: 5px;  // TODO
+    margin-right: 5px;
   } @else {
     float: left;
-    margin-left: 5px;  // TODO
+    margin-left: 5px;
   }
   padding: 0;
   border: none;
@@ -196,32 +244,10 @@
   cursor: pointer;
 }
 
-@mixin panelFilterItem() {
-  max-width: 320px;
-  flex: 0 1 auto;
-  border-right: 1px solid $gray-light-new;
-  height: 100%;
-
-  @media (max-width: $screen-xs-max) {
-    border: 1px solid $gray-light-new;
-    height: 40px;
-    margin: 10px auto;
-    width: 100%;
-  }
-}
-
-@mixin btn() {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-  outline: 0 none;
-  transition: all .2s ease-in-out;
-
-  &:hover,
-  &:focus {
-    outline: 0 none;
-  }
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
 }

@@ -1,24 +1,25 @@
 @import '../mixins';
 
+$tag-item-height: 30px;
+
 .btn {
   @include btn();
 
   font-size: 24px;
-  color: $gray-text;
+  color: $gray-text;  // TODO
 
   &:hover {
     opacity: 0.7;
   }
 
-  width: 30px;
-  height: 30px;
+  width: $btn-icon-size;
+  height: $btn-icon-size;
 
   @media (max-width: $screen-xs-max) {
-    width: 25px;
-    height: 25px;
+    width: $btn-icon-size-mobile;
+    height: $btn-icon-size-mobile;
   }
 }
-
 
 .alert-close {
   font-size: 14px;
@@ -30,7 +31,7 @@
   color: $brand-primary;
 
   @media (max-width: $screen-xs-max) {
-    width: 30px;
-    height: 30px;
+    width: $tag-item-height;
+    height: $tag-item-height;
   }
 }

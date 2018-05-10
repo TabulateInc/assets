@@ -7,20 +7,20 @@
 
 .selectValue {
   position: relative;
-  height: 30px;
+  height: 30px; // TODO
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  margin: 0 5px 0 0;
+  margin: 0 5px 0 0; // TODO
   background: $white;
   border: 1px solid $brand-primary;
-  border-radius: 3px;
+  border-radius: $border-radius-base;
 
   &:after {
     position: absolute;
     top: 0;
-    right: 29px;
+    right: 29px; // TODO
     bottom: 0;
     content: '';
     width: 1px;
@@ -234,7 +234,7 @@
       background: $form-font-color;
       padding: 3px 8px;
       color: $white;
-      border-radius: 3px;
+      border-radius: $border-radius-base;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: visible;

@@ -52,9 +52,9 @@
 
 .mobile-actions {
   margin: 0;
-  width: 48px;
-  height: 41px;
-  background-size: 25px;
+  width: $actions-content-padding;
+  height: 41px;  // TODO
+  background-size: $btn-icon-size-mobile;
   background-position: 5px center;
 }
 
@@ -66,10 +66,10 @@
 // CSS only
 .checked,
 .unchecked {
-  height: 24px;
-  width: 24px;
+  height: 24px;  // TODO
+  width: 24px;  // TODO
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 10px;  // TODO
   border: 1px solid;
 }
 
@@ -77,12 +77,12 @@
   background: url('../../img/checkmark.svg') center center no-repeat;
   background-color: $brand-primary;
   border-color: $brand-primary;
-  background-size: 70%;
+  background-size: 70%;  // TODO
 }
 
 .unchecked {
   background-color: $white;
-  border-color: $gray-light-new;
+  border-color: $border-color-base;
 }
 
 // Mods
@@ -95,12 +95,9 @@
 }
 
 .mobile-top-left {
-  position: fixed;
-  top: 0;
-  height: $main-navigation-height-mobile;
-  z-index: $zindex-modal;
-  left: 5px;
+  @include modalTopBtn();
+
+  width: $btn-icon-size-mobile;
   margin: 0;
   background-position: center;
-  width: 25px;
 }

@@ -50,16 +50,13 @@ section {
 }
 
 article {
-  margin: 0;
-  padding: 35px 20px;
+  @include panelHorPadding();
 
-  @media (max-width: $screen-xs-max) {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+  margin: 0;
+  padding-top: $distance-ver-md;
+  padding-bottom: $distance-ver-md;
 }
 
 p {
   margin: 0;
 }
-

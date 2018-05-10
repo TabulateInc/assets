@@ -8,63 +8,59 @@ $icon-height: $bar-height*3 + $to-top-bar*2;
 
 .header {
   display: flex;
+  z-index: $zindex-navbar-fixed;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   box-sizing: border-box;
-  z-index: $zindex-navbar-fixed;
 
   @media (min-width: $screen-sm-min) {
     height: $main-navigation-height;
     align-items: center;
     border-bottom: 1px solid $gray-light-new;
-    padding: 5px 40px;
+    padding: 5px $nav-header-padding-hor;  //TODO
     background-color: $white;
   }
 
   @media (max-width: $screen-lg-min) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: $nav-header-padding-hor-md;
+    padding-right: $nav-header-padding-hor-md;
   }
 
   @media (max-width: $screen-xs-max) {
-    height: 56px;
+    height: $main-navigation-height-mobile;
     justify-content: center;
     align-items: flex-start;
     border-bottom: none;
-    padding: 10px;
+    padding: 10px $nav-header-padding-hor-sm;  // TODO
     background: rgba(255, 255, 255, 0.8);
   }
 }
 
-.nav {
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.left {
+.nav,
+.left,
+.right {
   flex: 1;
   display: flex;
   align-items: center;
 }
 
 .right {
-  display: flex;
-  flex: 1;
-  align-items: center;
   justify-content: flex-end;
+}
+
+.nav {
+  justify-content: space-between;
 }
 
 .menu {
   position: relative;
-  margin-left: 10px;
+  margin-left: 10px; // TODO
 }
 
 .item {
-  margin: 0 5px;
+  margin: 0 5px; // TODO
 
   &:last-child {
     margin-right: 0;
@@ -73,19 +69,18 @@ $icon-height: $bar-height*3 + $to-top-bar*2;
 
 .mobile {
   justify-content: center;
-  padding: 0 50px;
+  padding: 0 50px; // TODO
 }
 
 .mobileToggler {
+  @include flexCenter();
+
+  height: $main-navigation-height-mobile;
   position: absolute !important;
   top: 0;
-  left: 5px;
+  left: 5px; // TODO
   transform: rotate(0deg);
   transition: .5s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: $main-navigation-height-mobile;
 }
 
 .iconBar {
@@ -116,7 +111,7 @@ $icon-height: $bar-height*3 + $to-top-bar*2;
 .list {
   margin: 0;
   flex: 1;
-  padding: 28px 48px;
+  padding: 28px $actions-content-padding; // TODO
 }
 
 .li {
@@ -124,16 +119,13 @@ $icon-height: $bar-height*3 + $to-top-bar*2;
 }
 
 .a {
+  @include link($gray-new);
+
   flex: 1;
   display: flex;
   align-items: center;
-  @include link($gray-new);
-  padding: 10px 0;
+  padding: 10px 0; // TODO
   border-bottom: 1px solid $gray-light-new;
-  font-size: 16px;
+  font-size: 16px; // TODO
   line-height: $line-height-base;
-}
-
-.close {
-  @include closeButton();
 }

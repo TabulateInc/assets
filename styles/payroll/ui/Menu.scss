@@ -3,7 +3,7 @@
 
 .menu {
   position: fixed;
-  width: 259px;
+  width: 259px; // TODO
 }
 
 .nav {
@@ -11,38 +11,37 @@
 }
 
 .list {
-  margin: -10px 0;
+  margin: -10px 0; // TODO
 }
 
 .li {
   display: flex;
-  margin: 5px 0;
+  margin: 5px 0; // TODO
   padding: 0;
 }
 
 .a {
+  @include link($gray-new);
+
   flex: 1;
-  height: 30px;
+  height: 30px; // TODO
   display: flex;
   align-items: center;
   border-radius: 2px;
   font-size: $font-size-base;
-  padding: 0 20px;
-  @include link($gray-new);
+  padding: 0 20px; // TODO
 
   &:hover {
-    background-color: $gray-lightest-new;
+    background-color: $gray-lightest-new; // TODO
   }
 }
 
 .active {
-  background-color: $brand-primary;
   @include link($white);
+
+  background-color: $brand-primary;
 
   &:hover {
     background-color: $brand-primary;
   }
 }
-
-
-

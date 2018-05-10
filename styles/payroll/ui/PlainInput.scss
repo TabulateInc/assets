@@ -2,7 +2,8 @@
 
 .input {
   @include formElement();
-  padding-right: 12px;
+
+  padding-right: 12px; // TODO
 
   &:hover,
   &:focus {
@@ -15,12 +16,12 @@
   width: 145px;
 }
 
-.top-35 {
-  margin-top: 35px;
+.top-md {
+  margin-top: $distance-ver-md;
 }
 
-.bottom-45 {
-  margin-bottom: 45px;
+.bottom-md {
+  margin-bottom: $distance-ver-md;
 }
 
 .inputStartDate,

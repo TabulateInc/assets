@@ -9,16 +9,16 @@
   margin: 0;
 
   @media (max-width: $screen-xs-max) {
-    font-size: 19px;
+    font-size: 19px; // TODO
   }
 }
 
 @media (min-width: $screen-sm-min) {
   .title {
-    font-size: 27px;
+    font-size: 27px; // TODO
   }
 
   .title2 {
-    font-size: 21px;
+    font-size: 21px; // TODO
   }
 }

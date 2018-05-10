@@ -10,7 +10,7 @@ $img-to-text: 20px;
   border-bottom: 1px solid $border-color-base;
   box-shadow: none;
   margin: 0;
-  padding: 25px $panel-new-padding-hor;
+  padding: 25px $panel-new-padding-hor; // TODO
 
   @media (max-width: $screen-xs-max) {
     padding-left: $panel-new-padding-hor-mobile;
@@ -38,4 +38,3 @@ $img-to-text: 20px;
   min-height: $img-height;
   width: calc(100% - #{$img-width + $img-to-text});
 }
-

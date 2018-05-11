@@ -72,18 +72,13 @@ $caret-top: ($panel-new-filter-height - $caret-height)/2;
   width: 100%;
   text-align: left;
 
-  &:hover,
-  &:focus {
-    background-color: $brand-primary;
-    border-color: $brand-primary;
-    color: $white;
-  }
-
   &:focus {
     outline: none;
   }
 }
 
+.range:hover,
+.range:focus,
 .rangeSelected {
   background-color: $brand-primary;
   border-color: $brand-primary;
@@ -96,7 +91,7 @@ $caret-top: ($panel-new-filter-height - $caret-height)/2;
 }
 
 .actions {
-  border-top: 1px solid $gray-lighter;
+  border-top: $border-base;
   padding-top: $distance-sm;
   text-align: right;
 }

@@ -7,12 +7,12 @@
 
 .selectValue {
   position: relative;
-  height: 30px; // TODO
+  height: 30px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  margin: 0 5px 0 0; // TODO
+  margin: 0 5px 0 0;
   background: $white;
   border: 1px solid $brand-primary;
   border-radius: $border-radius-base;
@@ -20,7 +20,7 @@
   &:after {
     position: absolute;
     top: 0;
-    right: 29px; // TODO
+    right: 29px;
     bottom: 0;
     content: '';
     width: 1px;
@@ -59,7 +59,6 @@
   }
 
   :global {
-
     input {
       &:focus {
         outline: 0 none;
@@ -83,8 +82,8 @@
           &:after {
             position: absolute;
             right: -30px;
-            width: 30px;
-            height: 30px;
+            width: $btn-icon-size;
+            height: $btn-icon-size;
             content: '';
             background: transparent url('../../../img/close.svg') center center no-repeat;
             cursor: pointer;
@@ -99,8 +98,9 @@
         }
 
         .Select-menu-outer {
-          max-height: 385px;
           @include customScroll();
+
+          max-height: 385px;
           position: absolute;
           top: 48px;
           left: 48px;
@@ -128,7 +128,7 @@
     }
 
     .Select-arrow-zone {
-      height: 30px;
+      height: $btn-icon-size;
       width: 35px;
       display: inline-flex;
       position: absolute;
@@ -138,17 +138,17 @@
     }
 
     .Select-arrow {
-      height: 30px;
+      height: $btn-icon-size;
       width: 35px;
       border: none;
       background: transparent url('../../../img/search.svg') center center no-repeat;
-      background-size: 30px;
+      background-size: $btn-icon-size;
     }
 
     .Select-clear-zone {
       position: absolute;
       right: -30px;
-      width: 30px;
+      width: $btn-icon-size;
       height: 30px;
       cursor: pointer;
     }
@@ -162,11 +162,12 @@
     }
 
     .Select-multi-value-wrapper {
+      @include customScroll();
+
       position: relative;
       top: 2px;
       width: 100%;
       margin-right: 5px;
-      @include customScroll();
     }
 
     .Select-input {
@@ -201,18 +202,7 @@
     }
 
     .Select-option {
-      margin: 5px 0;
-      padding: 8px 25px;
-      background: $white;
-
-      &.is-focused {
-        background: $gray-lightest-new;
-        color: $gray-new;
-      }
-
-      &:hover {
-        background-color: $gray-lightest-new;
-      }
+      @include dropdownItem();
     }
 
     .Select-tooltip {
@@ -260,9 +250,7 @@
 }
 
 .mobile {
-
   :global {
-
     .Select {
       flex-direction: column;
       padding: 0 !important;
@@ -279,7 +267,7 @@
         height: auto;
         top: 0;
 
-        &:after {
+        &::after {
           top: 0 !important;
           right: 5px !important;
           width: 25px !important;
@@ -308,7 +296,7 @@
         padding: 13px 0;
         margin: 0 44px;
 
-        &:before {
+        &::before {
           width: 32px;
           height: 30px;
           content: '';

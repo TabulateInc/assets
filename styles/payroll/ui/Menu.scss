@@ -3,7 +3,7 @@
 
 .menu {
   position: fixed;
-  width: 259px; // TODO
+  width: $left-panel-width; // TODO
 }
 
 .nav {
@@ -11,12 +11,12 @@
 }
 
 .list {
-  margin: -10px 0; // TODO
+  margin: -10px 0;
 }
 
 .li {
   display: flex;
-  margin: 5px 0; // TODO
+  margin: $left-panel-link-margin 0;
   padding: 0;
 }
 
@@ -24,15 +24,15 @@
   @include link($gray-new);
 
   flex: 1;
-  height: 30px; // TODO
+  height: $left-panel-link-height;
   display: flex;
   align-items: center;
   border-radius: $border-radius-base;
   font-size: $font-size-base;
-  padding: 0 20px; // TODO
+  padding-left: $left-panel-link-padding;
 
   &:hover {
-    background-color: $gray-lightest-new; // TODO
+    background-color: $gray-lightest-new;
   }
 }
 

@@ -6,7 +6,7 @@ $tag-item-height: 30px;
   @include btn();
 
   font-size: 24px;
-  color: $gray-text;  // TODO
+  color: $gray-text;
 
   &:hover {
     opacity: 0.7;

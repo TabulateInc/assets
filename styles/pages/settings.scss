@@ -2,11 +2,8 @@
 @import '../project/mixins/mixins';
 @import '../project/style-components/stripeandpayment';
 
-
-$panel-nav-link-width: 290px;
-$panel-nav-link-height: 30px;
-$panel-nav-link-font: $font-size-base;
-$panel-nav-width-calc: $panel-nav-link-width + 1px*2;
+$left-panel-width-calc: $left-panel-width + 1px*2;
+$left-panel-link-font: $font-size-base;
 $nav-to-content-panel: $distance-hor-md;
 
 .container-fluid.mod-settings {
@@ -20,7 +17,7 @@ $nav-to-content-panel: $distance-hor-md;
   position: relative;
 
   @media (min-width: $screen-md-min) {
-    width: calc(100% - #{$panel-nav-width-calc + $nav-to-content-panel});
+    width: calc(100% - #{$left-panel-width-calc + $nav-to-content-panel});
   }
 
   iframe.yodlee {
@@ -45,7 +42,7 @@ $nav-to-content-panel: $distance-hor-md;
 
 .nav-panel {
   margin-right: $nav-to-content-panel;
-  width: $panel-nav-link-width;
+  width: $left-panel-width;
   float: left;
 
   @media (max-width: $screen-sm-max) {
@@ -57,7 +54,7 @@ $nav-to-content-panel: $distance-hor-md;
   list-style: none;
   padding: 0;
   margin-bottom: $distance-ver-md;
-  margin-top: -($panel-nav-link-height - $panel-nav-link-font)/2;
+  margin-top: -($left-panel-link-height - $left-panel-link-font)/2;
 
   &.actions-list {
     background-color: $white;
@@ -69,12 +66,12 @@ $nav-to-content-panel: $distance-hor-md;
     @include text-overflow();
 
     display: block;
-    height: $panel-nav-link-height;
-    line-height: $panel-nav-link-height;
+    height: $left-panel-link-height;
+    line-height: $left-panel-link-height;
     border-radius: $border-radius-base;
-    padding-left: 20px;
-    margin-bottom: 5px;
-    font-size: $panel-nav-link-font;
+    padding-left: $left-panel-link-padding;
+    margin-bottom: $left-panel-link-margin;
+    font-size: $left-panel-link-font;
     color: $gray-new;
 
     &.active,
@@ -228,7 +225,7 @@ error-icon.mod-fee-info {
     }
   }
 }
-      
+
 @media (max-width: $screen-md-min) {
   tender-item,
   tender-group {

@@ -1,5 +1,8 @@
 @import '../mixins';
 
+$cell-height: 44px;
+
+
 .wrapper {
   @include customScroll();
 
@@ -9,7 +12,7 @@
 
 .table {
   width: 100%;
-  margin: 0 0 18px; // TODO
+  margin: 0 0 $distance-ver-md;
   padding: 0;
   background: none;
   border-collapse: collapse;
@@ -21,24 +24,25 @@
   th {
     font-weight: normal;
     font-style: normal;
-    color: $gray-middle-new; // TODO
+    color: $gray-middle-new;
     white-space: nowrap;
+    padding-top: $distance-ver-md;
+    padding-bottom: 3px;
   }
 
   tr {
-    border: $border-base; // TODO
+    border: $border-base;
   }
 
   th,
   td {
-    height: 44px; // TODO
+    @include panelHorPadding();
+
     text-align: left;
-    padding: 0 20px; // TODO
   }
 
-  th {
-    padding-top: 10px; // TODO
-    padding-bottom: 10px; // TODO
+  td {
+    height: $cell-height;
   }
 
   tbody {
@@ -48,29 +52,19 @@
       }
     }
   }
-
-  @media (max-width: $screen-xxs-max) {
-
-    th,
-    td {
-      &:first-child {
-        padding-left: 10px; // TODO
-      }
-      &:last-child {
-        padding-right: 10px; // TODO
-      }
-    }
-  }
 }
 
-.top-10 {
-  margin-top: 10px; // TODO
-  box-shadow: 0 1px 0 0 $gray-light-new; // TODO
+.inPanel {
+  th {
+    height: $cell-height;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .headerSort {
   &:hover {
-    color: $gray-darkest-new; // TODO
+    color: $gray-darkest-new;
     cursor: pointer;
     user-select: none;
     transition: all 0.3s ease-in-out;
@@ -78,8 +72,7 @@
 }
 
 .payEmployeesForm {
-  margin-top: 4px; // TODO
-  margin-bottom: 4px; // TODO
+  margin-bottom: 0;
   border: 0 none;
   box-shadow: none;
 
@@ -89,40 +82,45 @@
 
   th,
   td {
-    min-width: 90px; // TODO
-    padding-left: 5px; // TODO
-    padding-right: 5px; // TODO
+    min-width: 90px;
     text-align: right;
+    padding-left: 5px;
+    padding-right: 5px;
 
     &:first-child {
-      min-width: 140px; // TODO
-      padding-left: 20px; // TODO
+      padding-left: $panel-new-padding-hor;
+      min-width: 140px;
       text-align: left;
     }
+
     &:last-child {
-      padding-right: 20px; // TODO
+      padding-right: $panel-new-padding-hor;
     }
+  }
+
+  td {
+    padding-top: $distance-ver-sm;
+    padding-bottom: $distance-ver-sm;
   }
 
   tr {
-    height: 80px; // TODO
     border-left: none;
     border-right: none;
     border-top: none;
-
-    &:last-child {
-      height: 60px;
-    }
   }
+}
 
+.table,
+.payEmployeesForm {
   @media (max-width: $screen-xxs-max) {
     th,
     td {
       &:first-child {
-        padding-left: 10px; // TODO
+        padding-left: $panel-new-padding-hor-mobile;
       }
+
       &:last-child {
-        padding-right: 10px; // TODO
+        padding-right: $panel-new-padding-hor-mobile;
       }
     }
   }

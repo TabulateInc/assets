@@ -58,10 +58,10 @@
 @mixin formElement() {
   position: relative;
   display: inline-flex;
-  height: 46px;  // TODO
+  height: 46px;
   border: 1px solid $border-color-base;
   background: $white;
-  padding: 6px 22px 6px 12px;  // TODO
+  padding: 6px 22px 6px 12px;
   border-radius: $border-radius-base !important;
   transition: border-color ease-in-out .15s;
 
@@ -69,6 +69,22 @@
   &:focus {
     border-color: $brand-primary;
     outline: none;
+  }
+}
+
+@mixin dropdownItem() {
+  margin: 5px 0;
+  padding: 8px 25px;
+  color: $gray-new;
+  font-size: $font-size-base;
+  white-space: nowrap;
+  cursor: pointer;
+  background: $white;
+
+  &:hover,
+  &.is-focused,
+  &.is-selected {
+    background-color: $gray-lightest-new;
   }
 }
 
@@ -131,7 +147,7 @@
   bottom: 0;
   right: 0;
   height: 100vh;
-  padding: 0 5px;  // TODO
+  padding: 0 5px;
   z-index: $zindex-dropdown;
 }
 
@@ -142,13 +158,13 @@
   height: 0;
   border-color: #999 transparent transparent;
   border-style: solid;
-  border-width: 5px 5px 2.5px;  // TODO
+  border-width: 5px 5px 2.5px;
 }
 
 @mixin arrowTop() {
   top: -5px;
-  border-color: transparent transparent #999;  // TODO
-  border-width: 0 5px 5px;  // TODO
+  border-color: transparent transparent #999;
+  border-width: 0 5px 5px;
 }
 
 @mixin customScroll() {
@@ -156,25 +172,25 @@
 
   &::-webkit-scrollbar {
     -webkit-appearance: none;
-    width: 3px;  // TODO
-    height: 4px;  // TODO
+    width: 3px;
+    height: 4px;
   }
   &::-webkit-scrollbar-thumb {
-    border-radius: $border-radius-base;  // TODO
+    border-radius: $border-radius-base;
     background-color: #c2c2c2;
   }
 }
 
 @mixin panelFilterItem() {
-  max-width: 320px;  // TODO
+  max-width: 320px;
   flex: 0 1 auto;
   border-right: $border-base;
   height: 100%;
 
   @media (max-width: $screen-xs-max) {
     border: $border-base;
-    height: 40px;  // TODO
-    margin: 10px auto;  // TODO
+    height: 40px;
+    margin: 10px auto;
     width: 100%;
   }
 }
@@ -229,9 +245,9 @@
     float: left;
     margin-left: 5px;
   }
+
   padding: 0;
   border: none;
-
   width: $icon-width;
   height: $icon-height;
   position: relative;

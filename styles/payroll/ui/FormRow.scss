@@ -33,11 +33,11 @@
 }
 
 .disabled {
-  @include onHover($gray-middle-new, $gray-lighter-new); // TODO
+  @include onHover($gray-middle-new, $gray-lighter-new);
 }
 
 .error {
-  @include onHover($state-danger-text, $state-danger-border); // TODO
+  @include onHover($state-danger-text, $state-danger-border);
 }
 
 .flex-end {
@@ -55,7 +55,7 @@
   margin: 3px 0 0;
   padding: 10px 20px;
   border-radius: $border-radius-base;
-  background-color: $red-danger; // TODO
+  background-color: $red-danger;
   color: $white;
   font-weight: normal;
   font-size: $font-size-small;
@@ -63,7 +63,7 @@
   z-index: 100;
 
   &::before {
-    @include triangle(0 5px 5px 5px, transparent transparent #df3320 transparent); // TODO
+    @include triangle(0 5px 5px 5px, transparent transparent $red-danger transparent);
 
     content: '';
     position: absolute;
@@ -72,21 +72,6 @@
   }
 
   i {
-    margin: 0 5px; // TODO
-  }
-}
-
-.small {
-  top: 38px;
-  flex-direction: column;
-  padding: 10px 8px; // TODO
-
-  &::before {
-    right: 10px; // TODO
-    left: auto;
-  }
-
-  i {
-    margin: 0 0 5px; // TODO
+    margin: 0 5px;
   }
 }

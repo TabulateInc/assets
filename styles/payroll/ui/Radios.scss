@@ -3,7 +3,7 @@
 .radios {
   display: flex;
   align-items: center;
-  margin: 15px 0 10px; // TODO
+  margin: 15px 0 10px;
 }
 
 .radio {
@@ -25,7 +25,7 @@
 .label {
   display: inline-flex;
   align-items: center;
-  margin-right: 80px; // TODO
+  margin-right: 80px;
   cursor: pointer;
 
   &:hover,
@@ -38,12 +38,12 @@
   }
 
   @media (max-width: $screen-xxs-max) {
-    margin-right: 25px; // TODO
+    margin-right: 25px;
   }
 }
 
 .input {
-  margin-right: 10px; // TODO
+  margin-right: 10px;
 }
 
 .column {
@@ -53,6 +53,6 @@
   margin-bottom: 0;
 
   label {
-    margin: 7px 0; // TODO
+    margin: 7px 0;
   }
 }

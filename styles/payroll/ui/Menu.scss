@@ -3,7 +3,7 @@
 
 .menu {
   position: fixed;
-  width: 259px;
+  width: $left-panel-width; // TODO
 }
 
 .nav {
@@ -16,19 +16,20 @@
 
 .li {
   display: flex;
-  margin: 5px 0;
+  margin: $left-panel-link-margin 0;
   padding: 0;
 }
 
 .a {
+  @include link($gray-new);
+
   flex: 1;
-  height: 30px;
+  height: $left-panel-link-height;
   display: flex;
   align-items: center;
-  border-radius: 2px;
+  border-radius: $border-radius-base;
   font-size: $font-size-base;
-  padding: 0 20px;
-  @include link($gray-new);
+  padding-left: $left-panel-link-padding;
 
   &:hover {
     background-color: $gray-lightest-new;
@@ -36,13 +37,11 @@
 }
 
 .active {
-  background-color: $brand-primary;
   @include link($white);
+
+  background-color: $brand-primary;
 
   &:hover {
     background-color: $brand-primary;
   }
 }
-
-
-

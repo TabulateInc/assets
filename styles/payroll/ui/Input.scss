@@ -35,7 +35,7 @@ input[type="number"] {
 .disabled {
   background-color: $gray-lightest-new;
   pointer-events: none;
-  
+
   &:hover {
     border-color: $gray-lightest-new;
   }

@@ -1,6 +1,5 @@
 @import './mixins';
 
-
 .app {
   position: relative;
   display: flex;
@@ -24,14 +23,15 @@
   left: 15px;
   bottom: 0;
   right: 0;
-  width: 259px;
+  width: $left-panel-width;
 }
 
 .main {
-  position: relative;
   @include lightBox();
+
+  position: relative;
   width: 100%;
-  margin-left: 280px;
+  margin-left: $left-panel-width + 20px;
 }
 
 

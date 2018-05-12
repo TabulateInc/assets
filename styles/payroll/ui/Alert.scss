@@ -1,7 +1,8 @@
+@import '../mixins';
+
 .alert {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexCenter();
+
   position: fixed;
   z-index: $alert-z-index;
   text-align: center;
@@ -9,14 +10,15 @@
   left: 0;
   right: 0;
   padding: $alert-margin-vertical $alert-margin-horizontal;
+  border: 1px solid;
 }
 
 .alertSuccess {
-  border: 1px solid $alert-success-border;
+  border-color: $alert-success-border;
   background-color: $alert-success-bg;
   color: $alert-success-text;
   width: $alert-success-width !important;
-  border-radius: $alert-border-radius;
+  border-radius: $border-radius-base;
 
   @media (min-width: $screen-sm-min) {
     top: $main-navigation-height + $alert-from-top;
@@ -27,11 +29,9 @@
   }
 }
 
-
 .alertDanger {
-  border: 1px solid $alert-danger-border;
-  background-color: $alert-danger-bg;
   border-color: $alert-danger-border;
+  background-color: $alert-danger-bg;
   color: $alert-danger-text;
   font-size: $font-size-small;
   top: 0;

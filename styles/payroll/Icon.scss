@@ -1,6 +1,8 @@
 @import '../project/style-components/glyphicons';
 @import './mixins';
 
+$color-success: #7fc957;
+
 .glyphicon {
   position: relative;
   top: 0;
@@ -20,11 +22,11 @@
 .glyphicon-ok {
   @include circle();
 
-  background-color: #7fc957;
+  background-color: $color-success;
 
   &.warning {
     background-color: transparent;
-    color: #7fc957;
+    color: $color-success;
   }
 }
 
@@ -52,9 +54,9 @@
 
 .mobile-actions {
   margin: 0;
-  width: 48px;
-  height: 41px;
-  background-size: 25px;
+  width: $actions-content-padding;
+  height: 41px;  // TODO
+  background-size: $btn-icon-size-mobile;
   background-position: 5px center;
 }
 
@@ -82,7 +84,7 @@
 
 .unchecked {
   background-color: $white;
-  border-color: $gray-light-new;
+  border-color: $border-color-base;
 }
 
 // Mods
@@ -95,12 +97,9 @@
 }
 
 .mobile-top-left {
-  position: fixed;
-  top: 0;
-  height: $main-navigation-height-mobile;
-  z-index: $zindex-modal;
-  left: 5px;
+  @include modalTopBtn();
+
+  width: $btn-icon-size-mobile;
   margin: 0;
   background-position: center;
-  width: 25px;
 }

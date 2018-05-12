@@ -17,7 +17,6 @@
     font-weight: 700;
     line-height: normal;
     overflow: visible;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     cursor: pointer
   }
@@ -75,14 +74,12 @@
 
     // This one looks as regular input inside Formrow
     &.plain {
-
       .SingleDatePickerInput {
-        border: 1px solid $gray-light-new;
-        border-radius: 4px;
+        border: $border-base;
+        border-radius: $border-radius-base;
       }
 
       .DateInput {
-
         &:after {
           display: none !important;
         }
@@ -103,7 +100,6 @@
 
       &:hover,
       &.is-focused {
-
         .SingleDatePickerInput {
           border-color: $brand-primary;
         }
@@ -126,7 +122,7 @@
     direction: rtl
   }
   .SingleDatePickerInput__disabled {
-    background-color: #f2f2f2
+    background-color: $gray-lightest-new;
   }
   .SingleDatePickerInput__block {
     display: block
@@ -147,8 +143,6 @@
     position: absolute;
     right: 0;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%)
   }
   .SingleDatePickerInput_clearDate__default:focus,
@@ -371,7 +365,6 @@
     fill: #82888a
   }
   .CalendarDay {
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     cursor: pointer;
     font-size: $font-size-base;
@@ -481,9 +474,6 @@
     text-align: center;
     padding: 0 13px;
     vertical-align: top;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none
   }
   .CalendarMonth_table {
@@ -562,9 +552,6 @@
   .DayPickerNavigation_button {
     cursor: pointer;
     line-height: .78;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none
   }
   .DayPickerNavigation_button__default {
@@ -580,12 +567,14 @@
     background: #f2f2f2
   }
   .DayPickerNavigation_button__horizontal {
+    @include inlineFlexCenter();
+
     border: none;
     padding: 13px 15px;
     top: 15px;
     position: absolute;
     font-family: 'Glyphicons Halflings';
-    @include tableCell();
+    border-radius: 4px;
     color: $gray-new;
 
     &:hover {
@@ -741,8 +730,6 @@
     border-radius: 3px
   }
   .DayPicker_transitionContainer__horizontal {
-    -webkit-transition: height .2s ease-in-out;
-    -moz-transition: height .2s ease-in-out;
     transition: height .2s ease-in-out
   }
   .DayPicker_transitionContainer__vertical {
@@ -892,8 +879,6 @@
     position: absolute;
     right: 0;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%)
   }
   .DateRangePickerInput_clearDates__small {

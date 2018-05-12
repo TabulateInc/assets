@@ -1,21 +1,27 @@
 @import '../mixins';
 
+@mixin onHover($color, $border-color) {
+  &:hover {
+    label {
+      color: $color;
+    }
+
+    input,
+    .Select .Select-control {
+      border-color: $border-color;
+    }
+  }
+}
+
 .row {
+  @include onHover($brand-primary, $brand-primary);
+
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: $distance-ver-sm;
 
   &:hover {
-
-    label {
-      color: $brand-primary;
-    }
-    input,
-    select {
-      border-color: $brand-primary;
-    }
-
     :global {
       .SingleDatePickerWrap.plain {
         .SingleDatePickerInput {
@@ -26,53 +32,29 @@
   }
 }
 
+.disabled {
+  @include onHover($gray-middle-new, $gray-lighter-new);
+}
 
+.error {
+  @include onHover($state-danger-text, $state-danger-border);
+}
 
 .flex-end {
   margin: 0;
   align-items: flex-end;
 }
 
-.disabled {
-
-  &:hover {
-
-    label {
-      color: $gray-middle-new;
-    }
-    input {
-      border-color: $gray-lighter-new;
-    }
-  }
-}
-
-
-.error {
-  color: $state-danger-text;
-
-  &:hover {
-
-    label {
-      color: $state-danger-text;
-    }
-    input,
-    select {
-      border-color: $state-danger-border;
-    }
-  }
-}
-
 .errorMsg {
+  @include flexCenter();
+
   position: absolute;
   left: 0;
   right: 0;
   top: 67px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 3px 0 0;
   padding: 10px 20px;
-  border-radius: 3px;
+  border-radius: $border-radius-base;
   background-color: $red-danger;
   color: $white;
   font-weight: normal;
@@ -80,33 +62,16 @@
   text-align: center;
   z-index: 100;
 
-  &:before {
+  &::before {
+    @include triangle(0 5px 5px 5px, transparent transparent $red-danger transparent);
+
     content: '';
     position: absolute;
     top: -4px;
     left: 10px;
-    @include triangle(0 5px 5px 5px, transparent transparent #df3320 transparent);
   }
 
   i {
     margin: 0 5px;
   }
 }
-
-.small {
-  top: 38px;
-  flex-direction: column;
-  padding: 10px 8px;
-
-  &:before {
-    right: 10px;
-    left: auto;
-  }
-
-  i {
-    margin: 0 0 5px;
-  }
-}
-
-
-

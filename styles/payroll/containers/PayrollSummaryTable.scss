@@ -10,11 +10,10 @@
 }
 
 .table {
-  //table-layout: fixed;
   width: calc(100% + 20px);
   margin: 0 -5px;
   font-weight: 400;
-  font-size: 11px;
+  font-size: $font-size-xs;
   border-collapse: separate;
   border-spacing: 2.5px 5px;
 
@@ -46,8 +45,8 @@
 .row {
   padding: 7px 0 !important;
   background-color: $table-bg-hover;
-  border-top: 1px solid $gray-light-new;
-  border-bottom: 1px solid $gray-light-new;
+  border-top: $border-base;
+  border-bottom: $border-base;
 }
 
 .tr {
@@ -92,5 +91,3 @@
     white-space: nowrap;
   }
 }
-
-

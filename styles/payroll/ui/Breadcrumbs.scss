@@ -10,7 +10,6 @@
 .itemActive {
   font-weight: 300;
   float: left;
-  font-size: $font-size-base;
 
   &::before {
     content: none;
@@ -21,14 +20,10 @@
   }
 }
 
-.itemActive {
-  color: $breadcrumb-active-color;
-}
-
 .itemTitle {
   @include textWrap();
   @include link($brand-primary);
 
   display: inline-flex;
-  max-width: 199px;
+  max-width: $breadcrumb-header-max-width;
 }

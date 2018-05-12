@@ -2,6 +2,7 @@
 
 .spinner {
   @include abs();
+
   margin: auto;
   height: 100%;
   width: $spinner-sm;

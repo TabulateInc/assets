@@ -1,11 +1,12 @@
 @import '../mixins';
 
 $calendar-day-radius: 4px;
-$btn-daterange-open-height: 52px;
 $distance-sm: 8px;
 $calendar-day-inrange-color: #ebf4f8;
 $caret-width: 10px;
+$caret-height: 4px;
 $caret-margin-left: 5px;
+$caret-top: ($panel-new-filter-height - $caret-height)/2;
 
 .btnOpen {
   @include panelFilterItem();
@@ -21,14 +22,14 @@ $caret-margin-left: 5px;
 
     content: '';
     right: 20px;
-    top: (52px - 4px)/2;
+    top: $caret-top;
     position: absolute;
   }
 
   &.isOpened::after {
     @include arrowTop();
 
-    top: (52px - 4px)/2;
+    top: $caret-top;
     position: absolute;
   }
 }
@@ -71,18 +72,13 @@ $caret-margin-left: 5px;
   width: 100%;
   text-align: left;
 
-  &:hover,
-  &:focus {
-    background-color: $brand-primary;
-    border-color: $brand-primary;
-    color: $white;
-  }
-
   &:focus {
     outline: none;
   }
 }
 
+.range:hover,
+.range:focus,
 .rangeSelected {
   background-color: $brand-primary;
   border-color: $brand-primary;
@@ -95,7 +91,7 @@ $caret-margin-left: 5px;
 }
 
 .actions {
-  border-top: 1px solid $gray-lighter;
+  border-top: $border-base;
   padding-top: $distance-sm;
   text-align: right;
 }
@@ -104,7 +100,7 @@ $caret-margin-left: 5px;
   .date-range-picker {
 
     @media (min-width: $screen-md-min) {
-      height: $btn-daterange-open-height;
+      height: $panel-new-filter-height;
     }
 
     .CalendarDay__selected_span {

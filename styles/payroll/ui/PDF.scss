@@ -1,22 +1,24 @@
+$shadow-bg: rgba(0, 0, 0, 0.3);
+
 .document {
-  z-index: 1050;
+  z-index: $zindex-modal;
   position: relative;
   background: $white;
 
   @media (min-width: $screen-sm-min) {
     width: 90vw;
     height: 90vh;
-    margin: $main-navigation-height auto 30px;
+    margin: $main-navigation-height auto $btn-icon-size;
   }
 
   @media (max-width: $screen-xs-max) {
     margin: 0 auto;
-    width: calc(100% - 25px*2);
+    width: calc(100% - #{$btn-icon-size-mobile}*2);
   }
 }
 
 .btnWrapper {
-  background: rgba(0, 0, 0, 0.3);
+  background: $shadow-bg;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -29,8 +31,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1040;
-  background: rgba(0, 0, 0, 0.3) !important;
+  z-index: $zindex-modal-background;
+  background: $shadow-bg !important;
   animation-duration: 0.15s;
   animation-timing-function: linear;
   animation-fill-mode: backwards;

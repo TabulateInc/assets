@@ -1,8 +1,8 @@
 .filter {
   display: flex;
   align-items: stretch;
-  height: 52px;
-  border-bottom: 1px solid $gray-light-new;
+  height: $panel-new-filter-height;
+  border-bottom: $border-base;
 }
 
 .header {

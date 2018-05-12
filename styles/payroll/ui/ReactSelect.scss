@@ -12,9 +12,10 @@
       position: relative;
 
       .Select-control {
+        @include formElement();
+
         width: 100%;
         position: relative;
-        @include formElement();
         padding-right: 10px;
         display: flex;
         align-items: center;
@@ -22,8 +23,9 @@
       }
 
       .Select-multi-value-wrapper {
-        display: flex;
         @include textWrap();
+
+        display: flex;
       }
 
       .Select-menu-outer {
@@ -37,20 +39,10 @@
       }
 
       .Select-option {
-        display: flex;
-        margin: 4px 0;
-        align-items: center;
-        border-radius: 2px;
-        font-size: $font-size-base;
-        padding: 12px 25px;
-        white-space: nowrap;
-        cursor: pointer;
+        @include dropdownItem();
 
-        &:hover,
-        &.is-focused,
-        &.is-selected {
-          background-color: $gray-lightest-new;
-        }
+        display: flex;
+        align-items: center;
       }
 
       .Select-input {
@@ -73,7 +65,6 @@
       }
 
       &.is-open {
-
         .Select-arrow {
           @include arrowTop();
         }
@@ -103,9 +94,7 @@
   width: auto;
 
   :global {
-
     .Select {
-
       .Select-control {
         padding: 0;
         border: none;
@@ -118,10 +107,10 @@
 
       .Select-value-label {
         font-weight: 300;
-        font-size: 27px;
+        font-size: $title-font;
 
         @media (max-width: $screen-xs-max) {
-          font-size: 19px;
+          font-size: $title-font-mobile;
         }
       }
 

@@ -59,3 +59,10 @@ article {
 p {
   margin: 0;
 }
+
+[role="button"],
+[role="link"] {
+  &:focus {
+    outline: none;
+  }
+}
